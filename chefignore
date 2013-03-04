@@ -9,3 +9,9 @@
 
 # subversion
 */.svn/*
+
+# box bootstraping
+bootstrap/
+
+# ssh keys
+keys/
