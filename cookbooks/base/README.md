@@ -20,7 +20,7 @@ The following recipes are applied:
   `+qtnx`                       - NX client for QT  
   `+p7zip-full`                 - 7z and 7za file archivers with high compression ratio  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
-  `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash
+  `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
 
 - `base::security` - manages the following packages and services:
@@ -69,18 +69,6 @@ This cookbook only applies to Ubuntu 12.04+.
     <th>Type</th>
     <th>Description</th>
     <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['base']['uid']</tt></td>
-    <td>Fixnum</td>
-    <td>default user uid</td>
-    <td><tt>1000</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['base']['gid']</tt></td>
-    <td>Fixnum</td>
-    <td>default user gid</td>
-    <td><tt>1000</tt></td>
   </tr>
   <tr>
     <td><tt>['base']['fonts_url']</tt></td>

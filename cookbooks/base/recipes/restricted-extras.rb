@@ -50,13 +50,13 @@ bash "install_fonts" do
     && chown root.root #{fonts_path}/* \
     && chmod 644 #{fonts_path}/*
   EOH
-  notifies :run, "bash[load_fonts]", :immediately
+  notifies :run, "execute[load_fonts]", :immediately
   action :nothing
 end
 
-bash "load_fonts" do
+execute "load_fonts" do
   command "fc-cache -fv"
-  user node[:base][:uid]
+  user node[:box_user]
   action :nothing
 end
 
