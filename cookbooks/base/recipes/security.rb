@@ -34,11 +34,8 @@ cookbook_file "/etc/ufw/applications.d/chef-openssh-server" do
   backup false
 end
 
-bash "enable_firewall" do
-  code <<-EOH
-    ufw allow ChefSSH
-    ufw enable
-  EOH
+execute "enable_firewall" do
+  command "ufw allow ChefSSH"
   not_if { node[:first_run_completed] }
 end
 
