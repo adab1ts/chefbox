@@ -1,10 +1,14 @@
 {
   "name": "carles-carles-vm",
-  "description": "Profile for carles@carles-vm box.",
+  "description": "Profile for carles@carles-vm box",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "default_attributes": {},
-  "override_attributes": {},
+  "override_attributes": {
+    "box_name": "carles-vm",
+    "box_user": "carles",
+    "box_group": "carles"
+  },
   "run_list": ["recipe[base]"],
   "env_run_lists": {}
 }
