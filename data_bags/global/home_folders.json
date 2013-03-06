@@ -1,0 +1,23 @@
+{
+  "id": "home_folders",
+  "ca": [
+    "Baixades",
+    "Documents",
+    "Escriptori",
+    "Imatges",
+    "Música",
+    "Plantilles",
+    "Públic",
+    "Vídeos"
+  ],
+  "es": [
+    "Descargas",
+    "Documentos",
+    "Escritorio",
+    "Imágenes",
+    "Música",
+    "Plantillas",
+    "Público",
+    "Vídeos"
+  ]
+}
