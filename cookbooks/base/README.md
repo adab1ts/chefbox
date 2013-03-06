@@ -62,7 +62,7 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 ## Attributes
 
-#### base::base
+#### base::default
 <table>
   <tr>
     <th>Key</th>

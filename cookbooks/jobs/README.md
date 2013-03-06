@@ -3,8 +3,8 @@
 This cookbook deploys a simple, yet flexible backup utility.
 The following recipes are applied:
 
-- `base::default` - puts jobs directory structure and configuration in place.
-- `base::backup` - puts backup scripts and configuration in place.
+- `jobs::default` - puts jobs directory structure and configuration in place.
+- `jobs::backup` - puts backup scripts and configuration in place.
 
 
 ## Requirements
@@ -14,7 +14,7 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 ## Attributes
 
-#### base::base
+#### jobs::default
 <table>
   <tr>
     <th>Key</th>
@@ -39,7 +39,7 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 ## Usage
 
-#### base::default
+#### jobs::default
 Just include `jobs` in your node's `run_list`:
 
 ```json
