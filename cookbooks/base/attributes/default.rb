@@ -18,7 +18,7 @@
 # limitations under the License.
 #
 
-# default[:base][:apt_path] = File.expand_path('../../files/default/apt', __FILE__)
+
 default[:base][:fonts_url]    = "http://ubuntuone.com/6QmipqSO7F5OXSwhDPOs4J"
 default[:base][:fonts_sha256] = "34afc268300fe5b863ddd6cde973aba3a87d7512ae92e37e4de891a49faa3465"
 

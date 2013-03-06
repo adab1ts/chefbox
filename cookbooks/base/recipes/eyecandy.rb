@@ -25,9 +25,9 @@ package "unsettings"
 # NITRUX-like icon theme
 package "nitrux-umd"
 
-# Faience Icon Theme
-package "faience-icon-theme"
-
 # Faenza Icon Theme
 package "faenza-icon-theme"
+
+# Faience Icon Theme
+package "faience-icon-theme"
 
