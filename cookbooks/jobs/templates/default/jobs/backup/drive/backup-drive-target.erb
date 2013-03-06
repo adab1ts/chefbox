@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+# File: <%= "#{@backup_task_dir}/#{@backup_task_name}-#{@backup_task_target}" %>
+
+
+backup_job_name="<%= "#{@backup_task_name}-#{@backup_task_target}" %>"
+backup_job_folder="$BACKUP_JOBS_FOLDER/<%= @backup_task_drive %>"
+backup_src_folder="$USR_HOME/"
+backup_dest_folder="$BACKUP_PATH/"
+
+if [[ -s "$BACKUP_JOB_MGR" ]]
+then
+  "$BACKUP_JOB_MGR" "$backup_job_name" "$backup_job_folder" "$backup_src_folder" "$backup_dest_folder"
+fi
+
+unset backup_job_name backup_job_folder backup_src_folder backup_dest_folder

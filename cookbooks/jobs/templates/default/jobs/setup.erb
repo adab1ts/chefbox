@@ -1,0 +1,101 @@
+# File: <%= "#{@jobs_path}/setup" %>
+
+
+#
+# Jobs variables
+#
+export USR="<%= @jobs_user %>"
+export CUSR="<%= @jobs_user.capitalize %>"
+export USR_HOME="/home/${USR}"
+
+export JOBS_FOLDER="<%= @jobs_path %>"
+export LOGS_FOLDER="${JOBS_FOLDER}/logs"
+
+export DIFF_TOOL="meld"
+
+#
+# Backup variables
+#
+export BACKUP_JOBS_FOLDER="${JOBS_FOLDER}/backup"
+export BACKUP_JOB_MGR="${BACKUP_JOBS_FOLDER}/backup.job"
+export BACKUP_LOG_PATH="<%= @jobs_log_path %>"
+
+#
+# Auxiliar Functions
+#
+timer() {
+  local counter=$1
+  while [[ $counter -ge 0 ]]; do
+    if [[ $counter -ge 9 ]]; then echo -en "\b\b\b\b. "; else echo -en "\b\b\b. "; fi
+    echo -n "$counter"s
+    sleep 1
+    let "counter = counter - 1"
+  done
+}
+
+load_job_last_execution() {
+  local job_name="$1"
+  local last_execution_file="${LOGS_FOLDER}/${job_name}-last_execution"
+
+  if [[ -s "$last_execution_file" ]]; then
+    while read line
+    do
+      export JOB_LAST_EXECUTION="$line"
+    done < "$last_execution_file"
+  fi
+}
+
+save_job_last_execution() {
+  local job_name="$1"
+  local execution_date="$2"
+  local last_execution_file="${LOGS_FOLDER}/${job_name}-last_execution"
+
+  touch "$last_execution_file"
+  chown "$USR"."$USR" "$last_execution_file"
+
+  echo "$execution_date" > "$last_execution_file"
+}
+
+show_warning_message() {
+  echo "Ten en cuenta que:"
+  echo "  1) no debes cerrar esta ventana (se cerrará automaticamente),"
+  echo "  2) no debes cerrar la sesión y"
+  echo "  3) no debes apagar el ordenador"
+  echo "hasta que no finalice la tarea."
+  echo
+}
+
+show_start_message() {
+  local drive="$1"
+  local mesg="$2"
+
+  echo "Inserta el disco '$drive' ..."
+  sleep 5
+  printf "\n${mesg}"
+  timer 10
+  printf "\n\n"
+}
+
+show_farewell_message() {
+  printf "\nLa ventana se cerrará en     "
+  timer 10
+}
+
+log_failure_message() {
+  local drive="$1"
+  local log_file="$2"
+
+  touch "$log_file"
+  chown "$USR"."$USR" "$log_file"
+
+  echo "[$(date +'%Y-%m-%d')] El disco '${drive}' parece no estar conectado. Lo intentaremos la próxima vez." | tee -a "$log_file"
+}
+
+export -f timer
+export -f load_job_last_execution
+export -f save_job_last_execution
+export -f show_warning_message
+export -f show_start_message
+export -f show_farewell_message
+export -f log_failure_message
+

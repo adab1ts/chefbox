@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+
+# File: <%= "#{@backup_job_path}/backup-#{@node[:box][:name]}" %>
+
+
+jobs_setup_file="<%= @jobs_setup_file %>"
+
+[[ ! -f "$jobs_setup_file" ]] && return
+
+. "$jobs_setup_file"
+
+#
+# Variables
+#
+must_shutdown=$1
+
+#
+# Auxiliar Functions
+#
+__show_welcome_message() {
+  echo "Hola ${CUSR}, el backup del sistema está a punto de empezar."
+  show_warning_message
+}
+
+#
+# Backup Functions
+#
+<% @backup_tasks.each do |task| %>
+<% task_drive = task[:drive].split(' ').map(&:downcase).join('_') %>
+__launch_backup_<%= task_drive %>() {
+  "${BACKUP_JOBS_FOLDER}/<%= task_drive %>/<%= task[:name] %>"
+}
+
+<% end %>
+
+__launch_jobs() {
+<% @backup_tasks.each do |task| %>
+<% task_drive = task[:drive].split(' ').map(&:downcase).join('_') %>
+  __launch_backup_<%= task_drive %>
+<% end %>
+}
+
+launch_backup_job() {
+  __show_welcome_message
+
+  echo -n "Deseas continuar? [S/n] "
+  read must_continue
+  echo
+
+  if [[ "$must_continue" != "n" ]]; then
+    __launch_jobs
+  fi
+
+  show_farewell_message
+
+  if [[ $must_shutdown -eq 1 ]]; then shutdown -h now; fi
+}
+
+launch_backup_job
+
+unset jobs_setup_file must_shutdown
+

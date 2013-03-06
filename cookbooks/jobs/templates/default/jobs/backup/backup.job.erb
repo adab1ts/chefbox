@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+
+# File: <%= "#{@backup_job_path}/backup.job" %>
+
+
+backup_job_name="$1"
+backup_job_folder="$2"
+backup_src_folder="$3"
+backup_dest_folder="$4"
+
+backup_job_date="$(date +'%Y-%m-%d-%H%M%S')"
+backup_log_file="${BACKUP_LOG_PATH}/${backup_job_name}.log"
+backup_excl_from_file="${backup_job_folder}/${backup_job_name}-excl_patterns.lst"
+backup_incl_from_file="${backup_job_folder}/${backup_job_name}-incl_patterns.lst"
+
+backup_options="-lurstzS"
+
+touch_log_file() {
+  touch "$backup_log_file"
+  chmod 644 "$backup_log_file"
+}
+
+do_backup() {
+  load_job_last_execution "$backup_job_name"
+  rsync "$backup_options" --safe-links -vhi --progress --log-file="$backup_log_file" --exclude-from="$backup_excl_from_file" --include-from="$backup_incl_from_file" --exclude="*" "$backup_src_folder" "$backup_dest_folder"
+  save_job_last_execution "$backup_job_name" "$backup_job_date"
+}
+
+take_snapshot() {
+  printf "\nCreando el registro de los cambios guardados (puede tardar unos minutos) ...\n"
+
+  touch "${LOGS_FOLDER}/${backup_job_name}-${backup_job_date}.tree"
+  chown "$USR"."$USR" "${LOGS_FOLDER}/${backup_job_name}-${backup_job_date}.tree"
+
+  for folder in $(awk -F/ '{print $1}' "$backup_incl_from_file")
+  do
+    tree -fiFN -L 20 -R --noreport --dirsfirst "${backup_src_folder}${folder}/" >> "${LOGS_FOLDER}/${backup_job_name}-${backup_job_date}.tree"
+  done
+}
+
+show_snapshot() {
+  if [[ -n "$JOB_LAST_EXECUTION" ]]; then
+    printf "\nDeseas ver los cambios guardados? [S/n] "
+    read must_show
+
+    if [[ "$must_show" != "n" ]]; then
+      "$DIFF_TOOL" "${LOGS_FOLDER}/${backup_job_name}-${JOB_LAST_EXECUTION}.tree" "${LOGS_FOLDER}/${backup_job_name}-${backup_job_date}.tree"
+    fi
+  fi
+}
+
+clean_prev_snapshot() {
+  if [[ -n "$JOB_LAST_EXECUTION" ]]; then
+    rm -f "${LOGS_FOLDER}/${backup_job_name}-${JOB_LAST_EXECUTION}.tree"
+  fi
+}
+
+touch_log_file
+do_backup
+take_snapshot
+show_snapshot
+clean_prev_snapshot
+
+unset backup_job_name backup_job_folder backup_src_folder backup_dest_folder
+unset backup_job_date backup_log_file backup_excl_from_file backup_incl_from_file
+unset backup_options
+
