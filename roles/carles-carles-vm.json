@@ -3,12 +3,33 @@
   "description": "Profile for carles@carles-vm box",
   "json_class": "Chef::Role",
   "chef_type": "role",
-  "default_attributes": {},
-  "override_attributes": {
-    "box_name": "carles-vm",
-    "box_user": "carles",
-    "box_group": "carles"
+  "default_attributes": {
+    "box": {
+      "id": "carles-carles-vm",
+      "name": "carles-vm",
+      "default_user": "carles",
+      "default_group": "carles"
+    }
   },
-  "run_list": ["recipe[base]"],
+  "override_attributes": {
+    "jobs": {
+      "job_list": {
+        "backup": {
+          "tasks": [
+            {
+              "name": "backup-my_passport",
+              "drive": "My Passport",
+              "folder": "MyData",
+              "targets": ["home"]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "run_list": [
+    "recipe[base]",
+    "recipe[jobs]"
+  ],
   "env_run_lists": {}
 }
