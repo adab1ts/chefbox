@@ -57,7 +57,7 @@ The following recipes are applied:
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+.
+This cookbook only applies to Ubuntu 12.04+ platform.
 
 
 ## Attributes
