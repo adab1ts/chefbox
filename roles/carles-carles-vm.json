@@ -29,6 +29,7 @@
   },
   "run_list": [
     "recipe[base]",
+    "recipe[dotfiles]",
     "recipe[jobs]"
   ],
   "env_run_lists": {}
