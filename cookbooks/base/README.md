@@ -52,7 +52,7 @@ The following recipes are applied:
   `+ubuntu-restricted-extras` - Commonly used restricted packages for Ubuntu  
   `MS Office True Type Fonts`
 
-- `base::default` - executes first system upgrade
+- `base::default` - executes first system upgrade and creates a support folder with post-installation instructions
 
 
 ## Requirements

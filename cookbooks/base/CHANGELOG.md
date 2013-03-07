@@ -14,3 +14,7 @@ This file is used to list changes made in each version of base.
 
 * Remove Faenza icon theme from recipe[base::eyecandy]
 
+## 0.1.3:
+
+* Create Suport folder with post installation instructions in recipe[base::default]
+
