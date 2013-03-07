@@ -1,0 +1,15 @@
+# vim:ft=sh
+# File: $ADMIN_PATH/dotfiles/bash/functions
+# Contents: Functions with arguments
+
+
+# Applying functions files
+functions_folder="$BASH_DOTFILES_PATH/functions.d"
+
+for f in $functions_folder/*; do
+	[[ -f "$f" ]] || continue
+	. $f
+done
+
+unset functions_folder
+

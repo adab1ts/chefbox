@@ -1,0 +1,20 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/diff.bfn
+
+
+# Diff functions
+function d {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: d left_file_path right_file_path"
+	else
+		diff -wr "$1" "$2"
+	fi
+}
+
+function dx {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: dx left_file_path right_file_path"
+	else
+		$XDIFF_TOOL "$1" "$2" &
+	fi
+}
+

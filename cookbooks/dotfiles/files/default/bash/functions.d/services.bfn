@@ -1,0 +1,40 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/services.bfn
+
+
+# Service management functions
+function status {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: status service"
+		echo "   ie: status mongodb"
+	else
+		sudo service "$1" status
+	fi
+}
+
+function start {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: start service"
+		echo "   ie: start mongodb"
+	else
+		sudo service "$1" start
+	fi
+}
+
+function stop {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: stop service"
+		echo "   ie: stop mongodb"
+	else
+		sudo service "$1" stop
+	fi
+}
+
+function restart {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: restart service"
+		echo "   ie: restart mongodb"
+	else
+		sudo service "$1" restart
+	fi
+}
+

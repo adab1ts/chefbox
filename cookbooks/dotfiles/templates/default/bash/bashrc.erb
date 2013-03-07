@@ -1,0 +1,15 @@
+# vim:ft=sh
+# File: $ADMIN_PATH/dotfiles/bashrc
+
+# If not running interactively, don't do anything
+if [[ -n "$PS1" ]]; then
+  bash_dotfiles_path="${HOME}/<%= @admin_folder %>/dotfiles/bash"
+
+	. $bash_dotfiles_path/env
+	. $bash_dotfiles_path/config
+	. $bash_dotfiles_path/aliases
+	. $bash_dotfiles_path/functions
+
+	unset bash_dotfiles_path
+fi
+

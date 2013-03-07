@@ -1,0 +1,96 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/packages.bfn
+
+
+# Package management functions
+function aar {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: aar ppa"
+	else
+		sudo add-apt-repository $1
+		__clean_apt_sources
+	fi
+}
+
+function __clean_apt_sources {
+	rm+ /etc/apt/sources.list.save
+	rm+ /etc/apt/sources.list.d/*.save
+}
+
+function pkl {
+	dpkg -l | awk '$0 ~ /^ii/ { sub(/^ii  /,"") ; print }'
+}
+
+function pkq {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pkq package_pattern"
+	else
+		pkl | grei "$1"
+	fi
+}
+
+function pkqw {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pkqw package_pattern"
+	else
+		pkl | grew "$1"
+	fi
+}
+
+function pks {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pks package_pattern"
+	else
+		apt-cache search "$1" | sort
+	fi
+}
+
+function pksn {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pksn package_pattern"
+	else
+		apt-cache -n search "$1" | sort
+	fi
+}
+
+function pkf {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pkf package_pattern"
+	else
+		local pkg=$( pkq "\s{2,}.*$1" | cut -d" " -f3 | gr "$1" | head -n1 )
+
+		if [[ -n "$pkg" ]]; then
+			echo "$pkg files:"
+			dpkg -L "$pkg" | sort
+		else
+			echo "$1 files:"
+			apt-file show "$1" | cut -d" " -f2 | sort
+		fi
+	fi
+}
+
+function pko {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pko filename"
+	else
+		local n=$( dpkg -S "$1" 2>&1 | sed "/no trobat/d" | wc -l )
+
+		if [[ $n -gt 0 ]]; then
+			dpkg -S "$1" | cut -d":" -f1 | sort | uniq
+		else
+			apt-file -i find "$1" | cut -d":" -f1 | sort | uniq
+		fi
+	fi
+}
+
+function pku {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: pku a | package-pattern"
+	else
+		if [[ "$1" = "a" ]]; then
+			apt-show-versions -u -b | cut -d"/" -f1
+		else
+			apt-show-versions -u -r "$1"
+		fi
+	fi
+}
+

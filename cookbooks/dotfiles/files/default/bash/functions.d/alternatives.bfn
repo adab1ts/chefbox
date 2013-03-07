@@ -1,0 +1,36 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/alternatives.bfn
+
+
+# Alternatives functions
+# sudo update-alternatives --install /usr/bin/ruby ruby /usr/bin/ruby1.9.1 50 --slave /usr/share/man/man1/ruby.1.gz ruby.1.gz /usr/share/man/man1/ruby1.9.1.1.gz
+function uai {
+	case $# in
+		(4) ua --install "$3/$1" "$1" "$3/$2" $4 ;;
+		(7) ua --install "$3/$1" "$1" "$3/$2" $4 --slave "$7/$5" "$5" "$7/$6" ;;
+		(*)
+			 echo "Usage: uai group_name bin_name bindir_path prio [ mangroup_name binman_name mandir_path ]"
+			 echo "  i.e: uai ruby ruby1.9.1 /usr/bin 50 ruby.1.gz ruby1.9.1.1.gz /usr/share/man/man1"
+			 ;;
+	esac
+}
+
+# sudo update-alternatives --remove ruby /usr/bin/ruby1.9.1
+function uar {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: uar group_name bin_path"
+		echo "  i.e: uar ruby /usr/bin/ruby1.9.1"
+	else
+		ua --remove "$1" "$2"
+	fi
+}
+
+# sudo update-alternatives --remove-all ruby
+function uar! {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: uar! group_name"
+		echo "  i.e: uar! ruby"
+	else
+		ua --remove-all "$1"
+	fi
+}
+

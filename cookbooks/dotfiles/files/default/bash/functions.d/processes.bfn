@@ -1,0 +1,27 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/processes.bfn
+
+
+# Process management functions
+function prs {
+	local output="pid,lwp=THRD_ID,ppid,user:7,pri=PRIO,nice=NICE,stat,sgi_p=PSR,start,bsdtime=CPUTIME,pcpu,rss=PMEM[KB],vsz=VMEM[KB],pmem,cmd"
+	
+	case $# in
+		(0) echo "Usage: prs a | [u user] [c[a] command]" ;;
+		(1) if [[ "$1" = "a" ]]; then ps -eo "$output"; else echo "Usage: prs a | [u user] [c[a] command]"; fi ;;
+		(2)
+			if [[ "$1" = "u" ]]; then ps -o "$output" -u "$2";
+			elif [[ "$1" = "c" ]]; then ps -o "$output" -C "$2";
+			elif [[ "$1" = "ca" ]]; then ps -eo "$output" | grei "$2";
+			else echo "Usage: prs a | [u user] [c[a] command]";
+			fi
+			;;
+		(4)
+			if [[ ("$1" != "u") || ("$3" != "c") || ("$3" != "ca") ]]; then echo "Usage: prs a | [u user] [c[a] command]";
+			elif [[ "$3" = "c" ]]; then ps -o "$output" -u "$2" -C "$4";
+			elif [[ "$3" = "ca" ]]; then ps -eo "$output" -u "$2" | grei "$4";
+			fi
+			;;
+		(*) echo "Usage: prs a | [u user] [c[a] command]" ;;
+	esac
+}
+

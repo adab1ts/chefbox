@@ -1,0 +1,15 @@
+# vim:ft=sh
+# File: $ADMIN_PATH/dotfiles/bash/aliases
+# Contents: Shortcut commands
+
+
+# Applying aliases files
+aliases_folder="$BASH_DOTFILES_PATH/aliases.d"
+
+for f in $aliases_folder/*; do
+	[[ -f "$f" ]] || continue
+	. $f
+done
+
+unset aliases_folder
+

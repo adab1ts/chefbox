@@ -1,0 +1,48 @@
+# vim:ft=sh
+# File: $ADMIN_PATH/dotfiles/bash/config
+# Contents: Prompt and Shell settings
+
+## Bash variables
+#HISTCONTROL=ignoredups:ignorespace
+HISTCONTROL=erasedups
+HISTIGNORE="&:ls:[bf]g:exit:%[0-9]"
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+## Bash options
+shopt -s histappend
+shopt -s cmdhist
+shopt -s cdspell
+shopt -s checkwinsize
+
+## Bash misc
+# make less more friendly for non-text input files, see lesspipe(1)
+[[ -x /usr/bin/lesspipe ]] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# enable color support of ls and also add handy aliases
+if [[ -x /usr/bin/dircolors ]]; then
+	eval "$(dircolors -b)"
+
+	alias grep='grep --color=auto'
+	alias fgrep='fgrep --color=auto'
+	alias egrep='egrep --color=auto'
+fi
+
+# enable programmable completion features
+if [[ -f /etc/bash_completion ]] && ! shopt -oq posix; then
+	. /etc/bash_completion
+fi
+
+## Prompt configuration
+# prompt colors
+promptcolors_file="$BASH_DOTFILES_PATH/colors.d/promptcolors"
+
+if [[ -f "$promptcolors_file" ]]; then
+	. "$promptcolors_file"
+fi
+
+unset promptcolors_file
+
+# prompt customization
+PS1="\n${EGREEN}\u:${EBLUE}\W ${EYELLOW}\$ ${NO_COLOR}"
+

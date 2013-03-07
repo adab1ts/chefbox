@@ -1,0 +1,57 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/misc.bfn
+
+
+# Misc
+function run_scripts
+{
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: run_scripts path/to/hooks.d"
+	else
+		for script in $1/*; do
+			# skip non-executable snippets
+			[[ -x "$script" ]] || continue
+
+			# execute $script in the context of the current shell
+			. $script
+		done
+	fi
+}
+
+function top10
+{
+	history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
+
+function h {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: h a | pattern"
+	else
+		if [[ "$1" = "a" ]]; then history;
+		else history | grei "$1";
+		fi
+	fi
+}
+
+function jobs! {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: jobs! anacron_job"
+	else
+		sudo anacron -sfnd "$1"
+	fi
+}
+
+function syncf {
+	source_folder="$1"
+	dest_folder="$2"
+
+	rsync -lurst --delete "$source_folder/" "$dest_folder"
+}
+
+function aliases {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: aliases cmd"
+	else
+		alias | grew "$1"
+	fi
+}
+

@@ -1,0 +1,36 @@
+# File: $ADMIN_PATH/dotfiles/bash/functions.d/search.bfn
+
+
+# Search functions
+function fn {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: fn path filename"
+	else
+		sudo find "$1" -regextype posix-egrep -regex "^/(proc|dev|sys)" -prune -o -iname "$2"
+	fi
+}
+
+function fn! {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: fn path filename"
+	else
+		sudo find "$1" -iname "$2"
+	fi
+}
+
+function fr {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: fr path 'pattern'"
+	else
+		sudo find "$1" -regextype posix-egrep -regex "^/(proc|dev|sys)" -prune -o -iregex "$2"
+	fi
+}
+
+function fr! {
+	if [[ $# -ne 2 ]]; then
+		echo "Usage: fr path 'pattern'"
+	else
+		sudo find "$1" -regextype posix-egrep -iregex "$2"
+	fi
+}
+
