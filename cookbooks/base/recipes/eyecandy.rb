@@ -28,6 +28,3 @@ package "nitrux-umd"
 # Faenza Icon Theme
 package "faenza-icon-theme"
 
-# Faience Icon Theme
-package "faience-icon-theme"
-

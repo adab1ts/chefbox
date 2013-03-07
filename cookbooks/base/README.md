@@ -41,7 +41,6 @@ The following recipes are applied:
 
   `+unsettings`         - Graphical configuration program for the Unity desktop environment  
   `+nitrux-umd`         - NITRUX-like icon theme  
-  `+faience-icon-theme` - Faience Icon Theme  
   `+faenza-icon-theme`  - Faenza Icon Theme
 
 - `base::office` - manages the following packages:
@@ -53,6 +52,8 @@ The following recipes are applied:
 
   `+ubuntu-restricted-extras` - Commonly used restricted packages for Ubuntu  
   `MS Office True Type Fonts`
+
+- `base::default` - executes first system upgrade
 
 
 ## Requirements
