@@ -5,7 +5,7 @@
 *~
 
 # vim
-*.sw[a-z]
+*.swp
 
 # subversion
 */.svn/*
