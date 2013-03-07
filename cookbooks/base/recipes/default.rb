@@ -45,7 +45,7 @@ bash "first_system_upgrade" do
 end
 
 box_profile = Chef::EncryptedDataBagItem.load("boxes", node[:box][:id])
-support_folder = "#{ENV['HOME']}/#{box_profile['download_folder']}/Support"
+support_folder = "#{ENV['HOME']}/#{box_profile['support_folder']}"
 
 remote_directory support_folder do
   source "support"
