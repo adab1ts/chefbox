@@ -11,6 +11,10 @@ The following recipes are applied:
 
 This cookbook only applies to Ubuntu 12.04+ platform.
 
+#### packages
+- `tree` - Displays directory tree, in color
+- `meld` - Graphical tool to diff and merge files
+
 
 ## Attributes
 
