@@ -1,15 +1,21 @@
 {
   "admin_folder": {
-    "iv": "uUsQVISrYBvxf9K0RQt8HQ==\n",
+    "iv": "h1PrjyIL9+vjvd9S59rShQ==\n",
     "cipher": "aes-256-cbc",
     "version": 1,
-    "encrypted_data": "5Iu3f1/ZTqAbOvstOv+5Me5onmvDABVPNK99mYb3fnDhTdVhbDJsbicotLBx\nkwpk\n"
+    "encrypted_data": "EdxtnEAXJnZMJ028jDHH/XN2ue2SmyAWohAv8uylmXDj9c7a0c56bqyGIdDe\nKrko\n"
   },
   "id": "carles-carles-vm",
   "lang": {
-    "iv": "1d6pSeAc7ondTqZcvZG0yg==\n",
+    "iv": "N8FEFxjjZl1SWn8zAuoYHg==\n",
     "cipher": "aes-256-cbc",
     "version": 1,
-    "encrypted_data": "QvP2qXGhZE1ymavJ8C3nSIXg/b4Ml0bo88TTqmi9xyA=\n"
+    "encrypted_data": "nf2ZcyXmFKKZBj0tGUPSHwAIPUrxMmhFmxZAQw5S2N0=\n"
+  },
+  "download_folder": {
+    "iv": "hGZuZwUkeHGvkj5Xuzk4Gw==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "WzjhD8OWCWdLnM8NH4qStMw7FeQMJxP+geELihKQJ74=\n"
   }
 }
