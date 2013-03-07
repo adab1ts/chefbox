@@ -10,3 +10,7 @@ This file is used to list changes made in each version of base.
 
 * Remove Faience icon theme from recipe[base::eyecandy]
 
+## 0.1.2:
+
+* Remove Faenza icon theme from recipe[base::eyecandy]
+

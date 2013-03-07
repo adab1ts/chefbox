@@ -41,7 +41,6 @@ The following recipes are applied:
 
   `+unsettings`         - Graphical configuration program for the Unity desktop environment  
   `+nitrux-umd`         - NITRUX-like icon theme  
-  `+faenza-icon-theme`  - Faenza Icon Theme
 
 - `base::office` - manages the following packages:
 
