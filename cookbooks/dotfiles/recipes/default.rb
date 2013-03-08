@@ -37,8 +37,7 @@ package "apt-show-versions"
 
 box = node[:box]
 
-admin_dir = "#{box['home']}/#{box['admin_folder']}"
-dotfiles_dir = "#{admin_dir}/dotfiles"
+dotfiles_dir = "#{box['home']}/#{box['dotfiles_folder']}"
 bash_dotfiles_dir = "#{dotfiles_dir}/bash"
 
 directory dotfiles_dir do
