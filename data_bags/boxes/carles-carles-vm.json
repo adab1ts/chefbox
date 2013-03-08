@@ -1,21 +1,45 @@
 {
-  "admin_folder": {
-    "iv": "Wom+amjICTiOArKWJ6dDkQ==\n",
+  "name": {
+    "iv": "NdAD0bTQp5gRzLFoDuENuQ==\n",
     "cipher": "aes-256-cbc",
     "version": 1,
-    "encrypted_data": "O+6d/pantDCZpqOyBESZCngnQM/cbTj/FktJzt75JsLFuUHU/K4rZUYBPS2q\nodIJ\n"
+    "encrypted_data": "UvcTJ8Sm0qNLm+9Cg+42sF615De4mQHI2mP2C0ZH8WE=\n"
   },
   "support_folder": {
-    "iv": "nsu6XD4iPqIAs9QGWuhX7w==\n",
+    "iv": "asSk7Zo9656aevMEB5pLHw==\n",
     "cipher": "aes-256-cbc",
     "version": 1,
-    "encrypted_data": "8weaSJm2lxw7UjvO4T1BpwcM97i+0z6BSonu4KySpV/ZUfiYBC1RyxG396yJ\nJwCQ\n"
+    "encrypted_data": "ITXQ+WdMPSeWNcdr2fdANhmAGVr61XZ9LkthNxawZWKVjOIsncxFbPFC+VrS\niENO\n"
+  },
+  "admin_folder": {
+    "iv": "M1nQ92g6xemKPve/MztVjQ==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "SxkumXMpaH2+TQw+at1ttXnCA74UOKKWMlpHf5RKIl8x/TNNRfVwNsFCpnaL\nJ6rx\n"
+  },
+  "default_user": {
+    "iv": "S0j1r2are/BswV446lfdoQ==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "qSJlsC4RTWQqMpURI19g3s1G164ZKLl8FIGr3GYM3Qo=\n"
+  },
+  "default_group": {
+    "iv": "Y6X7revuArjvxttAXJnagw==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "W2ovql0YT78XEJVqMuCeCTtPPamrrM0gE9G7eBpapyE=\n"
   },
   "id": "carles-carles-vm",
   "lang": {
-    "iv": "h8tHCfKcXpQ6Yz+sUKwHrg==\n",
+    "iv": "SkLs3MXv3JOv90MgcXWSPQ==\n",
     "cipher": "aes-256-cbc",
     "version": 1,
-    "encrypted_data": "0GJMFZaigQollABoJWvy5CBgyEPmAgaKczOZ/L78DQI=\n"
+    "encrypted_data": "audFn6S0z360yqcBGBz67gVBCNW53xE4CYSmvoZ+ZMM=\n"
+  },
+  "home": {
+    "iv": "t5Ft0bzEJ1+wuJ4+lsZ3ag==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "Pda4VYJ8GOdAMhS7wWqXJS9I+5CBKdpUnqzJg+yHRdY=\n"
   }
 }
