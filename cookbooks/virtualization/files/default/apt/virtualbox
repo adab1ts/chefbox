@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# File: $CHEF_REPO/cookbooks/virtualization/files/default/apt/virtualbox
+
+
+# Package:     virtualbox-4.2
+# Maintainer:  Oracle Corporation <info@virtualbox.org>
+# Description: Oracle VM VirtualBox
+wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -q -O- | apt-key add -
+echo "deb http://download.virtualbox.org/virtualbox/debian ${CODENAME} contrib" | tee -a /etc/apt/sources.list.d/virtualbox-${CODENAME}.list
+
