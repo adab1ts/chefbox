@@ -4,12 +4,7 @@
   "json_class": "Chef::Role",
   "chef_type": "role",
   "default_attributes": {
-    "box": {
-      "id": "carles-carles-vm",
-      "name": "carles-vm",
-      "default_user": "carles",
-      "default_group": "carles"
-    }
+    "profile": "carles-carles-vm"
   },
   "override_attributes": {
     "jobs": {

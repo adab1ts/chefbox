@@ -19,14 +19,16 @@
 #
 
 
+box = node[:box]
+
 # Ubuntu example content
 package "example-content" do
   action :purge
 end
 
 execute "remove_example_content_file" do
-  command "rm #{ENV['HOME']}/examples.desktop"
-  only_if { File.exists? "#{ENV['HOME']}/examples.desktop" }
+  command "rm #{box['home']}/examples.desktop"
+  only_if { File.exists? "#{box['home']}/examples.desktop" }
 end
 
 # Dynamic Kernel Module Support Framework

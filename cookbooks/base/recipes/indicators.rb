@@ -21,11 +21,11 @@
 
 box = node[:box]
 
-autostart_dir = "#{ENV['HOME']}/.config/autostart"
+autostart_dir = "#{box['home']}/.config/autostart"
 
 directory autostart_dir do
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0775
   recursive true
 end
@@ -36,8 +36,8 @@ package "udev-notify"
 cookbook_file "#{autostart_dir}/udev-notify.desktop" do
   source "/autostart/udev-notify.desktop"
   backup false
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0664
 end
 
@@ -48,8 +48,8 @@ package "caffeine"
 cookbook_file "#{autostart_dir}/caffeine.desktop" do
   source "/autostart/caffeine.desktop"
   backup false
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0644
 end
 

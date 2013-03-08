@@ -19,6 +19,9 @@
 #
 
 
+node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
+node.save
+
 include_recipe "base::sources"
 include_recipe "base::main"
 include_recipe "base::security"
@@ -45,16 +48,15 @@ bash "first_system_upgrade" do
 end
 
 box = node[:box]
-box_profile = Chef::EncryptedDataBagItem.load("boxes", box[:id])
-support_folder = "#{ENV['HOME']}/#{box_profile['support_folder']}"
+support_folder = "#{box['home']}/#{box['support_folder']}"
 
 remote_directory support_folder do
   source "support"
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0755
-  files_owner box[:default_user]
-  files_group box[:default_group]
+  files_owner box['default_user']
+  files_group box['default_group']
   files_mode 0644
   files_backup false
 end

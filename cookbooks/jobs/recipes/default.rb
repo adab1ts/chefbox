@@ -32,7 +32,6 @@ package "meld"
 
 jobs = node[:jobs]
 box  = node[:box]
-box_profile = Chef::EncryptedDataBagItem.load("boxes", box[:id])
 
 directory jobs[:log_path]
 
@@ -46,36 +45,36 @@ template jobs[:logrotate_conf] do
   )
 end
 
-admin_dir = "#{ENV['HOME']}/#{box_profile['admin_folder']}"
+admin_dir = "#{box['home']}/#{box['admin_folder']}"
 jobs_dir  = "#{admin_dir}/jobs"
 logs_dir  = "#{jobs_dir}/logs"
 
 directory admin_dir do
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0755
 end
 
 directory jobs_dir do
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0755
 end
 
 directory logs_dir do
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0755
 end
 
 template "#{jobs_dir}/setup" do
   source "/jobs/setup.erb"
-  owner box[:default_user]
-  group box[:default_group]
+  owner box['default_user']
+  group box['default_group']
   mode 0644
   backup false
   variables(
-    :jobs_user => box[:default_user],
+    :jobs_user => box['default_user'],
     :jobs_path => jobs_dir,
     :jobs_log_path => jobs[:log_path]
   )
@@ -84,7 +83,6 @@ end
 
 ## Jobs
 
-node.set[:box]  = { :lang => box_profile['lang'] }
 node.set[:jobs] = { :path => jobs_dir }
 
 include_recipe "jobs::backup"

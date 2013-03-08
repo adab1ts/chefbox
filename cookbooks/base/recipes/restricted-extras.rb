@@ -62,7 +62,7 @@ end
 
 execute "load_fonts" do
   command "fc-cache -fv"
-  user node[:box][:default_user]
+  user node[:box]['default_user']
   action :nothing
 end
 
