@@ -1,0 +1,10 @@
+{
+  "id": "virtualization",
+  "apps": [
+    "virtualbox"
+  ],
+  "virtualbox": {
+    "source": "virtualbox",
+    "package": "virtualbox-4.2"
+  }
+}
