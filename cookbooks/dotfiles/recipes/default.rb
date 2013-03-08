@@ -35,32 +35,33 @@ package "apt-show-versions"
 
 ## Deploy
 
-box_profile = Chef::EncryptedDataBagItem.load("boxes", node[:box][:id])
+box = node[:box]
+box_profile = Chef::EncryptedDataBagItem.load("boxes", box[:id])
 
 admin_dir = "#{ENV['HOME']}/#{box_profile['admin_folder']}"
 dotfiles_dir = "#{admin_dir}/dotfiles"
 bash_dotfiles_dir = "#{dotfiles_dir}/bash"
 
 directory dotfiles_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
 end
 
 remote_directory bash_dotfiles_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
-  files_owner node[:box][:default_user]
-  files_group node[:box][:default_group]
+  files_owner box[:default_user]
+  files_group box[:default_group]
   files_mode 0644
   files_backup false
 end
 
 template "#{bash_dotfiles_dir}/env" do
   source "/bash/env.erb"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0644
   backup false
   variables(
@@ -70,8 +71,8 @@ end
 
 template "#{dotfiles_dir}/bashrc" do
   source "/bash/bashrc.erb"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0644
   backup false
   variables(
@@ -82,13 +83,13 @@ end
 execute "backup_bashrc_file" do
   cwd ENV['HOME']
   command "mv .bashrc .bashrc.orig"
-  user node[:box][:default_user]
+  user box[:default_user]
   creates "#{ENV['HOME']}/.bashrc.orig"
 end
 
 link "#{ENV['HOME']}/.bashrc" do
   to "#{dotfiles_dir}/bashrc"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
 end
 
