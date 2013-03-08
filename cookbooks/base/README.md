@@ -60,31 +60,6 @@ The following recipes are applied:
 This cookbook only applies to Ubuntu 12.04+ platform.
 
 
-## Attributes
-
-#### base::default
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['base']['fonts_url']</tt></td>
-    <td>String</td>
-    <td>fonts url</td>
-    <td><tt>http://ubuntuone.com/6QmipqSO7F5OXSwhDPOs4J</tt></td>
-  </tr>
-  <tr>
-    <td><tt>['base']['fonts_sha256']</tt></td>
-    <td>String</td>
-    <td>fonts package checksum</td>
-    <td><tt>34afc268300fe5b863ddd6cde973aba3a87d7512ae92e37e4de891a49faa3465</tt></td>
-  </tr>
-</table>
-
-
 ## Usage
 
 #### base::default

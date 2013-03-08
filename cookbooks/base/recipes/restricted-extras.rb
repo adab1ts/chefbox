@@ -32,13 +32,18 @@ end
 
 
 # MS Office True Type Fonts
-fonts_file = "fonts.tar.gz"
+fonts = data_bag_item('resources', 'fonts')
+msfonts = fonts['msttfonts']
+fonts_file   = msfonts['file']
+fonts_url    = msfonts['url']
+fonts_sha256 = msfonts['sha256']
+
 cache_path = Chef::Config[:file_cache_path]
 fonts_path = "/usr/share/fonts/truetype/msttfonts"
 
 remote_file "#{cache_path}/#{fonts_file}" do
-  source node[:base][:fonts_url]
-  checksum node[:base][:fonts_sha256]
+  source fonts_url
+  checksum fonts_sha256
   notifies :run, "bash[install_fonts]", :immediately
 end
 
