@@ -10,7 +10,8 @@
   "run_list": [
     "recipe[base]",
     "recipe[dotfiles]",
-    "recipe[jobs]"
+    "recipe[jobs]",
+    "recipe[virtualization]"
   ],
   "env_run_lists": {}
 }
