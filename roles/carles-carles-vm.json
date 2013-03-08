@@ -6,22 +6,7 @@
   "default_attributes": {
     "profile": "carles-carles-vm"
   },
-  "override_attributes": {
-    "jobs": {
-      "job_list": {
-        "backup": {
-          "tasks": [
-            {
-              "name": "backup-my_passport",
-              "drive": "My Passport",
-              "folder": "MyData",
-              "targets": ["home"]
-            }
-          ]
-        }
-      }
-    }
-  },
+  "override_attributes": {},
   "run_list": [
     "recipe[base]",
     "recipe[dotfiles]",

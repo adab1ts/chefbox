@@ -30,23 +30,26 @@ package "meld"
 
 ## Configuration
 
-jobs = node[:jobs]
 box  = node[:box]
+jobs = box['jobs']
 
-directory jobs[:log_path]
+jobs_log_path = node[:jobs][:log_path]
+jobs_logrotate_conf = node[:jobs][:logrotate_conf]
 
-template jobs[:logrotate_conf] do
+directory jobs_log_path
+
+template jobs_logrotate_conf do
   source "/logrotate/jobs.erb"
   mode 0644
   backup false
   variables(
-    :jobs => jobs[:job_list],
-    :jobs_log_path => jobs[:log_path]
+    :jobs => jobs['job_list'],
+    :jobs_log_path => jobs_log_path
   )
 end
 
 admin_dir = "#{box['home']}/#{box['admin_folder']}"
-jobs_dir  = "#{admin_dir}/jobs"
+jobs_dir  = "#{box['home']}/#{jobs['jobs_folder']}"
 logs_dir  = "#{jobs_dir}/logs"
 
 directory admin_dir do
@@ -76,14 +79,12 @@ template "#{jobs_dir}/setup" do
   variables(
     :jobs_user => box['default_user'],
     :jobs_path => jobs_dir,
-    :jobs_log_path => jobs[:log_path]
+    :jobs_log_path => jobs_log_path
   )
 end
 
 
 ## Jobs
-
-node.set[:jobs] = { :path => jobs_dir }
 
 include_recipe "jobs::backup"
 

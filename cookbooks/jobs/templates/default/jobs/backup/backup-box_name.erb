@@ -26,16 +26,16 @@ __show_welcome_message() {
 # Backup Functions
 #
 <% @backup_tasks.each do |task| %>
-<% task_drive = task[:drive].split(' ').map(&:downcase).join('_') %>
+<% task_drive = task['drive'].split(' ').map(&:downcase).join('_') %>
 __launch_backup_<%= task_drive %>() {
-  "${BACKUP_JOBS_FOLDER}/<%= task_drive %>/<%= task[:name] %>"
+  "${BACKUP_JOBS_FOLDER}/<%= task_drive %>/<%= task['name'] %>"
 }
 
 <% end %>
 
 __launch_jobs() {
 <% @backup_tasks.each do |task| %>
-<% task_drive = task[:drive].split(' ').map(&:downcase).join('_') %>
+<% task_drive = task['drive'].split(' ').map(&:downcase).join('_') %>
   __launch_backup_<%= task_drive %>
 <% end %>
 }
