@@ -30,17 +30,19 @@ package "meld"
 
 ## Configuration
 
-box_profile = Chef::EncryptedDataBagItem.load("boxes", node[:box][:id])
+jobs = node[:jobs]
+box  = node[:box]
+box_profile = Chef::EncryptedDataBagItem.load("boxes", box[:id])
 
-directory node[:jobs][:log_path]
+directory jobs[:log_path]
 
-template node[:jobs][:logrotate_conf] do
+template jobs[:logrotate_conf] do
   source "/logrotate/jobs.erb"
   mode 0644
   backup false
   variables(
-    :jobs => node[:jobs][:job_list],
-    :jobs_log_path => node[:jobs][:log_path]
+    :jobs => jobs[:job_list],
+    :jobs_log_path => jobs[:log_path]
   )
 end
 
@@ -49,33 +51,33 @@ jobs_dir  = "#{admin_dir}/jobs"
 logs_dir  = "#{jobs_dir}/logs"
 
 directory admin_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
 end
 
 directory jobs_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
 end
 
 directory logs_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
 end
 
 template "#{jobs_dir}/setup" do
   source "/jobs/setup.erb"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0644
   backup false
   variables(
-    :jobs_user => node[:box][:default_user],
+    :jobs_user => box[:default_user],
     :jobs_path => jobs_dir,
-    :jobs_log_path => node[:jobs][:log_path]
+    :jobs_log_path => jobs[:log_path]
   )
 end
 

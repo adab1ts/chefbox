@@ -19,19 +19,22 @@
 #
 
 
-backup_job_dir = "#{node[:jobs][:path]}/backup"
+box  = node[:box]
+jobs = node[:jobs]
+
+backup_job_dir = "#{jobs[:path]}/backup"
 
 directory backup_job_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
 end
 
 
 template "#{backup_job_dir}/backup.job" do
   source "/jobs/backup/backup.job.erb"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
   backup false
   variables(
@@ -40,18 +43,18 @@ template "#{backup_job_dir}/backup.job" do
 end
 
 
-backup_script = "#{backup_job_dir}/backup-#{node[:box][:name]}"
-backup_tasks  = node[:jobs][:job_list][:backup][:tasks]
+backup_script = "#{backup_job_dir}/backup-#{box[:name]}"
+backup_tasks  = jobs[:job_list][:backup][:tasks]
 
 template backup_script do
   source "/jobs/backup/backup-box_name.erb"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
   backup false
   variables(
     :backup_job_path => backup_job_dir,
-    :jobs_setup_file => "#{node[:jobs][:path]}/setup",
+    :jobs_setup_file => "#{jobs[:path]}/setup",
     :backup_tasks    => backup_tasks
   )
 end
@@ -61,8 +64,8 @@ backup_launcher = "#{backup_job_dir}/backup-mgr.desktop"
 
 template backup_launcher do
   source "/jobs/backup/backup-mgr.desktop.erb"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0644
   backup false
   variables(
@@ -74,15 +77,15 @@ end
 launchers_dir = "#{ENV['HOME']}/.local/share/applications"
 
 directory launchers_dir do
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
 end
 
 link "#{launchers_dir}/backup-mgr.desktop" do
   to backup_launcher
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
 end
 
 
@@ -91,15 +94,15 @@ backup_tasks.each do |task|
   backup_task_dir = "#{backup_job_dir}/#{task_drive}"
 
   directory backup_task_dir do
-    owner node[:box][:default_user]
-    group node[:box][:default_group]
+    owner box[:default_user]
+    group box[:default_group]
     mode 0755
   end
 
   template "#{backup_task_dir}/#{task[:name]}" do
     source "/jobs/backup/drive/backup-drive.erb"
-    owner node[:box][:default_user]
-    group node[:box][:default_group]
+    owner box[:default_user]
+    group box[:default_group]
     mode 0755
     backup false
     variables(
@@ -115,8 +118,8 @@ backup_tasks.each do |task|
   task[:targets].each do |target|
     template "#{backup_task_dir}/#{task[:name]}-#{target}" do
       source "/jobs/backup/drive/backup-drive-target.erb"
-      owner node[:box][:default_user]
-      group node[:box][:default_group]
+      owner box[:default_user]
+      group box[:default_group]
       mode 0755
       backup false
       variables(
@@ -129,20 +132,20 @@ backup_tasks.each do |task|
 
     template "#{backup_task_dir}/#{task[:name]}-#{target}-excl_patterns.lst" do
       source "/jobs/backup/drive/backup-drive-target-excl_patterns.lst.erb"
-      owner node[:box][:default_user]
-      group node[:box][:default_group]
+      owner box[:default_user]
+      group box[:default_group]
       mode 0644
       backup false
     end
 
     home_folders = data_bag_item('global', 'home_folders')
-    incl_patterns_list = home_folders[node[:box][:lang]].map { |folder| "#{folder}/***\n" }.join
+    incl_patterns_list = home_folders[box[:lang]].map { |folder| "#{folder}/***\n" }.join
     incl_patterns_file = "#{backup_task_dir}/#{task[:name]}-#{target}-incl_patterns.lst"
 
     file incl_patterns_file do
       content incl_patterns_list
-      owner node[:box][:default_user]
-      group node[:box][:default_group]
+      owner box[:default_user]
+      group box[:default_group]
       mode 0644
       backup false
     end
