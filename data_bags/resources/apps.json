@@ -1,0 +1,8 @@
+{
+  "id": "apps",
+  "virtualbox": {
+    "file": "Oracle_VM_VirtualBox_Extension_Pack-4.2.8-83876.vbox-extpack",
+    "url": "http://ubuntuone.com/1nWx45wknyO8DdeFJgckN0",
+    "sha256": "fa579416f382b58c4e93d3740d076ceba728e28d987e51aced5865a46cb9111c"
+  }
+}
