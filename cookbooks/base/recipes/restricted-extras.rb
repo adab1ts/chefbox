@@ -34,6 +34,7 @@ end
 # MS Office True Type Fonts
 fonts = data_bag_item('resources', 'fonts')
 msfonts = fonts['msttfonts']
+
 fonts_file   = msfonts['file']
 fonts_url    = msfonts['url']
 fonts_sha256 = msfonts['sha256']

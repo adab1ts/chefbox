@@ -44,16 +44,17 @@ bash "first_system_upgrade" do
   action :nothing
 end
 
-box_profile = Chef::EncryptedDataBagItem.load("boxes", node[:box][:id])
+box = node[:box]
+box_profile = Chef::EncryptedDataBagItem.load("boxes", box[:id])
 support_folder = "#{ENV['HOME']}/#{box_profile['support_folder']}"
 
 remote_directory support_folder do
   source "support"
-  owner node[:box][:default_user]
-  group node[:box][:default_group]
+  owner box[:default_user]
+  group box[:default_group]
   mode 0755
-  files_owner node[:box][:default_user]
-  files_group node[:box][:default_group]
+  files_owner box[:default_user]
+  files_group box[:default_group]
   files_mode 0644
   files_backup false
 end
