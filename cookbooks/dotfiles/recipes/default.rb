@@ -33,7 +33,15 @@ package "tree"
 package "meld"
 
 # Search for files within Debian packages (command-line interface)
-package "apt-file"
+package "apt-file" do
+  notifies :run, "execute[update_apt_file_cache]", :delayed
+end
+
+execute "update_apt_file_cache" do
+  command "apt-file update"
+  user box['default_user']
+  action :nothing
+end
 
 # Lists available package versions with distribution
 package "apt-show-versions"
