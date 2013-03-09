@@ -18,13 +18,9 @@
 #
 
 
-unless node.attribute?(:box)
-  node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
-  node.save
-end
-
-
 ## Requirements
+
+include_recipe "base"
 
 # Displays directory tree, in color
 package "tree"
@@ -33,6 +29,8 @@ package "tree"
 package "meld"
 
 # Search for files within Debian packages (command-line interface)
+box = node[:box]
+
 package "apt-file" do
   notifies :run, "execute[update_apt_file_cache]", :delayed
 end
@@ -48,8 +46,6 @@ package "apt-show-versions"
 
 
 ## Deploy
-
-box = node[:box]
 
 dotfiles_dir = "#{box['home']}/#{box['dotfiles_folder']}"
 bash_dotfiles_dir = "#{dotfiles_dir}/bash"
