@@ -11,6 +11,9 @@ The following recipes may apply:
 
 This cookbook only applies to Ubuntu 12.04+ platform.
 
+#### recipes
+- `base::default`
+
 #### packages
 - `dkms` - Dynamic Kernel Module Support Framework [virtualbox]
 

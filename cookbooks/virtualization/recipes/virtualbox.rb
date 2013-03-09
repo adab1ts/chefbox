@@ -33,7 +33,7 @@ package "dkms"
 ## Apt Source Addition
 
 script = vbox['source']
-cache_path = Chef::Config[:file_cache_path]
+cache_path = node[:deploy][:resources_path]
 sources_path = "/etc/apt/sources.list.d"
 
 cookbook_file "#{cache_path}/#{script}" do
@@ -54,7 +54,7 @@ bash "add_apt_virtualbox" do
 end
 
 
-## Installation
+## Deploy
 
 vbox_package = vbox['package']
 vbox_support_folder = "#{box['home']}/#{box['support_folder']}/VirtualBox"
