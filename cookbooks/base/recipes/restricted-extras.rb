@@ -39,7 +39,7 @@ fonts_file   = msfonts['file']
 fonts_url    = msfonts['url']
 fonts_sha256 = msfonts['sha256']
 
-cache_path = Chef::Config[:file_cache_path]
+cache_path = node[:deploy][:resources_path]
 fonts_path = "/usr/share/fonts/truetype/msttfonts"
 
 remote_file "#{cache_path}/#{fonts_file}" do
