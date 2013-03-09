@@ -19,13 +19,9 @@
 #
 
 
-unless node.attribute?(:box)
-  node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
-  node.save
-end
-
-
 ## Requirements
+
+include_recipe "base"
 
 # Displays directory tree, in color
 package "tree"
