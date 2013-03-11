@@ -1,4 +1,5 @@
 #
+# Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: virtualization
 # Recipe:: default
 #
@@ -18,6 +19,11 @@
 #
 
 
+class ::Chef::Recipe
+  include ::Coderebels::Virtualization
+end
+
+
 ## Requirements
 
 include_recipe "base"
@@ -26,18 +32,18 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-
 virtualization = data_bag_item('apps', 'virtualization')
-apps = virtualization['apps']
 
-selected = box['apps']['virtualization'] || []
+apps = virtualization['apps']
+selected = box['apps']['virtualization']
 unselected = apps - selected
 
 
 # Uninstall apps not needed
 
 unselected.each do |app|
-  pkg = virtualization["#{app}"]['package']
+  profile = virtualization['profiles']["#{app}"]
+  pkg = profile['package']
 
   package pkg do
     action :purge
@@ -46,6 +52,8 @@ end
 
 
 # Install selected apps
+
+node.set[:apps] = { :virtualization => virtualization }
 
 include_recipe "virtualization::virtualbox" if selected.include?("virtualbox")
 

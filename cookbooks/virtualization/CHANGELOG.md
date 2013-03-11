@@ -6,3 +6,7 @@ This file is used to list changes made in each version of virtualization.
 
 * Initial release of virtualization
 
+## 0.1.1:
+
+* Automatic installation of 'Oracle VM VirtualBox Extension Pack'
+

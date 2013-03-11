@@ -1,4 +1,5 @@
 #
+# Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: virtualization
 # Recipe:: virtualbox
 #
@@ -18,12 +19,6 @@
 #
 
 
-box = node[:box]
-
-virtualization = data_bag_item('apps', 'virtualization')
-vbox = virtualization['virtualbox']
-
-
 ## Requirements
 
 # Dynamic Kernel Module Support Framework
@@ -31,6 +26,9 @@ package "dkms"
 
 
 ## Apt Source Addition
+
+virtualization = node[:apps][:virtualization]
+vbox = virtualization['profiles']['virtualbox']
 
 script = vbox['source']
 cache_path = node[:deploy][:resources_path]
@@ -56,18 +54,11 @@ end
 
 ## Deploy
 
-vbox_package = vbox['package']
-vbox_support_folder = "#{box['home']}/#{box['support_folder']}/VirtualBox"
-
-apps_resources = data_bag_item('resources', 'apps')
-support_resources = data_bag_item('resources', 'support')
-
-vbox_extpack = apps_resources['virtualbox']
-vbox_guide = support_resources['virtualbox']
-
 # Oracle VM VirtualBox
-package vbox_package do
-  notifies :run, "execute[join_vboxusers_group]", :delayed
+box = node[:box]
+
+package vbox['package'] do
+  notifies :run, "execute[join_vboxusers_group]", :immediately
 end
 
 execute "join_vboxusers_group" do
@@ -75,25 +66,23 @@ execute "join_vboxusers_group" do
   action :nothing
 end
 
-directory vbox_support_folder do
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
-end
+VirtualBox.fetch_extpack(vbox['package']) do |extpack_file, extpack_url, extpack_sha256|
+  remote_file "#{cache_path}/#{extpack_file}" do
+    source extpack_url
+    checksum extpack_sha256
+    notifies :run, "bash[install_vbox_extpack]", :immediately
+  end
 
-remote_file "#{vbox_support_folder}/#{vbox_extpack['file']}" do
-  source vbox_extpack['url']
-  checksum vbox_extpack['sha256']
-  owner box['default_user']
-  group box['default_group']
-  mode 0644
-end
-
-remote_file "#{vbox_support_folder}/#{vbox_guide['file']}" do
-  source vbox_guide['url']
-  checksum vbox_guide['sha256']
-  owner box['default_user']
-  group box['default_group']
-  mode 0644
+  bash "install_vbox_extpack" do
+    code <<-EOH
+      /usr/lib/virtualbox/VBoxExtPackHelperApp install \
+      --base-dir '/usr/lib/virtualbox/ExtensionPacks' \
+      --cert-dir '/usr/share/virtualbox/ExtPackCertificates' \
+      --name 'Oracle VM VirtualBox Extension Pack' \
+      --tarball '#{cache_path}/#{extpack_file}' \
+      --sha-256 '#{extpack_sha256}'
+    EOH
+    action :nothing
+  end
 end
 

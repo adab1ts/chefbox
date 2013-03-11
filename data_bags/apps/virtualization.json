@@ -3,8 +3,10 @@
   "apps": [
     "virtualbox"
   ],
-  "virtualbox": {
-    "source": "virtualbox",
-    "package": "virtualbox-4.2"
+  "profiles": {
+    "virtualbox": {
+      "package": "virtualbox-4.2",
+      "source": "virtualbox"
+    }
   }
 }
