@@ -37,7 +37,6 @@ end
 
 execute "update_apt_file_cache" do
   command "apt-file update"
-  user box['default_user']
   action :nothing
 end
 
