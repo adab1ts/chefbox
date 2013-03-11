@@ -1,4 +1,5 @@
 #
+# Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: dotfiles
 # Recipe:: default
 #
