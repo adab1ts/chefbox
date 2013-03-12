@@ -59,6 +59,7 @@ box = node[:box]
 
 package vbox['package'] do
   notifies :run, "execute[join_vboxusers_group]", :immediately
+  notifies :install, "virtualization_vbox_extpack[#{vbox['package']}]", :immediately
 end
 
 execute "join_vboxusers_group" do
@@ -66,23 +67,7 @@ execute "join_vboxusers_group" do
   action :nothing
 end
 
-VirtualBox.fetch_extpack(vbox['package']) do |extpack_file, extpack_url, extpack_sha256|
-  remote_file "#{cache_path}/#{extpack_file}" do
-    source extpack_url
-    checksum extpack_sha256
-    notifies :run, "bash[install_vbox_extpack]", :immediately
-  end
-
-  bash "install_vbox_extpack" do
-    code <<-EOH
-      /usr/lib/virtualbox/VBoxExtPackHelperApp install \
-      --base-dir '/usr/lib/virtualbox/ExtensionPacks' \
-      --cert-dir '/usr/share/virtualbox/ExtPackCertificates' \
-      --name 'Oracle VM VirtualBox Extension Pack' \
-      --tarball '#{cache_path}/#{extpack_file}' \
-      --sha-256 '#{extpack_sha256}'
-    EOH
-    action :nothing
-  end
+virtualization_vbox_extpack vbox['package'] do
+  action :nothing
 end
 

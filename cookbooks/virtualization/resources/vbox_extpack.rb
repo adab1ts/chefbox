@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: virtualization
-# Recipe:: default
+# Resource:: vbox_extpack
 #
 # Copyright 2013, Carles Muiños
 #
@@ -18,37 +18,15 @@
 # limitations under the License.
 #
 
+actions :install
+default_action :install if defined?(default_action)
 
-## Requirements
+attribute :package, :kind_of => String, :name_attribute => true
+attribute :version, :kind_of => String, :default => nil
+attribute :build, :kind_of => String, :default => nil
 
-include_recipe "base"
-
-
-## Deploy
-
-box = node[:box]
-virtualization = data_bag_item('apps', 'virtualization')
-
-apps = virtualization['apps']
-selected = box['apps']['virtualization']
-unselected = apps - selected
-
-
-# Uninstall apps not needed
-
-unselected.each do |app|
-  profile = virtualization['profiles']["#{app}"]
-  pkg = profile['package']
-
-  package pkg do
-    action :purge
-  end
+def initialize(*args)
+  super
+  @action = :install
 end
-
-
-# Install selected apps
-
-node.set[:apps] = { :virtualization => virtualization }
-
-include_recipe "virtualization::virtualbox" if selected.include?("virtualbox")
 

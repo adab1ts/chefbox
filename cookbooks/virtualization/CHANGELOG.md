@@ -10,3 +10,7 @@ This file is used to list changes made in each version of virtualization.
 
 * Automatic installation of 'Oracle VM VirtualBox Extension Pack'
 
+## 0.1.2:
+
+* New resource and provider 'vbox_extpack' for automatic installation of 'Oracle VM VirtualBox Extension Pack'
+
