@@ -6,7 +6,17 @@
   "profiles": {
     "virtualbox": {
       "package": "virtualbox-4.2",
-      "source": "virtualbox"
+      "maintainer": "Oracle Corporation <info@virtualbox.org>",
+      "description": "Oracle VM VirtualBox",
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "virtualbox",
+          "uri": "http://download.virtualbox.org/virtualbox/debian",
+          "components": ["contrib"],
+          "key": "http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"
+        }
+      }
     }
   }
 }

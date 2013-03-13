@@ -19,14 +19,10 @@
 #
 
 actions :install
-default_action :install if defined?(default_action)
 
 attribute :package, :kind_of => String, :name_attribute => true
 attribute :version, :kind_of => String, :default => nil
 attribute :build, :kind_of => String, :default => nil
 
-def initialize(*args)
-  super
-  @action = :install
-end
+default_action :install
 

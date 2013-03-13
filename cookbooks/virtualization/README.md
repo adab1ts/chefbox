@@ -11,6 +11,10 @@ The following recipes may apply:
 
 This cookbook only applies to Ubuntu 12.04+ platform.
 
+#### cookbooks
+- `apt`
+- `base`
+
 #### recipes
 - `base::default`
 

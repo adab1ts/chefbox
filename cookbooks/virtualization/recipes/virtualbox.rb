@@ -29,26 +29,14 @@ package "dkms"
 
 virtualization = node[:apps][:virtualization]
 vbox = virtualization['profiles']['virtualbox']
+vbox_repo = vbox['source']['data']
 
-script = vbox['source']
-cache_path = node[:deploy][:resources_path]
-sources_path = "/etc/apt/sources.list.d"
-
-cookbook_file "#{cache_path}/#{script}" do
-  source "/apt/#{script}"
-  backup false
-  notifies :run, "bash[add_apt_virtualbox]", :immediately
-end
-
-bash "add_apt_virtualbox" do
-  environment('CODENAME' => node[:lsb][:codename])
-  cwd cache_path
-  code <<-EOH
-    [[ ! -f "#{sources_path}/#{script}-#{node[:lsb][:codename]}.list" ]] && sh #{script}
-    find /etc/apt -name \*.save -delete
-    apt-get update
-  EOH
-  action :nothing
+apt_repository "#{vbox_repo['repo_name']}-#{node[:lsb][:codename]}" do
+  uri vbox_repo['uri']
+  distribution node[:lsb][:codename]
+  components vbox_repo['components']
+  key vbox_repo['key']
+  action :add
 end
 
 

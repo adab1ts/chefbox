@@ -23,7 +23,7 @@ def whyrun_supported?
 end
 
 def load_current_resource
-  @current_resource = Chef::Resource::VirtualizationVboxExtpack.new(@new_resource.name)
+  @current_resource = Chef::Resource::VirtualizationVboxExtpack.new(new_resource.name)
 end
 
 action :install do
@@ -35,7 +35,6 @@ action :install do
   end
 
   file, url, sha256 = extpack_for version, build
-
   cache_path = new_resource.run_context.node[:deploy][:resources_path]
 
   remote_file "#{cache_path}/#{file}" do
