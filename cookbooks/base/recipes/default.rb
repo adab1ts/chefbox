@@ -20,10 +20,7 @@
 
 
 node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
-node.set[:deploy] = { :resources_path => "#{Chef::Config[:file_cache_path]}/resources" }
 node.save
-
-directory node[:deploy][:resources_path]
 
 include_recipe "base::sources"
 include_recipe "base::main"

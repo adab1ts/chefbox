@@ -20,7 +20,7 @@
 
 
 sources_file = "sources.tar.gz"
-cache_path   = node[:deploy][:resources_path]
+cache_path   = Chef::Config[:file_cache_path]
 tmp_dir      = "/tmp/chef/apt"
 sources_path = "/etc/apt/sources.list.d"
 

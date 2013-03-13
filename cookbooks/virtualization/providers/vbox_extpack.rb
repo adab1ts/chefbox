@@ -35,7 +35,7 @@ action :install do
   end
 
   file, url, sha256 = extpack_for version, build
-  cache_path = new_resource.run_context.node[:deploy][:resources_path]
+  cache_path = Chef::Config[:file_cache_path]
 
   remote_file "#{cache_path}/#{file}" do
     source url
