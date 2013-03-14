@@ -43,6 +43,16 @@ unselected.each do |app|
   package pkg do
     action :purge
   end
+
+  suggested = profile['suggested']
+
+  suggested.each do |spkg|
+    package spkg do
+      action :purge
+    end
+  end
+
+  execute "apt-get -y autoremove"
 end
 
 
