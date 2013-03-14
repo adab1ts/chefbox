@@ -11,7 +11,7 @@
       "package": "gimp",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "The GNU Image Manipulation Program",
-      "suggested": ["gimp-plugin-registry", "gimp-gmic", "gimp-help"],
+      "suggested": ["gimp-plugin-registry", "gimp-gmic"],
       "source": {
         "type": "ppa",
         "data": {
