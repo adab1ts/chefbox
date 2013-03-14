@@ -45,7 +45,7 @@ define :install_app do
     end
   end
 
-  ## Deploy
+  ## Installation
   package params[:name] do
     package_name profile['package']
   end

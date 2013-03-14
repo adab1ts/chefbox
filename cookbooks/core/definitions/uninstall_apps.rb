@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: core
-# Definitions:: uninstall_app
+# Definitions:: uninstall_apps
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,19 +19,20 @@
 #
 
 
-define :uninstall_app do
-  profile = params[:profile]
+define :uninstall_apps, :autoremove => true do
+  apps = params[:apps]
+  profiles = params[:profiles]
 
-  # Suggested packages
-  profile['suggested'].each do |pkg|
-    package pkg do
-      action :purge
+  apps.each do |app|
+    uninstall_app app do
+      profile profiles[app]
     end
   end
 
-  package params[:name] do
-    package_name profile['package']
-    action :purge
+  if params[:autoremove]
+    execute "apt-get -y autoremove" do
+      not_if { apps.empty? }
+    end
   end
 end
 

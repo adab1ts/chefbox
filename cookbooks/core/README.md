@@ -47,6 +47,24 @@ purging all unnecessary packages.
       profile graphics['profiles']['gimp']
     end
 
+`uninstall_apps` provides an easy way to uninstall a set of applications,
+purging all unnecessary packages.
+
+#### Examples
+
+    # uninstall graphics applications
+    box = node[:box]
+    graphics = data_bag_item('apps', 'graphics')
+
+    apps = graphics['apps']
+    selected = box['apps']['graphics']
+    unselected = apps - selected
+
+    uninstall_apps "graphics" do
+      apps unselected
+      profiles graphics['profiles']
+    end
+
 
 ## Resources/Providers
 

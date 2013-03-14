@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.4.0:
+
+* definitions/uninstall_apps - wraps the removal of specified applications
+
 ## 0.3.0:
 
 * definitions/install_app - wraps the installation of an application, managing the addition of external sources when nedeed
