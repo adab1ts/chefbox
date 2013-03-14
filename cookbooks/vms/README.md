@@ -13,6 +13,7 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 #### cookbooks
 - `apt`
+- `core`
 - `base`
 
 #### recipes
