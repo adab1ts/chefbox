@@ -1,0 +1,55 @@
+{
+  "id": "graphics",
+  "apps": [
+    "gimp",
+    "inkscape",
+    "mypaint",
+    "scribus"
+  ],
+  "profiles": {
+    "gimp": {
+      "package": "gimp",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "The GNU Image Manipulation Program",
+      "suggested": ["gimp-plugin-registry", "gimp-gmic", "gimp-help"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "otto-kesselgulasch-gimp",
+          "uri": "ppa:otto-kesselgulasch/gimp"
+        }
+      }
+    },
+    "inkscape": {
+      "package": "inkscape",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "vector-based drawing program",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    },
+    "mypaint": {
+      "package": "mypaint",
+      "maintainer": "Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>",
+      "description": "paint program for use with graphics tablets",
+      "suggested": ["mypaint-data-hires"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "achadwick-mypaint-testing",
+          "uri": "ppa:achadwick/mypaint-testing"
+        }
+      }
+    },
+    "scribus": {
+      "package": "scribus",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Open Source Desktop Page Layout - stable branch",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    }
+  }
+}
