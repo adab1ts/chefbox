@@ -20,27 +20,9 @@
 
 
 graphics = node[:apps][:graphics]
-mypaint = graphics['profiles']['mypaint']
-
-
-## PPA Addition
-
-mypaint_ppa = mypaint['source']['data']
-
-core_ppa mypaint_ppa['repo_name'] do
-  uri mypaint_ppa['uri']
-  distribution node[:lsb][:codename]
-  action :add
-end
-
-
-## Deploy
 
 # Paint program for use with graphics tablets
-package mypaint['package']
-
-# Suggested packages
-mypaint['suggested'].each do |pkg|
-  package pkg
+install_app "mypaint" do
+  profile graphics['profiles']['mypaint']
 end
 

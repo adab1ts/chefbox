@@ -20,16 +20,9 @@
 
 
 graphics = node[:apps][:graphics]
-scribus = graphics['profiles']['scribus']
-
-
-## Deploy
 
 # Open Source Desktop Page Layout
-package scribus['package']
-
-# Suggested packages
-scribus['suggested'].each do |pkg|
-  package pkg
+install_app "scribus" do
+  profile graphics['profiles']['scribus']
 end
 

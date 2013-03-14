@@ -29,23 +29,16 @@ include_recipe "base"
 box = node[:box]
 graphics = data_bag_item('apps', 'graphics')
 
+# Uninstall apps not needed
+
 apps = graphics['apps']
 selected = box['apps']['graphics']
 unselected = apps - selected
 
-
-# Uninstall apps not needed
-
-unselected.each do |app|
-  purge_pkgs app do
-    profile graphics['profiles']["#{app}"]
-  end
+uninstall_apps "graphics" do
+  apps unselected
+  profiles graphics['profiles']
 end
-
-execute "apt-get -y autoremove" do
-  not_if { unselected.empty? }
-end
-
 
 # Install selected apps
 

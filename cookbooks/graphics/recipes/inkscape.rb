@@ -20,16 +20,9 @@
 
 
 graphics = node[:apps][:graphics]
-inkscape = graphics['profiles']['inkscape']
-
-
-## Deploy
 
 # Vector-based drawing program
-package inkscape['package']
-
-# Suggested packages
-inkscape['suggested'].each do |pkg|
-  package pkg
+install_app "inkscape" do
+  profile graphics['profiles']['inkscape']
 end
 
