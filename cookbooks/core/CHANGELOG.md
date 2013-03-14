@@ -11,3 +11,7 @@ This file is used to list changes made in each version of core.
 * resources/ppa - added clean_saved attribute to trigger sources backup removal
 * providers/ppa - sources backup removal triggered based on clean_saved resource attribute
 
+## 0.2.0:
+
+* definitions/purge_pkgs - new definition wrapping the purge of a package and the suggested ones installed with it
+
