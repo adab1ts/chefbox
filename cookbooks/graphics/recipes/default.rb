@@ -37,22 +37,13 @@ unselected = apps - selected
 # Uninstall apps not needed
 
 unselected.each do |app|
-  profile = graphics['profiles']["#{app}"]
-  pkg = profile['package']
-
-  package pkg do
-    action :purge
+  purge_pkgs app do
+    profile graphics['profiles']["#{app}"]
   end
+end
 
-  suggested = profile['suggested']
-
-  suggested.each do |spkg|
-    package spkg do
-      action :purge
-    end
-  end
-
-  execute "apt-get -y autoremove"
+execute "apt-get -y autoremove" do
+  not_if { unselected.empty? }
 end
 
 
