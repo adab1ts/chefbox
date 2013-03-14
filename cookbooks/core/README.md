@@ -1,12 +1,12 @@
 # core Cookbook
 
-This cookbook includes core components to be used as a foundation for other cookbooks.
+This cookbook includes core components to be used as a foundation for other cookbooks.  
 It is based on [opscode-cookbooks/apt](https://github.com/opscode-cookbooks/apt) cookbook
 by
 
-  Joshua Timberman (&lt;joshua at opscode.com&gt;)
-  Matt Ray (&lt;matt at opscode.com&gt;)
-  Seth Chisamore (&lt;schisamo at opscode.com&gt;)
+    Joshua Timberman (&lt;joshua at opscode.com&gt;)
+    Matt Ray (&lt;matt at opscode.com&gt;)
+    Seth Chisamore (&lt;schisamo at opscode.com&gt;)
 
 
 ## Requirements
