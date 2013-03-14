@@ -13,6 +13,40 @@ Seth Chisamore (&lt;schisamo at opscode.com&gt;)
 
 This cookbook only applies to Ubuntu 12.04+ platform.
 
+#### cookbooks
+- `apt`
+
+
+## Definitions
+
+### Installing applications
+
+`install_app` provides an easy way to manage the installation of an application,
+ensuring the correct addition of external sources when nedeed.
+
+#### Examples
+
+    # install gimp application
+    graphics = data_bag_item('apps', 'graphics')
+
+    install_app "gimp" do
+      profile graphics['profiles']['gimp']
+    end
+
+### Uninstalling applications
+
+`uninstall_app` provides an easy way to uninstall an application,
+purging all unnecessary packages.
+
+#### Examples
+
+    # uninstall gimp application
+    graphics = data_bag_item('apps', 'graphics')
+
+    uninstall_app "gimp" do
+      profile graphics['profiles']['gimp']
+    end
+
 
 ## Resources/Providers
 
