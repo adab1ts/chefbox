@@ -8,6 +8,7 @@
       "package": "virtualbox-4.2",
       "maintainer": "Oracle Corporation <info@virtualbox.org>",
       "description": "Oracle VM VirtualBox",
+      "suggested": [],
       "source": {
         "type": "repo",
         "data": {
