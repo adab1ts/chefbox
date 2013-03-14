@@ -11,6 +11,7 @@
     "recipe[base]",
     "recipe[dotfiles]",
     "recipe[jobs]",
+    "recipe[vms]",
     "recipe[graphics]"
   ],
   "env_run_lists": {}
