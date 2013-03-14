@@ -25,6 +25,7 @@ attribute :repo_name, :kind_of => String, :name_attribute => true
 attribute :uri, :kind_of => String
 attribute :distribution, :kind_of => String
 attribute :cache_rebuild, :kind_of => [TrueClass, FalseClass], :default => true
+attribute :clean_saved, :kind_of => [TrueClass, FalseClass], :default => true
 
 default_action :add
 

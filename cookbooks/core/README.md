@@ -29,9 +29,11 @@ resource immediately.
 
 #### Attribute Parameters
 
-- repo_name: The name of the new source file
+- repo_name: the name of the new source file
 - uri: the ppa uri to add
 - distribution: this is usually your release's codename
+- cache_build: triggers package index synchronization
+- clean_saved: triggers sources backup removal
 
 #### Examples
 

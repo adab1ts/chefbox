@@ -46,7 +46,7 @@ action :add do
     @aar = execute "add-apt-repository #{new_resource.uri}" do
       command "add-apt-repository -y #{new_resource.uri}"
       creates "/etc/apt/sources.list.d/#{new_resource.name}-#{new_resource.run_context.node[:lsb][:codename]}.list"
-      notifies :run, "execute[remove_sources_backup]", :immediately
+      notifies :run, "execute[remove_sources_backup]", :immediately if new_resource.clean_saved
       notifies :run, "execute[synchronize_package_index]", :immediately if new_resource.cache_rebuild
     end
   end
