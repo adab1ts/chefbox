@@ -6,3 +6,7 @@ This file is used to list changes made in each version of vms.
 
 * Initial release of vms
 
+## 0.1.1:
+
+* recipes/default - purge of unneeded suggested packages and autoremove task
+
