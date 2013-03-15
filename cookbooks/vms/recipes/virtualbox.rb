@@ -25,43 +25,26 @@
 package "dkms"
 
 
-## Apt Source Addition
+## Installation
 
+box = node[:box]
 virtualization = node[:apps][:virtualization]
 vbox = virtualization['profiles']['virtualbox']
-vbox_repo = vbox['source']['data']
-
-apt_repository "#{vbox_repo['repo_name']}-#{node[:lsb][:codename]}" do
-  uri vbox_repo['uri']
-  distribution node[:lsb][:codename]
-  components vbox_repo['components']
-  key vbox_repo['key']
-  action :add
-end
-
-
-## Deploy
 
 # Oracle VM VirtualBox
-box = node[:box]
-
-package vbox['package'] do
-  notifies :run, "execute[join_vboxusers_group]", :immediately
-  notifies :install, "vms_vbox_extpack[virtualbox]", :immediately
+install_app "virtualbox" do
+  profile vbox
 end
 
 execute "join_vboxusers_group" do
   command "adduser #{box['default_user']} vboxusers"
   action :nothing
+  subscribes :run, resources("package[virtualbox]"), :immediately
 end
 
 vms_vbox_extpack "virtualbox" do
   package vbox['package']
   action :nothing
-end
-
-# Suggested packages
-vbox['suggested'].each do |pkg|
-  package pkg
+  subscribes :install, resources("package[virtualbox]"), :immediately
 end
 

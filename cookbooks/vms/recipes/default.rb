@@ -29,23 +29,16 @@ include_recipe "base"
 box = node[:box]
 virtualization = data_bag_item('apps', 'virtualization')
 
+# Uninstall apps not needed
+
 apps = virtualization['apps']
 selected = box['apps']['virtualization']
 unselected = apps - selected
 
-
-# Uninstall apps not needed
-
-unselected.each do |app|
-  purge_pkgs app do
-    profile virtualization['profiles']["#{app}"]
-  end
+uninstall_apps "virtualization" do
+  apps unselected
+  profiles virtualization['profiles']
 end
-
-execute "apt-get -y autoremove" do
-  not_if { unselected.empty? }
-end
-
 
 # Install selected apps
 
