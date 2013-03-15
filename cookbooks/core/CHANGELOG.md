@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.4.1:
+
+* definitions/purge_pkgs - removal of purge_pkgs definition (uninstall_app in its place)
+
 ## 0.4.0:
 
 * definitions/uninstall_apps - wraps the removal of specified applications
