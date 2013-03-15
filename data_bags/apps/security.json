@@ -1,0 +1,37 @@
+{
+  "id": "security",
+  "apps": [
+    "antivirus",
+    "firewall",
+    "tracking"
+  ],
+  "profiles": {
+    "antivirus": {
+      "package": "clamtk",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "graphical front-end for ClamAV",
+      "suggested": ["cabextract", "libclamunrar6"],
+      "source": {
+        "type": "usc"
+      }
+    },
+    "firewall": {
+      "package": "gufw",
+      "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>",
+      "description": "graphical user interface for ufw",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    },
+    "tracking": {
+      "package": "prey",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "utility for tracking stolen computers",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    }
+  }
+}

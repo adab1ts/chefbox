@@ -1,0 +1,63 @@
+{
+  "id": "eyecandy",
+  "apps": [
+    "faenza-icons",
+    "faience-icons",
+    "nitrux-icons",
+    "unsettings"
+  ],
+  "profiles": {
+    "faenza-icons": {
+      "package": "faenza-icon-theme",
+      "maintainer": "Matthieu James <matthieu.james@gmail.com>",
+      "description": "Faenza Icon Theme",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "tiheum-equinox",
+          "uri": "ppa:tiheum/equinox"
+        }
+      }
+    },
+    "faience-icons": {
+      "package": "faience-icon-theme",
+      "maintainer": "Matthieu James <matthieu.james@gmail.com>",
+      "description": "Faience Icon Theme",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "tiheum-equinox",
+          "uri": "ppa:tiheum/equinox"
+        }
+      }
+    },
+    "nitrux-icons": {
+      "package": "nitrux-umd",
+      "maintainer": "Georgi Karavasilev <motorslav@gmail.com>",
+      "description": "NITRUX-umd",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kokoto-java-omgubuntu-stuff",
+          "uri": "ppa:kokoto-java/omgubuntu-stuff"
+        }
+      }
+    },
+    "unsettings": {
+      "package": "unsettings",
+      "maintainer": "Florian Diesch <devel@florian-diesch.de>",
+      "description": "graphical configuration program for the Unity desktop environment",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "diesch-testing",
+          "uri": "ppa:diesch/testing"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "indicators",
+  "apps": [
+    "plug&play",
+    "screensaver",
+    "ubuntuone"
+  ],
+  "profiles": {
+    "plug&play": {
+      "package": "udev-notify",
+      "maintainer": "USU Team <lfu.project@gmail.com>",
+      "description": "Display notifications about newly plugged hardware",
+      "suggested": [],
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "udev-notify",
+          "uri": "http://download.learnfree.eu/repository/skss / #SKSS",
+          "components": [],
+          "key": "http://download.learnfree.eu/repository/skss/repo.pub.asc"
+        }
+      }
+    },
+    "screensaver": {
+      "package": "caffeine",
+      "maintainer": "Isaiah Heyer <freshapplepy@gmail.com>",
+      "description": "Caffeine",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "caffeine-developers-ppa",
+          "uri": "ppa:caffeine-developers/ppa"
+        }
+      }
+    },
+    "ubuntuone": {
+      "package": "indicator-ubuntuone",
+      "maintainer": "Roman Yepishev <roman.yepishev@ubuntu.com>",
+      "description": "Indicator for Ubuntu One synchronization service",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "rye-ubuntuone-extras",
+          "uri": "ppa:rye/ubuntuone-extras"
+        }
+      }
+    }
+  }
+}
