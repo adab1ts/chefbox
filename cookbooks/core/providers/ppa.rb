@@ -45,7 +45,7 @@ action :add do
 
     @aar = execute "add-apt-repository #{new_resource.uri}" do
       command "add-apt-repository -y #{new_resource.uri}"
-      creates "/etc/apt/sources.list.d/#{new_resource.name}-#{new_resource.run_context.node[:lsb][:codename]}.list"
+      creates "/etc/apt/sources.list.d/#{new_resource.name}-#{new_resource.distribution}.list"
       notifies :run, "execute[remove_sources_backup]", :immediately if new_resource.clean_saved
       notifies :run, "execute[synchronize_package_index]", :immediately if new_resource.cache_rebuild
     end
@@ -56,7 +56,7 @@ action :add do
 end
 
 action :remove do
-  ppa_name = "#{new_resource.name}-#{new_resource.run_context.node[:lsb][:codename]}"
+  ppa_name = "#{new_resource.name}-#{new_resource.distribution}"
 
   if ::File.exists?("/etc/apt/sources.list.d/#{ppa_name}.list")
     Chef::Log.info "Removing #{ppa_name} repository from /etc/apt/sources.list.d/"

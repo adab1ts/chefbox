@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.5.0:
+
+* definitions/autostart_app - tells an application to autostart when login in
+
 ## 0.4.1:
 
 * definitions/purge_pkgs - removal of purge_pkgs definition (uninstall_app in its place)

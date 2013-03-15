@@ -65,6 +65,19 @@ purging all unnecessary packages.
       profiles graphics['profiles']
     end
 
+### Autostart of applications
+
+`autostart_app` provides an easy way to tell an application to autostart at login time.
+
+#### Examples
+
+    # autostart caffeine indicator
+    indicators = data_bag_item('apps', 'indicators')
+
+    autostart_app "screensaver" do
+      profile indicators['profiles']['screensaver']
+    end
+
 
 ## Resources/Providers
 
