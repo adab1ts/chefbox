@@ -9,6 +9,7 @@
   "override_attributes": {},
   "run_list": [
     "recipe[base]",
+    "recipe[security]",
     "recipe[dotfiles]",
     "recipe[jobs]",
     "recipe[vms]",
