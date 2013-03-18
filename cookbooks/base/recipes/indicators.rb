@@ -19,40 +19,40 @@
 #
 
 
-box = node[:box]
-
-autostart_dir = "#{box['home']}/.config/autostart"
-
-directory autostart_dir do
-  owner box['default_user']
-  group box['default_group']
-  mode 0775
-  recursive true
-end
+indicators = data_bag_item('apps', 'indicators')
 
 # Display notifications about newly plugged hardware
-package "udev-notify"
+plugandplay = indicators['profiles']['plug&play']
+source = plugandplay['source']['data']
 
-cookbook_file "#{autostart_dir}/udev-notify.desktop" do
-  source "/autostart/udev-notify.desktop"
-  backup false
-  owner box['default_user']
-  group box['default_group']
-  mode 0664
+apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
+  uri source['uri']
+  distribution ""
+  components source['components']
+  key source['key']
+  action :add
+end
+
+package plugandplay['package']
+
+autostart_app "plug&play" do
+  profile plugandplay
 end
 
 # A status bar application able to temporarily prevent the activation
 # of both the screensaver and the "sleep" powersaving mode
-package "caffeine"
+install_app "screensaver" do
+  profile indicators['profiles']['screensaver']
+end
 
-cookbook_file "#{autostart_dir}/caffeine.desktop" do
-  source "/autostart/caffeine.desktop"
-  backup false
-  owner box['default_user']
-  group box['default_group']
-  mode 0644
+autostart_app "screensaver" do
+  profile indicators['profiles']['screensaver']
 end
 
 # Indicator for Ubuntu One synchronization service
-package "indicator-ubuntuone" if node[:platform_version] == "12.04"
+if node[:platform_version] == "12.04"
+  install_app "ubuntuone" do
+    profile indicators['profiles']['ubuntuone']
+  end
+end
 

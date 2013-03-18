@@ -19,14 +19,17 @@
 #
 
 
-# Anti-virus utility for Unix
-package "clamtk"
-package "cabextract"
-package "libclamunrar6"
+security = data_bag_item('apps', 'security')
 
+# Anti-virus utility for Unix
+install_app "antivirus" do
+  profile security['profiles']['antivirus']
+end
 
 # Program for managing a Netfilter firewall
-package "gufw"
+install_app "firewall" do
+  profile security['profiles']['firewall']
+end
 
 cookbook_file "/etc/ufw/applications.d/chef-openssh-server" do
   source "/ufw/chef-openssh-server"

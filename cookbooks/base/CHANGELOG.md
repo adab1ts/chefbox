@@ -2,19 +2,23 @@
 
 This file is used to list changes made in each version of base.
 
-## 0.1.0:
+## 0.1.4:
 
-* Initial release of base
+* recipes/* - refactorization of recipes by introducing definitions in 'core' cookbook
 
-## 0.1.1:
+## 0.1.3:
 
-* Remove Faience icon theme from recipe[base::eyecandy]
+* Create Suport folder with post installation instructions in recipe[base::default]
 
 ## 0.1.2:
 
 * Remove Faenza icon theme from recipe[base::eyecandy]
 
-## 0.1.3:
+## 0.1.1:
 
-* Create Suport folder with post installation instructions in recipe[base::default]
+* Remove Faience icon theme from recipe[base::eyecandy]
+
+## 0.1.0:
+
+* Initial release of base
 

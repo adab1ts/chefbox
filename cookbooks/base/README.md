@@ -3,15 +3,6 @@
 This cookbook sets up a fresh installation of Ubuntu desktop with a basic profile.  
 The following recipes are applied:
 
-- `base::sources` - adds the following apt sources and ppas:
-  
-  `udev-notify apt source`          - USU Team &lt;lfu.project at gmail.com&gt;  
-  `ppa:rye/ubuntuone-extras`        - Roman Yepishev &lt;roman.yepishev at ubuntu.com&gt;  
-  `ppa:caffeine-developers/ppa`     - Isaiah Heyer &lt;freshapplepy at gmail.com&gt;  
-  `ppa:diesch/testing`              - Florian Diesch &lt;devel at florian-diesch.de&gt;  
-  `ppa:kokoto-java/omgubuntu-stuff` - Georgi Karavasilev &lt;motorslav at gmail.com&gt;  
-  `ppa:tiheum/equinox`              - Matthieu James &lt;matthieu.james at gmail.com&gt;
-
 - `base::main` - manages the following packages:
   
   `-example-content`            - Ubuntu example content  
@@ -23,24 +14,21 @@ The following recipes are applied:
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
 
-- `base::security` - manages the following packages and services:
+- `base::security` - installs the following applications:
 
-  `+clamtk`        - Graphical front-end for ClamAV  
-  `+cabextract`    - Microsoft Cabinet file unpacker  
-  `+libclamunrar6` - Anti-virus utility for Unix - unrar support  
-  `+gufw`          - Graphical user interface for ufw  
-  `ufw` - Program for managing a Netfilter firewall
+  `clamtk` - Graphical front-end for ClamAV antivirus  
+  `gufw`   - Graphical user interface for ufw netfilter firewall  
 
-- `base::indicators` - manages the following packages:
+- `base::indicators` - installs the following indicators:
 
-  `+udev-notify`         - Display notifications about newly plugged hardware  
-  `+indicator-ubuntuone` - Indicator for Ubuntu One synchronization service (Ubuntu 12.04 only)  
-  `+caffeine`            - Prevents the activation of both the screensaver and the "sleep" powersaving mode
+  `udev-notify`         - Display notifications about newly plugged hardware  
+  `indicator-ubuntuone` - Indicator for Ubuntu One synchronization service (Ubuntu 12.04 only)  
+  `caffeine`            - Prevents the activation of both the screensaver and the "sleep" powersaving mode
 
-- `base::eyecandy` - manages the following packages:
+- `base::eyecandy` - installs the following applications and themes:
 
-  `+unsettings`         - Graphical configuration program for the Unity desktop environment  
-  `+nitrux-umd`         - NITRUX-like icon theme  
+  `unsettings` - Graphical configuration program for the Unity desktop environment  
+  `nitrux-umd` - NITRUX-like icon theme  
 
 - `base::office` - manages the following packages:
 
@@ -58,6 +46,9 @@ The following recipes are applied:
 ## Requirements
 
 This cookbook only applies to Ubuntu 12.04+ platform.
+
+#### cookbooks
+- `core`
 
 
 ## Usage

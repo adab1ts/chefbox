@@ -25,8 +25,8 @@ package "ubuntu-restricted-extras" do
 end
 
 execute "install_additional_extras" do
-  command "sh install-css.sh"
   cwd "/usr/share/doc/libdvdread4"
+  command "sh install-css.sh"
   action :nothing
 end
 

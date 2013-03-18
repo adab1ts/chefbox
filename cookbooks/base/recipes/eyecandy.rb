@@ -19,9 +19,15 @@
 #
 
 
+eyecandy = data_bag_item('apps', 'eyecandy')
+
 # Graphical configuration program for the Unity desktop environment
-package "unsettings"
+install_app "unsettings" do
+  profile eyecandy['profiles']['unsettings']
+end
 
 # NITRUX-like icon theme
-package "nitrux-umd"
+install_app "nitrux-icons" do
+  profile eyecandy['profiles']['nitrux-icons']
+end
 
