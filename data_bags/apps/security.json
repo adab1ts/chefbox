@@ -28,9 +28,15 @@
       "package": "prey",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "utility for tracking stolen computers",
-      "suggested": [],
+      "suggested": ["traceroute"],
+      "dependencies": ["mpg123", "scrot", "streamer"],
       "source": {
-        "type": "usc"
+        "type": "deb",
+        "data": {
+          "file_name": "prey_0.5.9-ubuntu2_all.deb",
+          "uri": "https://preyproject.com/releases/0.5.9/prey_0.5.9-ubuntu2_all.deb",
+          "sha256": "a7b09eb36110f7b2843efb70a601d97c2d00ddca079afb30aafdb57d9d10e637"
+        }
       }
     }
   }
