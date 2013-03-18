@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.4.0:
+
+* recipes/default - removed inclusion of recipe[base::eyecandy]
+* recipes/eyecandy - deleted
+
 ## 0.3.0:
 
 * recipes/default - removed inclusion of recipe[base::indicators]

@@ -14,11 +14,6 @@ The following recipes are applied:
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
 
-- `base::eyecandy` - installs the following applications and themes:
-
-  `unsettings` - Graphical configuration program for the Unity desktop environment  
-  `nitrux-umd` - NITRUX-like icon theme  
-
 - `base::office` - manages the following packages:
 
   `+lo-menubar`               - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
