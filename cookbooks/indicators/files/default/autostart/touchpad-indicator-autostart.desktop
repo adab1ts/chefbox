@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Icon=/usr/share/pixmaps/touchpad-indicator.svg
+Exec=/usr/bin/touchpad-indicator
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=touchpad-indicator-autostart
+Comment=Touchpad-Indicator official shortcut
