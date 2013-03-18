@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: office
+# Recipe:: begin
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,7 +19,6 @@
 #
 
 
-# Office productivity suite
-package "lo-menubar" if node[:platform_version] == "12.04"
-package "libreoffice-style-galaxy"
+node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
+node.save
 

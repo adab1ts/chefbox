@@ -1,30 +1,26 @@
 # base Cookbook
 
-This cookbook sets up a fresh installation of Ubuntu desktop with a basic profile.  
+This cookbook sets up a fresh installation of Ubuntu desktop with a minimum profile.  
 The following recipes are applied:
+
+- `base::begin` - manages code and resources to be executed in the first place
 
 - `base::main` - manages the following packages:
   
   `-example-content`            - Ubuntu example content  
   `+dkms`                       - Dynamic Kernel Module Support Framework  
-  `+preload`                    - Adaptive readahead daemon  
+  `+preload`                    - Adaptive readahead daemon (mem > 4 GB only) 
   `+qtnx`                       - NX client for QT  
   `+p7zip-full`                 - 7z and 7za file archivers with high compression ratio  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
-
-- `base::office` - manages the following packages:
-
-  `+lo-menubar`               - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
-  `+libreoffice-style-galaxy` - Office productivity suite -- Galaxy (Default) symbol style
-
-- `base::restricted-extras` - manages the following packages and fonts:
-
-  `+ubuntu-restricted-extras` - Commonly used restricted packages for Ubuntu  
+  `+lo-menubar`                 - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
+  `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
+  `+ubuntu-restricted-extras`   - Commonly used restricted packages for Ubuntu  
   `MS Office True Type Fonts`
 
-- `base::default` - executes first system upgrade and creates a support folder with post-installation instructions
+- `base::end` - executes first system upgrade and creates a support folder with post-installation instructions
 
 
 ## Requirements

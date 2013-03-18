@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.5.0:
+
+* recipes/default - now includes only recipe[base::begin], recipe[base::main] and recipe[base::end]
+* recipes/begin - includes code and resources to be executed in the first place
+* recipes/end - includes code and resources to be executed at the end
+* recipes/main - now includes the contents of recipe[base::office] and recipe[base::restricted-extras] as well
+* recipes/office - deleted
+* recipes/restricted-extras - deleted
+
 ## 0.4.0:
 
 * recipes/default - removed inclusion of recipe[base::eyecandy]

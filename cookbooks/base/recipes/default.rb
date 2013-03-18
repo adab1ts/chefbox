@@ -21,41 +21,7 @@
 
 include_recipe "core"
 
-node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
-node.save
-
+include_recipe "base::begin"
 include_recipe "base::main"
-include_recipe "base::office"
-include_recipe "base::restricted-extras"
-
-ruby_block "first_run_completed" do
-  block do
-    node.set[:first_run_completed] = true
-    node.save
-  end
-  notifies :run, "bash[first_system_upgrade]", :immediately
-  not_if { node.attribute?(:first_run_completed) }
-end
-
-bash "first_system_upgrade" do
-  code <<-EOH
-    apt-get -y upgrade
-    apt-get clean
-    EOH
-  action :nothing
-end
-
-box = node[:box]
-support_folder = "#{box['home']}/#{box['support_folder']}"
-
-remote_directory support_folder do
-  source "support"
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
-  files_owner box['default_user']
-  files_group box['default_group']
-  files_mode 0644
-  files_backup false
-end
+include_recipe "base::end"
 
