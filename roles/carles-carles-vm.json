@@ -11,6 +11,7 @@
     "recipe[base]",
     "recipe[security]",
     "recipe[indicators]",
+    "recipe[eyecandy]",
     "recipe[dotfiles]",
     "recipe[jobs]",
     "recipe[vms]",
