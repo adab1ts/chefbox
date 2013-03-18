@@ -55,7 +55,7 @@ bash "install_fonts" do
     tar -C #{fonts_path} -xzf #{fonts_file} \
     && chown root.root #{fonts_path}/* \
     && chmod 644 #{fonts_path}/*
-  EOH
+    EOH
   notifies :run, "execute[load_fonts]", :immediately
   action :nothing
 end

@@ -28,7 +28,7 @@ end
 
 execute "remove_example_content_file" do
   command "rm #{box['home']}/examples.desktop"
-  only_if { File.exists? "#{box['home']}/examples.desktop" }
+  only_if { ::File.exists? "#{box['home']}/examples.desktop" }
 end
 
 # Dynamic Kernel Module Support Framework

@@ -14,11 +14,6 @@ The following recipes are applied:
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
 
-- `base::security` - installs the following applications:
-
-  `clamtk` - Graphical front-end for ClamAV antivirus  
-  `gufw`   - Graphical user interface for ufw netfilter firewall  
-
 - `base::indicators` - installs the following indicators:
 
   `udev-notify`         - Display notifications about newly plugged hardware  

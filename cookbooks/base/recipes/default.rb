@@ -19,11 +19,12 @@
 #
 
 
+include_recipe "core"
+
 node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
 node.save
 
 include_recipe "base::main"
-include_recipe "base::security"
 include_recipe "base::indicators"
 include_recipe "base::eyecandy"
 include_recipe "base::office"
@@ -42,7 +43,7 @@ bash "first_system_upgrade" do
   code <<-EOH
     apt-get -y upgrade
     apt-get clean
-  EOH
+    EOH
   action :nothing
 end
 

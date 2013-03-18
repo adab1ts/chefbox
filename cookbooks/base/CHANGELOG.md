@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.2.0:
+
+* recipes/default - stop inclusion of recipe[base::security]
+* recipes/security - deleted
+* files/default/ufw/chef-openssh-server - deleted
+
 ## 0.1.4:
 
 * recipes/* - refactorization of recipes by introducing definitions in 'core' cookbook
