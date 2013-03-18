@@ -22,32 +22,52 @@
 define :install_app do
   profile = params[:profile]
 
-  ## Source Management
   origin = profile['source']['type']
   source = profile['source']['data']
 
-  case origin
-  when 'ppa'
-    # PPA addition
-    core_ppa source['repo_name'] do
-      uri source['uri']
-      distribution node[:lsb][:codename]
-      action :add
-    end
-  when 'repo'
-    # apt source addition
-    apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
-      uri source['uri']
-      distribution node[:lsb][:codename]
-      components source['components']
-      key source['key']
-      action :add
-    end
-  end
+  if origin == 'deb'
+    # Download of deb package
+    deb_file = "#{Chef::Config[:file_cache_path]}/#{source['file_name']}"
 
-  ## Installation
-  package params[:name] do
-    package_name profile['package']
+    remote_file deb_file do
+      source source['uri']
+      checksum source['sha256']
+    end
+
+    # Installation
+    profile['dependencies'].each do |pkg|
+      package pkg
+    end
+
+    package params[:name] do
+      package_name profile['package']
+      source deb_file
+      provider Chef::Provider::Package::Dpkg
+    end
+  else
+    case origin
+    when 'ppa'
+      # PPA addition
+      core_ppa source['repo_name'] do
+        uri source['uri']
+        distribution node[:lsb][:codename]
+        action :add
+      end
+    when 'repo'
+      # apt source addition
+      apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
+        uri source['uri']
+        distribution node[:lsb][:codename]
+        components source['components']
+        key source['key']
+        action :add
+      end
+    end
+
+    # Installation
+    package params[:name] do
+      package_name profile['package']
+    end
   end
 
   # Suggested packages

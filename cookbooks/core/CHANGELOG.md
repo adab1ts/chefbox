@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.6.0:
+
+* definitions/install_app - now manages deb packages installation as well
+* libraries/box - module Coderebels::Chefbox::Box provides box related functions
+* libraries/digest - module Coderebels::Chefbox::Digest provides digest related functions
+* recipes/default - includes modules and monkey patches
+
 ## 0.5.0:
 
 * definitions/autostart_app - tells an application to autostart when login in

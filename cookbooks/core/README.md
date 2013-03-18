@@ -1,7 +1,11 @@
 # core Cookbook
 
 This cookbook includes core components to be used as a foundation for other cookbooks.  
-It is based on [opscode-cookbooks/apt](https://github.com/opscode-cookbooks/apt) cookbook
+The following recipes apply:
+
+- `core::default` - includes helper modules and monkey patches.
+
+It is inspired by [opscode-cookbooks/apt](https://github.com/opscode-cookbooks/apt) cookbook
 by  
 
 Joshua Timberman (&lt;joshua at opscode.com&gt;)  
@@ -107,6 +111,26 @@ resource immediately.
       uri "ppa:kokoto-java/omgubuntu-stuff"
       distribution "precise"
     end
+
+
+## Libraries
+
+### module Coderebels::Chefbox::Box
+
+Provides box related functions.
+
+#### Functions
+
+- `memory` - retrieves the total amount of memory of the box.
+
+### module Coderebels::Chefbox::Digest
+
+Provides digest related functions.
+
+#### Functions
+
+- `sha256sum` - prints SHA256 checksum of a given file.
+- `md5sum` - prints MD5 checksum of a given file.
 
 
 ## Contact
