@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.7.0:
+
+* libraries/monkey_patches - opens class Numeric to add kB, MB and GB methods
+
 ## 0.6.1:
 
 * definitions/autostart_app - addition of 'desktop_file' definition argument
@@ -9,9 +13,9 @@ This file is used to list changes made in each version of core.
 ## 0.6.0:
 
 * definitions/install_app - now manages deb packages installation as well
-* libraries/box - module Coderebels::Chefbox::Box provides box related functions
-* libraries/digest - module Coderebels::Chefbox::Digest provides digest related functions
-* recipes/default - includes modules and monkey patches
+* libraries/box - module Coderebels::Chefbox::Box provides box related methods
+* libraries/digest - module Coderebels::Chefbox::Digest provides digest related methods
+* recipes/default - includes custom modules
 
 ## 0.5.0:
 

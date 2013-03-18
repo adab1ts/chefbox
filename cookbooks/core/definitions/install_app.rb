@@ -26,6 +26,11 @@ define :install_app do
   source = profile['source']['data']
 
   if origin == 'deb'
+    # Dependencies installation
+    profile['dependencies'].each do |pkg|
+      package pkg
+    end
+
     # Download of deb package
     deb_file = "#{Chef::Config[:file_cache_path]}/#{source['file_name']}"
 
@@ -35,10 +40,6 @@ define :install_app do
     end
 
     # Installation
-    profile['dependencies'].each do |pkg|
-      package pkg
-    end
-
     package params[:name] do
       package_name profile['package']
       source deb_file

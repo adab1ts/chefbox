@@ -3,7 +3,7 @@
 This cookbook includes core components to be used as a foundation for other cookbooks.  
 The following recipes apply:
 
-- `core::default` - includes helper modules and monkey patches.
+- `core::default` - includes helper modules.
 
 It is inspired by [opscode-cookbooks/apt](https://github.com/opscode-cookbooks/apt) cookbook
 by  
