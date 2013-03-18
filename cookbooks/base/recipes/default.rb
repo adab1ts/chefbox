@@ -25,7 +25,6 @@ node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
 node.save
 
 include_recipe "base::main"
-include_recipe "base::indicators"
 include_recipe "base::eyecandy"
 include_recipe "base::office"
 include_recipe "base::restricted-extras"

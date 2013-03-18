@@ -14,12 +14,6 @@ The following recipes are applied:
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
 
-- `base::indicators` - installs the following indicators:
-
-  `udev-notify`         - Display notifications about newly plugged hardware  
-  `indicator-ubuntuone` - Indicator for Ubuntu One synchronization service (Ubuntu 12.04 only)  
-  `caffeine`            - Prevents the activation of both the screensaver and the "sleep" powersaving mode
-
 - `base::eyecandy` - installs the following applications and themes:
 
   `unsettings` - Graphical configuration program for the Unity desktop environment  

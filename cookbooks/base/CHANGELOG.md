@@ -2,9 +2,15 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.3.0:
+
+* recipes/default - removed inclusion of recipe[base::indicators]
+* recipes/indicators - deleted
+* files/default/autostart/* - deleted
+
 ## 0.2.0:
 
-* recipes/default - stop inclusion of recipe[base::security]
+* recipes/default - removed inclusion of recipe[base::security]
 * recipes/security - deleted
 * files/default/ufw/chef-openssh-server - deleted
 
