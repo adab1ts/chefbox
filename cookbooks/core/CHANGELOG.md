@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.6.1:
+
+* definitions/autostart_app - addition of 'desktop_file' definition argument
+
 ## 0.6.0:
 
 * definitions/install_app - now manages deb packages installation as well

@@ -24,7 +24,7 @@ define :autostart_app do
 
   box = node[:box]
   autostart_dir = "#{box['home']}/.config/autostart"
-  desktop_file  = "#{profile['package']}.desktop"
+  desktop_file  = params[:desktop_file] || "#{profile['package']}.desktop"
 
   directory autostart_dir do
     owner box['default_user']
