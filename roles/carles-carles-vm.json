@@ -10,6 +10,7 @@
   "run_list": [
     "recipe[base]",
     "recipe[security]",
+    "recipe[indicators]",
     "recipe[dotfiles]",
     "recipe[jobs]",
     "recipe[vms]",
