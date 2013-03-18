@@ -9,7 +9,7 @@ The following recipes are applied:
   
   `-example-content`            - Ubuntu example content  
   `+dkms`                       - Dynamic Kernel Module Support Framework  
-  `+preload`                    - Adaptive readahead daemon (mem > 4 GB only) 
+  `+preload`                    - Adaptive readahead daemon (mem > 4 GB only)  
   `+qtnx`                       - NX client for QT  
   `+p7zip-full`                 - 7z and 7za file archivers with high compression ratio  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
