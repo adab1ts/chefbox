@@ -14,7 +14,7 @@ The following recipes are applied:
   `+p7zip-full`                 - 7z and 7za file archivers with high compression ratio  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
-  `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths
+  `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
   `+lo-menubar`                 - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
   `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
   `+ubuntu-restricted-extras`   - Commonly used restricted packages for Ubuntu  
