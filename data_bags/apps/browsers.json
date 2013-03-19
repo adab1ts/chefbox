@@ -43,7 +43,7 @@
           "uri": "http://deb.opera.com/opera/",
           "distribution": "",
           "components": ["stable", "non-free"],
-          "key": "336064B5",
+          "key": "30C18A2B",
           "keyserver": "keyserver.ubuntu.com"
         }
       }
