@@ -18,6 +18,7 @@
         "data": {
           "repo_name": "udev-notify",
           "uri": "http://download.learnfree.eu/repository/skss / #SKSS",
+          "distribution": "",
           "components": [],
           "key": "http://download.learnfree.eu/repository/skss/repo.pub.asc"
         }
