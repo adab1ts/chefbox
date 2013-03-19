@@ -12,6 +12,7 @@
     "recipe[security]",
     "recipe[indicators]",
     "recipe[eyecandy]",
+    "recipe[browsers]",
     "recipe[dotfiles]",
     "recipe[jobs]",
     "recipe[vms]",
