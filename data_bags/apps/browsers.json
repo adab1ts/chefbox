@@ -1,20 +1,11 @@
 {
   "id": "browsers",
   "apps": [
-    "firefox",
     "chrome",
+    "firefox",
     "opera"
   ],
   "profiles": {
-    "firefox": {
-      "package": "firefox",
-      "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
-      "description": "Safe and easy web browser from Mozilla",
-      "suggested": [],
-      "source": {
-        "type": "usc"
-      }
-    },
     "chrome": {
       "package": "google-chrome-stable",
       "maintainer": "Chrome Linux Team <chromium-dev@chromium.org>",
@@ -28,6 +19,15 @@
           "components": ["stable", "main"],
           "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
         }
+      }
+    },
+    "firefox": {
+      "package": "firefox",
+      "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
+      "description": "Safe and easy web browser from Mozilla",
+      "suggested": [],
+      "source": {
+        "type": "usc"
       }
     },
     "opera": {
