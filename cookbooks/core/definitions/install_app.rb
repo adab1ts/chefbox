@@ -56,11 +56,14 @@ define :install_app do
       end
     when 'repo'
       # apt source addition
+      dist = source['distribution'] || node[:lsb][:codename]
+
       apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
         uri source['uri']
-        distribution node[:lsb][:codename]
+        distribution dist
         components source['components']
         key source['key']
+        keyserver source['keyserver']
         action :add
       end
     end

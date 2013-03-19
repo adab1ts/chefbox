@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.7.1:
+
+* definitions/install_app - now accepts blank distribution and keyserver values for apt repositories
+
 ## 0.7.0:
 
 * libraries/monkey_patches - opens class Numeric to add kB, MB and GB methods
