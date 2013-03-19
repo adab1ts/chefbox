@@ -16,6 +16,7 @@
         "data": {
           "repo_name": "google-chrome",
           "uri": "http://dl.google.com/linux/chrome/deb/",
+          "distribution": "",
           "components": ["stable", "main"],
           "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
         }
@@ -40,6 +41,7 @@
         "data": {
           "repo_name": "opera",
           "uri": "http://deb.opera.com/opera/",
+          "distribution": "",
           "components": ["stable", "non-free"],
           "key": "336064B5",
           "keyserver": "keyserver.ubuntu.com"
