@@ -22,20 +22,7 @@
 indicators = node[:apps][:indicators]
 
 # Display notifications about newly plugged hardware
-plugandplay = indicators['profiles']['plug&play']
-source = plugandplay['source']['data']
-
-apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
-  uri source['uri']
-  distribution ""
-  components source['components']
-  key source['key']
-  action :add
-end
-
-package plugandplay['package']
-
-autostart_app "plug&play" do
-  profile plugandplay
+install_app "plug&play" do
+  profile indicators['profiles']['plug&play']
 end
 
