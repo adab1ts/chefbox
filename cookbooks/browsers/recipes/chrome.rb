@@ -22,20 +22,7 @@
 browsers = node[:apps][:browsers]
 
 # The web browser from Google
-chrome = browsers['profiles']['chrome']
-source = chrome['source']['data']
-
-apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
-  uri source['uri']
-  distribution ""
-  components source['components']
-  key source['key']
-  action :add
-end
-
-package chrome['package']
-
-chrome['suggested'].each do |pkg|
-  package pkg
+install_app "chrome" do
+  profile browsers['profiles']['chrome']
 end
 

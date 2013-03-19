@@ -22,21 +22,7 @@
 browsers = node[:apps][:browsers]
 
 # Fast and secure web browser and Internet suite
-opera  = browsers['profiles']['opera']
-source = opera['source']['data']
-
-apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
-  uri source['uri']
-  distribution ""
-  components source['components']
-  key source['key']
-  keyserver source['keyserver']
-  action :add
-end
-
-package opera['package']
-
-opera['suggested'].each do |pkg|
-  package pkg
+install_app "opera" do
+  profile browsers['profiles']['opera']
 end
 
