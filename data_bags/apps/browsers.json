@@ -1,0 +1,50 @@
+{
+  "id": "browsers",
+  "apps": [
+    "firefox",
+    "chrome",
+    "opera"
+  ],
+  "profiles": {
+    "firefox": {
+      "package": "firefox",
+      "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
+      "description": "Safe and easy web browser from Mozilla",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    },
+    "chrome": {
+      "package": "google-chrome-stable",
+      "maintainer": "Chrome Linux Team <chromium-dev@chromium.org>",
+      "description": "The web browser from Google",
+      "suggested": [],
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "google-chrome",
+          "uri": "http://dl.google.com/linux/chrome/deb/",
+          "components": ["stable", "main"],
+          "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
+        }
+      }
+    },
+    "opera": {
+      "package": "opera",
+      "maintainer": "Opera Packaging Team <packager@opera.com>",
+      "description": "Fast and secure web browser and Internet suite",
+      "suggested": ["flashplugin-installer", "cups-client"],
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "opera",
+          "uri": "http://deb.opera.com/opera/",
+          "components": ["stable", "non-free"],
+          "key": "336064B5",
+          "keyserver": "keyserver.ubuntu.com"
+        }
+      }
+    }
+  }
+}
