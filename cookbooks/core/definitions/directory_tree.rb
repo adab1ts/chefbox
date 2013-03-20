@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: core
-# Definitions:: autostart_app
+# Definitions:: directory_tree
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,28 +19,25 @@
 #
 
 
-define :autostart_app do
-  profile = params[:profile]
-  box = node[:box]
+define :directory_tree, :owner => "root", :group => "root", :mode => 00755, :exclude => "" do
+  unless params[:name].start_with? params[:exclude]
+    Chef::Application.fatal!('Invalid exclude argument')
+  end
 
-  box['users'].each do |username, usr|
-    autostart_dir = "#{usr['home']}/.config/autostart"
-    desktop_file  = params[:desktop_file] || "#{profile['package']}.desktop"
+  tree = params[:name].scan(/[^\/]+/)
+  base = params[:exclude].scan(/[^\/]+/)
 
-    directory_tree autostart_dir do
-      exclude usr['home']
-      owner username
-      group usr['group']
-      mode 00755
-    end
+  n = base.size
+  m = tree.size
 
-    cookbook_file "#{autostart_dir}/#{desktop_file}" do
-      source "/autostart/#{desktop_file}"
-      cookbook params[:cookbook]
-      backup false
-      owner username
-      group usr['group']
-      mode 00664
+  (n+1..m).each do |i|
+    dir = "/" + tree.take(i).join("/")
+
+    directory dir do
+      owner params[:owner]
+      group params[:group]
+      mode params[:mode]
     end
   end
 end
+

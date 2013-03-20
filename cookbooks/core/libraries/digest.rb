@@ -41,6 +41,12 @@ module Coderebels
         end
       end
 
+      def shadow(passwd)
+        reader, writer = IO.pipe
+        system("openssl passwd -1 #{passwd}", [:err, :out] => writer)
+        reader.gets.chomp
+      end
+
     end
   end
 end

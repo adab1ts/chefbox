@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.8.0:
+
+* definitions/autostart_app - now creates .desktop files for every box user
+* definitions/directory_tree - creates directories in a path recursively, applying same owner, group and mode
+* libraries/digest - adds method to shadow plain text passwords
+
 ## 0.7.1:
 
 * definitions/install_app - now accepts blank distribution and keyserver values for apt repositories
