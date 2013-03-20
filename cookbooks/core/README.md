@@ -82,6 +82,20 @@ purging all unnecessary packages.
       profile indicators['profiles']['screensaver']
     end
 
+### Creation of directories
+
+`directory_tree` provides an easy way to create directories in a path recursively, applying same owner, group and mode.
+
+#### Examples
+
+    # dotfiles folder creation
+    directory_tree "#{ENV['HOME']}/admin/dotfiles" do
+      exclude ENV['HOME']
+      owner username
+      group groupname
+      mode 00755
+    end
+
 
 ## Resources/Providers
 
@@ -131,6 +145,7 @@ Provides digest related functions.
 
 - `sha256sum` - prints SHA256 checksum of a given file.
 - `md5sum` - prints MD5 checksum of a given file.
+- `shadow` - shadows plain text passwords.
 
 
 ## Contact
