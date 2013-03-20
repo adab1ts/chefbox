@@ -29,6 +29,14 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 #### cookbooks
 - `core`
+- `sudo`
+
+#### recipes
+- `core::default`
+
+#### packages
+- `openssl`           - Secure Socket Layer (SSL) binary and related cryptographic tools
+- `libshadow-ruby1.8` - Interface of shadow password for Ruby 1.8
 
 
 ## Usage
