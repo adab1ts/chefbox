@@ -26,9 +26,11 @@ package "example-content" do
   action :purge
 end
 
-execute "remove_example_content_file" do
-  command "rm #{box['home']}/examples.desktop"
-  only_if { ::File.exists? "#{box['home']}/examples.desktop" }
+box['users'].each do |username, usr|
+  execute "#{username}-remove_example_content_file" do
+    command "rm #{usr['home']}/examples.desktop"
+    only_if { ::File.exists? "#{usr['home']}/examples.desktop" }
+  end
 end
 
 # Dynamic Kernel Module Support Framework
@@ -88,13 +90,15 @@ bash "install_fonts" do
     && chown root.root #{fonts_path}/* \
     && chmod 644 #{fonts_path}/*
     EOH
-  notifies :run, "execute[load_fonts]", :immediately
   action :nothing
 end
 
-execute "load_fonts" do
-  command "fc-cache -fv"
-  user node[:box]['default_user']
-  action :nothing
+box['users'].each do |username, usr|
+  execute "#{username}-load_fonts" do
+    command "fc-cache -fv"
+    user username
+    action :nothing
+    subscribes :run, resources("bash[install_fonts]"), :immediately
+  end
 end
 

@@ -22,3 +22,47 @@
 node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
 node.save
 
+
+## Requirements
+
+package "openssl"
+package "libshadow-ruby1.8"
+
+
+## Users management
+
+box = node[:box]
+
+box['users'].each do |username, usr|
+  group username do
+    gid usr['gid']
+  end
+
+  passwd = shadow usr['password']
+
+  user username do
+    comment username
+    uid usr['uid']
+    gid usr['group']
+    home usr['home']
+    shell usr['shell']
+    password passwd
+    supports(
+      :manage_home => true
+    )
+  end
+
+  group "sudo" do
+    members username
+    append true
+    action :modify
+  end
+
+  sudo "10_#{username}" do
+    template "sudoer.erb"
+    variables(
+      :sudoer => username
+    )
+  end
+end
+

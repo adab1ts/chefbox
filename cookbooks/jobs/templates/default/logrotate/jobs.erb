@@ -1,8 +1,10 @@
-<% @jobs.each do |job, conf| %>
+<% @jobs_profiles.each do |user, profile| %>
+<% profile.each do |job, conf| %>
 <% conf['tasks'].each do |task| %>
 <% task_drive = task['drive'].split(' ').map(&:downcase).join('_') %>
 <% task['targets'].each do |target| %>
-<%= "#{@jobs_log_path}/#{job}-#{task_drive}-#{target}.log" %>
+<%= "#{@jobs_log_path}/#{user}/#{job}-#{task_drive}-#{target}.log" %>
+<% end %>
 <% end %>
 <% end %>
 <% end %>

@@ -24,9 +24,11 @@ ruby_block "first_run_completed" do
     node.set[:first_run_completed] = true
     node.save
   end
-  notifies :run, "bash[first_system_upgrade]", :immediately
   not_if { node.attribute?(:first_run_completed) }
 end
+
+
+## First time system upgrade
 
 bash "first_system_upgrade" do
   code <<-EOH
@@ -34,19 +36,34 @@ bash "first_system_upgrade" do
     apt-get clean
     EOH
   action :nothing
+  subscribes :run, resources("ruby_block[first_run_completed]"), :immediately
 end
 
-box = node[:box]
-support_folder = "#{box['home']}/#{box['support_folder']}"
 
-remote_directory support_folder do
-  source "support"
-  owner box['default_user']
-  group box['default_group']
-  mode 00755
-  files_owner box['default_user']
-  files_group box['default_group']
-  files_mode 00644
-  files_backup false
+## Next steps documentation
+
+box = node[:box]
+
+box['users'].each do |username, usr|
+  downloads_folder = "#{usr['home']}/#{box['folders']['downloads']}"
+
+  directory downloads_folder do
+    owner username
+    group usr['group']
+    mode 00755
+  end
+
+  support_folder = "#{usr['home']}/#{box['folders']['support']}"
+
+  remote_directory support_folder do
+    source "support"
+    owner username
+    group usr['group']
+    mode 00755
+    files_owner username
+    files_group usr['group']
+    files_mode 00644
+    files_backup false
+  end
 end
 

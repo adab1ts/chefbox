@@ -36,10 +36,13 @@ install_app "virtualbox" do
   profile vbox
 end
 
-execute "join_vboxusers_group" do
-  command "adduser #{box['default_user']} vboxusers"
-  action :nothing
-  subscribes :run, resources("package[virtualbox]"), :immediately
+box['users'].each do |username, usr|
+  group "vboxusers" do
+    members username
+    append true
+    action :nothing
+    subscribes :modify, resources("package[virtualbox]"), :immediately
+  end
 end
 
 vms_vbox_extpack "virtualbox" do

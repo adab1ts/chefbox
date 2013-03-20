@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.2.0:
+
+* recipes/virtualbox - refactorized to allow addition of box users to vboxusers group
+
 ## 0.1.3:
 
 * recipes/default - dryed removal of unselected applications using uninstall_apps definition

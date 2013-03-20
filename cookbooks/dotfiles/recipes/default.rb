@@ -30,15 +30,12 @@ package "tree"
 package "meld"
 
 # Search for files within Debian packages (command-line interface)
-box = node[:box]
-
-package "apt-file" do
-  notifies :run, "execute[update_apt_file_cache]", :delayed
-end
+package "apt-file"
 
 execute "update_apt_file_cache" do
   command "apt-file update"
   action :nothing
+  subscribes :run, resources("package[apt-file]"), :delayed
 end
 
 # Lists available package versions with distribution
@@ -47,57 +44,65 @@ package "apt-show-versions"
 
 ## Deploy
 
-dotfiles_dir = "#{box['home']}/#{box['dotfiles_folder']}"
-bash_dotfiles_dir = "#{dotfiles_dir}/bash"
+box = node[:box]
+dotfiles = box['dotfiles']
 
-directory dotfiles_dir do
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
-end
+dotfiles['users'].each do |username|
+  usr = box['users'][username]
 
-remote_directory bash_dotfiles_dir do
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
-  files_owner box['default_user']
-  files_group box['default_group']
-  files_mode 0644
-  files_backup false
-end
+  dotfiles_dir = "#{usr['home']}/#{dotfiles['folder']}"
+  bash_dotfiles_dir = "#{dotfiles_dir}/bash"
 
-template "#{bash_dotfiles_dir}/env" do
-  source "/bash/env.erb"
-  owner box['default_user']
-  group box['default_group']
-  mode 0644
-  backup false
-  variables(
-    :admin_folder => box['admin_folder']
-  )
-end
+  directory_tree dotfiles_dir do
+    exclude usr['home']
+    owner username
+    group usr['group']
+    mode 00755
+  end
 
-template "#{dotfiles_dir}/bashrc" do
-  source "/bash/bashrc.erb"
-  owner box['default_user']
-  group box['default_group']
-  mode 0644
-  backup false
-  variables(
-    :admin_folder => box['admin_folder']
-  )
-end
+  remote_directory bash_dotfiles_dir do
+    owner username
+    group usr['group']
+    mode 0755
+    files_owner username
+    files_group usr['group']
+    files_mode 0644
+    files_backup false
+  end
 
-execute "backup_bashrc_file" do
-  cwd box['home']
-  command "mv .bashrc .bashrc.orig"
-  user box['default_user']
-  creates "#{box['home']}/.bashrc.orig"
-end
+  template "#{bash_dotfiles_dir}/env" do
+    source "/bash/env.erb"
+    owner username
+    group usr['group']
+    mode 0644
+    backup false
+    variables(
+      :admin_folder => box['folders']['admin']
+    )
+  end
 
-link "#{box['home']}/.bashrc" do
-  to "#{dotfiles_dir}/bashrc"
-  owner box['default_user']
-  group box['default_group']
+  template "#{dotfiles_dir}/bashrc" do
+    source "/bash/bashrc.erb"
+    owner username
+    group usr['group']
+    mode 0644
+    backup false
+    variables(
+      :admin_folder => box['folders']['admin']
+    )
+  end
+
+  execute "backup_bashrc_file" do
+    cwd usr['home']
+    command "mv .bashrc .bashrc.orig"
+    user username
+    creates "#{usr['home']}/.bashrc.orig"
+  end
+
+  link "#{usr['home']}/.bashrc" do
+    to "#{dotfiles_dir}/bashrc"
+    owner username
+    group usr['group']
+  end
 end
 

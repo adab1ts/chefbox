@@ -38,53 +38,42 @@ jobs = box['jobs']
 jobs_log_path = node[:jobs][:log_path]
 jobs_logrotate_conf = node[:jobs][:logrotate_conf]
 
-directory jobs_log_path
-
 template jobs_logrotate_conf do
   source "/logrotate/jobs.erb"
-  mode 0644
+  mode 00644
   backup false
   variables(
-    :jobs => jobs['job_list'],
+    :jobs_profiles => jobs['profiles'],
     :jobs_log_path => jobs_log_path
   )
 end
 
-admin_dir = "#{box['home']}/#{box['admin_folder']}"
-jobs_dir  = "#{box['home']}/#{jobs['jobs_folder']}"
-logs_dir  = "#{jobs_dir}/logs"
+jobs['users'].each do |username|
+  directory_tree "#{jobs_log_path}/#{username}"
 
-directory admin_dir do
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
+  usr = box['users'][username]
+  jobs_dir = "#{usr['home']}/#{jobs['folder']}"
+
+  directory_tree "#{jobs_dir}/logs" do
+    exclude usr['home']
+    owner username
+    group usr['group']
+    mode 00755
+  end
+
+  template "#{jobs_dir}/setup" do
+    source "/jobs/setup.erb"
+    owner username
+    group usr['group']
+    mode 00644
+    backup false
+    variables(
+      :jobs_user => username,
+      :jobs_path => jobs_dir,
+      :jobs_log_path => "#{jobs_log_path}/#{username}"
+    )
+  end
 end
-
-directory jobs_dir do
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
-end
-
-directory logs_dir do
-  owner box['default_user']
-  group box['default_group']
-  mode 0755
-end
-
-template "#{jobs_dir}/setup" do
-  source "/jobs/setup.erb"
-  owner box['default_user']
-  group box['default_group']
-  mode 0644
-  backup false
-  variables(
-    :jobs_user => box['default_user'],
-    :jobs_path => jobs_dir,
-    :jobs_log_path => jobs_log_path
-  )
-end
-
 
 ## Jobs
 

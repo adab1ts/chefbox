@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.6.0:
+
+* recipes/begin - includes users account management
+* recipes/end - refactorized to allow deployment of next steps instructions to every box user
+* recipes/main - refactorized to apply user-dependent tasks to every box user
+* templates/default/sudoer.erb - included in sudo management
+
 ## 0.5.0:
 
 * recipes/default - now includes only recipe[base::begin], recipe[base::main] and recipe[base::end]
