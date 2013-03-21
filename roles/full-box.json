@@ -1,0 +1,14 @@
+{
+  "name": "full-box",
+  "description": "Full-featured box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {},
+  "override_attributes": {},
+  "run_list": [
+    "role[average-box]",
+    "recipe[graphics]",
+    "recipe[vms]"
+  ],
+  "env_run_lists": {}
+}

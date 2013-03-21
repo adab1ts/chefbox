@@ -1,0 +1,15 @@
+{
+  "name": "basic-box",
+  "description": "Basic box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {},
+  "override_attributes": {},
+  "run_list": [
+    "recipe[base]",
+    "recipe[security]",
+    "recipe[indicators]",
+    "recipe[dotfiles]"
+  ],
+  "env_run_lists": {}
+}
