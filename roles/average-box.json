@@ -8,6 +8,7 @@
   "run_list": [
     "role[basic-box]",
     "recipe[eyecandy]",
+    "recipe[lenses]",
     "recipe[browsers]",
     "recipe[email]",
     "recipe[music]",

@@ -1,0 +1,130 @@
+{
+  "id": "lenses",
+  "apps": [
+    "academic",
+    "dictionary",
+    "music",
+    "news",
+    "torrents",
+    "translator",
+    "utilities",
+    "video",
+    "wikipedia"
+  ],
+  "profiles": {
+    "academic": {
+      "package": "unity-lens-academic",
+      "maintainer": "Mark Tully <markjtully@gmail.com>",
+      "description": "Academic Lens for Unity",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "scopes-packagers-ppa",
+          "uri": "ppa:scopes-packagers/ppa"
+        }
+      }
+    },
+    "dictionary": {
+      "package": "unity-lens-wordreference",
+      "maintainer": "Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>",
+      "description": "Unity Wordreference Lens",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "atareao-lenses",
+          "uri": "ppa:atareao/lenses"
+        }
+      }
+    },
+    "music": {
+      "package": "unity-lens-music",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Music lens for unity",
+      "suggested": ["unity-scope-grooveshark","unity-scope-spotify"],
+      "source": {
+        "type": "usc"
+      }
+    },
+    "news": {
+      "package": "unity-lens-news",
+      "maintainer": "David Calle <davidc@framli.eu>",
+      "description": "Unity News Lens",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "scopes-packagers-ppa",
+          "uri": "ppa:scopes-packagers/ppa"
+        }
+      }
+    },
+    "torrents": {
+      "package": "unity-lens-torrents",
+      "maintainer": "David Calle <davidc@framli.eu>",
+      "description": "Torrents search plugin",
+      "suggested": ["unity-scope-piratebay"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "scopes-packagers-ppa",
+          "uri": "ppa:scopes-packagers/ppa"
+        }
+      }
+    },
+    "translator": {
+      "package": "unity-lens-translator",
+      "maintainer": "Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>",
+      "description": "Unity Translator Lens",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "atareao-lenses",
+          "uri": "ppa:atareao/lenses"
+        }
+      }
+    },
+    "utilities": {
+      "package": "unity-lens-utilities",
+      "maintainer": "David Calle <davidc@framli.eu>",
+      "description": "Unity Utilities lens",
+      "suggested": ["unity-scope-rottentomatoes"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "scopes-packagers-ppa",
+          "uri": "ppa:scopes-packagers/ppa"
+        }
+      }
+    },
+    "video": {
+      "package": "scope-youtube",
+      "maintainer": "Lorenzo Carbonell <lorenzo.carbonell.cerezo@gmail.com>",
+      "description": "scope youtube",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "scopes-packagers-ppa",
+          "uri": "ppa:scopes-packagers/ppa"
+        }
+      }
+    },
+    "wikipedia": {
+      "package": "unity-lens-wikipedia",
+      "maintainer": "David Calle <davidc@framli.eu>",
+      "description": "Wikipedia Lens",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "scopes-packagers-ppa",
+          "uri": "ppa:scopes-packagers/ppa"
+        }
+      }
+    }
+  }
+}
+
