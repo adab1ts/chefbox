@@ -10,7 +10,8 @@
     "recipe[eyecandy]",
     "recipe[browsers]",
     "recipe[email]",
-    "recipe[music]"
+    "recipe[music]",
+    "recipe[groupware]"
   ],
   "env_run_lists": {}
 }
