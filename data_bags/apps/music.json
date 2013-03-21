@@ -1,0 +1,93 @@
+{
+  "id": "music",
+  "apps": [
+    "lastfm",
+    "nuvola",
+    "rdio",
+    "rhythmbox",
+    "spotify",
+    "tomahawk"
+  ],
+  "profiles": {
+    "lastfm": {
+      "package": "lastfm-scrobbler",
+      "maintainer": "Michael Coffey <michaelc@last.fm>",
+      "description": "music player for Last.fm personalized radio",
+      "suggested": [],
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "lastfm",
+          "uri": "http://apt.last.fm/debian",
+          "components": ["main"],
+          "key": "http://apt.last.fm/last.fm.repo.gpg"
+        }
+      }
+    },
+    "nuvola": {
+      "package": "nuvolaplayer",
+      "maintainer": "Jiří Janoušek <janousek.jiri@gmail.com>",
+      "description": "cloud music integration for Linux desktop",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "nuvola-player-builders-stable",
+          "uri": "ppa:nuvola-player-builders/stable"
+        }
+      }
+    },
+    "rdio": {
+      "package": "rdio",
+      "maintainer": "Scott Ringwelski <sgringwe@mtu.edu>",
+      "description": "A simple native implementation for Rdio music services",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "sgringwe-rdio",
+          "uri": "ppa:sgringwe/rdio"
+        }
+      }
+    },
+    "rhythmbox": {
+      "package": "rhythmbox",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "music player and organizer for GNOME",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    },
+    "spotify": {
+      "package": "spotify-client",
+      "maintainer": "Spotify <libspotify@spotify.com>",
+      "description": "Spotify desktop client",
+      "suggested": [],
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "spotify",
+          "uri": "http://repository.spotify.com",
+          "distribution": "",
+          "components": ["stable", "non-free"],
+          "key": "94558F59",
+          "keyserver": "keyserver.ubuntu.com"
+        }
+      }
+    },
+    "tomahawk": {
+      "package": "tomahawk",
+      "maintainer": "Paulo Dias <paulo.miguel.dias@gmail.com>",
+      "description": "Social media player",
+      "suggested": ["phonon-backend-vlc"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "tomahawk-ppa",
+          "uri": "ppa:tomahawk/ppa"
+        }
+      }
+    }
+  }
+}
