@@ -8,15 +8,8 @@
   },
   "override_attributes": {},
   "run_list": [
-    "recipe[base]",
-    "recipe[security]",
-    "recipe[indicators]",
-    "recipe[eyecandy]",
-    "recipe[browsers]",
-    "recipe[dotfiles]",
-    "recipe[jobs]",
-    "recipe[vms]",
-    "recipe[graphics]"
+    "role[full-box]",
+    "recipe[jobs]"
   ],
   "env_run_lists": {}
 }
