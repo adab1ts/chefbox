@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.8.1:
+
+* definitions/uninstall_app - now purges ppa/repo packages if sources have been previously added
+
 ## 0.8.0:
 
 * definitions/autostart_app - now creates .desktop files for every box user

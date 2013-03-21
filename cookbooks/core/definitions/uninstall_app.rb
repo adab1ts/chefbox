@@ -29,9 +29,14 @@ define :uninstall_app do
     end
   end
 
+  source = profile['source']
+  origin = source['type']
+  sources_dir = "/etc/apt/sources.list.d"
+
   package params[:name] do
     package_name profile['package']
     action :purge
+    not_if { %w(repo ppa).include?(origin) and not ::File.exists?("#{sources_dir}/#{source['data']['repo_name']}-#{node[:lsb][:codename]}.list") }
   end
 end
 
