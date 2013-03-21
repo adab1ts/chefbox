@@ -37,7 +37,7 @@ end
 package "dkms"
 
 # Adaptive readahead daemon
-package "preload" if memory > 4.GB
+package "preload" if memory > 2.GB
 
 # NX client for QT
 package "qtnx"
