@@ -44,13 +44,8 @@ end
 
 node.set[:apps] = { :lenses => lenses }
 
-include_recipe "lenses::academic" if selected.include?("academic")
-include_recipe "lenses::dictionary" if selected.include?("dictionary")
 include_recipe "lenses::music" if selected.include?("music")
 include_recipe "lenses::news" if selected.include?("news")
 include_recipe "lenses::torrents" if selected.include?("torrents")
-include_recipe "lenses::translator" if selected.include?("translator")
-include_recipe "lenses::utilities" if selected.include?("utilities")
-include_recipe "lenses::video" if selected.include?("video")
 include_recipe "lenses::wikipedia" if selected.include?("wikipedia")
 

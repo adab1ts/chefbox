@@ -4,16 +4,9 @@ This cookbook installs a selected set of Unity lenses.
 The following recipes may apply:
 
 - `lenses::default` - purges unselected packages and includes recipes as nedeed.
-- `lenses::academic` - installs __Academic Lens__ and suggested scopes.
-- `lenses::dictionary` - installs __Wordreference Lens__ and suggested scopes.
-- `lenses::movies` - installs __Movie Lense__ and suggested scopes.
 - `lenses::music` - installs __Music Lense__ and suggested scopes.
 - `lenses::news` - installs __News Lense__ and suggested scopes.
-- `lenses::photo` - installs __Photo Lense__ and suggested scopes.
 - `lenses::torrents` - installs __Torrents Lense__ and suggested scopes.
-- `lenses::translator` - installs __Translator Lense__ and suggested scopes.
-- `lenses::utilities` - installs __Utilities Lense__ and suggested scopes.
-- `lenses::video` - installs __Video Lense__ and suggested scopes.
 - `lenses::wikipedia` - installs __Wikipedia Lense__ and suggested scopes.
 
 
