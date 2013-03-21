@@ -34,7 +34,7 @@ package "libshadow-ruby1.8"
 box = node[:box]
 
 box['users'].each do |username, usr|
-  group username do
+  group usr['group'] do
     gid usr['gid']
   end
 
