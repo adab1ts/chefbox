@@ -45,15 +45,14 @@ end
 box = node[:box]
 
 box['users'].each do |username, usr|
-  downloads_folder = "#{usr['home']}/#{box['folders']['downloads']}"
+  support_folder = "#{usr['home']}/#{box['folders']['support']}"
 
-  directory downloads_folder do
+  directory_tree support_folder do
+    exclude usr['home']
     owner username
     group usr['group']
     mode 00755
   end
-
-  support_folder = "#{usr['home']}/#{box['folders']['support']}"
 
   remote_directory support_folder do
     source "support"
