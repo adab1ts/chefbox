@@ -1,0 +1,15 @@
+{
+  "name": "ana-ana-laptop-hp",
+  "description": "Profile for ana@ana-laptop-hp box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {
+    "profile": "ana-ana-laptop-hp"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "role[average-box]",
+    "recipe[vms]"
+  ],
+  "env_run_lists": {}
+}
