@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/ls.bal
+# File: $DOTFILES_PATH/bash/aliases.d/ls.bal
 
 
 alias ls='ls --color=auto --group-directories-first'

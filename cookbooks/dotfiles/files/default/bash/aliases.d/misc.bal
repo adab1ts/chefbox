@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/misc.bal
+# File: $DOTFILES_PATH/bash/aliases.d/misc.bal
 
 
 alias reloadb='source ~/.bashrc'

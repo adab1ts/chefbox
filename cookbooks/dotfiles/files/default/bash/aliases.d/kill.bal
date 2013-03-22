@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/kill.bal
+# File: $DOTFILES_PATH/bash/aliases.d/kill.bal
 
 
 alias k9='kill -9'

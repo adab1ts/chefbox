@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/ssh.bal
+# File: $DOTFILES_PATH/bash/aliases.d/ssh.bal
 
 
 alias sc='ssh'     # sc gasthof

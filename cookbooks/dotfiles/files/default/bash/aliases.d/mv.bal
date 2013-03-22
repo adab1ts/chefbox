@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/mv.bal
+# File: $DOTFILES_PATH/bash/aliases.d/mv.bal
 
 
 alias m='mv -vu'

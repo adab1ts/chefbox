@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/apt-cache.bal
+# File: $DOTFILES_PATH/bash/aliases.d/apt-cache.bal
 
 
 alias pki='apt-cache show'         # pki package

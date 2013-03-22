@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/touch.bal
+# File: $DOTFILES_PATH/bash/aliases.d/touch.bal
 
 
 alias tch='touch'

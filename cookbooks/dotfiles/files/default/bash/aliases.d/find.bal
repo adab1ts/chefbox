@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/find.bal
+# File: $DOTFILES_PATH/bash/aliases.d/find.bal
 
 
 alias fa='sudo find /*'

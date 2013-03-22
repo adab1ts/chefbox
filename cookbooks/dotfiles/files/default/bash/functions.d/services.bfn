@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/functions.d/services.bfn
+# File: $DOTFILES_PATH/bash/functions.d/services.bfn
 
 
 # Service management functions

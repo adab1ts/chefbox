@@ -1,5 +1,5 @@
 # vim:ft=sh
-# File: $ADMIN_PATH/dotfiles/bash/colors.d/promptcolors
+# File: $DOTFILES_PATH/bash/colors.d/promptcolors
 
 # misc
 NO_COLOR='\e[0m' #disable any colors

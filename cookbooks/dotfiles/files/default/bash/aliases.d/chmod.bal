@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/chmod.bal
+# File: $DOTFILES_PATH/bash/aliases.d/chmod.bal
 
 
 alias cm='chmod'

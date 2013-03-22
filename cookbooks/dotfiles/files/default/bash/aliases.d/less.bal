@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/less.bal
+# File: $DOTFILES_PATH/bash/aliases.d/less.bal
 
 
 alias le='less -g -x2'

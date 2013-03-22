@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/tree.bal
+# File: $DOTFILES_PATH/bash/aliases.d/tree.bal
 
 
 alias t='tree -a -N --dirsfirst'

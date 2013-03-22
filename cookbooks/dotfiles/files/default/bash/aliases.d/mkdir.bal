@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/mkdir.bal
+# File: $DOTFILES_PATH/bash/aliases.d/mkdir.bal
 
 
 alias md='mkdir -v'

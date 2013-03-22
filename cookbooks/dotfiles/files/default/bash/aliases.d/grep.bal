@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/grep.bal
+# File: $DOTFILES_PATH/bash/aliases.d/grep.bal
 
 
 alias gr='grep -E'

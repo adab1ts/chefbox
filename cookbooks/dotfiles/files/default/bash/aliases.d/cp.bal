@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/cp.bal
+# File: $DOTFILES_PATH/bash/aliases.d/cp.bal
 
 
 # @@CMD: cp

@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/update-alternatives.bal
+# File: $DOTFILES_PATH/bash/aliases.d/update-alternatives.bal
 
 
 alias ua='sudo update-alternatives'

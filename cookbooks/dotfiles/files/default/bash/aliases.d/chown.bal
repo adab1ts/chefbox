@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/chown.bal
+# File: $DOTFILES_PATH/bash/aliases.d/chown.bal
 
 
 alias co='chown'

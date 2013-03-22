@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/cd.bal
+# File: $DOTFILES_PATH/bash/aliases.d/cd.bal
 
 
 alias ..='cd ..'

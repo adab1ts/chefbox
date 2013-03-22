@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/rm.bal
+# File: $DOTFILES_PATH/bash/aliases.d/rm.bal
 
 
 alias rm='rm --preserve-root -f'

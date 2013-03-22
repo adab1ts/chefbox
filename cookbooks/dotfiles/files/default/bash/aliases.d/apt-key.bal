@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/apt-key.bal
+# File: $DOTFILES_PATH/bash/aliases.d/apt-key.bal
 
 
 # GPG Keys

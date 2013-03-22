@@ -77,7 +77,8 @@ dotfiles['users'].each do |username|
     mode 0644
     backup false
     variables(
-      :admin_folder => box['folders']['admin']
+      :admin_folder => box['folders']['admin'],
+      :dotfiles_folder => dotfiles['folder']
     )
   end
 
@@ -88,7 +89,7 @@ dotfiles['users'].each do |username|
     mode 0644
     backup false
     variables(
-      :admin_folder => box['folders']['admin']
+      :dotfiles_folder => dotfiles['folder']
     )
   end
 

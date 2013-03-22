@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/gedit.bal
+# File: $DOTFILES_PATH/bash/aliases.d/gedit.bal
 
 
 alias g='gedit'

@@ -1,4 +1,4 @@
-# File: $ADMIN_PATH/dotfiles/bash/aliases.d/cat.bal
+# File: $DOTFILES_PATH/bash/aliases.d/cat.bal
 
 
 alias ct='cat'
