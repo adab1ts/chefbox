@@ -1,0 +1,31 @@
+{
+  "id": "fileshare",
+  "apps": [
+    "jdownloader",
+    "transmission"
+  ],
+  "profiles": {
+    "jdownloader": {
+      "package": "jdownloader",
+      "maintainer": "Benjamin Drung <bdrung@debian.org>",
+      "description": "download manager for one-click hosting sites",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "jd-team-jdownloader",
+          "uri": "ppa:jd-team/jdownloader"
+        }
+      }
+    },
+    "transmission": {
+      "package": "transmission-gtk",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "lightweight BitTorrent client (GTK interface)",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    }
+  }
+}

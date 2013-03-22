@@ -7,13 +7,14 @@
   "override_attributes": {},
   "run_list": [
     "role[basic-box]",
-    "recipe[eyecandy]",
-    "recipe[lenses]",
     "recipe[browsers]",
     "recipe[email]",
+    "recipe[eyecandy]",
+    "recipe[fileshare]",
+    "recipe[groupware]",
+    "recipe[lenses]",
     "recipe[music]",
-    "recipe[video]",
-    "recipe[groupware]"
+    "recipe[video]"
   ],
   "env_run_lists": {}
 }
