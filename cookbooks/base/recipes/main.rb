@@ -97,6 +97,7 @@ box['users'].each do |username, usr|
   execute "#{username}-load_fonts" do
     command "fc-cache -fv"
     user username
+    group usr['group']
     action :nothing
     subscribes :run, resources("bash[install_fonts]"), :immediately
   end

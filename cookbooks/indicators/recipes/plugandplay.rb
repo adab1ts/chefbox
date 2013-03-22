@@ -26,3 +26,7 @@ install_app "plug&play" do
   profile indicators['profiles']['plug&play']
 end
 
+autostart_app "plug&play" do
+  profile indicators['profiles']['plug&play']
+end
+

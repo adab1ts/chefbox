@@ -11,7 +11,7 @@
       "package": "unity-lens-music",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Music lens for unity",
-      "suggested": ["unity-scope-grooveshark","unity-scope-spotify"],
+      "suggested": ["unity-scope-grooveshark"],
       "source": {
         "type": "usc"
       }
