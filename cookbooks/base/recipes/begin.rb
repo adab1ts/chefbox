@@ -23,6 +23,15 @@ node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
 node.save
 
 
+## APT Sources
+
+cookbook_file "/etc/apt/sources.list" do
+  source "/apt/sources.list"
+  mode 0644
+  backup false
+end
+
+
 ## Requirements
 
 package "openssl"

@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.7.0:
+
+* recipes/begin - concerning official ubuntu sources management, ensures all nodes are on the same page
+* files/default/apt/sources.list - included in sources management
+
 ## 0.6.0:
 
 * recipes/begin - includes users account management
