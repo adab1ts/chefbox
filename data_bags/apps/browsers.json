@@ -35,7 +35,7 @@
       "package": "opera",
       "maintainer": "Opera Packaging Team <packager@opera.com>",
       "description": "Fast and secure web browser and Internet suite",
-      "suggested": ["flashplugin-installer", "cups-client"],
+      "suggested": [],
       "source": {
         "type": "repo",
         "data": {
