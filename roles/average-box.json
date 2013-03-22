@@ -12,6 +12,7 @@
     "recipe[browsers]",
     "recipe[email]",
     "recipe[music]",
+    "recipe[video]",
     "recipe[groupware]"
   ],
   "env_run_lists": {}

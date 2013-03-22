@@ -80,7 +80,7 @@
       "package": "tomahawk",
       "maintainer": "Paulo Dias <paulo.miguel.dias@gmail.com>",
       "description": "Social media player",
-      "suggested": ["phonon-backend-vlc"],
+      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {

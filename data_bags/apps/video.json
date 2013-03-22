@@ -1,0 +1,31 @@
+{
+  "id": "video",
+  "apps": [
+    "openshot",
+    "vlc"
+  ],
+  "profiles": {
+    "openshot": {
+      "package": "openshot",
+      "maintainer": "Jonathan Thomas <Jonathan.Oomph@gmail.com>",
+      "description": "Create and edit videos and movies",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "openshot.developers-ppa",
+          "uri": "ppa:openshot.developers/ppa"
+        }
+      }
+    },
+    "vlc": {
+      "package": "vlc",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "multimedia player and streamer",
+      "suggested": ["phonon-backend-vlc"],
+      "source": {
+        "type": "usc"
+      }
+    }
+  }
+}
