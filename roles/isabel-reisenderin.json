@@ -1,0 +1,17 @@
+{
+  "name": "isabel-reisenderin",
+  "description": "Profile for isabel@reisenderin box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {
+    "profile": "isabel-reisenderin"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "role[average-box]",
+    "recipe[jobs]",
+    "recipe[vms]"
+  ],
+  "env_run_lists": {}
+}
+
