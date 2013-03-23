@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.7.1:
+
+* recipes/begin - now excludes existing default user from account management
+
 ## 0.7.0:
 
 * recipes/begin - concerning official ubuntu sources management, ensures all nodes are on the same page

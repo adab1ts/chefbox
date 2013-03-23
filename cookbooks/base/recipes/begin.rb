@@ -42,7 +42,7 @@ package "libshadow-ruby1.8"
 
 box = node[:box]
 
-box['users'].each do |username, usr|
+box['users'].reject {|_, usr| usr['default'] }.each do |username, usr|
   group usr['group'] do
     gid usr['gid']
   end
