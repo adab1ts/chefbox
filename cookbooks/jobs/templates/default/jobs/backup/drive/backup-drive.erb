@@ -11,7 +11,7 @@ drive_path="/media/${drive}"
 
 # Backup variables
 export BACKUP_PATH="<%= "${drive_path}/#{@backup_task_folder}" %>"
-backup_failure_file="${LOGS_FOLDER}/$(basename $0)-failed.log"
+backup_failure_file="${BACKUP_LOG_PATH}/$(basename $0)-failed.log"
 
 #
 # Auxiliar Functions

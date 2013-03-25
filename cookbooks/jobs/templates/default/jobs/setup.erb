@@ -86,9 +86,8 @@ log_failure_message() {
   local log_file="$2"
 
   touch "$log_file"
-  chown "$USR"."$USR" "$log_file"
 
-  echo "[$(date +'%Y-%m-%d')] El disco '${drive}' parece no estar conectado. Lo intentaremos la próxima vez." | tee -a "$log_file"
+  printf "\n[$(date +'%Y-%m-%d')] El disco '${drive}' parece no estar conectado. Lo intentaremos la próxima vez.\n" | tee -a "$log_file"
 }
 
 export -f timer
