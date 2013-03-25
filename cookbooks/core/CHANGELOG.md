@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.9.0:
+
+* definitions/support - delivers support material to every box user
+
 ## 0.8.1:
 
 * definitions/uninstall_app - now purges ppa/repo packages if sources have been previously added

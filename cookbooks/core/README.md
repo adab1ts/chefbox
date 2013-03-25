@@ -96,6 +96,17 @@ purging all unnecessary packages.
       mode 00755
     end
 
+### Delivery of support material
+
+`support` delivers support material about specified subject.
+
+#### Examples
+
+    # delivery of support material about firewall
+    support "firewall" do
+      section "security"
+    end
+
 
 ## Resources/Providers
 
