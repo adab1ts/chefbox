@@ -31,3 +31,7 @@ autostart_app "screensaver" do
   profile indicators['profiles']['screensaver']
 end
 
+support "screensaver" do
+  section "indicators"
+end
+

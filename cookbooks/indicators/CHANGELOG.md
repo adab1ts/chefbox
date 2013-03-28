@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.2.0:
+
+* recipe/screensaver - delivers first steps documentation concerning screensaver indicator
+* recipe/weather - delivers first steps documentation concerning weather indicator
+
 ## 0.1.1:
 
 * recipe/plugandplay - dryed plug&play indicator installation using install_app core definition

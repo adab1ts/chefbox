@@ -33,3 +33,7 @@ autostart_app "weather" do
   desktop_file "#{weather['package']}-autostart.desktop"
 end
 
+support "weather" do
+  section "indicators"
+end
+
