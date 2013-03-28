@@ -26,3 +26,7 @@ install_app "unsettings" do
   profile eyecandy['profiles']['unsettings']
 end
 
+support "unsettings" do
+  section "eyecandy"
+end
+
