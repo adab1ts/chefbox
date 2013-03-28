@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of lenses.
 
+## 0.3.0:
+
+* recipes/music - delivers first steps documentation concerning music lense features
+
 ## 0.2.0:
 
 * recipes/academic - deleted

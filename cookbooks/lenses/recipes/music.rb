@@ -26,3 +26,7 @@ install_app "music" do
   profile lenses['profiles']['music']
 end
 
+support "music" do
+  section "lenses"
+end
+
