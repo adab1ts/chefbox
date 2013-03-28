@@ -26,3 +26,7 @@ install_app "skype" do
   profile groupware['profiles']['skype']
 end
 
+support "skype" do
+  section "groupware"
+end
+
