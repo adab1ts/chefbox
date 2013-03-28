@@ -26,3 +26,7 @@ install_app "firefox" do
   profile browsers['profiles']['firefox']
 end
 
+support "firefox" do
+  section "browsers"
+end
+
