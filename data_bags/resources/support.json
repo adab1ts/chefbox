@@ -1,0 +1,221 @@
+{
+  "id": "support",
+  "global": {
+    "idx": "10",
+    "files": {
+      "ubuntu": {
+        "ca": {
+          "file": "Ubuntu_12.04-es.pdf",
+          "url": "http://ubuntuone.com/1yRGRSiioN19dMk20LqMqd",
+          "sha256": "c7b20c23b3c50f12529b4c6a24905105c8b57f8cd44d5556df267db1da366992"
+        },
+        "es": {
+          "file": "Ubuntu_12.04-es.pdf",
+          "url": "http://ubuntuone.com/1yRGRSiioN19dMk20LqMqd",
+          "sha256": "c7b20c23b3c50f12529b4c6a24905105c8b57f8cd44d5556df267db1da366992"
+        }
+      }
+    }
+  },
+  "base": {
+    "idx": "01",
+    "files": {
+      "apt-file": {
+        "ca": {
+          "file": "apt-file-es.pdf",
+          "url": "http://ubuntuone.com/4ucLlga7qV9Zl8k0QPU3wj",
+          "sha256": "515ec2ce352e6a02085f809eb0ae64fd8977c7d22878af990762454c7cd9dfd3"
+        },
+        "es": {
+          "file": "apt-file-es.pdf",
+          "url": "http://ubuntuone.com/4ucLlga7qV9Zl8k0QPU3wj",
+          "sha256": "515ec2ce352e6a02085f809eb0ae64fd8977c7d22878af990762454c7cd9dfd3"
+        }
+      },
+      "libreoffice": {
+        "ca": {
+          "file": "libreoffice-es.pdf",
+          "url": "http://ubuntuone.com/1K4MIQbjG4eD2YAwAEX58c",
+          "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
+        },
+        "es": {
+          "file": "libreoffice-es.pdf",
+          "url": "http://ubuntuone.com/1K4MIQbjG4eD2YAwAEX58c",
+          "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
+        }
+      },
+      "usc": {
+        "ca": {
+          "file": "usc-es.pdf",
+          "url": "http://ubuntuone.com/2ICvSwF0a9Vx1iqupQ0bYy",
+          "sha256": "222000b5ab4bc7ac4e3471647e4030eb31bafe32dafe935ce6606eaf4ac3b2da"
+        },
+        "es": {
+          "file": "usc-es.pdf",
+          "url": "http://ubuntuone.com/2ICvSwF0a9Vx1iqupQ0bYy",
+          "sha256": "222000b5ab4bc7ac4e3471647e4030eb31bafe32dafe935ce6606eaf4ac3b2da"
+        }
+      }
+    }
+  },
+  "browsers": {
+    "idx": "06",
+    "files": {
+      "firefox": {
+        "ca": {
+          "file": "firefox-es.pdf",
+          "url": "http://ubuntuone.com/0JQJse9FEWybgmSdKSDu5o",
+          "sha256": "5a7223e0e3636ec7869653cfb9287be2db49b65174820daf3469590bcd12c055"
+        },
+        "es": {
+          "file": "firefox-es.pdf",
+          "url": "http://ubuntuone.com/0JQJse9FEWybgmSdKSDu5o",
+          "sha256": "5a7223e0e3636ec7869653cfb9287be2db49b65174820daf3469590bcd12c055"
+        }
+      }
+    }
+  },
+  "email": {
+    "idx": "07",
+    "files": {
+      "thunderbird": {
+        "ca": {
+          "file": "thunderbird-es.pdf",
+          "url": "http://ubuntuone.com/3t7qUUiNBDkySugWDYYKHb",
+          "sha256": "3ed051927cda0ceea866ef00dc77903751dbb983b29cbff8b60e656f1f4ab56a"
+        },
+        "es": {
+          "file": "thunderbird-es.pdf",
+          "url": "http://ubuntuone.com/3t7qUUiNBDkySugWDYYKHb",
+          "sha256": "3ed051927cda0ceea866ef00dc77903751dbb983b29cbff8b60e656f1f4ab56a"
+        }
+      }
+    }
+  },
+  "eyecandy": {
+    "idx": "03",
+    "files": {
+      "unsettings": {
+        "ca": {
+          "file": "unsettings-es.pdf",
+          "url": "http://ubuntuone.com/4c3ejikj8CxLwos3PqnRWC",
+          "sha256": "b966a42219c871ab644dc9fccadff88ad18cc37a94a5fe5026442f6f7811f805"
+        },
+        "es": {
+          "file": "unsettings-es.pdf",
+          "url": "http://ubuntuone.com/4c3ejikj8CxLwos3PqnRWC",
+          "sha256": "b966a42219c871ab644dc9fccadff88ad18cc37a94a5fe5026442f6f7811f805"
+        }
+      }
+    }
+  },
+  "groupware": {
+    "idx": "08",
+    "files": {
+      "skype": {
+        "ca": {
+          "file": "skype-es.pdf",
+          "url": "http://ubuntuone.com/0bBs0qaSWaziJQBGSGFJ62",
+          "sha256": "f08cb25bf2680c0dc3164870766b9c67d6028b3510129d56f054489ca740b85b"
+        },
+        "es": {
+          "file": "skype-es.pdf",
+          "url": "http://ubuntuone.com/0bBs0qaSWaziJQBGSGFJ62",
+          "sha256": "f08cb25bf2680c0dc3164870766b9c67d6028b3510129d56f054489ca740b85b"
+        }
+      }
+    }
+  },
+  "indicators": {
+    "idx": "02",
+    "files": {
+      "screensaver": {
+        "ca": {
+          "file": "screensaver-es.pdf",
+          "url": "http://ubuntuone.com/4aPKqecjpakPv4iL61c7Jj",
+          "sha256": "b9d183bae9e4ea784e8deb77ba15fb4d1edc4899d62ca9b276ad37b6b5873de9"
+        },
+        "es": {
+          "file": "screensaver-es.pdf",
+          "url": "http://ubuntuone.com/4aPKqecjpakPv4iL61c7Jj",
+          "sha256": "b9d183bae9e4ea784e8deb77ba15fb4d1edc4899d62ca9b276ad37b6b5873de9"
+        }
+      },
+      "weather": {
+        "ca": {
+          "file": "weather-es.pdf",
+          "url": "http://ubuntuone.com/7kVB3ameS5lfaO7RPiAzwq",
+          "sha256": "580e22d2b562a71c466c8ac527f151e154ac18eba6fef7c9535db8ea25c7e411"
+        },
+        "es": {
+          "file": "weather-es.pdf",
+          "url": "http://ubuntuone.com/7kVB3ameS5lfaO7RPiAzwq",
+          "sha256": "580e22d2b562a71c466c8ac527f151e154ac18eba6fef7c9535db8ea25c7e411"
+        }
+      }
+    }
+  },
+  "jobs": {
+    "idx": "05",
+    "files": {
+      "backup": {
+        "ca": {
+          "file": "backup-es.pdf",
+          "url": "http://ubuntuone.com/5XjybIeENwSfniMzOmoKHC",
+          "sha256": "a7a9cb7abc913655009d1141a21b6c535da5101d1f4dad8292c5604b19b8a1fb"
+        },
+        "es": {
+          "file": "backup-es.pdf",
+          "url": "http://ubuntuone.com/5XjybIeENwSfniMzOmoKHC",
+          "sha256": "a7a9cb7abc913655009d1141a21b6c535da5101d1f4dad8292c5604b19b8a1fb"
+        }
+      }
+    }
+  },
+  "lenses": {
+    "idx": "09",
+    "files": {
+      "music": {
+        "ca": {
+          "file": "music-es.pdf",
+          "url": "http://ubuntuone.com/4jcH36aqpcIItXNt86qpg7",
+          "sha256": "616864afd1179ab725558209937a23f58ccbc5b99d28399d2a5c464d4668340f"
+        },
+        "es": {
+          "file": "music-es.pdf",
+          "url": "http://ubuntuone.com/4jcH36aqpcIItXNt86qpg7",
+          "sha256": "616864afd1179ab725558209937a23f58ccbc5b99d28399d2a5c464d4668340f"
+        }
+      }
+    }
+  },
+  "security": {
+    "idx": "04",
+    "files": {
+      "firewall": {
+        "ca": {
+          "file": "firewall-es.pdf",
+          "url": "http://ubuntuone.com/1pJ6qZVD4lq4vKczw427fb",
+          "sha256": "9255f2fe4f17190c20d93a7e4f7f7ba8a1225277f063c50f68070cfa34b46698"
+        },
+        "es": {
+          "file": "firewall-es.pdf",
+          "url": "http://ubuntuone.com/1pJ6qZVD4lq4vKczw427fb",
+          "sha256": "9255f2fe4f17190c20d93a7e4f7f7ba8a1225277f063c50f68070cfa34b46698"
+        }
+      },
+      "tracking": {
+        "ca": {
+          "file": "tracking-es.pdf",
+          "url": "http://ubuntuone.com/17eaG5qt3o1SXv1eHqb9X4",
+          "sha256": "8482e994b703527ce73b1898e5e31a635408b92d74fc14a9ce7d7a392171f030"
+        },
+        "es": {
+          "file": "tracking-es.pdf",
+          "url": "http://ubuntuone.com/17eaG5qt3o1SXv1eHqb9X4",
+          "sha256": "8482e994b703527ce73b1898e5e31a635408b92d74fc14a9ce7d7a392171f030"
+        }
+      }
+    }
+  }
+}
