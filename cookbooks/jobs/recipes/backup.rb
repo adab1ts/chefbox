@@ -159,3 +159,7 @@ jobs['users'].each do |username|
   end
 end
 
+support "backup" do
+  section "jobs"
+end
+

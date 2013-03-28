@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.3.0:
+
+* recipes/backup - delivers first steps documentation concerning backup process
+
 ## 0.2.0:
 
 * recipes/default - refactorized to allow deployment of jobs configuration files to selected users

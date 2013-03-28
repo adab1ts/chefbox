@@ -2,6 +2,7 @@
 <% profile.each do |job, conf| %>
 <% conf['tasks'].each do |task| %>
 <% task_drive = task['drive'].split(' ').map(&:downcase).join('_') %>
+<%= "#{@jobs_log_path}/#{user}/#{job}-#{task_drive}-failed.log" %>
 <% task['targets'].each do |target| %>
 <%= "#{@jobs_log_path}/#{user}/#{job}-#{task_drive}-#{target}.log" %>
 <% end %>
