@@ -38,6 +38,10 @@ execute "update_apt_file_cache" do
   subscribes :run, resources("package[apt-file]"), :delayed
 end
 
+support "apt-file" do
+  section "base"
+end
+
 # Lists available package versions with distribution
 package "apt-show-versions"
 

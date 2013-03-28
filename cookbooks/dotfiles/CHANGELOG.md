@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.4.0:
+
+* recipes/default - delivers first steps documentation concerning apt-file package
+
 ## 0.3.0:
 
 * recipes/default - update to allow deployment of dotfiles to selected folder
