@@ -26,3 +26,7 @@ install_app "thunderbird" do
   profile email['profiles']['thunderbird']
 end
 
+support "thunderbird" do
+  section "email"
+end
+
