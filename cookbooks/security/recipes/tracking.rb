@@ -26,3 +26,7 @@ install_app "tracking" do
   profile security['profiles']['tracking']
 end
 
+support "tracking" do
+  section "security"
+end
+

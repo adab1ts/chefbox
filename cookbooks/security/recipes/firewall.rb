@@ -34,12 +34,13 @@ cookbook_file "/etc/ufw/applications.d/chef-openssh-server" do
   subscribes :create, resources("package[firewall]"), :immediately
 end
 
-bash "enable_firewall" do
-  code <<-EOH
-    ufw allow ChefSSH
-    ufw enable
-    EOH
+execute "enable_firewall" do
+  command "ufw allow ChefSSH"
   action :nothing
   subscribes :run, resources("package[firewall]"), :immediately
+end
+
+support "firewall" do
+  section "security"
 end
 
