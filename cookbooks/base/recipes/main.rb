@@ -39,6 +39,9 @@ package "dkms"
 # Adaptive readahead daemon
 package "preload" if memory > 2.GB
 
+# Displays system information
+package "hardinfo"
+
 # NX client for QT
 package "qtnx"
 
@@ -53,6 +56,10 @@ package "nautilus-open-terminal"
 # Office productivity suite
 package "lo-menubar" if node[:platform_version] == "12.04"
 package "libreoffice-style-galaxy"
+
+support "libreoffice" do
+  section "base"
+end
 
 # Commonly used restricted packages for Ubuntu
 package "ubuntu-restricted-extras" do

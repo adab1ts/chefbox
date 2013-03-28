@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.8.0:
+
+* recipes/main - delivers first steps documentation concerning libreoffice suite
+* recipes/end - delivers first steps documentation concerning the USC and the Ubuntu platform
+
 ## 0.7.1:
 
 * recipes/begin - now excludes existing default user from account management

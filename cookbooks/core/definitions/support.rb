@@ -24,11 +24,11 @@ define :support do
   support = data_bag_item('resources', 'support')
   section = support[params[:section]]
   
-  prefix   = section['idx']
+  chapter  = section['idx']
   resource = section['files'][params[:name]][box['lang']]
 
   box['users'].each do |username, usr|
-    support_folder = "#{usr['home']}/#{box['folders']['support']}/#{prefix}-#{params[:section]}"
+    support_folder = "#{usr['home']}/#{box['folders']['support']}/#{chapter}-#{params[:section]}"
     support_file   = "#{support_folder}/#{resource['file']}"
 
     directory_tree support_folder do

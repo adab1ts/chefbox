@@ -40,29 +40,13 @@ bash "first_system_upgrade" do
 end
 
 
-## Next steps documentation
+## First steps documentation
 
-box = node[:box]
+support "ubuntu" do
+  section "global"
+end
 
-box['users'].each do |username, usr|
-  support_folder = "#{usr['home']}/#{box['folders']['support']}"
-
-  directory_tree support_folder do
-    exclude usr['home']
-    owner username
-    group usr['group']
-    mode 00755
-  end
-
-  remote_directory support_folder do
-    source "support"
-    owner username
-    group usr['group']
-    mode 00755
-    files_owner username
-    files_group usr['group']
-    files_mode 00644
-    files_backup false
-  end
+support "usc" do
+  section "base"
 end
 
