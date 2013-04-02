@@ -65,33 +65,11 @@ jobs['users'].each do |username|
   end
 
 
-  backup_launcher = "#{backup_job_dir}/backup-mgr.desktop"
-
-  template backup_launcher do
-    source "/jobs/backup/backup-mgr.desktop.erb"
-    owner username
-    group usr['group']
-    mode 00644
-    backup false
+  launcher "backup-mgr" do
+    template "/jobs/backup/backup-mgr.desktop.erb"
     variables(
       :backup_script => backup_script
     )
-  end
-
-
-  launchers_dir = "#{usr['home']}/.local/share/applications"
-
-  directory_tree launchers_dir do
-    exclude usr['home']
-    owner username
-    group usr['group']
-    mode 00755
-  end
-
-  link "#{launchers_dir}/backup-mgr.desktop" do
-    to backup_launcher
-    owner username
-    group usr['group']
   end
 
 

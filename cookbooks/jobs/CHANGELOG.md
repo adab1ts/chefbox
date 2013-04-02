@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.3.1:
+
+* recipes/backup - dryed backup-mgr custom launcher creation using launcher core definition
+
 ## 0.3.0:
 
 * recipes/backup - delivers first steps documentation concerning backup process
