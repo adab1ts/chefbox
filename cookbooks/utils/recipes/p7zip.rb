@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: utils
-# Recipe:: default
+# Recipe:: p7zip
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,32 +19,10 @@
 #
 
 
-## Requirements
+utils = node[:apps][:utils]
 
-include_recipe "base"
-
-
-## Deploy
-
-box = node[:box]
-utils = data_bag_item('apps', 'utils')
-
-# Uninstall apps not needed
-
-apps = utils['apps']
-selected = box['apps']['utils']
-unselected = apps - selected
-
-uninstall_apps "utils" do
-  apps unselected
-  profiles utils['profiles']
+# 7z and 7za file archivers with high compression ratio
+install_app "p7zip" do
+  profile utils['profiles']['p7zip']
 end
-
-# Install selected apps
-
-node.set[:apps] = { :utils => utils }
-
-include_recipe "utils::furius" if selected.include?("furius")
-include_recipe "utils::hardinfo" if selected.include?("hardinfo")
-include_recipe "utils::p7zip" if selected.include?("p7zip")
 

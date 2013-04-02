@@ -5,6 +5,8 @@ The following recipes may apply:
 
 - `utils::default` - purges unselected packages and includes recipes as nedeed.
 - `utils::furius` - installs __Furius ISO Mount__ and suggested packages.
+- `utils::hardinfo` - installs __Hardinfo__ and suggested packages.
+- `utils::p7zip` - installs __7-Zip file archiver__ and suggested packages.
 
 
 ## Requirements

@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: utils
-# Recipe:: default
+# Recipe:: hardinfo
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,32 +19,10 @@
 #
 
 
-## Requirements
+utils = node[:apps][:utils]
 
-include_recipe "base"
-
-
-## Deploy
-
-box = node[:box]
-utils = data_bag_item('apps', 'utils')
-
-# Uninstall apps not needed
-
-apps = utils['apps']
-selected = box['apps']['utils']
-unselected = apps - selected
-
-uninstall_apps "utils" do
-  apps unselected
-  profiles utils['profiles']
+# Displays system information
+install_app "hardinfo" do
+  profile utils['profiles']['hardinfo']
 end
-
-# Install selected apps
-
-node.set[:apps] = { :utils => utils }
-
-include_recipe "utils::furius" if selected.include?("furius")
-include_recipe "utils::hardinfo" if selected.include?("hardinfo")
-include_recipe "utils::p7zip" if selected.include?("p7zip")
 
