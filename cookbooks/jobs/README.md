@@ -11,6 +11,10 @@ The following recipes are applied:
 
 This cookbook only applies to Ubuntu 12.04+ platform.
 
+#### cookbooks
+- `core`
+- `base`
+
 #### recipes
 - `base::default`
 

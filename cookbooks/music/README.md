@@ -41,7 +41,7 @@ Just include `music` in your node's `run_list`:
 
 ## Contact
 
-By music:   carles.ml.dev at gmail dot com  
+By Email:   carles.ml.dev at gmail dot com  
 On Twitter: [@zuzudev](https://twitter.com/zuzudev)  
 On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
