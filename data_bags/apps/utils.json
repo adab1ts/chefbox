@@ -1,0 +1,17 @@
+{
+  "id": "utils",
+  "apps": [
+    "furius"
+  ],
+  "profiles": {
+    "furius": {
+      "package": "furiusisomount",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "ISO, IMG, BIN, MDF and NRG image management utility",
+      "suggested": [],
+      "source": {
+        "type": "usc"
+      }
+    }
+  }
+}
