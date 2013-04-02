@@ -39,14 +39,8 @@ package "dkms"
 # Adaptive readahead daemon
 package "preload" if memory > 2.GB
 
-# Displays system information
-package "hardinfo"
-
 # NX client for QT
 package "qtnx"
-
-# 7z and 7za file archivers with high compression ratio
-package "p7zip-full"
 
 # Nautilus plugins
 package "nautilus-filename-repairer"

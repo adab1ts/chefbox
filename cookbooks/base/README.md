@@ -11,7 +11,6 @@ The following recipes are applied:
   `+dkms`                       - Dynamic Kernel Module Support Framework  
   `+preload`                    - Adaptive readahead daemon (mem > 4 GB only)  
   `+qtnx`                       - NX client for QT  
-  `+p7zip-full`                 - 7z and 7za file archivers with high compression ratio  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  

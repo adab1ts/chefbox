@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.9.0:
+
+* recipes/main - moved p7zip installation to recipe[utils::p7zip]
+
 ## 0.8.0:
 
 * recipes/main - delivers first steps documentation concerning libreoffice suite
