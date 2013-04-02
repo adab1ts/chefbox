@@ -8,6 +8,7 @@
   "run_list": [
     "role[average-box]",
     "recipe[graphics]",
+    "recipe[utils]",
     "recipe[vms]"
   ],
   "env_run_lists": {}
