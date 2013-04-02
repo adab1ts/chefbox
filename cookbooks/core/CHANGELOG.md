@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.10.0:
+
+* definitions/launcher - adds a custom launcher for specified app
+
 ## 0.9.0:
 
 * definitions/support - delivers support material to every box user

@@ -107,6 +107,20 @@ purging all unnecessary packages.
       section "security"
     end
 
+### Custom launcher creation
+
+`launcher` provides a custom launcher for specified app.
+
+#### Examples
+
+    # custom launcher for backup-mgr script
+    launcher "backup-mgr" do
+      template "/jobs/backup/backup-mgr.desktop.erb"
+      variables(
+        :backup_script => backup_script
+      )
+    end
+
 
 ## Resources/Providers
 
