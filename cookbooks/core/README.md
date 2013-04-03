@@ -113,12 +113,17 @@ purging all unnecessary packages.
 
 #### Examples
 
-    # custom launcher for backup-mgr script
+    # custom launcher for backup-mgr script from template
     launcher "backup-mgr" do
       template "/jobs/backup/backup-mgr.desktop.erb"
       variables(
         :backup_script => backup_script
       )
+    end
+
+    # custom launcher for backup-mgr script from file
+    launcher "backup-mgr" do
+      file "/jobs/backup/backup-mgr.desktop"
     end
 
 
