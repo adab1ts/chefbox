@@ -10,11 +10,6 @@ jobs_setup_file="<%= @jobs_setup_file %>"
 . "$jobs_setup_file"
 
 #
-# Variables
-#
-must_shutdown=$1
-
-#
 # Auxiliar Functions
 #
 __show_welcome_message() {
@@ -52,11 +47,9 @@ launch_backup_job() {
   fi
 
   show_farewell_message
-
-  if [[ $must_shutdown -eq 1 ]]; then shutdown -h now; fi
 }
 
 launch_backup_job
 
-unset jobs_setup_file must_shutdown
+unset jobs_setup_file
 
