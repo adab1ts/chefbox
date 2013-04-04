@@ -50,3 +50,7 @@ box['users'].each do |username, usr|
   end
 end
 
+support "furius" do
+  section "utils"
+end
+

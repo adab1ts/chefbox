@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.3.0:
+
+* recipe/furius - delivers first steps documentation concerning furius and ISO images management
+
 ## 0.2.0:
 
 * recipe/hardinfo - manages hardinfo app installation
