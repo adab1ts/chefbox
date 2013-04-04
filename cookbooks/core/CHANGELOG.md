@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.10.2:
+
+* definitions/launcher - now creates custom launcher with 00644 perms
+* definitions/support - now creates folder without numbered prefix for better maintainance
+* definitions/uninstall_app - now excludes src packages from purge
+
 ## 0.10.1:
 
 * definitions/launcher - now supports specified file as launcher

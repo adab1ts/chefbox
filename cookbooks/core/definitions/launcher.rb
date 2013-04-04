@@ -38,7 +38,7 @@ define :launcher, :variables => {} do
         source params[:template]
         owner username
         group usr['group']
-        mode 00644
+        mode 00664
         backup false
         variables params[:variables]
       end
