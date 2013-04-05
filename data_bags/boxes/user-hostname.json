@@ -1,0 +1,98 @@
+{
+  "id": "USER-HOSTNAME",
+  "name": "HOSTNAME",
+  "lang": "LANG",
+  "folders": {
+    "admin": "ADMIN_FOLDER",
+    "desktop": "DESKTOP_FOLDER",
+    "support": "FIRSTSTEPS_FOLDER"
+  },
+  "users": {
+    "USER": {
+      "default": true,
+      "uid": 1000,
+      "gid": 1000,
+      "group": "GROUP",
+      "home": "/home/USER",
+      "shell": "/bin/bash",
+      "password": "secret"
+    }
+  },
+  "dotfiles": {
+    "users": [
+      "USER"
+    ],
+    "folder": ".dotfiles"
+  },
+  "apps": {
+    "browsers": [
+      "chrome",
+      "firefox",
+      "opera"
+    ],
+    "email": [
+      "geary",
+      "thunderbird"
+    ],
+    "eyecandy": [
+      "faenza-icons",
+      "faience-icons",
+      "nitrux-icons",
+      "unsettings"
+    ],
+    "fileshare": [
+      "jdownloader",
+      "transmission"
+    ],
+    "graphics": [
+      "gimp",
+      "inkscape",
+      "mypaint",
+      "scribus"
+    ],
+    "groupware": [
+      "skype"
+    ],
+    "indicators": [
+      "plug&play",
+      "screensaver",
+      "touchpad",
+      "ubuntuone",
+      "weather"
+    ],
+    "lenses": [
+      "music",
+      "news",
+      "torrents",
+      "wikipedia"
+    ],
+    "mobile": [
+      "mobile3g"
+    ],
+    "music": [
+      "lastfm",
+      "nuvola",
+      "rdio",
+      "rhythmbox",
+      "spotify",
+      "tomahawk"
+    ],
+    "security": [
+      "antivirus",
+      "firewall",
+      "tracking"
+    ],
+    "utils": [
+      "furius",
+      "hardinfo",
+      "p7zip"
+    ],
+    "video": [
+      "openshot",
+      "vlc"
+    ],
+    "virtualization": [
+      "virtualbox"
+    ]
+  }
+}
