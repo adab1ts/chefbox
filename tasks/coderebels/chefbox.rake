@@ -89,14 +89,14 @@ namespace :coderebels do
     user     = args[:user]
     hostname = args[:hostname]
 
-    profile = "#{user}-#{hostname}.json"
-    profile_file = File.join(TOPDIR, "data_bags", "boxes", profile)
+    profile = "#{user}-#{hostname}"
+    profile_file = File.join(TOPDIR, "data_bags", "boxes", "#{profile}.json")
 
     unless File.exists? profile_file
       edb_file = File.join(TOPDIR, "keys", "edb")
       editor   = "gedit"
 
-      sh %{knife data bag create boxes #{user}-#{hostname} --secret-file #{edb_file} -e #{editor}}
+      sh %{knife data bag create boxes #{profile} --secret-file #{edb_file} -e #{editor}}
       sh %{knife download data_bags}
     end
   end
@@ -110,8 +110,8 @@ namespace :coderebels do
     hostname = args[:hostname]
     recipes  = args[:recipes] || ""
 
-    role = "#{user}-#{hostname}.json"
-    role_file = File.join(TOPDIR, "roles", role)
+    role = "#{user}-#{hostname}"
+    role_file = File.join(TOPDIR, "roles", "#{role}.json")
 
     unless File.exists? role_file
       run_list = ["role[average-box]"] + recipes.split(':').map{ |r| "recipe[#{r}]" }
@@ -119,12 +119,12 @@ namespace :coderebels do
       open(role_file, "w") do |file|
         file.puts <<-EOH
 {
-  "name": "#{user}-#{hostname}",
+  "name": "#{role}",
   "description": "Profile for #{user}@#{hostname} box",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "default_attributes": {
-    "profile": "#{user}-#{hostname}"
+    "profile": "#{role}"
   },
   "override_attributes": {},
   "run_list": [
@@ -135,7 +135,7 @@ namespace :coderebels do
 EOH
       end
 
-      sh %{knife role from file #{role}}
+      sh %{knife role from file #{role}.json}
     end
   end
 
