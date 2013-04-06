@@ -1,7 +1,8 @@
 {
   "id": "mobile",
   "apps": [
-    "mobile3g"
+    "mobile3g",
+    "mobile3g-full"
   ],
   "profiles": {
     "mobile3g": {
@@ -15,6 +16,20 @@
           "file": "sakis3g.tar.gz",
           "url": "http://ubuntuone.com/5vnMRJcEWi18qqg8PRt1lf",
           "sha256": "8570e0d41b3b3cc789bcbe208b565ea1e0c00e03294763d846b128411dcedfc5"
+        }
+      }
+    },
+    "mobile3g-full": {
+      "package": "sakis3g-full",
+      "maintainer": "Sakis Dimopoulos",
+      "description": "Shell script for establishing a 3G connection with any combination of modem or operator",
+      "suggested": [],
+      "source": {
+        "type": "src",
+        "data": {
+          "file": "sakis3g-full.tar.gz",
+          "url": "http://ubuntuone.com/5QbCaR7XoFjGqBK7E97QE4",
+          "sha256": "7eb85d16a0887e16366f6e42864c450a015ae5d04a7c161cf21ded26cdfeeb4a"
         }
       }
     }

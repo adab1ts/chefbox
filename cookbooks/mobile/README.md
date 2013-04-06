@@ -5,6 +5,7 @@ The following recipes may apply:
 
 - `mobile::default` - purges unselected packages and includes recipes as nedeed.
 - `mobile::mobile3g` - installs __Sakis3G script__ and suggested packages.
+- `mobile::mobile3g-full` - installs __Sakis3G script with embedded usb_modeswitch__ and suggested packages.
 
 
 ## Requirements
