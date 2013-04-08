@@ -40,6 +40,18 @@ The following tasks duplicate functionality from knife and may be removed in a f
 * `upload_cookbooks` - replaced by `knife cookbook upload -a`.
 * `upload_cookbook[cookbook]` - replaced by `knife cookbook upload COOKBOOK`.
 
+The following tasks ease converging new nodes
+
+* `coderebels:bootstrap[user,hostname,ip]` - Bootstrap a chef client node.
+* `coderebels:box_profile[user,hostname]` - Create a new profile for specified box.
+* `coderebels:box_role[user,hostname,recipes]` - Create a new role for specified box.
+* `coderebels:bundle[user,hostname]` - Bundle a bootstrap package for specified box.
+* `coderebels:converge[user,hostname,ip]` - Converge a chef client node.
+* `coderebels:edb_keygen[keyname]` - Generate openssl key for encrypted data bags management.
+* `coderebels:remindme` - Show how to proceed to converge a new chefbox node.
+* `coderebels:ssh[user,hostname,ip,cmd]` - Establish a ssh connection with specified box.
+* `coderebels:ssh_keygen[user,hostname]` - Generate authentication keys to establish a ssh connection with a box.
+
 
 ## Configuration
 
