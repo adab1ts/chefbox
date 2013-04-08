@@ -45,5 +45,4 @@ end
 node.set[:apps] = { :mobile => mobile }
 
 include_recipe "mobile::mobile3g" if selected.include?("mobile3g")
-include_recipe "mobile::mobile3g-full" if selected.include?("mobile3g-full")
 
