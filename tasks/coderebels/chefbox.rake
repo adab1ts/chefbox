@@ -114,7 +114,7 @@ namespace :coderebels do
     role_file = File.join(TOPDIR, "roles", "#{role}.json")
 
     unless File.exists? role_file
-      run_list = ["role[average-box]"] + recipes.split(':').map{ |r| "recipe[#{r}]" }
+      run_list = ["\"role[average-box]\""] + recipes.split(':').map{ |r| "\"recipe[#{r}]\"" }
 
       open(role_file, "w") do |file|
         file.puts <<-EOH
@@ -128,7 +128,7 @@ namespace :coderebels do
   },
   "override_attributes": {},
   "run_list": [
-    #{run_list.map{ |recipe| "\"#{recipe}\"" }.join(',')}
+    #{run_list.join(',')}
   ],
   "env_run_lists": {}
 }
