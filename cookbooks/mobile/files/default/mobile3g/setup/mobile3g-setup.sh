@@ -23,7 +23,7 @@ if [[ -z "$usb_id" ]]; then
   exit -1
 fi
 
-echo -n "Enter the USB interface to use. If unsure press <Enter> [0]: "
+echo -n "Enter the USB interface to use. If unsure press <Enter> [0-5]: "
 read usb_iface
 [[ -z "$usb_iface" ]] && usb_iface="0"
 
