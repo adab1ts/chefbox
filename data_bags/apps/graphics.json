@@ -26,7 +26,7 @@
       "description": "vector-based drawing program",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     },
     "mypaint": {
@@ -48,7 +48,7 @@
       "description": "Open Source Desktop Page Layout - stable branch",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     }
   }

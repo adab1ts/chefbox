@@ -12,7 +12,7 @@
       "description": "graphical front-end for ClamAV",
       "suggested": ["cabextract", "libclamunrar6"],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     },
     "firewall": {
@@ -21,7 +21,7 @@
       "description": "graphical user interface for ufw",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     },
     "tracking": {

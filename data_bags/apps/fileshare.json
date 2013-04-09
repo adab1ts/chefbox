@@ -24,7 +24,7 @@
       "description": "lightweight BitTorrent client (GTK interface)",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     }
   }

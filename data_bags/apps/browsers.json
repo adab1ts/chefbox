@@ -28,7 +28,7 @@
       "description": "Safe and easy web browser from Mozilla",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     },
     "opera": {

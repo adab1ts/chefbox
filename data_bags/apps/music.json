@@ -56,7 +56,7 @@
       "description": "music player and organizer for GNOME",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     },
     "spotify": {

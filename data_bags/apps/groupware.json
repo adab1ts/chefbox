@@ -10,7 +10,7 @@
       "description": "client for Skype VOIP and instant messaging service",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     }
   }

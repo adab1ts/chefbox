@@ -24,7 +24,7 @@
       "description": "Email, RSS and newsgroup client with integrated spam filter",
       "suggested": [],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     }
   }

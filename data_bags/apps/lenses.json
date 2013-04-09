@@ -13,7 +13,7 @@
       "description": "Music lens for unity",
       "suggested": ["unity-scope-grooveshark"],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     },
     "news": {

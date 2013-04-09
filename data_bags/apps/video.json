@@ -24,7 +24,7 @@
       "description": "multimedia player and streamer",
       "suggested": ["phonon-backend-vlc"],
       "source": {
-        "type": "usc"
+        "type": "distro"
       }
     }
   }
