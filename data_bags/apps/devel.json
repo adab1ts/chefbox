@@ -1,0 +1,21 @@
+{
+  "id": "devel",
+  "apps": [
+    "juju"
+  ],
+  "profiles": {
+    "juju": {
+      "package": "juju",
+      "maintainer": "Juju Developers <juju@lists.ubuntu.com>",
+      "description": "next generation service orchestration system",
+      "suggested": [],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "juju-pkgs",
+          "uri": "ppa:juju/pkgs"
+        }
+      }
+    }
+  }
+}
