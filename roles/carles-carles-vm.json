@@ -10,6 +10,7 @@
   "run_list": [
     "role[average-box]",
     "recipe[jobs]",
+    "recipe[mobile]",
     "recipe[vms]"
   ],
   "env_run_lists": {}

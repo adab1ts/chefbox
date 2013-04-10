@@ -13,7 +13,6 @@
     "recipe[fileshare]",
     "recipe[groupware]",
     "recipe[lenses]",
-    "recipe[mobile]",
     "recipe[music]",
     "recipe[utils]",
     "recipe[video]"
