@@ -41,6 +41,9 @@ define :install_app do
     end
 
     # Download of deb package
+    source = source[node[:lsb][:codename]] || source['all']
+    source = source[Coderebels::Chefbox::Box.arch] || source['all']
+
     deb_file = "#{Chef::Config[:file_cache_path]}/#{source['file_name']}"
 
     remote_file deb_file do

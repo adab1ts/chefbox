@@ -159,6 +159,18 @@ resource immediately.
 
 ## Libraries
 
+### module Coderebels::Chefbox::Box
+
+Provides box related functions.
+
+#### Functions
+
+- `memory` - retrieves the total amount of memory of the box.
+- `device` - retrieves the vendor:device string of the device of the specified category.
+- `vendor` - retrieves the vendor of the device of the specified category.
+- `arch`   - retrieves the hardware platform (i386 / amd64).
+- `platform_version` - retrieves the os version.
+
 ### module Coderebels::Chefbox::Digest
 
 Provides digest related functions.

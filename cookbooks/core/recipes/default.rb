@@ -21,6 +21,7 @@
 
 class Chef::Recipe
   include Coderebels::Chefbox::Shell
+  include Coderebels::Chefbox::Box
   include Coderebels::Chefbox::Digest
 end
 

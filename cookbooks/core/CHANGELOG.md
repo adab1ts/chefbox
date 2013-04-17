@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.13.0:
+
+* definitions/install_app - now supports different distributions and archs for deb packages
+* libraries/box           - moved from kernel cookbook, now includes device-related methods
+* recipes/default         - includes custom Coderebels::Chefbox::Box module again
+
 ## 0.12.0:
 
 * definitions/install_app - now purges packages replaced by app being installed

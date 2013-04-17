@@ -42,7 +42,7 @@ package "nautilus-gtkhash"
 package "nautilus-open-terminal"
 
 # Office productivity suite
-package "lo-menubar" if node[:platform_version] == "12.04"
+package "lo-menubar" if platform_version == 12.04
 package "libreoffice-style-galaxy"
 
 support "libreoffice" do

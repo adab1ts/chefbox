@@ -22,7 +22,7 @@
 indicators = node[:apps][:indicators]
 
 # Indicator for Ubuntu One synchronization service
-if node[:platform_version] == "12.04"
+if platform_version == 12.04
   install_app "ubuntuone" do
     profile indicators['profiles']['ubuntuone']
   end
