@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.10.0:
+
+* recipes/main - moved dkms installation to recipe[kernel::dkms]
+* recipes/main - moved preload installation to recipe[kernel::preload]
+
 ## 0.9.0:
 
 * recipes/main - moved p7zip installation to recipe[utils::p7zip]

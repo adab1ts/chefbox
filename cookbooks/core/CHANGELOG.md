@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.11.0:
+
+* libraries/shell  - adds method to evaluate a shell command
+* libraries/digest - refactorization of shadow method
+* libraries/box    - moved to kernel cookbook
+* recipes/default  - does not include custom Coderebels::Chefbox::Box module any more
+
 ## 0.10.2:
 
 * definitions/launcher - now creates custom launcher with 00644 perms

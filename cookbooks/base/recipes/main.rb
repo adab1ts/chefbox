@@ -33,12 +33,6 @@ box['users'].each do |username, usr|
   end
 end
 
-# Dynamic Kernel Module Support Framework
-package "dkms"
-
-# Adaptive readahead daemon
-package "preload" if memory > 2.GB
-
 # NX client for QT
 package "qtnx"
 

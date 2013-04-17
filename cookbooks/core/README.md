@@ -159,14 +159,6 @@ resource immediately.
 
 ## Libraries
 
-### module Coderebels::Chefbox::Box
-
-Provides box related functions.
-
-#### Functions
-
-- `memory` - retrieves the total amount of memory of the box.
-
 ### module Coderebels::Chefbox::Digest
 
 Provides digest related functions.
@@ -176,6 +168,14 @@ Provides digest related functions.
 - `sha256sum` - prints SHA256 checksum of a given file.
 - `md5sum` - prints MD5 checksum of a given file.
 - `shadow` - shadows plain text passwords.
+
+### module Coderebels::Chefbox::Shell
+
+Provides shell related functions.
+
+#### Functions
+
+- `rep` - evaluates shell commands.
 
 
 ## Contact

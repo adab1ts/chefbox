@@ -42,9 +42,7 @@ module Coderebels
       end
 
       def shadow(passwd)
-        reader, writer = IO.pipe
-        system("openssl passwd -1 #{passwd}", [:err, :out] => writer)
-        reader.gets.chomp
+        Coderebels::Chefbox::Shell.rep "openssl passwd -1 #{passwd}"
       end
 
     end

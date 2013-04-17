@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: core
-# Library:: box
+# Library:: shell
 #
 # Copyright 2013, Carles Muiños
 #
@@ -21,13 +21,15 @@
 
 module Coderebels
   module Chefbox
-    module Box
+    module Shell
 
-      def memory
-        /(?<mem>\d+)kB/ =~ node[:memory][:total]
-        mem.to_i
+      def rep(cmd)
+        reader, writer = IO.pipe
+        system(cmd, [:err, :out] => writer)
+        reader.gets.chomp
       end
 
     end
   end
 end
+
