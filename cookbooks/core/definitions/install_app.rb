@@ -22,12 +22,21 @@
 define :install_app do
   profile = params[:profile]
 
+  # Replaced packages purge
+  replaced = profile['replaced'] || []
+  replaced.each do |pkg|
+    package pkg do
+      action :purge
+    end
+  end
+
   origin = profile['source']['type']
   source = profile['source']['data']
 
   if origin == 'deb'
     # Dependencies installation
-    profile['dependencies'].each do |pkg|
+    dependencies = profile['dependencies'] || []
+    dependencies.each do |pkg|
       package pkg
     end
 
@@ -74,8 +83,9 @@ define :install_app do
     end
   end
 
-  # Suggested packages
-  profile['suggested'].each do |pkg|
+  # Suggested packages installation
+  suggested = profile['suggested'] || []
+  suggested.each do |pkg|
     package pkg
   end
 end

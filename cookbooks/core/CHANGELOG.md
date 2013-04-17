@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.12.0:
+
+* definitions/install_app - now purges packages replaced by app being installed
+
 ## 0.11.0:
 
 * libraries/shell  - adds method to evaluate a shell command
