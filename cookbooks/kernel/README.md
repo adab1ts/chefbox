@@ -5,9 +5,9 @@ The following recipes may apply:
 
 - `kernel::default` - installs selected drivers and the following packages:
   
-  `dkms`           - __Dynamic Kernel Module Support Framework__
-  `intel_graphics` - __Intel Linux Graphics Installer__
-  `preload`        - __Adaptive Readahead Daemon__
+  `dkms`           - __Dynamic Kernel Module Support Framework__  
+  `intel_graphics` - __Intel Linux Graphics Installer__  
+  `preload`        - __Adaptive Readahead Daemon__  
   `tlp`            - __TLP Linux Advanced Power Management__
 
 
