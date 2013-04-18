@@ -1,0 +1,86 @@
+{
+  "id": "kernel",
+  "apps": [
+    "bcm43",
+    "dkms",
+    "intel_graphics",
+    "preload",
+    "tlp"
+  ],
+  "profiles": {
+    "bcm43": {
+      "package": "b43-fwcutter",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Utility for extracting Broadcom 43xx firmware",
+      "replaced": ["bcmwl-kernel-source"],
+      "suggested": ["firmware-b43-installer"],
+      "source": {
+        "type": "distro"
+      }
+    },
+    "dkms": {
+      "package": "dkms",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Dynamic Kernel Module Support Framework",
+      "source": {
+        "type": "distro"
+      }
+    },
+    "intel_graphics": {
+      "package": "intel_graphics",
+      "maintainer": "Rodrigo Vivi <rodrigo.vivi@intel.com>",
+      "description": "Intel graphics drivers update utility",
+      "source": {
+        "type": "deb",
+        "data": {
+          "precise": {
+            "i386": {
+              "file_name": "intel-linux-graphics-installer_1.0-0ubuntu1_i386.deb",
+              "uri": "https://download.01.org/gfx/ubuntu/12.04/main/pool/12.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0-0ubuntu1_i386.deb",
+              "sha256": "2f70c6ba326c180373dad00fa1ba26838c74bd2aa81800a99706e7809ed6d618"
+            },
+            "amd64": {
+              "file_name": "intel-linux-graphics-installer_1.0-0ubuntu1_amd64.deb",
+              "uri": "https://download.01.org/gfx/ubuntu/12.04/main/pool/12.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0-0ubuntu1_amd64.deb",
+              "sha256": "fec2efe60a676cc69a8889f7c3ab4f490109f456ee058411acbde7d9ee39c872"
+            }
+          },
+          "quantal": {
+            "i386": {
+              "file_name": "intel-linux-graphics-installer_1.0_i386.deb",
+              "uri": "https://download.01.org/gfx/ubuntu/12.10/main/pool/12.10/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0_i386.deb",
+              "sha256": "bb50693615a21fde32f8ae1e97152545071aaeb5ee0fec2352c6ac476bb506f1"
+            },
+            "amd64": {
+              "file_name": "intel-linux-graphics-installer_1.0_amd64.deb",
+              "uri": "https://download.01.org/gfx/ubuntu/12.10/main/pool/12.10/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0_amd64.deb",
+              "sha256": "3bb530b62efbe66af444555bef0b8672d15533eb321ad25ff34bc1930a54c411"
+            }
+          }
+        }
+      }
+    },
+    "preload": {
+      "package": "preload",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "adaptive readahead daemon",
+      "source": {
+        "type": "distro"
+      }
+    },
+    "tlp": {
+      "package": "tlp",
+      "maintainer": "Thomas Koch <linrunner@gmx.net>",
+      "description": "Save battery power on laptops",
+      "replaced": ["laptop-mode-tools"],
+      "suggested": ["tlp-rdw", "smartmontools", "ethtool", "tp-smapi-dkms", "acpi-call-tools"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "linrunner-tlp",
+          "uri": "ppa:linrunner/tlp"
+        }
+      }
+    }
+  }
+}
