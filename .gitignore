@@ -3,3 +3,4 @@
 .chef
 bootstrap/
 keys/
+host-*/
