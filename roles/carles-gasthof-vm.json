@@ -1,0 +1,15 @@
+{
+  "name": "carles-gasthof-vm",
+  "description": "Profile for carles@gasthof-vm box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {
+    "profile": "carles-gasthof-vm"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "role[basic-box]",
+    "recipe[devel]"
+  ],
+  "env_run_lists": {}
+}
