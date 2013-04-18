@@ -1,0 +1,16 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/functions
+# Contents: Functions with arguments
+
+
+. $BASH_DOTFILES_PATH/functions
+
+# Applying functions files
+functions_folder="$ZSH_DOTFILES_PATH/functions.d"
+
+for f in $functions_folder/*; do
+	[[ -f "$f" ]] || continue
+	. $f
+done
+
+unset functions_folder

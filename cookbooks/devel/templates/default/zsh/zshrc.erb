@@ -1,0 +1,11 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zshrc
+
+zsh_dotfiles_path="${HOME}/<%= @dotfiles_dir %>/zsh"
+
+. "$zsh_dotfiles_path/env"
+. "$zsh_dotfiles_path/config"
+. "$zsh_dotfiles_path/aliases"
+. "$zsh_dotfiles_path/functions"
+
+unset zsh_dotfiles_path

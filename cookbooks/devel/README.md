@@ -4,7 +4,9 @@ This cookbook installs a selected set of development tools.
 The following recipes may apply:
 
 - `devel::default` - purges unselected packages and includes recipes as nedeed.
-- `devel::juju` - installs __Juju service orchestration tool__ and suggested packages.
+- `devel::git`     - installs __Git distributed version control system__ and suggested packages.
+- `devel::juju`    - installs __Juju service orchestration tool__ and suggested packages.
+- `devel::zsh`     - installs __Zsh Shell__ and suggested packages.
 
 
 ## Requirements
@@ -17,6 +19,9 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 #### recipes
 - `base::default`
+
+#### packages
+- `htop` - Interactive processes viewer
 
 
 ## Usage

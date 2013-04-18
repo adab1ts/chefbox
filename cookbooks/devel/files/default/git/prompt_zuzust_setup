@@ -1,0 +1,103 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/prompt.d/prompt_zuzust_setup
+
+
+# In order to set your prompt you simply do the following
+#
+# setopt promptsubst
+# autoload -Uz promptinit
+# promptinit
+# prompt zuzust
+#
+# This will yield a prompt like the following:
+#
+# carles:agilwebdevrails [git|master:156d0b4]+*
+# % →
+
+# Colors notes:
+#	%F{0} ~ %F{black}
+#	%F{1} ~ %F{red}
+#	%F{2} ~ %F{green}
+#	%F{3} ~ %F{yellow}
+#	%F{4} ~ %F{blue}
+#	%F{5} ~ %F{magenta}
+#	%F{6} ~ %F{cyan}
+#	%F{7} ~ %F{white}
+#	%F{9} ~ %F{none}
+
+autoload -Uz vcs_info
+
+# VCS_INFO configuration
+zstyle ':vcs_info:*' enable git svn bzr hg
+zstyle ':vcs_info:*' get-revision  true
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' stagedstr     '%F{2}*'
+zstyle ':vcs_info:*' unstagedstr   '%F{1}+'
+zstyle ':vcs_info:*' formats		' %F{5}[%F{7}%s%F{5}|%b%i%F{5}]%F{4}%c%u%f'
+zstyle ':vcs_info:*' actionformats	' %F{5}[%F{7}%s%F{5}|%b%i%F{5}|%F{2}%a%F{5}]%F{4}%c%u%f'
+zstyle ':vcs_info:(svn|bzr|hg):*' branchformat '%b-%r'
+zstyle ':vcs_info:hg:*' hgrevformat '%r-%h'
+zstyle ':vcs_info:*+set-message:*' hooks prerender
+
+precmd()
+{
+	vcs_info
+}
+
+function +vi-prerender
+{
+	local vcs='' branch='' revision='' color='6'
+
+	vcs="${hook_com[vcs_orig]}"
+	branch="${hook_com[branch_orig]}"
+	revision="${hook_com[revision_orig]}"
+
+	# Set branch color
+	if [[ "$vcs" == "git" ]]; then
+		case "${branch:-"(no branch)"}" in
+			production|prod)           color='1'   ;; # red
+			master|deploy)             color='1'   ;; # red
+			stage|staging)             color='3'   ;; # yellow
+			devel|develop|development) color='4'   ;; # blue
+			next)                      color='5'   ;; # magenta
+			*)   [[ -z "$branch" ]] && color='9'   ;; # reset
+		esac
+ 	fi
+
+	hook_com[branch]="%F{$color}$branch"
+
+	# Cut revision number
+	if [[ -n "$revision" ]]; then
+		local -A rev
+		rev=$revision
+		hook_com[revision]="%F{5}:%F{3}$rev[1,7]"
+	fi
+}
+
+function ps1_identity
+{
+	printf "%s" "%F{2}%n:%f"
+}
+
+function ps1_path
+{
+	printf "%s" "%F{4}%1~%f"
+}
+
+function ps1_vcs
+{
+	printf "%s" '${vcs_info_msg_0_}'
+}
+
+function ps1_symbol
+{
+	printf "%s" $'\n%F{3}%#%f %F{7}→%f '
+}
+
+function prompt_zuzust_setup
+{
+	PROMPT=$'\n%B'$(ps1_identity)$(ps1_path)$(ps1_vcs)$(ps1_symbol)$'%b'
+	export PROMPT
+}
+
+prompt_zuzust_setup "$@"

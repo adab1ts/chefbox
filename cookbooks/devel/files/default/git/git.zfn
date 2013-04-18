@@ -1,0 +1,58 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/functions.d/git.zfn
+
+
+# Places the project's source code under git repo
+# and optionally pushes it up to GitHub
+function git_project {
+	if [[ ($# -ne 1) || ("$1" == "--help") ]]; then
+		echo "Usage: $0 workspace"
+		echo "   ie: $0 ~/Projectes/rails/depot"
+	else
+		cd "$1" \
+			&& git_setup "$1" \
+			&& git_push_github "$1"
+	fi
+}
+
+function git_setup {
+	printf "\n[git] Would you like to place the project source code under git repository? [Y/n] "
+	read must_git
+	echo
+
+	if [[ "$must_git" != "n" ]]; then
+		git init \
+			&& git_gitignore "$1" \
+			&& git add . \
+			&& git commit -m "first commit" \
+			&& git co -b devel
+	fi
+
+	return 0
+}
+
+function git_gitignore {
+	local gitignore_file="$1/.gitignore"
+
+	if [[ ! -f "$gitignore_file" ]]; then
+		echo 'tmp/' >> $gitignore_file
+	fi
+	
+	echo '*.swp' >> $gitignore_file
+}
+
+function git_push_github {
+	printf "\n[git] Would you like to push your code up to GitHub? [Y/n] "
+	read must_push
+	echo
+
+	if [[ "$must_push" != "n" ]]; then
+		local project=$(basename "$1")
+		local github_usr=$(git config --get github.user)
+
+		git remote add origin git@github.com:${github_usr}/${project}.git \
+			&& git push -u origin master
+	fi
+
+	return 0
+}

@@ -1,20 +1,39 @@
 {
   "id": "devel",
   "apps": [
-    "juju"
+    "git",
+    "juju",
+    "zsh"
   ],
   "profiles": {
+    "git": {
+      "package": "git",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "fast, scalable, distributed revision control system",
+      "suggested": ["git-man", "giggle"],
+      "source": {
+        "type": "distro"
+      }
+    },
     "juju": {
       "package": "juju",
-      "maintainer": "Juju Developers <juju@lists.ubuntu.com>",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "next generation service orchestration system",
-      "suggested": [],
+      "suggested": ["apt-cacher-ng", "lxc", "zookeeper"],
       "source": {
         "type": "ppa",
         "data": {
           "repo_name": "juju-pkgs",
           "uri": "ppa:juju/pkgs"
         }
+      }
+    },
+    "zsh": {
+      "package": "zsh",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "shell with lots of features",
+      "source": {
+        "type": "distro"
       }
     }
   }

@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: default
+# Recipe:: git
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,40 +19,29 @@
 #
 
 
-## Requirements
+devel = node[:apps][:devel]
 
-include_recipe "base"
-
-# Interactive processes viewer
-package "htop"
-
-
-## Deploy
-
-box = node[:box]
-devel = data_bag_item('apps', 'devel')
-
-# Uninstall apps not needed
-
-apps = devel['apps']
-selected = box['apps']['devel']
-unselected = apps - selected
-
-uninstall_apps "devel" do
-  apps unselected
-  profiles devel['profiles']
+# Fast, scalable, distributed revision control system
+install_app "git" do
+  profile devel['profiles']['git']
 end
 
-# Install selected apps
+box = node[:box]
+dotfiles_folder = box['dotfiles']['folder']
 
-node.set[:apps] = { :devel => devel }
+dev_files = [
+  "#{dotfiles_folder}/gitconfig",
+  "#{dotfiles_folder}/zsh/prompt.d/prompt_zuzust_setup"
+]
 
-# Shells
-include_recipe "devel::zsh"
+dev_links = [
+  { :from => '.gitconfig', :to => "#{dotfiles_folder}/gitconfig" }
+]
 
-# VCS solutions
-include_recipe "devel::git" if selected.include?("git")
-
-# Cloud solutions
-include_recipe "devel::juju" if selected.include?("juju")
+bootstrap "git" do
+  files dev_files
+  links dev_links
+  aliases true
+  functions true
+end
 

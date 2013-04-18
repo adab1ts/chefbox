@@ -22,7 +22,32 @@
 devel = node[:apps][:devel]
 
 # next generation service orchestration system
-install_ap "juju" do
+install_app "juju" do
   profile devel['profiles']['juju']
+end
+
+box = node[:box]
+devel_folder = box['devel']['folder']
+
+script = <<-EOH
+  if [[ ! -d ~/.ssh ]]; then
+    ssh-keygen -b 2048 -t rsa -N ""
+  fi
+  EOH
+
+dev_folders = [
+  ".juju",
+  "#{devel_folder}/juju"
+]
+
+dev_templates = [
+  { :file => '.juju/environments.yaml', :vars => { :data_dir => 'juju' } }
+]
+
+bootstrap "juju" do
+  before script
+  folders dev_folders
+  templates dev_templates
+  aliases true
 end
 

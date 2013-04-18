@@ -1,0 +1,199 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/aliases.d/git.zal
+
+
+## Advices & Jargon
+
+# Directory:  A folder used for storing multiple files.
+# Repository: A directory where Git has been initialized to start version controlling your files.
+# Excluding files: For files we want to exclude from our local repo but not from elsewhere use .git/info/exclude file.
+#                  For files we want to exclude from all copies (like logs/*.log) use .gitignore file.
+
+# Staging Area: A place where we can group files together before we "commit" them to Git.
+# Commit: A "commit" is a snapshot of our repository. This way if we ever need to look back at the changes we've made (or if someone else does),
+#         we will see a nice timeline of all changes.
+# HEAD:   The HEAD is a pointer that holds your position within all your different commits.
+#         By default HEAD points to your most recent commit, so it can be used as a quick way to reference that commit without having to look up the SHA.
+# Tag: A tag is a reference to a specific commit (used mostly for release versioning).
+# Branching: Branches are what naturally happens when you want to work on multiple features at the same time.
+#            You wouldn't want to end up with a master branch which has Feature A half done and Feature B half done.
+#            Rather you'd separate the code base into two "snapshots" (branches) and work on and commit to them separately.
+#            As soon as one was ready, you might merge this branch back into the master branch and push it to the remote server.
+# Pull Requests: If you're hosting your repo on GitHub, you can do something called a pull request.
+#	             A pull request allows the boss of the project to look through your changes and make comments before deciding to merge in the change.
+#                It's a really great feature that is used all the time for remote workers and open-source projects.
+
+# Wildcards: We need quotes so that Git will receive the wildcard before our shell can interfere with it.
+#            Without quotes our shell will only execute the wildcard search within the current directory.
+#            Git will receive the list of files the shell found instead of the wildcard.
+
+# staged:    Files are ready to be committed.
+# unstaged:  Files with changes that have not been prepared to be commited.
+# untracked: Files aren't tracked by Git yet. This usually indicates a newly created file.
+# deleted:   File has been deleted and is waiting to be removed from Git.
+
+# git config: Who gets credit for changes => |git config --global user.name "Full Name"|
+#             What email you use          => |git config --global user.email "user@example.com"|
+#             Pretty command line colors  => |git config --global color.ui true|
+#             Use editor for interactive  => |git config --global core.editor vim|
+#             Use diffeditor for merging conflicts  => |git config --global merge.tool vimdiff|
+#             Sets email for current repo => |git config user.email "user@example.com"|
+#             Sets log format                    => |git config --global format.pretty format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset|
+#             Sets an alias for mylog log format => |git config --global alias.mylog "log --pretty=format:'%h %s [%an]' --graph|
+#             Sets an alias for lol log format   => |git config --global alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all|
+# git add:    You can also type |git add .|. The dot represents the current directory, so everything in it, and everything beneath it gets added.
+# git diff:   Show unstaged differences since last commit. To see staged differences use |git diff --staged|
+#             |git diff HEAD^| shows differences since the parent of the latest commit
+#             |git diff HEAD^^| shows differences since the grandparent of the latest commit
+#             |git diff HEAD~5| shows differences since 5 commits ago
+#             |git diff HEAD^..HEAD| shows differences between second most recent commit and most recent commit
+# git commit: If you forgot to add one file to last commit then:
+#             |git add <file>| && |git commit --amend -m "New commit message"|
+# git reset:  DON'T DO THESE AFTER YOU PUSH
+#             |git reset [HEAD] <filename>| unstage a file or files from the staging area.
+#             |git reset --soft HEAD^| undo the last commit and move everything from that commit back into staging.
+#             |git reset --hard HEAD^| undo the last commit and all changes since the previous commit
+#             |git reset --hard HEAD^^| undo last 2 commits and all changes since the previous commit
+# git log:    Use |git log --summary| to see more information for each commit. You can see where new files were added for the first time
+#             or where files were deleted. It's a good overview of what's going on in the project.
+# git remote: Git doesn't care what you name your remotes, but it's typical to name your main one 'origin'.
+#             It's also a good idea for your main repository to be on a remote server like GitHub.
+# git stash:  Sometimes when you go to pull you may have changes you don't want to commit just yet.
+#             One option you have, other than commiting, is to stash the changes.
+#             Use the command |git stash| to stash your changes, and |git stash pop|apply| to re-apply your changes after your pull.
+# git checkout: Files can be changed back to how they were at the last commit by using the command: |git checkout -- <target>|.
+#               So you may be wondering, why do I have to use this '--' thing? git checkout seems to work fine without it.
+#               It's simply promising the command line that there are no more options after the '--'.
+#               This way if you happen to have a branch named octocat.txt, it will still revert the file,
+#               instead of switching to the branch of the same name.
+# git branch: You can use:
+#               |git checkout -b new_branch|
+#             to checkout and create a branch at the same time. This is the same thing as doing:
+#               |git branch new_branch|
+#               |git checkout new_branch|
+#             What if you have been working on a feature branch and you decide you really don't want this feature anymore?
+#             You might decide to delete the branch since you're scrapping the idea.
+#             You'll notice that |git branch -d bad_feature| doesn't work. This is because -d won't let you delete something that hasn't been merged.
+#             You can either add the --force (-f) option or use -D which combines -d -f together into one command.
+# git rm: Will not only remove the actual files from disk, but will also stage the removal of the files for us.
+#         Removing one file is great and all, but what if you want to remove an entire folder? You can use the recursive option on git rm:
+#           |git rm -r folder_of_cats|
+#         This will recursively remove all folders and files from the given directory.
+#         If you happen to delete a file without using 'git rm' you'll find that you still have to |git rm| the deleted files from the working tree.
+#         You can save this step by using the '-a' option on |git commit|, which auto removes deleted files with the commit.
+#           |git commit -am "Delete stuff"|
+# git fetch: Pulls down any changes but doesn't merge them.
+# git rebase: Move all changes to master which are not in origin/master to a temporary area.
+#             Then run all the origin/master commits one at a time on master.
+#             Finally run all the commits in temporary area on top of our master, one at a time.
+# git pull: Use it to pull changes down from the remote, and use it often.
+#           It fetches (or sync) our local repository with the remote one creating a new local brach named 'origin/master' <=> |git fetch|.
+#           Then merges the locally created 'origin/master' branch with master <=> |git merge origin/master|
+# git push: Recall Heroku only deploys from the master branch
+#           Imagine we configured a remote repository with |git remote add heroku-staging address|
+#           Now we want to deploy a local staging branch to that server |git push heroku-staging staging|.
+#           It would not work, as git would try to push to a remote branch called staging and nothing would be deployed.
+#           We would |git push heroku-staging staging:master|. This way git will push and deploy staging on heroku (links local staging to remote master).
+# git clone: Downloads the entire repository into a new local directory.
+#            Then adds the 'origin' remote, pointing it to the clone URL.
+#            Finally checks out initial branch (likely master) and sets the HEAD
+
+
+## Scenarios
+
+## Pushing to a remote: Rejected
+# $ git fetch
+# $ git rebase
+
+## Local branch rebase
+# $ git checkout branch
+# $ git rebase master
+# $ git checkout master
+# $ git merge branch
+
+## If conflicts three options: 
+# -------------------------------------
+# Fix merge conflicts and
+# $ git add files
+# $ git rebase --continue
+# -------------------------------------
+# Discard your changes doing
+# $ git rebase --skip
+# -------------------------------------
+# Rollback rebase doing
+# $ git rebase --abort
+
+
+## Git aliases
+alias gth='git help'        # gth [cmd]
+alias gti='git init'
+alias gtcf='git config'		# gtcf user.email
+alias gtcfl='git config --list'
+
+alias gts='git status'
+
+alias gta='git add'		    # gta (file1..fileN|'*suffix'|.|--all)
+alias gtsh='git stash'      # gtsh [list|show|drop|pop|apply|clear]
+
+alias gtc='git commit -v'	# gtc [-qa] -m "Add LICENSE file"
+alias gtca='git commit -v --amend'	# gtca -m "New commit message"
+
+alias gtr='git reset'
+alias gtrf='git reset HEAD' # gtrf file
+alias gtrs='git reset --soft HEAD^'
+alias gtrh='git reset --hard HEAD^'
+
+alias gtrm='git rm'				# gtrm ([-r] folder|file|'*.txt') => deletes from filesystem and untracks
+alias gtrmc='git rm --cached'	# gtrmc ([-r] folder|file|'*.log') => untracks only without deletion
+
+alias gtco='git checkout'	# gtco (tag|[-b] branch)
+alias gtcof='git checkout --' # gtcof file
+
+alias gtrmt='git remote'       # gtrmt -v
+alias gtrmta='git remote add'  # gtrmta name address
+alias gtrmtr='git remote rm'   # gtrmtr name
+alias gtrmts='git remote show' # gtrmts name
+alias gtrmtp='git remote prune' # gtrmtp name => to clean up deleted remote branches
+
+alias gtcl='git clone'		# gtcl address [name]
+alias gtpll='git pull'      # gtpll [name branch]
+alias gtpsh='git push'		# gtpsh [[-u] name branch]
+							# gtpsh name :branch => deletes remote branch
+							# gtpsh name local_branch:remote_branch
+alias gtfch='git fetch'		# gtfch [name branch]
+alias gtrbs='git rebase'	# gtrbs [branch]
+alias gtm='git merge'		# gtm branch
+
+alias gtb='git branch'
+alias gtbr='git branch -r'
+alias gtbd='git branch -d'	# gtbd branch
+alias gtbd!='git branch -D'	# gtbd! branch
+
+alias gttg='git tag'
+alias gttga='git tag -a'	# gttga v0.0.3 [-m "version 0.0.3"]
+alias gttgp='git push --tags'
+
+alias gtl='git log'         # gtl [--oneline|--pretty=oneline|--pretty=format:"%h %ad- %s [%an]"]
+alias gtls='git log --oneline --summary'
+alias gtlp='git log --oneline -p'
+alias gtlst='git log --oneline --stat'
+alias gtlg='git log --oneline --graph'
+alias gtlh='git log --since=1.hour.ago'
+alias gtld='git log --since=1.day.ago' # git log [--until=1.minute.ago|--since=1.month.ago --until=2.weeks.ago|--since=2000-01-01 --until=2012-12-31]
+alias gtlw='git log --since=1.week.ago'
+alias gtlm='git log --since=1.month.ago'
+alias gtl5='git log -5'
+alias gtl10='git log -10'
+alias gtl25='git log -25'
+alias gtl50='git log -50'
+
+alias gtd='git diff'			# gtd [HEAD|commit..commit|branch..branch]
+alias gtdl='git diff HEAD~1'
+alias gtdh='git diff --since=1.hour.ago'
+alias gtdd='git diff --since=1.day.ago' # git diff [--until=1.minute.ago|--since=1.month.ago --until=2.weeks.ago|--since=2000-01-01 --until=2012-12-31]
+alias gtds='git diff --staged'
+alias gtdc='git diff --cached'
+
+alias gtbl='git blame'		# gtbl file --date short
+
+alias ungit="find . -name '.git' -exec rm -rf '{}' \;"

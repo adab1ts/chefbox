@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: default
+# Definitions:: functions
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,40 +19,22 @@
 #
 
 
-## Requirements
+define :functions, :shell => "zsh" do
+  user = params[:user]
+  grp  = params[:group]
+  functions_d = "#{params[:dotfiles_dir]}/#{params[:shell]}/functions.d"
+  functions = case params[:shell]
+            when "zsh"  then "#{params[:name]}.zfn"
+            when "bash" then "#{params[:name]}.bfn"
+            end
 
-include_recipe "base"
-
-# Interactive processes viewer
-package "htop"
-
-
-## Deploy
-
-box = node[:box]
-devel = data_bag_item('apps', 'devel')
-
-# Uninstall apps not needed
-
-apps = devel['apps']
-selected = box['apps']['devel']
-unselected = apps - selected
-
-uninstall_apps "devel" do
-  apps unselected
-  profiles devel['profiles']
+  cookbook_file "#{functions_d}/#{functions}" do
+    source "/#{params[:name]}/#{functions}"
+    owner user
+    group grp
+    mode 00664
+    backup false
+    cookbook params[:cookbook]
+  end
 end
-
-# Install selected apps
-
-node.set[:apps] = { :devel => devel }
-
-# Shells
-include_recipe "devel::zsh"
-
-# VCS solutions
-include_recipe "devel::git" if selected.include?("git")
-
-# Cloud solutions
-include_recipe "devel::juju" if selected.include?("juju")
 

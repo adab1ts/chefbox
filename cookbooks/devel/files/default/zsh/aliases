@@ -1,0 +1,16 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/aliases
+# Contents: Shortcut commands
+
+
+. $BASH_DOTFILES_PATH/aliases
+
+# Applying aliases files
+aliases_folder="$ZSH_DOTFILES_PATH/aliases.d"
+
+for f in $aliases_folder/*; do
+	[[ -f "$f" ]] || continue
+	. $f
+done
+
+unset aliases_folder

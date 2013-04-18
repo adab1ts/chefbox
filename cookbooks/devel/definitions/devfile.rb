@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: default
+# Definitions:: dotfile
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,40 +19,32 @@
 #
 
 
-## Requirements
+define :devfile, :variables => {} do
+  user = params[:user]
+  grp  = params[:group]
 
-include_recipe "base"
+  if params[:template]
+    filename = ::File.basename params[:template]
 
-# Interactive processes viewer
-package "htop"
+    template params[:template] do
+      source "/#{params[:name]}/#{filename}.erb"
+      owner user
+      group grp
+      mode 00664
+      backup false
+      variables params[:variables]
+    end
+  else
+    filename = ::File.basename params[:file]
 
-
-## Deploy
-
-box = node[:box]
-devel = data_bag_item('apps', 'devel')
-
-# Uninstall apps not needed
-
-apps = devel['apps']
-selected = box['apps']['devel']
-unselected = apps - selected
-
-uninstall_apps "devel" do
-  apps unselected
-  profiles devel['profiles']
+    cookbook_file params[:file] do
+      source "/#{params[:name]}/#{filename}"
+      owner user
+      group grp
+      mode 00664
+      backup false
+      cookbook params[:cookbook]
+    end
+  end
 end
-
-# Install selected apps
-
-node.set[:apps] = { :devel => devel }
-
-# Shells
-include_recipe "devel::zsh"
-
-# VCS solutions
-include_recipe "devel::git" if selected.include?("git")
-
-# Cloud solutions
-include_recipe "devel::juju" if selected.include?("juju")
 

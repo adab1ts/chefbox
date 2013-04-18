@@ -1,0 +1,6 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env
+# Contents: Values used by other scripts and applications
+
+
+export ZSH_DOTFILES_PATH="${DOTFILES_PATH}/zsh"
