@@ -41,8 +41,8 @@ module Coderebels
       end
 
       def vendor(category)
-        [ven, prod] = device category
-        VENDOR[ven]
+        ven, prod = device category
+        VENDORS[ven]
       end
 
       def arch
