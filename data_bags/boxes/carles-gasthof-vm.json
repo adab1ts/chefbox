@@ -1,3 +1,45 @@
 {
-  "id": "carles-gasthof-vm"
+  "apps": {
+    "iv": "bEILqmfer+PNdv2yFgPpKw==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "221VaHM91ACY4EpxhJjIvav9kD/Yfuph7UkPAQV0lQmpJxJUf0DRgcWIIWHm\nwqxGCpPxUQiw69tv1biYWBxmAeZ025lVfhM+XgEwv7YDcQI9Hxk/nd/F2nez\nZ3u9BfLzbGdD12SZ7tFoauvJNWQ0ShAHV4VxYvvJ0fN68pl426JolD9/8GTl\nEezB045ZeqON/VdzxBuuIZD99jnknJGcj+5PmaWbkupIHRCwTi049XEsl/tC\nVfe1LgpIhJWNHAdW44o93Lc0pCBHjDGGq8I6aqnztMH3ei0pDnsfFS8xgjWs\nLbldiw2XtYce7ilivZzKnrH2C+6SfdqiCuSPmwqSkUBSOKbCIC0VxrrMy0qD\nK39S4j/r70DHRDWWcAmnrKpUClowrwmjfQkeYYBdK/hordaMgIypKS5kwluO\n3tU5NOA=\n"
+  },
+  "name": {
+    "iv": "b/3J+eQMT0ZBhQIjdAuACQ==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "+L+kJE172HSrUfoF7B/mIOISdCc0cv2zeXNQIa03T0g=\n"
+  },
+  "id": "carles-gasthof-vm",
+  "devel": {
+    "iv": "/s0MZIyGrk4lDtX2J8YUbw==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "EV6uG++ax8VlcC0mfsMnDKXV5l9kw7i8BeyvKCmvJ/+47Y1i7NMee0Z2no4a\nKDN0BRxV4efZd2HPPMjyF9GZhA==\n"
+  },
+  "dotfiles": {
+    "iv": "qHQXX/vQfkmLgELMnyl1Mw==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "c+LaCeyoyHqxic8z90G80cnYdOzKBgoMokiMVkXM6fyrBUGG9JNAOfLSftHP\nlbqGeP0QGhjwK1Kr+1sVTOg89w==\n"
+  },
+  "lang": {
+    "iv": "F3JiWtuAzH9cW6tyc0RZRQ==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "1nJBhOxJcTGyD47AD284GJrfVaESdimFdtoVjCA04Q0=\n"
+  },
+  "users": {
+    "iv": "c6bQfSDSM+dttmiEit9bfw==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "4LzBxQYfgBa321JkNQs2inWCinHR/wW61z1V3JmrZXhD0gN84JU7cpYxFd4+\nVryXTbebulWQQFNIGzDDLUzjA+gcWjsgtmlz9tNbBytxmI528nBDN6VyxRA4\n/VTJ2cgZsXzHTOr9IFS4YIB1cEqb68Ktw+AMIE931PhgoJ8twPd+hobIIqFj\nq6nTRsvGyp/1os05idLEKgqtBXCOLMCvQw==\n"
+  },
+  "folders": {
+    "iv": "H1ar0qZzFZ8+WwAnkElGhg==\n",
+    "cipher": "aes-256-cbc",
+    "version": 1,
+    "encrypted_data": "zOQIyp6VUl4jpnWiHw6u0q0e+Swx4kVP0G2gUyNaH3x1PKCZ44Exxlv3CAs3\n/vl9/ibDnu23J/lY3Q0wns5OPbD1mZdnAHlHaf5uTj5Gcbnmv9erD65Gf1ca\nv5j6oMtzP1yOw4SCoOjP4QgbPTqJjg==\n"
+  }
 }
