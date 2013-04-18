@@ -24,11 +24,22 @@
     ],
     "folder": ".dotfiles"
   },
+  "devel": {
+    "users": [
+      "USER"
+    ],
+    "folder": "DEVEL_FOLDER"
+  },
   "apps": {
     "browsers": [
       "chrome",
       "firefox",
       "opera"
+    ],
+    "devel": [
+      "git",
+      "juju",
+      "zsh"
     ],
     "email": [
       "geary",
