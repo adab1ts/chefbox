@@ -10,7 +10,6 @@
       "package": "furiusisomount",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "ISO, IMG, BIN, MDF and NRG image management utility",
-      "suggested": [],
       "source": {
         "type": "distro"
       }
@@ -19,7 +18,6 @@
       "package": "hardinfo",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Displays system information",
-      "suggested": [],
       "source": {
         "type": "distro"
       }

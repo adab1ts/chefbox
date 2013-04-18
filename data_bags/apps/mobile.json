@@ -8,7 +8,6 @@
       "package": "sakis3g-full",
       "maintainer": "Sakis Dimopoulos",
       "description": "Shell script for establishing a 3G connection with any combination of modem or operator",
-      "suggested": [],
       "source": {
         "type": "src",
         "data": {

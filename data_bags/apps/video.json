@@ -9,7 +9,6 @@
       "package": "openshot",
       "maintainer": "Jonathan Thomas <Jonathan.Oomph@gmail.com>",
       "description": "Create and edit videos and movies",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {

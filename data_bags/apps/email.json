@@ -9,7 +9,6 @@
       "package": "geary",
       "maintainer": "Jim Nelson <jim@yorba.org>",
       "description": "Email client",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -22,7 +21,6 @@
       "package": "thunderbird",
       "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
       "description": "Email, RSS and newsgroup client with integrated spam filter",
-      "suggested": [],
       "source": {
         "type": "distro"
       }

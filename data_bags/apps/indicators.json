@@ -12,7 +12,6 @@
       "package": "udev-notify",
       "maintainer": "USU Team <lfu.project@gmail.com>",
       "description": "Display notifications about newly plugged hardware",
-      "suggested": [],
       "source": {
         "type": "repo",
         "data": {
@@ -28,7 +27,6 @@
       "package": "caffeine",
       "maintainer": "Isaiah Heyer <freshapplepy@gmail.com>",
       "description": "Caffeine",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -41,7 +39,6 @@
       "package": "touchpad-indicator",
       "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
       "description": "An indicator for the touchpad",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -54,7 +51,6 @@
       "package": "indicator-ubuntuone",
       "maintainer": "Roman Yepishev <roman.yepishev@ubuntu.com>",
       "description": "Indicator for Ubuntu One synchronization service",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -67,7 +63,6 @@
       "package": "my-weather-indicator",
       "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
       "description": "An indicator for weather",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {

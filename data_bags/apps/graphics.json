@@ -24,7 +24,6 @@
       "package": "inkscape",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "vector-based drawing program",
-      "suggested": [],
       "source": {
         "type": "distro"
       }
@@ -46,7 +45,6 @@
       "package": "scribus",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Open Source Desktop Page Layout - stable branch",
-      "suggested": [],
       "source": {
         "type": "distro"
       }

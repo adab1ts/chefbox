@@ -9,7 +9,6 @@
       "package": "jdownloader",
       "maintainer": "Benjamin Drung <bdrung@debian.org>",
       "description": "download manager for one-click hosting sites",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -22,7 +21,6 @@
       "package": "transmission-gtk",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "lightweight BitTorrent client (GTK interface)",
-      "suggested": [],
       "source": {
         "type": "distro"
       }

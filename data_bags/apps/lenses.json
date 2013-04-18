@@ -20,7 +20,6 @@
       "package": "unity-lens-news",
       "maintainer": "David Calle <davidc@framli.eu>",
       "description": "Unity News Lens",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -46,7 +45,6 @@
       "package": "unity-lens-wikipedia",
       "maintainer": "David Calle <davidc@framli.eu>",
       "description": "Wikipedia Lens",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {

@@ -19,7 +19,6 @@
       "package": "gufw",
       "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>",
       "description": "graphical user interface for ufw",
-      "suggested": [],
       "source": {
         "type": "distro"
       }
@@ -33,9 +32,13 @@
       "source": {
         "type": "deb",
         "data": {
-          "file_name": "prey_0.5.9-ubuntu2_all.deb",
-          "uri": "https://preyproject.com/releases/0.5.9/prey_0.5.9-ubuntu2_all.deb",
-          "sha256": "a7b09eb36110f7b2843efb70a601d97c2d00ddca079afb30aafdb57d9d10e637"
+          "all": {
+            "all": {
+              "file_name": "prey_0.5.10-ubuntu2_all.deb",
+              "uri": "https://preyproject.com/releases/0.5.10/prey_0.5.10-ubuntu2_all.deb",
+              "sha256": "a247e006ccc260246b88d524325b41dd9caba00462c67b6145bedd7f496cdc41"
+            }
+          }
         }
       }
     }

@@ -8,7 +8,6 @@
       "package": "skype",
       "maintainer": "Steve Langasek <steve.langasek@canonical.com>",
       "description": "client for Skype VOIP and instant messaging service",
-      "suggested": [],
       "source": {
         "type": "distro"
       }

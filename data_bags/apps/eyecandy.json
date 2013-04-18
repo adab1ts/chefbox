@@ -11,7 +11,6 @@
       "package": "faenza-icon-theme",
       "maintainer": "Matthieu James <matthieu.james@gmail.com>",
       "description": "Faenza Icon Theme",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -24,7 +23,6 @@
       "package": "faience-icon-theme",
       "maintainer": "Matthieu James <matthieu.james@gmail.com>",
       "description": "Faience Icon Theme",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -37,7 +35,6 @@
       "package": "nitrux-umd",
       "maintainer": "Georgi Karavasilev <motorslav@gmail.com>",
       "description": "NITRUX-umd",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
@@ -50,7 +47,6 @@
       "package": "unsettings",
       "maintainer": "Florian Diesch <devel@florian-diesch.de>",
       "description": "graphical configuration program for the Unity desktop environment",
-      "suggested": [],
       "source": {
         "type": "ppa",
         "data": {
