@@ -24,6 +24,28 @@
     ],
     "folder": ".dotfiles"
   },
+  "jobs": {
+    "users": [
+      "USER"
+    ],
+    "folder": "ADMIN_FOLDER/jobs",
+    "profiles": {
+      "USER": {
+        "backup": {
+          "tasks": [
+            {
+              "name": "backup-DRIVE",
+              "drive": "DRIVE_FOLDER",
+              "folder": "BACKUP_FOLDER",
+              "targets": [
+                "home"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
   "devel": {
     "users": [
       "USER"
