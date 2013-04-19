@@ -8,11 +8,8 @@
   },
   "override_attributes": {},
   "run_list": [
-    "role[average-box]",
-    "recipe[devel]",
-    "recipe[jobs]",
-    "recipe[mobile]",
-    "recipe[vms]"
+    "role[basic-box]",
+    "recipe[devel]"
   ],
   "env_run_lists": {}
 }
