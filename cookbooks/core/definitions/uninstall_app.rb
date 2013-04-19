@@ -23,7 +23,8 @@ define :uninstall_app do
   profile = params[:profile]
 
   # Suggested packages
-  profile['suggested'].each do |pkg|
+  suggested = profile['suggested'] || []
+  suggested.each do |pkg|
     package pkg do
       action :purge
     end

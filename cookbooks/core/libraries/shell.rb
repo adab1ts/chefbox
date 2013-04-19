@@ -23,7 +23,7 @@ module Coderebels
   module Chefbox
     module Shell
 
-      def rep(cmd)
+      def self.rep(cmd)
         reader, writer = IO.pipe
         system(cmd, [:err, :out] => writer)
         reader.gets.chomp
