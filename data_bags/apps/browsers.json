@@ -2,6 +2,7 @@
   "id": "browsers",
   "apps": [
     "chrome",
+    "chromium",
     "firefox",
     "opera"
   ],
@@ -19,6 +20,15 @@
           "components": ["stable", "main"],
           "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
         }
+      }
+    },
+    "chromium": {
+      "package": "chromium-browser",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Chromium browser",
+      "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"],
+      "source": {
+        "type": "distro"
       }
     },
     "firefox": {

@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: browsers
-# Recipe:: default
+# Recipe:: chromium
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,33 +19,21 @@
 #
 
 
-## Requirements
+browsers = node[:apps][:browsers]
 
-include_recipe "base"
-
-
-## Deploy
-
-box = node[:box]
-browsers = data_bag_item('apps', 'browsers')
-
-# Uninstall apps not needed
-
-apps = browsers['apps']
-selected = box['apps']['browsers']
-unselected = apps - selected
-
-uninstall_apps "browsers" do
-  apps unselected
-  profiles browsers['profiles']
+# Chromium browser
+install_app "chromium" do
+  profile browsers['profiles']['chromium']
 end
 
-# Install selected apps
+# Unity Web Apps install
+if platform_version == 12.04
+  core_ppa "webapps-preview" do
+    uri "ppa:webapps/preview"
+    distribution node[:lsb][:codename]
+    action :add
+  end
 
-node.set[:apps] = { :browsers => browsers }
-
-include_recipe "browsers::chrome" if selected.include?("chrome")
-include_recipe "browsers::chromium" if selected.include?("chromium")
-include_recipe "browsers::firefox" if selected.include?("firefox")
-include_recipe "browsers::opera" if selected.include?("opera")
+  package "unity-webapps-preview"
+end
 

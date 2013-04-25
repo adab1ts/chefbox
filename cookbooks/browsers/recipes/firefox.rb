@@ -26,6 +26,17 @@ install_app "firefox" do
   profile browsers['profiles']['firefox']
 end
 
+# Unity Web Apps install
+if platform_version == 12.04
+  core_ppa "webapps-preview" do
+    uri "ppa:webapps/preview"
+    distribution node[:lsb][:codename]
+    action :add
+  end
+
+  package "unity-webapps-preview"
+end
+
 support "firefox" do
   section "browsers"
 end
