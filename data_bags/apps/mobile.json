@@ -5,15 +5,15 @@
   ],
   "profiles": {
     "mobile3g": {
-      "package": "sakis3g-full",
+      "package": "sakis3g",
       "maintainer": "Sakis Dimopoulos",
       "description": "Shell script for establishing a 3G connection with any combination of modem or operator",
       "source": {
         "type": "src",
         "data": {
-          "file": "sakis3g-full.tar.gz",
-          "url": "http://ubuntuone.com/5QbCaR7XoFjGqBK7E97QE4",
-          "sha256": "7eb85d16a0887e16366f6e42864c450a015ae5d04a7c161cf21ded26cdfeeb4a"
+          "file": "sakis3g.tar.gz",
+          "url": "http://ubuntuone.com/4ExzSMn7lW9trBRf6qKdyM",
+          "sha256": "8f32311955a26693e2651b0b7373dae14729f7b98cee3bbc7aed7707be9b2eb3"
         }
       }
     }

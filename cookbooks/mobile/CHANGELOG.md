@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of mobile.
 
+## 0.4.0:
+
+* recipes/default - recipe[mobile3g] now refers to binary free version of __Sakis3G script__
+
 ## 0.3.0:
 
 * recipes/default - recipe[mobile3g] now refers to full version of __Sakis3G script__
