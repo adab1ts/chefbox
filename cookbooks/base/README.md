@@ -9,6 +9,7 @@ The following recipes are applied:
   
   `-example-content`            - Ubuntu example content  
   `+qtnx`                       - NX client for QT  
+  `+gtk-redshift`               - Adjusts the color temperature of your screen with GTK+ integration  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
   `+nautilus-gtkhash`           - Nautilus extension for computing checksums and more using gtkhash  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.11.0:
+
+* recipes/main - now installs redshift to adjust the color temperature of the screen
+
 ## 0.10.0:
 
 * recipes/main - moved dkms installation to recipe[kernel::dkms]

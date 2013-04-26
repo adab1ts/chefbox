@@ -36,6 +36,9 @@ end
 # NX client for QT
 package "qtnx"
 
+# Adjusts the color temperature of your screen with GTK+ integration
+package "gtk-redshift"
+
 # Nautilus plugins
 package "nautilus-filename-repairer"
 package "nautilus-gtkhash"
