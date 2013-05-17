@@ -30,8 +30,8 @@ box = node[:box]
 devel_folder = box['devel']['folder']
 
 script = <<-EOH
-  if [[ ! -d ~/.ssh ]]; then
-    ssh-keygen -b 2048 -t rsa -N ""
+  if [[ ! -f "${HOME}/.ssh/id_rsa" ]]; then
+    ssh-keygen -b 2048 -t rsa -N "" -f "${HOME}/.ssh/id_rsa"
   fi
   EOH
 
