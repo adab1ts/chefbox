@@ -46,5 +46,6 @@ node.set[:apps] = { :security => security }
 
 include_recipe "security::antivirus" if selected.include?("antivirus")
 include_recipe "security::firewall" if selected.include?("firewall")
+include_recipe "security::nautilus" if selected.include?("nautilus")
 include_recipe "security::tracking" if selected.include?("tracking")
 

@@ -6,6 +6,7 @@ The following recipes may apply:
 - `security::default` - purges unselected packages and includes recipes as nedeed.
 - `security::antivirus` - installs __ClamAV__ and suggested packages.
 - `security::firewall` - installs __Uncomplicated FireWall__ and suggested packages.
+- `security::nautilus` - installs __security related plugins for Nautilus__ and suggested packages.
 - `security::tracking` - installs __Prey__ and suggested packages.
 
 
