@@ -113,6 +113,7 @@
     "security": [
       "antivirus",
       "firewall",
+      "nautilus",
       "tracking"
     ],
     "utils": [
