@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.12.0:
+
+* recipes/main - moved nautilus-gtkhash installation to recipe[security::nautilus]
+
 ## 0.11.0:
 
 * recipes/main - now installs redshift to adjust the color temperature of the screen

@@ -41,7 +41,6 @@ package "gtk-redshift"
 
 # Nautilus plugins
 package "nautilus-filename-repairer"
-package "nautilus-gtkhash"
 package "nautilus-open-terminal"
 
 # Office productivity suite
