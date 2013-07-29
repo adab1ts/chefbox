@@ -34,9 +34,9 @@
         "data": {
           "all": {
             "all": {
-              "file_name": "prey_0.5.10-ubuntu2_all.deb",
-              "uri": "https://preyproject.com/releases/0.5.10/prey_0.5.10-ubuntu2_all.deb",
-              "sha256": "a247e006ccc260246b88d524325b41dd9caba00462c67b6145bedd7f496cdc41"
+              "file_name": "prey_0.6.0-ubuntu2_all.deb",
+              "uri": "https://preyproject.com/releases/0.6.0/prey_0.6.0-ubuntu2_all.deb",
+              "sha256": "a5c891a2394a89c11a16e7a02a93c5485ea40a8be45e8d8d1baa63976a648862"
             }
           }
         }
