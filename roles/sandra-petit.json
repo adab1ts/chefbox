@@ -1,0 +1,14 @@
+{
+  "name": "sandra-petit",
+  "description": "Profile for sandra@petit box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {
+    "profile": "sandra-petit"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "role[average-box]","recipe[jobs]"
+  ],
+  "env_run_lists": {}
+}
