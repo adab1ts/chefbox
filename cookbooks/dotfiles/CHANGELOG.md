@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.4.1:
+
+* recipes/default - now checks existence of ~/.bashrc file before backing it up
+
 ## 0.4.0:
 
 * recipes/default - delivers first steps documentation concerning apt-file package

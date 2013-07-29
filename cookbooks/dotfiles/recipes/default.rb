@@ -102,6 +102,7 @@ dotfiles['users'].each do |username|
     command "mv .bashrc .bashrc.orig"
     user username
     creates "#{usr['home']}/.bashrc.orig"
+    only_if { ::File.exists?(".bashrc") }
   end
 
   link "#{usr['home']}/.bashrc" do
