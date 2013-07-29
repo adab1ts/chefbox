@@ -29,6 +29,7 @@ cookbook_file "/etc/apt/sources.list" do
   source "/apt/sources.list"
   mode 0644
   backup false
+  only_if { platform?("ubuntu") }
 end
 
 
