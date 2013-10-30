@@ -1,0 +1,45 @@
+{
+  "id": "sandra-gran",
+  "name": {
+    "encrypted_data": "BRJVzORd5fCJV92FXJwxjuQd04Lq+j3c10zDvKEDZJM=\n",
+    "iv": "UCr/r8SEUr1NLGrQJjGAaQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "lang": {
+    "encrypted_data": "8V+NF5BbSrBUKptib8+j8VBmcabp3UNQje+Adzcltro=\n",
+    "iv": "ruaQMwzDNsquUFX/rKL1Hw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "folders": {
+    "encrypted_data": "FzJwokNshW7tKV1izJlLPWIWjz0752g+C214UC6aW7EucJy4Pr8fOtqiXY9r\nrYsmFInpwdVemOhO5fguzoL8sCrZU5QZgADjyh81H5kMttVG2JsLEkOMlZsz\n0WL2FEzzS50sX3mwNqyNC5oAmTNt3g==\n",
+    "iv": "5qhoDZrH8oV5GPERpqpxuw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "users": {
+    "encrypted_data": "zemnsdMq6ULis2o/t6i0E5w99YuiyrcJxpIZQixiooKfGI4WUrm7jbfm9YOf\nYmBSqScxn9WAa83ncbCkdJ91yPNhAaKt1mj98CG53JZ0DGs1I7ne6x5wNN7F\nPN1TZkmYffmgo21p5RHhvEnxqh7x4CJzLKbe9mh7HQ6s0oNo+ScmDdpiMWjA\nWDSqrKzo4ANam9MKeo059qzQ3eoegOoTIg==\n",
+    "iv": "2VLVUylkAk/XKMouqGH9Ew==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "dotfiles": {
+    "encrypted_data": "kZYA0jASvjkJ1EsS7MTE065nYCVPS0Z5xQaost4iZny7iKekmiY8w4iQOta6\nbN03ThKwzXkJgUbXRb3680gwCA==\n",
+    "iv": "mkc4E0jL7oo6PPmCWHPyAQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "jobs": {
+    "encrypted_data": "xMxzK8VuHvMw5z+inWZbJPS4C2j+WUoxQHQPD5wVBsgX72kebAUBxbdIB7dy\ncIJm/DidUjEzU/IPblAO4I0Pzn+XyV1/nlklNWECySdQNEc4ikYRsOnYanff\nZKNq8JyWGuthmcq4i3i7+PjFryk5ci1RYnquwTMEh+gdDCfhKSAGbRcf2VTQ\nKbL50JsS0zhNbzy9MjHOzzLBE1KS3uDCJSGobijkrHmZnuc83W3jNRfFGsqm\nbHFEUiwMNvf0cJUlX7Dk3dMy2JFPQcyL1CfIvg==\n",
+    "iv": "4ZOm+wDd4ejyopOrnwW3yA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "apps": {
+    "encrypted_data": "OjBLwO+Br/1rtnqXrR3TVjbj7Bt+gllKB1B8KM6CGKVA0wRiUjtuuAUEqphA\nOw0+3D0Yp62SgCIvCdnSeLXYJD0krrjSlZzbQ/kXFW6Y/QE5mcpZfgxgs7dm\naRVuAc3Wy3KfqH7Jwup/SwBbtQk3sfzYZS8wdYdYJkBFk2KFW20Qh+49sekv\nA3nTiw39F6ci4bSNSeeMnwzAWsCV2QeFjT+49jDJxvX0vF87m9Me2DPP7bYV\neJJRR+Stnl+bM7zDp3FhDoBUrDdVaxiU8Zl3jEgrgITEaotWYCCm97dLO2PW\nlzrKzohy/Q1kTiWIfv9i+Nb2fqnA84BJrPE6+frLMft9dy9n7+UP6HRr8Gx7\nInIKToShan4pMw6M5K7y3XUfaNi5vXaZy93wQfGD2XQXiBLnMaNnKydvuuV5\n5Uq/kbyNf61cTn/irXOGqu0o2N01YoRa5uIsENpc9H9GNVKCNrHPhEPwL+kO\n4puo1gnoz2mZdabwkF9S1i4ixlHY8DFeP7hbYjhVMY7f/3jbB6hxiTeQ6bya\ncmQDKMw+av3Vc1ZJUUPGuDddv0dfkhovDR5w\n",
+    "iv": "kvwF+sio1zbc+YnQgvNCzQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
