@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.13.0:
+
+* recipes/main - removed installation of redshift; now installs gnome-do
+
 ## 0.12.1:
 
 * recipes/begin - now updates sources.list file on ubuntu platform only

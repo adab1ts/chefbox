@@ -9,7 +9,7 @@ The following recipes are applied:
   
   `-example-content`            - Ubuntu example content  
   `+qtnx`                       - NX client for QT  
-  `+gtk-redshift`               - Adjusts the color temperature of your screen with GTK+ integration  
+  `+gnome-do`                   - Quickly perform actions on your desktop  
   `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
   `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
   `+lo-menubar`                 - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  

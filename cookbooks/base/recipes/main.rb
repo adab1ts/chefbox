@@ -36,8 +36,9 @@ end
 # NX client for QT
 package "qtnx"
 
-# Adjusts the color temperature of your screen with GTK+ integration
-package "gtk-redshift"
+# Gnome-Do: Quickly perform actions on your desktop
+package "gnome-do"
+package "gnome-do-plugins"
 
 # Nautilus plugins
 package "nautilus-filename-repairer"
