@@ -45,9 +45,9 @@ node.set[:apps] = { :kernel => kernel }
 
 include_recipe "kernel::dkms"
 include_recipe "kernel::preload" if memory > 2.GB
+include_recipe "kernel::tlp"
 
 if platform?("ubuntu")
-  include_recipe "kernel::intel_graphics" if [12.04, 12.10].include?(platform_version) and vendor(:graphics) == "intel"
-  include_recipe "kernel::tlp"
+  include_recipe "kernel::intel_graphics" if platform_version >= 13.04 and vendor(:graphics) == "intel"
 end
 

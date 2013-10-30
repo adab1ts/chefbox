@@ -29,14 +29,18 @@ package "wget"
 kernel = node[:apps][:kernel]
 
 cache_path = Chef::Config[:file_cache_path]
-key_file = "RPM-GPG-KEY-ilg"
+key_file   = "RPM-GPG-KEY-ilg"
+key_file_2 = "RPM-GPG-KEY-ilg-2"
 
-bash "add_apt_key" do
+bash "add_apt_keys" do
   cwd cache_path
   creates "#{cache_path}/#{key_file}"
   code <<-EOH
     wget --no-check-certificate https://download.01.org/gfx/#{key_file}
     apt-key add "#{cache_path}/#{key_file}"
+
+    wget --no-check-certificate https://download.01.org/gfx/#{key_file_2}
+    apt-key add "#{cache_path}/#{key_file_2}"
     EOH
 end
 
