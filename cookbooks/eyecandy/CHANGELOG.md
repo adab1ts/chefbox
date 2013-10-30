@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.3.0:
+
+* recipes/default    - now includes recipe with moka icon theme install management
+* recipes/moka-icons - installs moka icon theme 
+
 ## 0.2.0:
 
 * recipes/unsettings - delivers first steps documentation concerning unsettings configuration manager
