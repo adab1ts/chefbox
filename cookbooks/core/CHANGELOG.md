@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.13.2:
+
+* libraries/box - method to retrieve box architecture as class method now
+
 ## 0.13.1:
 
 * definitions/uninstall_app - fix 'apps' data bag items update regression

@@ -45,12 +45,12 @@ module Coderebels
         VENDORS[ven]
       end
 
-      def arch
-        Coderebels::Chefbox::Shell.rep "uname -i"
-      end
-
       def platform_version
         node[:platform_version].to_f
+      end
+
+      def self.arch
+        Coderebels::Chefbox::Shell.rep "uname -i"
       end
 
     end
