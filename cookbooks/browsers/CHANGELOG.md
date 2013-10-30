@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.3.1:
+
+* recipes/chromium - now supports unity web apps integration on ubuntu platform only
+* recipes/firefox - now supports unity web apps integration on ubuntu platform only
+
 ## 0.3.0:
 
 * recipes/default - now includes chromium browser install management

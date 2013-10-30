@@ -27,7 +27,7 @@ install_app "firefox" do
 end
 
 # Unity Web Apps install
-if platform_version == 12.04
+if platform?("ubuntu") && platform_version == 12.04
   core_ppa "webapps-preview" do
     uri "ppa:webapps/preview"
     distribution node[:lsb][:codename]
