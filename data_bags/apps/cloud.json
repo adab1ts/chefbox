@@ -1,0 +1,26 @@
+{
+  "id": "cloud",
+  "apps": [
+    "dropbox",
+    "ubuntuone"
+  ],
+  "profiles": {
+    "dropbox": {
+      "package": "nautilus-dropbox",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Dropbox integration for Nautilus",
+      "source": {
+        "type": "distro"
+      }
+    },
+    "ubuntuone": {
+      "package": "ubuntuone-client",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Ubuntu One client",
+      "suggested": ["ubuntuone-installer", "ubuntu-sso-client-gui", "ubuntuone-client-proxy", "ubuntuone-control-panel", "ubuntuone-control-panel-gui"],
+      "source": {
+        "type": "distro"
+      }
+    }
+  }
+}

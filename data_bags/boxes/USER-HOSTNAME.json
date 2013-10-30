@@ -59,6 +59,10 @@
       "firefox",
       "opera"
     ],
+    "cloud": [
+      "dropbox",
+      "ubuntuone"
+    ],
     "devel": [
       "git",
       "juju",
