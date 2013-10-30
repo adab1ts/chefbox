@@ -3,6 +3,7 @@
   "apps": [
     "faenza-icons",
     "faience-icons",
+    "moka-icons",
     "nitrux-icons",
     "unsettings"
   ],
@@ -28,6 +29,19 @@
         "data": {
           "repo_name": "tiheum-equinox",
           "uri": "ppa:tiheum/equinox"
+        }
+      }
+    },
+    "moka-icons": {
+      "package": "moka-icon-theme",
+      "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
+      "description": "Moka Icon Theme",
+      "suggested": ["moka-icon-theme-blue", "moka-icon-theme-dark", "moka-icon-theme-extras", "moka-icon-theme-symbolic"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "snwh-moka-icon-theme-daily",
+          "uri": "ppa:snwh/moka-icon-theme-daily"
         }
       }
     },
