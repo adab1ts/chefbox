@@ -55,6 +55,7 @@
   "apps": {
     "browsers": [
       "chrome",
+      "chromium",
       "firefox",
       "opera"
     ],
@@ -70,6 +71,7 @@
     "eyecandy": [
       "faenza-icons",
       "faience-icons",
+      "moka-icons",
       "nitrux-icons",
       "unsettings"
     ],
