@@ -17,7 +17,7 @@
       "package": "ubuntuone-client",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Ubuntu One client",
-      "suggested": ["ubuntuone-installer", "ubuntu-sso-client-gui", "ubuntuone-client-proxy", "ubuntuone-control-panel", "ubuntuone-control-panel-gui"],
+      "suggested": ["ubuntuone-installer", "ubuntu-sso-client-gtk", "ubuntuone-client-proxy", "ubuntuone-control-panel", "ubuntuone-control-panel-gtk"],
       "source": {
         "type": "distro"
       }
