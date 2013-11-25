@@ -1,0 +1,14 @@
+{
+  "name": "klau-mini-klau",
+  "description": "Profile for klau@mini-klau box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {
+    "profile": "klau-mini-klau"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "role[average-box]","recipe[graphics]","recipe[jobs]"
+  ],
+  "env_run_lists": {}
+}
