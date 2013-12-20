@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.13.3:
+
+* definitions/support - now delivers support material specific to platform
+
 ## 0.13.2:
 
 * libraries/box - method to retrieve box architecture as class method now

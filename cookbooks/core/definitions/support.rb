@@ -21,7 +21,7 @@
 
 define :support do
   box = node[:box]
-  support = data_bag_item('resources', 'support')
+  support = data_bag_item('resources', "support-#{box['platform']['os']}")
 
   section  = support[params[:section]]
   resource = section[params[:name]][box['lang']]

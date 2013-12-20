@@ -1,6 +1,11 @@
 {
   "id": "USER-HOSTNAME",
   "name": "HOSTNAME",
+  "platform": {
+    "os": "OS",
+    "version": "VERSION",
+    "arch": "ARCH"
+  },
   "lang": "LANG",
   "folders": {
     "admin": "ADMIN_FOLDER",
@@ -9,13 +14,14 @@
   },
   "users": {
     "USER": {
-      "default": true,
       "uid": 1000,
       "gid": 1000,
       "group": "GROUP",
       "home": "/home/USER",
       "shell": "/bin/bash",
-      "password": "secret"
+      "password": "secret",
+      "default": true,
+      "sudo": true
     }
   },
   "dotfiles": {
