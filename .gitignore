@@ -1,6 +1,8 @@
 *.sw[a-z]
 .vagrant
-.chef
+.chef*/
 bootstrap/
 keys/
 host-*/
+boxes/
+!boxes/USER-HOSTNAME.json
