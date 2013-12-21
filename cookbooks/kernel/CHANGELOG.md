@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.2.1:
+
+* recipes/default - now recipe[kernel::preload] lowers memory requirements to be applied
+
 ## 0.2.0:
 
 * recipes/default        - now only recipe[kernel::intel_graphics] applies on ubuntu platform exclusively
