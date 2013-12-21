@@ -1,5 +1,5 @@
 {
-  "id": "support",
+  "id": "support-ubuntu",
   "base": {
     "apt-file": {
       "ca": {
