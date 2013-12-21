@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.14.0:
+
+* libraries/box - new method to retrieve the operating system of the box
+
 ## 0.13.3:
 
 * definitions/support - now delivers support material specific to platform

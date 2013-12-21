@@ -45,8 +45,14 @@ module Coderebels
         VENDORS[ven]
       end
 
+      def platform
+        box = node[:box]
+        box['platform']['os']
+      end
+
       def platform_version
-        node[:platform_version].to_f
+        box = node[:box]
+        box['platform']['version'].to_f
       end
 
       def self.arch

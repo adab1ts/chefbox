@@ -168,8 +168,9 @@ Provides box related functions.
 - `memory` - retrieves the total amount of memory of the box.
 - `device` - retrieves the vendor:device string of the device of the specified category.
 - `vendor` - retrieves the vendor of the device of the specified category.
-- `arch`   - retrieves the hardware platform (i386 / amd64).
+- `platform` - retrieves the os of the box.
 - `platform_version` - retrieves the os version.
+- `arch`   - retrieves the hardware platform (i386 / amd64).
 
 ### module Coderebels::Chefbox::Digest
 
