@@ -15,7 +15,9 @@ Seth Chisamore (&lt;schisamo at opscode.com&gt;)
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to the following platforms:  
+- `Ubuntu 12.04+`
+- `Linux Mint 13+`
 
 #### cookbooks
 - `apt`
