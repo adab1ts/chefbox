@@ -2,6 +2,24 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.14.0:
+
+* recipes/begin
+
+  - updates sources.list file on target platforms
+  - runs package sources first update
+  - only selected users are assigned the sudo group
+
+* recipes/main
+
+  - installs required language packages
+  - now manages Linux Mint specific packages
+
+* recipes/end
+
+  - now manages Linux Mint first system upgrade
+  - now delivers first steps documentation to target platforms
+
 ## 0.13.0:
 
 * recipes/main - removed installation of redshift; now installs gnome-do

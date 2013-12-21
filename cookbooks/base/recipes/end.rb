@@ -30,23 +30,67 @@ end
 
 ## First time system upgrade
 
-bash "first_system_upgrade" do
-  code <<-EOH
-    apt-get -y upgrade
-    apt-get clean
-    EOH
-  action :nothing
-  subscribes :run, resources("ruby_block[first_run_completed]"), :immediately
+case platform
+when "ubuntu"
+  bash "first_system_upgrade" do
+    code <<-EOH
+      apt-get -y upgrade
+      apt-get -y autoremove
+      apt-get clean
+      EOH
+    action :nothing
+    subscribes :run, resources("ruby_block[first_run_completed]"), :immediately
+  end
+when "mint"
+  held_pkgs = %w[
+    linux-generic
+    linux-headers-generic
+    linux-image-generic
+    base-files
+    desktop-file-utils
+    grub-common
+  ]
+
+  purge_pkgs = %w[
+    nautilus
+    nautilus-gksu
+    nautilus-open-terminal
+    nautilus-sendto-empathy
+    nautilus-wallpaper
+  ]
+
+  # NOTE: Uncomment
+  # purge_pkgs += %w[
+  #   virtualbox-guest-dkms
+  #   virtualbox-guest-utils
+  #   virtualbox-guest-x11
+  # ]
+
+  h_pkgs = held_pkgs.join(" ")
+  p_pkgs = purge_pkgs.join(" ")
+
+  bash "first_system_upgrade" do
+    code <<-EOH
+      apt-mark hold #{h_pkgs}
+      apt-get -y dist-upgrade
+      apt-get -y purge #{p_pkgs}
+      apt-get -y autoremove
+      apt-get clean
+      apt-mark unhold #{h_pkgs}
+      EOH
+    action :nothing
+    subscribes :run, resources("ruby_block[first_run_completed]"), :immediately
+  end
 end
 
 
 ## First steps documentation
 
-support "ubuntu" do
+support platform do
   section "global"
 end
 
-support "usc" do
+support "sc" do
   section "base"
 end
 

@@ -1,28 +1,39 @@
 # base Cookbook
 
-This cookbook sets up a fresh installation of Ubuntu desktop with a minimum profile.  
+This cookbook sets up a fresh installation of your GNU/Linux desktop with a minimum profile.  
 The following recipes are applied:
 
 - `base::begin` - manages code and resources to be executed in the first place
 
 - `base::main` - manages the following packages:
   
-  `-example-content`            - Ubuntu example content  
-  `+qtnx`                       - NX client for QT  
-  `+gnome-do`                   - Quickly perform actions on your desktop  
-  `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
-  `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
-  `+lo-menubar`                 - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
-  `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
-  `+ubuntu-restricted-extras`   - Commonly used restricted packages for Ubuntu  
-  `MS Office True Type Fonts`
+  * `Ubuntu`
+
+      `-example-content`            - Ubuntu example content  
+      `+qtnx`                       - NX client for QT  
+      `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
+      `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
+      `+lo-menubar`                 - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
+      `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
+      `+ubuntu-restricted-extras`   - Commonly used restricted packages for Ubuntu  
+
+  * `Linux Mint`
+
+      `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
+
+  * `All`
+
+      `+gnome-do`                   - Quickly perform actions on your desktop  
+      `MS Office True Type Fonts`
 
 - `base::end` - executes first system upgrade and creates a support folder with post-installation instructions
 
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to the following platforms:  
+- `Ubuntu 12.04+`
+- `Linux Mint 13+`
 
 #### cookbooks
 - `core`

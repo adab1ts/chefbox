@@ -19,7 +19,8 @@
 #
 
 
-node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
+# node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
+node.set[:box] = data_bag_item('boxes', node[:profile])
 node.save
 
 
@@ -29,7 +30,12 @@ cookbook_file "/etc/apt/sources.list" do
   source "/apt/sources.list"
   mode 0644
   backup false
-  only_if { platform?("ubuntu") }
+  notifies :run, "execute[first_system_update]", :immediately
+end
+
+execute "first_system_update" do
+  command "apt-get update"
+  action :nothing
 end
 
 
@@ -62,17 +68,19 @@ box['users'].reject { |_, usr| usr['default'] }.each do |username, usr|
     )
   end
 
-  group "sudo" do
-    members username
-    append true
-    action :modify
-  end
+  if usr['sudo']
+    group "sudo" do
+      members username
+      append true
+      action :modify
+    end
 
-  sudo "10_#{username}" do
-    template "sudoer.erb"
-    variables(
-      :sudoer => username
-    )
+    sudo "10_#{username}" do
+      template "sudoer.erb"
+      variables(
+        :sudoer => username
+      )
+    end
   end
 end
 

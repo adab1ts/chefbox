@@ -21,47 +21,74 @@
 
 box = node[:box]
 
-# Ubuntu example content
-package "example-content" do
-  action :purge
-end
+# Language support
+package "language-pack-#{box['lang']}"
+package "language-pack-gnome-#{box['lang']}"
+package "aspell-#{box['lang']}"
+package "myspell-#{box['lang']}"
 
-box['users'].each do |username, usr|
-  execute "#{username}-remove_example_content_file" do
-    command "rm #{usr['home']}/examples.desktop"
-    only_if { ::File.exists? "#{usr['home']}/examples.desktop" }
+case platform
+when "ubuntu"
+  # Ubuntu example content
+  package "example-content" do
+    action :purge
+  end
+
+  box['users'].each do |username, usr|
+    execute "#{username}-remove_example_content_file" do
+      command "rm #{usr['home']}/examples.desktop"
+      only_if { ::File.exists? "#{usr['home']}/examples.desktop" }
+    end
+  end
+
+  # NX client for QT
+  package "qtnx"
+
+  # Nautilus plugins
+  package "nautilus-filename-repairer"
+  package "nautilus-open-terminal"
+
+  # Office productivity suite
+  package "lo-menubar" if platform_version == 12.04
+  package "libreoffice-style-galaxy"
+
+  support "libreoffice" do
+    section "base"
+  end
+
+  # Commonly used restricted packages for Ubuntu
+  package "ubuntu-restricted-extras" do
+    notifies :run, "execute[install_additional_extras]", :immediately
+  end
+
+  # Simple foundation for reading DVDs
+  execute "install_additional_extras" do
+    cwd "/usr/share/doc/libdvdread4"
+    command "sh install-css.sh"
+    action :nothing
+  end
+when "mint"
+  # Office productivity suite
+  package "libreoffice-style-galaxy"
+
+  support "libreoffice" do
+    section "base"
+  end
+
+  if platform_version < 15
+    # Commonly used restricted packages for Linux Mint
+    apt_repository "videolan-#{node[:lsb][:codename]}" do
+      uri "http://download.videolan.org/pub/debian/stable/ /"
+      distribution ""
+      key "http://download.videolan.org/pub/debian/videolan-apt.asc"
+      action :add
+    end
   end
 end
-
-# NX client for QT
-package "qtnx"
 
 # Gnome-Do: Quickly perform actions on your desktop
 package "gnome-do"
 package "gnome-do-plugins"
-
-# Nautilus plugins
-package "nautilus-filename-repairer"
-package "nautilus-open-terminal"
-
-# Office productivity suite
-package "lo-menubar" if platform_version == 12.04
-package "libreoffice-style-galaxy"
-
-support "libreoffice" do
-  section "base"
-end
-
-# Commonly used restricted packages for Ubuntu
-package "ubuntu-restricted-extras" do
-  notifies :run, "execute[install_additional_extras]", :immediately
-end
-
-execute "install_additional_extras" do
-  cwd "/usr/share/doc/libdvdread4"
-  command "sh install-css.sh"
-  action :nothing
-end
 
 # MS Office True Type Fonts
 fonts = data_bag_item('resources', 'fonts')
