@@ -27,26 +27,27 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-indicators = data_bag_item('apps', 'indicators')
-
-# Uninstall apps not needed
-
-apps = indicators['apps']
 selected = box['apps']['indicators']
-unselected = apps - selected
 
-uninstall_apps "indicators" do
-  apps unselected
-  profiles indicators['profiles']
+if selected
+  indicators = data_bag_item('apps', 'indicators')
+  apps = indicators['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "indicators" do
+    apps unselected
+    profiles indicators['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :indicators => indicators }
+
+  include_recipe "indicators::plugandplay" if selected.include?("plug&play")
+  include_recipe "indicators::screensaver" if selected.include?("screensaver")
+  include_recipe "indicators::touchpad" if selected.include?("touchpad")
+  include_recipe "indicators::ubuntuone" if selected.include?("ubuntuone")
+  include_recipe "indicators::weather" if selected.include?("weather")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :indicators => indicators }
-
-include_recipe "indicators::plugandplay" if selected.include?("plug&play")
-include_recipe "indicators::screensaver" if selected.include?("screensaver")
-include_recipe "indicators::touchpad" if selected.include?("touchpad")
-include_recipe "indicators::ubuntuone" if selected.include?("ubuntuone")
-include_recipe "indicators::weather" if selected.include?("weather")
 
