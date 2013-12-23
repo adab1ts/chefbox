@@ -27,23 +27,24 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-email = data_bag_item('apps', 'email')
-
-# Uninstall apps not needed
-
-apps = email['apps']
 selected = box['apps']['email']
-unselected = apps - selected
 
-uninstall_apps "email" do
-  apps unselected
-  profiles email['profiles']
+if selected
+  email = data_bag_item('apps', 'email')
+  apps  = email['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "email" do
+    apps unselected
+    profiles email['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :email => email }
+
+  include_recipe "email::geary" if selected.include?("geary")
+  include_recipe "email::thunderbird" if selected.include?("thunderbird")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :email => email }
-
-include_recipe "email::geary" if selected.include?("geary")
-include_recipe "email::thunderbird" if selected.include?("thunderbird")
 

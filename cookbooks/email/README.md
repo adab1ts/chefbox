@@ -3,14 +3,16 @@
 This cookbook installs a selected set of email solutions.
 The following recipes may apply:
 
-- `email::default` - purges unselected packages and includes recipes as nedeed.
-- `email::geary` - installs __Geary__ and suggested packages.
+- `email::default`     - purges unselected packages and includes recipes as nedeed.
+- `email::geary`       - installs __Geary__ and suggested packages.
 - `email::thunderbird` - installs __Mozilla Thunderbird__ and suggested packages.
 
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to the following platforms:  
+- `Ubuntu 12.04+`
+- `Linux Mint 13+`
 
 #### cookbooks
 - `core`
