@@ -27,25 +27,26 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-browsers = data_bag_item('apps', 'browsers')
-
-# Uninstall apps not needed
-
-apps = browsers['apps']
 selected = box['apps']['browsers']
-unselected = apps - selected
 
-uninstall_apps "browsers" do
-  apps unselected
-  profiles browsers['profiles']
+if selected
+  browsers = data_bag_item('apps', 'browsers')
+  apps = browsers['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "browsers" do
+    apps unselected
+    profiles browsers['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :browsers => browsers }
+
+  include_recipe "browsers::chrome" if selected.include?("chrome")
+  include_recipe "browsers::chromium" if selected.include?("chromium")
+  include_recipe "browsers::firefox" if selected.include?("firefox")
+  include_recipe "browsers::opera" if selected.include?("opera")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :browsers => browsers }
-
-include_recipe "browsers::chrome" if selected.include?("chrome")
-include_recipe "browsers::chromium" if selected.include?("chromium")
-include_recipe "browsers::firefox" if selected.include?("firefox")
-include_recipe "browsers::opera" if selected.include?("opera")
 

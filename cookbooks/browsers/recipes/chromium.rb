@@ -27,7 +27,7 @@ install_app "chromium" do
 end
 
 # Unity Web Apps install
-if platform?("ubuntu") && platform_version == 12.04
+if platform?("ubuntu") and platform_version == 12.04
   core_ppa "webapps-preview" do
     uri "ppa:webapps/preview"
     distribution node[:lsb][:codename]
