@@ -27,23 +27,24 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-fileshare = data_bag_item('apps', 'fileshare')
-
-# Uninstall apps not needed
-
-apps = fileshare['apps']
 selected = box['apps']['fileshare']
-unselected = apps - selected
 
-uninstall_apps "fileshare" do
-  apps unselected
-  profiles fileshare['profiles']
+if selected
+  fileshare = data_bag_item('apps', 'fileshare')
+  apps = fileshare['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "fileshare" do
+    apps unselected
+    profiles fileshare['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :fileshare => fileshare }
+
+  include_recipe "fileshare::jdownloader" if selected.include?("jdownloader")
+  include_recipe "fileshare::transmission" if selected.include?("transmission")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :fileshare => fileshare }
-
-include_recipe "fileshare::jdownloader" if selected.include?("jdownloader")
-include_recipe "fileshare::transmission" if selected.include?("transmission")
 
