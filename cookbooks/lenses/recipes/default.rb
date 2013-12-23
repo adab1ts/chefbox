@@ -27,25 +27,26 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-lenses = data_bag_item('apps', 'lenses')
-
-# Uninstall apps not needed
-
-apps = lenses['apps']
 selected = box['apps']['lenses']
-unselected = apps - selected
 
-uninstall_apps "lenses" do
-  apps unselected
-  profiles lenses['profiles']
+if selected
+  lenses = data_bag_item('apps', 'lenses')
+  apps   = lenses['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "lenses" do
+    apps unselected
+    profiles lenses['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :lenses => lenses }
+
+  include_recipe "lenses::news" if selected.include?("news")
+  include_recipe "lenses::torrents" if selected.include?("torrents")
+  include_recipe "lenses::wikipedia" if selected.include?("wikipedia")
+  include_recipe "lenses::music" if selected.include?("music")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :lenses => lenses }
-
-include_recipe "lenses::news" if selected.include?("news")
-include_recipe "lenses::torrents" if selected.include?("torrents")
-include_recipe "lenses::wikipedia" if selected.include?("wikipedia")
-include_recipe "lenses::music" if selected.include?("music")
 
