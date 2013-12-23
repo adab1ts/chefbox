@@ -3,16 +3,18 @@
 This cookbook installs a selected set of security solutions.
 The following recipes may apply:
 
-- `security::default` - purges unselected packages and includes recipes as nedeed.
+- `security::default`   - purges unselected packages and includes recipes as nedeed.
 - `security::antivirus` - installs __ClamAV__ and suggested packages.
-- `security::firewall` - installs __Uncomplicated FireWall__ and suggested packages.
-- `security::nautilus` - installs __security related plugins for Nautilus__ and suggested packages.
-- `security::tracking` - installs __Prey__ and suggested packages.
+- `security::firewall`  - installs __Uncomplicated FireWall__ and suggested packages.
+- `security::privacy`   - installs __hashing, wiping and encrypting tools__ and suggested packages.
+- `security::tracking`  - installs __Prey__ and suggested packages.
 
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to the following platforms:  
+- `Ubuntu 12.04+`
+- `Linux Mint 13+`
 
 #### cookbooks
 - `core`

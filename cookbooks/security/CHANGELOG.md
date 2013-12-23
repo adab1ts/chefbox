@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of security.
 
+## 0.4.0:
+
+* recipe/default - now checks for section presence in box profile's apps list before proceed
+* recipe/privacy - replaces recipe[nautilus] and extends privacy related packages to supported platforms
+
 ## 0.3.0:
 
 * recipe/default  - now includes recipe with nautilus security plugins

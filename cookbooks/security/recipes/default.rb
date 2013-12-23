@@ -27,25 +27,26 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-security = data_bag_item('apps', 'security')
-
-# Uninstall apps not needed
-
-apps = security['apps']
 selected = box['apps']['security']
-unselected = apps - selected
 
-uninstall_apps "security" do
-  apps unselected
-  profiles security['profiles']
+if selected
+  security = data_bag_item('apps', 'security')
+  apps = security['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "security" do
+    apps unselected
+    profiles security['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :security => security }
+
+  include_recipe "security::antivirus" if selected.include?("antivirus")
+  include_recipe "security::firewall" if selected.include?("firewall")
+  include_recipe "security::privacy" if selected.include?("privacy")
+  include_recipe "security::tracking" if selected.include?("tracking")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :security => security }
-
-include_recipe "security::antivirus" if selected.include?("antivirus")
-include_recipe "security::firewall" if selected.include?("firewall")
-include_recipe "security::nautilus" if selected.include?("nautilus")
-include_recipe "security::tracking" if selected.include?("tracking")
 

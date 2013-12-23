@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: security
-# Recipe:: nautilus
+# Recipe:: privacy
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,8 +19,14 @@
 #
 
 
-# Nautilus plugins
-package "nautilus-gtkhash"
-package "nautilus-wipe"
-package "seahorse-nautilus"
+case platform
+when "ubuntu"
+  package "nautilus-gtkhash"
+  package "nautilus-wipe"
+  package "seahorse-nautilus"
+when "mint"
+  package "gtkhash"
+  package "secure-delete"
+  package "nemo-seahorse"
+end
 

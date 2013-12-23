@@ -125,7 +125,7 @@
     "security": [
       "antivirus",
       "firewall",
-      "nautilus",
+      "privacy",
       "tracking"
     ],
     "utils": [
