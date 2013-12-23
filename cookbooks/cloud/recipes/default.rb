@@ -27,23 +27,24 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-cloud = data_bag_item('apps', 'cloud')
-
-# Uninstall apps not needed
-
-apps = cloud['apps']
 selected = box['apps']['cloud']
-unselected = apps - selected
 
-uninstall_apps "cloud" do
-  apps unselected
-  profiles cloud['profiles']
+if selected
+  cloud = data_bag_item('apps', 'cloud')
+  apps  = cloud['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "cloud" do
+    apps unselected
+    profiles cloud['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :cloud => cloud }
+
+  include_recipe "cloud::dropbox" if selected.include?("dropbox")
+  include_recipe "cloud::ubuntuone" if selected.include?("ubuntuone")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :cloud => cloud }
-
-include_recipe "cloud::dropbox" if selected.include?("dropbox")
-include_recipe "cloud::ubuntuone" if selected.include?("ubuntuone")
 

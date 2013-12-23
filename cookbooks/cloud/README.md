@@ -4,13 +4,15 @@ This cookbook installs a selected set of cloud services clients.
 The following recipes may apply:
 
 - `cloud::default`   - purges unselected packages and includes recipes as nedeed.
-- `cloud::dropbox`   - installs __Dropbox integration for Nautilus__ and suggested packages.
+- `cloud::dropbox`   - installs __Dropbox integration__ and suggested packages.
 - `cloud::ubuntuone` - installs __Ubuntu One client__ and suggested packages.
 
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to the following platforms:  
+- `Ubuntu 12.04+`
+- `Linux Mint 13+`
 
 #### cookbooks
 - `core`

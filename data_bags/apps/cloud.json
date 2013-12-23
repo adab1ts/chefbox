@@ -13,11 +13,19 @@
         "type": "distro"
       }
     },
+    "dropbox-nemo": {
+      "package": "nemo-dropbox",
+      "maintainer": "Clement Lefebvre <root@linuxmint.com>",
+      "description": "Dropbox integration for Nemo",
+      "replaced": ["dropbox"],
+      "source": {
+        "type": "distro"
+      }
+    },
     "ubuntuone": {
-      "package": "ubuntuone-client",
+      "package": "ubuntuone-installer",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-      "description": "Ubuntu One client",
-      "suggested": ["ubuntuone-installer", "ubuntu-sso-client-gtk", "ubuntuone-client-proxy", "ubuntuone-control-panel", "ubuntuone-control-panel-gtk"],
+      "description": "Ubuntu One Installer",
       "source": {
         "type": "distro"
       }

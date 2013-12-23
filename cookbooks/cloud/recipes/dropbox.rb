@@ -21,8 +21,13 @@
 
 cloud = node[:apps][:cloud]
 
-# Dropbox integration for Nautilus
+# Dropbox integration
+prof = case platform
+       when "mint" then "dropbox-nemo"
+       else        "dropbox"
+       end
+
 install_app "dropbox" do
-  profile cloud['profiles']['dropbox']
+  profile cloud['profiles'][prof]
 end
 
