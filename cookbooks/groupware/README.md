@@ -3,13 +3,16 @@
 This cookbook installs a selected set of groupware solutions.
 The following recipes may apply:
 
-- `groupware::default` - purges unselected packages and includes recipes as nedeed.
-- `groupware::skype` - installs __Skype__ and suggested packages.
+- `groupware::default`  - purges unselected packages and includes recipes as nedeed.
+- `groupware::hangouts` - installs __Google Hangouts plugin__ and suggested packages.
+- `groupware::skype`    - installs __Skype__ and suggested packages.
 
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to the following platforms:  
+- `Ubuntu 12.04+`
+- `Linux Mint 13+`
 
 #### cookbooks
 - `core`

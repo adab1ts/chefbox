@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: groupware
-# Recipe:: default
+# Recipe:: hangouts
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,32 +19,10 @@
 #
 
 
-## Requirements
+groupware = node[:apps][:groupware]
 
-include_recipe "base"
-
-
-## Deploy
-
-box = node[:box]
-selected = box['apps']['groupware']
-
-if selected
-  groupware = data_bag_item('apps', 'groupware')
-  apps = groupware['apps']
-
-  # Uninstall apps not needed
-  unselected = apps - selected
-
-  uninstall_apps "groupware" do
-    apps unselected
-    profiles groupware['profiles']
-  end
-
-  # Install selected apps
-  node.set[:apps] = { :groupware => groupware }
-
-  include_recipe "groupware::hangouts" if selected.include?("hangouts")
-  include_recipe "groupware::skype" if selected.include?("skype")
+# Google Talk Plugin
+install_app "hangouts" do
+  profile groupware['profiles']['hangouts']
 end
 
