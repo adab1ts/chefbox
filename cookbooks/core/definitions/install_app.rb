@@ -67,16 +67,21 @@ define :install_app do
         action :add
       end
     when 'repo'
-      # apt source addition
-      dist = source['distribution'] || node[:lsb][:codename]
+      sources_path = "/etc/apt/sources.list.d"
+      repo_name = "#{source['repo_name']}-#{node[:lsb][:codename]}"
 
-      apt_repository "#{source['repo_name']}-#{node[:lsb][:codename]}" do
-        uri source['uri']
-        distribution dist
-        components source['components']
-        key source['key']
-        keyserver source['keyserver']
-        action :add
+      unless ::File.exists? "#{sources_path}/#{repo_name}.list"
+        # apt source addition
+        dist = source['distribution'] || node[:lsb][:codename]
+
+        apt_repository repo_name do
+          uri source['uri']
+          distribution dist
+          components source['components']
+          key source['key']
+          keyserver source['keyserver']
+          action :add
+        end
       end
     end
 

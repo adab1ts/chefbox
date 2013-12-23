@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.14.1:
+
+* definitions/install_app - now checks repo file existence before creation
+
 ## 0.14.0:
 
 * libraries/box - new method to retrieve the operating system of the box
