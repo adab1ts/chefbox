@@ -27,26 +27,27 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-eyecandy = data_bag_item('apps', 'eyecandy')
-
-# Uninstall apps not needed
-
-apps = eyecandy['apps']
 selected = box['apps']['eyecandy']
-unselected = apps - selected
 
-uninstall_apps "eyecandy" do
-  apps unselected
-  profiles eyecandy['profiles']
+if selected
+  eyecandy = data_bag_item('apps', 'eyecandy')
+  apps = eyecandy['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "eyecandy" do
+    apps unselected
+    profiles eyecandy['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :eyecandy => eyecandy }
+
+  include_recipe "eyecandy::faenza-icons" if selected.include?("faenza-icons")
+  include_recipe "eyecandy::faience-icons" if selected.include?("faience-icons")
+  include_recipe "eyecandy::moka-icons" if selected.include?("moka-icons")
+  include_recipe "eyecandy::nitrux-icons" if selected.include?("nitrux-icons")
+  include_recipe "eyecandy::unsettings" if selected.include?("unsettings")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :eyecandy => eyecandy }
-
-include_recipe "eyecandy::faenza-icons" if selected.include?("faenza-icons")
-include_recipe "eyecandy::faience-icons" if selected.include?("faience-icons")
-include_recipe "eyecandy::moka-icons" if selected.include?("moka-icons")
-include_recipe "eyecandy::nitrux-icons" if selected.include?("nitrux-icons")
-include_recipe "eyecandy::unsettings" if selected.include?("unsettings")
 

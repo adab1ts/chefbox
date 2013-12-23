@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.4.0:
+
+* recipe/default - now checks for section presence in box profile's apps list before proceed
+
 ## 0.3.0:
 
 * recipes/default    - now includes recipe with moka icon theme install management
