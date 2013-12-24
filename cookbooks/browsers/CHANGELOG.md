@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.4.1:
+
+* recipes/chrome - fixes repository duplication issue
+
 ## 0.4.0:
 
 * recipe/default   - now checks for section presence in box profile's apps list before proceed

@@ -26,3 +26,7 @@ install_app "chrome" do
   profile browsers['profiles']['chrome']
 end
 
+file "#{node['apt']['sources_path']}/google-chrome-#{node[:lsb][:codename]}.list" do
+  action :delete
+end
+
