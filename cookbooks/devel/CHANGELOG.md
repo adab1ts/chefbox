@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.3.0:
+
+* recipe/default - now checks for section presence in box profile's apps list before proceed
+
 ## 0.2.1:
 
 * recipe/juju    - minor update of bootstrapping's before script

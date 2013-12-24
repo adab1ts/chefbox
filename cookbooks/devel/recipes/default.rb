@@ -30,29 +30,30 @@ package "htop"
 ## Deploy
 
 box = node[:box]
-devel = data_bag_item('apps', 'devel')
-
-# Uninstall apps not needed
-
-apps = devel['apps']
 selected = box['apps']['devel']
-unselected = apps - selected
 
-uninstall_apps "devel" do
-  apps unselected
-  profiles devel['profiles']
+if selected
+  devel = data_bag_item('apps', 'devel')
+  apps  = devel['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "devel" do
+    apps unselected
+    profiles devel['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :devel => devel }
+
+  # Shells
+  include_recipe "devel::zsh"
+
+  # VCS solutions
+  include_recipe "devel::git" if selected.include?("git")
+
+  # Cloud solutions
+  include_recipe "devel::juju" if selected.include?("juju")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :devel => devel }
-
-# Shells
-include_recipe "devel::zsh"
-
-# VCS solutions
-include_recipe "devel::git" if selected.include?("git")
-
-# Cloud solutions
-include_recipe "devel::juju" if selected.include?("juju")
 
