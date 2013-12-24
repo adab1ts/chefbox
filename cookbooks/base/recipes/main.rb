@@ -77,11 +77,14 @@ when "mint"
 
   if platform_version < 15
     # Commonly used restricted packages for Linux Mint
-    apt_repository "videolan-#{node[:lsb][:codename]}" do
+    repo_name = "videolan-#{node[:lsb][:codename]}"
+
+    apt_repository repo_name do
       uri "http://download.videolan.org/pub/debian/stable/ /"
       distribution ""
       key "http://download.videolan.org/pub/debian/videolan-apt.asc"
       action :add
+      not_if { ::File.exists? "#{node['apt']['sources_path']}/#{repo_name}.list" }
     end
   end
 end

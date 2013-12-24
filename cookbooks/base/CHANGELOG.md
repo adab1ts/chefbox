@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.14.2:
+
+* recipes/main - now checks existence of repository file before addition
+
 ## 0.14.1:
 
 * files/linuxmint-13/apt/sources.list - replaces official repository server with primary mirror
