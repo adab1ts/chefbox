@@ -17,15 +17,15 @@
       "package": "nemo-dropbox",
       "maintainer": "Clement Lefebvre <root@linuxmint.com>",
       "description": "Dropbox integration for Nemo",
-      "replaced": ["dropbox"],
       "source": {
         "type": "distro"
       }
     },
     "ubuntuone": {
-      "package": "ubuntuone-installer",
+      "package": "ubuntuone-control-panel-qt",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Ubuntu One Installer",
+      "suggested": ["ubuntuone-client-proxy"],
       "source": {
         "type": "distro"
       }
