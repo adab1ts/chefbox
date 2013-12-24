@@ -21,6 +21,7 @@
       "shell": "/bin/bash",
       "password": "secret",
       "default": true,
+      "guest": false,
       "sudo": true
     }
   },

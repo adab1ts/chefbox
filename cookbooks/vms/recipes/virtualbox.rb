@@ -36,7 +36,7 @@ install_app "virtualbox" do
   profile vbox
 end
 
-box['users'].each do |username, usr|
+box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
   group "vboxusers" do
     members username
     append true

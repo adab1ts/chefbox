@@ -27,22 +27,23 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-virtualization = data_bag_item('apps', 'virtualization')
-
-# Uninstall apps not needed
-
-apps = virtualization['apps']
 selected = box['apps']['virtualization']
-unselected = apps - selected
 
-uninstall_apps "virtualization" do
-  apps unselected
-  profiles virtualization['profiles']
+if selected
+  virtualization = data_bag_item('apps', 'virtualization')
+  apps = virtualization['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "virtualization" do
+    apps unselected
+    profiles virtualization['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :virtualization => virtualization }
+
+  include_recipe "vms::virtualbox" if selected.include?("virtualbox")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :virtualization => virtualization }
-
-include_recipe "vms::virtualbox" if selected.include?("virtualbox")
 
