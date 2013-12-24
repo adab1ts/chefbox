@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: core
-# Definitions:: uninstall_app
+# Attribute File:: default
 #
 # Copyright 2013, Carles Muiños
 #
@@ -18,31 +18,5 @@
 # limitations under the License.
 #
 
-
-define :uninstall_app do
-  profile = params[:profile]
-
-  # Suggested packages
-  suggested = profile['suggested'] || []
-  suggested.each do |pkg|
-    package pkg do
-      action :purge
-    end
-  end
-
-  source = profile['source']
-  origin = source['type']
-
-  package params[:name] do
-    package_name profile['package']
-    action :purge
-    not_if do
-      origin == "src" or
-      (
-        %w(repo ppa).include?(origin) and
-        not ::File.exists?("#{node['apt']['sources_path']}/#{source['data']['repo_name']}-#{node[:lsb][:codename]}.list")
-      )
-    end
-  end
-end
+default['apt']['sources_path'] = '/etc/apt/sources.list.d'
 

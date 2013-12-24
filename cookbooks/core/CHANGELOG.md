@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.15.0:
+
+* attributes/default        - defines new core attribute node['apt']['sources_path']
+* definitions/install_app   - minor refactorization
+* definitions/uninstall_app - minor refactorization
+* providers/ppa             - minor refactorization
+
 ## 0.14.1:
 
 * definitions/install_app - now checks repo file existence before creation

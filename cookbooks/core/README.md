@@ -23,6 +23,11 @@ This cookbook only applies to the following platforms:
 - `apt`
 
 
+## Attributes
+
+- `node['apt']['sources_path']` - path to additional package repositories (/etc/apt/sources.list.d)
+
+
 ## Definitions
 
 ### Installing applications
