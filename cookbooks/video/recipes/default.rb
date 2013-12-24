@@ -27,23 +27,24 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-video = data_bag_item('apps', 'video')
-
-# Uninstall apps not needed
-
-apps = video['apps']
 selected = box['apps']['video']
-unselected = apps - selected
 
-uninstall_apps "video" do
-  apps unselected
-  profiles video['profiles']
+if selected
+  video = data_bag_item('apps', 'video')
+  apps  = video['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "video" do
+    apps unselected
+    profiles video['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :video => video }
+
+  include_recipe "video::openshot" if selected.include?("openshot")
+  include_recipe "video::vlc" if selected.include?("vlc")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :video => video }
-
-include_recipe "video::openshot" if selected.include?("openshot")
-include_recipe "video::vlc" if selected.include?("vlc")
 
