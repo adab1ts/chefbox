@@ -27,27 +27,28 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-music = data_bag_item('apps', 'music')
-
-# Uninstall apps not needed
-
-apps = music['apps']
 selected = box['apps']['music']
-unselected = apps - selected
 
-uninstall_apps "music" do
-  apps unselected
-  profiles music['profiles']
+if selected
+  music = data_bag_item('apps', 'music')
+  apps  = music['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "music" do
+    apps unselected
+    profiles music['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :music => music }
+
+  include_recipe "music::lastfm" if selected.include?("lastfm")
+  include_recipe "music::nuvola" if selected.include?("nuvola")
+  include_recipe "music::rdio" if selected.include?("rdio")
+  include_recipe "music::rhythmbox" if selected.include?("rhythmbox")
+  include_recipe "music::spotify" if selected.include?("spotify")
+  include_recipe "music::tomahawk" if selected.include?("tomahawk")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :music => music }
-
-include_recipe "music::lastfm" if selected.include?("lastfm")
-include_recipe "music::nuvola" if selected.include?("nuvola")
-include_recipe "music::rdio" if selected.include?("rdio")
-include_recipe "music::rhythmbox" if selected.include?("rhythmbox")
-include_recipe "music::spotify" if selected.include?("spotify")
-include_recipe "music::tomahawk" if selected.include?("tomahawk")
 
