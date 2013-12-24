@@ -27,24 +27,25 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-utils = data_bag_item('apps', 'utils')
-
-# Uninstall apps not needed
-
-apps = utils['apps']
 selected = box['apps']['utils']
-unselected = apps - selected
 
-uninstall_apps "utils" do
-  apps unselected
-  profiles utils['profiles']
+if selected
+  utils = data_bag_item('apps', 'utils')
+  apps  = utils['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "utils" do
+    apps unselected
+    profiles utils['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :utils => utils }
+
+  include_recipe "utils::furius" if selected.include?("furius")
+  include_recipe "utils::hardinfo" if selected.include?("hardinfo")
+  include_recipe "utils::p7zip" if selected.include?("p7zip")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :utils => utils }
-
-include_recipe "utils::furius" if selected.include?("furius")
-include_recipe "utils::hardinfo" if selected.include?("hardinfo")
-include_recipe "utils::p7zip" if selected.include?("p7zip")
 

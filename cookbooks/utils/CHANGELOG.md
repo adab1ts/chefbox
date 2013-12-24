@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.4.0:
+
+* recipe/default - now checks for section presence in box profile's apps list before proceed
+
 ## 0.3.0:
 
 * recipe/furius - delivers first steps documentation concerning furius and ISO images management
