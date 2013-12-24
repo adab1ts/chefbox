@@ -25,7 +25,21 @@ This cookbook only applies to the following platforms:
 
 ## Attributes
 
-- `node['apt']['sources_path']` - path to additional package repositories (/etc/apt/sources.list.d)
+#### core::default
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['apt']['sources_path']</tt></td>
+    <td>String</td>
+    <td>path to additional package repositories</td>
+    <td><tt>/etc/apt/sources.list.d</tt></td>
+  </tr>
+</table>
 
 
 ## Definitions
