@@ -27,25 +27,26 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-graphics = data_bag_item('apps', 'graphics')
-
-# Uninstall apps not needed
-
-apps = graphics['apps']
 selected = box['apps']['graphics']
-unselected = apps - selected
 
-uninstall_apps "graphics" do
-  apps unselected
-  profiles graphics['profiles']
+if selected
+  graphics = data_bag_item('apps', 'graphics')
+  apps = graphics['apps']
+
+  # Uninstall apps not needed
+  unselected = apps - selected
+
+  uninstall_apps "graphics" do
+    apps unselected
+    profiles graphics['profiles']
+  end
+
+  # Install selected apps
+  node.set[:apps] = { :graphics => graphics }
+
+  include_recipe "graphics::gimp" if selected.include?("gimp")
+  include_recipe "graphics::inkscape" if selected.include?("inkscape")
+  include_recipe "graphics::scribus" if selected.include?("scribus")
+  include_recipe "graphics::mypaint" if selected.include?("mypaint")
 end
-
-# Install selected apps
-
-node.set[:apps] = { :graphics => graphics }
-
-include_recipe "graphics::gimp" if selected.include?("gimp")
-include_recipe "graphics::inkscape" if selected.include?("inkscape")
-include_recipe "graphics::scribus" if selected.include?("scribus")
-include_recipe "graphics::mypaint" if selected.include?("mypaint")
 
