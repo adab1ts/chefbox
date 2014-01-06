@@ -13,7 +13,9 @@ jobs_setup_file="<%= @jobs_setup_file %>"
 # Auxiliar Functions
 #
 __show_welcome_message() {
+  <%= %Q{
   echo "Hola ${CUSR}, el backup del sistema está a punto de empezar."
+  }.force_encoding("utf-8") %>
   show_warning_message
 }
 

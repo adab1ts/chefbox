@@ -1,0 +1,16 @@
+# File: ~/.local/share/applications/backup-mgr.desktop
+# Perms: 0644
+
+[Desktop Entry]
+Name=Backup
+Name[ca]=<%= %Q{Còpia de seguretat}.force_encoding("utf-8") %>
+Name[es]=Copia de seguridad
+Comment=Make a backup of your home directory
+Comment[ca]=<%= %Q{Feu una còpia de seguretat del vostre directori d'inici}.force_encoding("utf-8") %>
+Comment[es]=Hacer una copia de seguridad de su carpeta personal
+Exec=sudo sh -c "nice <%= @backup_script %>"
+Icon=/usr/lib/linuxmint/mintBackup/icon.svg
+Terminal=true
+Type=Application
+Encoding=UTF-8
+Categories=Application;System;

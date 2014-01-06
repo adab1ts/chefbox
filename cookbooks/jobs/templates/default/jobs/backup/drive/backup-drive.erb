@@ -17,7 +17,7 @@ backup_failure_file="${BACKUP_LOG_PATH}/$(basename $0)-failed.log"
 # Auxiliar Functions
 #
 __show_backup_start_message() {
-  show_start_message "${drive}" "El backup empezará en     "
+  show_start_message "${drive}" <%= %Q{"El backup empezará en     "}.force_encoding("utf-8") %>
 }
 
 __log_backup_failure_message() {

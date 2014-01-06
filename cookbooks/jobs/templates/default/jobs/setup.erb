@@ -57,12 +57,14 @@ save_job_last_execution() {
 }
 
 show_warning_message() {
+  <%= %Q{
   echo "Ten en cuenta que:"
   echo "  1) no debes cerrar esta ventana (se cerrará automaticamente),"
   echo "  2) no debes cerrar la sesión y"
   echo "  3) no debes apagar el ordenador"
   echo "hasta que no finalice la tarea."
   echo
+  }.force_encoding("utf-8") %>
 }
 
 show_start_message() {
@@ -77,7 +79,9 @@ show_start_message() {
 }
 
 show_farewell_message() {
-  printf "\nLa ventana se cerrará en     "
+  <%= %Q{
+  printf "\\nLa ventana se cerrará en     "
+  }.force_encoding("utf-8") %>
   timer 10
 }
 
@@ -87,7 +91,9 @@ log_failure_message() {
 
   touch "$log_file"
 
-  printf "\n[$(date +'%Y-%m-%d-%H%M%S')] El disco '${drive}' parece no estar conectado. Lo intentaremos la próxima vez.\n" | tee -a "$log_file"
+  <%= %Q{
+  printf "\\n[$(date +'%Y-%m-%d-%H%M%S')] El disco '${drive}' parece no estar conectado. Lo intentaremos la próxima vez.\\n" | tee -a "$log_file"
+  }.force_encoding("utf-8") %>
 }
 
 export -f timer

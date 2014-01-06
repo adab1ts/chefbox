@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.4.0:
+
+* templates/default/jobs/backup/backup-box_name    - force utf-8 encoding
+* templates/default/jobs/backup/drive/backup-drive - force utf-8 encoding
+* templates/default/jobs/setup                     - force utf-8 encoding
+* templates/linuxmint-13/jobs/backup/backup-mgr.desktop - extends launcher to target platform
+
 ## 0.3.1:
 
 * recipes/backup - dryed backup-mgr custom launcher creation using launcher core definition
@@ -13,7 +20,7 @@ This file is used to list changes made in each version of jobs.
 ## 0.2.0:
 
 * recipes/default - refactorized to allow deployment of jobs configuration files to selected users
-* recipes/backup - refactorized to allow deployment of backup job files to selected users
+* recipes/backup  - refactorized to allow deployment of backup job files to selected users
 * templates/default/logrotate/jobs.erb - refactorized to include log files management of selected users
 
 ## 0.1.0:
