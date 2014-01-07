@@ -1,0 +1,14 @@
+{
+  "name": "USER-HOSTNAME",
+  "description": "Profile for USER@HOSTNAME box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "default_attributes": {
+    "profile": "USER-HOSTNAME"
+  },
+  "override_attributes": {},
+  "run_list": [
+    "role[average-box]"
+  ],
+  "env_run_lists": {}
+}
