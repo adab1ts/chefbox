@@ -4,5 +4,10 @@
 bootstrap/
 keys/
 host-*/
-boxes/
-!boxes/USER-HOSTNAME.json
+data_bags/boxes/*.json
+!data_bags/boxes/USER-HOSTNAME.json
+roles/*.json
+!roles/basic-box.json
+!roles/average-box.json
+!roles/full-box.json
+!roles/USER-HOSTNAME.json
