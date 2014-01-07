@@ -68,6 +68,7 @@
     ],
     "cloud": [
       "dropbox",
+      "dropbox-mint",
       "ubuntuone"
     ],
     "devel": [

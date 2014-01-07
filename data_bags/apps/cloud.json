@@ -2,6 +2,7 @@
   "id": "cloud",
   "apps": [
     "dropbox",
+    "dropbox-mint",
     "ubuntuone"
   ],
   "profiles": {
@@ -13,7 +14,7 @@
         "type": "distro"
       }
     },
-    "dropbox-nemo": {
+    "dropbox-mint": {
       "package": "nemo-dropbox",
       "maintainer": "Clement Lefebvre <root@linuxmint.com>",
       "description": "Dropbox integration for Nemo",
