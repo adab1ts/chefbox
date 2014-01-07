@@ -9,7 +9,6 @@
     "role[average-box]",
     "recipe[devel]",
     "recipe[graphics]",
-    "recipe[mobile]",
     "recipe[vms]"
   ],
   "env_run_lists": {}
