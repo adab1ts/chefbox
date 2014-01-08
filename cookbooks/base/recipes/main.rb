@@ -27,8 +27,22 @@ package "language-pack-gnome-#{box['lang']}"
 package "aspell-#{box['lang']}"
 package "myspell-#{box['lang']}"
 
+# Virtualization support
+vbox_pkgs = %w[
+  virtualbox-guest-dkms
+  virtualbox-guest-utils
+  virtualbox-guest-x11
+]
+
 case platform
 when "ubuntu"
+  # Virtualization support
+  if virtual_box?
+    vbox_pkgs.each do |pkg|
+      package pkg
+    end
+  end
+
   # Ubuntu example content
   package "example-content" do
     action :purge
@@ -68,6 +82,15 @@ when "ubuntu"
     action :nothing
   end
 when "mint"
+  # Virtualization support
+  unless virtual_box?
+    vbox_pkgs.each do |pkg|
+      package pkg do
+        action :purge
+      end
+    end
+  end
+
   # Office productivity suite
   package "libreoffice-style-galaxy"
 

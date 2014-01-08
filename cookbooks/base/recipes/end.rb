@@ -59,13 +59,6 @@ when "mint"
     nautilus-wallpaper
   ]
 
-  # NOTE: Uncomment
-  # purge_pkgs += %w[
-  #   virtualbox-guest-dkms
-  #   virtualbox-guest-utils
-  #   virtualbox-guest-x11
-  # ]
-
   h_pkgs = held_pkgs.join(" ")
   p_pkgs = purge_pkgs.join(" ")
 

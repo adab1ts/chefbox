@@ -24,6 +24,7 @@ The following recipes are applied:
   * `All`
 
       `+gnome-do`                   - Quickly perform actions on your desktop  
+      `virtualbox guest packages`   - Support packages for virtual boxes
       `MS Office True Type Fonts`
 
 - `base::end` - executes first system upgrade and creates a support folder with post-installation instructions
