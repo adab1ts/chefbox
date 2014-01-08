@@ -23,7 +23,7 @@ cloud = node[:apps][:cloud]
 
 # Dropbox integration
 prof = case platform
-       when "mint" then "dropbox-nemo"
+       when "mint" then "dropbox-mint"
        else        "dropbox"
        end
 
