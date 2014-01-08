@@ -55,6 +55,11 @@ module Coderebels
         box['platform']['version'].to_f
       end
 
+      def virtual_box?
+        box = node[:box]
+        box['platform']['virtual']
+      end
+
       def self.arch
         Coderebels::Chefbox::Shell.rep "uname -i"
       end

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.16.0:
+
+* libraries/box - new method to check if target box is virtual
+
 ## 0.15.0:
 
 * attributes/default        - defines new core attribute node['apt']['sources_path']

@@ -191,6 +191,7 @@ Provides box related functions.
 - `vendor` - retrieves the vendor of the device of the specified category.
 - `platform` - retrieves the os of the box.
 - `platform_version` - retrieves the os version.
+- `virtual_box?` - checks if target box is virtual.
 - `arch`   - retrieves the hardware platform (i386 / amd64).
 
 ### module Coderebels::Chefbox::Digest
