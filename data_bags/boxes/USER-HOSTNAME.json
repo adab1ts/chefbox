@@ -4,7 +4,8 @@
   "platform": {
     "os": "OS",
     "version": "VERSION",
-    "arch": "ARCH"
+    "arch": "ARCH",
+    "virtual": false
   },
   "lang": "LANG",
   "folders": {
@@ -68,7 +69,6 @@
     ],
     "cloud": [
       "dropbox",
-      "dropbox-mint",
       "ubuntuone"
     ],
     "devel": [
