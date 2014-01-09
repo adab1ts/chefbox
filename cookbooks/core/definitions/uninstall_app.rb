@@ -3,7 +3,7 @@
 # Cookbook Name:: core
 # Definitions:: uninstall_app
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ define :uninstall_app do
       origin == "src" or
       (
         %w(repo ppa).include?(origin) and
-        not ::File.exists?("#{node['apt']['sources_path']}/#{source['data']['repo_name']}-#{node[:lsb][:codename]}.list")
+        not ::File.exists?("#{node['apt']['sources_path']}/#{source['data']['repo_name']}-#{Coderebels::Chefbox::Box.lsb_codename}.list")
       )
     end
   end

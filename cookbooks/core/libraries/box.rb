@@ -3,7 +3,7 @@
 # Cookbook Name:: core
 # Library:: box
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -46,13 +46,19 @@ module Coderebels
       end
 
       def platform
-        box = node[:box]
-        box['platform']['os']
+        Coderebels::Chefbox::Box.lsb_id
       end
 
       def platform_version
-        box = node[:box]
-        box['platform']['version'].to_f
+        Coderebels::Chefbox::Box.lsb_release
+      end
+
+      def platform_codename
+        Coderebels::Chefbox::Box.lsb_codename
+      end
+
+      def platform_arch
+        Coderebels::Chefbox::Box.arch
       end
 
       def virtual_box?
@@ -60,8 +66,38 @@ module Coderebels
         box['platform']['virtual']
       end
 
+      def self.lsb_id
+        id_str = Coderebels::Chefbox::Shell.rep "lsb_release -i"
+
+        case id_str
+        when /debian/i then "debian"
+        when /mint/i   then "mint"
+        when /ubuntu/i then "ubuntu"
+        end
+      end
+
+      def self.lsb_release
+        /Release:\s+(?<release>[\d.]+)/i =~ Coderebels::Chefbox::Shell.rep("lsb_release -r")
+        release.to_f
+      end
+
+      def self.lsb_codename
+        case self.lsb_id
+        when "debian", "ubuntu"
+          /Codename:\s+(?<codename>\w+)/i =~ Coderebels::Chefbox::Shell.rep("lsb_release -c")
+          codename
+        when "mint"
+          case self.lsb_release
+          when 13 then "precise"
+          when 14 then "quantal"
+          when 15 then "raring"
+          when 16 then "saucy"
+          end
+        end
+      end
+
       def self.arch
-        Coderebels::Chefbox::Shell.rep "uname -i"
+        Coderebels::Chefbox::Shell.rep "uname -p"
       end
 
     end

@@ -191,8 +191,9 @@ Provides box related functions.
 - `vendor` - retrieves the vendor of the device of the specified category.
 - `platform` - retrieves the os of the box.
 - `platform_version` - retrieves the os version.
+- `platform_codename` - retrieves the code name of the currently installed distribution.
+- `platform_arch` - retrieves the processor type (i686 / x86_64).
 - `virtual_box?` - checks if target box is virtual.
-- `arch`   - retrieves the hardware platform (i386 / amd64).
 
 ### module Coderebels::Chefbox::Digest
 
@@ -222,7 +223,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (C) 2013 Carles Muiños
+Copyright (c) 2013,2014 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

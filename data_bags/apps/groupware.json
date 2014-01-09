@@ -13,12 +13,12 @@
         "type": "deb",
         "data": {
           "all": {
-            "i386": {
+            "i686": {
               "file_name": "google-talkplugin_current_i386.deb",
               "uri": "http://ubuntuone.com/1iDhPtmvkEhgGGWxBghNvC",
               "sha256": "2d4753494b5cca1f7117d404040c6584bd3e052b882034e85b904d0efd62f285"
             },
-            "amd64": {
+            "x86_64": {
               "file_name": "google-talkplugin_current_amd64.deb",
               "uri": "http://ubuntuone.com/4KIql2aiqnAhYn98kSY5tq",
               "sha256": "11fd33acf3e8a1346d1cea1ddab0cbdcaf7b47736fba62b03aa05cc83825c56b"

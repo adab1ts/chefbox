@@ -3,7 +3,7 @@
 # Cookbook Name:: core
 # Definitions:: install_app
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -32,6 +32,7 @@ define :install_app do
 
   origin = profile['source']['type']
   source = profile['source']['data']
+  lsb_codename = Coderebels::Chefbox::Box.lsb_codename
 
   if origin == 'deb'
     # Dependencies installation
@@ -41,7 +42,7 @@ define :install_app do
     end
 
     # Download of deb package
-    source = source[node[:lsb][:codename]] || source['all']
+    source = source[lsb_codename] || source['all']
     source = source[Coderebels::Chefbox::Box.arch] || source['all']
 
     deb_file = "#{Chef::Config[:file_cache_path]}/#{source['file_name']}"
@@ -63,13 +64,13 @@ define :install_app do
       # PPA addition
       core_ppa source['repo_name'] do
         uri source['uri']
-        distribution node[:lsb][:codename]
+        distribution lsb_codename
         action :add
       end
     when 'repo'
       # apt source addition
-      repo_name = "#{source['repo_name']}-#{node[:lsb][:codename]}"
-      dist = source['distribution'] || node[:lsb][:codename]
+      repo_name = "#{source['repo_name']}-#{lsb_codename}"
+      dist = source['distribution'] || lsb_codename
 
       apt_repository repo_name do
         uri source['uri']

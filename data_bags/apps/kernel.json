@@ -34,36 +34,36 @@
         "type": "deb",
         "data": {
           "precise": {
-            "i386": {
+            "i686": {
               "file_name": "intel-linux-graphics-installer_1.0-0ubuntu1_i386.deb",
               "uri": "https://download.01.org/gfx/ubuntu/12.04/main/pool/12.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0-0ubuntu1_i386.deb",
               "sha256": "2f70c6ba326c180373dad00fa1ba26838c74bd2aa81800a99706e7809ed6d618"
             },
-            "amd64": {
+            "x86_64": {
               "file_name": "intel-linux-graphics-installer_1.0-0ubuntu1_amd64.deb",
               "uri": "https://download.01.org/gfx/ubuntu/12.04/main/pool/12.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0-0ubuntu1_amd64.deb",
               "sha256": "fec2efe60a676cc69a8889f7c3ab4f490109f456ee058411acbde7d9ee39c872"
             }
           },
           "quantal": {
-            "i386": {
+            "i686": {
               "file_name": "intel-linux-graphics-installer_1.0_i386.deb",
               "uri": "https://download.01.org/gfx/ubuntu/12.10/main/pool/12.10/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0_i386.deb",
               "sha256": "bb50693615a21fde32f8ae1e97152545071aaeb5ee0fec2352c6ac476bb506f1"
             },
-            "amd64": {
+            "x86_64": {
               "file_name": "intel-linux-graphics-installer_1.0_amd64.deb",
               "uri": "https://download.01.org/gfx/ubuntu/12.10/main/pool/12.10/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0_amd64.deb",
               "sha256": "3bb530b62efbe66af444555bef0b8672d15533eb321ad25ff34bc1930a54c411"
             }
           },
           "raring": {
-            "i386": {
+            "i686": {
               "file_name": "intel-linux-graphics-installer_1.0.2-0intel3_i386.deb",
               "uri": "https://download.01.org/gfx/ubuntu/13.04/main/pool/13.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0.2-0intel3_i386.deb",
               "sha256": "896305d0054ecb1f1d00bf1ba05693f256acfb54cce8ac9a7f59edf20fa56eb7"
             },
-            "amd64": {
+            "x86_64": {
               "file_name": "intel-linux-graphics-installer_1.0.2-0intel3_amd64.deb",
               "uri": "https://download.01.org/gfx/ubuntu/13.04/main/pool/13.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0.2-0intel3_amd64.deb",
               "sha256": "61d6a76540a20002ec92d9877e4dfd18877c46ae7634c3da47d4f5fd4e9443c9"

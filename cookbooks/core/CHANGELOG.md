@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.17.0:
+
+* libraries/box - new method to retrieve the code name of the target platform and some refactorization
+* definitions/install_app   - now uses the new method to retrieve the platform code name
+* definitions/uninstall_app - now uses the new method to retrieve the platform code name
+
 ## 0.16.0:
 
 * libraries/box - new method to check if target box is virtual
