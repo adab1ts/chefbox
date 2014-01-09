@@ -3,7 +3,7 @@
 # Cookbook Name:: base
 # Recipe:: main
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -100,7 +100,7 @@ when "mint"
 
   if platform_version < 15
     # Commonly used restricted packages for Linux Mint
-    repo_name = "videolan-#{node[:lsb][:codename]}"
+    repo_name = "videolan-#{platform_codename}"
 
     apt_repository repo_name do
       uri "http://download.videolan.org/pub/debian/stable/ /"

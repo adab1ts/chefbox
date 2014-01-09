@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.15.1:
+
+* recipes/main - now uses module Box's new method to retrieve platform code name
+
 ## 0.15.0:
 
 * recipes/main - install virtualbox guest packages on virtual boxes and purge them otherwise
