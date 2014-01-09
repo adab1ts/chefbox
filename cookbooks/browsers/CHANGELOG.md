@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.4.2:
+
+* recipes/chrome   - now uses module Box's new method to retrieve platform code name
+* recipes/chromium - now uses module Box's new method to retrieve platform code name
+* recipes/firefox  - now uses module Box's new method to retrieve platform code name
+
 ## 0.4.1:
 
 * recipes/chrome - fixes repository duplication issue

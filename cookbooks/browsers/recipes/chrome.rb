@@ -3,7 +3,7 @@
 # Cookbook Name:: browsers
 # Recipe:: chrome
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ install_app "chrome" do
   profile browsers['profiles']['chrome']
 end
 
-file "#{node['apt']['sources_path']}/google-chrome-#{node[:lsb][:codename]}.list" do
+file "#{node['apt']['sources_path']}/google-chrome-#{platform_codename}.list" do
   action :delete
 end
 

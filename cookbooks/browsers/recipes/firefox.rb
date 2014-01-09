@@ -3,7 +3,7 @@
 # Cookbook Name:: browsers
 # Recipe:: firefox
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ end
 if platform?("ubuntu") and platform_version == 12.04
   core_ppa "webapps-preview" do
     uri "ppa:webapps/preview"
-    distribution node[:lsb][:codename]
+    distribution platform_codename
     action :add
   end
 
