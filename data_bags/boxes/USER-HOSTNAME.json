@@ -61,6 +61,16 @@
     "folder": "DEVEL_FOLDER"
   },
   "apps": {
+    "audio_pro": [
+      "airtime",
+      "ardour",
+      "audacity",
+      "hydrogen",
+      "mixxx",
+      "muse",
+      "rosegarden",
+      "traverso"
+    ],
     "browsers": [
       "chrome",
       "chromium",

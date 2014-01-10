@@ -1,0 +1,146 @@
+{
+  "id": "audio_pro",
+  "apps": [
+    "airtime",
+    "ardour",
+    "audacity",
+    "hydrogen",
+    "lmms",
+    "mixxx",
+    "muse",
+    "rosegarden",
+    "traverso"
+  ],
+  "profiles": {
+    "airtime": {
+      "package": "airtime-easy-setup",
+      "maintainer": "Daniel James <daniel@64studio.com>",
+      "description": "Metapackage for the Airtime broadcast server",
+      "website": "http://www.sourcefabric.org/en/airtime/",
+      "dependencies": [
+        "debconf-utils", "icecast2", "postgresql", "python-virtualenv", "apache2",
+        "ecasound", "flac", "libapache2-mod-php5", "libcamomile-ocaml-data", "monit",
+        "multitail", "odbc-postgresql", "php5-cli", "php5-curl", "php-db",
+        "php5-gd", "php-pear", "php5-pgsql", "pwgen", "rabbitmq-server",
+        "vorbis-tools", "libzend-framework-php"
+      ],
+      "source": {
+        "type": "deb",
+        "data": {
+          "all": {
+            "all": {
+              "file_name": "airtime-easy-setup.deb",
+              "uri": "http://apt.sourcefabric.org/misc/airtime-easy-setup.deb",
+              "sha256": "b37e4a98cb6208eba52c468d333b8f37acaa0bfa9f4b788d418a42aeebd850e5"
+            }
+          }
+        }
+      }
+    },
+    "ardour": {
+      "package": "ardour3",
+      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
+      "description": "digital audio workstation (graphical gtk2 interface)",
+      "website": "http://ardour.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "audacity": {
+      "package": "audacity",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "fast, cross-platform audio editor",
+      "website": "http://audacity.sourceforge.net/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "hydrogen": {
+      "package": "hydrogen",
+      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
+      "description": "advanced drum machine/step sequencer",
+      "website": "http://hydrogen-music.org/hcms/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "lmms": {
+      "package": "lmms",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Linux Multimedia Studio",
+      "website": "http://lmms.sourceforge.net/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "mixxx": {
+      "package": "mixxx",
+      "maintainer": "Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>",
+      "description": "Digital DJ interface",
+      "website": "http://mixxx.org/",
+      "suggested": ["libportaudio2", "libmp3lame0"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "mixxx-mixxx",
+          "uri": "ppa:mixxx/mixxx"
+        }
+      }
+    },
+    "muse": {
+      "package": "muse",
+      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
+      "description": "Qt4-based audio/MIDI sequencer",
+      "website": "http://muse-sequencer.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "rosegarden": {
+      "package": "rosegarden",
+      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
+      "description": "music editor and MIDI/audio sequencer",
+      "website": "http://www.rosegardenmusic.com/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "traverso": {
+      "package": "traverso",
+      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
+      "description": "Multitrack audio recorder and editor",
+      "website": "http://traverso-daw.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    }
+  }
+}
