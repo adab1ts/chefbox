@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.17.1:
+
+* definitions/install_app - extend dependencies management to all kind of package sources 
+
 ## 0.17.0:
 
 * libraries/box - new method to retrieve the code name of the target platform and some refactorization

@@ -30,17 +30,17 @@ define :install_app do
     end
   end
 
+  # Dependencies installation
+  dependencies = profile['dependencies'] || []
+  dependencies.each do |pkg|
+    package pkg
+  end
+
   origin = profile['source']['type']
   source = profile['source']['data']
   lsb_codename = Coderebels::Chefbox::Box.lsb_codename
 
   if origin == 'deb'
-    # Dependencies installation
-    dependencies = profile['dependencies'] || []
-    dependencies.each do |pkg|
-      package pkg
-    end
-
     # Download of deb package
     source = source[lsb_codename] || source['all']
     source = source[Coderebels::Chefbox::Box.arch] || source['all']
