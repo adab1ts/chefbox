@@ -13,7 +13,6 @@
         "data": {
           "repo_name": "virtualbox",
           "uri": "http://download.virtualbox.org/virtualbox/debian",
-          "distribution": "precise",
           "components": ["contrib"],
           "key": "http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"
         }

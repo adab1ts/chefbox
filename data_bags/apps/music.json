@@ -18,7 +18,6 @@
         "data": {
           "repo_name": "lastfm",
           "uri": "http://apt.last.fm/debian",
-          "distribution": "precise",
           "components": ["main"],
           "key": "http://apt.last.fm/last.fm.repo.gpg"
         }
