@@ -47,9 +47,11 @@ if selected
   include_recipe "audio_pro::airtime" if selected.include?("airtime")
   include_recipe "audio_pro::ardour" if selected.include?("ardour")
   include_recipe "audio_pro::audacity" if selected.include?("audacity")
+  include_recipe "audio_pro::guitarix" if selected.include?("guitarix")
   include_recipe "audio_pro::hydrogen" if selected.include?("hydrogen")
   include_recipe "audio_pro::mixxx" if selected.include?("mixxx")
   include_recipe "audio_pro::muse" if selected.include?("muse")
+  include_recipe "audio_pro::musescore" if selected.include?("musescore")
   include_recipe "audio_pro::rosegarden" if selected.include?("rosegarden")
   include_recipe "audio_pro::traverso" if selected.include?("traverso")
 

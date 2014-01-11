@@ -4,10 +4,13 @@
     "airtime",
     "ardour",
     "audacity",
+    "denemo",
+    "guitarix",
     "hydrogen",
     "lmms",
     "mixxx",
     "muse",
+    "musescore",
     "rosegarden",
     "traverso"
   ],
@@ -63,6 +66,25 @@
         }
       }
     },
+    "denemo": {
+      "package": "denemo",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "gtk+ front end to GNU Lilypond",
+      "website": "http://www.denemo.org/",
+      "suggested": ["lilypond"],
+      "source": {
+        "type": "distro"
+      }
+    },
+    "guitarix": {
+      "package": "guitarix",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Rock guitar amplifier for Jack",
+      "website": "http://guitarix.sourceforge.net/",
+      "source": {
+        "type": "distro"
+      }
+    },
     "hydrogen": {
       "package": "hydrogen",
       "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
@@ -116,11 +138,25 @@
         }
       }
     },
+    "musescore": {
+      "package": "musescore",
+      "maintainer": "Toby Smithe <tsmithe@ubuntu.com>",
+      "description": "Full featured WYSIWIG score editor",
+      "website": "http://musescore.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "kxstudio-team-ppa",
+          "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
     "rosegarden": {
       "package": "rosegarden",
       "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "music editor and MIDI/audio sequencer",
       "website": "http://www.rosegardenmusic.com/",
+      "suggested": ["lilypond"],
       "source": {
         "type": "ppa",
         "data": {

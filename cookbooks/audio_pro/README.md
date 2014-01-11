@@ -7,9 +7,11 @@ The following recipes may apply:
 - `audio_pro::airtime`    - installs __Airtime broadcast server__ and suggested packages.
 - `audio_pro::ardour`     - installs __Ardour digital audio workstation__ and suggested packages.
 - `audio_pro::audacity`   - installs __Audacity audio editor__ and suggested packages.
+- `audio_pro::guitarix`   - installs __Guitarix rock guitar amplifier for Jack__ and suggested packages.
 - `audio_pro::hydrogen`   - installs __Hydrogen drum machine/step sequencer__ and suggested packages.
 - `audio_pro::mixxx`      - installs __Mixxx digital DJ interface__ and suggested packages.
 - `audio_pro::muse`       - installs __Muse audio/MIDI sequencer__ and suggested packages.
+- `audio_pro::musescore`  - installs __Musescore score editor__ and suggested packages.
 - `audio_pro::rosegarden` - installs __Rosegarden music editor and MIDI/audio sequencer__ and suggested packages.
 - `audio_pro::traverso`   - installs __Traverso multitrack audio recorder and editor__ and suggested packages.
 
