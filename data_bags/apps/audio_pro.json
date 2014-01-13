@@ -156,7 +156,6 @@
       "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "music editor and MIDI/audio sequencer",
       "website": "http://www.rosegardenmusic.com/",
-      "suggested": ["lilypond"],
       "source": {
         "type": "ppa",
         "data": {
