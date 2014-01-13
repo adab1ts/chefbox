@@ -13,6 +13,7 @@
     "recipe[email]",
     "recipe[eyecandy]",
     "recipe[fileshare]",
+    "recipe[graphics]",
     "recipe[groupware]",
     "recipe[lenses]",
     "recipe[utils]",

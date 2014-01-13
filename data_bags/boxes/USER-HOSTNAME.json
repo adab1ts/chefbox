@@ -111,6 +111,10 @@
       "jdownloader",
       "transmission"
     ],
+    "graphics": [
+      "pinta",
+      "shotwell"
+    ],
     "graphics_pro": [
       "gimp",
       "inkscape",

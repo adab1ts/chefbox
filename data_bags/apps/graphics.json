@@ -1,0 +1,32 @@
+{
+  "id": "graphics",
+  "apps": [
+    "pinta",
+    "shotwell"
+  ],
+  "profiles": {
+    "pinta": {
+      "package": "pinta",
+      "maintainer": "Cameron White <cameronwhite91@gmail.com>",
+      "description": "Simple drawing/painting program",
+      "website": "http://pinta-project.com/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "pinta-maintainers-pinta-stable",
+          "uri": "ppa:pinta-maintainers/pinta-stable"
+        }
+      }
+    },
+    "shotwell": {
+      "package": "shotwell",
+      "version": "0.12.3-0ubuntu0.1",
+      "maintainer": "Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>",
+      "description": "Digital photo organizer",
+      "website": "http://www.yorba.org/projects/shotwell/",
+      "source": {
+        "type": "distro"
+      }
+    }
+  }
+}
