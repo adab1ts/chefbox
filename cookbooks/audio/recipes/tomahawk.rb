@@ -1,9 +1,9 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Cookbook Name:: music
-# Recipe:: rdio
+# Cookbook Name:: audio
+# Recipe:: tomahawk
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,10 +19,10 @@
 #
 
 
-music = node[:apps][:music]
+audio = node[:apps][:audio]
 
-# A simple native implementation for Rdio music services
-install_app "rdio" do
-  profile music['profiles']['rdio']
+# Social media player
+install_app "tomahawk" do
+  profile audio['profiles']['tomahawk']
 end
 

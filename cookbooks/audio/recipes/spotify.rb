@@ -1,9 +1,9 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Cookbook Name:: music
+# Cookbook Name:: audio
 # Recipe:: spotify
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,10 +19,10 @@
 #
 
 
-music = node[:apps][:music]
+audio = node[:apps][:audio]
 
 # Spotify desktop client
 install_app "spotify" do
-  profile music['profiles']['spotify']
+  profile audio['profiles']['spotify']
 end
 

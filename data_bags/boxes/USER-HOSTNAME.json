@@ -61,6 +61,14 @@
     "folder": "DEVEL_FOLDER"
   },
   "apps": {
+    "audio": [
+      "lastfm",
+      "nuvola",
+      "rdio",
+      "rhythmbox",
+      "spotify",
+      "tomahawk"
+    ],
     "audio_pro": [
       "airtime",
       "ardour",
@@ -125,14 +133,6 @@
       "news",
       "torrents",
       "wikipedia"
-    ],
-    "music": [
-      "lastfm",
-      "nuvola",
-      "rdio",
-      "rhythmbox",
-      "spotify",
-      "tomahawk"
     ],
     "security": [
       "antivirus",

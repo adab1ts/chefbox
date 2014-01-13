@@ -1,9 +1,9 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Cookbook Name:: music
+# Cookbook Name:: audio
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,28 +27,28 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-selected = box['apps']['music']
+selected = box['apps']['audio']
 
 if selected
-  music = data_bag_item('apps', 'music')
-  apps  = music['apps']
+  audio = data_bag_item('apps', 'audio')
+  apps  = audio['apps']
 
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "music" do
+  uninstall_apps "audio" do
     apps unselected
-    profiles music['profiles']
+    profiles audio['profiles']
   end
 
   # Install selected apps
-  node.set[:apps] = { :music => music }
+  node.set[:apps] = { :audio => audio }
 
-  include_recipe "music::lastfm" if selected.include?("lastfm")
-  include_recipe "music::nuvola" if selected.include?("nuvola")
-  include_recipe "music::rdio" if selected.include?("rdio")
-  include_recipe "music::rhythmbox" if selected.include?("rhythmbox")
-  include_recipe "music::spotify" if selected.include?("spotify")
-  include_recipe "music::tomahawk" if selected.include?("tomahawk")
+  include_recipe "audio::lastfm" if selected.include?("lastfm")
+  include_recipe "audio::nuvola" if selected.include?("nuvola")
+  include_recipe "audio::rdio" if selected.include?("rdio")
+  include_recipe "audio::rhythmbox" if selected.include?("rhythmbox")
+  include_recipe "audio::spotify" if selected.include?("spotify")
+  include_recipe "audio::tomahawk" if selected.include?("tomahawk")
 end
 

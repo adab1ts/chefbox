@@ -1,15 +1,15 @@
-# music Cookbook
+# audio Cookbook
 
-This cookbook installs a selected set of music solutions.
+This cookbook installs a selected set of audio solutions.
 The following recipes may apply:
 
-- `music::default` - purges unselected packages and includes recipes as nedeed.
-- `music::lastfm` - installs __Last.fm Scrobbler__ and suggested packages.
-- `music::nuvola` - installs __Nuvola Music Player__ and suggested packages.
-- `music::rdio` - installs __Rdio Music Player__ and suggested packages.
-- `music::rhythmbox` - installs __Rhythmbox Music Player__ and suggested packages.
-- `music::spotify` - installs __Spotify client__ and suggested packages.
-- `music::tomahawk` - installs __Tomahawk Music Player__ and suggested packages.
+- `audio::default`   - purges unselected packages and includes recipes as nedeed.
+- `audio::lastfm`    - installs __Last.fm Scrobbler__ and suggested packages.
+- `audio::nuvola`    - installs __Nuvola Music Player__ and suggested packages.
+- `audio::rdio`      - installs __Rdio Music Player__ and suggested packages.
+- `audio::rhythmbox` - installs __Rhythmbox Music Player__ and suggested packages.
+- `audio::spotify`   - installs __Spotify client__ and suggested packages.
+- `audio::tomahawk`  - installs __Tomahawk Music Player__ and suggested packages.
 
 
 ## Requirements
@@ -28,14 +28,14 @@ This cookbook only applies to the following platforms:
 
 ## Usage
 
-#### music::default
-Just include `music` in your node's `run_list`:
+#### audio::default
+Just include `audio` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[music]"
+    "recipe[audio]"
   ]
 }
 ```
@@ -50,7 +50,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (C) 2013 Carles Muiños
+Copyright (c) 2013,2014 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
