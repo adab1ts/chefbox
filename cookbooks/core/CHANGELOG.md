@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.17.2:
+
+* definitions/install_app - now manages version-based package installation
+
 ## 0.17.1:
 
 * definitions/install_app - extend dependencies management to all kind of package sources 

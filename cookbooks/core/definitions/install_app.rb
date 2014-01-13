@@ -86,6 +86,7 @@ define :install_app do
     # Installation
     package params[:name] do
       package_name profile['package']
+      version profile['version']
     end
   end
 
