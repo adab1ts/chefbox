@@ -1,6 +1,6 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Cookbook Name:: graphics
+# Cookbook Name:: graphics_pro
 # Recipe:: default
 #
 # Copyright 2013, Carles Muiños
@@ -27,26 +27,26 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-selected = box['apps']['graphics']
+selected = box['apps']['graphics_pro']
 
 if selected
-  graphics = data_bag_item('apps', 'graphics')
-  apps = graphics['apps']
+  graphics_pro = data_bag_item('apps', 'graphics_pro')
+  apps = graphics_pro['apps']
 
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "graphics" do
+  uninstall_apps "graphics_pro" do
     apps unselected
-    profiles graphics['profiles']
+    profiles graphics_pro['profiles']
   end
 
   # Install selected apps
-  node.set[:apps] = { :graphics => graphics }
+  node.set[:apps] = { :graphics_pro => graphics_pro }
 
-  include_recipe "graphics::gimp" if selected.include?("gimp")
-  include_recipe "graphics::inkscape" if selected.include?("inkscape")
-  include_recipe "graphics::scribus" if selected.include?("scribus")
-  include_recipe "graphics::mypaint" if selected.include?("mypaint")
+  include_recipe "graphics_pro::gimp" if selected.include?("gimp")
+  include_recipe "graphics_pro::inkscape" if selected.include?("inkscape")
+  include_recipe "graphics_pro::scribus" if selected.include?("scribus")
+  include_recipe "graphics_pro::mypaint" if selected.include?("mypaint")
 end
 

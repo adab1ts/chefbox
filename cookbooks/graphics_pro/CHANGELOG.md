@@ -1,6 +1,6 @@
-# CHANGELOG for graphics
+# CHANGELOG for graphics_pro
 
-This file is used to list changes made in each version of graphics.
+This file is used to list changes made in each version of graphics_pro.
 
 ## 0.2.0:
 
@@ -21,5 +21,5 @@ This file is used to list changes made in each version of graphics.
 
 ## 0.1.0:
 
-* Initial release of graphics
+* Initial release of graphics_pro
 

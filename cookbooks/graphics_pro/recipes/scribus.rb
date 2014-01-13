@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Cookbook Name:: graphics
-# Recipe:: inkscape
+# Cookbook Name:: graphics_pro
+# Recipe:: scribus
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,10 +19,10 @@
 #
 
 
-graphics = node[:apps][:graphics]
+graphics_pro = node[:apps][:graphics_pro]
 
-# Vector-based drawing program
-install_app "inkscape" do
-  profile graphics['profiles']['inkscape']
+# Open Source Desktop Page Layout
+install_app "scribus" do
+  profile graphics_pro['profiles']['scribus']
 end
 

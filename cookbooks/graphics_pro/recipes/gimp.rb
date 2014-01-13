@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Cookbook Name:: graphics
-# Recipe:: mypaint
+# Cookbook Name:: graphics_pro
+# Recipe:: gimp
 #
 # Copyright 2013, Carles Muiños
 #
@@ -19,10 +19,10 @@
 #
 
 
-graphics = node[:apps][:graphics]
+graphics_pro = node[:apps][:graphics_pro]
 
-# Paint program for use with graphics tablets
-install_app "mypaint" do
-  profile graphics['profiles']['mypaint']
+# The GNU Image Manipulation Program
+install_app "gimp" do
+  profile graphics_pro['profiles']['gimp']
 end
 

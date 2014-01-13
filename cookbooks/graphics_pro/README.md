@@ -1,13 +1,13 @@
-# graphics Cookbook
+# graphics_pro Cookbook
 
-This cookbook installs a selected set of graphics solutions.
+This cookbook installs a selected set of graphics pro solutions.
 The following recipes may apply:
 
-- `graphics::default` - purges unselected packages and includes recipes as nedeed.
-- `graphics::gimp` - installs __gimp__ and suggested packages.
-- `graphics::inkscape` - installs __inkscape__ and suggested packages.
-- `graphics::scribus` - installs __scribus__ and suggested packages.
-- `graphics::mypaint` - installs __mypaint__ and suggested packages.
+- `graphics_pro::default`  - purges unselected packages and includes recipes as nedeed.
+- `graphics_pro::gimp`     - installs __gimp__ and suggested packages.
+- `graphics_pro::inkscape` - installs __inkscape__ and suggested packages.
+- `graphics_pro::scribus`  - installs __scribus__ and suggested packages.
+- `graphics_pro::mypaint`  - installs __mypaint__ and suggested packages.
 
 
 ## Requirements
@@ -26,14 +26,14 @@ This cookbook only applies to the following platforms:
 
 ## Usage
 
-#### graphics::default
-Just include `graphics` in your node's `run_list`:
+#### graphics_pro::default
+Just include `graphics_pro` in your node's `run_list`:
 
 ```json
 {
   "name":"my_node",
   "run_list": [
-    "recipe[graphics]"
+    "recipe[graphics_pro]"
   ]
 }
 ```
@@ -48,7 +48,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (C) 2013 Carles Muiños
+Copyright (c) 2013,2014 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
