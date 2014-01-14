@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.3.0:
+
+* recipes/default     - now includes darktable, draftsight, freecad, librecad, qcad and rawtherapee install management
+* recipes/darktable   - installs Darktable virtual lighttable and darkroom for photographers
+* recipes/draftsight  - delivers support for DraftSight CAD solution installation
+* recipes/freecad     - installs FreeCAD CAx program
+* recipes/qcad        - installs QCAD program
+* recipes/rawtherapee - installs Rawtherapee RAW file processor
+* templates/default/qcad/qcad.desktop      - ubuntu launcher for QCAD
+* templates/linuxmint-13/qcad/qcad.desktop - linux mint launcher for QCAD
+
 ## 0.2.0:
 
 * recipe/default - now checks for section presence in box profile's apps list before proceed

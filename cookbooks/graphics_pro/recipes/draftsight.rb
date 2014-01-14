@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: graphics_pro
-# Recipe:: inkscape
+# Recipe:: draftsight
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,10 +19,8 @@
 #
 
 
-graphics_pro = node[:apps][:graphics_pro]
-
-# Vector-based drawing program
-install_app "inkscape" do
-  profile graphics_pro['profiles']['inkscape']
+# With DraftSight, you can easily create professional CAD drawings
+support "draftsight" do
+  section "graphics_pro"
 end
 

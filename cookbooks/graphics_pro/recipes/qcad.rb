@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: graphics_pro
-# Recipe:: inkscape
+# Recipe:: qcad
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -20,9 +20,18 @@
 
 
 graphics_pro = node[:apps][:graphics_pro]
+box = node[:box]
 
-# Vector-based drawing program
-install_app "inkscape" do
-  profile graphics_pro['profiles']['inkscape']
+# The Open Source 2D CAD
+install_app "qcad" do
+  profile graphics_pro['profiles']['qcad']
+end
+
+launcher "qcad" do
+  template "/qcad/qcad.desktop.erb"
+  variables(
+    :icon => "~/#{box['folders']['apps']}/qcad/qcad_icon.png",
+    :exec => "sh -c '~/#{box['folders']['apps']}/qcad/qcad'"
+  )
 end
 

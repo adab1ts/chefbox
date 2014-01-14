@@ -3,11 +3,16 @@
 This cookbook installs a selected set of graphics pro solutions.
 The following recipes may apply:
 
-- `graphics_pro::default`  - purges unselected packages and includes recipes as nedeed.
-- `graphics_pro::gimp`     - installs __gimp__ and suggested packages.
-- `graphics_pro::inkscape` - installs __inkscape__ and suggested packages.
-- `graphics_pro::scribus`  - installs __scribus__ and suggested packages.
-- `graphics_pro::mypaint`  - installs __mypaint__ and suggested packages.
+- `graphics_pro::default`     - purges unselected packages and includes recipes as nedeed.
+- `graphics_pro::darktable`   - installs __Darktable for photographers__ and suggested packages.
+- `graphics_pro::draftsight`  - delivers support for __DraftSight CAD solution__ installation.
+- `graphics_pro::freecad`     - installs __FreeCAD CAx program__ and suggested packages.
+- `graphics_pro::gimp`        - installs __Gimp image manipulation program__ and suggested packages.
+- `graphics_pro::inkscape`    - installs __Inkscape vector-based drawing program__ and suggested packages.
+- `graphics_pro::mypaint`     - installs __Mypaint for use with graphics tablets__ and suggested packages.
+- `graphics_pro::qcad`        - installs __QCAD program__ and suggested packages.
+- `graphics_pro::rawtherapee` - installs __Rawtherapee RAW file processor__ and suggested packages.
+- `graphics_pro::scribus`     - installs __Scribus__ and suggested packages.
 
 
 ## Requirements

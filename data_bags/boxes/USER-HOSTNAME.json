@@ -10,6 +10,7 @@
   "lang": "LANG",
   "folders": {
     "admin": "ADMIN_FOLDER",
+    "apps": "APPS_FOLDER",
     "desktop": "DESKTOP_FOLDER",
     "support": "FIRSTSTEPS_FOLDER"
   },
@@ -116,9 +117,14 @@
       "shotwell"
     ],
     "graphics_pro": [
+      "darktable",
+      "draftsight",
+      "freecad",
       "gimp",
       "inkscape",
       "mypaint",
+      "qcad",
+      "rawtherapee",
       "scribus"
     ],
     "groupware": [

@@ -94,6 +94,20 @@
       }
     }
   },
+  "graphics_pro": {
+    "draftsight": {
+      "ca": {
+        "file": "draftsight-es.pdf",
+        "url": "http://ubuntuone.com/6D73BznR0DNBPcTqoasNjV",
+        "sha256": "9935d2b1657539f1717feee4ed0f86fe771ac08d4c69076fd0992490c1f0e5a1"
+      },
+      "es": {
+        "file": "draftsight-es.pdf",
+        "url": "http://ubuntuone.com/6D73BznR0DNBPcTqoasNjV",
+        "sha256": "9935d2b1657539f1717feee4ed0f86fe771ac08d4c69076fd0992490c1f0e5a1"
+      }
+    }
+  },
   "groupware": {
     "skype": {
       "ca": {

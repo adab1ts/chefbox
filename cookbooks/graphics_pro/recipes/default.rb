@@ -3,7 +3,7 @@
 # Cookbook Name:: graphics_pro
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,9 +44,14 @@ if selected
   # Install selected apps
   node.set[:apps] = { :graphics_pro => graphics_pro }
 
+  include_recipe "graphics_pro::darktable" if selected.include?("darktable")
+  include_recipe "graphics_pro::draftsight" if selected.include?("draftsight")
+  include_recipe "graphics_pro::freecad" if selected.include?("freecad")
   include_recipe "graphics_pro::gimp" if selected.include?("gimp")
   include_recipe "graphics_pro::inkscape" if selected.include?("inkscape")
-  include_recipe "graphics_pro::scribus" if selected.include?("scribus")
   include_recipe "graphics_pro::mypaint" if selected.include?("mypaint")
+  include_recipe "graphics_pro::qcad" if selected.include?("qcad")
+  include_recipe "graphics_pro::rawtherapee" if selected.include?("rawtherapee")
+  include_recipe "graphics_pro::scribus" if selected.include?("scribus")
 end
 

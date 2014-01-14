@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: graphics_pro
-# Recipe:: inkscape
+# Recipe:: freecad
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 graphics_pro = node[:apps][:graphics_pro]
 
-# Vector-based drawing program
-install_app "inkscape" do
-  profile graphics_pro['profiles']['inkscape']
+# Extensible Open Source CAx program
+install_app "freecad" do
+  profile graphics_pro['profiles']['freecad']
 end
 

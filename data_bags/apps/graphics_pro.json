@@ -1,16 +1,56 @@
 {
   "id": "graphics_pro",
   "apps": [
+    "darktable",
+    "draftsight",
+    "freecad",
     "gimp",
     "inkscape",
+    "librecad",
     "mypaint",
+    "qcad",
+    "rawtherapee",
     "scribus"
   ],
   "profiles": {
+    "darktable": {
+      "package": "darktable",
+      "maintainer": "Pascal de Bruijn <pmjdebruijn@pcode.nl>",
+      "description": "Virtual lighttable and darkroom for photographers",
+      "website": "http://www.darktable.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "pmjdebruijn-darktable-release",
+          "uri": "ppa:pmjdebruijn/darktable-release"
+        }
+      }
+    },
+    "draftsight": {
+      "package": "draftsight",
+      "maintainer": "Dassault Systemes <CrashReports@DraftSight.com",
+      "description": "With DraftSight, you can easily create professional CAD drawings",
+      "website": "http://www.3ds.com/es/productos-y-servicios/draftsight/"
+    },
+    "freecad": {
+      "package": "freecad",
+      "maintainer": "Normand Chamberland <gemnoc@gmail.ca>",
+      "description": "Extensible Open Source CAx program",
+      "website": "http://www.freecadweb.org/",
+      "suggested": ["freecad-doc", "python-matplotlib"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "freecad-maintainers-freecad-stable",
+          "uri": "ppa:freecad-maintainers/freecad-stable"
+        }
+      }
+    },
     "gimp": {
       "package": "gimp",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "The GNU Image Manipulation Program",
+      "website": "http://www.gimp.org/",
       "suggested": ["gimp-plugin-registry", "gimp-gmic"],
       "source": {
         "type": "ppa",
@@ -24,14 +64,29 @@
       "package": "inkscape",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "vector-based drawing program",
+      "website": "http://www.inkscape.org/es/",
       "source": {
         "type": "distro"
+      }
+    },
+    "librecad": {
+      "package": "librecad",
+      "maintainer": "Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>",
+      "description": "Computer-aided design (CAD) system",
+      "website": "http://librecad.org/cms/home.html",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "librecad-dev-librecad-stable",
+          "uri": "ppa:librecad-dev/librecad-stable"
+        }
       }
     },
     "mypaint": {
       "package": "mypaint",
       "maintainer": "Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>",
       "description": "paint program for use with graphics tablets",
+      "website": "http://mypaint.intilinux.com/",
       "suggested": ["mypaint-data-hires"],
       "source": {
         "type": "ppa",
@@ -41,10 +96,48 @@
         }
       }
     },
+    "qcad": {
+      "package": "qcad",
+      "maintainer": "Andrew Mustun <https://github.com/qcad>",
+      "description": "The Open Source 2D CAD",
+      "website": "http://www.qcad.org/en/",
+      "source": {
+        "type": "bin",
+        "ztype": "tgz",
+        "data": {
+          "all": {
+            "i686": {
+              "file_name": "qcad-3.4.5-linux-x86_32.tar.gz",
+              "uri": "http://www.qcad.org/archives/qcad/qcad-3.4.5-linux-x86_32.tar.gz",
+              "sha256": "0ab3fb35b66b03759f1ebd123e45d84d28ded68eb7610a71ec5351130020d49a"
+            },
+            "x86_64": {
+              "file_name": "qcad-3.4.5-linux-x86_64.tar.gz",
+              "uri": "http://www.qcad.org/archives/qcad/qcad-3.4.5-linux-x86_64.tar.gz",
+              "sha256": "d1164193fa2db307e773293561e670d32a1e4bef1d23fc01067890dbe3580500"
+            }
+          }
+        }
+      }
+    },
+    "rawtherapee": {
+      "package": "rawtherapee",
+      "maintainer": "Dariusz Duma <dhor@toxic.net.pl>",
+      "description": "RAW file processor",
+      "website": "http://www.rawtherapee.com/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "dhor-myway",
+          "uri": "ppa:dhor/myway"
+        }
+      }
+    },
     "scribus": {
       "package": "scribus",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Open Source Desktop Page Layout - stable branch",
+      "website": "http://www.scribus.net/canvas/Scribus",
       "source": {
         "type": "distro"
       }
