@@ -36,14 +36,64 @@ define :install_app do
     package pkg
   end
 
+  lsb_codename = Coderebels::Chefbox::Box.lsb_codename
+  arch = Coderebels::Chefbox::Box.arch
+
   origin = profile['source']['type']
   source = profile['source']['data']
-  lsb_codename = Coderebels::Chefbox::Box.lsb_codename
 
-  if origin == 'deb'
+  if origin == 'bin'
+    # Download of package
+    source = source[lsb_codename] || source['all']
+    source = source[arch] || source['all']
+
+    cache_path = Chef::Config[:file_cache_path]
+    bin_file = "#{cache_path}/#{source['file_name']}"
+
+    remote_file bin_file do
+      source source['uri']
+      checksum source['sha256']
+    end
+
+    # Installation
+    box = node[:box]
+
+    box['users'].each do |username, usr|
+      apps_dir  = "#{usr['home']}/#{box['folders']['apps']}"
+
+      directory_tree apps_dir do
+        exclude usr['home']
+        owner username
+        group usr['group']
+        mode 00755
+      end
+
+      unzip_cmd, app_folder = [nil, nil]
+
+      case profile['source']['ztype']
+      when "tgz"
+        /(?<full_name>.+).tar.gz/ =~ source['file_name']
+        unzip_cmd  = "tar -C #{apps_dir} -xzf #{bin_file}"
+        app_folder = full_name
+      end
+
+      app_currdir = "#{apps_dir}/#{app_folder}"
+      app_dir     = "#{apps_dir}/#{params[:name]}"
+
+      bash "#{username}_#{params[:name]}_install" do
+        cwd cache_path
+        code <<-EOH
+          #{unzip_cmd} \
+          && mv #{app_currdir} #{app_dir} \
+          && chown -R #{username}.#{usr['group']} #{app_dir}
+          EOH
+        not_if { ::File.exists?(app_dir) }
+      end
+    end
+  elsif origin == 'deb'
     # Download of deb package
     source = source[lsb_codename] || source['all']
-    source = source[Coderebels::Chefbox::Box.arch] || source['all']
+    source = source[arch] || source['all']
 
     deb_file = "#{Chef::Config[:file_cache_path]}/#{source['file_name']}"
 

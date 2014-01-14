@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.18.0:
+
+* definitions/install_app - now manages zipped binaries installation as well
+
 ## 0.17.2:
 
 * definitions/install_app - now manages version-based package installation
