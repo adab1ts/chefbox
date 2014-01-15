@@ -116,7 +116,6 @@
       "maintainer": "Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>",
       "description": "Digital DJ interface",
       "website": "http://mixxx.org/",
-      "suggested": ["libportaudio2", "libmp3lame0"],
       "source": {
         "type": "ppa",
         "data": {
