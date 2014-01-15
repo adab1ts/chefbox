@@ -30,7 +30,10 @@
       "package": "draftsight",
       "maintainer": "Dassault Systemes <CrashReports@DraftSight.com",
       "description": "With DraftSight, you can easily create professional CAD drawings",
-      "website": "http://www.3ds.com/es/productos-y-servicios/draftsight/"
+      "website": "http://www.3ds.com/es/productos-y-servicios/draftsight/",
+      "source": {
+        "type": "deb"
+      }
     },
     "freecad": {
       "package": "freecad",
