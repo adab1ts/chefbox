@@ -48,7 +48,7 @@ define :install_app do
     source = source[arch] || source['all']
 
     cache_path = Chef::Config[:file_cache_path]
-    bin_file = "#{cache_path}/#{source['file_name']}"
+    bin_file   = "#{cache_path}/#{source['file_name']}"
 
     remote_file bin_file do
       source source['uri']
@@ -59,7 +59,7 @@ define :install_app do
     box = node[:box]
 
     box['users'].each do |username, usr|
-      apps_dir  = "#{usr['home']}/#{box['folders']['apps']}"
+      apps_dir = "#{usr['home']}/#{box['folders']['apps']}"
 
       directory_tree apps_dir do
         exclude usr['home']
@@ -68,26 +68,27 @@ define :install_app do
         mode 00755
       end
 
-      unzip_cmd, app_folder = [nil, nil]
+      app_home  = "#{apps_dir}/#{params[:name]}"
+      app_dir   = nil
+      unzip_cmd = nil
 
       case profile['source']['ztype']
       when "tgz"
         /(?<full_name>.+).tar.gz/ =~ source['file_name']
-        unzip_cmd  = "tar -C #{apps_dir} -xzf #{bin_file}"
-        app_folder = full_name
+
+        app_dir   = "#{apps_dir}/#{full_name}"
+        unzip_cmd = "tar -C #{apps_dir} -xzf #{bin_file}"
       end
 
-      app_currdir = "#{apps_dir}/#{app_folder}"
-      app_dir     = "#{apps_dir}/#{params[:name]}"
 
       bash "#{username}_#{params[:name]}_install" do
         cwd cache_path
         code <<-EOH
           #{unzip_cmd} \
-          && mv #{app_currdir} #{app_dir} \
-          && chown -R #{username}.#{usr['group']} #{app_dir}
+          && mv #{app_dir} #{app_home} \
+          && chown -R #{username}.#{usr['group']} #{app_home}
           EOH
-        not_if { ::File.exists?(app_dir) }
+        not_if { ::File.exists?(app_home) }
       end
     end
   elsif origin == 'deb'

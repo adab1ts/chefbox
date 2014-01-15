@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.19.1:
+
+* definitions/install_app - minor refactorization
+
 ## 0.19.0:
 
 * definitions/uninstall_app - now manages bin packages uninstallation
