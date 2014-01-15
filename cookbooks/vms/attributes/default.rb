@@ -3,7 +3,7 @@
 # Cookbook Name:: vms
 # Attributes:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

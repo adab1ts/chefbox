@@ -3,7 +3,7 @@
 # Cookbook Name:: vms
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,22 +27,22 @@ include_recipe "base"
 ## Deploy
 
 box = node[:box]
-selected = box['apps']['virtualization']
+selected = box['apps']['vms']
 
 if selected
-  virtualization = data_bag_item('apps', 'virtualization')
-  apps = virtualization['apps']
+  vms = data_bag_item('apps', 'vms')
+  apps = vms['apps']
 
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "virtualization" do
+  uninstall_apps "vms" do
     apps unselected
-    profiles virtualization['profiles']
+    profiles vms['profiles']
   end
 
   # Install selected apps
-  node.set[:apps] = { :virtualization => virtualization }
+  node.set[:apps] = { :vms => vms }
 
   include_recipe "vms::virtualbox" if selected.include?("virtualbox")
 end

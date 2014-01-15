@@ -1,5 +1,5 @@
 {
-  "id": "virtualization",
+  "id": "vms",
   "apps": [
     "virtualbox"
   ],
@@ -8,6 +8,7 @@
       "package": "virtualbox-4.3",
       "maintainer": "Oracle Corporation <info@virtualbox.org>",
       "description": "Oracle VM VirtualBox",
+      "website": "http://www.virtualbox.org/",
       "source": {
         "type": "repo",
         "data": {

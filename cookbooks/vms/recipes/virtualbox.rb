@@ -3,7 +3,7 @@
 # Cookbook Name:: vms
 # Recipe:: virtualbox
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,9 +27,9 @@ package "dkms"
 
 ## Installation
 
-box = node[:box]
-virtualization = node[:apps][:virtualization]
-vbox = virtualization['profiles']['virtualbox']
+box  = node[:box]
+vms  = node[:apps][:vms]
+vbox = vms['profiles']['virtualbox']
 
 # Oracle VM VirtualBox
 install_app "virtualbox" do

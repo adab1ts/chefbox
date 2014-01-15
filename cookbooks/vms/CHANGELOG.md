@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.3.1:
+
+* recipe/default     - minor update
+* recipes/virtualbox - minor update
+
 ## 0.3.0:
 
 * recipe/default     - now checks for section presence in box profile's apps list before proceed
