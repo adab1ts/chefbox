@@ -3,7 +3,7 @@
 # Cookbook Name:: video
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,6 +44,8 @@ if selected
   # Install selected apps
   node.set[:apps] = { :video => video }
 
+  include_recipe "video::miro" if selected.include?("miro")
+  include_recipe "video::mmc" if selected.include?("mmc")
   include_recipe "video::openshot" if selected.include?("openshot")
   include_recipe "video::vlc" if selected.include?("vlc")
 end

@@ -156,6 +156,8 @@
       "p7zip"
     ],
     "video": [
+      "miro",
+      "mmc",
       "openshot",
       "vlc"
     ],

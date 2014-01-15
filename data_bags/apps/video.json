@@ -1,18 +1,58 @@
 {
   "id": "video",
   "apps": [
+    "miro",
+    "mmc",
     "openshot",
     "vlc"
   ],
   "profiles": {
+    "miro": {
+      "package": "miro",
+      "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
+      "description": "GTK+ based media player",
+      "website": "http://www.getmiro.com/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "pcf-miro-releases",
+          "uri": "ppa:pcf/miro-releases"
+        }
+      }
+    },
+    "mmc": {
+      "package": "mmc",
+      "maintainer": "miksoft <mmc@miksoft.net>",
+      "description": "Tool for converting desktop and mobile devices video and audio formats",
+      "website": "http://www.miksoft.net/mobileMediaConverter.php",
+      "dependencies": ["libavcodec-extra-53", "liblzo2-2", "mencoder"],
+      "source": {
+        "type": "deb",
+        "data": {
+          "all": {
+            "i686": {
+              "file_name": "mmc_1.8.4_i386.deb",
+              "uri": "http://www.miksoft.net/products/mmc_1.8.4_i386.deb",
+              "sha256": "5322777cba6a407c2dcadbd5797f28f7132d038e5b3c009db9a705d28da97dc8"
+            },
+            "x86_64": {
+              "file_name": "mmc_1.8.4_i386_multiarch.deb",
+              "uri": "http://www.miksoft.net/products/mmc_1.8.4_i386_multiarch.deb",
+              "sha256": "cf2f71d7a4083636573123aef486a4aa2c560f8e825c672dea2167fc0a9a20f1"
+            }
+          }
+        }
+      }
+    },
     "openshot": {
       "package": "openshot",
       "maintainer": "Jonathan Thomas <Jonathan.Oomph@gmail.com>",
       "description": "Create and edit videos and movies",
+      "website": "http://www.openshot.org/",
       "source": {
         "type": "ppa",
         "data": {
-          "repo_name": "openshot.developers-ppa",
+          "repo_name": "openshot_developers-ppa",
           "uri": "ppa:openshot.developers/ppa"
         }
       }
@@ -21,6 +61,7 @@
       "package": "vlc",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "multimedia player and streamer",
+      "website": "http://www.videolan.org/vlc/",
       "suggested": ["phonon-backend-vlc"],
       "source": {
         "type": "distro"

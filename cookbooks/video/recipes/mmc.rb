@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: video
-# Recipe:: vlc
+# Recipe:: mmc
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 video = node[:apps][:video]
 
-# Multimedia player and streamer
-install_app "vlc" do
-  profile video['profiles']['vlc']
+# Mobile Media Converter
+install_app "mmc" do
+  profile video['profiles']['mmc']
 end
 

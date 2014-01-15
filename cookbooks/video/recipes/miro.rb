@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: video
-# Recipe:: vlc
+# Recipe:: miro
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 video = node[:apps][:video]
 
-# Multimedia player and streamer
-install_app "vlc" do
-  profile video['profiles']['vlc']
+# GTK+ based media player
+install_app "miro" do
+  profile video['profiles']['miro']
 end
 
