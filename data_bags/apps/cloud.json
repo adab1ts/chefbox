@@ -2,7 +2,6 @@
   "id": "cloud",
   "apps": [
     "dropbox",
-    "dropbox-mint",
     "ubuntuone"
   ],
   "profiles": {
