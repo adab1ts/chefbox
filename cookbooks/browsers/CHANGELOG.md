@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.4.3:
+
+* recipes/chrome - rollback changes made in 0.4.1 (unnecessary)
+
 ## 0.4.2:
 
 * recipes/chrome   - now uses module Box's new method to retrieve platform code name
