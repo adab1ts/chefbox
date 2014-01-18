@@ -158,15 +158,17 @@
       "p7zip"
     ],
     "video": [
+      "bombonodvd",
+      "dvdstyler",
+      "handbrake",
       "miro",
       "mmc",
+      "mvc",
+      "ogmrip",
       "openshot",
       "vlc"
     ],
     "video_pro": [
-      "bombonodvd",
-      "handbrake",
-      "ogmrip"
     ],
     "vms": [
       "virtualbox"

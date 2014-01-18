@@ -1,12 +1,52 @@
 {
   "id": "video",
   "apps": [
+    "bombonodvd",
+    "dvdstyler",
+    "handbrake",
     "miro",
     "mmc",
+    "mvc",
+    "ogmrip",
     "openshot",
     "vlc"
   ],
   "profiles": {
+    "bombonodvd": {
+      "package": "bombono-dvd",
+      "maintainer": "Alessio Treglia <quadrispro@ubuntu.com>",
+      "description": "DVD authoring program with nice and clean GUI",
+      "website": "http://www.bombono.org/cgi-bin/wiki/",
+      "source": {
+        "type": "distro"
+      }
+    },
+    "dvdstyler": {
+      "package": "dvdstyler",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Cross platform DVD Authoring System for Video DVD Production",
+      "website": "http://www.dvdstyler.org/en/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "dvdstyler-maintainers-ppa",
+          "uri": "ppa:dvdstyler-maintainers/ppa"
+        }
+      }
+    },
+    "handbrake": {
+      "package": "handbrake-gtk",
+      "maintainer": "John Stebbins <jstebbins.hb@gmail.com>",
+      "description": "Versatile DVD ripper and video transcoder",
+      "website": "http://handbrake.fr/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "stebbins-handbrake-releases",
+          "uri": "ppa:stebbins/handbrake-releases"
+        }
+      }
+    },
     "miro": {
       "package": "miro",
       "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
@@ -41,6 +81,35 @@
               "sha256": "cf2f71d7a4083636573123aef486a4aa2c560f8e825c672dea2167fc0a9a20f1"
             }
           }
+        }
+      }
+    },
+    "mvc": {
+      "package": "mirovideoconverter",
+      "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
+      "description": "Super simple video transcoder",
+      "website": "http://www.mirovideoconverter.com/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "pcf-miro-releases",
+          "uri": "ppa:pcf/miro-releases"
+        }
+      }
+    },
+    "ogmrip": {
+      "package": "ogmrip",
+      "maintainer": "GetDeb Package Ninjas <package.ninjas@getdeb.net>",
+      "description": "Application for ripping and encoding DVD",
+      "website": "http://ogmrip.sourceforge.net/en/index.html",
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "getdeb",
+          "uri": "http://archive.getdeb.net/ubuntu",
+          "distribution": "precise-getdeb",
+          "components": ["apps"],
+          "key": "http://archive.getdeb.net/getdeb-archive.key"
         }
       }
     },

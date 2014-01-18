@@ -44,8 +44,13 @@ if selected
   # Install selected apps
   node.set[:apps] = { :video => video }
 
+  include_recipe "video::bombonodvd" if selected.include?("bombonodvd")
+  include_recipe "video::dvdstyler" if selected.include?("dvdstyler")
+  include_recipe "video::handbrake" if selected.include?("handbrake")
   include_recipe "video::miro" if selected.include?("miro")
   include_recipe "video::mmc" if selected.include?("mmc")
+  include_recipe "video::mvc" if selected.include?("mvc")
+  include_recipe "video::ogmrip" if selected.include?("ogmrip")
   include_recipe "video::openshot" if selected.include?("openshot")
   include_recipe "video::vlc" if selected.include?("vlc")
 end

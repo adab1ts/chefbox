@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.4.0:
+
+* recipes/default    - now includes bombonodvd, dvdstyler, handbrake, mvc and ogmrip install management
+* recipes/bombonodvd - installs Bombono DVD authoring program
+* recipes/dvdstyler  - installs DVDStyler DVD Authoring System for Video DVD Production
+* recipes/handbrake  - installs HandBrake DVD ripper and video transcoder
+* recipes/mvc        - installs Miro Video Converter
+* recipes/ogmrip     - installs OGMRip DVD ripper and encoder
+
 ## 0.3.0:
 
 * recipes/default - now includes miro and mmc install management
