@@ -3,7 +3,7 @@
 # Cookbook Name:: groupware
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -45,6 +45,8 @@ if selected
   node.set[:apps] = { :groupware => groupware }
 
   include_recipe "groupware::hangouts" if selected.include?("hangouts")
+  include_recipe "groupware::mumble" if selected.include?("mumble")
   include_recipe "groupware::skype" if selected.include?("skype")
+  include_recipe "groupware::xchat" if selected.include?("xchat")
 end
 

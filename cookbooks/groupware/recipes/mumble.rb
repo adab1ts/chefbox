@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: groupware
-# Recipe:: skype
+# Recipe:: mumble
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,12 +21,8 @@
 
 groupware = node[:apps][:groupware]
 
-# Client for Skype VOIP and instant messaging service
-install_app "skype" do
-  profile groupware['profiles']['skype']
-end
-
-support "skype" do
-  section "groupware"
+# Low latency VoIP client
+install_app "mumble" do
+  profile groupware['profiles']['mumble']
 end
 

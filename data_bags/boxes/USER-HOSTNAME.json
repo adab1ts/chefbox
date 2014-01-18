@@ -129,7 +129,9 @@
     ],
     "groupware": [
       "hangouts",
-      "skype"
+      "mumble",
+      "skype",
+      "xchat"
     ],
     "indicators": [
       "plug&play",
@@ -160,6 +162,11 @@
       "mmc",
       "openshot",
       "vlc"
+    ],
+    "video_pro": [
+      "bombonodvd",
+      "handbrake",
+      "ogmrip"
     ],
     "vms": [
       "virtualbox"

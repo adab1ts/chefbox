@@ -5,7 +5,9 @@ The following recipes may apply:
 
 - `groupware::default`  - purges unselected packages and includes recipes as nedeed.
 - `groupware::hangouts` - installs __Google Hangouts plugin__ and suggested packages.
+- `groupware::mumble`   - installs __Mumble low latency VoIP client__ and suggested packages.
 - `groupware::skype`    - installs __Skype__ and suggested packages.
+- `groupware::xchat`    - installs __XChat IRC client__ and suggested packages.
 
 
 ## Requirements
@@ -46,7 +48,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (C) 2013 Carles Muiños
+Copyright (c) 2013,2014 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
