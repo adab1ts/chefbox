@@ -22,14 +22,6 @@
 define :uninstall_app do
   profile = params[:profile]
 
-  # Suggested packages
-  suggested = profile['suggested'] || []
-  suggested.each do |pkg|
-    package pkg do
-      action :purge
-    end
-  end
-
   source = profile['source']
   origin = source['type']
 

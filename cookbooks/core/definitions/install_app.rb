@@ -79,9 +79,9 @@ define :install_app do
       bash "#{username}_#{params[:name]}_install" do
         cwd cache_path
         code <<-EOH
-          #{unzip_cmd} \
-          && mv #{app_dir} #{app_home} \
-          && chown -R #{username}.#{usr['group']} #{app_home}
+          #{unzip_cmd}
+          [[ ! -d "#{app_home}" ]] && mv #{app_dir} #{app_home}
+          chown -R #{username}.#{usr['group']} #{app_home}
           EOH
         not_if { ::File.exists?(app_home) }
       end

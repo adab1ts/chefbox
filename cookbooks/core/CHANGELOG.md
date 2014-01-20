@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.19.3:
+
+* definitions/install_app   - minor update
+* definitions/uninstall_app - do not purge suggested packages of the app being uninstalled (undesired effects)
+
 ## 0.19.2:
 
 * definitions/install_app - minor update
