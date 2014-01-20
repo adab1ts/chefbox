@@ -58,7 +58,7 @@ define :install_app do
     # Installation
     box = node[:box]
 
-    box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
+    box['users'].each do |username, usr|
       apps_dir = "#{usr['home']}/#{box['folders']['apps']}"
 
       directory_tree apps_dir do

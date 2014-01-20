@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.19.4:
+
+* definitions/install_app - zipped binaries installation targets guest users again
+
 ## 0.19.3:
 
 * definitions/install_app   - minor update
