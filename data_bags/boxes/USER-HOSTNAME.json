@@ -169,6 +169,8 @@
       "vlc"
     ],
     "video_pro": [
+      "avidemux",
+      "cinelerra"
     ],
     "vms": [
       "virtualbox"
