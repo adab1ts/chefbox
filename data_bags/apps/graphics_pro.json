@@ -112,12 +112,14 @@
             "i686": {
               "file_name": "qcad-3.4.5-linux-x86_32.tar.gz",
               "uri": "http://www.qcad.org/archives/qcad/qcad-3.4.5-linux-x86_32.tar.gz",
-              "sha256": "0ab3fb35b66b03759f1ebd123e45d84d28ded68eb7610a71ec5351130020d49a"
+              "sha256": "0ab3fb35b66b03759f1ebd123e45d84d28ded68eb7610a71ec5351130020d49a",
+              "zfolder": "qcad-3.4.5-linux-x86_32"
             },
             "x86_64": {
               "file_name": "qcad-3.4.5-linux-x86_64.tar.gz",
               "uri": "http://www.qcad.org/archives/qcad/qcad-3.4.5-linux-x86_64.tar.gz",
-              "sha256": "d1164193fa2db307e773293561e670d32a1e4bef1d23fc01067890dbe3580500"
+              "sha256": "d1164193fa2db307e773293561e670d32a1e4bef1d23fc01067890dbe3580500",
+              "zfolder": "qcad-3.4.5-linux-x86_64"
             }
           }
         }

@@ -58,7 +58,7 @@ define :install_app do
     # Installation
     box = node[:box]
 
-    box['users'].each do |username, usr|
+    box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
       apps_dir = "#{usr['home']}/#{box['folders']['apps']}"
 
       directory_tree apps_dir do
@@ -68,18 +68,13 @@ define :install_app do
         mode 00755
       end
 
-      app_home  = "#{apps_dir}/#{params[:name]}"
-      app_dir   = nil
-      unzip_cmd = nil
+      unzip_cmd = case profile['source']['ztype']
+                  when "tgz" then "tar -C #{apps_dir} -xzf #{bin_file}"
+                  when "tbz" then "tar -C #{apps_dir} -xjf #{bin_file}"
+                  end
 
-      case profile['source']['ztype']
-      when "tgz"
-        /(?<full_name>.+).tar.gz/ =~ source['file_name']
-
-        app_dir   = "#{apps_dir}/#{full_name}"
-        unzip_cmd = "tar -C #{apps_dir} -xzf #{bin_file}"
-      end
-
+      app_dir  = "#{apps_dir}/#{source['zfolder']}"
+      app_home = "#{apps_dir}/#{params[:name]}"
 
       bash "#{username}_#{params[:name]}_install" do
         cwd cache_path

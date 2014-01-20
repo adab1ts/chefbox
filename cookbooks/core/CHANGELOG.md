@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.19.2:
+
+* definitions/install_app - minor update
+
 ## 0.19.1:
 
 * definitions/install_app - minor refactorization
