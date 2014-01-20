@@ -7,12 +7,15 @@
     "denemo",
     "guitarix",
     "hydrogen",
-    "lmms",
+    "idjc",
+    "linuxband",
     "mixxx",
     "muse",
     "musescore",
     "rosegarden",
-    "traverso"
+    "transcribe",
+    "traverso",
+    "tuxguitar"
   ],
   "profiles": {
     "airtime": {
@@ -43,7 +46,7 @@
     "ardour": {
       "package": "ardour3",
       "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
-      "description": "digital audio workstation (graphical gtk2 interface)",
+      "description": "Digital audio workstation (graphical gtk2 interface)",
       "website": "http://ardour.org/",
       "source": {
         "type": "ppa",
@@ -56,7 +59,7 @@
     "audacity": {
       "package": "audacity",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-      "description": "fast, cross-platform audio editor",
+      "description": "Fast, cross-platform audio editor",
       "website": "http://audacity.sourceforge.net/",
       "source": {
         "type": "ppa",
@@ -69,7 +72,7 @@
     "denemo": {
       "package": "denemo",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-      "description": "gtk+ front end to GNU Lilypond",
+      "description": "GTK+ front end to GNU Lilypond",
       "website": "http://www.denemo.org/",
       "suggested": ["lilypond"],
       "source": {
@@ -88,13 +91,35 @@
     "hydrogen": {
       "package": "hydrogen",
       "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
-      "description": "advanced drum machine/step sequencer",
+      "description": "Advanced drum machine/step sequencer",
       "website": "http://hydrogen-music.org/hcms/",
       "source": {
         "type": "ppa",
         "data": {
           "repo_name": "kxstudio-team-ppa",
           "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "idjc": {
+      "package": "idjc",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Graphical shoutcast/icecast client",
+      "website": "http://idjc.sourceforge.net/",
+      "source": {
+        "type": "distro"
+      }
+    },
+    "linuxband": {
+      "package": "linuxband",
+      "maintainer": "Willem van Engen <debrepo@willem.engen.nl>",
+      "description": "Graphical user-interface for MMA (Musical MIDI Accompaniment)",
+      "website": "http://linuxband.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "wvengen-music",
+          "uri": "ppa:wvengen/music"
         }
       }
     },
@@ -153,13 +178,39 @@
     "rosegarden": {
       "package": "rosegarden",
       "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
-      "description": "music editor and MIDI/audio sequencer",
+      "description": "Music editor and MIDI/audio sequencer",
       "website": "http://www.rosegardenmusic.com/",
       "source": {
         "type": "ppa",
         "data": {
           "repo_name": "kxstudio-team-ppa",
           "uri": "ppa:kxstudio-team/ppa"
+        }
+      }
+    },
+    "transcribe": {
+      "package": "transcribe",
+      "maintainer": "Seventh String Software <http://www.seventhstring.com>",
+      "description": "World's leading software for helping musicians to work out music from recordings",
+      "website": "http://www.seventhstring.com/xscribe/overview.html",
+      "source": {
+        "type": "bin",
+        "ztype": "tgz",
+        "data": {
+          "all": {
+            "i686": {
+              "file_name": "xscsetup.tar.gz",
+              "uri": "http://www.seventhstring.com/xscribe/downlinux/xscsetup.tar.gz",
+              "sha256": "ca570219f0c394dbce643a97e99322503d57f08287cb654bb7ebe5204f5dbc60",
+              "zfolder": "transcribe" 
+            },
+            "x86_64": {
+              "file_name": "xsc64setup.tar.gz",
+              "uri": "http://www.seventhstring.com/xscribe/downlinux64/xsc64setup.tar.gz",
+              "sha256": "650bb00e0002a35bcd90b684d1d2c8103994e07e367bfeb98f5ba0dd64375712",
+              "zfolder": "transcribe" 
+            }
+          }
         }
       }
     },
@@ -174,6 +225,15 @@
           "repo_name": "kxstudio-team-ppa",
           "uri": "ppa:kxstudio-team/ppa"
         }
+      }
+    },
+    "tuxguitar": {
+      "package": "tuxguitar",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Multitrack guitar tablature editor and player",
+      "website": "http://www.tuxguitar.com.ar/",
+      "source": {
+        "type": "distro"
       }
     }
   }

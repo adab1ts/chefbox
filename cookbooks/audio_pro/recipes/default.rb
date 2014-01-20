@@ -23,6 +23,9 @@
 
 include_recipe "base"
 
+# User interface for controlling the JACK sound server
+package "qjackctl"
+
 
 ## Deploy
 
@@ -49,12 +52,14 @@ if selected
   include_recipe "audio_pro::audacity" if selected.include?("audacity")
   include_recipe "audio_pro::guitarix" if selected.include?("guitarix")
   include_recipe "audio_pro::hydrogen" if selected.include?("hydrogen")
+  include_recipe "audio_pro::idjc" if selected.include?("idjc")
+  include_recipe "audio_pro::linuxband" if selected.include?("linuxband")
   include_recipe "audio_pro::mixxx" if selected.include?("mixxx")
   include_recipe "audio_pro::muse" if selected.include?("muse")
   include_recipe "audio_pro::musescore" if selected.include?("musescore")
   include_recipe "audio_pro::rosegarden" if selected.include?("rosegarden")
+  include_recipe "audio_pro::transcribe" if selected.include?("transcribe")
   include_recipe "audio_pro::traverso" if selected.include?("traverso")
-
-  # TODO: add support
+  include_recipe "audio_pro::tuxguitar" if selected.include?("tuxguitar")
 end
 

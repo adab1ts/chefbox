@@ -76,11 +76,15 @@
       "audacity",
       "guitarix",
       "hydrogen",
+      "idjc",
+      "linuxband",
       "mixxx",
       "muse",
       "musescore",
       "rosegarden",
-      "traverso"
+      "transcribe",
+      "traverso",
+      "tuxguitar"
     ],
     "browsers": [
       "chrome",

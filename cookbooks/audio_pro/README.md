@@ -9,11 +9,15 @@ The following recipes may apply:
 - `audio_pro::audacity`   - installs __Audacity audio editor__ and suggested packages.
 - `audio_pro::guitarix`   - installs __Guitarix rock guitar amplifier for Jack__ and suggested packages.
 - `audio_pro::hydrogen`   - installs __Hydrogen drum machine/step sequencer__ and suggested packages.
+- `audio_pro::idjc`       - installs __Internet DJ Console shoutcast/icecast client__ and suggested packages.
+- `audio_pro::linuxband`  - installs __LinuxBand user-interface for MMA__ and suggested packages.
 - `audio_pro::mixxx`      - installs __Mixxx digital DJ interface__ and suggested packages.
 - `audio_pro::muse`       - installs __Muse audio/MIDI sequencer__ and suggested packages.
 - `audio_pro::musescore`  - installs __Musescore score editor__ and suggested packages.
 - `audio_pro::rosegarden` - installs __Rosegarden music editor and MIDI/audio sequencer__ and suggested packages.
+- `audio_pro::transcribe` - installs __Transcribe! software to work out music from recordings__ and suggested packages.
 - `audio_pro::traverso`   - installs __Traverso multitrack audio recorder and editor__ and suggested packages.
+- `audio_pro::tuxguitar`  - installs __TuxGuitar multitrack guitar tablature editor and player__ and suggested packages.
 
 
 ## Requirements
@@ -28,6 +32,9 @@ This cookbook only applies to the following platforms:
 
 #### recipes
 - `base::default`
+
+#### packages
+- `qjackctl` - User interface for controlling the JACK sound server
 
 
 ## Usage
