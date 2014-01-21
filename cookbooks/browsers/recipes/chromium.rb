@@ -28,9 +28,11 @@ end
 
 # Unity Web Apps install
 if platform?("ubuntu") and platform_version == 12.04
+  codename = platform_codename
+
   core_ppa "webapps-preview" do
     uri "ppa:webapps/preview"
-    distribution platform_codename
+    distribution codename
     action :add
   end
 

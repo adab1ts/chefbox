@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.4.4:
+
+* recipes/chromium - mandatory minor refactorization
+* recipes/firefox  - mandatory minor refactorization
+
 ## 0.4.3:
 
 * recipes/chrome - rollback changes made in 0.4.1 (unnecessary)
