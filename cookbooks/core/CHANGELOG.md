@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.20.0:
+
+* definitions/uninstaller - adds a custom uninstaller script for specified app
+
 ## 0.19.4:
 
 * definitions/install_app - zipped binaries installation targets guest users again

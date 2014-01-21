@@ -147,6 +147,21 @@ purging all unnecessary packages.
       file "/jobs/backup/backup-mgr.desktop"
     end
 
+### Custom uninstaller creation
+
+`uninstaller` provides a custom uninstaller script for specified app.
+
+#### Examples
+
+    # custom uninstaller for QCAD app
+    uninstaller "qcad" do
+      template "/qcad/uninstall_qcad-es.sh.erb"
+      variables(
+        :app     => "qcad",
+        :website => qcad_website
+      )
+    end
+
 
 ## Resources/Providers
 
