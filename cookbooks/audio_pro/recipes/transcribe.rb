@@ -34,3 +34,11 @@ launcher "transcribe" do
   )
 end
 
+uninstaller "transcribe" do
+  template "/transcribe/uninstall_transcribe-#{box['lang']}.sh.erb"
+  variables(
+    :app     => "transcribe",
+    :website => audio_pro['profiles']['transcribe']['website']
+  )
+end
+

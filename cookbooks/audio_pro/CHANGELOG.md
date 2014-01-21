@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.3.2:
+
+* recipes/transcribe - now deploys custom uninstaller script for Transcribe!
+* templates/default/transcribe/uninstall_transcribe-[ca,es].sh - custom uninstaller scripts for Transcribe!
+* templates/ubuntu-12.04/transcribe/transcribe.desktop - moved from 'templates/default/transcribe' folder
+
 ## 0.3.1:
 
 * recipes/linuxband  - deploy a per-user LinuxBand launcher
