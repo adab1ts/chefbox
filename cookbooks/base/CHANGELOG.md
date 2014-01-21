@@ -2,13 +2,44 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.16.0:
+
+* recipes/begin - update sources.list file the very first run only
+
+* recipes/main
+
+  - remove qtnx package installation
+  - delegate platform specific stuff to platform-based recipes
+
+* recipes/main-mint
+
+  - manage linux mint specific tasks from main recipe
+  - install ia32-libs package in x86_64 platforms
+  - install y-ppa-manager for ppa management
+
+* recipes/main-ubuntu
+
+  - manage ubuntu specific tasks from main recipe
+  - install ia32-libs package in x86_64 platforms
+  - install y-ppa-manager for ppa management
+
+* recipes/end - delegate platform specific stuff to platform-based recipes
+
+* recipes/end-mint
+
+  - manage linux mint specific tasks from end recipe
+  - restore sources.list file to its original (backport disabled)
+
+* recipes/end-ubuntu - manage ubuntu specific tasks from end recipe
+* files/linuxmint-13/apt/sources.list.final - backport disabled
+
 ## 0.15.1:
 
 * recipes/main - now uses module Box's new method to retrieve platform code name
 
 ## 0.15.0:
 
-* recipes/main - install virtualbox guest packages on virtual boxes and purge them otherwise
+* recipes/main - install virtualbox guest packages on virtual boxes or purge them otherwise
 * recipes/end  - removed purge of virtualbox guest packages
 
 ## 0.14.2:

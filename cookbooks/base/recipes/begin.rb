@@ -30,10 +30,11 @@ cookbook_file "/etc/apt/sources.list" do
   source "/apt/sources.list"
   mode 0644
   backup false
-  notifies :run, "execute[first_system_update]", :immediately
+  notifies :run, "execute[base-first_system_update]", :immediately
+  not_if { node.attribute?(:first_run_completed) }
 end
 
-execute "first_system_update" do
+execute "base-first_system_update" do
   command "apt-get update"
   action :nothing
 end

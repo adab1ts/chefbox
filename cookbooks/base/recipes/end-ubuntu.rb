@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: end
+# Recipe:: end-ubuntu
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,27 +19,15 @@
 #
 
 
-ruby_block "first_run_completed" do
-  block do
-    node.set[:first_run_completed] = true
-    node.save
-  end
-  not_if { node.attribute?(:first_run_completed) }
-end
+## First time system upgrade
 
-case platform
-when "mint"   then include_recipe "base::end-mint"
-when "ubuntu" then include_recipe "base::end-ubuntu"
-end
-
-
-## First steps documentation
-
-support platform do
-  section "global"
-end
-
-support "sc" do
-  section "base"
+bash "first_system_upgrade" do
+  code <<-EOH
+    apt-get -y upgrade
+    apt-get -y autoremove
+    apt-get clean
+    EOH
+  action :nothing
+  subscribes :run, resources("ruby_block[first_run_completed]"), :immediately
 end
 
