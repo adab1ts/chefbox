@@ -30,7 +30,6 @@ end
 launcher "transcribe" do
   template "/transcribe/transcribe.desktop.erb"
   variables(
-    :icon => "~/#{box['folders']['apps']}/transcribe/gtkicons/xsc16x16.png",
     :exec => "sh -c '~/#{box['folders']['apps']}/transcribe/transcribe'"
   )
 end

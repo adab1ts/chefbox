@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.3.1:
+
+* recipes/linuxband  - deploy a per-user LinuxBand launcher
+* recipes/transcribe - minor update to Transcribe! launcher params
+* files/default/linuxband/linuxband.desktop            - ubuntu launcher for LinuxBand
+* files/linuxmint-13/linuxband/linuxband.desktop       - linux mint launcher for LinuxBand
+* templates/default/transcribe/transcribe.desktop      - minor update to Transcribe! launcher icon
+* templates/linuxmint-13/transcribe/transcribe.desktop - minor update to Transcribe! launcher icon
+
 ## 0.3.0:
 
 * recipes/default    - now includes idjc, linuxband, transcribe and tuxguitar install management

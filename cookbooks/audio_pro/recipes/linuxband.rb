@@ -26,3 +26,7 @@ install_app "linuxband" do
   profile audio_pro['profiles']['linuxband']
 end
 
+launcher "linuxband" do
+  file "/linuxband/linuxband.desktop"
+end
+

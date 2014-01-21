@@ -1,0 +1,12 @@
+# File: ~/.local/share/applications/linuxband.desktop
+# Perms: 0644
+
+[Desktop Entry]
+Name=LinuxBand
+Comment=Graphical user-interface for MMA (Musical MIDI Accompaniment)
+Icon=applications-multimedia
+Exec=linuxband
+Terminal=false
+Type=Application
+Encoding=UTF-8
+Categories=AudioVideo;Audio;
