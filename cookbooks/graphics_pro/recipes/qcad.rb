@@ -35,3 +35,11 @@ launcher "qcad" do
   )
 end
 
+uninstaller "qcad" do
+  template "/qcad/uninstall_qcad-#{box['lang']}.sh.erb"
+  variables(
+    :app     => "qcad",
+    :website => graphics_pro['profiles']['qcad']['website']
+  )
+end
+

@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.3.1:
+
+* recipes/qcad - now deploys custom uninstaller script for QCAD
+* templates/default/qcad/uninstall_qcad-[ca,es].sh - custom uninstaller scripts for QCAD
+* templates/ubuntu-12.04/qcad/qcad.desktop - moved from 'templates/default/qcad' folder
+
 ## 0.3.0:
 
 * recipes/default     - now includes darktable, draftsight, freecad, librecad, qcad and rawtherapee install management
