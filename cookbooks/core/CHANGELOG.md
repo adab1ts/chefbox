@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.20.1:
+
+* definitions/support     - exclude guest users from delivering support
+* definitions/uninstaller - exclude guest users from installing custom uninstaller script
+
 ## 0.20.0:
 
 * definitions/uninstaller - adds a custom uninstaller script for specified app

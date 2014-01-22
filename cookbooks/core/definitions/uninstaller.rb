@@ -22,7 +22,7 @@
 define :uninstaller, :variables => {} do
   box = node[:box]
 
-  box['users'].each do |username, usr|
+  box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
     apps_dir    = "#{usr['home']}/#{box['folders']['apps']}"
     uninstaller = "#{apps_dir}/uninstall_#{params[:name]}.sh"
 
@@ -33,7 +33,6 @@ define :uninstaller, :variables => {} do
       mode 00755
       backup false
       variables params[:variables]
-      not_if { usr['guest'] }
     end
   end
 end

@@ -26,7 +26,7 @@ define :support do
   section  = support[params[:section]]
   resource = section[params[:name]][box['lang']]
 
-  box['users'].each do |username, usr|
+  box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
     support_folder = "#{usr['home']}/#{box['folders']['support']}/#{params[:section]}"
     support_file   = "#{support_folder}/#{resource['file']}"
 
