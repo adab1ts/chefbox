@@ -16,6 +16,7 @@
     "recipe[graphics]",
     "recipe[groupware]",
     "recipe[lenses]",
+    "recipe[office]",
     "recipe[utils]",
     "recipe[video]"
   ],

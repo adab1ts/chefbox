@@ -176,6 +176,32 @@
       }
     }
   },
+  "office": {
+    "libreoffice": {
+      "ca": {
+        "file": "libreoffice-es.pdf",
+        "url": "http://ubuntuone.com/2wMT1pX98zjuPmxr1dYcou",
+        "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
+      },
+      "es": {
+        "file": "libreoffice-es.pdf",
+        "url": "http://ubuntuone.com/2wMT1pX98zjuPmxr1dYcou",
+        "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
+      }
+    },
+    "masterpdf": {
+      "ca": {
+        "file": "masterpdf-en.pdf",
+        "url": "http://ubuntuone.com/1we5AR7lATQc7bMLUS4O2G",
+        "sha256": "a0ccdebf33179ec91d553fef67c00bde7b7330a4f1f9c82eee7641e21e3ecd3c"
+      },
+      "es": {
+        "file": "masterpdf-en.pdf",
+        "url": "http://ubuntuone.com/1we5AR7lATQc7bMLUS4O2G",
+        "sha256": "a0ccdebf33179ec91d553fef67c00bde7b7330a4f1f9c82eee7641e21e3ecd3c"
+      }
+    }
+  },
   "security": {
     "firewall": {
       "ca": {

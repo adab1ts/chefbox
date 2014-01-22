@@ -1,0 +1,76 @@
+{
+  "id": "office",
+  "apps": [
+    "fontmanager",
+    "libreoffice",
+    "masterpdf",
+    "pdfshuffler"
+  ],
+  "profiles": {
+    "fontmanager": {
+      "package": "font-manager",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Font management application for the GNOME desktop",
+      "website": "https://code.google.com/p/font-manager/",
+      "suggested": ["python-reportlab"],
+      "source": {
+        "type": "distro"
+      }
+    },
+    "libreoffice": {
+      "package": "libreoffice",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Office productivity suite",
+      "website": "http://www.libreoffice.org/",
+      "suggested": [
+        "browser-plugin-libreoffice",
+        "libreoffice-presentation-minimizer",
+        "libreoffice-style-crystal",
+        "libreoffice-style-galaxy",
+        "libreoffice-style-oxygen"
+      ],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "libreoffice-libreoffice-4-1",
+          "uri": "ppa:libreoffice/libreoffice-4-1"
+        }
+      }
+    },
+    "masterpdf": {
+      "package": "masterpdf",
+      "maintainer": "Code Industry Ltd. <support@code-industry.net>",
+      "description": "Complete solution for view, print and edit PDF and XPS files",
+      "website": "http://code-industry.net/pdfeditor.php",
+      "source": {
+        "type": "bin",
+        "ztype": "tgz",
+        "data": {
+          "all": {
+            "i686": {
+              "file_name": "MasterPDFEditor-1.9.20.i386.tar.gz",
+              "uri": "http://ubuntuone.com/2ram9VHx68TXrXOE3sW6Gn",
+              "sha256": "f1c556b9688fbf7ddd5c7574528f4ef7ddd80bb45acc11a559e6488ba2ea869b",
+              "zfolder": "MasterPDFEditor" 
+            },
+            "x86_64": {
+              "file_name": "MasterPDFEditor-1.9.20.x86_64.tar.gz",
+              "uri": "http://ubuntuone.com/2Ev8MRtOXNbT4eygnqjSVg",
+              "sha256": "107e53e7dc974ac67d59062b931466ea60e28314d41be07b961af8af47835fc6",
+              "zfolder": "MasterPDFEditor" 
+            }
+          }
+        }
+      }
+    },
+    "pdfshuffler": {
+      "package": "pdfshuffler",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Merge, split and re-arrange pages from PDF documents",
+      "website": "http://pdfshuffler.sourceforge.net/",
+      "source": {
+        "type": "distro"
+      }
+    }
+  }
+}

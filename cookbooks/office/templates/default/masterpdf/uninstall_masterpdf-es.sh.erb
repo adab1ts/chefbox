@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+
+lpwd=`dirname "$0"`
+app_home="${lpwd}/<%= @app %>"
+
+if [[ ! -d "${app_home}" ]]; then
+  echo
+  echo "<%= %{La aplicación '#{@app.capitalize}' no está instalada.}.force_encoding("utf-8") %>"
+  echo
+else
+  <%= %{
+  echo
+  echo "El proceso de desinstalación de '#{@app.capitalize}' está a punto de comenzar."
+  echo "Has de saber, sin embargo, que esta aplicación no se encuentra en los repos oficiales."
+  echo "Si deseas volver a instalarla deberás referirte a su web:"
+  echo "#{@website}"
+  echo
+  echo -n "¿Quieres continuar con la desinstalación? [S/n] "
+  }.force_encoding("utf-8") %>
+  read must_continue
+  echo
+
+  if [[ "$must_continue" != "n" ]]; then
+    launcher="${HOME}/.local/share/applications/<%= @app %>.desktop"
+
+    [[ -d "${app_home}" ]] && rm -rf "${app_home}"
+    [[ -f "${launcher}" ]] && rm -f "${launcher}"
+
+    echo
+    echo "<%= %{La desinstalación ha finalizado con éxito.}.force_encoding("utf-8") %>"
+    echo
+  fi
+fi
+
+sleep 3

@@ -150,6 +150,12 @@
       "torrents",
       "wikipedia"
     ],
+    "office": [
+      "fontmanager",
+      "libreoffice",
+      "masterpdf",
+      "pdfshuffler"
+    ],
     "security": [
       "antivirus",
       "firewall",
