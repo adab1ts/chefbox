@@ -2,6 +2,16 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.17.0:
+
+* recipes/main
+
+  - install Catalan and Spanish language packages by default
+  - move MS Office True Type Fonts installation to recipe[office::msttfonts]
+
+* recipes/main-mint   - move libreoffice installation to recipe[office::libreoffice]
+* recipes/main-ubuntu - move libreoffice installation to recipe[office::libreoffice]
+
 ## 0.16.0:
 
 * recipes/begin - update sources.list file the very first run only

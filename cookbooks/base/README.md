@@ -14,21 +14,17 @@ The following recipes are applied:
       `-example-content`            - Ubuntu example content  
       `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
       `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
-      `+lo-menubar`                 - A LibreOffice extension for the global menubar (Ubuntu 12.04 only)  
-      `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
       `+ubuntu-restricted-extras`   - Commonly used restricted packages for Ubuntu  
 
   * `Linux Mint`
 
       `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (x86_64 only)  
       `+y-ppa-manager`              - PPA Management software  
-      `+libreoffice-style-galaxy`   - Office productivity suite -- Galaxy (Default) symbol style  
 
   * `All`
 
       `+gnome-do`                   - Quickly perform actions on your desktop  
       `virtualbox guest packages`   - Support packages for virtual boxes
-      `MS Office True Type Fonts`
 
 - `base::end` - executes first system upgrade and creates a support folder with post-installation instructions
 

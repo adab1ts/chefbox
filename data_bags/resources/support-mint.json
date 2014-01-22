@@ -13,18 +13,6 @@
         "sha256": "515ec2ce352e6a02085f809eb0ae64fd8977c7d22878af990762454c7cd9dfd3"
       }
     },
-    "libreoffice": {
-      "ca": {
-        "file": "libreoffice-es.pdf",
-        "url": "http://ubuntuone.com/1K4MIQbjG4eD2YAwAEX58c",
-        "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
-      },
-      "es": {
-        "file": "libreoffice-es.pdf",
-        "url": "http://ubuntuone.com/1K4MIQbjG4eD2YAwAEX58c",
-        "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
-      }
-    },
     "sc": {
       "ca": {
         "file": "usc-es.pdf",

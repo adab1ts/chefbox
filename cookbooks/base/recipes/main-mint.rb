@@ -54,14 +54,6 @@ unless virtual_box?
 end
 
 
-# Office productivity suite
-package "libreoffice-style-galaxy"
-
-support "libreoffice" do
-  section "base"
-end
-
-
 # Commonly used restricted packages for Linux Mint
 if platform_version < 15
   repo_name = "videolan-#{platform_codename}"

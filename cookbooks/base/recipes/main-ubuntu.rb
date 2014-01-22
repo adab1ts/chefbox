@@ -72,15 +72,6 @@ package "nautilus-filename-repairer"
 package "nautilus-open-terminal"
 
 
-# Office productivity suite
-package "lo-menubar" if platform_version == 12.04
-package "libreoffice-style-galaxy"
-
-support "libreoffice" do
-  section "base"
-end
-
-
 # Commonly used restricted packages for Ubuntu
 package "ubuntu-restricted-extras" do
   notifies :run, "execute[install_additional_extras]", :immediately
