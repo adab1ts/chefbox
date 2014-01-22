@@ -35,7 +35,7 @@
           "all": {
             "all": {
               "file_name": "prey_0.6.2-ubuntu2_all.deb",
-              "uri": "https://s3.amazonaws.com/prey-releases/bash-client/0.6.2/prey_0.6.2-ubuntu2_all.deb",
+              "uri": "http://ubuntuone.com/1sawKpGKsdm0NLv46D4doG",
               "sha256": "463b706cdf8e49d999dc1eb0d0cbb42c81fb03fe13f4dcf653aee7e184d588f9"
             }
           }

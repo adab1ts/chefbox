@@ -36,7 +36,7 @@
           "all": {
             "all": {
               "file_name": "airtime-easy-setup.deb",
-              "uri": "http://apt.sourcefabric.org/misc/airtime-easy-setup.deb",
+              "uri": "http://ubuntuone.com/2EVRqJ1OdqJGUXymGWyRsC",
               "sha256": "b37e4a98cb6208eba52c468d333b8f37acaa0bfa9f4b788d418a42aeebd850e5"
             }
           }
@@ -200,13 +200,13 @@
           "all": {
             "i686": {
               "file_name": "xscsetup.tar.gz",
-              "uri": "http://www.seventhstring.com/xscribe/downlinux/xscsetup.tar.gz",
+              "uri": "http://ubuntuone.com/50pBHjLPCPuE8PzujLJCqu",
               "sha256": "ca570219f0c394dbce643a97e99322503d57f08287cb654bb7ebe5204f5dbc60",
               "zfolder": "transcribe" 
             },
             "x86_64": {
               "file_name": "xsc64setup.tar.gz",
-              "uri": "http://www.seventhstring.com/xscribe/downlinux64/xsc64setup.tar.gz",
+              "uri": "http://ubuntuone.com/4LZNcGOnGLMK7FmaDdOMtR",
               "sha256": "650bb00e0002a35bcd90b684d1d2c8103994e07e367bfeb98f5ba0dd64375712",
               "zfolder": "transcribe" 
             }
