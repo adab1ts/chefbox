@@ -30,7 +30,6 @@ end
 launcher "qcad" do
   template "/qcad/qcad.desktop.erb"
   variables(
-    :icon => "~/#{box['folders']['apps']}/qcad/qcad_icon.png",
     :exec => "sh -c '~/#{box['folders']['apps']}/qcad/qcad'"
   )
 end

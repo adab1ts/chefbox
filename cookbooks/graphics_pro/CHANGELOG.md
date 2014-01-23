@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.3.2:
+
+* recipes/qcad - minor update to QCAD launcher params
+* templates/linuxmint-13/qcad/qcad.desktop - minor update to QCAD launcher icon
+* templates/ubuntu-12.04/qcad/qcad.desktop - minor update to QCAD launcher icon
+
 ## 0.3.1:
 
 * recipes/qcad - now deploys custom uninstaller script for QCAD
