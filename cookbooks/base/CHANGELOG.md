@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.18.0:
+
+* recipes/main-mint   - move y-ppa-manager installation to recipe[utils::yppamgr]
+* recipes/main-ubuntu - move y-ppa-manager installation to recipe[utils::yppamgr]
+
 ## 0.17.0:
 
 * recipes/main

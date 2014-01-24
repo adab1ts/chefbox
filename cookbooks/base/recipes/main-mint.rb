@@ -28,18 +28,6 @@ package "ia32-libs-multiarch" do
 end
 
 
-# Y PPA Manager: PPA management
-codename = platform_codename
-
-core_ppa "webupd8team-y-ppa-manager" do
-  uri "ppa:webupd8team/y-ppa-manager"
-  distribution codename
-  action :add
-end
-
-package "y-ppa-manager"
-
-
 # Virtualization support
 unless virtual_box?
   %w[

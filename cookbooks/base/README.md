@@ -10,7 +10,6 @@ The following recipes are applied:
   * `Ubuntu`
 
       `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (x86_64 only)  
-      `+y-ppa-manager`              - PPA Management software  
       `-example-content`            - Ubuntu example content  
       `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
       `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
@@ -19,7 +18,6 @@ The following recipes are applied:
   * `Linux Mint`
 
       `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (x86_64 only)  
-      `+y-ppa-manager`              - PPA Management software  
 
   * `All`
 
