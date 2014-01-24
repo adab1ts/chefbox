@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.3.1:
+
+* files/ubuntu-12.04/autostart/caffeine.desktop                       - moved from 'files/default/autostart' folder
+* files/ubuntu-12.04/autostart/my-weather-indicator-autostart.desktop - moved from 'files/default/autostart' folder
+* files/ubuntu-12.04/autostart/touchpad-indicator-autostart.desktop   - moved from 'files/default/autostart' folder
+* files/ubuntu-12.04/autostart/udev-notify.desktop                    - moved from 'files/default/autostart' folder
+
 ## 0.3.0:
 
 * recipe/default   - now checks for section presence in box profile's apps list before proceed
