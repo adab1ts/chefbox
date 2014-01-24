@@ -1,10 +1,20 @@
 {
   "id": "graphics",
   "apps": [
+    "pencil",
     "pinta",
     "shotwell"
   ],
   "profiles": {
+    "pencil": {
+      "package": "pencil",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Animation/drawing software",
+      "website": "http://www.pencil-animation.org/",
+      "source": {
+        "type": "distro"
+      }
+    },
     "pinta": {
       "package": "pinta",
       "maintainer": "Cameron White <cameronwhite91@gmail.com>",

@@ -4,8 +4,9 @@ This cookbook installs a selected set of graphics solutions.
 The following recipes may apply:
 
 - `graphics::default`  - purges unselected packages and includes recipes as nedeed.
+- `graphics::pencil`   - installs __Pencil animation/drawing software__ and suggested packages.
 - `graphics::pinta`    - installs __Pinta drawing/painting program__ and suggested packages.
-- `graphics::shotwell` - installs __Shotwell digital photo manager and suggested packages.
+- `graphics::shotwell` - installs __Shotwell digital photo manager__ and suggested packages.
 
 
 ## Requirements

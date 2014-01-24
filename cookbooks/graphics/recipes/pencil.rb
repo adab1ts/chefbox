@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: graphics
-# Recipe:: default
+# Recipe:: pencil
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,33 +19,10 @@
 #
 
 
-## Requirements
+graphics = node[:apps][:graphics]
 
-include_recipe "base"
-
-
-## Deploy
-
-box = node[:box]
-selected = box['apps']['graphics']
-
-if selected
-  graphics = data_bag_item('apps', 'graphics')
-  apps  = graphics['apps']
-
-  # Uninstall apps not needed
-  unselected = apps - selected
-
-  uninstall_apps "graphics" do
-    apps unselected
-    profiles graphics['profiles']
-  end
-
-  # Install selected apps
-  node.set[:apps] = { :graphics => graphics }
-
-  include_recipe "graphics::pencil" if selected.include?("pencil")
-  include_recipe "graphics::pinta" if selected.include?("pinta")
-  include_recipe "graphics::shotwell" if selected.include?("shotwell")
+# Animation/drawing software
+install_app "pencil" do
+  profile graphics['profiles']['pencil']
 end
 

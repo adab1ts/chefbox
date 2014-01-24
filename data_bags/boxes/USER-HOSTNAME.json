@@ -117,6 +117,7 @@
       "transmission"
     ],
     "graphics": [
+      "pencil",
       "pinta",
       "shotwell"
     ],
@@ -166,6 +167,7 @@
       "furius",
       "hardinfo",
       "p7zip",
+      "shutter",
       "yppamgr"
     ],
     "video": [
