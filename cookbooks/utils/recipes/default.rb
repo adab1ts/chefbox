@@ -3,7 +3,7 @@
 # Cookbook Name:: utils
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -47,5 +47,6 @@ if selected
   include_recipe "utils::furius" if selected.include?("furius")
   include_recipe "utils::hardinfo" if selected.include?("hardinfo")
   include_recipe "utils::p7zip" if selected.include?("p7zip")
+  include_recipe "utils::yppamgr" if selected.include?("yppamgr")
 end
 

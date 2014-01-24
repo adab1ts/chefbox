@@ -3,7 +3,8 @@
   "apps": [
     "furius",
     "hardinfo",
-    "p7zip"
+    "p7zip",
+    "yppamgr"
   ],
   "profiles": {
     "furius": {
@@ -29,6 +30,19 @@
       "suggested": ["p7zip-rar"],
       "source": {
         "type": "distro"
+      }
+    },
+    "yppamgr": {
+      "package": "y-ppa-manager",
+      "maintainer": "Alin Andrei <webupd8@gmail.com>",
+      "description": "PPA Management",
+      "website": "http://launchpad.net/y-ppa-manager",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "webupd8team-y-ppa-manager",
+          "uri": "ppa:webupd8team/y-ppa-manager"
+        }
       }
     }
   }

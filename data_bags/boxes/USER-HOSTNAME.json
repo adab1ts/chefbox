@@ -165,7 +165,8 @@
     "utils": [
       "furius",
       "hardinfo",
-      "p7zip"
+      "p7zip",
+      "yppamgr"
     ],
     "video": [
       "bombonodvd",

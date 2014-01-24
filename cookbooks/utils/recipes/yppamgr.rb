@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: utils
-# Recipe:: p7zip
+# Recipe:: yppamgr
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 utils = node[:apps][:utils]
 
-# 7z and 7za file archivers with high compression ratio
-install_app "p7zip" do
-  profile utils['profiles']['p7zip']
+# PPA Management
+install_app "yppamgr" do
+  profile utils['profiles']['yppamgr']
 end
 
