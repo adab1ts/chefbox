@@ -11,6 +11,7 @@
       "package": "furiusisomount",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "ISO, IMG, BIN, MDF and NRG image management utility",
+      "website": "http://launchpad.net/furiusisomount",
       "source": {
         "type": "distro"
       }
@@ -19,6 +20,7 @@
       "package": "hardinfo",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Displays system information",
+      "website": "http://hardinfo.berlios.de/",
       "source": {
         "type": "distro"
       }
@@ -27,6 +29,7 @@
       "package": "p7zip-full",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "7z and 7za file archivers with high compression ratio",
+      "website": "http://p7zip.sourceforge.net/",
       "suggested": ["p7zip-rar"],
       "source": {
         "type": "distro"
