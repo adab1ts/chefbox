@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.3.3:
+
+* files/ubuntu-12.04/linuxband/linuxband.desktop - moved from 'files/default/linuxband' folder
+
 ## 0.3.2:
 
 * recipes/transcribe - now deploys custom uninstaller script for Transcribe!
