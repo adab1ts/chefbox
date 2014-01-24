@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.4.1:
+
+* templates/ubuntu-12.04/jobs/backup/backup-mgr.desktop - moved from 'templates/default/jobs/backup' folder
+
 ## 0.4.0:
 
 * templates/default/jobs/backup/backup-box_name    - force utf-8 encoding
