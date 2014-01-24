@@ -34,3 +34,11 @@ launcher "shotcut" do
   )
 end
 
+uninstaller "shotcut" do
+  template "/shotcut/uninstall_shotcut-#{box['lang']}.sh.erb"
+  variables(
+    :app     => "shotcut",
+    :website => video_pro['profiles']['shotcut']['website']
+  )
+end
+

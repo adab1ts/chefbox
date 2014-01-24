@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+
+lpwd=`dirname "$0"`
+app_home="${lpwd}/<%= @app %>"
+
+if [[ ! -d "${app_home}" ]]; then
+  echo
+  echo "<%= %{L'aplicació '#{@app.capitalize}' no està instal·lada.}.force_encoding("utf-8") %>"
+  echo
+else
+  <%= %{
+  echo
+  echo "El procés de desinstal·lació de '#{@app.capitalize}' és a punt de començar."
+  echo "Has de saber, però, que aquesta aplicació no es troba als repos oficials."
+  echo "Si la vols tornar a instal·lar hauràs de referir-te a la seva web:"
+  echo "#{@website}"
+  echo
+  echo -n "Vols continuar amb la desinstal·lació? [S/n] "
+  }.force_encoding("utf-8") %>
+  read must_continue
+  echo
+
+  if [[ "$must_continue" != "n" ]]; then
+    launcher="${HOME}/.local/share/applications/<%= @app %>.desktop"
+
+    [[ -d "${app_home}" ]] && rm -rf "${app_home}"
+    [[ -f "${launcher}" ]] && rm -f "${launcher}"
+
+    echo
+    echo "<%= %{La desinstal·lació ha finalitzat amb èxit.}.force_encoding("utf-8") %>"
+    echo
+  fi
+fi
+
+sleep 3
