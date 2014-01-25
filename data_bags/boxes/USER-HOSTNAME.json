@@ -155,7 +155,9 @@
       "fontmanager",
       "libreoffice",
       "masterpdf",
-      "pdfshuffler"
+      "nitro",
+      "pdfshuffler",
+      "taskcoach"
     ],
     "security": [
       "antivirus",

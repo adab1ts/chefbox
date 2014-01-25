@@ -48,6 +48,9 @@ if selected
   include_recipe "office::fontmanager" if selected.include?("fontmanager")
   include_recipe "office::libreoffice" if selected.include?("libreoffice")
   include_recipe "office::masterpdf" if selected.include?("masterpdf")
+  include_recipe "office::nitro" if selected.include?("nitro")
   include_recipe "office::pdfshuffler" if selected.include?("pdfshuffler")
+  # include_recipe "office::springseed" if selected.include?("springseed")
+  include_recipe "office::taskcoach" if selected.include?("taskcoach")
 end
 

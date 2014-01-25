@@ -4,7 +4,9 @@
     "fontmanager",
     "libreoffice",
     "masterpdf",
-    "pdfshuffler"
+    "nitro",
+    "pdfshuffler",
+    "taskcoach"
   ],
   "profiles": {
     "fontmanager": {
@@ -63,6 +65,19 @@
         }
       }
     },
+    "nitro": {
+      "package": "nitrotasks",
+      "maintainer": "cosindo <jono@caffeinatedco.de>",
+      "description": "Get stuff done with Nitro",
+      "website": "http://nitrotasks.com/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "cooperjona-nitrotasks",
+          "uri": "ppa:cooperjona/nitrotasks"
+        }
+      }
+    },
     "pdfshuffler": {
       "package": "pdfshuffler",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
@@ -70,6 +85,47 @@
       "website": "http://pdfshuffler.sourceforge.net/",
       "source": {
         "type": "distro"
+      }
+    },
+    "springseed": {
+      "package": "springseed",
+      "maintainer": "Micheal Harker <me@michealharker.com>",
+      "description": "The new way to take notes",
+      "website": "http://getspringseed.com/",
+      "source": {
+        "type": "deb",
+        "data": {
+          "all": {
+            "i686": {
+              "file_name": "springseed_1.0.2_i386.deb",
+              "uri": "http://ubuntuone.com/34RqXdhgErNVelYIjUiUAI",
+              "sha256": "1db0f7b78fb51e2a79e591263745f0df754943f19aa006f2b38e3c51cad680b6"
+            },
+            "x86_64": {
+              "file_name": "springseed_1.0.2_amd64.deb",
+              "uri": "http://ubuntuone.com/0m4R4xNGs95I79fm9BHvYF",
+              "sha256": "c974c95b60f9f023cce7a0bf0c379d4ba554a66c968a6e8c87c53af26efc261d"
+            }
+          }
+        }
+      }
+    },
+    "taskcoach": {
+      "package": "taskcoach",
+      "maintainer": "Frank Niessink, Jerome Laheurte, Aaron Wolf <developers@taskcoach.org>",
+      "description": "Your friendly task manager",
+      "website": "http://www.taskcoach.org/",
+      "dependencies": [
+        "python-wxgtk2.8",
+        "python-wxtools",
+        "wx2.8-i18n"
+      ],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "taskcoach-developers-ppa",
+          "uri": "ppa:taskcoach-developers/ppa"
+        }
       }
     }
   }
