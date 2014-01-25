@@ -12,6 +12,7 @@ The following recipes may apply:
 - `video::mvc`        - installs __Miro Video Converter__ and suggested packages.
 - `video::ogmrip`     - installs __OGMRip DVD ripper and encoder__ and suggested packages.
 - `video::openshot`   - installs __Openshot Video Editor__ and suggested packages.
+- `video::recmydesk`  - installs __recordMyDesktop audio/video capture software__ and suggested packages.
 - `video::vlc`        - installs __VLC Multimedia Player__ and suggested packages.
 
 

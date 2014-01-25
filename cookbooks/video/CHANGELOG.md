@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.5.0:
+
+* recipes/default   - now includes recordmydesktop install management
+* recipes/recmydesk - manages recordmydesktop app installation
+
 ## 0.4.0:
 
 * recipes/default    - now includes bombonodvd, dvdstyler, handbrake, mvc and ogmrip install management

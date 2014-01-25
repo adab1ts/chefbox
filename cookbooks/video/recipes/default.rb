@@ -52,6 +52,7 @@ if selected
   include_recipe "video::mvc" if selected.include?("mvc")
   include_recipe "video::ogmrip" if selected.include?("ogmrip")
   include_recipe "video::openshot" if selected.include?("openshot")
+  include_recipe "video::recmydesk" if selected.include?("recmydesk")
   include_recipe "video::vlc" if selected.include?("vlc")
 end
 

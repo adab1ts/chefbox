@@ -167,7 +167,6 @@
       "furius",
       "hardinfo",
       "p7zip",
-      "shutter",
       "yppamgr"
     ],
     "video": [
@@ -179,6 +178,7 @@
       "mvc",
       "ogmrip",
       "openshot",
+      "recmydesk",
       "vlc"
     ],
     "video_pro": [

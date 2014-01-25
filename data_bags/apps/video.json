@@ -9,6 +9,7 @@
     "mvc",
     "ogmrip",
     "openshot",
+    "recmydesk",
     "vlc"
   ],
   "profiles": {
@@ -124,6 +125,19 @@
           "repo_name": "openshot_developers-ppa",
           "uri": "ppa:openshot.developers/ppa"
         }
+      }
+    },
+    "recmydesk": {
+      "package": "recordmydesktop",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Captures audio-video data of a Linux desktop session",
+      "website": "http://recordmydesktop.sourceforge.net/",
+      "suggested": [
+        "gtk-recordmydesktop",
+        "python-appindicator"
+      ],
+      "source": {
+        "type": "distro"
       }
     },
     "vlc": {
