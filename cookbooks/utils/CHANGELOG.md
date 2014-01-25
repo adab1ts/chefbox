@@ -2,10 +2,15 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.6.0:
+
+* recipes/default   - now includes shutter install management
+* recipes/shutter   - manages shutter app installation
+
 ## 0.5.0:
 
-* recipes/default    - now includes y-ppa-manager install management
-* recipes/bombonodvd - manages y-ppa-manager app installation
+* recipes/default - now includes y-ppa-manager install management
+* recipes/yppamgr - manages y-ppa-manager app installation
 
 ## 0.4.0:
 

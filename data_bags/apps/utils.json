@@ -4,6 +4,7 @@
     "furius",
     "hardinfo",
     "p7zip",
+    "shutter",
     "yppamgr"
   ],
   "profiles": {
@@ -33,6 +34,25 @@
       "suggested": ["p7zip-rar"],
       "source": {
         "type": "distro"
+      }
+    },
+    "shutter": {
+      "package": "shutter",
+      "maintainer": "Mario Kemper <mario.kemper@googlemail.com>",
+      "description": "Feature-rich screenshot application",
+      "website": "http://shutter-project.org/",
+      "suggested": [
+        "libgoo-canvas-perl",
+        "libnet-dropbox-api-perl",
+        "libimage-exiftool-perl",
+        "libnet-dbus-glib-perl"
+      ],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "shutter-ppa",
+          "uri": "ppa:shutter/ppa"
+        }
       }
     },
     "yppamgr": {

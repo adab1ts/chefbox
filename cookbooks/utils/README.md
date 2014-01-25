@@ -3,11 +3,12 @@
 This cookbook installs a selected set of utils solutions.
 The following recipes may apply:
 
-- `utils::default`  - purges unselected packages and includes recipes as nedeed.
-- `utils::furius`   - installs __Furius ISO Mount__ and suggested packages.
-- `utils::hardinfo` - installs __Hardinfo__ and suggested packages.
-- `utils::p7zip`    - installs __7-Zip file archiver__ and suggested packages.
-- `utils::yppamgr`  - installs __Y PPA Manager__ and suggested packages.
+- `utils::default`   - purges unselected packages and includes recipes as nedeed.
+- `utils::furius`    - installs __Furius ISO Mount__ and suggested packages.
+- `utils::hardinfo`  - installs __Hardinfo__ and suggested packages.
+- `utils::p7zip`     - installs __7-Zip file archiver__ and suggested packages.
+- `utils::shutter`   - installs __Shutter screenshot application__ and suggested packages.
+- `utils::yppamgr`   - installs __Y PPA Manager__ and suggested packages.
 
 
 ## Requirements

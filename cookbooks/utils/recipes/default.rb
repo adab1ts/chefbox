@@ -47,6 +47,7 @@ if selected
   include_recipe "utils::furius" if selected.include?("furius")
   include_recipe "utils::hardinfo" if selected.include?("hardinfo")
   include_recipe "utils::p7zip" if selected.include?("p7zip")
+  include_recipe "utils::shutter" if selected.include?("shutter")
   include_recipe "utils::yppamgr" if selected.include?("yppamgr")
 end
 
