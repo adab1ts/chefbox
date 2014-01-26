@@ -27,8 +27,6 @@ install_app "libreoffice" do
   profile office['profiles']['libreoffice']
 end
 
-package "lo-menubar" if platform?("ubuntu") and platform_version == 12.04
-
 package "libreoffice-l10n-ca"
 package "libreoffice-l10n-es"
 package "libreoffice-help-ca"

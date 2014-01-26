@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of office.
 
+## 0.2.1:
+
+* recipes/libreoffice - lo_menubar conflicts with newest version of libreoffice
+
 ## 0.2.0:
 
 * recipes/default    - now includes nitro and taskcoach install management
