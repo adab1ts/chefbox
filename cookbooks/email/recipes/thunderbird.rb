@@ -26,6 +26,11 @@ install_app "thunderbird" do
   profile email['profiles']['thunderbird']
 end
 
+package "thunderbird-globalmenu" if platform?("ubuntu") and platform_version == 12.04
+
+package "thunderbird-locale-ca"
+package "thunderbird-locale-es"
+
 support "thunderbird" do
   section "email"
 end

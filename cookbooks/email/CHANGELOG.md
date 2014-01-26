@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of email.
 
+## 0.3.1:
+
+* recipes/thunderbird - install thunderbird locale packages
+
 ## 0.3.0:
 
 * recipe/default - now checks for section presence in box profile's apps list before proceed
