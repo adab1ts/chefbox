@@ -30,7 +30,7 @@
       "package": "draftsight",
       "maintainer": "Dassault Systemes <CrashReports@DraftSight.com",
       "description": "With DraftSight, you can easily create professional CAD drawings",
-      "website": "http://www.3ds.com/es/productos-y-servicios/draftsight/",
+      "website": "http://www.3ds.com/products-services/draftsight/overview/",
       "source": {
         "type": "deb"
       }
@@ -67,7 +67,7 @@
       "package": "inkscape",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "vector-based drawing program",
-      "website": "http://www.inkscape.org/es/",
+      "website": "http://www.inkscape.org/en/",
       "source": {
         "type": "distro"
       }
@@ -111,13 +111,13 @@
           "all": {
             "i686": {
               "file_name": "qcad-3.4.5-linux-x86_32.tar.gz",
-              "uri": "http://www.qcad.org/archives/qcad/qcad-3.4.5-linux-x86_32.tar.gz",
+              "uri": "http://ubuntuone.com/4nUzxqyFggjvH8WeYXwGXG",
               "sha256": "0ab3fb35b66b03759f1ebd123e45d84d28ded68eb7610a71ec5351130020d49a",
               "zfolder": "qcad-3.4.5-linux-x86_32"
             },
             "x86_64": {
               "file_name": "qcad-3.4.5-linux-x86_64.tar.gz",
-              "uri": "http://www.qcad.org/archives/qcad/qcad-3.4.5-linux-x86_64.tar.gz",
+              "uri": "http://ubuntuone.com/6wazPhvzzUpSbI3VLmiNND",
               "sha256": "d1164193fa2db307e773293561e670d32a1e4bef1d23fc01067890dbe3580500",
               "zfolder": "qcad-3.4.5-linux-x86_64"
             }
