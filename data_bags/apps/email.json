@@ -10,11 +10,12 @@
       "maintainer": "Jim Nelson <jim@yorba.org>",
       "description": "Email client",
       "website": "http://www.yorba.org/projects/geary/",
+      "comment": "yorba official: ppa:yorba/ppa (12.10+)",
       "source": {
         "type": "ppa",
         "data": {
-          "repo_name": "yorba-ppa",
-          "uri": "ppa:yorba/ppa"
+          "repo_name": "tombeckmann-geary",
+          "uri": "ppa:tombeckmann/geary"
         }
       }
     },
