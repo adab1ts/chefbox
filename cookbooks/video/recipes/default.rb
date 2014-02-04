@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['video']
+selected = node[:box][:apps][:video]
 
 if selected
   video = data_bag_item('apps', 'video')
@@ -42,13 +36,13 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :video => video }
+  node.default[:apps] = { :video => video }
 
   include_recipe "video::bombonodvd" if selected.include?("bombonodvd")
   include_recipe "video::dvdstyler" if selected.include?("dvdstyler")
   include_recipe "video::handbrake" if selected.include?("handbrake")
   include_recipe "video::miro" if selected.include?("miro")
-  include_recipe "video::mmc" if selected.include?("mmc")
+  include_recipe "video::mmc" if selected.include?("mmc") and platform_arch == "i686"
   include_recipe "video::mvc" if selected.include?("mvc")
   include_recipe "video::ogmrip" if selected.include?("ogmrip")
   include_recipe "video::openshot" if selected.include?("openshot")

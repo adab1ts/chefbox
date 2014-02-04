@@ -2,6 +2,18 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.6.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - mmc installation on i686 platforms only (no fix for x86_64 package dependencies)
+  - use of symbols for attribute keys
+
 ## 0.5.0:
 
 * recipes/default   - now includes recordmydesktop install management

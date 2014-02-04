@@ -24,10 +24,9 @@ This cookbook only applies to the following platforms:
 
 #### cookbooks
 - `core`
-- `base`
 
 #### recipes
-- `base::default`
+- `core::default`
 
 
 ## Usage
