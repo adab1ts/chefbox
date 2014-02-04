@@ -1,0 +1,20 @@
+{
+  "name": "laptop-box",
+  "description": "Laptop box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "security"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "security": [
+          "tracking"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}

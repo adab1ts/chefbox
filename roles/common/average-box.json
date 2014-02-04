@@ -1,0 +1,24 @@
+{
+  "name": "average-box",
+  "description": "Average box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "role[basic-box]",
+    "audio",
+    "browsers",
+    "cloud",
+    "email",
+    "eyecandy",
+    "fileshare",
+    "graphics",
+    "groupware",
+    "lenses",
+    "office",
+    "utils",
+    "video"
+  ],
+  "default_attributes": {},
+  "override_attributes": {}
+}

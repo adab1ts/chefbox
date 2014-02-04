@@ -1,0 +1,12 @@
+{
+  "name": "advanced-box",
+  "description": "Advanced box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "role[basic-box]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {}
+}

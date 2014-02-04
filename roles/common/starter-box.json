@@ -1,0 +1,48 @@
+{
+  "name": "starter-box",
+  "description": "Starter box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "role[basic-box]",
+    "audio",
+    "browsers",
+    "email",
+    "graphics",
+    "office",
+    "video"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "audio": [
+          "rhythmbox"
+        ],
+        "browsers": [
+          "firefox"
+        ],
+        "email": [
+          "geary",
+          "thunderbird"
+        ],
+        "graphics": [
+          "pinta",
+          "shotwell"
+        ],
+        "office": [
+          "fontmanager",
+          "libreoffice",
+          "nitro",
+          "pdfshuffler"
+        ],
+        "video": [
+          "mmc",
+          "openshot",
+          "vlc"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}

@@ -1,0 +1,26 @@
+{
+  "name": "basic-box",
+  "description": "Basic box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "core",
+    "base",
+    "dotfiles",
+    "kernel",
+    "security"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "security": [
+          "antivirus",
+          "firewall",
+          "privacy"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
