@@ -19,14 +19,6 @@
 #
 
 
-ruby_block "first_run_completed" do
-  block do
-    node.set[:first_run_completed] = true
-    node.save
-  end
-  not_if { node.attribute?(:first_run_completed) }
-end
-
 case platform
 when "mint"   then include_recipe "base::end-mint"
 when "ubuntu" then include_recipe "base::end-ubuntu"

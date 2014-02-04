@@ -51,7 +51,7 @@ if platform_version < 15
     distribution ""
     key "http://download.videolan.org/pub/debian/videolan-apt.asc"
     action :add
-    not_if { ::File.exists? "#{node['apt']['sources_path']}/#{repo_name}.list" }
+    not_if { ::File.exists? "#{node[:apt][:sources_path]}/#{repo_name}.list" }
   end
 end
 

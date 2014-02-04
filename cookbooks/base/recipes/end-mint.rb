@@ -42,6 +42,7 @@ purge_pkgs = %w[
   nautilus-sendto-empathy
   nautilus-wallpaper
   gnome-session-fallback
+  gnome-control-center
 ]
 
 h_pkgs = held_pkgs.join(" ")
@@ -58,22 +59,7 @@ bash "first_system_upgrade" do
     apt-get clean
     apt-mark unhold #{h_pkgs}
     EOH
-  action :nothing
-  subscribes :run, resources("ruby_block[first_run_completed]"), :immediately
-end
-
-
-## APT Sources
-
-cookbook_file "/etc/apt/sources.list" do
-  source "/apt/sources.list.final"
-  mode 0644
-  backup false
-  notifies :run, "execute[base-last_system_update]", :immediately
-end
-
-execute "base-last_system_update" do
-  command "apt-get update"
-  action :nothing
+  action :run
+  not_if { node.attribute?(:first_run_completed) }
 end
 

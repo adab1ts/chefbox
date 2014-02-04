@@ -19,8 +19,6 @@
 #
 
 
-box = node[:box]
-
 # Language support
 package "language-pack-ca"
 package "language-pack-gnome-ca"

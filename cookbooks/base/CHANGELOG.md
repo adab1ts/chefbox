@@ -2,6 +2,44 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.19.0:
+
+* metadata        - remove cookbook 'core' dependency
+* recipes/default - do not include recipe[core:default] any more
+
+* recipes/begin
+
+  - box profile is now a default attribute loaded from roles (data bag items not needed anymore)
+  - move apt sources management to new recipe[run-init]
+  - use of symbols for attribute keys
+  - Enumerable#reject implementation attempts to modify underlying immutable attribute hash. see:
+
+    + https://tickets.opscode.com/browse/CHEF-4844
+    + https://github.com/sethvargo/chefspec/issues/270
+
+* recipes/main      - minor update
+* recipes/main-mint - use of symbols for attribute keys
+
+* recipes/main-ubuntu
+
+  - do not manage virtual guest support any more
+  - use of symbols for attribute keys
+
+* recipes/end-mint
+
+  - purge gnome-control-center by default
+  - move apt sources management to new recipe[run-end]
+
+* recipes/end-ubuntu - minor update
+* recipes/end        - move first_run_completed attribute management to new recipe[run-end]
+* recipes/run-init   - manage apt sources
+
+* recipes/run-end
+
+  - restore apt sources in linuxmint platforms (backports disabled)
+  - manage first_run_completed normal attribute
+  - reboot the very first run when chef client succeeds
+
 ## 0.18.0:
 
 * recipes/main-mint   - move y-ppa-manager installation to recipe[utils::yppamgr]

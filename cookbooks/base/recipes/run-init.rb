@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: end-ubuntu
+# Recipe:: run-init
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,15 +19,19 @@
 #
 
 
-## First time system upgrade
+## APT Sources
 
-bash "first_system_upgrade" do
-  code <<-EOH
-    apt-get -y upgrade
-    apt-get -y autoremove
-    apt-get clean
-    EOH
-  action :run
+cookbook_file "sources.list" do
+  path "/etc/apt/sources.list"
+  source "/apt/sources.list"
+  mode 0644
+  backup false
+  notifies :run, "execute[run_init-system_update]", :immediately
   not_if { node.attribute?(:first_run_completed) }
+end
+
+execute "run_init-system_update" do
+  command "apt-get update"
+  action :nothing
 end
 

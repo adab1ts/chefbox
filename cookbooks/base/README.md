@@ -24,7 +24,9 @@ The following recipes are applied:
       `+gnome-do`                   - Quickly perform actions on your desktop  
       `virtualbox guest packages`   - Support packages for virtual boxes
 
-- `base::end` - executes first system upgrade and creates a support folder with post-installation instructions
+- `base::end`      - executes first system upgrade and creates a support folder with post-installation instructions
+- `base::run-init` - manages apt sources; must be run before any other recipe in the node run list
+- `base::run-end`  - reboots the very first run when chef client succeeds; must be run after any other recipe in the node run list
 
 
 ## Requirements

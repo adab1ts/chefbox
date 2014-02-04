@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: end-ubuntu
+# Recipe:: run-end
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,15 +19,33 @@
 #
 
 
-## First time system upgrade
+if platform == "mint"
+  ## APT Sources
 
-bash "first_system_upgrade" do
-  code <<-EOH
-    apt-get -y upgrade
-    apt-get -y autoremove
-    apt-get clean
-    EOH
-  action :run
+  cookbook_file "sources.list.final" do
+    path "/etc/apt/sources.list"
+    source "/apt/sources.list.final"
+    mode 0644
+    backup false
+    notifies :run, "execute[run_end-system_update]", :immediately
+  end
+
+  execute "run_end-system_update" do
+    command "apt-get update"
+    action :nothing
+  end
+end
+
+ruby_block "first_run_completed" do
+  block do
+    node.set[:first_run_completed] = true
+  end
   not_if { node.attribute?(:first_run_completed) }
+end
+
+execute "system-reboot" do
+  command "shutdown -r +1 &"
+  action :nothing
+  subscribes :run, resources("ruby_block[first_run_completed]"), :delayed
 end
 

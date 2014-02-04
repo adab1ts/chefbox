@@ -19,27 +19,6 @@
 #
 
 
-# node.set[:box] = Chef::EncryptedDataBagItem.load('boxes', node[:profile])
-node.set[:box] = data_bag_item('boxes', node[:profile])
-node.save
-
-
-## APT Sources
-
-cookbook_file "/etc/apt/sources.list" do
-  source "/apt/sources.list"
-  mode 0644
-  backup false
-  notifies :run, "execute[base-first_system_update]", :immediately
-  not_if { node.attribute?(:first_run_completed) }
-end
-
-execute "base-first_system_update" do
-  command "apt-get update"
-  action :nothing
-end
-
-
 ## Requirements
 
 package "openssl"
@@ -50,26 +29,26 @@ package "libshadow-ruby1.8"
 
 box = node[:box]
 
-box['users'].reject { |_, usr| usr['default'] }.each do |username, usr|
-  group usr['group'] do
-    gid usr['gid']
+box[:users].select { |_, usr| not usr[:default] }.each do |username, usr|
+  group usr[:group] do
+    gid usr[:gid]
   end
 
-  passwd = shadow usr['password']
+  passwd = shadow usr[:password]
 
   user username do
     comment username
-    uid usr['uid']
-    gid usr['group']
-    home usr['home']
-    shell usr['shell']
+    uid usr[:uid]
+    gid usr[:group]
+    home usr[:home]
+    shell usr[:shell]
     password passwd
     supports(
       :manage_home => true
     )
   end
 
-  if usr['sudo']
+  if usr[:sudo]
     group "sudo" do
       members username
       append true

@@ -19,8 +19,6 @@
 #
 
 
-include_recipe "core"
-
 include_recipe "base::begin"
 include_recipe "base::main"
 include_recipe "base::end"

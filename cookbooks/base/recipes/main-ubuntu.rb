@@ -28,18 +28,6 @@ package "ia32-libs-multiarch" do
 end
 
 
-# Virtualization support
-if virtual_box?
-  %w[
-    virtualbox-guest-dkms
-    virtualbox-guest-utils
-    virtualbox-guest-x11
-  ].each do |pkg|
-    package pkg
-  end
-end
-
-
 # Ubuntu example content
 package "example-content" do
   action :purge
@@ -47,10 +35,10 @@ end
 
 box = node[:box]
 
-box['users'].each do |username, usr|
+box[:users].each do |username, usr|
   execute "#{username}-remove_example_content_file" do
-    command "rm #{usr['home']}/examples.desktop"
-    only_if { ::File.exists? "#{usr['home']}/examples.desktop" }
+    command "rm #{usr[:home]}/examples.desktop"
+    only_if { ::File.exists? "#{usr[:home]}/examples.desktop" }
   end
 end
 
