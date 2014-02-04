@@ -15,3 +15,9 @@ bootstrap/
 
 # ssh keys
 keys/
+
+# environments chef files
+.chef-*/
+
+# current working environment
+.environment
