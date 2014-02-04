@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['audio']
+selected = node[:box][:apps][:audio]
 
 if selected
   audio = data_bag_item('apps', 'audio')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :audio => audio }
+  node.default[:apps] = { :audio => audio }
 
   include_recipe "audio::lastfm" if selected.include?("lastfm")
   include_recipe "audio::nuvola" if selected.include?("nuvola")
