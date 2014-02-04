@@ -3,7 +3,7 @@
 # Cookbook Name:: security
 # Recipe:: firewall
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,18 +26,25 @@ install_app "firewall" do
   profile security['profiles']['firewall']
 end
 
-cookbook_file "/etc/ufw/applications.d/chef-openssh-server" do
+cookbook_file "ufw_openssh-server" do
+  path "/etc/ufw/applications.d/chef-openssh-server"
   source "/ufw/chef-openssh-server"
   mode 0644
   backup false
-  action :nothing
-  subscribes :create, resources("package[firewall]"), :immediately
 end
 
-execute "enable_firewall" do
-  command "ufw allow ChefSSH"
+# Shut the backdoor!
+# execute "ufw_allow_ssh" do
+#   command "ufw allow ChefSSH"
+#   action :nothing
+#   subscribes :run, resources("cookbook_file[ufw_openssh-server]"), :immediately
+# end
+
+execute "ufw_enable" do
+  command "ufw enable"
   action :nothing
-  subscribes :run, resources("package[firewall]"), :immediately
+  # subscribes :run, resources("execute[ufw_allow_ssh]"), :immediately
+  subscribes :run, resources("cookbook_file[ufw_openssh-server]"), :immediately
 end
 
 support "firewall" do

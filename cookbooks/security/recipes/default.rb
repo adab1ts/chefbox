@@ -3,7 +3,7 @@
 # Cookbook Name:: security
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['security']
+selected = node[:box][:apps][:security]
 
 if selected
   security = data_bag_item('apps', 'security')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :security => security }
+  node.default[:apps] = { :security => security }
 
   include_recipe "security::antivirus" if selected.include?("antivirus")
   include_recipe "security::firewall" if selected.include?("firewall")
