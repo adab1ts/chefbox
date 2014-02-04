@@ -66,7 +66,7 @@
       "maintainer": "miksoft <mmc@miksoft.net>",
       "description": "Tool for converting desktop and mobile devices video and audio formats",
       "website": "http://www.miksoft.net/mobileMediaConverter.php",
-      "dependencies": ["libavcodec-extra-53", "liblzo2-2", "mencoder"],
+      "dependencies": ["libavcodec-extra-53", "liblzo2-2", "mencoder", "ffmpeg"],
       "source": {
         "type": "deb",
         "data": {
