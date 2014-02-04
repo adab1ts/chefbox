@@ -27,15 +27,13 @@
       "suggested": [
         "browser-plugin-libreoffice",
         "libreoffice-presentation-minimizer",
-        "libreoffice-style-crystal",
-        "libreoffice-style-galaxy",
-        "libreoffice-style-oxygen"
+        "libreoffice-style-galaxy"
       ],
       "source": {
         "type": "ppa",
         "data": {
-          "repo_name": "libreoffice-libreoffice-4-1",
-          "uri": "ppa:libreoffice/libreoffice-4-1"
+          "repo_name": "libreoffice-libreoffice-4-0",
+          "uri": "ppa:libreoffice/libreoffice-4-0"
         }
       }
     },
