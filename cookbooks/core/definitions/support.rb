@@ -21,19 +21,19 @@
 
 define :support do
   box = node[:box]
-  support = data_bag_item('resources', "support-#{box['platform']['os']}")
+  support = data_bag_item('resources', "support-#{box[:platform][:os]}")
 
   section  = support[params[:section]]
-  resource = section[params[:name]][box['lang']]
+  resource = section[params[:name]][box[:lang]]
 
-  box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
-    support_folder = "#{usr['home']}/#{box['folders']['support']}/#{params[:section]}"
+  box[:users].select { |_, usr| not usr[:guest] }.each do |username, usr|
+    support_folder = "#{usr[:home]}/#{box[:folders][:support]}/#{params[:section]}"
     support_file   = "#{support_folder}/#{resource['file']}"
 
     directory_tree support_folder do
-      exclude usr['home']
+      exclude usr[:home]
       owner username
-      group usr['group']
+      group usr[:group]
       mode 00755
     end
 
@@ -41,7 +41,7 @@ define :support do
       source resource['url']
       checksum resource['sha256']
       owner username
-      group usr['group']
+      group usr[:group]
       mode 00644
       backup false
     end

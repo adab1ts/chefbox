@@ -58,13 +58,13 @@ define :install_app do
     # Installation
     box = node[:box]
 
-    box['users'].each do |username, usr|
-      apps_dir = "#{usr['home']}/#{box['folders']['apps']}"
+    box[:users].each do |username, usr|
+      apps_dir = "#{usr[:home]}/#{box[:folders][:apps]}"
 
       directory_tree apps_dir do
-        exclude usr['home']
+        exclude usr[:home]
         owner username
-        group usr['group']
+        group usr[:group]
         mode 00755
       end
 
@@ -81,7 +81,7 @@ define :install_app do
         code <<-EOH
           #{unzip_cmd}
           [[ ! -d "#{app_home}" ]] && mv #{app_dir} #{app_home}
-          chown -R #{username}.#{usr['group']} #{app_home}
+          chown -R #{username}.#{usr[:group]} #{app_home}
           EOH
         not_if { ::File.exists?(app_home) }
       end
@@ -125,7 +125,7 @@ define :install_app do
         key source['key']
         keyserver source['keyserver']
         action :add
-        not_if { ::File.exists? "#{node['apt']['sources_path']}/#{repo_name}.list" }
+        not_if { ::File.exists? "#{node[:apt][:sources_path]}/#{repo_name}.list" }
       end
     end
 

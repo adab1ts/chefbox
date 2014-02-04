@@ -18,5 +18,8 @@
 # limitations under the License.
 #
 
-default['apt']['sources_path'] = '/etc/apt/sources.list.d'
+# Overridden by roles "box" default attribute
+default[:box] = {}
+
+default[:apt][:sources_path] = '/etc/apt/sources.list.d'
 

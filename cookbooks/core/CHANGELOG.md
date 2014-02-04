@@ -2,6 +2,31 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.21.0:
+
+* attributes/default        - definition of default attribute 'box', overriden by roles own definition at run time
+* definitions/autostart_app - use of symbols for attribute keys
+* definitions/install_app   - use of symbols for attribute keys
+* definitions/launcher      - use of symbols for attribute keys
+
+* definitions/support
+
+  - use of symbols for attribute keys
+  - Enumerable#reject implementation attempts to modify underlying immutable attribute hash. see:
+
+    + https://tickets.opscode.com/browse/CHEF-4844
+    + https://github.com/sethvargo/chefspec/issues/270
+
+* definitions/uninstall_app - use of symbols for attribute keys
+
+* definitions/uninstaller
+
+  - use of symbols for attribute keys
+  - Enumerable#reject implementation attempts to modify underlying immutable attribute hash
+
+* libraries/box - use of symbols for attribute keys
+* providers/ppa - use of symbols for attribute keys
+
 ## 0.20.1:
 
 * definitions/support     - exclude guest users from delivering support

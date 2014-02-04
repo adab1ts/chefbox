@@ -23,14 +23,14 @@ define :autostart_app do
   profile = params[:profile]
   box = node[:box]
 
-  box['users'].each do |username, usr|
-    autostart_dir = "#{usr['home']}/.config/autostart"
+  box[:users].each do |username, usr|
+    autostart_dir = "#{usr[:home]}/.config/autostart"
     desktop_file  = params[:desktop_file] || "#{profile['package']}.desktop"
 
     directory_tree autostart_dir do
-      exclude usr['home']
+      exclude usr[:home]
       owner username
-      group usr['group']
+      group usr[:group]
       mode 00755
     end
 
@@ -39,8 +39,9 @@ define :autostart_app do
       cookbook params[:cookbook]
       backup false
       owner username
-      group usr['group']
+      group usr[:group]
       mode 00664
     end
   end
 end
+

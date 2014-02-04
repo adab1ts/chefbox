@@ -22,14 +22,14 @@
 define :launcher, :variables => {} do
   box = node[:box]
 
-  box['users'].each do |username, usr|
-    launchers_dir = "#{usr['home']}/.local/share/applications"
+  box[:users].each do |username, usr|
+    launchers_dir = "#{usr[:home]}/.local/share/applications"
     launcher = "#{launchers_dir}/#{params[:name]}.desktop"
 
     directory_tree launchers_dir do
-      exclude usr['home']
+      exclude usr[:home]
       owner username
-      group usr['group']
+      group usr[:group]
       mode 00755
     end
 
@@ -37,7 +37,7 @@ define :launcher, :variables => {} do
       template launcher do
         source params[:template]
         owner username
-        group usr['group']
+        group usr[:group]
         mode 00664
         backup false
         variables params[:variables]
@@ -46,7 +46,7 @@ define :launcher, :variables => {} do
       cookbook_file launcher do
         source params[:file]
         owner username
-        group usr['group']
+        group usr[:group]
         mode 00664
         backup false
         cookbook params[:cookbook]

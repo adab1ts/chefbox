@@ -22,14 +22,14 @@
 define :uninstaller, :variables => {} do
   box = node[:box]
 
-  box['users'].reject { |_, usr| usr['guest'] }.each do |username, usr|
-    apps_dir    = "#{usr['home']}/#{box['folders']['apps']}"
+  box[:users].select { |_, usr| not usr[:guest] }.each do |username, usr|
+    apps_dir    = "#{usr[:home]}/#{box[:folders][:apps]}"
     uninstaller = "#{apps_dir}/uninstall_#{params[:name]}.sh"
 
     template uninstaller do
       source params[:template]
       owner username
-      group usr['group']
+      group usr[:group]
       mode 00755
       backup false
       variables params[:variables]

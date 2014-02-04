@@ -34,7 +34,7 @@ This cookbook only applies to the following platforms:
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['apt']['sources_path']</tt></td>
+    <td><tt>[:apt][:sources_path]</tt></td>
     <td>String</td>
     <td>path to additional package repositories</td>
     <td><tt>/etc/apt/sources.list.d</tt></td>
@@ -78,11 +78,10 @@ purging all unnecessary packages.
 #### Examples
 
     # uninstall graphics applications
-    box = node[:box]
     graphics = data_bag_item('apps', 'graphics')
 
     apps = graphics['apps']
-    selected = box['apps']['graphics']
+    selected = node[:box][:apps][:graphics]
     unselected = apps - selected
 
     uninstall_apps "graphics" do

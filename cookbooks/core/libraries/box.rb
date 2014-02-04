@@ -62,8 +62,7 @@ module Coderebels
       end
 
       def virtual_box?
-        box = node[:box]
-        box['platform']['virtual']
+        node[:box][:platform][:virtual]
       end
 
       def self.lsb_id
@@ -103,3 +102,4 @@ module Coderebels
     end
   end
 end
+

@@ -29,9 +29,9 @@ define :uninstall_app do
   when "bin"
     box = node[:box]
 
-    box['users'].each do |username, usr|
-      app_dir  = "#{usr['home']}/#{box['folders']['apps']}/#{params[:name]}"
-      launcher = "#{usr['home']}/.local/share/applications/#{params[:name]}.desktop"
+    box[:users].each do |username, usr|
+      app_dir  = "#{usr[:home]}/#{box[:folders][:apps]}/#{params[:name]}"
+      launcher = "#{usr[:home]}/.local/share/applications/#{params[:name]}.desktop"
 
       bash "#{username}_#{params[:name]}_uninstall" do
         code <<-EOH
@@ -47,7 +47,7 @@ define :uninstall_app do
       action :purge
       not_if do
         %w(repo ppa).include?(origin) and
-        not ::File.exists?("#{node['apt']['sources_path']}/#{source['data']['repo_name']}-#{Coderebels::Chefbox::Box.lsb_codename}.list")
+        not ::File.exists?("#{node[:apt][:sources_path]}/#{source['data']['repo_name']}-#{Coderebels::Chefbox::Box.lsb_codename}.list")
       end
     end
   end
