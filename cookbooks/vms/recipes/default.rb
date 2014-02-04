@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['vms']
+selected = node[:box][:apps][:vms]
 
 if selected
   vms = data_bag_item('apps', 'vms')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :vms => vms }
+  node.default[:apps] = { :vms => vms }
 
   include_recipe "vms::virtualbox" if selected.include?("virtualbox")
 end

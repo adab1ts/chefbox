@@ -2,6 +2,21 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.4.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+  - Enumerable#reject implementation attempts to modify underlying immutable attribute hash. see:
+
+    + https://tickets.opscode.com/browse/CHEF-4844
+    + https://github.com/sethvargo/chefspec/issues/270
+
 ## 0.3.1:
 
 * recipe/default     - minor update
