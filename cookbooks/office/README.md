@@ -21,10 +21,46 @@ This cookbook only applies to the following platforms:
 
 #### cookbooks
 - `core`
-- `base`
 
 #### recipes
-- `base::default`
+- `core::default`
+
+
+## Attributes
+
+#### office::default
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>[:office][:msttfonts][:file]</tt></td>
+    <td>String</td>
+    <td>name of the fonts package file</td>
+    <td><tt>fonts.tar.gz</tt></td>
+  </tr>
+  <tr>
+    <td><tt>[:office][:msttfonts][:url]</tt></td>
+    <td>String</td>
+    <td>download url</td>
+    <td><tt>http://ubuntuone.com/3yvtCqArMf6VBgyAcqC01W</tt></td>
+  </tr>
+  <tr>
+    <td><tt>[:office][:msttfonts][:sha256]</tt></td>
+    <td>String</td>
+    <td>sha256 sum of the fonts package file</td>
+    <td><tt>34afc268300fe5b863ddd6cde973aba3a87d7512ae92e37e4de891a49faa3465</tt></td>
+  </tr>
+  <tr>
+    <td><tt>[:office][:msttfonts][:path]</tt></td>
+    <td>String</td>
+    <td>installation path</td>
+    <td><tt>/usr/share/fonts/truetype/msttfonts</tt></td>
+  </tr>
+</table>
 
 
 ## Usage

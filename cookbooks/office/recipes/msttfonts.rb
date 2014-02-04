@@ -20,40 +20,33 @@
 
 
 # MS Office True Type Fonts
-fonts = data_bag_item('resources', 'fonts')
-msfonts = fonts['msttfonts']
-
-fonts_file   = msfonts['file']
-fonts_url    = msfonts['url']
-fonts_sha256 = msfonts['sha256']
-
+msfonts = node[:office][:msttfonts]
 cache_path = Chef::Config[:file_cache_path]
-fonts_path = "/usr/share/fonts/truetype/msttfonts"
 
-remote_file "#{cache_path}/#{fonts_file}" do
-  source fonts_url
-  checksum fonts_sha256
+remote_file "#{cache_path}/#{msfonts[:file]}" do
+  source msfonts[:url]
+  checksum msfonts[:sha256]
   notifies :run, "bash[install_fonts]", :immediately
 end
 
 bash "install_fonts" do
   cwd cache_path
   code <<-EOH
-    [[ ! -d "#{fonts_path}" ]] && mkdir -m 755 -p #{fonts_path}
-    tar -C #{fonts_path} -xzf #{fonts_file} \
-    && chown root.root #{fonts_path}/* \
-    && chmod 644 #{fonts_path}/*
+    [[ ! -d "#{msfonts[:path]}" ]] && mkdir -m 755 -p #{msfonts[:path]}
+    tar -C #{msfonts[:path]} -xzf #{msfonts[:file]} \
+    && chown root.root #{msfonts[:path]}/* \
+    && chmod 644 #{msfonts[:path]}/*
     EOH
   action :nothing
 end
 
 box = node[:box]
 
-box['users'].each do |username, usr|
+box[:users].each do |username, usr|
   execute "#{username}-load_fonts" do
     command "fc-cache -fv"
     user username
-    group usr['group']
+    group usr[:group]
     action :nothing
     subscribes :run, resources("bash[install_fonts]"), :immediately
   end

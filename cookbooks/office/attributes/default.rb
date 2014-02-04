@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: office
-# Recipe:: libreoffice
+# Attribute File:: default
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -18,25 +18,9 @@
 # limitations under the License.
 #
 
-
-office = node[:apps][:office]
-
-# Office productivity suite
-install_app "libreoffice" do
-  profile office['profiles']['libreoffice']
-end
-
-package "libreoffice-l10n-ca"
-package "libreoffice-help-ca"
-package "libreoffice-l10n-es"
-package "libreoffice-help-es"
-
-if node[:box][:lang] == 'ca'
-  package "mythes-ca"
-  package "hyphen-ca"
-end
-
-support "libreoffice" do
-  section "office"
-end
+# MS Office True Type Fonts
+default[:office][:msttfonts][:file]   = "fonts.tar.gz"
+default[:office][:msttfonts][:url]    = "http://ubuntuone.com/3yvtCqArMf6VBgyAcqC01W"
+default[:office][:msttfonts][:sha256] = "34afc268300fe5b863ddd6cde973aba3a87d7512ae92e37e4de891a49faa3465"
+default[:office][:msttfonts][:path]   = "/usr/share/fonts/truetype/msttfonts"
 

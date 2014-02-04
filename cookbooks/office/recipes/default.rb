@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['office']
+selected = node[:box][:apps][:office]
 
 if selected
   office = data_bag_item('apps', 'office')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :office => office }
+  node.default[:apps] = { :office => office }
 
   include_recipe "office::msttfonts"
   include_recipe "office::fontmanager" if selected.include?("fontmanager")
