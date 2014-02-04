@@ -2,6 +2,32 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.3.0:
+
+* README   - update copyright note
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - update copyright note
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/dkms - update copyright note
+
+* recipes/intel_graphics
+
+  - update copyright note
+  - execute intel linux graphics installer immediately
+
+* recipes/preload - update copyright note
+
+* recipes/tlp
+
+  - update copyright note
+  - start tlp immediately
+
 ## 0.2.1:
 
 * recipes/default - now recipe[kernel::preload] lowers memory requirements to be applied

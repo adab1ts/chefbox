@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,19 +19,13 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
 kernel = data_bag_item('apps', 'kernel')
 
 # Install drivers
 
-drivers = box['apps']['drivers'] || []
+drivers = node[:box][:apps][:drivers] || []
 
 drivers.each do |driver|
   install_app driver do
@@ -41,7 +35,7 @@ end
 
 # Install apps
 
-node.set[:apps] = { :kernel => kernel }
+node.default[:apps] = { :kernel => kernel }
 
 include_recipe "kernel::dkms"
 include_recipe "kernel::preload" if memory > 1.GB

@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: intel_graphics
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -51,6 +51,6 @@ end
 
 execute "intel-linux-graphics-installer" do
   action :nothing
-  subscribes :run, resources("package[intel_graphics]"), :delayed
+  subscribes :run, resources("package[intel_graphics]"), :immediately
 end
 
