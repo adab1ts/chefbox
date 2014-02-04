@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Copyright:: Copyright (c) 2013, Carles Muiños
-# License:: Apache License, Version 2.0
+#
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,168 +21,255 @@ require 'rubygems'
 
 namespace :coderebels do
 
-  desc "Show how to proceed to converge a new chefbox node"
-  task :remindme do
-    puts "1) Bundle a bootstrap package:  rake coderebels:bundle[user,hostname]"
-    puts "2) Create a new profile:        rake coderebels:box_profile[user,hostname]"
-    puts "3) Create a new role:           rake coderebels:box_role[user,hostname,recipes]"
-    puts "4) Bootstrap/Converge the node: rake coderebels:bootstrap[user,hostname,ip]"
-    puts "                                rake coderebels:converge[user,hostname,ip]"
+  def current_env
+    IO.read(env_file).chomp
+  end
+
+
+  desc "Fetch chefbox code from Github and merge into the master branch"
+  task :chefbox_updt do
+    FileUtils.cd(TOPDIR) do
+      sh %{git checkout master}
+      sh %{git pull}
+    end
   end
 
 
   desc "Generate openssl key for encrypted data bags management"
-  task :edb_keygen, :keyname do |t, args|
-    edb = args[:keyname] || "edb"
-    edb_file = File.join(TOPDIR, "keys", edb)
+  task :edb_keygen do
+    keys_dir = File.join(TOPDIR, "keys")
+    edb_file = File.join(keys_dir, "edb")
 
     unless File.exists? edb_file
+      FileUtils.mkdir_p keys_dir unless File.exists? keys_dir
       sh %{openssl rand -base64 512 | tr -d '\\r\\n' > #{edb_file}}
     end
   end
 
 
-  desc "Generate authentication keys to establish a ssh connection with a box"
-  task :ssh_keygen, :user, :hostname do |t, args|
-    raise "Must provide a user and a hostname" unless (args[:user] and args[:hostname])
+  desc "Make environment directory structure"
+  task :make_env, [:env] do |t, args|
+    raise "Must provide an environment name" unless args.env
 
-    user     = args[:user]
-    hostname = args[:hostname]
-    keys_dir = File.join(TOPDIR, "keys", "#{user}@#{hostname}")
+    env_dir       = File.join(TOPDIR, ".chef-#{args.env}")
+    env_keys_dir  = File.join(TOPDIR, "keys", args.env)
+    env_roles_dir = File.join(TOPDIR, "roles", args.env)
+    
+    FileUtils.mkdir env_dir unless File.exists? env_dir
+    FileUtils.mkdir_p env_keys_dir unless File.exists? env_keys_dir
+    FileUtils.mkdir_p env_roles_dir unless File.exists? env_roles_dir
+  end
+
+
+  desc "Remove environment directory structure"
+  task :remove_env, [:env] do |t, args|
+    raise "Must provide an environment name" unless args.env
+
+    env_dir       = File.join(TOPDIR, ".chef-#{args.env}")
+    env_keys_dir  = File.join(TOPDIR, "keys", args.env)
+    env_roles_dir = File.join(TOPDIR, "roles", args.env)
+    
+    FileUtils.rm_rf env_dir if File.exists? env_dir
+    FileUtils.rm_rf env_keys_dir if File.exists? env_keys_dir
+    FileUtils.rm_rf env_roles_dir if File.exists? env_roles_dir
+  end
+
+
+  desc "Prepare your chefbox workspace"
+  task :workspace, [:env] => [:edb_keygen, :make_env] do |t, args|
+    raise "Must provide the default environment for your workspace" unless args.env
+
+    keys_dir = File.join(TOPDIR, "keys")
+    bootstrap_keys_dir = File.join(TOPDIR, "bootstrap", "keys")
+
+    unless File.exists? bootstrap_keys_dir
+      FileUtils.mkdir_p bootstrap_keys_dir
+      FileUtils.cp File.join(keys_dir, "edb"), File.join(bootstrap_keys_dir, "edb")
+    end
+
+    chef_dir = File.join(TOPDIR, ".chef")
+    env_dir  = File.join(TOPDIR, ".chef-#{args.env}")
+    env_file = File.join(TOPDIR, ".environment")
+
+    unless File.exists? env_file
+      File.open(env_file, "w") { |file| file.puts args.env }
+      FileUtils.mv env_dir, chef_dir
+    end
+  end
+
+
+  desc "Generate authentication keys to establish a ssh connection with a box"
+  task :ssh_keygen, [:user, :nodename] do |t, args|
+    raise "Must provide a user and a nodename" unless (args.user and args.nodename)
+
+    user     = args.user
+    nodename = args.nodename
+    keys_dir = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}")
 
     unless File.exists? keys_dir
       FileUtils.mkdir_p keys_dir
-      sh %{ssh-keygen -b 2048 -t rsa -N "" -C "Chef: ssh key for #{user}@#{hostname}" -f #{File.join(keys_dir, "#{user}@#{hostname}")}}
+      sh %{ssh-keygen -b 2048 -t rsa -N "" -C "Chef: ssh key for #{user}@#{nodename}" -f #{File.join(keys_dir, "#{user}@#{nodename}")}}
+    end
+  end
+
+
+  desc "Establish a ssh connection with specified box"
+  task :ssh, [:user, :nodename, :ip, :cmd] do |t, args|
+    raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
+
+    user     = args.user
+    nodename = args.nodename
+    ip       = args.ip
+    port     = 2222
+    cmd      = args.cmd
+    key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
+
+    sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
+  end
+
+
+  desc "Switch to environment chef server"
+  task :switch_svr, [:env] do |t, args|
+    raise "Must provide an environment" unless args.env
+
+    chef_dir = File.join(TOPDIR, ".chef")
+    env_dir  = File.join(TOPDIR, ".chef-#{args.env}")
+    env_file = File.join(TOPDIR, ".environment")
+    current  = current_env
+
+    if args.env =~ /#{current}/i
+      puts "Current environment: #{current}"
+    else
+      if File.exists? env_dir
+        FileUtils.mv chef_dir, File.join(TOPDIR, ".chef-#{current}")
+        FileUtils.mv env_dir, chef_dir
+        system("sed", "-i", "1s:#{current}:#{args.env}:g", env_file)
+
+        puts "Current environment: #{current_env}"
+      else
+        puts "The environment '#{args.env}' does not exist."
+        puts "Create it first with 'rake coderebels:make_env[#{args.env}]'"
+      end
     end
   end
 
 
   desc "Bundle a bootstrap package for specified box"
-  task :bundle => :ssh_keygen
-  task :bundle, :user, :hostname do |t, args|
-    raise "Must provide a user and a hostname" unless (args[:user] and args[:hostname])
+  task :bundle, [:user, :nodename, :mtype] => :ssh_keygen do |t, args|
+    args.with_defaults(:mtype => "laptop")
+    raise "Must provide a user and a nodename" unless (args.user and args.nodename)
+    raise "Allowed values for mtype are: laptop, pc" if (args.mtype and not %w[laptop pc].include? args.mtype)
 
-    user     = args[:user]
-    hostname = args[:hostname]
+    user     = args.user
+    nodename = args.nodename
+    mtype    = args.mtype
 
-    desktop_dir = File.join(ENV['HOME'], "Escriptori")
-    target_dir  = File.join(desktop_dir, "bootstrap")
+    bootstrap_file = File.join(ENV['HOME'], "#{user}@#{nodename}.tar.gz")
 
-    unless File.exists? target_dir
+    unless File.exists? bootstrap_file
       bootstrap_dir = File.join(TOPDIR, "bootstrap")
+      target_dir    = File.join(ENV['HOME'], "bootstrap")
       FileUtils.cp_r bootstrap_dir, target_dir
 
-      keys_dir = File.join(TOPDIR, "keys", "#{user}@#{hostname}")
-      pub_key  = File.join(keys_dir, "#{user}@#{hostname}.pub")
+      iface = mtype == "laptop" ? "wlan" : "eth"
+      File.open("#{target_dir}/setup.sh", "w") { |file| file.puts IO.read("#{bootstrap_dir}/setup.sh").gsub(/@@IFACE@@/, iface) }
+
+      keys_dir = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}")
+      pub_key  = File.join(keys_dir, "#{user}@#{nodename}.pub")
       FileUtils.cp pub_key, File.join(target_dir, "keys", "key.pub")
 
-      system("tar", "-C", desktop_dir, "-cvzf", File.join(desktop_dir, "bootstrap.tar.gz"), "bootstrap")
+      system("tar", "-C", ENV['HOME'], "-cvzf", bootstrap_file, "bootstrap")
       FileUtils.rm_r target_dir
     end
   end
 
 
-  desc "Create a new profile for specified box"
-  task :box_profile, :user, :hostname do |t, args|
-    raise "Must provide a user and a hostname" unless (args[:user] and args[:hostname])
+  desc "Create a new profile for specified node"
+  task :node_profile, [:nodename, :roles, :recipes] do |t, args|
+    args.with_defaults(:roles => "average-box", :recipes => "")
+    raise "Must provide a nodename" unless args.nodename
 
-    user     = args[:user]
-    hostname = args[:hostname]
+    nodename = args.nodename
+    roles    = args.roles
+    recipes  = args.recipes
 
-    profile = "#{user}-#{hostname}"
-    profile_file = File.join(TOPDIR, "data_bags", "boxes", "#{profile}.json")
+    profiles_dir = File.join(TOPDIR, "roles")
+    profile_file = File.join(profiles_dir, current_env, "#{nodename}.json")
 
     unless File.exists? profile_file
-      edb_file = File.join(TOPDIR, "keys", "edb")
-      editor   = "gedit"
+      run_list = roles.split(":").map{ |r| "\"role[#{r}]\"" } + recipes.split(":").map{ |r| "\"#{r}\"" }
 
-      sh %{knife data bag create boxes #{profile} --secret-file #{edb_file} -e #{editor}}
-      sh %{knife download data_bags}
-    end
-  end
-
-
-  desc "Create a new role for specified box"
-  task :box_role, :user, :hostname, :recipes do |t, args|
-    raise "Must provide a user and a hostname" unless (args[:user] and args[:hostname])
-
-    user     = args[:user]
-    hostname = args[:hostname]
-    recipes  = args[:recipes] || ""
-
-    role = "#{user}-#{hostname}"
-    role_file = File.join(TOPDIR, "roles", "#{role}.json")
-
-    unless File.exists? role_file
-      run_list = ["\"role[average-box]\""] + recipes.split(':').map{ |r| "\"recipe[#{r}]\"" }
-
-      open(role_file, "w") do |file|
-        file.puts <<-EOH
-{
-  "name": "#{role}",
-  "description": "Profile for #{user}@#{hostname} box",
-  "json_class": "Chef::Role",
-  "chef_type": "role",
-  "default_attributes": {
-    "profile": "#{role}"
-  },
-  "override_attributes": {},
-  "run_list": [
-    #{run_list.join(',')}
-  ],
-  "env_run_lists": {}
-}
-EOH
-      end
-
-      sh %{knife role from file #{role}.json}
+      FileUtils.cp File.join(profiles_dir, "NODE_PROFILE.json"), profile_file
+      system("sed", "-i", "8s:@@RUN_LIST@@:#{run_list.join(',')}:g", profile_file)
+      system("gedit", profile_file)
     end
   end
 
 
   desc "Bootstrap a chef client node"
-  task :bootstrap, :user, :hostname, :ip do |t, args|
-    raise "Must provide a user, a hostname and an IP address" unless (args[:user] and args[:hostname] and args[:ip])
+  task :bootstrap, [:user, :nodename, :ip, :platform, :arch] do |t, args|
+    args.with_defaults(:platform => "ubuntu", :arch => "i686")
+    raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
+    raise "Allowed values for platform are: ubuntu, mint" if (args.platform and not %w[ubuntu mint].include? args.platform)
+    raise "Allowed values for arch are: i686, x86_64" if (args.arch and not %w[i686 x86_64].include? args.arch)
 
-    user     = args[:user]
-    hostname = args[:hostname]
-    ip       = args[:ip]
+    user     = args.user
+    nodename = args.nodename
+    platform = args.platform
+    ip       = args.ip
     port     = 2222
-    key_file = File.join(TOPDIR, "keys", "#{user}@#{hostname}", "#{user}@#{hostname}")
-    run_list = "role[#{user}-#{hostname}]"
 
-    sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --sudo}
-    sh %{knife node run_list add #{hostname} '#{run_list}'}
+    ssh_dir      = File.join(ENV['HOME'], ".ssh")
+    profiles_dir = File.join(TOPDIR, "roles", current_env)
+    key_file     = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
+
+    FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
+
+    if platform == "mint"
+      url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
+      cmd = "curl -L '#{url}' > '/tmp/chef_client.deb' ; sudo dpkg -i '/tmp/chef_client.deb'"
+
+      sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
+    end
+
+    sh %{knife role from file #{profiles_dir}/#{nodename}.json}
+    sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --sudo}
+    sh %{knife node run_list add #{nodename} 'role[#{nodename}]'}
+
+    FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), File.join(ssh_dir, "known_hosts")
   end
 
 
   desc "Converge a chef client node"
-  task :converge, :user, :hostname, :ip do |t, args|
-    raise "Must provide a user, a hostname and an IP address" unless (args[:user] and args[:hostname] and args[:ip])
+  task :converge, [:user, :nodename, :ip, :platform, :arch] do |t, args|
+    args.with_defaults(:platform => "ubuntu", :arch => "i686")
+    raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
+    raise "Allowed values for platform are: ubuntu, mint" if (args.platform and not %w[ubuntu mint].include? args.platform)
+    raise "Allowed values for arch are: i686, x86_64" if (args.arch and not %w[i686 x86_64].include? args.arch)
 
-    user     = args[:user]
-    hostname = args[:hostname]
-    ip       = args[:ip]
+    user     = args.user
+    nodename = args.nodename
+    platform = args.platform
+    ip       = args.ip
     port     = 2222
-    key_file = File.join(TOPDIR, "keys", "#{user}@#{hostname}", "#{user}@#{hostname}")
-    run_list = "role[#{user}-#{hostname}]"
 
-    sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --run-list '#{run_list}' --sudo}
-  end
+    ssh_dir      = File.join(ENV['HOME'], ".ssh")
+    profiles_dir = File.join(TOPDIR, "roles", current_env)
+    key_file     = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
 
+    FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
-  desc "Establish a ssh connection with specified box"
-  task :ssh, :user, :hostname, :ip, :cmd do |t, args|
-    raise "Must provide a user, a hostname and an IP address" unless (args[:user] and args[:hostname] and args[:ip])
+    if platform == "mint"
+      url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
+      cmd = "curl -L '#{url}' > '/tmp/chef_client.deb' ; sudo dpkg -i '/tmp/chef_client.deb'"
 
-    user     = args[:user]
-    hostname = args[:hostname]
-    ip       = args[:ip]
-    port     = 2222
-    cmd      = args[:cmd]
-    key_file = File.join(TOPDIR, "keys", "#{user}@#{hostname}", "#{user}@#{hostname}")
+      sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
+    end
 
-    sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} #{cmd}}
+    sh %{knife role from file #{profiles_dir}/#{nodename}.json}
+    sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --run-list 'role[#{nodename}]' --sudo}
+
+    FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), File.join(ssh_dir, "known_hosts")
   end
 
 end

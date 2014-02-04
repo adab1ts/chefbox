@@ -23,4 +23,5 @@ require File.join(File.dirname(__FILE__), 'config', 'rake')
 
 load 'tasks/opscode/chef_repo.rake'
 load 'tasks/coderebels/chefbox.rake'
+load 'tasks/coderebels/chefbox_help.rake'
 

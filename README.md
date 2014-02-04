@@ -42,15 +42,20 @@ The following tasks duplicate functionality from knife and may be removed in a f
 
 The following tasks ease converging new nodes
 
-* `coderebels:bootstrap[user,hostname,ip]` - Bootstrap a chef client node.
-* `coderebels:box_profile[user,hostname]` - Create a new profile for specified box.
-* `coderebels:box_role[user,hostname,recipes]` - Create a new role for specified box.
-* `coderebels:bundle[user,hostname]` - Bundle a bootstrap package for specified box.
-* `coderebels:converge[user,hostname,ip]` - Converge a chef client node.
-* `coderebels:edb_keygen[keyname]` - Generate openssl key for encrypted data bags management.
-* `coderebels:remindme` - Show how to proceed to converge a new chefbox node.
-* `coderebels:ssh[user,hostname,ip,cmd]` - Establish a ssh connection with specified box.
-* `coderebels:ssh_keygen[user,hostname]` - Generate authentication keys to establish a ssh connection with a box.
+* `coderebels:bootstrap[user,nodename,ip,platform,arch]` - Bootstrap a chef client node.
+* `coderebels:bundle[user,nodename,mtype]`               - Bundle a bootstrap package for specified box.
+* `coderebels:chefbox_updt`                              - Fetch chefbox code from Github and merge into the master branch.
+* `coderebels:converge[user,nodename,ip,platform,arch]`  - Converge a chef client node.
+* `coderebels:edb_keygen[keyname]`                       - Generate openssl key for encrypted data bags management.
+* `coderebels:help[taskname]`                            - Get help about task usage.
+* `coderebels:make_env[env]`                             - Make environment directory structure.
+* `coderebels:node_profile[nodename,roles,recipes]`      - Create a new profile for specified node.
+* `coderebels:remindme`                                  - Show how to proceed to converge a new chefbox node.
+* `coderebels:remove_env[env]`                           - Remove environment directory structure.
+* `coderebels:ssh[user,nodename,ip,cmd]`                 - Establish a ssh connection with specified box.
+* `coderebels:ssh_keygen[user,nodename]`                 - Generate authentication keys to establish a ssh connection with a box.
+* `coderebels:switch_svr[env]`                           - Switch to environment chef server.
+* `coderebels:workspace[env]`                            - Prepare your chefbox workspace.
 
 
 ## Configuration
@@ -79,7 +84,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (C) 2013 Carles Muiños
+Copyright (c) 2013,2014 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
