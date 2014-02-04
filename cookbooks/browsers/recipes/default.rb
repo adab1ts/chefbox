@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['browsers']
+selected = node[:box][:apps][:browsers]
 
 if selected
   browsers = data_bag_item('apps', 'browsers')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :browsers => browsers }
+  node.default[:apps] = { :browsers => browsers }
 
   include_recipe "browsers::chrome" if selected.include?("chrome")
   include_recipe "browsers::chromium" if selected.include?("chromium")

@@ -2,6 +2,20 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.5.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/chromium - do not support Unity Web Apps anymore
+* recipes/firefox  - do not support Unity Web Apps anymore
+
 ## 0.4.4:
 
 * recipes/chromium - mandatory minor refactorization
