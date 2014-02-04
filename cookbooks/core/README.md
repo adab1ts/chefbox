@@ -34,6 +34,12 @@ This cookbook only applies to the following platforms:
     <th>Default</th>
   </tr>
   <tr>
+    <td><tt>[:box]</tt></td>
+    <td>Hash</td>
+    <td>profile data of the target node</td>
+    <td><tt>{}</tt></td>
+  </tr>
+  <tr>
     <td><tt>[:apt][:sources_path]</tt></td>
     <td>String</td>
     <td>path to additional package repositories</td>
