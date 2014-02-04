@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.5.0:
+
+* README   - update copyright note
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - update apt-file cache immediately
+  - use of symbols for attribute keys
+
 ## 0.4.1:
 
 * recipes/default - now checks existence of ~/.bashrc file before backing it up

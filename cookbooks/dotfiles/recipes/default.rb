@@ -3,7 +3,7 @@
 # Cookbook Name:: dotfiles
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,8 +21,6 @@
 
 ## Requirements
 
-include_recipe "base"
-
 # Displays directory tree, in color
 package "tree"
 
@@ -35,7 +33,7 @@ package "apt-file"
 execute "update_apt_file_cache" do
   command "apt-file update"
   action :nothing
-  subscribes :run, resources("package[apt-file]"), :delayed
+  subscribes :run, resources("package[apt-file]"), :immediately
 end
 
 support "apt-file" do
@@ -49,27 +47,27 @@ package "apt-show-versions"
 ## Deploy
 
 box = node[:box]
-dotfiles = box['dotfiles']
+dotfiles = box[:dotfiles]
 
-dotfiles['users'].each do |username|
-  usr = box['users'][username]
+dotfiles[:users].each do |username|
+  usr = box[:users][username]
 
-  dotfiles_dir = "#{usr['home']}/#{dotfiles['folder']}"
+  dotfiles_dir = "#{usr[:home]}/#{dotfiles[:folder]}"
   bash_dotfiles_dir = "#{dotfiles_dir}/bash"
 
   directory_tree dotfiles_dir do
-    exclude usr['home']
+    exclude usr[:home]
     owner username
-    group usr['group']
+    group usr[:group]
     mode 00755
   end
 
   remote_directory bash_dotfiles_dir do
     owner username
-    group usr['group']
+    group usr[:group]
     mode 0755
     files_owner username
-    files_group usr['group']
+    files_group usr[:group]
     files_mode 0644
     files_backup false
   end
@@ -77,38 +75,38 @@ dotfiles['users'].each do |username|
   template "#{bash_dotfiles_dir}/env" do
     source "/bash/env.erb"
     owner username
-    group usr['group']
+    group usr[:group]
     mode 0644
     backup false
     variables(
-      :admin_folder => box['folders']['admin'],
-      :dotfiles_folder => dotfiles['folder']
+      :admin_folder => box[:folders][:admin],
+      :dotfiles_folder => dotfiles[:folder]
     )
   end
 
   template "#{dotfiles_dir}/bashrc" do
     source "/bash/bashrc.erb"
     owner username
-    group usr['group']
+    group usr[:group]
     mode 0644
     backup false
     variables(
-      :dotfiles_folder => dotfiles['folder']
+      :dotfiles_folder => dotfiles[:folder]
     )
   end
 
   execute "backup_bashrc_file" do
-    cwd usr['home']
+    cwd usr[:home]
     command "mv .bashrc .bashrc.orig"
     user username
-    creates "#{usr['home']}/.bashrc.orig"
+    creates "#{usr[:home]}/.bashrc.orig"
     only_if { ::File.exists?(".bashrc") }
   end
 
-  link "#{usr['home']}/.bashrc" do
+  link "#{usr[:home]}/.bashrc" do
     to "#{dotfiles_dir}/bashrc"
     owner username
-    group usr['group']
+    group usr[:group]
   end
 end
 
