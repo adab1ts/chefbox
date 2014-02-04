@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of graphics.
 
+## 0.3.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
 ## 0.2.0:
 
 * recipes/default - now includes pencil install management

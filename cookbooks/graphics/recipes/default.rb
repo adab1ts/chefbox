@@ -19,19 +19,13 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['graphics']
+selected = node[:box][:apps][:graphics]
 
 if selected
   graphics = data_bag_item('apps', 'graphics')
-  apps  = graphics['apps']
+  apps = graphics['apps']
 
   # Uninstall apps not needed
   unselected = apps - selected
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :graphics => graphics }
+  node.default[:apps] = { :graphics => graphics }
 
   include_recipe "graphics::pencil" if selected.include?("pencil")
   include_recipe "graphics::pinta" if selected.include?("pinta")
