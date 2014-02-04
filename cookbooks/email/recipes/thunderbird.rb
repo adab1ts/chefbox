@@ -3,7 +3,7 @@
 # Cookbook Name:: email
 # Recipe:: thunderbird
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,8 +25,6 @@ email = node[:apps][:email]
 install_app "thunderbird" do
   profile email['profiles']['thunderbird']
 end
-
-package "thunderbird-globalmenu" if platform?("ubuntu") and platform_version == 12.04
 
 package "thunderbird-locale-ca"
 package "thunderbird-locale-es"
