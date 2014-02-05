@@ -26,11 +26,16 @@ namespace :coderebels do
   end
 
 
-  desc "Fetch chefbox code from Github and merge into the master branch"
+  desc "Pull chefbox code from Github and upload to chef server"
   task :chefbox_updt do
     FileUtils.cd(TOPDIR) do
       sh %{git checkout master}
       sh %{git pull}
+
+      FileList["roles/common/*"].each { |role| sh %{knife role from file #{role}} }
+      FileList["data_bags/apps/*"].each { |dbi| sh %{knife data bag from file apps #{File.basename(dbi)}} }
+      FileList["data_bags/resources/*"].each { |dbi| sh %{knife data bag from file resources #{File.basename(dbi)}} }
+      sh %{knife cookbook upload -a}
     end
   end
 

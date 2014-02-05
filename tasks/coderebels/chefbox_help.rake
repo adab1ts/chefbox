@@ -27,11 +27,12 @@ namespace :coderebels do
     puts
     puts "*) Prepare your workspace the very first time:  rake coderebels:workspace[env]"
     puts
-    puts "0) Fetch chefbox updates:             rake coderebels:chefbox_updt"
-    puts "1) Switch to the target environment:  rake coderebels:switch_svr[env]"
-    puts "2) Bundle a bootstrap package:        rake coderebels:bundle[user,nodename,mtype]"
-    puts "3) Create a new node profile:         rake coderebels:node_profile[nodename,roles,recipes]"
-    puts "4) Bootstrap the node:                rake coderebels:bootstrap[user,nodename,ip,platform,arch]"
+    puts "1) Pull and upload chefbox updates:   rake coderebels:chefbox_updt"
+    puts "2) Switch to the target environment:  rake coderebels:switch_svr[env]"
+    puts "3) For each node to bootstrap:"
+    puts "   3.1) Bundle a bootstrap package:   rake coderebels:bundle[user,nodename,mtype]"
+    puts "   3.2) Create a new node profile:    rake coderebels:node_profile[nodename,roles,recipes]"
+    puts "   3.3) Bootstrap the node:           rake coderebels:bootstrap[user,nodename,ip,platform,arch]"
   end
 
 
@@ -49,6 +50,16 @@ namespace :coderebels do
           ARGS: env => name of the target environment
 
       EXAMPLES: rake coderebels:workspace[oop]
+      EOH
+    when "chefbox_updt"
+      <<-EOH
+          TASK: chefbox_updt
+          DESC: fetch chefbox code from Github and merge into the master branch
+                then upload changes to your chef server
+
+          ARGS: none
+
+      EXAMPLES: rake coderebels:chefbox_updt
       EOH
     when "switch_svr"
       <<-EOH

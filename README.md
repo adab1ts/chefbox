@@ -44,7 +44,7 @@ The following tasks ease converging new nodes
 
 * `coderebels:bootstrap[user,nodename,ip,platform,arch]` - Bootstrap a chef client node.
 * `coderebels:bundle[user,nodename,mtype]`               - Bundle a bootstrap package for specified box.
-* `coderebels:chefbox_updt`                              - Fetch chefbox code from Github and merge into the master branch.
+* `coderebels:chefbox_updt`                              - Pull chefbox code from Github and upload to chef server.
 * `coderebels:converge[user,nodename,ip,platform,arch]`  - Converge a chef client node.
 * `coderebels:edb_keygen[keyname]`                       - Generate openssl key for encrypted data bags management.
 * `coderebels:help[taskname]`                            - Get help about task usage.
