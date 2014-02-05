@@ -22,7 +22,7 @@ require 'rubygems'
 namespace :coderebels do
 
   def current_env
-    IO.read(env_file).chomp
+    IO.read(File.join(TOPDIR, ".environment")).chomp
   end
 
 
