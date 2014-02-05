@@ -19,6 +19,6 @@
 #
 
 
-default[:jobs][:log_path]       = "/var/log/jobs"
-default[:jobs][:logrotate_conf] = "/etc/logrotate.d/jobs"
+default[:box][:jobs][:log_path]       = "/var/log/jobs"
+default[:box][:jobs][:logrotate_conf] = "/etc/logrotate.d/jobs"
 

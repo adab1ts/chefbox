@@ -15,10 +15,9 @@ This cookbook only applies to the following platforms:
 
 #### cookbooks
 - `core`
-- `base`
 
 #### recipes
-- `base::default`
+- `core::default`
 
 #### packages
 - `tree` - Displays directory tree, in color
@@ -36,13 +35,13 @@ This cookbook only applies to the following platforms:
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['jobs']['log_path']</tt></td>
+    <td><tt>[:box][:jobs][:log_path]</tt></td>
     <td>String</td>
     <td>path to jobs execution log folder</td>
     <td><tt>/var/jobs/log</tt></td>
   </tr>
   <tr>
-    <td><tt>['jobs']['logrotate_conf']</tt></td>
+    <td><tt>[:box][:jobs][:logrotate_conf]</tt></td>
     <td>String</td>
     <td>logrotate configuration file for jobs execution logs</td>
     <td><tt>/etc/logrotate.d/jobs</tt></td>

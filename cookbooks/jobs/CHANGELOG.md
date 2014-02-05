@@ -2,6 +2,20 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.5.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - use of symbols for attribute keys
+
+* recipes/backup
+
+  - use of symbols for attribute keys
+
 ## 0.4.1:
 
 * templates/ubuntu-12.04/jobs/backup/backup-mgr.desktop - moved from 'templates/default/jobs/backup' folder

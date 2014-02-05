@@ -21,8 +21,6 @@
 
 ## Requirements
 
-include_recipe "base"
-
 # Displays directory tree, in color
 package "tree"
 
@@ -33,38 +31,38 @@ package "meld"
 ## Configuration
 
 box  = node[:box]
-jobs = box['jobs']
+jobs = box[:jobs]
 
-jobs_log_path = node[:jobs][:log_path]
-jobs_logrotate_conf = node[:jobs][:logrotate_conf]
+jobs_log_path = jobs[:log_path]
+jobs_logrotate_conf = jobs[:logrotate_conf]
 
 template jobs_logrotate_conf do
   source "/logrotate/jobs.erb"
   mode 00644
   backup false
   variables(
-    :jobs_profiles => jobs['profiles'],
+    :jobs_profiles => jobs[:profiles],
     :jobs_log_path => jobs_log_path
   )
 end
 
-jobs['users'].each do |username|
+jobs[:users].each do |username|
   directory_tree "#{jobs_log_path}/#{username}"
 
-  usr = box['users'][username]
-  jobs_dir = "#{usr['home']}/#{jobs['folder']}"
+  usr = box[:users][username]
+  jobs_dir = "#{usr[:home]}/#{jobs[:folder]}"
 
   directory_tree "#{jobs_dir}/logs" do
-    exclude usr['home']
+    exclude usr[:home]
     owner username
-    group usr['group']
+    group usr[:group]
     mode 00755
   end
 
   template "#{jobs_dir}/setup" do
     source "/jobs/setup.erb"
     owner username
-    group usr['group']
+    group usr[:group]
     mode 00644
     backup false
     variables(
