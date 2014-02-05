@@ -1,0 +1,44 @@
+{
+  "name": "devel-box",
+  "description": "Development box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "role[basic-box]",
+    "devel",
+    "browsers",
+    "cloud",
+    "groupware",
+    "vms"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "browsers": [
+          "chrome",
+          "firefox",
+          "opera"
+        ],
+        "cloud": [
+          "dropbox",
+          "ubuntuone"
+        ],
+        "devel": [
+          "git",
+          "zsh"
+        ],
+        "groupware": [
+          "etherpad-lite",
+          "hangouts",
+          "mumble",
+          "smuxi"
+        ],
+        "vms": [
+          "virtualbox"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
