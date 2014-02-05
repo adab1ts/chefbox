@@ -5,7 +5,5 @@
 bootstrap/
 keys/
 host-*/
-data_bags/boxes/*.json
-!data_bags/boxes/USER-HOSTNAME.json
 roles/*/*.json
 !roles/common/*.json
