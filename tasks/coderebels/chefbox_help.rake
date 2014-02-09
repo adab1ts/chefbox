@@ -68,7 +68,7 @@ namespace :coderebels do
 
           ARGS: env => name of the target environment
 
-      EXAMPLES: rake coderebels:switch_svr[circle]
+      EXAMPLES: rake coderebels:switch_svr[cof]
                 rake coderebels:switch_svr[ldps]
                 rake coderebels:switch_svr[oop]
       EOH
