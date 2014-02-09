@@ -1,0 +1,22 @@
+{
+  "name": "radio-box",
+  "description": "Radio box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "audio_pro"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "audio_pro": [
+          "airtime",
+          "audacity",
+          "idjc"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
