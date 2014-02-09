@@ -2,6 +2,25 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.5.0:
+
+* README   - update requirements section and copyright note
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - update copyright note
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/faenza-icons  - update copyright note
+* recipes/faience-icons - update copyright note
+* recipes/moka-icons    - update copyright note
+* recipes/nitrux-icons  - update copyright note
+* recipes/unsettings    - update copyright note
+
+
 ## 0.4.0:
 
 * recipe/default - now checks for section presence in box profile's apps list before proceed

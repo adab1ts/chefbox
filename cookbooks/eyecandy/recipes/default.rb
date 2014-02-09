@@ -3,7 +3,7 @@
 # Cookbook Name:: eyecandy
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['eyecandy']
+selected = node[:box][:apps][:eyecandy]
 
 if selected
   eyecandy = data_bag_item('apps', 'eyecandy')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :eyecandy => eyecandy }
+  node.default[:apps] = { :eyecandy => eyecandy }
 
   include_recipe "eyecandy::faenza-icons" if selected.include?("faenza-icons")
   include_recipe "eyecandy::faience-icons" if selected.include?("faience-icons")
