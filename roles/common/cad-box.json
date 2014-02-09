@@ -1,0 +1,22 @@
+{
+  "name": "cad-box",
+  "description": "CAD box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "graphics_pro"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "graphics_pro": [
+          "draftsight",
+          "freecad",
+          "qcad"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
