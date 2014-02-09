@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['indicators']
+selected = node[:box][:apps][:indicators]
 
 if selected
   indicators = data_bag_item('apps', 'indicators')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :indicators => indicators }
+  node.default[:apps] = { :indicators => indicators }
 
   include_recipe "indicators::plugandplay" if selected.include?("plug&play")
   include_recipe "indicators::screensaver" if selected.include?("screensaver")

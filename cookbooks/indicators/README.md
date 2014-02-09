@@ -17,10 +17,9 @@ This cookbook only applies to Ubuntu 12.04+ platform.
 
 #### cookbooks
 - `core`
-- `base`
 
 #### recipes
-- `base::default`
+- `core::default`
 
 
 ## Usage
