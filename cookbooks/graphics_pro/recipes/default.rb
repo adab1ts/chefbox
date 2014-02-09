@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['graphics_pro']
+selected = node[:box][:apps][:graphics_pro]
 
 if selected
   graphics_pro = data_bag_item('apps', 'graphics_pro')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :graphics_pro => graphics_pro }
+  node.default[:apps] = { :graphics_pro => graphics_pro }
 
   include_recipe "graphics_pro::darktable" if selected.include?("darktable")
   include_recipe "graphics_pro::draftsight" if selected.include?("draftsight")

@@ -30,12 +30,12 @@ end
 launcher "qcad" do
   template "/qcad/qcad.desktop.erb"
   variables(
-    :exec => "sh -c '~/#{box['folders']['apps']}/qcad/qcad'"
+    :exec => "sh -c '~/#{box[:folders][:apps]}/qcad/qcad'"
   )
 end
 
 uninstaller "qcad" do
-  template "/qcad/uninstall_qcad-#{box['lang']}.sh.erb"
+  template "/qcad/uninstall_qcad-#{box[:lang]}.sh.erb"
   variables(
     :app     => "qcad",
     :website => graphics_pro['profiles']['qcad']['website']

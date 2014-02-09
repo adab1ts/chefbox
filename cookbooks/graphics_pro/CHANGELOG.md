@@ -2,6 +2,19 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.4.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/qcad - use of symbols for attribute keys
+
 ## 0.3.2:
 
 * recipes/qcad - minor update to QCAD launcher params
