@@ -1,0 +1,26 @@
+{
+  "name": "photo-box",
+  "description": "Photography box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "graphics",
+    "graphics_pro"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "graphics": [
+          "shotwell"
+        ],
+        "graphics_pro": [
+          "darktable",
+          "gimp",
+          "rawtherapee"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
