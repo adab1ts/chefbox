@@ -20,7 +20,6 @@
 
 
 video_pro = node[:apps][:video_pro]
-box = node[:box]
 
 # Free video editor
 install_app "avidemux" do

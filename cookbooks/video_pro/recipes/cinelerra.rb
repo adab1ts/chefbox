@@ -20,7 +20,6 @@
 
 
 video_pro = node[:apps][:video_pro]
-box = node[:box]
 
 # An audio/video authoring tool
 install_app "cinelerra" do

@@ -2,6 +2,19 @@
 
 This file is used to list changes made in each version of video_pro.
 
+## 0.2.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/shotcut - use of symbols for attribute keys
+
 ## 0.1.1:
 
 * recipes/shotcut - now deploys custom uninstaller script for Shotcut

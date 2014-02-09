@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['video_pro']
+selected = node[:box][:apps][:video_pro]
 
 if selected
   video_pro = data_bag_item('apps', 'video_pro')
@@ -42,7 +36,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :video_pro => video_pro }
+  node.default[:apps] = { :video_pro => video_pro }
 
   include_recipe "video_pro::avidemux" if selected.include?("avidemux")
   include_recipe "video_pro::cinelerra" if selected.include?("cinelerra")

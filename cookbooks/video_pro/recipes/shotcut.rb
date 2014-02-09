@@ -30,12 +30,12 @@ end
 launcher "shotcut" do
   template "/shotcut/shotcut.desktop.erb"
   variables(
-    :exec => %{sh -c '~/#{box['folders']['apps']}/shotcut/Shotcut.app/shotcut "%F"'}
+    :exec => %{sh -c '~/#{box[:folders][:apps]}/shotcut/Shotcut.app/shotcut "%F"'}
   )
 end
 
 uninstaller "shotcut" do
-  template "/shotcut/uninstall_shotcut-#{box['lang']}.sh.erb"
+  template "/shotcut/uninstall_shotcut-#{box[:lang]}.sh.erb"
   variables(
     :app     => "shotcut",
     :website => video_pro['profiles']['shotcut']['website']
