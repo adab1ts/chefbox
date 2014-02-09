@@ -2,6 +2,24 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.7.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+  - move y-ppa-manager installation to recipe[sysadmin::yppamgr]
+  - now includes fogger and qle install management
+
+* recipes/fogger  - manages fogger app installation
+* recipes/furius  - use of symbols for attribute keys
+* recipes/qle     - manages qle app installation
+* recipes/yppamgr - deleted
+
 ## 0.6.0:
 
 * recipes/default   - now includes shutter install management

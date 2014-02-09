@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: utils
-# Recipe:: yppamgr
+# Recipe:: fogger
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 utils = node[:apps][:utils]
 
-# PPA Management
-install_app "yppamgr" do
-  profile utils['profiles']['yppamgr']
+# Fogger lets you create sandboxed web apps
+install_app "fogger" do
+  profile utils['profiles']['fogger']
 end
 

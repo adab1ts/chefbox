@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: utils
-# Recipe:: furius
+# Recipe:: qle
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,36 +21,8 @@
 
 utils = node[:apps][:utils]
 
-# ISO, IMG, BIN, MDF and NRG image management utility
-install_app "furius" do
-  profile utils['profiles']['furius']
-end
-
-box = node[:box]
-
-box[:users].each do |username, usr|
-  furius_dir = "#{usr[:home]}/.furiusisomount"
-
-  directory_tree furius_dir do
-    exclude usr[:home]
-    owner username
-    group usr[:group]
-    mode 00755
-  end
-
-  template "#{furius_dir}/settings.cfg" do
-    source "/furius/settings.cfg.erb"
-    owner username
-    group usr[:group]
-    mode 0644
-    backup false
-    variables(
-      :mount_point => "#{usr[:home]}/#{box[:folders][:desktop]}"
-    )
-  end
-end
-
-support "furius" do
-  section "utils"
+# Unity Quicklist Editor
+install_app "qle" do
+  profile utils['profiles']['qle']
 end
 

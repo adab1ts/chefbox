@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['utils']
+selected = node[:box][:apps][:utils]
 
 if selected
   utils = data_bag_item('apps', 'utils')
@@ -42,12 +36,13 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :utils => utils }
+  node.default[:apps] = { :utils => utils }
 
+  include_recipe "utils::fogger" if selected.include?("fogger")
   include_recipe "utils::furius" if selected.include?("furius")
   include_recipe "utils::hardinfo" if selected.include?("hardinfo")
   include_recipe "utils::p7zip" if selected.include?("p7zip")
+  include_recipe "utils::qle" if selected.include?("qle")
   include_recipe "utils::shutter" if selected.include?("shutter")
-  include_recipe "utils::yppamgr" if selected.include?("yppamgr")
 end
 

@@ -1,13 +1,27 @@
 {
   "id": "utils",
   "apps": [
+    "fogger",
     "furius",
     "hardinfo",
     "p7zip",
+    "qle",
     "shutter",
-    "yppamgr"
   ],
   "profiles": {
+    "fogger": {
+      "package": "fogger",
+      "maintainer": "Owais Lone <hello@owaislone.org>",
+      "description": "Fogger lets you create sandboxed web apps that behave like regular desktop applications",
+      "website": "http://launchpad.net/fogger",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "loneowais-fogger",
+          "uri": "ppa:loneowais/fogger"
+        }
+      }
+    },
     "furius": {
       "package": "furiusisomount",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
@@ -36,6 +50,19 @@
         "type": "distro"
       }
     },
+    "qle": {
+      "package": "qle",
+      "maintainer": "Jacob <>"
+      "description": "Unity Quicklist Editor",
+      "website": "http://www.vlijmweb.nl/qle/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "vlijm-qle",
+          "uri": "ppa:vlijm/qle"
+        }
+      }
+    },
     "shutter": {
       "package": "shutter",
       "maintainer": "Mario Kemper <mario.kemper@googlemail.com>",
@@ -52,19 +79,6 @@
         "data": {
           "repo_name": "shutter-ppa",
           "uri": "ppa:shutter/ppa"
-        }
-      }
-    },
-    "yppamgr": {
-      "package": "y-ppa-manager",
-      "maintainer": "Alin Andrei <webupd8@gmail.com>",
-      "description": "PPA Management",
-      "website": "http://launchpad.net/y-ppa-manager",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "webupd8team-y-ppa-manager",
-          "uri": "ppa:webupd8team/y-ppa-manager"
         }
       }
     }
