@@ -150,20 +150,6 @@
       }
     }
   },
-  "lenses": {
-    "music": {
-      "ca": {
-        "file": "music-es.pdf",
-        "url": "http://ubuntuone.com/4jcH36aqpcIItXNt86qpg7",
-        "sha256": "616864afd1179ab725558209937a23f58ccbc5b99d28399d2a5c464d4668340f"
-      },
-      "es": {
-        "file": "music-es.pdf",
-        "url": "http://ubuntuone.com/4jcH36aqpcIItXNt86qpg7",
-        "sha256": "616864afd1179ab725558209937a23f58ccbc5b99d28399d2a5c464d4668340f"
-      }
-    }
-  },
   "office": {
     "libreoffice": {
       "ca": {
