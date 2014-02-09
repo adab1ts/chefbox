@@ -9,6 +9,7 @@
     "browsers",
     "cloud",
     "groupware",
+    "sysadmin",
     "vms"
   ],
   "default_attributes": {
@@ -32,6 +33,9 @@
           "hangouts",
           "mumble",
           "smuxi"
+        ],
+        "sysadmin": [
+          "htop"
         ],
         "vms": [
           "virtualbox"
