@@ -3,7 +3,7 @@
 # Cookbook Name:: cloud
 # Recipe:: dropbox
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ cloud = node[:apps][:cloud]
 # Dropbox integration
 prof = case platform
        when "mint" then "dropbox-mint"
-       else        "dropbox"
+       else "dropbox"
        end
 
 install_app "dropbox" do

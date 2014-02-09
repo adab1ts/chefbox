@@ -2,6 +2,21 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.3.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - update copyright note
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/dropbox   - update copyright note
+* recipes/ubuntuone - update copyright note
+
 ## 0.2.1:
 
 * recipe/dropbox - fixes regression issue concerning dropbox profile name for mint boxes
