@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: juju
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,8 +26,7 @@ install_app "juju" do
   profile devel['profiles']['juju']
 end
 
-box = node[:box]
-devel_folder = box['devel']['folder']
+devel_folder = node[:box][:devel][:folder]
 
 script = <<-EOH
   if [[ ! -f "${HOME}/.ssh/id_rsa" ]]; then

@@ -2,6 +2,43 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.4.0:
+
+* README              - update requirements section
+* metadata            - remove 'core' and 'base' dependencies
+* definitions/aliases - update copyright note
+
+* definitions/bootstrap
+
+  - update copyright note
+  - use of symbols for attribute keys
+
+* definitions/devfile - update copyright note
+* definitions/functions - update copyright note
+
+* recipes/default
+
+  - update copyright note
+  - do not include recipe[base:default] any more
+  - move htop package installation to recipe[sysadmin::htop]
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/git
+
+  - update copyright note
+  - use of symbols for attribute keys
+
+* recipes/juju
+
+  - update copyright note
+  - use of symbols for attribute keys
+
+* recipes/zsh
+
+  - update copyright note
+  - use of symbols for attribute keys
+
 ## 0.3.0:
 
 * recipe/default - now checks for section presence in box profile's apps list before proceed

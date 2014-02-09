@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: default
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,18 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-# Interactive processes viewer
-package "htop"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['devel']
+selected = node[:box][:apps][:devel]
 
 if selected
   devel = data_bag_item('apps', 'devel')
@@ -45,10 +36,10 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :devel => devel }
+  node.default[:apps] = { :devel => devel }
 
   # Shells
-  include_recipe "devel::zsh"
+  include_recipe "devel::zsh" if selected.include?("zsh")
 
   # VCS solutions
   include_recipe "devel::git" if selected.include?("git")

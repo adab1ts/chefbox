@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: zsh
 #
-# Copyright 2013, Carles Muiños
+# Copyright 2013,2014 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -26,8 +26,7 @@ install_app "zsh" do
   profile devel['profiles']['zsh']
 end
 
-box = node[:box]
-dotfiles_folder = box['dotfiles']['folder']
+dotfiles_folder = node[:box][:dotfiles][:folder]
 
 dev_folders = [
   "#{dotfiles_folder}/zsh",
