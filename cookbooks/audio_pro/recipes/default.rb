@@ -21,16 +21,13 @@
 
 ## Requirements
 
-include_recipe "base"
-
 # User interface for controlling the JACK sound server
 package "qjackctl"
 
 
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['audio_pro']
+selected = node[:box][:apps][:audio_pro]
 
 if selected
   audio_pro = data_bag_item('apps', 'audio_pro')
@@ -45,7 +42,7 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :audio_pro => audio_pro }
+  node.default[:apps] = { :audio_pro => audio_pro }
 
   include_recipe "audio_pro::airtime" if selected.include?("airtime")
   include_recipe "audio_pro::ardour" if selected.include?("ardour")

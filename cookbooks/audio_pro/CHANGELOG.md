@@ -2,6 +2,20 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.4.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+
+* recipes/airtime    - use of symbols for attribute keys
+* recipes/transcribe - use of symbols for attribute keys
+
 ## 0.3.3:
 
 * files/ubuntu-12.04/linuxband/linuxband.desktop - moved from 'files/default/linuxband' folder

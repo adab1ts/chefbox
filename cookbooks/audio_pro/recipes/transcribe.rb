@@ -30,12 +30,12 @@ end
 launcher "transcribe" do
   template "/transcribe/transcribe.desktop.erb"
   variables(
-    :exec => "sh -c '~/#{box['folders']['apps']}/transcribe/transcribe'"
+    :exec => "sh -c '~/#{box[:folders][:apps]}/transcribe/transcribe'"
   )
 end
 
 uninstaller "transcribe" do
-  template "/transcribe/uninstall_transcribe-#{box['lang']}.sh.erb"
+  template "/transcribe/uninstall_transcribe-#{box[:lang]}.sh.erb"
   variables(
     :app     => "transcribe",
     :website => audio_pro['profiles']['transcribe']['website']

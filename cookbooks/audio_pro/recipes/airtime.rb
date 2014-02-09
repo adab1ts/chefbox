@@ -27,8 +27,8 @@ install_app "airtime" do
 end
 
 codename = platform_codename
-airtime_repo_file  = "#{node['apt']['sources_path']}/sourcefabric-#{codename}.list"
-original_repo_file = "#{node['apt']['sources_path']}/sourcefabric.list"
+airtime_repo_file  = "#{node[:apt][:sources_path]}/sourcefabric-#{codename}.list"
+original_repo_file = "#{node[:apt][:sources_path]}/sourcefabric.list"
 
 bash "install_airtime" do
   code <<-EOH
