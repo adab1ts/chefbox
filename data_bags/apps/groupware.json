@@ -3,6 +3,7 @@
   "apps": [
     "hangouts",
     "mumble",
+    "smuxi",
     "skype",
     "xchat"
   ],
@@ -40,6 +41,19 @@
         "data": {
           "repo_name": "mumble-release",
           "uri": "ppa:mumble/release"
+        }
+      }
+    },
+    "smuxi": {
+      "package": "smuxi",
+      "maintainer": "Mirco Bauer <meebey@debian.org>",
+      "description": "Graphical IRC client",
+      "website": "http://www.smuxi.org/main/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "meebey-ppa",
+          "uri": "ppa:meebey/ppa"
         }
       }
     },

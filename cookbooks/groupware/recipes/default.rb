@@ -19,15 +19,9 @@
 #
 
 
-## Requirements
-
-include_recipe "base"
-
-
 ## Deploy
 
-box = node[:box]
-selected = box['apps']['groupware']
+selected = node[:box][:apps][:groupware]
 
 if selected
   groupware = data_bag_item('apps', 'groupware')
@@ -42,10 +36,11 @@ if selected
   end
 
   # Install selected apps
-  node.set[:apps] = { :groupware => groupware }
+  node.default[:apps] = { :groupware => groupware }
 
   include_recipe "groupware::hangouts" if selected.include?("hangouts")
   include_recipe "groupware::mumble" if selected.include?("mumble")
+  include_recipe "groupware::smuxi" if selected.include?("smuxi")
   include_recipe "groupware::skype" if selected.include?("skype")
   include_recipe "groupware::xchat" if selected.include?("xchat")
 end

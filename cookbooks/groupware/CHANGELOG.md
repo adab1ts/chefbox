@@ -2,6 +2,20 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.5.0:
+
+* README   - update requirements section
+* metadata - remove 'core' and 'base' dependencies
+
+* recipes/default
+
+  - do not include recipe[base:default] any more
+  - normal attribute 'apps' becomes default attribute
+  - use of symbols for attribute keys
+  - now includes smuxi install management
+
+* recipes/smuxi - manage smuxi app installation
+
 ## 0.4.0:
 
 * recipes/default - now includes mumble and xchat install management
