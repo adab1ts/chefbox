@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.8.0:
+
+* recipes/default - do not include qle install management anymore
+* recipes/qle     - deleted
+
 ## 0.7.0:
 
 * README   - update requirements section

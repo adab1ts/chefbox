@@ -8,7 +8,6 @@ The following recipes may apply:
 - `utils::furius`    - installs __Furius ISO Mount__ and suggested packages.
 - `utils::hardinfo`  - installs __Hardinfo__ and suggested packages.
 - `utils::p7zip`     - installs __7-Zip file archiver__ and suggested packages.
-- `utils::qle`       - installs __Unity Quicklist Editor__ and suggested packages.
 - `utils::shutter`   - installs __Shutter screenshot application__ and suggested packages.
 
 
