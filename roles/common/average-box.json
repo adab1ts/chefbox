@@ -18,6 +18,64 @@
     "utils",
     "video"
   ],
-  "default_attributes": {},
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "audio": [
+          "rhythmbox",
+          "spotify",
+          "tomahawk"
+        ],
+        "browsers": [
+          "chromium",
+          "firefox"
+        ],
+        "cloud": [
+          "dropbox"
+        ],
+        "email": [
+          "geary",
+          "thunderbird"
+        ],
+        "eyecandy": [
+          "moka-icons",
+          "nitrux-icons"
+        ],
+        "fileshare": [
+          "jdownloader",
+          "transmission"
+        ],
+        "graphics": [
+          "pinta",
+          "shotwell"
+        ],
+        "groupware": [
+          "hangouts",
+          "skype",
+          "xchat"
+        ],
+        "office": [
+          "fontmanager",
+          "libreoffice",
+          "masterpdf",
+          "nitro",
+          "pdfshuffler"
+        ],
+        "utils": [
+          "fogger",
+          "shutter"
+        ],
+        "video": [
+          "bombonodvd",
+          "handbrake",
+          "miro",
+          "mmc",
+          "ogmrip",
+          "openshot",
+          "vlc"
+        ]
+      }
+    }
+  },
   "override_attributes": {}
 }
