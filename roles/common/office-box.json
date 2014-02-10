@@ -1,0 +1,34 @@
+{
+  "name": "office-box",
+  "description": "Office box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "browsers",
+    "groupware",
+    "office"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "browsers": [
+          "chromium",
+          "firefox"
+        ],
+        "groupware": [
+          "hangouts",
+          "skype"
+        ],
+        "office": [
+          "libreoffice",
+          "masterpdf",
+          "nitro",
+          "pdfshuffler",
+          "taskcoach"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
