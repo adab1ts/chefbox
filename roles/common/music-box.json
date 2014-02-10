@@ -1,0 +1,26 @@
+{
+  "name": "music-box",
+  "description": "Music box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "audio_pro"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "audio_pro": [
+          "audacity",
+          "linuxband",
+          "muse",
+          "musescore",
+          "transcribe",
+          "rosegarden",
+          "traverso"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
