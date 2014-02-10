@@ -11,7 +11,7 @@
   "profiles": {
     "aptik": {
       "package": "aptik",
-      "maintainer": "Tony George <tony.george.kol@gmail.com>
+      "maintainer": "Tony George <tony.george.kol@gmail.com>",
       "description": "Utility to simplify re-installation of software packages",
       "website": "http://www.teejeetech.in/2014/01/introducing-aptik.html",
       "source": {
@@ -52,7 +52,7 @@
       "package": "freefilesync",
       "maintainer": "Damien Lecan <dev@dlecan.com>",
       "description": "Visual folder comparison and synchronization",
-      "website": "http://freefilesync.sourceforge.net/"
+      "website": "http://freefilesync.sourceforge.net/",
       "source": {
         "type": "ppa",
         "data": {
