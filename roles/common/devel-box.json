@@ -29,7 +29,7 @@
           "zsh"
         ],
         "groupware": [
-          "etherpad-lite",
+          "etherpad",
           "hangouts",
           "mumble",
           "smuxi"
