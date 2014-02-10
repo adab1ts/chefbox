@@ -202,6 +202,20 @@
       }
     }
   },
+  "sysadmin": {
+    "epoptes": {
+      "ca": {
+        "file": "epoptes-es.pdf",
+        "url": "http://ubuntuone.com/2yUTsfFFclKQJkt2nzP5zc",
+        "sha256": "fd46775ec717b5b94113ebc029ba0947014553d4926d22a981e2e9bb0165c82f"
+      },
+      "es": {
+        "file": "epoptes-es.pdf",
+        "url": "http://ubuntuone.com/2yUTsfFFclKQJkt2nzP5zc",
+        "sha256": "fd46775ec717b5b94113ebc029ba0947014553d4926d22a981e2e9bb0165c82f"
+      }
+    }
+  },
   "utils": {
     "furius": {
       "ca": {

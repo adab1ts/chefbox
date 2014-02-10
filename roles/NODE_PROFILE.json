@@ -140,6 +140,7 @@
         "groupware": [
           "hangouts",
           "mumble",
+          "smuxi",
           "skype",
           "xchat"
         ],
@@ -149,12 +150,6 @@
           "touchpad",
           "ubuntuone",
           "weather"
-        ],
-        "lenses": [
-          "music",
-          "news",
-          "torrents",
-          "wikipedia"
         ],
         "office": [
           "fontmanager",
@@ -170,12 +165,20 @@
           "privacy",
           "tracking"
         ],
+        "sysadmin": [
+          "aptik",
+          "epoptes",
+          "epoptesclient",
+          "freefilesync",
+          "htop",
+          "yppamgr"
+        ],
         "utils": [
+          "fogger",
           "furius",
           "hardinfo",
           "p7zip",
-          "shutter",
-          "yppamgr"
+          "shutter"
         ],
         "video": [
           "bombonodvd",

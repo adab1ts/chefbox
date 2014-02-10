@@ -1,0 +1,87 @@
+{
+  "id": "sysadmin",
+  "apps": [
+    "aptik",
+    "epoptes",
+    "epoptesclient",
+    "freefilesync",
+    "htop",
+    "yppamgr"
+  ],
+  "profiles": {
+    "aptik": {
+      "package": "aptik",
+      "maintainer": "Tony George <tony.george.kol@gmail.com>
+      "description": "Utility to simplify re-installation of software packages",
+      "website": "http://www.teejeetech.in/2014/01/introducing-aptik.html",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "teejee2008-ppa",
+          "uri": "ppa:teejee2008/ppa"
+        }
+      }
+    },
+    "epoptes": {
+      "package": "epoptes",
+      "maintainer": "Epoptes Developers <epoptes@lists.launchpad.net>",
+      "description": "Computer lab management tool",
+      "website": "http://www.epoptes.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "epoptes-ppa",
+          "uri": "ppa:epoptes/ppa"
+        }
+      }
+    },
+    "epoptesclient": {
+      "package": "epoptes-client",
+      "maintainer": "Epoptes Developers <epoptes@lists.launchpad.net>",
+      "description": "Computer lab management tool",
+      "website": "http://www.epoptes.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "epoptes-ppa",
+          "uri": "ppa:epoptes/ppa"
+        }
+      }
+    },
+    "freefilesync": {
+      "package": "freefilesync",
+      "maintainer": "Damien Lecan <dev@dlecan.com>",
+      "description": "Visual folder comparison and synchronization",
+      "website": "http://freefilesync.sourceforge.net/"
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "freefilesync-ffs",
+          "uri": "ppa:freefilesync/ffs"
+        }
+      }
+    },
+    "htop": {
+      "package": "htop",
+      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+      "description": "Interactive processes viewer",
+      "website": "http://hisham.hm/htop/",
+      "source": {
+        "type": "distro"
+      }
+    },
+    "yppamgr": {
+      "package": "y-ppa-manager",
+      "maintainer": "Alin Andrei <webupd8@gmail.com>",
+      "description": "PPA Management",
+      "website": "http://launchpad.net/y-ppa-manager",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "webupd8team-y-ppa-manager",
+          "uri": "ppa:webupd8team/y-ppa-manager"
+        }
+      }
+    }
+  }
+}
