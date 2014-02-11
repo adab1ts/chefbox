@@ -2,6 +2,7 @@
   "id": "cloud",
   "apps": [
     "dropbox",
+    "owncloud",
     "ubuntuone"
   ],
   "profiles": {
@@ -19,6 +20,21 @@
       "description": "Dropbox integration for Nemo",
       "source": {
         "type": "distro"
+      }
+    },
+    "owncloud": {
+      "package": "owncloud-client",
+      "maintainer": "Markus Rex <msrex@owncloud.com>",
+      "description": "ownCloud client",
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "owncloud-client",
+          "uri": "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_12.04/ /",
+          "distribution": "",
+          "components": [],
+          "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_12.04/Release.key"
+        }
       }
     },
     "ubuntuone": {

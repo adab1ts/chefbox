@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.4.0:
+
+* recipe/default  - now includes owncloud client install management
+* recipe/owncloud - manage owncloud client installation
+
 ## 0.3.0:
 
 * README   - update requirements section

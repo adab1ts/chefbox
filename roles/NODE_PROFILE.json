@@ -99,6 +99,7 @@
         ],
         "cloud": [
           "dropbox",
+          "owncloud",
           "ubuntuone"
         ],
         "devel": [
