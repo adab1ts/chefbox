@@ -14,7 +14,7 @@
     "box": {
       "apps": {
         "browsers": [
-          "chromium",
+          "chrome",
           "firefox"
         ],
         "groupware": [
