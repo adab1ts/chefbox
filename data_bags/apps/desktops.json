@@ -1,0 +1,20 @@
+{
+  "id": "desktops",
+  "apps": [
+    "cinnamon"
+  ],
+  "profiles": {
+    "cinnamon": {
+      "package": "cinnamon",
+      "maintainer": "Linux Mint <root@linuxmint.com>",
+      "description": "Cinnamon desktop",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "gwendal-lebihan-dev-cinnamon-stable",
+          "uri": "ppa:gwendal-lebihan-dev/cinnamon-stable"
+        }
+      }
+    }
+  }
+}

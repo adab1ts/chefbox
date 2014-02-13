@@ -102,6 +102,9 @@
           "owncloud",
           "ubuntuone"
         ],
+        "desktops": [
+          "cinnamon"
+        ],
         "devel": [
           "git",
           "juju",
