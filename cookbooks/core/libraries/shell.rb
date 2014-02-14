@@ -24,9 +24,10 @@ module Coderebels
     module Shell
 
       def self.rep(cmd)
-        reader, writer = IO.pipe
-        system(cmd, [:err, :out] => writer)
-        reader.gets.chomp
+        command = Mixlib::ShellOut.new(cmd)
+        command.run_command
+
+        command.stdout.chomp
       end
 
     end

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.21.1:
+
+* libraries/shell - redefine method to evaluate a shell command
+
 ## 0.21.0:
 
 * attributes/default        - definition of default attribute 'box', overriden by roles own definition at run time
