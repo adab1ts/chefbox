@@ -17,6 +17,7 @@
 #
 
 require 'rubygems'
+require 'json'
 
 
 namespace :coderebels do
@@ -140,6 +141,38 @@ namespace :coderebels do
     end
 
     puts output
+  end
+
+
+  desc "Get info about specified application"
+  task :info, [:appname] do |t, args|
+    raise "Must provide an app name" unless args.appname
+
+    app = args.appname.downcase
+
+    cmd = Mixlib::ShellOut.new("grep", "-ERwle", app, File.join(TOPDIR, "data_bags", "apps"))
+    cmd.run_command
+
+    file = cmd.stdout.chomp
+
+    unless file.empty?
+      data    = JSON.parse(IO.read file)
+      profile = data["profiles"]["#{app}"]
+
+      if profile
+        output = <<-EOH
+             APP: #{profile["package"]}
+            DESC: #{profile["description"]}
+         WEBSITE: #{profile["website"]}
+        EOH
+        puts output
+      else
+        puts "No profile data found for app '#{args.appname}'. Check the app name or"
+        puts "review data file '#{file}'"
+      end
+    else
+      puts "No info available for app '#{args.appname}'"
+    end
   end
 
 end
