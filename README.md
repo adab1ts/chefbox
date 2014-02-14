@@ -48,6 +48,7 @@ The following tasks ease converging new nodes
 * `coderebels:converge[user,nodename,ip,platform,arch]`  - Converge a chef client node.
 * `coderebels:edb_keygen[keyname]`                       - Generate openssl key for encrypted data bags management.
 * `coderebels:help[taskname]`                            - Get help about task usage.
+* `coderebels:info[appname]`                             - Get info about specified application.
 * `coderebels:make_env[env]`                             - Make environment directory structure.
 * `coderebels:node_profile[nodename,roles,recipes]`      - Create a new profile for specified node.
 * `coderebels:remindme`                                  - Show how to proceed to converge a new chefbox node.
