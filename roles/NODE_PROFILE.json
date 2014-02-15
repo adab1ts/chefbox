@@ -8,6 +8,9 @@
     "base::run-init",@@RUN_LIST@@,"base::run-end"
   ],
   "default_attributes": {
+    "chef_report": {
+      "recipient": "YOU@EXAMPLE.COM"
+    },
     "box": {
       "name": "ENV-mKnnn-NAME",
       "platform": {

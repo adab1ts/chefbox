@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.22.0:
+
+* attributes/default - definition of default attribute 'chef_report.recipient', overridable by roles own definition at run time
+
 ## 0.21.1:
 
 * libraries/shell - redefine method to evaluate a shell command

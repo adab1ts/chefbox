@@ -23,3 +23,6 @@ default[:box] = {}
 
 default[:apt][:sources_path] = '/etc/apt/sources.list.d'
 
+# Overridden by roles "chef_report" default attribute
+default[:chef_report][:recipient] = 'chefbox.coderebels@gmail.com'
+

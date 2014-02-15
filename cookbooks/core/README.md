@@ -45,6 +45,12 @@ This cookbook only applies to the following platforms:
     <td>path to additional package repositories</td>
     <td><tt>/etc/apt/sources.list.d</tt></td>
   </tr>
+  <tr>
+    <td><tt>[:chef_report][:recipient]</tt></td>
+    <td>String</td>
+    <td>email address where chef-run reports will be send</td>
+    <td><tt>chefbox.coderebels@gmail.com</tt></td>
+  </tr>
 </table>
 
 
