@@ -2,7 +2,7 @@
 .vagrant
 .environment
 .chef*/
-bootstrap/
+bootstrap/keys/
 keys/
 host-*/
 roles/*/*.json
