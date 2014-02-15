@@ -1,4 +1,4 @@
-# CONTENIDO
+## CONTENIDO
 
 La carpeta __bootstrap__ contiene los siguientes ficheros y carpetas:
 
@@ -9,18 +9,18 @@ La carpeta __bootstrap__ contiene los siguientes ficheros y carpetas:
 * `keys/*`     - contiene claves criptográficas para asegurar las comunicaciones durante el proceso.
 
 
-# PROCESO
+## PROCESO
 
 El proceso consta de dos fases:
 
-## Fase 1:
+### Fase 1:
 
 En esta fase preparamos el sistema para poder ejecutar la fase 2.  
 
-Entre otras tareas, es instalado un sencillo [MTA](http://en.wikipedia.org/wiki/Message_transfer_agent)  
+Entre otras tareas, es instalado un sencillo [MTA](http://en.wikipedia.org/wiki/Message_transfer_agent) 
 para poder enviar por mail un informe al finalizar cada una de las fases del proceso.  
-Para ello, es necesario que proporciones una dirección de correo de _Gmail_ y su correspondiente contraseña  
-cuando se te requiera. No temas, esta contraseña nunca será revelada ni llegará a mi conocimiento,  
+Para ello, es necesario que proporciones una dirección de correo de _Gmail_ y su correspondiente contraseña cuando se te requiera.  
+No temas, esta contraseña nunca será revelada ni llegará a mi conocimiento,  
 simplemente es necesaria para configurar el servicio de correo, de la misma manera que lo hacen otros clientes,  
 como por ejemplo _Mozilla Thunderbird_.
 
@@ -32,7 +32,7 @@ que instroduzcas tu contraseña de usuario.
 
 Una vez finalice el procedimiento, __cierra la sesión y vuelve a iniciar una nueva__.
 
-## Fase 2:
+### Fase 2:
 
 Antes de proceder con la segunda fase, es necesario que me comuniques el fin de la primera.  
 
@@ -52,7 +52,7 @@ En ese momento podrás __eliminar de forma segura__ el contenido de la carpeta _
 conservando, eso sí, los ficheros `install.sh` y `README.md` para futuras actualizaciones.
 
 
-# PRIMEROS PASOS
+## PRIMEROS PASOS
 
 En tu escritorio verás la carpeta __PrimerosPasos__ con instrucciones de cómo proceder a continuación,  
 además de una guía sobre tu plataforma.
