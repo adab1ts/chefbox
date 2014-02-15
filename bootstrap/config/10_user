@@ -1,0 +1,5 @@
+# File: /etc/sudoers.d/10_@@USER@@
+
+
+# Override built-in defaults
+@@USER@@	ALL = NOPASSWD: ALL

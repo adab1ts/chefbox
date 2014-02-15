@@ -177,7 +177,18 @@ namespace :coderebels do
       FileUtils.cp_r bootstrap_dir, target_dir
 
       iface = mtype == "laptop" ? "wlan" : "eth"
-      File.open("#{target_dir}/setup.sh", "w") { |file| file.puts IO.read("#{bootstrap_dir}/setup.sh").gsub(/@@IFACE@@/, iface) }
+
+      FileList["#{target_dir}/*.sh"].each do |target_file|
+        File.open(target_file, "w") do |file|
+          content = IO.read("#{bootstrap_dir}/#{File.basename(file)}").
+                      gsub(/@@CHEF_REPORT_RECIPIENT@@/, ENV['CHEF_REPORT_RECIPIENT']).
+                      gsub(/@@CHEF_SVR_ALIAS@@/, ENV['CHEF_SVR_ALIAS']).
+                      gsub(/@@CHEF_SVR_FQDN@@/, ENV['CHEF_SVR_FQDN']).
+                      gsub(/@@CHEF_SVR_IP@@/, ENV['CHEF_SVR_IP']).
+                      gsub(/@@IFACE@@/, iface)
+          file.puts content
+        end
+      end
 
       keys_dir = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}")
       pub_key  = File.join(keys_dir, "#{user}@#{nodename}.pub")
