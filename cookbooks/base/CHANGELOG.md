@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.20.0:
+
+* metadata         - add cookbook 'chef_handler' dependency
+* recipes/run-init - install and enable MailHandler to send chef-run reports by mail
+
 ## 0.19.0:
 
 * metadata        - remove cookbook 'core' dependency

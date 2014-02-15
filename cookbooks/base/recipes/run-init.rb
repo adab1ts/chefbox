@@ -19,6 +19,21 @@
 #
 
 
+## Handlers
+
+# Install the `chef-handler-mail` RubyGem during the compile phase
+chef_gem "chef-handler-mail"
+
+# chef_handler complains it cannot find 'chef/handler/mail.rb' file
+require 'chef/handler/mail'
+
+chef_handler "MailHandler" do
+  source "chef/handler/mail"
+  arguments :to_address => node[:chef_report][:recipient]
+  action :enable
+end
+
+
 ## APT Sources
 
 cookbook_file "sources.list" do
