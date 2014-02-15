@@ -61,13 +61,13 @@ echo
 cat "${config}/${ssmtp_file}" \
   | sed "s/@@EMAIL@@/${gmail_address}/g" \
   | sed "s/@@PASSWORD@@/${gmail_passwd}/g" \
-  | sed "s/@@HOSTNAME@@/$(hostname)/g" \
+  | sed "s/@@HOSTNAME@@/${box}/g" \
   | sudo tee "${ssmtp_path}/${ssmtp_file}" &>/dev/null
 
 sudo chmod 600 "${ssmtp_path}/${ssmtp_file}" &>/dev/null
 
 cat "${config}/${ssmtp_aliases}" \
-  | sed "s/@@EMAIL@@/${gmail_address}/g" \
+  | sed "s/@@HOSTNAME@@/${box}/g" \
   | sed "s/@@USER@@/${usr}/g" \
   | sudo tee "${ssmtp_path}/${ssmtp_aliases}" &>/dev/null
 
