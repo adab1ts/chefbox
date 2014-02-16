@@ -34,6 +34,7 @@ namespace :coderebels do
 
       FileList["roles/common/*"].each { |role| sh %{knife role from file #{role}} }
       FileList["data_bags/apps/*"].each { |dbi| sh %{knife data bag from file apps #{File.basename(dbi)}} }
+      FileList["data_bags/global/*"].each { |dbi| sh %{knife data bag from file global #{File.basename(dbi)}} }
       FileList["data_bags/resources/*"].each { |dbi| sh %{knife data bag from file resources #{File.basename(dbi)}} }
       sh %{knife cookbook upload -a}
     end
