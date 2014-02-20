@@ -2,6 +2,7 @@
 .vagrant
 .environment
 .chef*/
+!.chef-skel/
 bootstrap/keys/
 keys/
 host-*/
