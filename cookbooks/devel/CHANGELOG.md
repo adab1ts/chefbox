@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.4.1:
+
+* recipes/zsh                   - deploy zsh env.d directory for application env variables
+* files/default/zsh/env         - now sources zenv files in env.d directory
+* files/default/zsh/README.zenv - instructions about how to create and use zenv files
+
 ## 0.4.0:
 
 * README              - update requirements section
@@ -41,18 +47,18 @@ This file is used to list changes made in each version of devel.
 
 ## 0.3.0:
 
-* recipe/default - now checks for section presence in box profile's apps list before proceed
+* recipes/default - now checks for section presence in box profile's apps list before proceed
 
 ## 0.2.1:
 
-* recipe/juju    - minor update of bootstrapping's before script
+* recipes/juju    - minor update of bootstrapping's before script
 
 ## 0.2.0:
 
-* recipe/default - now includes htop installation and zsh & git recipes
-* recipe/git     - installs and bootstraps git distributed version control system
-* recipe/juju    - now bootstraps juju service orchestration tool
-* recipe/zsh     - installs and bootstraps zsh shell
+* recipes/default - now includes htop installation and zsh & git recipes
+* recipes/git     - installs and bootstraps git distributed version control system
+* recipes/juju    - now bootstraps juju service orchestration tool
+* recipes/zsh     - installs and bootstraps zsh shell
 
 ## 0.1.0:
 

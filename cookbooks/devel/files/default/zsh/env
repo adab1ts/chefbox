@@ -4,3 +4,14 @@
 
 
 export ZSH_DOTFILES_PATH="${DOTFILES_PATH}/zsh"
+
+
+# Applying env files
+envs_folder="${ZSH_DOTFILES_PATH}/env.d"
+
+for f in $envs_folder/*; do
+  [[ -f "$f" ]] || continue
+  . $f
+done
+
+unset envs_folder

@@ -32,6 +32,7 @@ dev_folders = [
   "#{dotfiles_folder}/zsh",
   "#{dotfiles_folder}/zsh/aliases.d",
   "#{dotfiles_folder}/zsh/completion.d",
+  "#{dotfiles_folder}/zsh/env.d",
   "#{dotfiles_folder}/zsh/functions.d",
   "#{dotfiles_folder}/zsh/prompt.d",
 ]
@@ -42,6 +43,7 @@ dev_files = [
   "#{dotfiles_folder}/zsh/env",
   "#{dotfiles_folder}/zsh/functions",
   "#{dotfiles_folder}/zsh/aliases.d/README.zal",
+  "#{dotfiles_folder}/zsh/env.d/README.zenv",
   "#{dotfiles_folder}/zsh/functions.d/README.zfn",
   "#{dotfiles_folder}/zsh/prompt.d/prompt_zuzust_setup"
 ]
