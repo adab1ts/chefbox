@@ -1,0 +1,25 @@
+{
+  "name": "chefadmin-box",
+  "description": "Chefbox Admin box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "devel",
+    "sysadmin"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "devel": [
+          "git",
+          "zsh"
+        ],
+        "sysadmin": [
+          "htop"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
