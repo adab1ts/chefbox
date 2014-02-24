@@ -43,6 +43,7 @@ if selected
   include_recipe "sysadmin::epoptesclient" if selected.include?("epoptesclient")
   include_recipe "sysadmin::freefilesync" if selected.include?("freefilesync")
   include_recipe "sysadmin::htop" if selected.include?("htop")
+  include_recipe "sysadmin::speedtest" if selected.include?("speedtest")
   include_recipe "sysadmin::yppamgr" if selected.include?("yppamgr")
 end
 

@@ -9,6 +9,7 @@ The following recipes may apply:
 - `sysadmin::epoptesclient` - installs __Epoptes (client) computer lab management tool__ and suggested packages.
 - `sysadmin::freefilesync`  - installs __FreeFileSync visual folder comparison and synchronization app__ and suggested packages.
 - `sysadmin::htop`          - installs __htop interactive processes viewer__ and suggested packages.
+- `sysadmin::speedtest`     - installs __speedtest cli for testing inet bandwith__ and suggested packages.
 - `sysadmin::yppamgr`       - installs __Y PPA Manager__ and suggested packages.
 
 
