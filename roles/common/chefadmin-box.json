@@ -16,7 +16,8 @@
           "zsh"
         ],
         "sysadmin": [
-          "htop"
+          "htop",
+          "speedtest"
         ]
       }
     }
