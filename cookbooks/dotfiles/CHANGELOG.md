@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.5.1:
+
+* recipes/default - deliver 'apt-file' support to ubuntu platform only
+
 ## 0.5.0:
 
 * README   - update copyright note

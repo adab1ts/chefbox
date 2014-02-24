@@ -38,6 +38,7 @@ end
 
 support "apt-file" do
   section "base"
+  platforms ["ubuntu"]
 end
 
 # Lists available package versions with distribution
