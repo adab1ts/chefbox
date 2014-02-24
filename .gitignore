@@ -8,3 +8,4 @@ keys/
 host-*/
 roles/*/*.json
 !roles/common/*.json
+!roles/crb/*.json

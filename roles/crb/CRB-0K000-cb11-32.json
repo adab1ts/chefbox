@@ -1,0 +1,64 @@
+{
+  "name": "CRB-0K000-cb11-32",
+  "description": "Profile for Chefbox Admin box",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "core",
+    "dotfiles",
+    "devel"
+  ],
+  "default_attributes": {
+    "chef_report": {
+      "recipient": "chefbox.coderebels@gmail.com"
+    },
+    "box": {
+      "name": "chefbox",
+      "platform": {
+        "os": "crunchbang",
+        "version": "11",
+        "arch": "i686",
+        "virtual": true
+      },
+      "lang": "es",
+      "folders": {
+        "admin": "admin",
+        "apps": "apps",
+        "desktop": "tmp",
+        "support": "documents/firststeps"
+      },
+      "users": {
+        "chefadmin": {
+          "uid": 1000,
+          "gid": 1000,
+          "group": "chefadmin",
+          "home": "/home/chefadmin",
+          "shell": "/bin/bash",
+          "password": "secret",
+          "default": true,
+          "guest": false,
+          "sudo": true
+        }
+      },
+      "dotfiles": {
+        "users": ["chefadmin"],
+        "folder": ".dotfiles"
+      },
+      "devel": {
+        "users": ["chefadmin"],
+        "folder": "projects"
+      }
+    }
+  },
+  "override_attributes": {
+    "box": {
+      "apps": {
+        "devel": [
+          "git",
+          "zsh"
+        ]
+      }
+    }
+  }
+}
