@@ -28,10 +28,10 @@ namespace :coderebels do
     puts
     puts "*) Prepare your workspace the very first time:  rake coderebels:workspace[env,email,domain]"
     puts
-    puts "1) Switch to the target environment:  rake coderebels:switch_svr[env,ip]"
+    puts "1) Switch to the target environment:  rake coderebels:switch_env[env,ip]"
     puts "2) Pull and upload chefbox updates:   rake coderebels:chefbox_updt"
     puts "3) For each node to bootstrap:"
-    puts "   3.1) Create a new node profile:    rake coderebels:node_profile[nodename,roles,recipes]"
+    puts "   3.1) Create a new node profile:    rake coderebels:create_profile[nodename,roles,recipes]"
     puts "   3.2) Bundle a bootstrap package:   rake coderebels:bundle[user,nodename,mtype]"
     puts "   3.3) Bootstrap the node:           rake coderebels:bootstrap[user,nodename,ip,platform,arch]"
   end
@@ -39,9 +39,17 @@ namespace :coderebels do
 
   desc "Get help about task usage"
   task :help, [:taskname] do |t, args|
-    raise "Must provide a task name" unless args.taskname
+    args.with_defaults(:taskname => "all")
 
     output = case args.taskname
+    when "all"
+      <<-EOH
+         USAGE: rake coderebels:help[taskname]
+
+                taskname = { workspace | setup_env | remove_env | switch_env |
+                             chefbox_updt | create_profile | update_profile |
+                             bundle | bootstrap | info }
+      EOH
     when "workspace"
       <<-EOH
           TASK: workspace
@@ -52,8 +60,8 @@ namespace :coderebels do
                 email   => email address of the recipient of chef-client run reports
                 domain *=> domain name of the target environment chef server ([coderebels.org])
 
-      EXAMPLES: rake coderebels:workspace[cof, you@example.com]
-                rake coderebels:workspace[oop, no-reply@oop.cc, oop.cc]
+      EXAMPLES: rake coderebels:workspace[cof,you@example.com]
+                rake coderebels:workspace[oop,no-reply@oop-coop.cc,oop-coop.cc]
       EOH
     when "setup_env"
       <<-EOH
@@ -66,8 +74,8 @@ namespace :coderebels do
                 email   => email address of the recipient of chef-client run reports
                 domain *=> domain name of the target environment chef server ([coderebels.org])
 
-      EXAMPLES: rake coderebels:make_env[cof, you@example.com]
-                rake coderebels:make_env[ldps, no-reply@ladispersa.net, ladispersa.net]
+      EXAMPLES: rake coderebels:make_env[cof,you@example.com]
+                rake coderebels:make_env[ldps,no-reply@ladispersa.net,ladispersa.net]
       EOH
     when "remove_env"
       <<-EOH
@@ -78,15 +86,15 @@ namespace :coderebels do
 
       EXAMPLES: rake coderebels:remove_env[ldps]
       EOH
-    when "switch_svr"
+    when "switch_env"
       <<-EOH
-          TASK: switch_svr
+          TASK: switch_env
           DESC: prepares your workspace for the target environment
 
           ARGS: env => name of the target environment
                 ip  => ip address of the target environment chef server
 
-      EXAMPLES: rake coderebels:switch_svr[oop, 192.168.0.100]
+      EXAMPLES: rake coderebels:switch_env[oop,192.168.0.100]
       EOH
     when "chefbox_updt"
       <<-EOH
@@ -98,10 +106,10 @@ namespace :coderebels do
 
       EXAMPLES: rake coderebels:chefbox_updt
       EOH
-    when "node_profile"
+    when "create_profile"
       <<-EOH
-          TASK: node_profile
-          DESC: creates a profile for the target box that includes:
+          TASK: create_profile
+          DESC: creates a profile for the target node that includes:
                 - roles and recipes to apply
                 - box info
                 - apps to install
@@ -110,11 +118,20 @@ namespace :coderebels do
                 roles    *=> list of roles to apply to the target node ([average-box])
                 recipes  *=> list of recipes to apply to the target node
 
-      EXAMPLES: rake coderebels:node_profile[OOP-0K001-pc1]
-                rake coderebels:node_profile[OOP-0K001-pc1,basic-box]
-                rake coderebels:node_profile[OOP-0K001-pc1,starter-box:ubuntu-box]
-                rake coderebels:node_profile[OOP-0K001-pc1,starter-box,graphics_pro]
-                rake coderebels:node_profile[OOP-0K001-pc1,average-box:design-box,video_pro:vms]
+      EXAMPLES: rake coderebels:create_profile[OOP-0K001-pc1]
+                rake coderebels:create_profile[OOP-0K001-pc1,basic-box]
+                rake coderebels:create_profile[OOP-0K001-pc1,starter-box:ubuntu-box]
+                rake coderebels:create_profile[OOP-0K001-pc1,starter-box,graphics_pro]
+                rake coderebels:create_profile[OOP-0K001-pc1,average-box:design-box,video_pro:vms]
+      EOH
+    when "update_profile"
+      <<-EOH
+          TASK: update_profile
+          DESC: updates the profile of the target node
+
+          ARGS: nodename => name of the target node
+
+      EXAMPLES: rake coderebels:update_profile[OOP-0K001-pc1]
       EOH
     when "bundle"
       <<-EOH
@@ -142,6 +159,15 @@ namespace :coderebels do
       EXAMPLES: rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195]
                 rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195,mint]
                 rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195,ubuntu,x86_64]
+      EOH
+    when "info"
+      <<-EOH
+          TASK: info
+          DESC: provides info about specified application
+
+          ARGS: appname => name of the application
+
+      EXAMPLES: rake coderebels:info[linuxband]
       EOH
     else
      "No info available"

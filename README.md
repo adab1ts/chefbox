@@ -52,13 +52,14 @@ The following tasks ease converging new nodes
 * `coderebels:help[taskname]`                            - Get help about task usage.
 * `coderebels:info[appname]`                             - Get info about specified application.
 * `coderebels:make_env[env]`                             - Make environment directory structure.
-* `coderebels:node_profile[nodename,roles,recipes]`      - Create a new profile for specified node.
+* `coderebels:create_profile[nodename,roles,recipes]`    - Create a new profile for specified node.
 * `coderebels:remindme`                                  - Show how to proceed to converge a new chefbox node.
 * `coderebels:remove_env[env]`                           - Remove environment directory structure.
 * `coderebels:setup_env[env,email,domain]`               - Setup the target environment.
 * `coderebels:ssh[user,nodename,ip,cmd]`                 - Establish a ssh connection with specified box.
 * `coderebels:ssh_keygen[user,nodename]`                 - Generate authentication keys to establish a ssh connection with a box.
-* `coderebels:switch_svr[env,ip]`                        - Switch to environment chef server.
+* `coderebels:switch_env[env,ip]`                        - Switch current environment.
+* `coderebels:update_profile[nodename]`                  - Update profile for specified node.
 * `coderebels:workspace[env,email,domain]`               - Prepare your chefbox workspace.
 
 

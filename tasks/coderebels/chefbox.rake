@@ -68,13 +68,13 @@ namespace :coderebels do
       host_data << "#192.168.0.100" << "#{hostname}.#{vars[:chef_svr_domain]}" << hostname
     else
       _ = output.split(":")
-      n = _.first
-      host_data = _.last.split("\s")
 
+      n = _.first
+      system("sudo", "sed", "-i", "#{n}d", hosts_file)
+
+      host_data = _.last.split("\s")
       host_data[0] = vars[:chef_svr_ip] if vars[:chef_svr_ip]
       host_data[1] = "#{hostname}.#{vars[:chef_svr_domain]}" if vars[:chef_svr_domain]
-
-      system("sudo", "sed", "-i", "#{n}d", hosts_file)
     end
 
     host_entry = host_data.join("\t")
@@ -88,6 +88,7 @@ namespace :coderebels do
       sh %{git checkout master}
       sh %{git pull}
 
+      FileList["roles/crb/*"].each { |role| sh %{knife role from file #{role}} }
       FileList["roles/common/*"].each { |role| sh %{knife role from file #{role}} }
       FileList["data_bags/apps/*"].each { |dbi| sh %{knife data bag from file apps #{File.basename(dbi)}} }
       FileList["data_bags/global/*"].each { |dbi| sh %{knife data bag from file global #{File.basename(dbi)}} }
@@ -206,8 +207,8 @@ namespace :coderebels do
   end
 
 
-  desc "Switch to environment chef server"
-  task :switch_svr, [:env, :ip] do |t, args|
+  desc "Switch current environment"
+  task :switch_env, [:env, :ip] do |t, args|
     raise "Must provide an environment and an IP address" unless (args.env and args.ip)
 
     current = current_env
@@ -241,7 +242,7 @@ namespace :coderebels do
 
 
   desc "Create a new profile for specified node"
-  task :node_profile, [:nodename, :roles, :recipes] do |t, args|
+  task :create_profile, [:nodename, :roles, :recipes] do |t, args|
     args.with_defaults(:roles => "average-box", :recipes => "")
     raise "Must provide a nodename" unless args.nodename
 
@@ -258,7 +259,20 @@ namespace :coderebels do
       FileUtils.cp File.join(profiles_dir, "NODE_PROFILE.json"), profile_file
       system("sed", "-i", "8s:@@RUN_LIST@@:#{run_list.join(',')}:g", profile_file)
       system(ENV['XEDITOR'], profile_file)
+
+      sh %{knife role from file #{profile_file}}
     end
+  end
+
+
+  desc "Update profile for specified node"
+  task :update_profile, [:nodename] do |t, args|
+    raise "Must provide a nodename" unless args.nodename
+
+    profile_file = File.join(TOPDIR, "roles", current_env, "#{args.nodename}.json")
+    system(ENV['XEDITOR'], profile_file)
+
+    sh %{knife role from file #{profile_file}}
   end
 
 
@@ -333,9 +347,8 @@ namespace :coderebels do
     ip       = args.ip
     port     = 2222
 
-    ssh_dir      = File.join(ENV['HOME'], ".ssh")
-    profiles_dir = File.join(TOPDIR, "roles", current_env)
-    key_file     = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
+    ssh_dir  = File.join(ENV['HOME'], ".ssh")
+    key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
 
     FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
@@ -346,7 +359,6 @@ namespace :coderebels do
       sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
     end
 
-    sh %{knife role from file #{profiles_dir}/#{nodename}.json}
     sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --sudo}
     sh %{knife node run_list add #{nodename} 'role[#{nodename}]'}
 
@@ -367,9 +379,8 @@ namespace :coderebels do
     ip       = args.ip
     port     = 2222
 
-    ssh_dir      = File.join(ENV['HOME'], ".ssh")
-    profiles_dir = File.join(TOPDIR, "roles", current_env)
-    key_file     = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
+    ssh_dir  = File.join(ENV['HOME'], ".ssh")
+    key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
 
     FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
@@ -380,7 +391,6 @@ namespace :coderebels do
       sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
     end
 
-    sh %{knife role from file #{profiles_dir}/#{nodename}.json}
     sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --run-list 'role[#{nodename}]' --sudo}
 
     FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), File.join(ssh_dir, "known_hosts")
