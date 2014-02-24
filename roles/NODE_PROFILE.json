@@ -178,6 +178,7 @@
           "epoptesclient",
           "freefilesync",
           "htop",
+          "speedtest",
           "yppamgr"
         ],
         "utils": [
