@@ -5,9 +5,11 @@
   "chef_type": "role",
   "env_run_lists": {},
   "run_list": [
+    "base::run-init",
     "core",
     "dotfiles",
-    "devel"
+    "role[chefadmin-box]",
+    "base::run-end"
   ],
   "default_attributes": {
     "chef_report": {
