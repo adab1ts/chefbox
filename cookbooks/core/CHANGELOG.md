@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.22.1:
+
+* definitions/support - now accepts 'platforms' param to deliver support to specified platforms only
+
 ## 0.22.0:
 
 * attributes/default - definition of default attribute 'chef_report.recipient', overridable by roles own definition at run time

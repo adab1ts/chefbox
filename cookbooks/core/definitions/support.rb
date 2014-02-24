@@ -20,30 +20,35 @@
 
 
 define :support do
-  box = node[:box]
-  support = data_bag_item('resources', "support-#{box[:platform][:os]}")
+  platforms = params[:platforms]
+  platform  = Coderebels::Chefbox::Box.lsb_id
 
-  section  = support[params[:section]]
-  resource = section[params[:name]][box[:lang]]
+  unless platforms and not platforms.include?(platform)
+    box = node[:box]
+    support = data_bag_item('resources', "support-#{platform}")
 
-  box[:users].select { |_, usr| not usr[:guest] }.each do |username, usr|
-    support_folder = "#{usr[:home]}/#{box[:folders][:support]}/#{params[:section]}"
-    support_file   = "#{support_folder}/#{resource['file']}"
+    section  = support[params[:section]]
+    resource = section[params[:name]][box[:lang]]
 
-    directory_tree support_folder do
-      exclude usr[:home]
-      owner username
-      group usr[:group]
-      mode 00755
-    end
+    box[:users].select { |_, usr| not usr[:guest] }.each do |username, usr|
+      support_folder = "#{usr[:home]}/#{box[:folders][:support]}/#{params[:section]}"
+      support_file   = "#{support_folder}/#{resource['file']}"
 
-    remote_file support_file do
-      source resource['url']
-      checksum resource['sha256']
-      owner username
-      group usr[:group]
-      mode 00644
-      backup false
+      directory_tree support_folder do
+        exclude usr[:home]
+        owner username
+        group usr[:group]
+        mode 00755
+      end
+
+      remote_file support_file do
+        source resource['url']
+        checksum resource['sha256']
+        owner username
+        group usr[:group]
+        mode 00644
+        backup false
+      end
     end
   end
 end
