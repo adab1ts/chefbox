@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.20.1:
+
+* files/host-chefbox/apt/sources.list - sources list for chefadmin box
+
 ## 0.20.0:
 
 * metadata         - add cookbook 'chef_handler' dependency

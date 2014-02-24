@@ -6,6 +6,7 @@
 bootstrap/keys/
 keys/
 host-*/
+!host-chefbox/
 roles/*/*.json
 !roles/common/*.json
 !roles/crb/*.json
