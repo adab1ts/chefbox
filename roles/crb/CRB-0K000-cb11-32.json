@@ -37,7 +37,7 @@
           "group": "chefadmin",
           "home": "/home/chefadmin",
           "shell": "/bin/bash",
-          "password": "secret",
+          "password": "chefadmin",
           "default": true,
           "guest": false,
           "sudo": true
