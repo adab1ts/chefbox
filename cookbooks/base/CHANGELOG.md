@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.21.0:
+
+* recipes/main-ubuntu - manage virtual guest support again
+
 ## 0.20.1:
 
 * files/host-chefbox/apt/sources.list - sources list for chefadmin box

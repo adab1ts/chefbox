@@ -28,6 +28,18 @@ package "ia32-libs-multiarch" do
 end
 
 
+# Virtualization support
+if virtual_box?
+  %w[
+    virtualbox-guest-dkms
+    virtualbox-guest-utils
+    virtualbox-guest-x11
+  ].each do |pkg|
+    package pkg
+  end
+end
+
+
 # Ubuntu example content
 package "example-content" do
   action :purge
