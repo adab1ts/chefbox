@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.6.0:
+
+* recipes/default     - now includes numix icon theme install management
+* recipes/numix-icons - manages numix icon theme installation
+
 ## 0.5.0:
 
 * README   - update requirements section and copyright note

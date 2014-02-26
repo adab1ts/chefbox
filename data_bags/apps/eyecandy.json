@@ -5,6 +5,7 @@
     "faience-icons",
     "moka-icons",
     "nitrux-icons",
+    "numix-icons",
     "unsettings"
   ],
   "profiles": {
@@ -54,6 +55,19 @@
         "data": {
           "repo_name": "kokoto-java-omgubuntu-stuff",
           "uri": "ppa:kokoto-java/omgubuntu-stuff"
+        }
+      }
+    },
+    "numix-icons": {
+      "package": "numix-icon-theme",
+      "maintainer": "",
+      "description": "Numix icon theme",
+      "website": "http://numixproject.org/",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "numix-ppa",
+          "uri": "ppa:numix/ppa"
         }
       }
     },

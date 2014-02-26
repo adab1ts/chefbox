@@ -42,6 +42,7 @@ if selected
   include_recipe "eyecandy::faience-icons" if selected.include?("faience-icons")
   include_recipe "eyecandy::moka-icons" if selected.include?("moka-icons")
   include_recipe "eyecandy::nitrux-icons" if selected.include?("nitrux-icons")
+  include_recipe "eyecandy::numix-icons" if selected.include?("numix-icons")
   include_recipe "eyecandy::unsettings" if selected.include?("unsettings")
 end
 

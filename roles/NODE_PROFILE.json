@@ -1,6 +1,6 @@
 {
   "name": "ENV-mKnnn-NAME",
-  "description": "Profile for ENV-mKnnn-NAME box",
+  "description": "Profile for ENV-mKnnn-NAME node",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "env_run_lists": {},
@@ -12,7 +12,7 @@
       "recipient": "YOU@EXAMPLE.COM"
     },
     "box": {
-      "name": "ENV-mKnnn-NAME",
+      "name": "HOSTNAME",
       "platform": {
         "os": "OS",
         "version": "VERSION",
@@ -123,6 +123,7 @@
           "faience-icons",
           "moka-icons",
           "nitrux-icons",
+          "numix-icons",
           "unsettings"
         ],
         "fileshare": [

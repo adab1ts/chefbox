@@ -8,6 +8,7 @@ The following recipes may apply:
 - `eyecandy::faience-icons` - installs __Faience icon theme__ and suggested packages.
 - `eyecandy::moka-icons`    - installs __Moka icon theme__ and suggested packages.
 - `eyecandy::nitrux-icons`  - installs __NITRUX-like icon theme__ and suggested packages.
+- `eyecandy::numix-icons`   - installs __Numix icon theme__ and suggested packages.
 - `eyecandy::unsettings`    - installs __Unsettings__ and suggested packages.
 
 
