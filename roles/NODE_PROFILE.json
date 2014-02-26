@@ -106,7 +106,8 @@
           "ubuntuone"
         ],
         "desktops": [
-          "cinnamon"
+          "cinnamon",
+          "mate"
         ],
         "devel": [
           "git",

@@ -5,6 +5,7 @@ The following recipes may apply:
 
 - `desktops::default`  - purges unselected packages and includes recipes as nedeed.
 - `desktops::cinnamon` - installs __Cinnamon desktop__ and suggested packages.
+- `desktops::mate`     - installs __Mate desktop__ and suggested packages.
 
 
 ## Requirements

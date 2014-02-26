@@ -39,5 +39,6 @@ if selected
   node.default[:apps] = { :desktops => desktops }
 
   include_recipe "desktops::cinnamon" if selected.include?("cinnamon")
+  include_recipe "desktops::mate" if selected.include?("mate")
 end
 

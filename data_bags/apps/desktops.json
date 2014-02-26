@@ -1,18 +1,34 @@
 {
   "id": "desktops",
   "apps": [
-    "cinnamon"
+    "cinnamon",
+    "mate"
   ],
   "profiles": {
     "cinnamon": {
       "package": "cinnamon",
       "maintainer": "Linux Mint <root@linuxmint.com>",
       "description": "Cinnamon desktop",
+      "website": "http://cinnamon.linuxmint.com/",
       "source": {
         "type": "ppa",
         "data": {
           "repo_name": "gwendal-lebihan-dev-cinnamon-stable",
           "uri": "ppa:gwendal-lebihan-dev/cinnamon-stable"
+        }
+      }
+    },
+    "mate": {
+      "package": "mate-core",
+      "maintainer": "",
+      "description": "",
+      "website": "http://mate-desktop.org/",
+      "source": {
+        "type": "repo",
+        "data": {
+          "repo_name": "mate",
+          "uri": "http://packages.mate-desktop.org/repo/ubuntu",
+          "components": ["main"]
         }
       }
     }
