@@ -49,6 +49,7 @@ The following tasks ease converging new nodes
 * `coderebels:chefbox_updt`                              - Pull chefbox code from Github and upload to chef server.
 * `coderebels:converge[user,nodename,ip,platform,arch]`  - Converge a chef client node.
 * `coderebels:edb_keygen[keyname]`                       - Generate openssl key for encrypted data bags management.
+* `coderebels:edit_profile[nodename]`                    - Edit profile for specified node.
 * `coderebels:help[taskname]`                            - Get help about task usage.
 * `coderebels:info[appname]`                             - Get info about specified application.
 * `coderebels:make_env[env]`                             - Make environment directory structure.

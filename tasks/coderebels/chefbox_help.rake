@@ -47,7 +47,7 @@ namespace :coderebels do
          USAGE: rake coderebels:help[taskname]
 
                 taskname = { workspace | setup_env | remove_env | switch_env |
-                             chefbox_updt | create_profile | update_profile |
+                             chefbox_updt | create_profile | edit_profile | update_profile |
                              bundle | bootstrap | info }
       EOH
     when "workspace"
@@ -124,10 +124,19 @@ namespace :coderebels do
                 rake coderebels:create_profile[OOP-0K001-pc1,starter-box,graphics_pro]
                 rake coderebels:create_profile[OOP-0K001-pc1,average-box:design-box,video_pro:vms]
       EOH
+    when "edit_profile"
+      <<-EOH
+          TASK: edit_profile
+          DESC: opens the target node profile in a text editor
+
+          ARGS: nodename => name of the target node
+
+      EXAMPLES: rake coderebels:edit_profile[OOP-0K001-pc1]
+      EOH
     when "update_profile"
       <<-EOH
           TASK: update_profile
-          DESC: updates the profile of the target node
+          DESC: uploads the target node profile to the environment chef server
 
           ARGS: nodename => name of the target node
 

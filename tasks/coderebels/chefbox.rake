@@ -259,9 +259,16 @@ namespace :coderebels do
       FileUtils.cp File.join(profiles_dir, "NODE_PROFILE.json"), profile_file
       system("sed", "-i", "8s:@@RUN_LIST@@:#{run_list.join(',')}:g", profile_file)
       system(ENV['XEDITOR'], profile_file)
-
-      sh %{knife role from file #{profile_file}}
     end
+  end
+
+
+  desc "Edit profile for specified node"
+  task :edit_profile, [:nodename] do |t, args|
+    raise "Must provide a nodename" unless args.nodename
+
+    profile_file = File.join(TOPDIR, "roles", current_env, "#{args.nodename}.json")
+    system(ENV['XEDITOR'], profile_file)
   end
 
 
@@ -270,8 +277,6 @@ namespace :coderebels do
     raise "Must provide a nodename" unless args.nodename
 
     profile_file = File.join(TOPDIR, "roles", current_env, "#{args.nodename}.json")
-    system(ENV['XEDITOR'], profile_file)
-
     sh %{knife role from file #{profile_file}}
   end
 
@@ -349,6 +354,7 @@ namespace :coderebels do
 
     ssh_dir  = File.join(ENV['HOME'], ".ssh")
     key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
+    profile_file = File.join(TOPDIR, "roles", current_env, "#{nodename}.json")
 
     FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
@@ -359,6 +365,7 @@ namespace :coderebels do
       sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
     end
 
+    sh %{knife role from file #{profile_file}}
     sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --sudo}
     sh %{knife node run_list add #{nodename} 'role[#{nodename}]'}
 
@@ -381,6 +388,7 @@ namespace :coderebels do
 
     ssh_dir  = File.join(ENV['HOME'], ".ssh")
     key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
+    profile_file = File.join(TOPDIR, "roles", current_env, "#{nodename}.json")
 
     FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
@@ -391,6 +399,7 @@ namespace :coderebels do
       sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
     end
 
+    sh %{knife role from file #{profile_file}}
     sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --run-list 'role[#{nodename}]' --sudo}
 
     FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), File.join(ssh_dir, "known_hosts")
