@@ -1,6 +1,6 @@
 {
-  "name": "ENV-mKnnn-NAME",
-  "description": "Profile for ENV-mKnnn-NAME node",
+  "name": "@@NODE_NAME@@",
+  "description": "Profile for @@NODE_NAME@@ node",
   "json_class": "Chef::Role",
   "chef_type": "role",
   "env_run_lists": {},

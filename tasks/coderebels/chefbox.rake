@@ -256,8 +256,13 @@ namespace :coderebels do
     unless File.exists? profile_file
       run_list = roles.split(":").map{ |r| "\"role[#{r}]\"" } + recipes.split(":").map{ |r| "\"#{r}\"" }
 
-      FileUtils.cp File.join(profiles_dir, "NODE_PROFILE.json"), profile_file
-      system("sed", "-i", "8s:@@RUN_LIST@@:#{run_list.join(',')}:g", profile_file)
+      File.open(profile_file, "w") do |file|
+        content = IO.read(File.join(profiles_dir, "NODE_PROFILE.json")).
+                    gsub(/@@NODE_NAME@@/, nodename).
+                    gsub(/@@RUN_LIST@@/, run_list.join(','))
+        file.puts content
+      end
+
       system(ENV['XEDITOR'], profile_file)
     end
   end
