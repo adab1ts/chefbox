@@ -53,14 +53,5 @@
       }
     }
   },
-  "override_attributes": {
-    "box": {
-      "apps": {
-        "devel": [
-          "git",
-          "zsh"
-        ]
-      }
-    }
-  }
+  "override_attributes": {}
 }
