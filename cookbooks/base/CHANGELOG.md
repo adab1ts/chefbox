@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.22.0:
+
+* recipes/main-ubuntu - remove virtual guest support again (virtualbox-guest-x11 dependency
+                        prevents from completing installation)
+
 ## 0.21.0:
 
 * recipes/main-ubuntu - manage virtual guest support again

@@ -28,16 +28,17 @@ package "ia32-libs-multiarch" do
 end
 
 
+# NOTE: Kept for forthcoming versions
 # Virtualization support
-if virtual_box?
-  %w[
-    virtualbox-guest-dkms
-    virtualbox-guest-utils
-    virtualbox-guest-x11
-  ].each do |pkg|
-    package pkg
-  end
-end
+# if virtual_box?
+#   %w[
+#     virtualbox-guest-dkms
+#     virtualbox-guest-utils
+#     virtualbox-guest-x11
+#   ].each do |pkg|
+#     package pkg
+#   end
+# end
 
 
 # Ubuntu example content
