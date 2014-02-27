@@ -13,6 +13,7 @@
       "package": "faenza-icon-theme",
       "maintainer": "Matthieu James <matthieu.james@gmail.com>",
       "description": "Faenza Icon Theme",
+      "website": "http://launchpad.net/~tiheum/+archive/equinox",
       "source": {
         "type": "ppa",
         "data": {
@@ -25,6 +26,7 @@
       "package": "faience-icon-theme",
       "maintainer": "Matthieu James <matthieu.james@gmail.com>",
       "description": "Faience Icon Theme",
+      "website": "http://launchpad.net/~tiheum/+archive/equinox",
       "source": {
         "type": "ppa",
         "data": {
@@ -37,12 +39,12 @@
       "package": "moka-icon-theme",
       "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
       "description": "Moka Icon Theme",
-      "suggested": ["moka-icon-theme-blue", "moka-icon-theme-dark", "moka-icon-theme-extras", "moka-icon-theme-symbolic"],
+      "website": "http://mokaproject.com/moka-icon-theme/",
       "source": {
         "type": "ppa",
         "data": {
-          "repo_name": "snwh-moka-icon-theme-daily",
-          "uri": "ppa:snwh/moka-icon-theme-daily"
+          "repo_name": "moka-moka-icon-theme",
+          "uri": "ppa:moka/moka-icon-theme"
         }
       }
     },
@@ -50,6 +52,7 @@
       "package": "nitrux-umd",
       "maintainer": "Georgi Karavasilev <motorslav@gmail.com>",
       "description": "NITRUX-umd",
+      "website": "http://launchpad.net/~kokoto-java/+archive/omgubuntu-stuff",
       "source": {
         "type": "ppa",
         "data": {
@@ -75,6 +78,7 @@
       "package": "unsettings",
       "maintainer": "Florian Diesch <devel@florian-diesch.de>",
       "description": "graphical configuration program for the Unity desktop environment",
+      "website": "http://www.florian-diesch.de/software/unsettings/",
       "source": {
         "type": "ppa",
         "data": {
