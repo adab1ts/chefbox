@@ -64,11 +64,7 @@
       "devel": {
         "users": ["USER"],
         "folder": "DEVEL_FOLDER"
-      }
-    }
-  },
-  "override_attributes": {
-    "box": {
+      },
       "apps": {
         "audio": [
           "lastfm",
@@ -212,5 +208,6 @@
         ]
       }
     }
-  }
+  },
+  "override_attributes": {}
 }
