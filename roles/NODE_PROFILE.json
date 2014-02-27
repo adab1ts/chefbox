@@ -184,6 +184,7 @@
           "yppamgr"
         ],
         "utils": [
+          "backintime",
           "fogger",
           "furius",
           "hardinfo",

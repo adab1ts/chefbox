@@ -1,6 +1,7 @@
 {
   "id": "utils",
   "apps": [
+    "backintime",
     "fogger",
     "furius",
     "hardinfo",
@@ -8,6 +9,20 @@
     "shutter"
   ],
   "profiles": {
+    "backintime": {
+      "package": "backintime-gnome",
+      "maintainer": "BIT Team <bit-team@lists.launchpad.net>",
+      "description": "Simple backup system",
+      "website": "http://backintime.le-web.org/",
+      "suggested": ["backintime-notify"],
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "bit-team-stable",
+          "uri": "ppa:bit-team/stable"
+        }
+      }
+    },
     "fogger": {
       "package": "fogger",
       "maintainer": "Owais Lone <hello@owaislone.org>",

@@ -38,6 +38,7 @@ if selected
   # Install selected apps
   node.default[:apps] = { :utils => utils }
 
+  include_recipe "utils::backintime" if selected.include?("backintime")
   include_recipe "utils::fogger" if selected.include?("fogger")
   include_recipe "utils::furius" if selected.include?("furius")
   include_recipe "utils::hardinfo" if selected.include?("hardinfo")

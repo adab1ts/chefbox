@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.9.0:
+
+* recipes/default    - now includes backintime install management
+* recipes/backintime - manages backintime app installation
+
 ## 0.8.0:
 
 * recipes/default - do not include qle install management anymore
