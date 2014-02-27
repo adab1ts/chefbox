@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.22.1:
+
+* files/ubuntu-12.04/apt/sources.list - add precise-backports to sources management
+
 ## 0.22.0:
 
 * recipes/main-ubuntu - remove virtual guest support again (virtualbox-guest-x11 dependency
