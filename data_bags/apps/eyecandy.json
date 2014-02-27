@@ -63,7 +63,7 @@
     },
     "numix-icons": {
       "package": "numix-icon-theme",
-      "maintainer": "",
+      "maintainer": "Satyajit Sahoo <satyajit.happy@gmail.com>",
       "description": "Numix icon theme",
       "website": "http://numixproject.org/",
       "source": {
