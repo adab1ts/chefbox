@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.22.2:
+
+* definitions/install_app - now manages gem packages installation as well
+
 ## 0.22.1:
 
 * definitions/support - now accepts 'platforms' param to deliver support to specified platforms only

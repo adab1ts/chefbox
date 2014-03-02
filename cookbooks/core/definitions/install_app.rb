@@ -104,6 +104,11 @@ define :install_app do
       source deb_file
       provider Chef::Provider::Package::Dpkg
     end
+  elsif origin == 'gem'
+    gem_package params[:name] do
+      package_name profile['package']
+      version profile['version']
+    end
   else
     case origin
     when 'ppa'
