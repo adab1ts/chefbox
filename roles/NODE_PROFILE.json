@@ -108,6 +108,7 @@
         "devel": [
           "git",
           "juju",
+          "shelr",
           "zsh"
         ],
         "email": [

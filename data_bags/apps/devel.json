@@ -3,6 +3,7 @@
   "apps": [
     "git",
     "juju",
+    "shelr",
     "zsh"
   ],
   "profiles": {
@@ -25,6 +26,18 @@
         "data": {
           "repo_name": "juju-pkgs",
           "uri": "ppa:juju/pkgs"
+        }
+      }
+    },
+    "shelr": {
+      "package": "shelr",
+      "maintainer": "Antono Vasiljev <self@antono.info>",
+      "description": "Utility for plain text screencasting",
+      "source": {
+        "type": "ppa",
+        "data": {
+          "repo_name": "antono-shelr",
+          "uri": "ppa:antono/shelr"
         }
       }
     },

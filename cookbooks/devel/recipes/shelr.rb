@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: default
+# Recipe:: shelr
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,35 +19,10 @@
 #
 
 
-## Deploy
+devel = node[:apps][:devel]
 
-selected = node[:box][:apps][:devel]
-
-if selected
-  devel = data_bag_item('apps', 'devel')
-  apps  = devel['apps']
-
-  # Uninstall apps not needed
-  unselected = apps - selected
-
-  uninstall_apps "devel" do
-    apps unselected
-    profiles devel['profiles']
-  end
-
-  # Install selected apps
-  node.default[:apps] = { :devel => devel }
-
-  # Shells
-  include_recipe "devel::zsh" if selected.include?("zsh")
-
-  # Utils
-  include_recipe "devel::shelr" if selected.include?("shelr")
-
-  # VCS solutions
-  include_recipe "devel::git" if selected.include?("git")
-
-  # Cloud solutions
-  include_recipe "devel::juju" if selected.include?("juju")
+# Utility for plain text screencasting
+install_app "shelr" do
+  profile devel['profiles']['shelr']
 end
 

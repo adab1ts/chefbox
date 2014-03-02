@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.5.0:
+
+* recipe/default  - now includes shelr install management
+* recipe/shelr    - manage shelr installation
+
 ## 0.4.1:
 
 * recipes/zsh                   - deploy zsh env.d directory for application env variables
