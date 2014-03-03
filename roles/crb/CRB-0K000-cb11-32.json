@@ -21,14 +21,14 @@
         "os": "crunchbang",
         "version": "11",
         "arch": "i686",
+        "desktop": "openbox",
         "virtual": true
       },
       "lang": "es",
       "folders": {
         "admin": "admin",
         "apps": "apps",
-        "desktop": "tmp",
-        "support": "documents/firststeps"
+        "desktop": "tmp"
       },
       "users": {
         "chefadmin": {
@@ -39,9 +39,12 @@
           "shell": "/bin/bash",
           "password": "chefadmin",
           "default": true,
-          "guest": false,
           "sudo": true
         }
+      },
+      "support": {
+        "users": ["chefadmin"],
+        "folder": "documents/firststeps"
       },
       "dotfiles": {
         "users": ["chefadmin"],
