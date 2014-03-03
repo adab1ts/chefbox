@@ -54,7 +54,7 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "The GNU Image Manipulation Program",
       "website": "http://www.gimp.org/",
-      "suggested": ["gimp-plugin-registry", "gimp-gmic"],
+      "suggested": ["gimp-plugin-registry", "gimp-gmic", "icc-profiles", "icc-profiles-free"],
       "source": {
         "type": "ppa",
         "data": {
@@ -143,6 +143,7 @@
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Open Source Desktop Page Layout - stable branch",
       "website": "http://www.scribus.net/canvas/Scribus",
+      "suggested": ["scribus-doc", "scribus-template", "icc-profiles", "icc-profiles-free"],
       "source": {
         "type": "distro"
       }
