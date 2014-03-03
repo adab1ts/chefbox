@@ -11,6 +11,7 @@
     "email",
     "graphics",
     "office",
+    "utils",
     "video"
   ],
   "default_attributes": {
@@ -35,6 +36,9 @@
           "libreoffice",
           "nitro",
           "pdfshuffler"
+        ],
+        "utils": [
+          "backintime"
         ],
         "video": [
           "mmc",
