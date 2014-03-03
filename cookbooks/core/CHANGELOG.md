@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.22.3:
+
+* definitions/support
+
+  - 'platforms' param renamed to 'only_for' to deliver support to specified platforms only
+  - now accepts 'not_for' param to exclude delivery to specified platforms
+  - now implements per-user support delivery as well
+
 ## 0.22.2:
 
 * definitions/install_app - now manages gem packages installation as well

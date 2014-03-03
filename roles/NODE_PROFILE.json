@@ -17,14 +17,14 @@
         "os": "OS",
         "version": "VERSION",
         "arch": "ARCH",
+        "desktop": "DESKTOP",
         "virtual": false
       },
       "lang": "LANG",
       "folders": {
         "admin": "ADMIN_FOLDER",
         "apps": "APPS_FOLDER",
-        "desktop": "DESKTOP_FOLDER",
-        "support": "FIRSTSTEPS_FOLDER"
+        "desktop": "DESKTOP_FOLDER"
       },
       "users": {
         "USER": {
@@ -36,8 +36,13 @@
           "password": "secret",
           "default": true,
           "guest": false,
-          "sudo": true
+          "sudo": true,
+          "system": false
         }
+      },
+      "support": {
+        "users": ["USER"],
+        "folder": "FIRSTSTEPS_FOLDER"
       },
       "dotfiles": {
         "users": ["USER"],

@@ -20,18 +20,20 @@
 
 
 define :support do
-  platforms = params[:platforms]
-  platform  = Coderebels::Chefbox::Box.lsb_id
+  only_for = params[:only_for]
+  not_for  = params[:not_for]
+  platform = Coderebels::Chefbox::Box.lsb_id
 
-  unless platforms and not platforms.include?(platform)
+  unless (only_for and not only_for.include?(platform)) or
+         (not_for and not_for.include?(platform))
     box = node[:box]
     support = data_bag_item('resources', "support-#{platform}")
 
     section  = support[params[:section]]
     resource = section[params[:name]][box[:lang]]
 
-    box[:users].select { |_, usr| not usr[:guest] }.each do |username, usr|
-      support_folder = "#{usr[:home]}/#{box[:folders][:support]}/#{params[:section]}"
+    box[:support][:users].each do |username, usr|
+      support_folder = "#{usr[:home]}/#{box[:support][:folder]}/#{params[:section]}"
       support_file   = "#{support_folder}/#{resource['file']}"
 
       directory_tree support_folder do
