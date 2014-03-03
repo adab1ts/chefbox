@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.22.3:
+
+* recipes/begin - manage system user accounts creation
+
 ## 0.22.1:
 
 * files/ubuntu-12.04/apt/sources.list - add precise-backports to sources management

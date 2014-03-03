@@ -38,6 +38,7 @@ box[:users].select { |_, usr| not usr[:default] }.each do |username, usr|
 
   user username do
     comment username
+    system usr[:system]
     uid usr[:uid]
     gid usr[:group]
     home usr[:home]
