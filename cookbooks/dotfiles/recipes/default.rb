@@ -38,7 +38,7 @@ end
 
 support "apt-file" do
   section "base"
-  platforms ["ubuntu"]
+  only_for ["ubuntu"]
 end
 
 # Lists available package versions with distribution

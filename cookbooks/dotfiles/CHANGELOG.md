@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.5.3:
+
+* recipes/default - minor update
+
 ## 0.5.2:
 
 * templates/host-chefbox/bash/env.erb - env variables for chefadmin boxes
