@@ -32,7 +32,9 @@ define :support do
     section  = support[params[:section]]
     resource = section[params[:name]][box[:lang]]
 
-    box[:support][:users].each do |username, usr|
+    box[:support][:users].each do |username|
+      usr = box[:users][username]
+
       support_folder = "#{usr[:home]}/#{box[:support][:folder]}/#{params[:section]}"
       support_file   = "#{support_folder}/#{resource['file']}"
 

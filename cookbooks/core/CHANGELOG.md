@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.22.4:
+
+* definitions/support - fix bug
+
 ## 0.22.3:
 
 * definitions/support
