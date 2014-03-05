@@ -9,6 +9,7 @@
     "audio",
     "browsers",
     "email",
+    "eyecandy",
     "graphics",
     "office",
     "utils",
@@ -27,6 +28,9 @@
           "geary",
           "thunderbird"
         ],
+        "eyecandy": [
+          "nitrux-icons"
+        ],
         "graphics": [
           "pinta",
           "shotwell"
@@ -42,6 +46,7 @@
         ],
         "video": [
           "mmc",
+          "mvc",
           "openshot",
           "vlc"
         ]
