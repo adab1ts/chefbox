@@ -62,6 +62,7 @@
           "pdfshuffler"
         ],
         "utils": [
+          "backintime",
           "fogger",
           "shutter"
         ],
@@ -70,6 +71,7 @@
           "handbrake",
           "miro",
           "mmc",
+          "mvc",
           "ogmrip",
           "openshot",
           "vlc"
