@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.6.1:
+
+* recipes/default - mvc installation on x86_64 platforms only
+
 ## 0.6.0:
 
 * README   - update requirements section

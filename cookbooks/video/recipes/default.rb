@@ -43,7 +43,7 @@ if selected
   include_recipe "video::handbrake" if selected.include?("handbrake")
   include_recipe "video::miro" if selected.include?("miro")
   include_recipe "video::mmc" if selected.include?("mmc") and platform_arch == "i686"
-  include_recipe "video::mvc" if selected.include?("mvc")
+  include_recipe "video::mvc" if selected.include?("mvc") and platform_arch == "x86_64"
   include_recipe "video::ogmrip" if selected.include?("ogmrip")
   include_recipe "video::openshot" if selected.include?("openshot")
   include_recipe "video::recmydesk" if selected.include?("recmydesk")
