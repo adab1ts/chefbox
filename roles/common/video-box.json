@@ -1,0 +1,24 @@
+{
+  "name": "video-box",
+  "description": "Video box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "video"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "video": [
+          "dvdstyler",
+          "handbrake",
+          "ogmrip",
+          "openshot",
+          "vlc"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
