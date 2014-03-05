@@ -4,6 +4,11 @@ This file is used to list changes made in each version of base.
 
 ## 0.22.3:
 
+* recipes/main-mint   - full support for ia32-libs in x86_64 platforms
+* recipes/main-ubuntu - full support for ia32-libs in x86_64 platforms
+
+## 0.22.2:
+
 * recipes/begin - manage system user accounts creation
 
 ## 0.22.1:

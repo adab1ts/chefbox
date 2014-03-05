@@ -20,15 +20,19 @@
 
 
 # Support for ia32-libs dependency
-arch = platform_arch
-
-package "ia32-libs-multiarch" do
-  action :install
-  only_if { arch == "x86_64" }
+if platform_arch == "x86_64"
+  %w[
+    ia32-libs-multiarch
+    i386
+    lib32gcc1
+    libc6-i386
+  ].each do |pkg|
+    package pkg
+  end
 end
 
 
-# NOTE: Kept for forthcoming versions
+# NOTE: Kept for forthcoming releases
 # Virtualization support
 # if virtual_box?
 #   %w[
