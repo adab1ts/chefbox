@@ -36,7 +36,8 @@
           "smuxi"
         ],
         "sysadmin": [
-          "htop"
+          "htop",
+          "speedtest"
         ],
         "vms": [
           "virtualbox"
