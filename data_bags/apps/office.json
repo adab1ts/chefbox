@@ -31,8 +31,8 @@
       "source": {
         "type": "ppa",
         "data": {
-          "repo_name": "libreoffice-libreoffice-4-2",
-          "uri": "ppa:libreoffice/libreoffice-4-2"
+          "repo_name": "libreoffice-libreoffice-4-1",
+          "uri": "ppa:libreoffice/libreoffice-4-1"
         }
       }
     },
