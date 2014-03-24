@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.5.0:
+
+* attributes/default     - new default attribute for virtualbox checksums file url
+* recipes/default        - now installs virtualbox as a system service
+* recipes/virtualbox-as  - manages virtualbox autostart service configuration
+* providers/vbox_extpack - get_version & extpack_for methods refactorized
+
 ## 0.4.0:
 
 * README   - update requirements section
@@ -19,12 +26,12 @@ This file is used to list changes made in each version of vms.
 
 ## 0.3.1:
 
-* recipe/default     - minor update
+* recipes/default    - minor update
 * recipes/virtualbox - minor update
 
 ## 0.3.0:
 
-* recipe/default     - now checks for section presence in box profile's apps list before proceed
+* recipes/default    - now checks for section presence in box profile's apps list before proceed
 * recipes/virtualbox - now only non-guest users are assigned to vboxusers group
 
 ## 0.2.0:

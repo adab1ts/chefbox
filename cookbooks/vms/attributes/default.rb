@@ -19,5 +19,6 @@
 #
 
 
-default[:vms][:virtualbox][:download_uri] = "http://download.virtualbox.org/virtualbox"
+default[:vms][:virtualbox][:download_uri]  = "http://download.virtualbox.org/virtualbox"
+default[:vms][:virtualbox][:checksums_uri] = "http://www.virtualbox.org/download/hashes"
 

@@ -3,8 +3,9 @@
 This cookbook installs a selected set of virtualization solutions.
 The following recipes may apply:
 
-- `vms::default`    - purges unselected packages and includes recipes as nedeed.
-- `vms::virtualbox` - installs __VirtualBox__ and manages post-installation tasks.
+- `vms::default`       - purges unselected packages and includes recipes as nedeed.
+- `vms::virtualbox`    - installs __VirtualBox__ and manages post-installation tasks.
+- `vms::virtualbox-as` - delegates __VirtualBox__ installation and configures autostart service.
 
 
 ## Requirements
@@ -38,6 +39,12 @@ This cookbook only applies to the following platforms:
     <td>String</td>
     <td>VirtualBox downloads base url</td>
     <td><tt>http://download.virtualbox.org/virtualbox</tt></td>
+  </tr>
+  <tr>
+    <td><tt>['vms']['virtualbox']['checksums_uri']</tt></td>
+    <td>String</td>
+    <td>VirtualBox checksums base url</td>
+    <td><tt>http://www.virtualbox.org/downloads/hashes</tt></td>
   </tr>
 </table>
 

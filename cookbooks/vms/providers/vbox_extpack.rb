@@ -59,11 +59,8 @@ end
 private
 
 def get_version(vbox_pkg)
-  reader, writer = IO.pipe
-  system("dpkg-query -W #{vbox_pkg} | awk '{print $2}'", [:err, :out] => writer)
-  writer.close
-
-  /(?<version>\d+.\d+.\d+)-(?<build>\d+)/ =~ reader.gets
+  output = %x(dpkg-query -W #{vbox_pkg} | awk '{print $2}')
+  /(?<version>\d+.\d+.\d+)-(?<build>\d+)/ =~ output.chomp
 
   [version, build]
 end
@@ -71,13 +68,14 @@ end
 def extpack_for(version, build)
   require 'open-uri'
 
-  download_uri = new_resource.run_context.node[:vms][:virtualbox][:download_uri]
+  download_uri  = new_resource.run_context.node[:vms][:virtualbox][:download_uri]
+  checksums_uri = new_resource.run_context.node[:vms][:virtualbox][:checksums_uri]
 
   file   = "Oracle_VM_VirtualBox_Extension_Pack-#{version}-#{build}.vbox-extpack"
   url    = "#{download_uri}/#{version}/#{file}"
   sha256 = ""
 
-  sha256_url = "#{download_uri}/#{version}/SHA256SUMS"
+  sha256_url = "#{checksums_uri}/#{version}/SHA256SUMS"
 
   open(sha256_url).each do |line|
     sha256 = line.split(" ")[0] if line =~ /#{file}/

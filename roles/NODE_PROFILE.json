@@ -210,7 +210,8 @@
           "cinelerra"
         ],
         "vms": [
-          "virtualbox"
+          "virtualbox",
+          "virtualbox-as"
         ]
       }
     }
