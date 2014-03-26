@@ -3,9 +3,8 @@
 This cookbook installs a selected set of virtualization solutions.
 The following recipes may apply:
 
-- `vms::default`       - purges unselected packages and includes recipes as nedeed.
-- `vms::virtualbox`    - installs __VirtualBox__ and manages post-installation tasks.
-- `vms::virtualbox-as` - delegates __VirtualBox__ installation and configures autostart service.
+- `vms::default`    - purges unselected packages and includes recipes as nedeed.
+- `vms::virtualbox` - installs __VirtualBox__ and manages post-installation tasks.
 
 
 ## Requirements

@@ -39,6 +39,5 @@ if selected
   node.default[:apps] = { :vms => vms }
 
   include_recipe "vms::virtualbox" if selected.include?("virtualbox")
-  include_recipe "vms::virtualbox-as" if selected.include?("virtualbox-as")
 end
 

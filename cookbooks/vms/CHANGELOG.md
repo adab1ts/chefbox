@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.5.1:
+
+* recipes/default       - do not include recipe[vms:virtualbox-as] any more
+* recipes/virtualbox    - now manages configuration of virtualbox autostart service
+* recipes/virtualbox-as - removed
+
 ## 0.5.0:
 
 * attributes/default     - new default attribute for virtualbox checksums file url
