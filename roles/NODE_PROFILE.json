@@ -20,6 +20,11 @@
         "desktop": "DESKTOP",
         "virtual": false
       },
+      "greeter": {
+        "author": "AUTHOR",
+        "background": "BACKGROUND",
+        "resolution": "RESOLUTION"
+      },
       "lang": "LANG",
       "folders": {
         "admin": "ADMIN_FOLDER",

@@ -3,13 +3,14 @@
 This cookbook installs a selected set of eyecandy packages.
 The following recipes may apply:
 
-- `eyecandy::default`       - purges unselected packages and includes recipes as nedeed.
-- `eyecandy::faenza-icons`  - installs __Faenza icon theme__ and suggested packages.
-- `eyecandy::faience-icons` - installs __Faience icon theme__ and suggested packages.
-- `eyecandy::moka-icons`    - installs __Moka icon theme__ and suggested packages.
-- `eyecandy::nitrux-icons`  - installs __NITRUX-like icon theme__ and suggested packages.
-- `eyecandy::numix-icons`   - installs __Numix icon theme__ and suggested packages.
-- `eyecandy::unsettings`    - installs __Unsettings__ and suggested packages.
+- `eyecandy::default`            - purges unselected packages and includes recipes as nedeed.
+- `eyecandy::faenza-icons`       - installs __Faenza icon theme__ and suggested packages.
+- `eyecandy::faience-icons`      - installs __Faience icon theme__ and suggested packages.
+- `eyecandy::greeter-background` - sets greeter background image.
+- `eyecandy::moka-icons`         - installs __Moka icon theme__ and suggested packages.
+- `eyecandy::nitrux-icons`       - installs __NITRUX-like icon theme__ and suggested packages.
+- `eyecandy::numix-icons`        - installs __Numix icon theme__ and suggested packages.
+- `eyecandy::unsettings`         - installs __Unsettings__ and suggested packages.
 
 
 ## Requirements
@@ -23,6 +24,25 @@ This cookbook only applies to the following platforms:
 
 #### recipes
 - `core::default`
+
+
+## Attributes
+
+#### vms::default
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['eyecandy']['backgrounds_dir']</tt></td>
+    <td>String</td>
+    <td>Backgrounds directory</td>
+    <td><tt>/usr/share/backgrounds</tt></td>
+  </tr>
+</table>
 
 
 ## Usage

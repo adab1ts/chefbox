@@ -1,0 +1,3 @@
+[com.canonical.unity-greeter]
+draw-user-backgrounds=false
+background='/usr/share/backgrounds/oop-ubuntu12_04.jpg'

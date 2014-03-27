@@ -38,6 +38,7 @@ if selected
   # Install selected apps
   node.default[:apps] = { :eyecandy => eyecandy }
 
+  include_recipe "eyecandy::greeter-background" if selected.include?("greeter-background")
   include_recipe "eyecandy::faenza-icons" if selected.include?("faenza-icons")
   include_recipe "eyecandy::faience-icons" if selected.include?("faience-icons")
   include_recipe "eyecandy::moka-icons" if selected.include?("moka-icons")

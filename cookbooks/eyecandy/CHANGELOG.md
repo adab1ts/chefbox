@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.7.0:
+
+* recipes/default            - now includes greeter background image management
+* recipes/greeter-background - manages greeter background image configuration
+* attributes/default         - new default attribute for background images directory
+* files/ubuntu-12.04/gschemas/unity_greeter_background.gschema.override - unity greeter background config file
+
 ## 0.6.0:
 
 * recipes/default     - now includes numix icon theme install management
