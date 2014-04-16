@@ -61,6 +61,10 @@ module Coderebels
         Coderebels::Chefbox::Box.arch
       end
 
+      def platform_desktop
+        node[:box][:platform][:desktop]
+      end
+
       def virtual_box?
         node[:box][:platform][:virtual]
       end
@@ -91,6 +95,7 @@ module Coderebels
           when 14 then "quantal"
           when 15 then "raring"
           when 16 then "saucy"
+          when 17 then "trusty"
           end
         end
       end

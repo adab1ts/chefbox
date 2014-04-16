@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of core.
 
+## 0.23.0:
+
+* libraries/box
+
+  - new method to retrieve the default platform desktop
+  - now lsb_codename method is aware of new ubuntu release (trusty tahr)
+
 ## 0.22.4:
 
 * definitions/support - fix bug

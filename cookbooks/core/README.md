@@ -184,16 +184,16 @@ resource immediately.
 
 #### Actions
 
-- :add: creates a repository file and builds the repository listing
+- :add:    creates a repository file and builds the repository listing
 - :remove: removes the repository file
 
 #### Attribute Parameters
 
-- repo_name: the name of the new source file
-- uri: the ppa uri to add
+- repo_name:    the name of the new source file
+- uri:          the ppa uri to add
 - distribution: this is usually your release's codename
-- cache_build: triggers package index synchronization (defaults true)
-- clean_saved: triggers sources backup removal (defaults true)
+- cache_build:  triggers package index synchronization (defaults true)
+- clean_saved:  triggers sources backup removal (defaults true)
 
 #### Examples
 
@@ -212,14 +212,15 @@ Provides box related functions.
 
 #### Functions
 
-- `memory` - retrieves the total amount of memory of the box.
-- `device` - retrieves the vendor:device string of the device of the specified category.
-- `vendor` - retrieves the vendor of the device of the specified category.
-- `platform` - retrieves the os of the box.
-- `platform_version` - retrieves the os version.
+- `memory`            - retrieves the total amount of memory of the box.
+- `device`            - retrieves the vendor:device string of the device of the specified category.
+- `vendor`            - retrieves the vendor of the device of the specified category.
+- `platform`          - retrieves the os of the box.
+- `platform_version`  - retrieves the os version.
 - `platform_codename` - retrieves the code name of the currently installed distribution.
-- `platform_arch` - retrieves the processor type (i686 / x86_64).
-- `virtual_box?` - checks if target box is virtual.
+- `platform_arch`     - retrieves the processor type (i686 / x86_64).
+- `platform_desktop`  - retrieves the default platform desktop.
+- `virtual_box?`      - checks if target box is virtual.
 
 ### module Coderebels::Chefbox::Digest
 
@@ -228,8 +229,8 @@ Provides digest related functions.
 #### Functions
 
 - `sha256sum` - prints SHA256 checksum of a given file.
-- `md5sum` - prints MD5 checksum of a given file.
-- `shadow` - shadows plain text passwords.
+- `md5sum`    - prints MD5 checksum of a given file.
+- `shadow`    - shadows plain text passwords.
 
 ### module Coderebels::Chefbox::Shell
 

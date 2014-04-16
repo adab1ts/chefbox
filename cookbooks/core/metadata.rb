@@ -4,5 +4,5 @@ maintainer_email 'carles.ml.dev@gmail.com'
 license          'Apache 2.0'
 description      'Installs/Configures core'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.22.4'
+version          '0.23.0'
 depends          'apt'
