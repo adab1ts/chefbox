@@ -30,35 +30,43 @@ held_pkgs = %w[
   grub-common
 ]
 
-new_pkgs = %w[
-  mint-meta-cinnamon
-  mint-mdm-themes
-]
+upgrade_code = case platform_desktop
+when "cinnamon"
+  purge_pkgs = %w[
+    nautilus
+    nautilus-gksu
+    nautilus-open-terminal
+    nautilus-sendto-empathy
+    nautilus-wallpaper
+    gnome-session-fallback
+    gnome-control-center
+  ]
 
-purge_pkgs = %w[
-  nautilus
-  nautilus-gksu
-  nautilus-open-terminal
-  nautilus-sendto-empathy
-  nautilus-wallpaper
-  gnome-session-fallback
-  gnome-control-center
-]
+  h_pkgs = held_pkgs.join(" ")
+  p_pkgs = purge_pkgs.join(" ")
 
-h_pkgs = held_pkgs.join(" ")
-n_pkgs = new_pkgs.join(" ")
-p_pkgs = purge_pkgs.join(" ")
-
-bash "first_system_upgrade" do
-  code <<-EOH
+  <<-EOH
     apt-mark hold #{h_pkgs}
     apt-get -y dist-upgrade
-    apt-get -y install #{n_pkgs}
     apt-get -y purge #{p_pkgs}
     apt-get -y autoremove
     apt-get clean
     apt-mark unhold #{h_pkgs}
     EOH
+when "mate", "xfce"
+  h_pkgs = held_pkgs.join(" ")
+
+  <<-EOH
+    apt-mark hold #{h_pkgs}
+    apt-get -y dist-upgrade
+    apt-get -y autoremove
+    apt-get clean
+    apt-mark unhold #{h_pkgs}
+    EOH
+end
+
+bash "first_system_upgrade" do
+  code upgrade_code
   action :run
   not_if { node.attribute?(:first_run_completed) }
 end

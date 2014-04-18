@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.22.4:
+
+* recipes/end-mint - first system upgrade based on platform desktop
+
 ## 0.22.3:
 
 * recipes/main-mint   - full support for ia32-libs in x86_64 platforms
