@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.5.4:
+
+* files/default/bash/functions.d/misc.bfn - new function to change the hostname of the box
+
 ## 0.5.3:
 
 * recipes/default - minor update

@@ -55,3 +55,19 @@ function aliases {
 	fi
 }
 
+function nhostname {
+	if [[ $# -ne 1 ]]; then
+		echo "Usage: nhostname new_name"
+	else
+		local hostname_file="/etc/hostname"
+		local hosts_file="/etc/hosts"
+
+		local c_hn=$(hostname)
+		local n_hn="$1"
+
+        sudo sed -i 1s:$c_hn:$n_hn:g $hostname_file
+        sudo sed -i 2s:$c_hn:$n_hn:g $hosts_file
+		sudo service hostname restart
+	fi
+}
+
