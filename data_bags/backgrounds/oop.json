@@ -2,11 +2,11 @@
   "id": "oop",
   "oop-ubuntu12_04": {
     "1024x768": {
-      "url": "http://ubuntuone.com/2eq3bKAd3EmtpUfl68Tr37",
+      "url": "https://ocserver/public.php?service=files&t=871145f7d02a67999692092e28e30f24&download",
       "sha256": "66bffd27ab856abba18e27170e72d126d14a6f727c9823b31745a4a4e006d3da"
     },
     "1600x900": {
-      "url": "http://ubuntuone.com/4CQ1gCDmbr5z5mkmvqWXj8",
+      "url": "https://ocserver/public.php?service=files&t=339b774995f8aa45cce544127fc14c14&download",
       "sha256": "24fc9612562af3d96347c5a48916dfd34a1e59152d3c5b49a5b091d02fbec29f"
     }
   }

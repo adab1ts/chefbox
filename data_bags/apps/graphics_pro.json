@@ -110,16 +110,16 @@
         "data": {
           "all": {
             "i686": {
-              "file_name": "qcad-3.4.5-linux-x86_32.tar.gz",
-              "uri": "http://ubuntuone.com/4nUzxqyFggjvH8WeYXwGXG",
-              "sha256": "0ab3fb35b66b03759f1ebd123e45d84d28ded68eb7610a71ec5351130020d49a",
-              "zfolder": "qcad-3.4.5-linux-x86_32"
+              "file_name": "qcad-3.4.7-linux-x86_32.tar.gz",
+              "uri": "https://ocserver/public.php?service=files&t=3c10396ab79c46b28485e763487912a7&download",
+              "sha256": "89480ad94c3adba2fb0f88e1eba4ed07173ff39b2d233bbd864cb0b6f831bb8f",
+              "zfolder": "qcad-3.4.7-linux-x86_32"
             },
             "x86_64": {
-              "file_name": "qcad-3.4.5-linux-x86_64.tar.gz",
-              "uri": "http://ubuntuone.com/6wazPhvzzUpSbI3VLmiNND",
-              "sha256": "d1164193fa2db307e773293561e670d32a1e4bef1d23fc01067890dbe3580500",
-              "zfolder": "qcad-3.4.5-linux-x86_64"
+              "file_name": "qcad-3.4.7-linux-x86_64.tar.gz",
+              "uri": "https://ocserver/public.php?service=files&t=dfc6f95804fc3685737a7aa87e8a2755&download",
+              "sha256": "fe005f22b3c0951ab77fc655ddacd91aea7b5217c8e195304ecd8f1c3c79f51a",
+              "zfolder": "qcad-3.4.7-linux-x86_64"
             }
           }
         }

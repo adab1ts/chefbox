@@ -3,68 +3,68 @@
   "base": {
     "apt-file": {
       "ca": {
-        "file": "apt-file-es.pdf",
-        "url": "http://ubuntuone.com/4ucLlga7qV9Zl8k0QPU3wj",
-        "sha256": "515ec2ce352e6a02085f809eb0ae64fd8977c7d22878af990762454c7cd9dfd3"
+        "file": "apt-file-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=d2007fdec67cdc297e9124fbfaa14daf&download",
+        "sha256": "3af88e71c632c5e862b74611bdde63ab9d33283cca2116f54d80db58faf76070"
       },
       "es": {
         "file": "apt-file-es.pdf",
-        "url": "http://ubuntuone.com/4ucLlga7qV9Zl8k0QPU3wj",
-        "sha256": "515ec2ce352e6a02085f809eb0ae64fd8977c7d22878af990762454c7cd9dfd3"
+        "url": "https://ocserver/public.php?service=files&t=9a6977c624d38e8a0260c40c76901a05&download",
+        "sha256": "856986d702625edcf326a9fce04ec1d17544320d542daac6d8c5e594618336a9"
       }
     },
     "sc": {
       "ca": {
-        "file": "usc-es.pdf",
-        "url": "http://ubuntuone.com/2ICvSwF0a9Vx1iqupQ0bYy",
-        "sha256": "222000b5ab4bc7ac4e3471647e4030eb31bafe32dafe935ce6606eaf4ac3b2da"
+        "file": "sc-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=767abd9ac30b53b796f08e0ec93f8c15&download",
+        "sha256": "dfe2695d4de21d86cd3cff3e6f51fe18c42665993a692f782a6135f89849d0f3"
       },
       "es": {
-        "file": "usc-es.pdf",
-        "url": "http://ubuntuone.com/2ICvSwF0a9Vx1iqupQ0bYy",
-        "sha256": "222000b5ab4bc7ac4e3471647e4030eb31bafe32dafe935ce6606eaf4ac3b2da"
+        "file": "sc-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=93938c821416922e3048d96eaccf1737&download",
+        "sha256": "77aa3a7395c2a143bcc2fac9ddb46b4cea6e5fe71782fe5c63c7e6af28811b89"
       }
     }
   },
   "browsers": {
     "firefox": {
       "ca": {
-        "file": "firefox-es.pdf",
-        "url": "http://ubuntuone.com/0JQJse9FEWybgmSdKSDu5o",
-        "sha256": "5a7223e0e3636ec7869653cfb9287be2db49b65174820daf3469590bcd12c055"
+        "file": "firefox-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=fe7c94a34860ddbba8d5bb09d373b1e4&download",
+        "sha256": "107397125956b45a0dec1791640b5842cf77222fc22a6ab8e9e491beac98bd42"
       },
       "es": {
         "file": "firefox-es.pdf",
-        "url": "http://ubuntuone.com/0JQJse9FEWybgmSdKSDu5o",
-        "sha256": "5a7223e0e3636ec7869653cfb9287be2db49b65174820daf3469590bcd12c055"
+        "url": "https://ocserver/public.php?service=files&t=508a71682eddf7d9e24193a3acb01fd3&download",
+        "sha256": "4ddee35ae5af8fb20210eac74a570ba53ffc61515789cc6f7c7108126e906c6e"
       }
     }
   },
   "email": {
     "thunderbird": {
       "ca": {
-        "file": "thunderbird-es.pdf",
-        "url": "http://ubuntuone.com/3t7qUUiNBDkySugWDYYKHb",
-        "sha256": "3ed051927cda0ceea866ef00dc77903751dbb983b29cbff8b60e656f1f4ab56a"
+        "file": "thunderbird-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=21ecc9ee6a2ea9705f138001be166242&download",
+        "sha256": "8034955ac5c89068417953fd6c552b4d39e6e87f2c2c2f3718c3a0a6f6684924"
       },
       "es": {
         "file": "thunderbird-es.pdf",
-        "url": "http://ubuntuone.com/3t7qUUiNBDkySugWDYYKHb",
-        "sha256": "3ed051927cda0ceea866ef00dc77903751dbb983b29cbff8b60e656f1f4ab56a"
+        "url": "https://ocserver/public.php?service=files&t=394075d975b6a1b95f61b9ae1b8cfd77&download",
+        "sha256": "e08ddaf9b80325af61bf79df3220f66ec046f0de8d5b96f7a85053bd0002d3c2"
       }
     }
   },
   "eyecandy": {
     "unsettings": {
       "ca": {
-        "file": "unsettings-es.pdf",
-        "url": "http://ubuntuone.com/4c3ejikj8CxLwos3PqnRWC",
-        "sha256": "b966a42219c871ab644dc9fccadff88ad18cc37a94a5fe5026442f6f7811f805"
+        "file": "unsettings-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=c53d02ec27fa9abe4aab18ff605d0317&download",
+        "sha256": "19a6a02346ff1e834dd7dd3f0e684f099eb62021e2cceb213523bc2e51fe7c24"
       },
       "es": {
         "file": "unsettings-es.pdf",
-        "url": "http://ubuntuone.com/4c3ejikj8CxLwos3PqnRWC",
-        "sha256": "b966a42219c871ab644dc9fccadff88ad18cc37a94a5fe5026442f6f7811f805"
+        "url": "https://ocserver/public.php?service=files&t=3beb5616d6ce0c4511de907b41b74ba5&download",
+        "sha256": "c33f7a8c045f7e249642548ffa91e4e38fdb1012f450131d5b3baa05937a5afc"
       }
     }
   },
@@ -72,12 +72,12 @@
     "ubuntu": {
       "ca": {
         "file": "Ubuntu_12.04-es.pdf",
-        "url": "http://ubuntuone.com/1yRGRSiioN19dMk20LqMqd",
+        "url": "https://ocserver/public.php?service=files&t=02aa3fc388c10d3142962a746d812446&download",
         "sha256": "c7b20c23b3c50f12529b4c6a24905105c8b57f8cd44d5556df267db1da366992"
       },
       "es": {
         "file": "Ubuntu_12.04-es.pdf",
-        "url": "http://ubuntuone.com/1yRGRSiioN19dMk20LqMqd",
+        "url": "https://ocserver/public.php?service=files&t=02aa3fc388c10d3142962a746d812446&download",
         "sha256": "c7b20c23b3c50f12529b4c6a24905105c8b57f8cd44d5556df267db1da366992"
       }
     }
@@ -85,28 +85,28 @@
   "graphics_pro": {
     "draftsight": {
       "ca": {
-        "file": "draftsight-es.pdf",
-        "url": "http://ubuntuone.com/6D73BznR0DNBPcTqoasNjV",
-        "sha256": "9935d2b1657539f1717feee4ed0f86fe771ac08d4c69076fd0992490c1f0e5a1"
+        "file": "draftsight-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=a8349fbbc0b75a4a0bc604a0cf585ad9&download",
+        "sha256": "dcd2a5e627d3e4449184aa47eb1bb288f0a793bc5466aa7ac72171cd07917032"
       },
       "es": {
         "file": "draftsight-es.pdf",
-        "url": "http://ubuntuone.com/6D73BznR0DNBPcTqoasNjV",
-        "sha256": "9935d2b1657539f1717feee4ed0f86fe771ac08d4c69076fd0992490c1f0e5a1"
+        "url": "https://ocserver/public.php?service=files&t=717765177847ea48541f7666ac0ef739&download",
+        "sha256": "acab1b2f57e7b75cc46bb4e5859611255b44556990f89ec61b4c8fbc34b1720a"
       }
     }
   },
   "groupware": {
     "skype": {
       "ca": {
-        "file": "skype-es.pdf",
-        "url": "http://ubuntuone.com/0bBs0qaSWaziJQBGSGFJ62",
-        "sha256": "f08cb25bf2680c0dc3164870766b9c67d6028b3510129d56f054489ca740b85b"
+        "file": "skype-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=ef7cd21168521174d22432784bc95366&download",
+        "sha256": "170dd6a3966c4f9e164aa906b1f15a3edccd07b8e6041c077e478d2dcd5a180c"
       },
       "es": {
         "file": "skype-es.pdf",
-        "url": "http://ubuntuone.com/0bBs0qaSWaziJQBGSGFJ62",
-        "sha256": "f08cb25bf2680c0dc3164870766b9c67d6028b3510129d56f054489ca740b85b"
+        "url": "https://ocserver/public.php?service=files&t=421e58564ced14e5e1b227ee7f0da492&download",
+        "sha256": "229b29f94887b2db02448b393c7364a6720a00368be9ecf1533a1d92a2329b69"
       }
     }
   },
@@ -114,24 +114,24 @@
     "screensaver": {
       "ca": {
         "file": "screensaver-es.pdf",
-        "url": "http://ubuntuone.com/4aPKqecjpakPv4iL61c7Jj",
+        "url": "https://ocserver/public.php?service=files&t=7c66c4dceb4a8bde47aa165158dab3e9&download",
         "sha256": "b9d183bae9e4ea784e8deb77ba15fb4d1edc4899d62ca9b276ad37b6b5873de9"
       },
       "es": {
         "file": "screensaver-es.pdf",
-        "url": "http://ubuntuone.com/4aPKqecjpakPv4iL61c7Jj",
+        "url": "https://ocserver/public.php?service=files&t=7c66c4dceb4a8bde47aa165158dab3e9&download",
         "sha256": "b9d183bae9e4ea784e8deb77ba15fb4d1edc4899d62ca9b276ad37b6b5873de9"
       }
     },
     "weather": {
       "ca": {
         "file": "weather-es.pdf",
-        "url": "http://ubuntuone.com/7kVB3ameS5lfaO7RPiAzwq",
+        "url": "https://ocserver/public.php?service=files&t=8d4f36f761cb28ca932bf7bd6820b198&download",
         "sha256": "580e22d2b562a71c466c8ac527f151e154ac18eba6fef7c9535db8ea25c7e411"
       },
       "es": {
         "file": "weather-es.pdf",
-        "url": "http://ubuntuone.com/7kVB3ameS5lfaO7RPiAzwq",
+        "url": "https://ocserver/public.php?service=files&t=8d4f36f761cb28ca932bf7bd6820b198&download",
         "sha256": "580e22d2b562a71c466c8ac527f151e154ac18eba6fef7c9535db8ea25c7e411"
       }
     }
@@ -140,12 +140,12 @@
     "backup": {
       "ca": {
         "file": "backup-es.pdf",
-        "url": "http://ubuntuone.com/5XjybIeENwSfniMzOmoKHC",
+        "url": "https://ocserver/public.php?service=files&t=02b3785edca2ee5d6d6753af154a488d&download",
         "sha256": "a7a9cb7abc913655009d1141a21b6c535da5101d1f4dad8292c5604b19b8a1fb"
       },
       "es": {
         "file": "backup-es.pdf",
-        "url": "http://ubuntuone.com/5XjybIeENwSfniMzOmoKHC",
+        "url": "https://ocserver/public.php?service=files&t=02b3785edca2ee5d6d6753af154a488d&download",
         "sha256": "a7a9cb7abc913655009d1141a21b6c535da5101d1f4dad8292c5604b19b8a1fb"
       }
     }
@@ -154,24 +154,24 @@
     "libreoffice": {
       "ca": {
         "file": "libreoffice-es.pdf",
-        "url": "http://ubuntuone.com/2wMT1pX98zjuPmxr1dYcou",
+        "url": "https://ocserver/public.php?service=files&t=13a5175daa50046b2fb784547fcf435d&download",
         "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
       },
       "es": {
         "file": "libreoffice-es.pdf",
-        "url": "http://ubuntuone.com/2wMT1pX98zjuPmxr1dYcou",
+        "url": "https://ocserver/public.php?service=files&t=13a5175daa50046b2fb784547fcf435d&download",
         "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
       }
     },
     "masterpdf": {
       "ca": {
         "file": "masterpdf-en.pdf",
-        "url": "http://ubuntuone.com/1we5AR7lATQc7bMLUS4O2G",
+        "url": "https://ocserver/public.php?service=files&t=92c769ad3897bf133c72037b99d08070&download",
         "sha256": "a0ccdebf33179ec91d553fef67c00bde7b7330a4f1f9c82eee7641e21e3ecd3c"
       },
       "es": {
         "file": "masterpdf-en.pdf",
-        "url": "http://ubuntuone.com/1we5AR7lATQc7bMLUS4O2G",
+        "url": "https://ocserver/public.php?service=files&t=92c769ad3897bf133c72037b99d08070&download",
         "sha256": "a0ccdebf33179ec91d553fef67c00bde7b7330a4f1f9c82eee7641e21e3ecd3c"
       }
     }
@@ -180,24 +180,24 @@
     "firewall": {
       "ca": {
         "file": "firewall-es.pdf",
-        "url": "http://ubuntuone.com/1pJ6qZVD4lq4vKczw427fb",
+        "url": "https://ocserver/public.php?service=files&t=f9b6d37f8e48d0abdea1a62624c0abda&download",
         "sha256": "9255f2fe4f17190c20d93a7e4f7f7ba8a1225277f063c50f68070cfa34b46698"
       },
       "es": {
         "file": "firewall-es.pdf",
-        "url": "http://ubuntuone.com/1pJ6qZVD4lq4vKczw427fb",
+        "url": "https://ocserver/public.php?service=files&t=f9b6d37f8e48d0abdea1a62624c0abda&download",
         "sha256": "9255f2fe4f17190c20d93a7e4f7f7ba8a1225277f063c50f68070cfa34b46698"
       }
     },
     "tracking": {
       "ca": {
         "file": "tracking-es.pdf",
-        "url": "http://ubuntuone.com/17eaG5qt3o1SXv1eHqb9X4",
+        "url": "https://ocserver/public.php?service=files&t=73ebe8c2ed8458d61c708725c9fc7d85&download",
         "sha256": "8482e994b703527ce73b1898e5e31a635408b92d74fc14a9ce7d7a392171f030"
       },
       "es": {
         "file": "tracking-es.pdf",
-        "url": "http://ubuntuone.com/17eaG5qt3o1SXv1eHqb9X4",
+        "url": "https://ocserver/public.php?service=files&t=73ebe8c2ed8458d61c708725c9fc7d85&download",
         "sha256": "8482e994b703527ce73b1898e5e31a635408b92d74fc14a9ce7d7a392171f030"
       }
     }
@@ -206,12 +206,12 @@
     "epoptes": {
       "ca": {
         "file": "epoptes-es.pdf",
-        "url": "http://ubuntuone.com/2yUTsfFFclKQJkt2nzP5zc",
+        "url": "https://ocserver/public.php?service=files&t=642d5a5f82e4dbcbe492cc75715a91f8&download",
         "sha256": "fd46775ec717b5b94113ebc029ba0947014553d4926d22a981e2e9bb0165c82f"
       },
       "es": {
         "file": "epoptes-es.pdf",
-        "url": "http://ubuntuone.com/2yUTsfFFclKQJkt2nzP5zc",
+        "url": "https://ocserver/public.php?service=files&t=642d5a5f82e4dbcbe492cc75715a91f8&download",
         "sha256": "fd46775ec717b5b94113ebc029ba0947014553d4926d22a981e2e9bb0165c82f"
       }
     }
@@ -220,12 +220,12 @@
     "furius": {
       "ca": {
         "file": "furius-es.pdf",
-        "url": "http://ubuntuone.com/4FMM2kyHKHFxH68PiUlOSw",
+        "url": "https://ocserver/public.php?service=files&t=c72b9cbdc81066b49980fa1942d6fa9b&download",
         "sha256": "bda6488d5509d1b9233dedab99bbe658fac97fd3d07fc19bc6c9eee3d93ed5b1"
       },
       "es": {
         "file": "furius-es.pdf",
-        "url": "http://ubuntuone.com/4FMM2kyHKHFxH68PiUlOSw",
+        "url": "https://ocserver/public.php?service=files&t=c72b9cbdc81066b49980fa1942d6fa9b&download",
         "sha256": "bda6488d5509d1b9233dedab99bbe658fac97fd3d07fc19bc6c9eee3d93ed5b1"
       }
     }

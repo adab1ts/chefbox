@@ -36,7 +36,7 @@
           "all": {
             "all": {
               "file_name": "airtime-easy-setup.deb",
-              "uri": "http://ubuntuone.com/2EVRqJ1OdqJGUXymGWyRsC",
+              "uri": "https://ocserver/public.php?service=files&t=640e3571e01d8519a77e46fbf0bf140c&download",
               "sha256": "b37e4a98cb6208eba52c468d333b8f37acaa0bfa9f4b788d418a42aeebd850e5"
             }
           }
@@ -200,14 +200,14 @@
           "all": {
             "i686": {
               "file_name": "xscsetup.tar.gz",
-              "uri": "http://ubuntuone.com/50pBHjLPCPuE8PzujLJCqu",
-              "sha256": "ca570219f0c394dbce643a97e99322503d57f08287cb654bb7ebe5204f5dbc60",
+              "uri": "https://ocserver/public.php?service=files&t=c5d78606be1ad866afb0f92e2bb03b8c&download",
+              "sha256": "4e85f36159632487e50ab2d52e6ef5b2c40fb000b0603b941f4b3bcbeb6bd6c7",
               "zfolder": "transcribe" 
             },
             "x86_64": {
               "file_name": "xsc64setup.tar.gz",
-              "uri": "http://ubuntuone.com/4LZNcGOnGLMK7FmaDdOMtR",
-              "sha256": "650bb00e0002a35bcd90b684d1d2c8103994e07e367bfeb98f5ba0dd64375712",
+              "uri": "https://ocserver/public.php?service=files&t=50d8e88a8e70135b1f35e004a60e2132&download",
+              "sha256": "7ab1dbf5edfb568cd4dc4e88ba18cbc6f59e307bba54fca60e77cd7485031a3b",
               "zfolder": "transcribe" 
             }
           }

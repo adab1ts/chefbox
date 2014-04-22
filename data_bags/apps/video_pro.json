@@ -47,15 +47,15 @@
         "data": {
           "all": {
             "i686": {
-              "file_name": "shotcut-debian7-x86-140117.tar.bz2",
-              "uri": "http://ubuntuone.com/0tPfYFTtSOkzUeCBpPpE6P",
-              "sha256": "80957982e4c5b2b1592c254f420092e104ab3ba8f99201c376c209e8aee24a3c",
+              "file_name": "shotcut-debian7-x86-140420.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=f57bfb432807b2a22554b53e67f7c579&download",
+              "sha256": "7d9d4c3d8a1d0d8212940f5f7996f4b6f4be8810be53ad3ecf7674ab4839b488",
               "zfolder": "Shotcut" 
             },
             "x86_64": {
-              "file_name": "shotcut-debian7-x86_64-140117.tar.bz2",
-              "uri": "http://ubuntuone.com/66GJOn9Gc8rYze36yvWhup",
-              "sha256": "459a790554187aae40d33ce06118d0007968070767750c8a7f597569aead3e8a",
+              "file_name": "shotcut-debian7-x86_64-140420.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=017a633b3e1e2801423fad6b7249d0f9&download",
+              "sha256": "aec8f5a19e25064030dbd8680608423c752eba9a6a528c6d0b76960a770c109a",
               "zfolder": "Shotcut" 
             }
           }

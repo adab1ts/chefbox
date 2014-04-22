@@ -19,12 +19,12 @@
           "all": {
             "i686": {
               "file_name": "google-talkplugin_current_i386.deb",
-              "uri": "http://ubuntuone.com/5OFT1NzyxzA6WkgvoyO1O1",
+              "uri": "https://ocserver/public.php?service=files&t=bb3ba86c93e98bed27cf29ea1615fada&download",
               "sha256": "2d4753494b5cca1f7117d404040c6584bd3e052b882034e85b904d0efd62f285"
             },
             "x86_64": {
               "file_name": "google-talkplugin_current_amd64.deb",
-              "uri": "http://ubuntuone.com/6DbQOE8Wef8yLn14tvWcSy",
+              "uri": "https://ocserver/public.php?service=files&t=1220fbd8691de2084dbb3e0797da59a5&download",
               "sha256": "11fd33acf3e8a1346d1cea1ddab0cbdcaf7b47736fba62b03aa05cc83825c56b"
             }
           }

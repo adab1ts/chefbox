@@ -27,6 +27,7 @@
       "package": "prey",
       "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "utility for tracking stolen computers",
+      "website": "http://preyproject.com/",
       "suggested": ["traceroute"],
       "dependencies": ["mpg123", "scrot", "streamer"],
       "source": {
@@ -35,7 +36,7 @@
           "all": {
             "all": {
               "file_name": "prey_0.6.2-ubuntu2_all.deb",
-              "uri": "http://ubuntuone.com/1sawKpGKsdm0NLv46D4doG",
+              "uri": "https://ocserver/public.php?service=files&t=1221f9dde8e08fef9c8a16642f430b52&download",
               "sha256": "463b706cdf8e49d999dc1eb0d0cbb42c81fb03fe13f4dcf653aee7e184d588f9"
             }
           }

@@ -37,26 +37,23 @@
       }
     },
     "masterpdf": {
-      "package": "masterpdf",
-      "maintainer": "Code Industry Ltd. <support@code-industry.net>",
-      "description": "Complete solution for view, print and edit PDF and XPS files",
+      "package": "master-pdf-editor",
+      "maintainer": "Cleto Martín <cleto.martin@gmail.com>",
+      "description": "Complete solution for editing PDF and XPS files",
       "website": "http://code-industry.net/pdfeditor.php",
       "source": {
-        "type": "bin",
-        "ztype": "tgz",
+        "type": "deb",
         "data": {
           "all": {
             "i686": {
-              "file_name": "MasterPDFEditor-1.9.20.i386.tar.gz",
-              "uri": "http://ubuntuone.com/2ram9VHx68TXrXOE3sW6Gn",
-              "sha256": "f1c556b9688fbf7ddd5c7574528f4ef7ddd80bb45acc11a559e6488ba2ea869b",
-              "zfolder": "MasterPDFEditor" 
+              "file_name": "master-pdf-editor_1.9.25_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=52a1e08d1938b188d0c22ab5292c429f&download",
+              "sha256": "adca0fb4c593a96b6db76a4606448a71d2df1f0b36e6a48be27cbac4617e8ae2"
             },
             "x86_64": {
-              "file_name": "MasterPDFEditor-1.9.20.x86_64.tar.gz",
-              "uri": "http://ubuntuone.com/2Ev8MRtOXNbT4eygnqjSVg",
-              "sha256": "107e53e7dc974ac67d59062b931466ea60e28314d41be07b961af8af47835fc6",
-              "zfolder": "MasterPDFEditor" 
+              "file_name": "master-pdf-editor_1.9.25_amd64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=a110deecd4a5aed030445445b9f978cc&download",
+              "sha256": "1192f8b7562c2622bb72478dd50a5d048e6ad60b04615663318a2b2fa757c59b"
             }
           }
         }
@@ -94,14 +91,14 @@
         "data": {
           "all": {
             "i686": {
-              "file_name": "springseed_1.0.2_i386.deb",
-              "uri": "http://ubuntuone.com/34RqXdhgErNVelYIjUiUAI",
-              "sha256": "1db0f7b78fb51e2a79e591263745f0df754943f19aa006f2b38e3c51cad680b6"
+              "file_name": "springseed_1.1.0_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=08e8cd1c817dfb68f6cdcfc688c414c3&download",
+              "sha256": "0d4ed380c048eb8a5b1cad7ebeb613b17978520f318c0938dde08bb33e6a366e"
             },
             "x86_64": {
-              "file_name": "springseed_1.0.2_amd64.deb",
-              "uri": "http://ubuntuone.com/0m4R4xNGs95I79fm9BHvYF",
-              "sha256": "c974c95b60f9f023cce7a0bf0c379d4ba554a66c968a6e8c87c53af26efc261d"
+              "file_name": "springseed_1.1.0_amd64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=af360093b44c5b50add75ebeec3244d0&download",
+              "sha256": "7cb80e2681913f5d10506872f6d01f33c34fb0bd7d617e7d44ba8b9265449a6f"
             }
           }
         }
