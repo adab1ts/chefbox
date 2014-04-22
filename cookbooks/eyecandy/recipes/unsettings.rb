@@ -28,5 +28,6 @@ end
 
 support "unsettings" do
   section "eyecandy"
+  only_for ["ubuntu"]
 end
 
