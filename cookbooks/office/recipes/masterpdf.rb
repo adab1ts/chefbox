@@ -26,21 +26,6 @@ install_app "masterpdf" do
   profile office['profiles']['masterpdf']
 end
 
-launcher "masterpdf" do
-  template "/masterpdf/masterpdf.desktop.erb"
-  variables(
-    :exec => "sh -c '~/#{node[:box][:folders][:apps]}/masterpdf/pdfeditor'"
-  )
-end
-
-uninstaller "masterpdf" do
-  template "/masterpdf/uninstall_masterpdf-#{node[:box][:lang]}.sh.erb"
-  variables(
-    :app     => "masterpdf",
-    :website => office['profiles']['masterpdf']['website']
-  )
-end
-
 support "masterpdf" do
   section "office"
 end

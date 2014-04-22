@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of office.
 
+## 0.3.1:
+
+* attributes/default - ms true type fonts now stored in owncloud server
+* recipes/masterpdf  - refactorization due to installation of new relase
+* templates/default/masterpdf/uninstall_masterpdf-[ca,es].sh - removed (no longer needed)
+* templates/linuxmint-13/masterpdf/masterpdf.desktop         - removed (no longer needed)
+* templates/ubuntu-12.04/masterpdf/masterpdf.desktop         - removed (no longer needed)
+
 ## 0.3.0:
 
 * README   - update requirements section and new attributes section

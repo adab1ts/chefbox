@@ -46,7 +46,7 @@ This cookbook only applies to the following platforms:
     <td><tt>[:office][:msttfonts][:url]</tt></td>
     <td>String</td>
     <td>download url</td>
-    <td><tt>http://ubuntuone.com/3yvtCqArMf6VBgyAcqC01W</tt></td>
+    <td><tt>https://ocserver/public.php?service=files&t=13669ab4b47fdf31f729b6f6fc5f016b&download</tt></td>
   </tr>
   <tr>
     <td><tt>[:office][:msttfonts][:sha256]</tt></td>

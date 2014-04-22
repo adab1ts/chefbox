@@ -20,7 +20,7 @@
 
 # MS Office True Type Fonts
 default[:office][:msttfonts][:file]   = "fonts.tar.gz"
-default[:office][:msttfonts][:url]    = "http://ubuntuone.com/3yvtCqArMf6VBgyAcqC01W"
+default[:office][:msttfonts][:url]    = "https://ocserver/public.php?service=files&t=13669ab4b47fdf31f729b6f6fc5f016b&download"
 default[:office][:msttfonts][:sha256] = "34afc268300fe5b863ddd6cde973aba3a87d7512ae92e37e4de891a49faa3465"
 default[:office][:msttfonts][:path]   = "/usr/share/fonts/truetype/msttfonts"
 
