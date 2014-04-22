@@ -55,34 +55,8 @@ namespace :coderebels do
     end
   end
 
-  # def update_hosts_file(env, vars)
-  #   hostname   = "chefserver-#{env}"
-  #   hosts_file = "/etc/hosts"
-
-  #   host_data  = []
-  #   host_entry = nil
-
-  #   output = %x( grep -ERwne #{hostname} #{hosts_file} ).chomp
-
-  #   if output.empty?
-  #     host_data << "#192.168.0.100" << "#{hostname}.#{vars[:chef_svr_domain]}" << hostname
-  #   else
-  #     _ = output.split(":")
-
-  #     n = _.first
-  #     system("sudo", "sed", "-i", "#{n}d", hosts_file)
-
-  #     host_data = _.last.split("\s")
-  #     host_data[0] = vars[:chef_svr_ip] if vars[:chef_svr_ip]
-  #     host_data[1] = "#{hostname}.#{vars[:chef_svr_domain]}" if vars[:chef_svr_domain]
-  #   end
-
-  #   host_entry = host_data.join("\t")
-  #   system %{printf "#{host_entry}\n" | sudo tee -a #{hosts_file}}
-  # end
-
   def update_hosts_file(env, vars)
-    hostname   = env == "ocs" ? "ocserver" : "chefserver-#{env}"
+    hostname   = env == "ocs" ? vars[:svr_alias] : "chefserver-#{env}"
     hosts_file = "/etc/hosts"
 
     host_data  = []
@@ -92,7 +66,7 @@ namespace :coderebels do
 
     if output.empty?
       ip   = env == "ocs" ? vars[:svr_ip] : "#192.168.0.100"
-      fqdn = env == "ocs" ? "#{hostname}.coderebels.org" : "#{hostname}.#{vars[:svr_domain]}"
+      fqdn = "#{hostname}.#{vars[:svr_domain]}"
       host_data << ip << fqdn << hostname
     else
       _ = output.split(":")
@@ -191,7 +165,8 @@ namespace :coderebels do
     # TOPDIR/.chef-env/env
     env_vars = {chef_report_recipient: args.email,
                 chef_svr_alias: "chefserver-#{args.env}",
-                chef_svr_domain: args.domain}
+                chef_svr_domain: args.domain,
+                chef_svr_fqdn: "chefserver-#{args.env}.#{args.domain}"}
     update_env_vars(env_vars, args.env)
 
     # /etc/hosts
@@ -236,14 +211,6 @@ namespace :coderebels do
   end
 
 
-  desc "Setup owncloud server"
-  task :setup_ocs, [:ip] do |t, args|
-    raise "Must provide an IP address" unless args.ip
-
-    update_hosts_file "ocs", svr_ip: args.ip
-  end
-
-
   desc "Switch current environment"
   task :switch_env, [:env, :ip] do |t, args|
     raise "Must provide an environment and an IP address" unless (args.env and args.ip)
@@ -275,6 +242,26 @@ namespace :coderebels do
         puts "Create it first with 'coderebels:setup_env' task"
       end
     end
+  end
+
+
+  desc "Setup owncloud server"
+  task :setup_ocs, [:ip, :alias, :domain] do |t, args|
+    args.with_defaults(:alias => "ocserver", :domain => "coderebels.org")
+    raise "Must provide an IP address" unless args.ip
+
+    # TOPDIR/.chef/env
+    env_vars = {oc_svr_alias: args.alias,
+                oc_svr_domain: args.domain,
+                oc_svr_fqdn: "#{args.alias}.#{args.domain}",
+                oc_svr_ip: args.ip}
+    update_env_vars env_vars
+
+    # /etc/hosts
+    hosts_vars = {svr_alias: args.alias,
+                  svr_domain: args.domain,
+                  svr_ip: args.ip}
+    update_hosts_file "ocs", hosts_vars
   end
 
 
@@ -366,6 +353,9 @@ namespace :coderebels do
                       gsub(/@@CHEF_SVR_ALIAS@@/, ENV['CHEF_SVR_ALIAS']).
                       gsub(/@@CHEF_SVR_FQDN@@/, ENV['CHEF_SVR_FQDN']).
                       gsub(/@@CHEF_SVR_IP@@/, ENV['CHEF_SVR_IP']).
+                      gsub(/@@OC_SVR_ALIAS@@/, ENV['OC_SVR_ALIAS']).
+                      gsub(/@@OC_SVR_FQDN@@/, ENV['OC_SVR_FQDN']).
+                      gsub(/@@OC_SVR_IP@@/, ENV['OC_SVR_IP']).
                       gsub(/@@IFACE@@/, iface)
           file.puts content
         end

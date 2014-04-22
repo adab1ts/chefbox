@@ -28,8 +28,8 @@ namespace :coderebels do
     puts
     puts "*) Prepare your workspace the very first time:  rake coderebels:workspace[env,email,domain]"
     puts
-    puts "1) Setup the owncloud server:         rake coderebels:setup_ocs[ip]"
-    puts "2) Switch to the target environment:  rake coderebels:switch_env[env,ip]"
+    puts "1) Switch to the target environment:  rake coderebels:switch_env[env,ip]"
+    puts "2) Setup the owncloud server:         rake coderebels:setup_ocs[ip]"
     puts "3) Pull and upload chefbox updates:   rake coderebels:chefbox_updt"
     puts "4) For each node to bootstrap:"
     puts "   4.1) Create a new node profile:    rake coderebels:create_profile[nodename,roles,recipes]"
@@ -47,7 +47,7 @@ namespace :coderebels do
       <<-EOH
          USAGE: rake coderebels:help[taskname]
 
-                taskname = { workspace | setup_ocs | setup_env | remove_env | switch_env |
+                taskname = { workspace | setup_env | remove_env | switch_env | setup_ocs |
                              chefbox_updt | create_profile | edit_profile | update_profile |
                              bundle | bootstrap | info }
       EOH
@@ -76,7 +76,7 @@ namespace :coderebels do
                 domain *=> domain name of the target environment chef server ([coderebels.org])
 
       EXAMPLES: rake coderebels:make_env[cof,you@example.com]
-                rake coderebels:make_env[ldps,no-reply@ladispersa.net,ladispersa.net]
+                rake coderebels:make_env[dps,no-reply@ladispersa.net,ladispersa.net]
       EOH
     when "remove_env"
       <<-EOH
@@ -85,16 +85,7 @@ namespace :coderebels do
 
           ARGS: env => name of the target environment
 
-      EXAMPLES: rake coderebels:remove_env[ldps]
-      EOH
-    when "setup_ocs"
-      <<-EOH
-          TASK: setup_ocs
-          DESC: acknowledges the owncloud server ip address
-
-          ARGS: ip => ip address of the owncloud server
-
-      EXAMPLES: rake coderebels:setup_ocs[192.168.0.100]
+      EXAMPLES: rake coderebels:remove_env[dps]
       EOH
     when "switch_env"
       <<-EOH
@@ -105,6 +96,19 @@ namespace :coderebels do
                 ip  => ip address of the target environment chef server
 
       EXAMPLES: rake coderebels:switch_env[oop,192.168.0.100]
+      EOH
+    when "setup_ocs"
+      <<-EOH
+          TASK: setup_ocs
+          DESC: acknowledges the owncloud server ip address, alias and domain
+
+          ARGS: ip      => ip address of the owncloud server
+                alias  *=> alias of the owncloud server ([ocserver])
+                domain *=> domain name of the owncloud server ([coderebels.org])
+
+      EXAMPLES: rake coderebels:setup_ocs[192.168.0.100]
+                rake coderebels:setup_ocs[192.168.0.100,your-ocserver]
+                rake coderebels:setup_ocs[192.168.0.100,ocserver,oop-coop.cc]
       EOH
     when "chefbox_updt"
       <<-EOH
