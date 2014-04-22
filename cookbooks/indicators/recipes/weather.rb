@@ -35,5 +35,6 @@ end
 
 support "weather" do
   section "indicators"
+  only_for ["ubuntu"]
 end
 

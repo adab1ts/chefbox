@@ -33,5 +33,6 @@ end
 
 support "screensaver" do
   section "indicators"
+  only_for ["ubuntu"]
 end
 
