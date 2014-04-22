@@ -28,12 +28,13 @@ namespace :coderebels do
     puts
     puts "*) Prepare your workspace the very first time:  rake coderebels:workspace[env,email,domain]"
     puts
-    puts "1) Switch to the target environment:  rake coderebels:switch_env[env,ip]"
-    puts "2) Pull and upload chefbox updates:   rake coderebels:chefbox_updt"
-    puts "3) For each node to bootstrap:"
-    puts "   3.1) Create a new node profile:    rake coderebels:create_profile[nodename,roles,recipes]"
-    puts "   3.2) Bundle a bootstrap package:   rake coderebels:bundle[user,nodename,mtype]"
-    puts "   3.3) Bootstrap the node:           rake coderebels:bootstrap[user,nodename,ip,platform,arch]"
+    puts "1) Setup the owncloud server:         rake coderebels:setup_ocs[ip]"
+    puts "2) Switch to the target environment:  rake coderebels:switch_env[env,ip]"
+    puts "3) Pull and upload chefbox updates:   rake coderebels:chefbox_updt"
+    puts "4) For each node to bootstrap:"
+    puts "   4.1) Create a new node profile:    rake coderebels:create_profile[nodename,roles,recipes]"
+    puts "   4.2) Bundle a bootstrap package:   rake coderebels:bundle[user,nodename,mtype]"
+    puts "   4.3) Bootstrap the node:           rake coderebels:bootstrap[user,nodename,ip,platform,arch]"
   end
 
 
@@ -46,7 +47,7 @@ namespace :coderebels do
       <<-EOH
          USAGE: rake coderebels:help[taskname]
 
-                taskname = { workspace | setup_env | remove_env | switch_env |
+                taskname = { workspace | setup_ocs | setup_env | remove_env | switch_env |
                              chefbox_updt | create_profile | edit_profile | update_profile |
                              bundle | bootstrap | info }
       EOH
@@ -85,6 +86,15 @@ namespace :coderebels do
           ARGS: env => name of the target environment
 
       EXAMPLES: rake coderebels:remove_env[ldps]
+      EOH
+    when "setup_ocs"
+      <<-EOH
+          TASK: setup_ocs
+          DESC: acknowledges the owncloud server ip address
+
+          ARGS: ip => ip address of the owncloud server
+
+      EXAMPLES: rake coderebels:setup_ocs[192.168.0.100]
       EOH
     when "switch_env"
       <<-EOH

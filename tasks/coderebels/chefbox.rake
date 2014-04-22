@@ -55,8 +55,34 @@ namespace :coderebels do
     end
   end
 
+  # def update_hosts_file(env, vars)
+  #   hostname   = "chefserver-#{env}"
+  #   hosts_file = "/etc/hosts"
+
+  #   host_data  = []
+  #   host_entry = nil
+
+  #   output = %x( grep -ERwne #{hostname} #{hosts_file} ).chomp
+
+  #   if output.empty?
+  #     host_data << "#192.168.0.100" << "#{hostname}.#{vars[:chef_svr_domain]}" << hostname
+  #   else
+  #     _ = output.split(":")
+
+  #     n = _.first
+  #     system("sudo", "sed", "-i", "#{n}d", hosts_file)
+
+  #     host_data = _.last.split("\s")
+  #     host_data[0] = vars[:chef_svr_ip] if vars[:chef_svr_ip]
+  #     host_data[1] = "#{hostname}.#{vars[:chef_svr_domain]}" if vars[:chef_svr_domain]
+  #   end
+
+  #   host_entry = host_data.join("\t")
+  #   system %{printf "#{host_entry}\n" | sudo tee -a #{hosts_file}}
+  # end
+
   def update_hosts_file(env, vars)
-    hostname   = "chefserver-#{env}"
+    hostname   = env == "ocs" ? "ocserver" : "chefserver-#{env}"
     hosts_file = "/etc/hosts"
 
     host_data  = []
@@ -65,7 +91,9 @@ namespace :coderebels do
     output = %x( grep -ERwne #{hostname} #{hosts_file} ).chomp
 
     if output.empty?
-      host_data << "#192.168.0.100" << "#{hostname}.#{vars[:chef_svr_domain]}" << hostname
+      ip   = env == "ocs" ? vars[:svr_ip] : "#192.168.0.100"
+      fqdn = env == "ocs" ? "#{hostname}.coderebels.org" : "#{hostname}.#{vars[:svr_domain]}"
+      host_data << ip << fqdn << hostname
     else
       _ = output.split(":")
 
@@ -73,8 +101,8 @@ namespace :coderebels do
       system("sudo", "sed", "-i", "#{n}d", hosts_file)
 
       host_data = _.last.split("\s")
-      host_data[0] = vars[:chef_svr_ip] if vars[:chef_svr_ip]
-      host_data[1] = "#{hostname}.#{vars[:chef_svr_domain]}" if vars[:chef_svr_domain]
+      host_data[0] = vars[:svr_ip] if vars[:svr_ip]
+      host_data[1] = "#{hostname}.#{vars[:svr_domain]}" if vars[:svr_domain]
     end
 
     host_entry = host_data.join("\t")
@@ -167,7 +195,7 @@ namespace :coderebels do
     update_env_vars(env_vars, args.env)
 
     # /etc/hosts
-    update_hosts_file args.env, chef_svr_domain: args.domain
+    update_hosts_file args.env, svr_domain: args.domain
   end
 
 
@@ -208,6 +236,14 @@ namespace :coderebels do
   end
 
 
+  desc "Setup owncloud server"
+  task :setup_ocs, [:ip] do |t, args|
+    raise "Must provide an IP address" unless args.ip
+
+    update_hosts_file "ocs", svr_ip: args.ip
+  end
+
+
   desc "Switch current environment"
   task :switch_env, [:env, :ip] do |t, args|
     raise "Must provide an environment and an IP address" unless (args.env and args.ip)
@@ -216,7 +252,7 @@ namespace :coderebels do
 
     if args.env == current
       update_env_vars chef_svr_ip: args.ip
-      update_hosts_file args.env, chef_svr_ip: args.ip
+      update_hosts_file args.env, svr_ip: args.ip
 
       puts "Current environment: #{current}"
     else
@@ -231,7 +267,7 @@ namespace :coderebels do
         system("sed", "-i", "1s:#{current}:#{args.env}:g", env_file)
 
         update_env_vars chef_svr_ip: args.ip
-        update_hosts_file args.env, chef_svr_ip: args.ip
+        update_hosts_file args.env, svr_ip: args.ip
 
         puts "Current environment: #{current_env}"
       else

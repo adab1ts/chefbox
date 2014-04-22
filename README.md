@@ -57,6 +57,7 @@ The following tasks ease converging new nodes
 * `coderebels:remindme`                                  - Show how to proceed to converge a new chefbox node.
 * `coderebels:remove_env[env]`                           - Remove environment directory structure.
 * `coderebels:setup_env[env,email,domain]`               - Setup the target environment.
+* `coderebels:setup_ocs[ip]`                             - Setup owncloud server.
 * `coderebels:ssh[user,nodename,ip,cmd]`                 - Establish a ssh connection with specified box.
 * `coderebels:ssh_keygen[user,nodename]`                 - Generate authentication keys to establish a ssh connection with a box.
 * `coderebels:switch_env[env,ip]`                        - Switch current environment.
