@@ -2,8 +2,7 @@
   "id": "cloud",
   "apps": [
     "dropbox",
-    "owncloud",
-    "ubuntuone"
+    "owncloud"
   ],
   "profiles": {
     "dropbox": {
@@ -35,15 +34,6 @@
           "components": [],
           "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_12.04/Release.key"
         }
-      }
-    },
-    "ubuntuone": {
-      "package": "ubuntuone-control-panel-qt",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-      "description": "Ubuntu One Installer",
-      "suggested": ["ubuntuone-client-proxy"],
-      "source": {
-        "type": "distro"
       }
     }
   }
