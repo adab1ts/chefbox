@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.5.0:
+
+* recipe/default   - do not install ubuntuone indicator anymore
+* recipe/ubuntuone - removed due to end of Ubuntu One service
+
 ## 0.4.1:
 
 * recipes/screensaver - deliver screensaver indicator support to ubuntu platform only

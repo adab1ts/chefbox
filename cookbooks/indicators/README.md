@@ -7,7 +7,6 @@ The following recipes may apply:
 - `indicators::plugandplay` - installs __udev-notify__ and suggested packages.
 - `indicators::screensaver` - installs __caffeine__ and suggested packages.
 - `indicators::touchpad`    - installs __touchpad-indicator__ and suggested packages.
-- `indicators::ubuntuone`   - installs __indicator-ubuntuone__ and suggested packages.
 - `indicators::weather`     - installs __my-weather-indicator__ and suggested packages.
 
 
