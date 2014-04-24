@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.7.2:
+
+* recipes/greeter-background - refactor greeter background download
+
 ## 0.7.1:
 
 * recipes/unsettings - deliver unsettings support to ubuntu platform only

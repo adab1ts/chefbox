@@ -33,18 +33,16 @@ if greeter
   backgrounds = data_bag_item('backgrounds', author)
   background  = backgrounds[image][resolution]
 
-  backgrounds_dir = node[:eyecandy][:backgrounds_dir]
-  background_file = "#{image}.jpg"
-  background_url  = background['url']
-
-  execute "greeter-background-download" do
-    command "wget -q -O #{backgrounds_dir}/#{background_file} #{background_url}"
-    not_if { ::File.exists? "#{backgrounds_dir}/#{background_file}" }
+  remote_file "unity_greeter_background" do
+    path "#{node[:eyecandy][:backgrounds_dir]}/#{image}.jpg"
+    source background['url']
+    checksum background['sha256']
+    backup false
   end
 
   case platform
   when "ubuntu"
-    cookbook_file "unity_greeter_background" do
+    cookbook_file "unity_greeter_background_gschema" do
       path "/usr/share/glib-2.0/schemas/10_unity_greeter_background.gschema.override"
       source "/gschemas/unity_greeter_background.gschema.override"
       mode 0644
