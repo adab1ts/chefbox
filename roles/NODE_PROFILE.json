@@ -108,8 +108,7 @@
         ],
         "cloud": [
           "dropbox",
-          "owncloud",
-          "ubuntuone"
+          "owncloud"
         ],
         "desktops": [
           "cinnamon",
@@ -164,7 +163,6 @@
           "plug&play",
           "screensaver",
           "touchpad",
-          "ubuntuone",
           "weather"
         ],
         "office": [
