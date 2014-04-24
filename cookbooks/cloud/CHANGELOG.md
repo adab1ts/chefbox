@@ -2,10 +2,15 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.5.0:
+
+* recipes/default   - do not install ubuntuone client anymore
+* recipes/ubuntuone - removed due to end of Ubuntu One service
+
 ## 0.4.0:
 
-* recipe/default  - now includes owncloud client install management
-* recipe/owncloud - manage owncloud client installation
+* recipes/default  - now includes owncloud client install management
+* recipes/owncloud - manage owncloud client installation
 
 ## 0.3.0:
 
@@ -24,12 +29,12 @@ This file is used to list changes made in each version of cloud.
 
 ## 0.2.1:
 
-* recipe/dropbox - fixes regression issue concerning dropbox profile name for mint boxes
+* recipes/dropbox - fixes regression issue concerning dropbox profile name for mint boxes
 
 ## 0.2.0:
 
-* recipe/default - now checks for section presence in box profile's apps list before proceed
-* recipe/dropbox - now extends dropbox integration to supported platforms
+* recipes/default - now checks for section presence in box profile's apps list before proceed
+* recipes/dropbox - now extends dropbox integration to supported platforms
 
 ## 0.1.0:
 

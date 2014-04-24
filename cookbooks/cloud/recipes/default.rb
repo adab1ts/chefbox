@@ -40,6 +40,5 @@ if selected
 
   include_recipe "cloud::dropbox" if selected.include?("dropbox")
   include_recipe "cloud::owncloud" if selected.include?("owncloud")
-  include_recipe "cloud::ubuntuone" if selected.include?("ubuntuone")
 end
 

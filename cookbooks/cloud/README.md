@@ -6,7 +6,6 @@ The following recipes may apply:
 - `cloud::default`   - purges unselected packages and includes recipes as nedeed.
 - `cloud::dropbox`   - installs __Dropbox integration__ and suggested packages.
 - `cloud::owncloud`  - installs __ownCloud client__ and suggested packages.
-- `cloud::ubuntuone` - installs __Ubuntu One client__ and suggested packages.
 
 
 ## Requirements
