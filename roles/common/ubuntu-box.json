@@ -5,23 +5,18 @@
   "chef_type": "role",
   "env_run_lists": {},
   "run_list": [
-    "cloud",
     "eyecandy",
     "indicators"
   ],
   "default_attributes": {
     "box": {
       "apps": {
-        "cloud": [
-          "ubuntuone"
-        ],
         "eyecandy": [
           "unsettings"
         ],
         "indicators": [
           "plug&play",
-          "screensaver",
-          "ubuntuone"
+          "screensaver"
         ]
       }
     }
