@@ -4,7 +4,6 @@
     "plug&play",
     "screensaver",
     "touchpad",
-    "ubuntuone",
     "weather"
   ],
   "profiles": {
@@ -44,18 +43,6 @@
         "data": {
           "repo_name": "atareao-atareao",
           "uri": "ppa:atareao/atareao"
-        }
-      }
-    },
-    "ubuntuone": {
-      "package": "indicator-ubuntuone",
-      "maintainer": "Roman Yepishev <roman.yepishev@ubuntu.com>",
-      "description": "Indicator for Ubuntu One synchronization service",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "rye-ubuntuone-extras",
-          "uri": "ppa:rye/ubuntuone-extras"
         }
       }
     },
