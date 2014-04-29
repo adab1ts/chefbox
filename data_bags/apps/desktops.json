@@ -6,29 +6,37 @@
   ],
   "profiles": {
     "cinnamon": {
-      "package": "cinnamon",
-      "maintainer": "Linux Mint <root@linuxmint.com>",
       "description": "Cinnamon desktop",
       "website": "http://cinnamon.linuxmint.com/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "gwendal-lebihan-dev-cinnamon-stable",
-          "uri": "ppa:gwendal-lebihan-dev/cinnamon-stable"
+      "platforms": {
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "cinnamon",
+          "maintainer": "Linux Mint <root@linuxmint.com>",
+          "meta": {
+            "repo_name": "gwendal-lebihan-dev-cinnamon-stable",
+            "uri": "ppa:gwendal-lebihan-dev/cinnamon-stable"
+          }
         }
       }
     },
     "mate": {
-      "package": "mate-core",
-      "maintainer": "",
-      "description": "",
+      "description": "Mate desktop",
       "website": "http://mate-desktop.org/",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "mate",
-          "uri": "http://packages.mate-desktop.org/repo/ubuntu",
-          "components": ["main"]
+      "platforms": {
+        "ubuntu-12.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "mate-core",
+          "maintainer": "",
+          "meta": {
+            "repo_name": "mate",
+            "uri": "http://packages.mate-desktop.org/repo/ubuntu",
+            "components": ["main"]
+          }
         }
       }
     }

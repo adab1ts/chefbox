@@ -4,82 +4,138 @@
     "backintime",
     "fogger",
     "furius",
+    "gnome-do",
     "hardinfo",
     "p7zip",
     "shutter"
   ],
   "profiles": {
     "backintime": {
-      "package": "backintime-gnome",
-      "maintainer": "BIT Team <bit-team@lists.launchpad.net>",
       "description": "Simple backup system",
       "website": "http://backintime.le-web.org/",
-      "suggested": ["backintime-notify"],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "bit-team-stable",
-          "uri": "ppa:bit-team/stable"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "backintime-gnome",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "backintime-gnome",
+          "maintainer": "BIT Team <bit-team@lists.launchpad.net>",
+          "suggested": ["backintime-notify"],
+          "meta": {
+            "repo_name": "bit-team-stable",
+            "uri": "ppa:bit-team/stable"
+          }
         }
       }
     },
     "fogger": {
-      "package": "fogger",
-      "maintainer": "Owais Lone <hello@owaislone.org>",
       "description": "Fogger lets you create sandboxed web apps that behave like regular desktop applications",
       "website": "http://launchpad.net/fogger",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "loneowais-fogger",
-          "uri": "ppa:loneowais/fogger"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "fogger",
+          "maintainer": "Owais Lone <hello@owaislone.org>",
+          "meta": {
+            "repo_name": "loneowais-fogger",
+            "uri": "ppa:loneowais/fogger"
+          }
         }
       }
     },
     "furius": {
-      "package": "furiusisomount",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "ISO, IMG, BIN, MDF and NRG image management utility",
       "website": "http://launchpad.net/furiusisomount",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "furiusisomount",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
+      }
+    },
+    "gnome-do": {
+      "description": "Quickly perform actions on your desktop",
+      "website": "http://do.cooperteam.net/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "gnome-do",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["gnome-do-plugins"]
+        }
       }
     },
     "hardinfo": {
-      "package": "hardinfo",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Displays system information",
       "website": "http://hardinfo.berlios.de/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro", "default": true },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "hardinfo",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "p7zip": {
-      "package": "p7zip-full",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "7z and 7za file archivers with high compression ratio",
       "website": "http://p7zip.sourceforge.net/",
-      "suggested": ["p7zip-rar"],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "p7zip-full",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["p7zip-rar"]
+        }
       }
     },
     "shutter": {
-      "package": "shutter",
-      "maintainer": "Mario Kemper <mario.kemper@googlemail.com>",
       "description": "Feature-rich screenshot application",
       "website": "http://shutter-project.org/",
-      "suggested": [
-        "libgoo-canvas-perl",
-        "libnet-dropbox-api-perl",
-        "libimage-exiftool-perl",
-        "libnet-dbus-glib-perl"
-      ],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "shutter-ppa",
-          "uri": "ppa:shutter/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "shutter",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["libgoo-canvas-perl", "libimage-exiftool-perl", "libnet-dbus-glib-perl"]
+        },
+        "ppa": {
+          "package": "shutter",
+          "maintainer": "Mario Kemper <mario.kemper@googlemail.com>",
+          "suggested": ["libgoo-canvas-perl", "libnet-dropbox-api-perl", "libimage-exiftool-perl", "libnet-dbus-glib-perl"],
+          "meta": {
+            "repo_name": "shutter-ppa",
+            "uri": "ppa:shutter/ppa"
+          }
         }
       }
     }

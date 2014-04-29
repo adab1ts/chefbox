@@ -8,50 +8,78 @@
   ],
   "profiles": {
     "chrome": {
-      "package": "google-chrome-stable",
-      "maintainer": "Chrome Linux Team <chromium-dev@chromium.org>",
       "description": "The web browser from Google",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "google-chrome",
-          "uri": "http://dl.google.com/linux/chrome/deb/",
-          "distribution": "",
-          "components": ["stable", "main"],
-          "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
+      "website": "http://www.google.com/intl/en/chrome/browser/",
+      "platforms": {
+        "linuxmint-13": { "source": "repo" },
+        "ubuntu-12.04": { "source": "repo" },
+        "ubuntu-14.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "google-chrome-stable",
+          "maintainer": "Chrome Linux Team <chromium-dev@chromium.org>",
+          "meta": {
+            "repo_name": "google-chrome",
+            "uri": "http://dl.google.com/linux/chrome/deb/",
+            "distribution": "",
+            "components": ["stable", "main"],
+            "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
+          }
         }
       }
     },
     "chromium": {
-      "package": "chromium-browser",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Chromium browser",
-      "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"],
-      "source": {
-        "type": "distro"
+      "website": "http://www.chromium.org/Home",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "chromium-browser",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"]
+        }
       }
     },
     "firefox": {
-      "package": "firefox",
-      "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
       "description": "Safe and easy web browser from Mozilla",
-      "source": {
-        "type": "distro"
+      "website": "http://www.mozilla.org/en-US/firefox/new/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro", "default": true },
+        "ubuntu-12.04": { "source": "distro", "default": true },
+        "ubuntu-14.04": { "source": "distro", "default": true }
+      },
+      "sources": {
+        "distro": {
+          "package": "firefox",
+          "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>"
+        }
       }
     },
     "opera": {
-      "package": "opera",
-      "maintainer": "Opera Packaging Team <packager@opera.com>",
       "description": "Fast and secure web browser and Internet suite",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "opera",
-          "uri": "http://deb.opera.com/opera/",
-          "distribution": "",
-          "components": ["stable", "non-free"],
-          "key": "30C18A2B",
-          "keyserver": "keyserver.ubuntu.com"
+      "website": "http://www.opera.com/computer/linux",
+      "platforms": {
+        "linuxmint-13": { "source": "repo" },
+        "ubuntu-12.04": { "source": "repo" },
+        "ubuntu-14.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "opera",
+          "maintainer": "Opera Packaging Team <packager@opera.com>",
+          "meta": {
+            "repo_name": "opera",
+            "uri": "http://deb.opera.com/opera/",
+            "distribution": "",
+            "components": ["stable", "non-free"],
+            "key": "30C18A2B",
+            "keyserver": "keyserver.ubuntu.com"
+          }
         }
       }
     }

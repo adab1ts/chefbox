@@ -7,34 +7,56 @@
   ],
   "profiles": {
     "antivirus": {
-      "package": "clamtk",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "graphical front-end for ClamAV",
-      "suggested": ["cabextract", "libclamunrar6"],
-      "source": {
-        "type": "distro"
+      "website": "http://code.google.com/p/clamtk/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "clamtk",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["cabextract", "libclamunrar6"]
+        }
       }
     },
     "firewall": {
-      "package": "gufw",
-      "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>",
       "description": "graphical user interface for ufw",
-      "source": {
-        "type": "distro"
+      "website": "http://gufw.org/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro", "default": true },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "gufw",
+          "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>"
+        }
       }
     },
     "tracking": {
-      "package": "prey",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "utility for tracking stolen computers",
       "website": "http://preyproject.com/",
-      "suggested": ["traceroute"],
-      "dependencies": ["mpg123", "scrot", "streamer"],
-      "source": {
-        "type": "deb",
-        "data": {
-          "all": {
-            "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "deb" },
+        "ubuntu-14.04": { "source": "deb" }
+      },
+      "sources": {
+        "distro": {
+          "package": "prey",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "deb": {
+          "package": "prey",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+          "suggested": ["traceroute"],
+          "dependencies": ["mpg123", "scrot", "streamer"],
+          "meta": {
+            "*": {
               "file_name": "prey_0.6.2-ubuntu2_all.deb",
               "uri": "https://ocserver/public.php?service=files&t=1221f9dde8e08fef9c8a16642f430b52&download",
               "sha256": "463b706cdf8e49d999dc1eb0d0cbb42c81fb03fe13f4dcf653aee7e184d588f9"

@@ -10,76 +10,116 @@
   ],
   "profiles": {
     "lastfm": {
-      "package": "lastfm-scrobbler",
-      "maintainer": "Michael Coffey <michaelc@last.fm>",
       "description": "music player for Last.fm personalized radio",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "lastfm",
-          "uri": "http://apt.last.fm/debian",
-          "components": ["main"],
-          "key": "http://apt.last.fm/last.fm.repo.gpg"
+      "website": "http://www.last.fm/",
+      "platforms": {
+        "linuxmint-13": { "source": "repo" },
+        "ubuntu-12.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "lastfm-scrobbler",
+          "maintainer": "Michael Coffey <michaelc@last.fm>",
+          "meta": {
+            "repo_name": "lastfm",
+            "uri": "http://apt.last.fm/debian",
+            "components": ["main"],
+            "key": "http://apt.last.fm/last.fm.repo.gpg"
+          }
         }
       }
     },
     "nuvola": {
-      "package": "nuvolaplayer",
-      "maintainer": "Jiří Janoušek <janousek.jiri@gmail.com>",
       "description": "cloud music integration for Linux desktop",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "nuvola-player-builders-stable",
-          "uri": "ppa:nuvola-player-builders/stable"
+      "website": "http://nuvolaplayer.fenryxo.cz/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "nuvolaplayer",
+          "maintainer": "Jiří Janoušek <janousek.jiri@gmail.com>",
+          "meta": {
+            "repo_name": "nuvola-player-builders-stable",
+            "uri": "ppa:nuvola-player-builders/stable"
+          }
         }
       }
     },
     "rdio": {
-      "package": "rdio",
-      "maintainer": "Scott Ringwelski <sgringwe@mtu.edu>",
       "description": "A simple native implementation for Rdio music services",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "sgringwe-rdio",
-          "uri": "ppa:sgringwe/rdio"
+      "website": "http://www.rdio.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "rdio",
+          "maintainer": "Scott Ringwelski <sgringwe@mtu.edu>",
+          "meta": {
+            "repo_name": "sgringwe-rdio",
+            "uri": "ppa:sgringwe/rdio"
+          }
         }
       }
     },
     "rhythmbox": {
-      "package": "rhythmbox",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "music player and organizer for GNOME",
-      "source": {
-        "type": "distro"
+      "website": "http://wiki.gnome.org/Apps/Rhythmbox",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro", "default": true },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "rhythmbox",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "spotify": {
-      "package": "spotify-client",
-      "maintainer": "Spotify <libspotify@spotify.com>",
       "description": "Spotify desktop client",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "spotify",
-          "uri": "http://repository.spotify.com",
-          "distribution": "",
-          "components": ["stable", "non-free"],
-          "key": "94558F59",
-          "keyserver": "keyserver.ubuntu.com"
+      "website": "http://www.spotify.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "repo" },
+        "ubuntu-12.04": { "source": "repo" },
+        "ubuntu-14.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "spotify-client",
+          "maintainer": "Spotify <libspotify@spotify.com>",
+          "meta": {
+            "repo_name": "spotify",
+            "uri": "http://repository.spotify.com",
+            "distribution": "",
+            "components": ["stable", "non-free"],
+            "key": "94558F59",
+            "keyserver": "keyserver.ubuntu.com"
+          }
         }
       }
     },
     "tomahawk": {
-      "package": "tomahawk",
-      "maintainer": "Paulo Dias <paulo.miguel.dias@gmail.com>",
       "description": "Social media player",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "tomahawk-ppa",
-          "uri": "ppa:tomahawk/ppa"
+      "website": "http://www.tomahawk-player.org/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "tomahawk",
+          "maintainer": "Paulo Dias <paulo.miguel.dias@gmail.com>",
+          "meta": {
+            "repo_name": "tomahawk-ppa",
+            "uri": "ppa:tomahawk/ppa"
+          }
         }
       }
     }

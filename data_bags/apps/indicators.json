@@ -8,53 +8,77 @@
   ],
   "profiles": {
     "plug&play": {
-      "package": "udev-notify",
-      "maintainer": "USU Team <lfu.project@gmail.com>",
       "description": "Display notifications about newly plugged hardware",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "udev-notify",
-          "uri": "http://download.learnfree.eu/repository/skss / #SKSS",
-          "distribution": "",
-          "components": [],
-          "key": "http://download.learnfree.eu/repository/skss/repo.pub.asc"
+      "website": "http://udev-notify.learnfree.eu/",
+      "platforms": {
+        "ubuntu-12.04": { "source": "repo" },
+        "ubuntu-14.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "udev-notify",
+          "maintainer": "USU Team <lfu.project@gmail.com>",
+          "meta": {
+            "repo_name": "udev-notify",
+            "uri": "http://download.learnfree.eu/repository/skss / #SKSS",
+            "distribution": "",
+            "components": [],
+            "key": "http://download.learnfree.eu/repository/skss/repo.pub.asc"
+          }
         }
       }
     },
     "screensaver": {
-      "package": "caffeine",
-      "maintainer": "Isaiah Heyer <freshapplepy@gmail.com>",
       "description": "Caffeine",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "caffeine-developers-ppa",
-          "uri": "ppa:caffeine-developers/ppa"
+      "website": "http://launchpad.net/caffeine",
+      "platforms": {
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "caffeine",
+          "maintainer": "Isaiah Heyer <freshapplepy@gmail.com>",
+          "meta": {
+            "repo_name": "caffeine-developers-ppa",
+            "uri": "ppa:caffeine-developers/ppa"
+          }
         }
       }
     },
     "touchpad": {
-      "package": "touchpad-indicator",
-      "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
       "description": "An indicator for the touchpad",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "atareao-atareao",
-          "uri": "ppa:atareao/atareao"
+      "website": "http://launchpad.net/~atareao/+archive/atareao",
+      "platforms": {
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "touchpad-indicator",
+          "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
+          "meta": {
+            "repo_name": "atareao-atareao",
+            "uri": "ppa:atareao/atareao"
+          }
         }
       }
     },
     "weather": {
-      "package": "my-weather-indicator",
-      "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
       "description": "An indicator for weather",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "atareao-atareao",
-          "uri": "ppa:atareao/atareao"
+      "website": "http://launchpad.net/~atareao/+archive/atareao",
+      "platforms": {
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "my-weather-indicator",
+          "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
+          "meta": {
+            "repo_name": "atareao-atareao",
+            "uri": "ppa:atareao/atareao"
+          }
         }
       }
     }

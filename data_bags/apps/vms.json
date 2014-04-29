@@ -5,17 +5,27 @@
   ],
   "profiles": {
     "virtualbox": {
-      "package": "virtualbox-4.3",
-      "maintainer": "Oracle Corporation <info@virtualbox.org>",
       "description": "Oracle VM VirtualBox",
       "website": "http://www.virtualbox.org/",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "virtualbox",
-          "uri": "http://download.virtualbox.org/virtualbox/debian",
-          "components": ["contrib"],
-          "key": "http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"
+      "platforms": {
+        "linuxmint-13": { "source": "repo" },
+        "ubuntu-12.04": { "source": "repo" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "virtualbox-qt",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "repo": {
+          "package": "virtualbox-4.3",
+          "maintainer": "Oracle Corporation <info@virtualbox.org>",
+          "meta": {
+            "repo_name": "virtualbox",
+            "uri": "http://download.virtualbox.org/virtualbox/debian",
+            "components": ["contrib"],
+            "key": "http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"
+          }
         }
       }
     }

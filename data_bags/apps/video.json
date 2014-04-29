@@ -10,67 +10,108 @@
     "ogmrip",
     "openshot",
     "recmydesk",
+    "ssr",
     "vlc"
   ],
   "profiles": {
     "bombonodvd": {
-      "package": "bombono-dvd",
-      "maintainer": "Alessio Treglia <quadrispro@ubuntu.com>",
       "description": "DVD authoring program with nice and clean GUI",
       "website": "http://www.bombono.org/cgi-bin/wiki/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "bombono-dvd",
+          "maintainer": "Alessio Treglia <quadrispro@ubuntu.com>"
+        }
       }
     },
     "dvdstyler": {
-      "package": "dvdstyler",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Cross platform DVD Authoring System for Video DVD Production",
       "website": "http://www.dvdstyler.org/en/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "dvdstyler-maintainers-ppa",
-          "uri": "ppa:dvdstyler-maintainers/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "dvdstyler",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "dvdstyler",
+          "maintainer": "Fabrice Coutadeur <>",
+          "meta": {
+            "repo_name": "dvdstyler-maintainers-ppa",
+            "uri": "ppa:dvdstyler-maintainers/ppa"
+          }
         }
       }
     },
     "handbrake": {
-      "package": "handbrake-gtk",
-      "maintainer": "John Stebbins <jstebbins.hb@gmail.com>",
       "description": "Versatile DVD ripper and video transcoder",
       "website": "http://handbrake.fr/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "stebbins-handbrake-releases",
-          "uri": "ppa:stebbins/handbrake-releases"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "handbrake",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "handbrake-gtk",
+          "maintainer": "John Stebbins <jstebbins.hb@gmail.com>",
+          "meta": {
+            "repo_name": "stebbins-handbrake-releases",
+            "uri": "ppa:stebbins/handbrake-releases"
+          }
         }
       }
     },
     "miro": {
-      "package": "miro",
-      "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
       "description": "GTK+ based media player",
       "website": "http://www.getmiro.com/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "pcf-miro-releases",
-          "uri": "ppa:pcf/miro-releases"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "miro",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "miro",
+          "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
+          "meta": {
+            "repo_name": "pcf-miro-releases",
+            "uri": "ppa:pcf/miro-releases"
+          }
         }
       }
     },
     "mmc": {
-      "package": "mmc",
-      "maintainer": "miksoft <mmc@miksoft.net>",
       "description": "Tool for converting desktop and mobile devices video and audio formats",
       "website": "http://www.miksoft.net/mobileMediaConverter.php",
-      "dependencies": ["libavcodec-extra-53", "liblzo2-2", "mencoder", "ffmpeg"],
-      "source": {
-        "type": "deb",
-        "data": {
-          "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "deb" },
+        "ubuntu-12.04": { "source": "deb" },
+        "ubuntu-14.04": { "source": "deb" }
+      },
+      "sources": {
+        "deb": {
+          "package": "mmc",
+          "maintainer": "miksoft <mmc@miksoft.net>",
+          "dependencies": ["libavcodec-extra-53", "liblzo2-2", "mencoder", "ffmpeg"],
+          "meta": {
             "i686": {
               "file_name": "mmc_1.8.4_i386.deb",
               "uri": "https://ocserver/public.php?service=files&t=f8c2a2c5db0200b7a61c73fb97ab315e&download",
@@ -86,68 +127,121 @@
       }
     },
     "mvc": {
-      "package": "mirovideoconverter",
-      "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
       "description": "Super simple video transcoder",
       "website": "http://www.mirovideoconverter.com/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "pcf-miro-releases",
-          "uri": "ppa:pcf/miro-releases"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "mirovideoconverter",
+          "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
+          "meta": {
+            "repo_name": "pcf-miro-releases",
+            "uri": "ppa:pcf/miro-releases"
+          }
         }
       }
     },
     "ogmrip": {
-      "package": "ogmrip",
-      "maintainer": "GetDeb Package Ninjas <package.ninjas@getdeb.net>",
       "description": "Application for ripping and encoding DVD",
       "website": "http://ogmrip.sourceforge.net/en/index.html",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "getdeb",
-          "uri": "http://archive.getdeb.net/ubuntu",
-          "distribution": "precise-getdeb",
-          "components": ["apps"],
-          "key": "http://archive.getdeb.net/getdeb-archive.key"
+      "platforms": {
+        "linuxmint-13": { "source": "repo" },
+        "ubuntu-12.04": { "source": "repo" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "ogmrip",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "repo": {
+          "package": "ogmrip",
+          "maintainer": "GetDeb Package Ninjas <package.ninjas@getdeb.net>",
+          "meta": {
+            "repo_name": "getdeb",
+            "uri": "http://archive.getdeb.net/ubuntu",
+            "distribution": "precise-getdeb",
+            "components": ["apps"],
+            "key": "http://archive.getdeb.net/getdeb-archive.key"
+          }
         }
       }
     },
     "openshot": {
-      "package": "openshot",
-      "maintainer": "Jonathan Thomas <Jonathan.Oomph@gmail.com>",
       "description": "Create and edit videos and movies",
       "website": "http://www.openshot.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "openshot_developers-ppa",
-          "uri": "ppa:openshot.developers/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "openshot",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "openshot",
+          "maintainer": "Jonathan Thomas <Jonathan.Oomph@gmail.com>",
+          "meta": {
+            "repo_name": "openshot_developers-ppa",
+            "uri": "ppa:openshot.developers/ppa"
+          }
         }
       }
     },
     "recmydesk": {
-      "package": "recordmydesktop",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Captures audio-video data of a Linux desktop session",
       "website": "http://recordmydesktop.sourceforge.net/",
-      "suggested": [
-        "gtk-recordmydesktop",
-        "python-appindicator"
-      ],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "gtk-recordmydesktop",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["python-appindicator"]
+        }
+      }
+    },
+    "ssr": {
+      "description": "A feature-rich screen recorder that supports X11 and OpenGL",
+      "website": "http://www.maartenbaert.be/simplescreenrecorder/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "simplescreenrecorder",
+          "maintainer": "Maarten Baert <>",
+          "meta": {
+            "repo_name": "maarten-baertr-simplescreenrecorder",
+            "uri": "ppa:maarten-baert/simplescreenrecorder"
+          }
+        }
       }
     },
     "vlc": {
-      "package": "vlc",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "multimedia player and streamer",
       "website": "http://www.videolan.org/vlc/",
-      "suggested": ["phonon-backend-vlc"],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro", "default": true },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "vlc",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["phonon-backend-vlc"]
+        }
       }
     }
   }

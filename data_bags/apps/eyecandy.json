@@ -1,89 +1,165 @@
 {
   "id": "eyecandy",
   "apps": [
-    "faenza-icons",
-    "faience-icons",
+    "faba-icons",
     "moka-icons",
+    "moka-theme",
     "nitrux-icons",
-    "numix-icons",
+    "numix-circle-icons",
+    "numix-shine-icons",
+    "orchis-theme",
     "unsettings"
   ],
   "profiles": {
-    "faenza-icons": {
-      "package": "faenza-icon-theme",
-      "maintainer": "Matthieu James <matthieu.james@gmail.com>",
-      "description": "Faenza Icon Theme",
-      "website": "http://launchpad.net/~tiheum/+archive/equinox",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "tiheum-equinox",
-          "uri": "ppa:tiheum/equinox"
-        }
-      }
-    },
-    "faience-icons": {
-      "package": "faience-icon-theme",
-      "maintainer": "Matthieu James <matthieu.james@gmail.com>",
-      "description": "Faience Icon Theme",
-      "website": "http://launchpad.net/~tiheum/+archive/equinox",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "tiheum-equinox",
-          "uri": "ppa:tiheum/equinox"
+    "faba-icons": {
+      "description": "Faba Icon Theme",
+      "website": "http://mokaproject.com/faba-icon-theme/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "faba-icon-theme",
+          "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
+          "suggested": ["faba-icon-theme-symbolic", "faba-mono-icons", "faba-colors"],
+          "meta": {
+            "repo_name": "moka-faba-icon-theme",
+            "uri": "ppa:moka/faba-icon-theme"
+          }
         }
       }
     },
     "moka-icons": {
-      "package": "moka-icon-theme",
-      "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
       "description": "Moka Icon Theme",
       "website": "http://mokaproject.com/moka-icon-theme/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "moka-moka-icon-theme",
-          "uri": "ppa:moka/moka-icon-theme"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "moka-icon-theme",
+          "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
+          "meta": {
+            "repo_name": "moka-moka-icon-theme",
+            "uri": "ppa:moka/moka-icon-theme"
+          }
+        }
+      }
+    },
+    "moka-theme": {
+      "description": "Moka GTK Theme",
+      "website": "http://mokaproject.com/moka-gtk-theme/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "moka-gtk-theme",
+          "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
+          "meta": {
+            "repo_name": "moka-moka-gtk-theme",
+            "uri": "ppa:moka/moka-gtk-theme"
+          }
         }
       }
     },
     "nitrux-icons": {
-      "package": "nitrux-umd",
-      "maintainer": "Georgi Karavasilev <motorslav@gmail.com>",
       "description": "NITRUX-umd",
       "website": "http://launchpad.net/~kokoto-java/+archive/omgubuntu-stuff",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kokoto-java-omgubuntu-stuff",
-          "uri": "ppa:kokoto-java/omgubuntu-stuff"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "nitrux-umd",
+          "maintainer": "Georgi Karavasilev <motorslav@gmail.com>",
+          "meta": {
+            "repo_name": "kokoto-java-omgubuntu-stuff",
+            "uri": "ppa:kokoto-java/omgubuntu-stuff"
+          }
         }
       }
     },
-    "numix-icons": {
-      "package": "numix-icon-theme",
-      "maintainer": "Satyajit Sahoo <satyajit.happy@gmail.com>",
-      "description": "Numix icon theme",
+    "numix-circle-icons": {
+      "description": "Numix Circle Icons",
       "website": "http://numixproject.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "numix-ppa",
-          "uri": "ppa:numix/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "numix-icon-theme-circle",
+          "maintainer": "Satyajit Sahoo <satyajit.happy@gmail.com>",
+          "suggested": ["numix-icon-theme"],
+          "meta": {
+            "repo_name": "numix-ppa",
+            "uri": "ppa:numix/ppa"
+          }
+        }
+      }
+    },
+    "numix-shine-icons": {
+      "description": "Numix Shine Icons",
+      "website": "http://numixproject.org/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "numix-icon-theme-shine",
+          "maintainer": "Satyajit Sahoo <satyajit.happy@gmail.com>",
+          "suggested": ["numix-icon-theme"],
+          "meta": {
+            "repo_name": "numix-ppa",
+            "uri": "ppa:numix/ppa"
+          }
+        }
+      }
+    },
+    "orchis-theme": {
+      "description": "Orchis GTK Theme",
+      "website": "http://mokaproject.com/orchis-gtk-theme/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "orchis-gtk-theme",
+          "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
+          "meta": {
+            "repo_name": "moka-orchis-gtk-theme",
+            "uri": "ppa:moka/orchis-gtk-theme"
+          }
         }
       }
     },
     "unsettings": {
-      "package": "unsettings",
-      "maintainer": "Florian Diesch <devel@florian-diesch.de>",
       "description": "graphical configuration program for the Unity desktop environment",
       "website": "http://www.florian-diesch.de/software/unsettings/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "diesch-testing",
-          "uri": "ppa:diesch/testing"
+      "platforms": {
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "unsettings",
+          "maintainer": "Florian Diesch <devel@florian-diesch.de>",
+          "meta": {
+            "repo_name": "diesch-testing",
+            "uri": "ppa:diesch/testing"
+          }
         }
       }
     }

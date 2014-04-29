@@ -2,50 +2,69 @@
   "id": "video_pro",
   "apps": [
     "avidemux",
-    "cinelerra"
+    "cinelerra",
+    "shotcut"
   ],
   "profiles": {
     "avidemux": {
-      "package": "avidemux",
-      "maintainer": "Alessio Treglia <quadrispro@ubuntu.com>",
       "description": "Free video editor",
       "website": "http://avidemux.sourceforge.net/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "avidemux",
+          "maintainer": "Alessio Treglia <quadrispro@ubuntu.com>"
+        }
       }
     },
     "cinelerra": {
-      "package": "cinelerra-cv",
-      "maintainer": "Nicola Ferralis <feranick@hotmail.com>",
       "description": "An audio/video authoring tool",
       "website": "http://cinelerra-cv.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "cinelerra-ppa-ppa",
-          "uri": "ppa:cinelerra-ppa/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "cinelerra-cv",
+          "maintainer": "Nicola Ferralis <feranick@hotmail.com>",
+          "meta": {
+            "repo_name": "cinelerra-ppa-ppa",
+            "uri": "ppa:cinelerra-ppa/ppa"
+          }
         }
       }
     },
     "lwks": {
-      "package": "lwks",
-      "maintainer": "Lightworks <http://www.lwks.com/>",
       "description": "Lightworks is the most advanced free video-editing software available",
       "website": "http://www.lwks.com/",
-      "source": {
-        "type": "deb"
+      "platforms": {},
+      "sources": {
+        "deb": {
+          "package": "lwks",
+          "maintainer": "Lightworks <http://www.lwks.com/>"
+        }
       }
     },
     "shotcut": {
-      "package": "shotcut",
-      "maintainer": "Dan Dennedy <http://www.dennedy.org>",
       "description": "Shotcut is a free, open source, cross-platform video editor",
       "website": "http://www.shotcut.org/",
-      "source": {
-        "type": "bin",
-        "ztype": "tbz",
-        "data": {
-          "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "bin" },
+        "ubuntu-12.04": { "source": "bin" },
+        "ubuntu-14.04": { "source": "bin" }
+      },
+      "sources": {
+        "bin": {
+          "ztype": "tbz",
+          "package": "shotcut",
+          "maintainer": "Dan Dennedy <http://www.dennedy.org>",
+          "meta": {
             "i686": {
               "file_name": "shotcut-debian7-x86-140420.tar.bz2",
               "uri": "https://ocserver/public.php?service=files&t=f57bfb432807b2a22554b53e67f7c579&download",

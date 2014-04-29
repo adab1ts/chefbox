@@ -9,64 +9,88 @@
   ],
   "profiles": {
     "bcm43": {
-      "package": "b43-fwcutter",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Utility for extracting Broadcom 43xx firmware",
-      "replaced": ["bcmwl-kernel-source"],
-      "suggested": ["firmware-b43-installer"],
-      "source": {
-        "type": "distro"
+      "website": "http://wireless.kernel.org/en/users/Drivers/b43",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "b43-fwcutter",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "replaced": ["bcmwl-kernel-source"],
+          "suggested": ["firmware-b43-installer"]
+        }
       }
     },
     "dkms": {
-      "package": "dkms",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Dynamic Kernel Module Support Framework",
-      "source": {
-        "type": "distro"
+      "website": "http://linux.dell.com/dkms/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "dkms",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "intel_graphics": {
-      "package": "intel_graphics",
-      "maintainer": "Rodrigo Vivi <rodrigo.vivi@intel.com>",
       "description": "Intel graphics drivers update utility",
-      "source": {
-        "type": "deb",
-        "data": {
-          "raring": {
-            "i686": {
-              "file_name": "intel-linux-graphics-installer_1.0.2-0intel3_i386.deb",
-              "uri": "https://download.01.org/gfx/ubuntu/13.04/main/pool/13.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0.2-0intel3_i386.deb",
-              "sha256": "896305d0054ecb1f1d00bf1ba05693f256acfb54cce8ac9a7f59edf20fa56eb7"
-            },
-            "x86_64": {
-              "file_name": "intel-linux-graphics-installer_1.0.2-0intel3_amd64.deb",
-              "uri": "https://download.01.org/gfx/ubuntu/13.04/main/pool/13.04/i/intel-linux-graphics-installer/intel-linux-graphics-installer_1.0.2-0intel3_amd64.deb",
-              "sha256": "61d6a76540a20002ec92d9877e4dfd18877c46ae7634c3da47d4f5fd4e9443c9"
+      "website": "http://01.org/linuxgraphics/",
+      "platforms": {},
+      "sources": {
+        "deb": {
+          "package": "intel_graphics",
+          "maintainer": "Rodrigo Vivi <rodrigo.vivi@intel.com>",
+          "meta": {
+            "*": {
+              "file_name": "",
+              "uri": "",
+              "sha256": ""
             }
           }
         }
       }
     },
     "preload": {
-      "package": "preload",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "adaptive readahead daemon",
-      "source": {
-        "type": "distro"
+      "website": "http://sourceforge.net/projects/preload",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "preload",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "tlp": {
-      "package": "tlp",
-      "maintainer": "Thomas Koch <linrunner@gmx.net>",
       "description": "Save battery power on laptops",
-      "replaced": ["laptop-mode-tools"],
-      "suggested": ["tlp-rdw", "smartmontools", "ethtool", "tp-smapi-dkms", "acpi-call-tools"],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "linrunner-tlp",
-          "uri": "ppa:linrunner/tlp"
+      "website": "http://linrunner.de/en/tlp/tlp.html",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "tlp",
+          "maintainer": "Thomas Koch <linrunner@gmx.net>",
+          "replaced": ["laptop-mode-tools"],
+          "suggested": ["tlp-rdw", "smartmontools", "ethtool", "tp-smapi-dkms", "acpi-call-tools"],
+          "meta": {
+            "repo_name": "linrunner-tlp",
+            "uri": "ppa:linrunner/tlp"
+          }
         }
       }
     }

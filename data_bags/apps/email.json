@@ -6,27 +6,43 @@
   ],
   "profiles": {
     "geary": {
-      "package": "geary",
-      "maintainer": "Jim Nelson <jim@yorba.org>",
       "description": "Email client",
       "website": "http://www.yorba.org/projects/geary/",
-      "comment": "yorba official: ppa:yorba/ppa (12.10+)",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "tombeckmann-geary",
-          "uri": "ppa:tombeckmann/geary"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "geary",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "comment": "yorba official: ppa:yorba/ppa (12.10+)",
+          "package": "geary",
+          "maintainer": "Jim Nelson <jim@yorba.org>",
+          "meta": {
+            "repo_name": "tombeckmann-geary",
+            "uri": "ppa:tombeckmann/geary",
+          }
         }
       }
     },
     "thunderbird": {
-      "package": "thunderbird",
-      "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
       "description": "Email, RSS and newsgroup client with integrated spam filter",
       "website": "http://www.mozilla.org/en-US/thunderbird/",
-      "suggested": ["thunderbird-gnome-support"],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro", "default": true },
+        "ubuntu-12.04": { "source": "distro", "default": true },
+        "ubuntu-14.04": { "source": "distro", "default": true }
+      },
+      "sources": {
+        "distro": {
+          "package": "thunderbird",
+          "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
+          "suggested": ["thunderbird-gnome-support"]
+        }
       }
     }
   }

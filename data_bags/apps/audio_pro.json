@@ -19,22 +19,25 @@
   ],
   "profiles": {
     "airtime": {
-      "package": "airtime-easy-setup",
-      "maintainer": "Daniel James <daniel@64studio.com>",
       "description": "Metapackage for the Airtime broadcast server",
       "website": "http://www.sourcefabric.org/en/airtime/",
-      "dependencies": [
-        "debconf-utils", "icecast2", "postgresql", "python-virtualenv", "apache2",
-        "ecasound", "flac", "libapache2-mod-php5", "libcamomile-ocaml-data", "monit",
-        "multitail", "odbc-postgresql", "php5-cli", "php5-curl", "php-db",
-        "php5-gd", "php-pear", "php5-pgsql", "pwgen", "rabbitmq-server",
-        "vorbis-tools", "libzend-framework-php"
-      ],
-      "source": {
-        "type": "deb",
-        "data": {
-          "all": {
-            "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "deb" },
+        "ubuntu-12.04": { "source": "deb" }
+      },
+      "sources": {
+        "deb": {
+          "package": "airtime-easy-setup",
+          "maintainer": "Daniel James <daniel@64studio.com>",
+          "dependencies": [
+            "debconf-utils", "icecast2", "postgresql", "python-virtualenv", "apache2",
+            "ecasound", "flac", "libapache2-mod-php5", "libcamomile-ocaml-data", "monit",
+            "multitail", "odbc-postgresql", "php5-cli", "php5-curl", "php-db",
+            "php5-gd", "php-pear", "php5-pgsql", "pwgen", "rabbitmq-server",
+            "vorbis-tools", "libzend-framework-php"
+          ],
+          "meta": {
+            "*": {
               "file_name": "airtime-easy-setup.deb",
               "uri": "https://ocserver/public.php?service=files&t=640e3571e01d8519a77e46fbf0bf140c&download",
               "sha256": "b37e4a98cb6208eba52c468d333b8f37acaa0bfa9f4b788d418a42aeebd850e5"
@@ -44,160 +47,208 @@
       }
     },
     "ardour": {
-      "package": "ardour3",
-      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "Digital audio workstation (graphical gtk2 interface)",
       "website": "http://ardour.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "ardour",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "audacity": {
-      "package": "audacity",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Fast, cross-platform audio editor",
       "website": "http://audacity.sourceforge.net/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "audacity",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "denemo": {
-      "package": "denemo",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "GTK+ front end to GNU Lilypond",
       "website": "http://www.denemo.org/",
-      "suggested": ["lilypond"],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "denemo",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["lilypond"]
+        }
       }
     },
     "guitarix": {
-      "package": "guitarix",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Rock guitar amplifier for Jack",
       "website": "http://guitarix.sourceforge.net/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "guitarix",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "hydrogen": {
-      "package": "hydrogen",
-      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "Advanced drum machine/step sequencer",
       "website": "http://hydrogen-music.org/hcms/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "hydrogen",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "idjc": {
-      "package": "idjc",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Graphical shoutcast/icecast client",
       "website": "http://idjc.sourceforge.net/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "idjc",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "linuxband": {
-      "package": "linuxband",
-      "maintainer": "Willem van Engen <debrepo@willem.engen.nl>",
       "description": "Graphical user-interface for MMA (Musical MIDI Accompaniment)",
       "website": "http://linuxband.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "wvengen-music",
-          "uri": "ppa:wvengen/music"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "linuxband",
+          "maintainer": "Willem van Engen <debrepo@willem.engen.nl>",
+          "meta": {
+            "repo_name": "wvengen-music",
+            "uri": "ppa:wvengen/music"
+          }
         }
       }
     },
     "lmms": {
-      "package": "lmms",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Linux Multimedia Studio",
       "website": "http://lmms.sourceforge.net/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "lmms",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "comment": "WARNING: installs wine"
         }
       }
     },
     "mixxx": {
-      "package": "mixxx",
-      "maintainer": "Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>",
       "description": "Digital DJ interface",
       "website": "http://mixxx.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "mixxx-mixxx",
-          "uri": "ppa:mixxx/mixxx"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "mixxx",
+          "maintainer": "Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>",
+          "meta": {
+            "repo_name": "mixxx-mixxx",
+            "uri": "ppa:mixxx/mixxx"
+          }
         }
       }
     },
     "muse": {
-      "package": "muse",
-      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "Qt4-based audio/MIDI sequencer",
       "website": "http://muse-sequencer.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "muse",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "musescore": {
-      "package": "musescore",
-      "maintainer": "Toby Smithe <tsmithe@ubuntu.com>",
       "description": "Full featured WYSIWIG score editor",
       "website": "http://musescore.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "musescore",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "rosegarden": {
-      "package": "rosegarden",
-      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "Music editor and MIDI/audio sequencer",
       "website": "http://www.rosegardenmusic.com/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "rosegarden",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "transcribe": {
-      "package": "transcribe",
-      "maintainer": "Seventh String Software <http://www.seventhstring.com>",
       "description": "World's leading software for helping musicians to work out music from recordings",
       "website": "http://www.seventhstring.com/xscribe/overview.html",
-      "source": {
-        "type": "bin",
-        "ztype": "tgz",
-        "data": {
-          "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "bin" },
+        "ubuntu-12.04": { "source": "bin" },
+        "ubuntu-14.04": { "source": "bin" }
+      },
+      "sources": {
+        "bin": {
+          "ztype": "tgz",
+          "package": "transcribe",
+          "maintainer": "Seventh String Software <http://www.seventhstring.com>",
+          "meta": {
             "i686": {
               "file_name": "xscsetup.tar.gz",
               "uri": "https://ocserver/public.php?service=files&t=c5d78606be1ad866afb0f92e2bb03b8c&download",
@@ -215,25 +266,33 @@
       }
     },
     "traverso": {
-      "package": "traverso",
-      "maintainer": "Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>",
       "description": "Multitrack audio recorder and editor",
       "website": "http://traverso-daw.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "kxstudio-team-ppa",
-          "uri": "ppa:kxstudio-team/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "traverso",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },
     "tuxguitar": {
-      "package": "tuxguitar",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Multitrack guitar tablature editor and player",
       "website": "http://www.tuxguitar.com.ar/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "tuxguitar",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     }
   }

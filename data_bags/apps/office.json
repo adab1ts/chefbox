@@ -6,45 +6,63 @@
     "masterpdf",
     "nitro",
     "pdfshuffler",
+    "springseed",
     "taskcoach"
   ],
   "profiles": {
     "fontmanager": {
-      "package": "font-manager",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Font management application for the GNOME desktop",
       "website": "https://code.google.com/p/font-manager/",
-      "suggested": ["python-reportlab"],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "font-manager",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["python-reportlab"]
+        }
       }
     },
     "libreoffice": {
-      "package": "libreoffice",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Office productivity suite",
       "website": "http://www.libreoffice.org/",
-      "suggested": [
-        "browser-plugin-libreoffice",
-        "libreoffice-style-galaxy"
-      ],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "libreoffice-libreoffice-4-1",
-          "uri": "ppa:libreoffice/libreoffice-4-1"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa", "default": true },
+        "ubuntu-12.04": { "source": "ppa", "default": true },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "libreoffice",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy", "libreoffice-style-sifr"],
+        },
+        "ppa": {
+          "package": "libreoffice",
+          "maintainer": "Rico Tzschichholz <>",
+          "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy"],
+          "meta": {
+            "repo_name": "libreoffice-libreoffice-4-1",
+            "uri": "ppa:libreoffice/libreoffice-4-1"
+          }
         }
       }
     },
     "masterpdf": {
-      "package": "master-pdf-editor",
-      "maintainer": "Cleto Martín <cleto.martin@gmail.com>",
       "description": "Complete solution for editing PDF and XPS files",
       "website": "http://code-industry.net/pdfeditor.php",
-      "source": {
-        "type": "deb",
-        "data": {
-          "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "deb" },
+        "ubuntu-12.04": { "source": "deb" },
+        "ubuntu-14.04": { "source": "deb" }
+      },
+      "sources": {
+        "deb": {
+          "package": "master-pdf-editor",
+          "maintainer": "Cleto Martín <cleto.martin@gmail.com>",
+          "meta": {
             "i686": {
               "file_name": "master-pdf-editor_1.9.25_i386.deb",
               "uri": "https://ocserver/public.php?service=files&t=52a1e08d1938b188d0c22ab5292c429f&download",
@@ -60,36 +78,53 @@
       }
     },
     "nitro": {
-      "package": "nitrotasks",
-      "maintainer": "cosindo <jono@caffeinatedco.de>",
       "description": "Get stuff done with Nitro",
       "website": "http://nitrotasks.com/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "cooperjona-nitrotasks",
-          "uri": "ppa:cooperjona/nitrotasks"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "nitrotasks",
+          "maintainer": "cosindo <jono@caffeinatedco.de>",
+          "meta": {
+            "repo_name": "cooperjona-nitrotasks",
+            "uri": "ppa:cooperjona/nitrotasks"
+          }
         }
       }
     },
     "pdfshuffler": {
-      "package": "pdfshuffler",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Merge, split and re-arrange pages from PDF documents",
       "website": "http://pdfshuffler.sourceforge.net/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "pdfshuffler",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "springseed": {
-      "package": "springseed",
-      "maintainer": "Micheal Harker <me@michealharker.com>",
       "description": "The new way to take notes",
       "website": "http://getspringseed.com/",
-      "source": {
-        "type": "deb",
-        "data": {
-          "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "deb" },
+        "ubuntu-12.04": { "source": "deb" },
+        "ubuntu-14.04": { "source": "deb" }
+      },
+      "sources": {
+        "deb": {
+          "package": "springseed",
+          "maintainer": "Micheal Harker <me@michealharker.com>",
+          "dependencies": ["cryptsetup-bin", "udisks"],
+          "meta": {
             "i686": {
               "file_name": "springseed_1.1.0_i386.deb",
               "uri": "https://ocserver/public.php?service=files&t=08e8cd1c817dfb68f6cdcfc688c414c3&download",
@@ -105,20 +140,22 @@
       }
     },
     "taskcoach": {
-      "package": "taskcoach",
-      "maintainer": "Frank Niessink, Jerome Laheurte, Aaron Wolf <developers@taskcoach.org>",
       "description": "Your friendly task manager",
       "website": "http://www.taskcoach.org/",
-      "dependencies": [
-        "python-wxgtk2.8",
-        "python-wxtools",
-        "wx2.8-i18n"
-      ],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "taskcoach-developers-ppa",
-          "uri": "ppa:taskcoach-developers/ppa"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "taskcoach",
+          "maintainer": "Frank Niessink, Jerome Laheurte, Aaron Wolf <developers@taskcoach.org>",
+          "dependencies": ["python-wxgtk2.8", "python-wxtools", "wx2.8-i18n"],
+          "meta": {
+            "repo_name": "taskcoach-developers-ppa",
+            "uri": "ppa:taskcoach-developers/ppa"
+          }
         }
       }
     }

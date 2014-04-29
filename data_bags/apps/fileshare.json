@@ -6,23 +6,37 @@
   ],
   "profiles": {
     "jdownloader": {
-      "package": "jdownloader",
-      "maintainer": "Benjamin Drung <bdrung@debian.org>",
       "description": "download manager for one-click hosting sites",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "jd-team-jdownloader",
-          "uri": "ppa:jd-team/jdownloader"
+      "website": "http://jdownloader.org/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "jdownloader",
+          "maintainer": "Benjamin Drung <bdrung@debian.org>",
+          "meta": {
+            "repo_name": "jd-team-jdownloader",
+            "uri": "ppa:jd-team/jdownloader"
+          }
         }
       }
     },
     "transmission": {
-      "package": "transmission-gtk",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "lightweight BitTorrent client (GTK interface)",
-      "source": {
-        "type": "distro"
+      "website": "http://www.transmissionbt.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro", "default": true },
+        "ubuntu-12.04": { "source": "distro", "default": true },
+        "ubuntu-14.04": { "source": "distro", "default": true }
+      },
+      "sources": {
+        "distro": {
+          "package": "transmission-gtk",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     }
   }

@@ -6,33 +6,54 @@
   ],
   "profiles": {
     "dropbox": {
-      "package": "nautilus-dropbox",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-      "description": "Dropbox integration for Nautilus",
-      "source": {
-        "type": "distro"
-      }
-    },
-    "dropbox-mint": {
-      "package": "nemo-dropbox",
-      "maintainer": "Clement Lefebvre <root@linuxmint.com>",
-      "description": "Dropbox integration for Nemo",
-      "source": {
-        "type": "distro"
+      "description": "Dropbox client",
+      "website": "http://www.dropbox.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro-maya" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro-maya": {
+          "package": "nemo-dropbox",
+          "maintainer": "Clement Lefebvre <root@linuxmint.com>"
+        },
+        "distro": {
+          "package": "nautilus-dropbox",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "owncloud": {
-      "package": "owncloud-client",
-      "maintainer": "Markus Rex <msrex@owncloud.com>",
       "description": "ownCloud client",
-      "source": {
-        "type": "repo",
-        "data": {
-          "repo_name": "owncloud-client",
-          "uri": "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_12.04/ /",
-          "distribution": "",
-          "components": [],
-          "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_12.04/Release.key"
+      "website": "http://owncloud.org/",
+      "platforms": {
+        "linuxmint-13": { "source": "repo-precise" },
+        "ubuntu-12.04": { "source": "repo-precise" },
+        "ubuntu-14.04": { "source": "repo" }
+      },
+      "sources": {
+        "repo-precise": {
+          "package": "owncloud-client",
+          "maintainer": "Markus Rex <msrex@owncloud.com>",
+          "meta": {
+            "repo_name": "owncloud-client",
+            "uri": "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_12.04/ /",
+            "distribution": "",
+            "components": [],
+            "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_12.04/Release.key"
+          }
+        },
+        "repo": {
+          "package": "owncloud-client",
+          "maintainer": "Markus Rex <msrex@owncloud.com>",
+          "meta": {
+            "repo_name": "owncloud-client",
+            "uri": "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_14.04/ /",
+            "distribution": "",
+            "components": [],
+            "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key"
+          }
         }
       }
     }

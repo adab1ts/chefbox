@@ -8,45 +8,76 @@
   ],
   "profiles": {
     "git": {
-      "package": "git",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "fast, scalable, distributed revision control system",
-      "suggested": ["git-man", "giggle"],
-      "source": {
-        "type": "distro"
+      "website": "http://git-scm.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "git",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["git-man", "giggle"]
+        }
       }
     },
     "juju": {
-      "package": "juju",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "next generation service orchestration system",
-      "suggested": ["apt-cacher-ng", "lxc", "zookeeper"],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "juju-pkgs",
-          "uri": "ppa:juju/pkgs"
+      "website": "http://juju.ubuntu.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "juju-core",
+          "maintainer": "Curtis Hovey <curtis.hovey@canonical.com>",
+          "meta": {
+            "repo_name": "juju-stable",
+            "uri": "ppa:juju/stable"
+          }
         }
       }
     },
     "shelr": {
-      "package": "shelr",
-      "maintainer": "Antono Vasiljev <self@antono.info>",
       "description": "Utility for plain text screencasting",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "antono-shelr",
-          "uri": "ppa:antono/shelr"
+      "website": "http://shelr.tv/",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "shelr",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "shelr",
+          "maintainer": "Antono Vasiljev <self@antono.info>",
+          "meta": {
+            "repo_name": "antono-shelr",
+            "uri": "ppa:antono/shelr"
+          }
         }
       }
     },
     "zsh": {
-      "package": "zsh",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "shell with lots of features",
-      "source": {
-        "type": "distro"
+      "website": "http://zsh.sourceforge.net/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "zsh",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     }
   }

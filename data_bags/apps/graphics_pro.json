@@ -14,101 +14,165 @@
   ],
   "profiles": {
     "darktable": {
-      "package": "darktable",
-      "maintainer": "Pascal de Bruijn <pmjdebruijn@pcode.nl>",
       "description": "Virtual lighttable and darkroom for photographers",
       "website": "http://www.darktable.org/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "pmjdebruijn-darktable-release",
-          "uri": "ppa:pmjdebruijn/darktable-release"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "darktable",
+          "maintainer": "Pascal de Bruijn <pmjdebruijn@pcode.nl>",
+          "meta": {
+            "repo_name": "pmjdebruijn-darktable-release",
+            "uri": "ppa:pmjdebruijn/darktable-release"
+          }
         }
       }
     },
     "draftsight": {
-      "package": "draftsight",
-      "maintainer": "Dassault Systemes <CrashReports@DraftSight.com",
       "description": "With DraftSight, you can easily create professional CAD drawings",
       "website": "http://www.3ds.com/products-services/draftsight/overview/",
-      "source": {
-        "type": "deb"
+      "platforms": {},
+      "sources": {
+        "deb": {
+          "package": "draftsight",
+          "maintainer": "Dassault Systemes <CrashReports@DraftSight.com",
+          "meta": {
+            "*": {
+              "file_name": "",
+              "uri": "",
+              "sha256": ""
+            }
+          }
+        }
       }
     },
     "freecad": {
-      "package": "freecad",
-      "maintainer": "Normand Chamberland <gemnoc@gmail.ca>",
       "description": "Extensible Open Source CAx program",
       "website": "http://www.freecadweb.org/",
-      "suggested": ["freecad-doc", "python-matplotlib"],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "freecad-maintainers-freecad-stable",
-          "uri": "ppa:freecad-maintainers/freecad-stable"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "freecad",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["freecad-doc"]
+        },
+        "ppa": {
+          "package": "freecad",
+          "maintainer": "Normand Chamberland <gemnoc@gmail.ca>",
+          "suggested": ["freecad-doc", "python-matplotlib"],
+          "meta": {
+            "repo_name": "freecad-maintainers-freecad-stable",
+            "uri": "ppa:freecad-maintainers/freecad-stable"
+          }
         }
       }
     },
     "gimp": {
-      "package": "gimp",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "The GNU Image Manipulation Program",
       "website": "http://www.gimp.org/",
-      "suggested": ["gimp-plugin-registry", "gimp-gmic", "icc-profiles", "icc-profiles-free"],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "otto-kesselgulasch-gimp",
-          "uri": "ppa:otto-kesselgulasch/gimp"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa", "default": true },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro", "default": true }
+      },
+      "sources": {
+        "distro": {
+          "package": "gimp",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["gimp-data-extras", "gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"],
+        },
+        "ppa": {
+          "package": "gimp",
+          "maintainer": "Otto Meier <>",
+          "suggested": ["gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"],
+          "meta": {
+            "repo_name": "otto-kesselgulasch-gimp",
+            "uri": "ppa:otto-kesselgulasch/gimp"
+          }
         }
       }
     },
     "inkscape": {
-      "package": "inkscape",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "vector-based drawing program",
       "website": "http://www.inkscape.org/en/",
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "inkscape",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
       }
     },
     "librecad": {
-      "package": "librecad",
-      "maintainer": "Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>",
       "description": "Computer-aided design (CAD) system",
       "website": "http://librecad.org/cms/home.html",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "librecad-dev-librecad-stable",
-          "uri": "ppa:librecad-dev/librecad-stable"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "librecad",
+          "maintainer": "Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>",
+          "meta": {
+            "repo_name": "librecad-dev-librecad-stable",
+            "uri": "ppa:librecad-dev/librecad-stable"
+          }
         }
       }
     },
     "mypaint": {
-      "package": "mypaint",
-      "maintainer": "Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>",
       "description": "paint program for use with graphics tablets",
       "website": "http://mypaint.intilinux.com/",
-      "suggested": ["mypaint-data-hires"],
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "achadwick-mypaint-testing",
-          "uri": "ppa:achadwick/mypaint-testing"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "mypaint",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["mypaint-data-extras"]
+        },
+        "ppa": {
+          "package": "mypaint",
+          "maintainer": "Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>",
+          "suggested": ["mypaint-data-extras"],
+          "meta": {
+            "repo_name": "achadwick-mypaint-testing",
+            "uri": "ppa:achadwick/mypaint-testing"
+          }
         }
       }
     },
     "qcad": {
-      "package": "qcad",
-      "maintainer": "Andrew Mustun <https://github.com/qcad>",
       "description": "The Open Source 2D CAD",
       "website": "http://www.qcad.org/en/",
-      "source": {
-        "type": "bin",
-        "ztype": "tgz",
-        "data": {
-          "all": {
+      "platforms": {
+        "linuxmint-13": { "source": "bin" },
+        "ubuntu-12.04": { "source": "bin" },
+        "ubuntu-14.04": { "source": "bin" }
+      },
+      "sources": {
+        "bin": {
+          "ztype": "tgz",
+          "package": "qcad",
+          "maintainer": "Andrew Mustun <https://github.com/qcad>",
+          "meta": {
             "i686": {
               "file_name": "qcad-3.4.7-linux-x86_32.tar.gz",
               "uri": "https://ocserver/public.php?service=files&t=3c10396ab79c46b28485e763487912a7&download",
@@ -126,26 +190,42 @@
       }
     },
     "rawtherapee": {
-      "package": "rawtherapee",
-      "maintainer": "Dariusz Duma <dhor@toxic.net.pl>",
       "description": "RAW file processor",
       "website": "http://www.rawtherapee.com/",
-      "source": {
-        "type": "ppa",
-        "data": {
-          "repo_name": "dhor-myway",
-          "uri": "ppa:dhor/myway"
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "rawtherapee",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "ppa": {
+          "package": "rawtherapee",
+          "maintainer": "Dariusz Duma <dhor@toxic.net.pl>",
+          "meta": {
+            "repo_name": "dhor-myway",
+            "uri": "ppa:dhor/myway"
+          }
         }
       }
     },
     "scribus": {
-      "package": "scribus",
-      "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
       "description": "Open Source Desktop Page Layout - stable branch",
       "website": "http://www.scribus.net/canvas/Scribus",
-      "suggested": ["scribus-doc", "scribus-template", "icc-profiles", "icc-profiles-free"],
-      "source": {
-        "type": "distro"
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "scribus",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["scribus-doc", "scribus-template", "icc-profiles", "icc-profiles-free"]
+        }
       }
     }
   }
