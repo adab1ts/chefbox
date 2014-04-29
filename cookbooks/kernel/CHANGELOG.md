@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.3.1:
+
+* recipes/default - availability check for intel_graphics is now delegated to 'install_app' definition in 'core' cookbook
+
 ## 0.3.0:
 
 * README   - update copyright note

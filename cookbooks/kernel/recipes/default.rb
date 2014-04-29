@@ -40,8 +40,5 @@ node.default[:apps] = { :kernel => kernel }
 include_recipe "kernel::dkms"
 include_recipe "kernel::preload" if memory > 1.GB
 include_recipe "kernel::tlp"
-
-if platform?("ubuntu")
-  include_recipe "kernel::intel_graphics" if platform_version >= 13.04 and vendor(:graphics) == "intel"
-end
+include_recipe "kernel::intel_graphics" if vendor(:graphics) == "intel"
 
