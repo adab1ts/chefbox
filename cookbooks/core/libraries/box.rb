@@ -74,7 +74,7 @@ module Coderebels
 
         case id_str
         when /debian/i then "debian"
-        when /mint/i   then "mint"
+        when /mint/i   then "linuxmint"
         when /ubuntu/i then "ubuntu"
         end
       end
@@ -89,7 +89,7 @@ module Coderebels
         when "debian", "ubuntu"
           /Codename:\s+(?<codename>\w+)/i =~ Coderebels::Chefbox::Shell.rep("lsb_release -c")
           codename
-        when "mint"
+        when "linuxmint"
           case self.lsb_release
           when 13 then "precise"
           when 14 then "quantal"

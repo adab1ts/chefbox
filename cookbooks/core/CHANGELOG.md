@@ -2,6 +2,20 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.0:
+
+* definitions/autostart_app - refactored due to new multi-platform structure of app profile
+
+* definitions/install_app
+
+  - refactored due to new multi-platform structure of app profile
+  - no longer includes gem packages installation
+
+* definitions/uninstall_app - refactored due to new multi-platform structure of app profile
+* libraries/app             - module Coderebels::Chefbox::App provides app related methods
+* libraries/box             - lsb_id method now returns linuxmint instead of mint when needed
+* recipes/default           - includes custom Coderebels::Chefbox::App module
+
 ## 0.23.0:
 
 * libraries/box

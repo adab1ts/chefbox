@@ -21,11 +21,13 @@
 
 define :autostart_app do
   profile = params[:profile]
+
+  package_name = Coderebels::Chefbox::App.package_name profile
   box = node[:box]
 
   box[:users].each do |username, usr|
     autostart_dir = "#{usr[:home]}/.config/autostart"
-    desktop_file  = params[:desktop_file] || "#{profile['package']}.desktop"
+    desktop_file  = params[:desktop_file] || "#{package_name}.desktop"
 
     directory_tree autostart_dir do
       exclude usr[:home]

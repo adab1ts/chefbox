@@ -21,33 +21,45 @@
 
 define :uninstall_app do
   profile = params[:profile]
+  os      = Coderebels::Chefbox::Box.lsb_id
+  release = Coderebels::Chefbox::Box.lsb_release
 
-  source = profile['source']
-  origin = source['type']
+  # Check availability
+  available = Coderebels::Chefbox::App.available? profile, os, release
+  
+  if available
+    source_id, source_data = Coderebels::Chefbox::App.source profile, os, release
 
-  case origin
-  when "bin"
-    box = node[:box]
+    case source_id
+    when /bin/
+      box = node[:box]
 
-    box[:users].each do |username, usr|
-      app_dir  = "#{usr[:home]}/#{box[:folders][:apps]}/#{params[:name]}"
-      launcher = "#{usr[:home]}/.local/share/applications/#{params[:name]}.desktop"
+      box[:users].each do |username, usr|
+        app_dir  = "#{usr[:home]}/#{box[:folders][:apps]}/#{params[:name]}"
+        launcher = "#{usr[:home]}/.local/share/applications/#{params[:name]}.desktop"
 
-      bash "#{username}_#{params[:name]}_uninstall" do
-        code <<-EOH
-          rm -rf #{app_dir} \
-          && rm -f #{launcher}
-          EOH
-        only_if { ::File.exists?(app_dir) }
+        bash "#{username}_#{params[:name]}_uninstall" do
+          code <<-EOH
+            rm -rf #{app_dir} \
+            && rm -f #{launcher}
+            EOH
+          only_if { ::File.exists? app_dir }
+        end
       end
-    end
-  else
-    package params[:name] do
-      package_name profile['package']
-      action :purge
-      not_if do
-        %w(repo ppa).include?(origin) and
-        not ::File.exists?("#{node[:apt][:sources_path]}/#{source['data']['repo_name']}-#{Coderebels::Chefbox::Box.lsb_codename}.list")
+    else
+      default = Coderebels::Chefbox::App.default? profile, os, release
+      source_file = "#{source_data['meta']['repo_name']}-#{Coderebels::Chefbox::Box.lsb_codename}.list"
+
+      package params[:name] do
+        package_name source_data['package']
+        action :purge
+        not_if do
+          default or
+          (
+          source_id =~ /ppa|repo/ and
+          not ::File.exists?("#{node[:apt][:sources_path]}/#{source_file}")
+          )
+        end
       end
     end
   end

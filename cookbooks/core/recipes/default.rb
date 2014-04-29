@@ -20,6 +20,7 @@
 
 
 class Chef::Recipe
+  include Coderebels::Chefbox::App
   include Coderebels::Chefbox::Box
   include Coderebels::Chefbox::Digest
 end
