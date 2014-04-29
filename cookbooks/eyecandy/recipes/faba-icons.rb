@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: eyecandy
-# Recipe:: faenza-icons
+# Recipe:: faba-icons
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 eyecandy = node[:apps][:eyecandy]
 
-# Faenza icon theme
-install_app "faenza-icons" do
-  profile eyecandy['profiles']['faenza-icons']
+# Faba Icon Theme
+install_app "faba-icons" do
+  profile eyecandy['profiles']['faba-icons']
 end
 

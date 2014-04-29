@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: eyecandy
-# Recipe:: unsettings
+# Recipe:: orchis-theme
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,17 +21,8 @@
 
 eyecandy = node[:apps][:eyecandy]
 
-# Graphical configuration program for the Unity desktop environment
-unsettings = eyecandy['profiles']['unsettings']
-
-if app_available? unsettings
-  install_app "unsettings" do
-    force true
-    profile unsettings
-  end
-
-  support "unsettings" do
-    section "eyecandy"
-  end
+# Orchis GTK Theme
+install_app "orchis-theme" do
+  profile eyecandy['profiles']['orchis-theme']
 end
 

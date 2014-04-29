@@ -2,6 +2,19 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.8.0:
+
+* recipes/default            - now includes some new icons and gtk themes install management
+* recipes/faba-icons         - manages faba icon theme installation
+* recipes/faenza-icons       - removed
+* recipes/faience-icons      - removed
+* recipes/moka-theme         - manages moka gtk theme installation
+* recipes/numix-icons        - removed (no longer needed)
+* recipes/numix-circle-icons - manages numix circle icon theme installation
+* recipes/numix-shine- icons - manages numix shine icon theme installation
+* recipes/orchis-theme       - manages orchis gtk theme installation
+* recipes/unsettings         - check app availability before installation
+
 ## 0.7.2:
 
 * recipes/greeter-background - refactor greeter background download
@@ -43,7 +56,7 @@ This file is used to list changes made in each version of eyecandy.
 
 ## 0.4.0:
 
-* recipe/default - now checks for section presence in box profile's apps list before proceed
+* recipes/default - now checks for section presence in box profile's apps list before proceed
 
 ## 0.3.0:
 

@@ -19,9 +19,6 @@
 #
 
 
-# Requirements
-package "wget"
-
 # Greeter Background
 greeter = node[:box][:greeter]
 

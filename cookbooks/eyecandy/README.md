@@ -4,12 +4,14 @@ This cookbook installs a selected set of eyecandy packages.
 The following recipes may apply:
 
 - `eyecandy::default`            - purges unselected packages and includes recipes as nedeed.
-- `eyecandy::faenza-icons`       - installs __Faenza icon theme__ and suggested packages.
-- `eyecandy::faience-icons`      - installs __Faience icon theme__ and suggested packages.
 - `eyecandy::greeter-background` - sets greeter background image.
+- `eyecandy::faba-icons`         - installs __Faba icon theme__ and suggested packages.
 - `eyecandy::moka-icons`         - installs __Moka icon theme__ and suggested packages.
+- `eyecandy::moka-theme`         - installs __Moka GTK theme__ and suggested packages.
 - `eyecandy::nitrux-icons`       - installs __NITRUX-like icon theme__ and suggested packages.
-- `eyecandy::numix-icons`        - installs __Numix icon theme__ and suggested packages.
+- `eyecandy::numix-circle-icons` - installs __Numix Circle icon theme__ and suggested packages.
+- `eyecandy::numix-shine-icons`  - installs __Numix Shine icon theme__ and suggested packages.
+- `eyecandy::orchis-theme`       - installs __Orchis GTK theme__ and suggested packages.
 - `eyecandy::unsettings`         - installs __Unsettings__ and suggested packages.
 
 

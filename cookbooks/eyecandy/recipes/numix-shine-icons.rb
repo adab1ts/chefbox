@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: eyecandy
-# Recipe:: faience-icons
+# Recipe:: numix-shine-icons
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 eyecandy = node[:apps][:eyecandy]
 
-# Faience icon theme
-install_app "faience-icons" do
-  profile eyecandy['profiles']['faience-icons']
+# Numix Shine Icons
+install_app "numix-shine-icons" do
+  profile eyecandy['profiles']['numix-shine-icons']
 end
 

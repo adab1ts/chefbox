@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: eyecandy
-# Recipe:: numix-icons
+# Recipe:: moka-theme
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 eyecandy = node[:apps][:eyecandy]
 
-# Numix icon theme
-install_app "numix-icons" do
-  profile eyecandy['profiles']['numix-icons']
+# Moka GTK Theme
+install_app "moka-theme" do
+  profile eyecandy['profiles']['moka-theme']
 end
 
