@@ -22,32 +22,37 @@
 security = node[:apps][:security]
 
 # Program for managing a Netfilter firewall
-install_app "firewall" do
-  profile security['profiles']['firewall']
-end
+firewall = security['profiles']['firewall']
 
-cookbook_file "ufw_openssh-server" do
-  path "/etc/ufw/applications.d/chef-openssh-server"
-  source "/ufw/chef-openssh-server"
-  mode 0644
-  backup false
-end
+if app_available? firewall
+  install_app "firewall" do
+    force true
+    profile firewall
+  end
 
-# Shut the backdoor!
-# execute "ufw_allow_ssh" do
-#   command "ufw allow ChefSSH"
-#   action :nothing
-#   subscribes :run, resources("cookbook_file[ufw_openssh-server]"), :immediately
-# end
+  cookbook_file "ufw_openssh-server" do
+    path "/etc/ufw/applications.d/chef-openssh-server"
+    source "/ufw/chef-openssh-server"
+    mode 0644
+    backup false
+  end
 
-execute "ufw_enable" do
-  command "ufw enable"
-  action :nothing
-  # subscribes :run, resources("execute[ufw_allow_ssh]"), :immediately
-  subscribes :run, resources("cookbook_file[ufw_openssh-server]"), :immediately
-end
+  # Shut the backdoor!
+  # execute "ufw_allow_ssh" do
+  #   command "ufw allow ChefSSH"
+  #   action :nothing
+  #   subscribes :run, resources("cookbook_file[ufw_openssh-server]"), :immediately
+  # end
 
-support "firewall" do
-  section "security"
+  execute "ufw_enable" do
+    command "ufw enable"
+    action :nothing
+    # subscribes :run, resources("execute[ufw_allow_ssh]"), :immediately
+    subscribes :run, resources("cookbook_file[ufw_openssh-server]"), :immediately
+  end
+
+  support "firewall" do
+    section "security"
+  end
 end
 

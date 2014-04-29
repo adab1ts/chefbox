@@ -24,9 +24,9 @@ when "ubuntu"
   package "nautilus-gtkhash"
   package "nautilus-wipe"
   package "seahorse-nautilus"
-when "mint"
+when "linuxmint"
   package "gtkhash"
   package "secure-delete"
-  package "nemo-seahorse"
+  package "nemo-seahorse" if platform_desktop == "cinnamon"
 end
 

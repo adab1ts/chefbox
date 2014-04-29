@@ -22,11 +22,16 @@
 security = node[:apps][:security]
 
 # Utility for tracking stolen computers
-install_app "tracking" do
-  profile security['profiles']['tracking']
-end
+tracking = security['profiles']['tracking']
 
-support "tracking" do
-  section "security"
+if app_available? tracking
+  install_app "tracking" do
+    force true
+    profile tracking
+  end
+
+  support "tracking" do
+    section "security"
+  end
 end
 

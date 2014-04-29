@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of security.
 
+## 0.5.1:
+
+* recipe/firewall - check app availability before installation
+
+* recipe/privacy
+
+  - use linuxmint instead of mint when needed
+  - linuxmint encrypting tool install on cinnamon flavour only
+
+* recipe/tracking - check app availability before installation
+
 ## 0.5.0:
 
 * README   - update copyright note
