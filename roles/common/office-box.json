@@ -14,8 +14,7 @@
     "box": {
       "apps": {
         "browsers": [
-          "chrome",
-          "firefox"
+          "chrome"
         ],
         "groupware": [
           "hangouts",
@@ -26,6 +25,7 @@
           "masterpdf",
           "nitro",
           "pdfshuffler",
+          "springseed",
           "taskcoach"
         ],
         "utils": [
