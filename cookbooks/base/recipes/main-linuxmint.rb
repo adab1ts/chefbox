@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: main-mint
+# Recipe:: main-linuxmint
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,8 +19,10 @@
 #
 
 
+os_release = platform_version
+
 # Support for ia32-libs dependency
-if platform_arch == "x86_64"
+if platform_arch == "x86_64" and os_release == 13
   %w[
     ia32-libs-multiarch
     i386
@@ -47,7 +49,7 @@ end
 
 
 # Commonly used restricted packages for Linux Mint
-if platform_version < 15
+if os_release < 15
   repo_name = "videolan-#{platform_codename}"
 
   apt_repository repo_name do

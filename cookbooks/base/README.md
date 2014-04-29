@@ -9,7 +9,7 @@ The following recipes are applied:
   
   * `Ubuntu`
 
-      `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (x86_64 only)  
+      `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (precise x86_64 only)  
       `-example-content`            - Ubuntu example content  
       `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
       `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
@@ -17,11 +17,10 @@ The following recipes are applied:
 
   * `Linux Mint`
 
-      `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (x86_64 only)  
+      `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (maya x86_64 only)  
 
   * `All`
 
-      `+gnome-do`                   - Quickly perform actions on your desktop  
       `virtualbox guest packages`   - Support packages for virtual boxes
 
 - `base::end`      - executes first system upgrade and creates a support folder with post-installation instructions
@@ -44,7 +43,8 @@ This cookbook only applies to the following platforms:
 
 #### packages
 - `openssl`           - Secure Socket Layer (SSL) binary and related cryptographic tools
-- `libshadow-ruby1.8` - Interface of shadow password for Ruby 1.8
+- `libshadow-ruby1.8` - Interface of shadow password for Ruby 1.8 (precise only)
+- `ruby-shadow`       - Interface of shadow password for Ruby 1.9+ (trusty only)
 
 
 ## Usage

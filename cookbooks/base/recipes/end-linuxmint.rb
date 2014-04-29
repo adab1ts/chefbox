@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: end-mint
+# Recipe:: end-linuxmint
 #
 # Copyright 2013,2014 Carles Muiños
 #

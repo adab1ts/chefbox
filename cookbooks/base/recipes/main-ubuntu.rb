@@ -19,8 +19,10 @@
 #
 
 
+os_release = platform_version
+
 # Support for ia32-libs dependency
-if platform_arch == "x86_64"
+if platform_arch == "x86_64" and os_release == 12.04
   %w[
     ia32-libs-multiarch
     i386
@@ -32,17 +34,16 @@ if platform_arch == "x86_64"
 end
 
 
-# NOTE: Kept for forthcoming releases
 # Virtualization support
-# if virtual_box?
-#   %w[
-#     virtualbox-guest-dkms
-#     virtualbox-guest-utils
-#     virtualbox-guest-x11
-#   ].each do |pkg|
-#     package pkg
-#   end
-# end
+if virtual_box? and os_release == 14.04
+  %w[
+    virtualbox-guest-dkms
+    virtualbox-guest-utils
+    virtualbox-guest-x11
+  ].each do |pkg|
+    package pkg
+  end
+end
 
 
 # Ubuntu example content

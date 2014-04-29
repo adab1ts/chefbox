@@ -20,8 +20,8 @@
 
 
 case platform
-when "mint"   then include_recipe "base::end-mint"
-when "ubuntu" then include_recipe "base::end-ubuntu"
+when "linuxmint" then include_recipe "base::end-linuxmint"
+when "ubuntu"    then include_recipe "base::end-ubuntu"
 end
 
 

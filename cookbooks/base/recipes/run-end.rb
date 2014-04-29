@@ -19,9 +19,8 @@
 #
 
 
-if platform == "mint"
+if platform == "linuxmint"
   ## APT Sources
-
   cookbook_file "sources.list.final" do
     path "/etc/apt/sources.list"
     source "/apt/sources.list.final"

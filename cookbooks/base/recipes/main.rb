@@ -31,14 +31,9 @@ package "aspell-es"
 package "myspell-es"
 
 
-# Gnome-Do: Quickly perform actions on your desktop
-package "gnome-do"
-package "gnome-do-plugins"
-
-
 # Platform-based tasks
 case platform
-when "mint"   then include_recipe "base::main-mint"
-when "ubuntu" then include_recipe "base::main-ubuntu"
+when "linuxmint" then include_recipe "base::main-linuxmint"
+when "ubuntu"    then include_recipe "base::main-ubuntu"
 end
 

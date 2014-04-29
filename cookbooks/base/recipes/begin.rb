@@ -21,8 +21,13 @@
 
 ## Requirements
 
+ruby_shadow = case platform_codename
+              when "precise" then "libshadow-ruby1.8"
+              when "trusty"  then "ruby-shadow"
+              end
+
 package "openssl"
-package "libshadow-ruby1.8"
+package ruby_shadow
 
 
 ## Users management

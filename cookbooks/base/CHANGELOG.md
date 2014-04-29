@@ -2,6 +2,29 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.23.0:
+
+* recipes/begin         - install ruby shadow library for the target platform
+* recipes/end           - include end-linuxmint instead of former end-mint recipe
+* recipes/end-linuxmint - former end-mint recipe
+
+* recipes/main
+
+  - move gnome-do installation to recipe[utils::gnome-do]
+  - include main-linuxmint instead of former main-mint recipe
+
+* recipes/main-linuxmint
+
+  - former main-mint recipe
+  - maya only support for ia32-libs in x86_64 platforms
+
+* recipes/main-ubuntu
+
+  - precise only support for ia32-libs in x86_64 platforms
+  - enable trusty only support for virtual guest machine
+
+* recipes/run-end       - use linuxmint instead of mint when needed
+
 ## 0.22.4:
 
 * recipes/end-mint - first system upgrade based on platform desktop
@@ -101,7 +124,7 @@ This file is used to list changes made in each version of base.
 
 * recipes/main-mint
 
-  - manage linux mint specific tasks from main recipe
+  - manage linuxmint specific tasks from main recipe
   - install ia32-libs package in x86_64 platforms
   - install y-ppa-manager for ppa management
 
@@ -115,7 +138,7 @@ This file is used to list changes made in each version of base.
 
 * recipes/end-mint
 
-  - manage linux mint specific tasks from end recipe
+  - manage linuxmint specific tasks from end recipe
   - restore sources.list file to its original (backport disabled)
 
 * recipes/end-ubuntu - manage ubuntu specific tasks from end recipe
@@ -149,11 +172,11 @@ This file is used to list changes made in each version of base.
 * recipes/main
 
   - installs required language packages
-  - now manages Linux Mint specific packages
+  - now manages linuxmint specific packages
 
 * recipes/end
 
-  - now manages Linux Mint first system upgrade
+  - now manages linuxmint first system upgrade
   - now delivers first steps documentation to target platforms
 
 ## 0.13.0:
