@@ -23,16 +23,20 @@ indicators = node[:apps][:indicators]
 
 # A status bar application able to temporarily prevent the activation
 # of both the screensaver and the "sleep" powersaving mode
-install_app "screensaver" do
-  profile indicators['profiles']['screensaver']
-end
+screensaver = indicators['profiles']['screensaver']
 
-autostart_app "screensaver" do
-  profile indicators['profiles']['screensaver']
-end
+if app_available? screensaver
+  install_app "screensaver" do
+    force true
+    profile screensaver
+  end
 
-support "screensaver" do
-  section "indicators"
-  only_for ["ubuntu"]
+  autostart_app "screensaver" do
+    profile screensaver
+  end
+
+  support "screensaver" do
+    section "indicators"
+  end
 end
 

@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.5.1:
+
+* recipes/plugandplay - check availability before app installation
+* recipes/screensaver - check availability before app installation
+* recipes/touchpad    - check availability before app installation
+* recipes/weather     - check availability before app installation
+* files/default/autostart/caffeine.desktop                       - moved from 'files/ubuntu-12.04/autostart' folder
+* files/default/autostart/my-weather-indicator-autostart.desktop - moved from 'files/ubuntu-12.04/autostart' folder
+* files/default/autostart/touchpad-indicator-autostart.desktop   - moved from 'files/ubuntu-12.04/autostart' folder
+* files/default/autostart/udev-notify.desktop                    - moved from 'files/ubuntu-12.04/autostart' folder
+
 ## 0.5.0:
 
 * recipe/default   - do not install ubuntuone indicator anymore

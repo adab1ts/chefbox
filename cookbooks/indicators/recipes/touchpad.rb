@@ -24,12 +24,17 @@ indicators = node[:apps][:indicators]
 # An indicator for the touchpad
 touchpad = indicators['profiles']['touchpad']
 
-install_app "touchpad" do
-  profile touchpad
-end
+if app_available? touchpad
+  install_app "touchpad" do
+    force true
+    profile touchpad
+  end
 
-autostart_app "touchpad" do
-  profile touchpad
-  desktop_file "#{touchpad['package']}-autostart.desktop"
+  touchpad_package = app_package_name touchpad
+
+  autostart_app "touchpad" do
+    profile touchpad
+    desktop_file "#{touchpad_package}-autostart.desktop"
+  end
 end
 

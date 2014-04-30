@@ -1,9 +1,8 @@
-
 [Desktop Entry]
-Type=Application
+Name=Udev Notify
+Comment=Plug & Play devices notifications
 Exec=/usr/bin/udev-notify
+Type=Application
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
-Name=Udev Notify
-Comment=Plug & Play devices notifications

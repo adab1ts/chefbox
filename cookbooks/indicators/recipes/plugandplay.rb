@@ -22,11 +22,16 @@
 indicators = node[:apps][:indicators]
 
 # Display notifications about newly plugged hardware
-install_app "plug&play" do
-  profile indicators['profiles']['plug&play']
-end
+plugandplay = indicators['profiles']['plug&play']
 
-autostart_app "plug&play" do
-  profile indicators['profiles']['plug&play']
+if app_available? plugandplay
+  install_app "plug&play" do
+    force true
+    profile plugandplay
+  end
+
+  autostart_app "plug&play" do
+    profile plugandplay
+  end
 end
 
