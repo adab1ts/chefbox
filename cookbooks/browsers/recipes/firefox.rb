@@ -22,11 +22,16 @@
 browsers = node[:apps][:browsers]
 
 # Safe and easy web browser from Mozilla
-install_app "firefox" do
-  profile browsers['profiles']['firefox']
-end
+firefox = browsers['profiles']['firefox']
 
-support "firefox" do
-  section "browsers"
+if app_available? firefox
+  install_app "firefox" do
+    force true
+    profile firefox
+  end
+
+  support "firefox" do
+    section "browsers"
+  end
 end
 

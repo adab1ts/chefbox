@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.5.1:
+
+* recipes/firefox - check app availability before installation
+
 ## 0.5.0:
 
 * README   - update requirements section
