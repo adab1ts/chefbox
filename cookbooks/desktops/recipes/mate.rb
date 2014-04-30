@@ -22,33 +22,38 @@
 desktops = node[:apps][:desktops]
 
 # mate desktop
-profile = desktops['profiles']['mate']
-source  = profile['source']['data']
+mate = desktops['profiles']['mate']
 
-codename = platform_codename
-repo_name = "#{source['repo_name']}-#{codename}"
-dist = source['distribution'] || codename
+if app_available? mate 
+  _, repo_data = app_source mate
 
-apt_repository repo_name do
-  uri source['uri']
-  distribution dist
-  components source['components']
-  key source['key']
-  keyserver source['keyserver']
-  action :add
-  not_if { ::File.exists? "#{node[:apt][:sources_path]}/#{repo_name}.list" }
+  repo = repo_data['meta']
+  codename = platform_codename
+
+  repo_name = "#{repo['repo_name']}-#{codename}"
+  dist = repo['distribution'] || codename
+
+  apt_repository repo_name do
+    uri repo['uri']
+    distribution dist
+    components repo['components']
+    key repo['key']
+    keyserver repo['keyserver']
+    action :add
+    not_if { ::File.exists? "#{node[:apt][:sources_path]}/#{repo_name}.list" }
+  end
+
+  package "mate-archive-keyring" do
+    options "--allow-unauthenticated"
+    notifies :run, "execute[mate-system_update]", :immediately
+  end
+
+  execute "mate-system_update" do
+    command "apt-get update"
+    action :nothing
+  end
+
+  package "mate-core"
+  package "mate-desktop-environment"
 end
-
-package "mate-archive-keyring" do
-  options "--allow-unauthenticated"
-  notifies :run, "execute[mate-system_update]", :immediately
-end
-
-execute "mate-system_update" do
-  command "apt-get update"
-  action :nothing
-end
-
-package "mate-core"
-package "mate-desktop-environment"
 
