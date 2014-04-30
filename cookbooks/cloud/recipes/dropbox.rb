@@ -22,12 +22,14 @@
 cloud = node[:apps][:cloud]
 
 # Dropbox integration
-prof = case platform
-       when "mint" then "dropbox-mint"
-       else "dropbox"
-       end
+pkg_name = case platform_desktop
+           when "cinnamon" then "nemo-dropbox"
+           when "mate"     then "caja-dropbox"
+           else "nautilus-dropbox"
+           end
 
 install_app "dropbox" do
-  profile cloud['profiles'][prof]
+  profile cloud['profiles']['dropbox']
+  package pkg_name
 end
 

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.5.1:
+
+* recipes/dropbox - extend dropbox client integration to mate and xfce desktops
+
 ## 0.5.0:
 
 * recipes/default   - do not install ubuntuone client anymore
@@ -29,7 +33,7 @@ This file is used to list changes made in each version of cloud.
 
 ## 0.2.1:
 
-* recipes/dropbox - fixes regression issue concerning dropbox profile name for mint boxes
+* recipes/dropbox - fixes regression issue concerning dropbox profile name for linuxmint boxes
 
 ## 0.2.0:
 
