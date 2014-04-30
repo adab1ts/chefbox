@@ -4,9 +4,10 @@
 [Desktop Entry]
 Name=LinuxBand
 Comment=Graphical user-interface for MMA (Musical MIDI Accompaniment)
-Icon=applications-multimedia
+Keywords=LinuxBand;
 Exec=linuxband
 Terminal=false
 Type=Application
+Icon=applications-multimedia
 Encoding=UTF-8
-Categories=AudioVideo;Audio;
+Categories=GNOME;GTK;AudioVideo;Audio;

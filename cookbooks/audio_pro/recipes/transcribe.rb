@@ -23,22 +23,27 @@ audio_pro = node[:apps][:audio_pro]
 box = node[:box]
 
 # World's leading software for helping musicians to work out music from recordings
-install_app "transcribe" do
-  profile audio_pro['profiles']['transcribe']
-end
+transcribe = audio_pro['profiles']['transcribe']
 
-launcher "transcribe" do
-  template "/transcribe/transcribe.desktop.erb"
-  variables(
-    :exec => "sh -c '~/#{box[:folders][:apps]}/transcribe/transcribe'"
-  )
-end
+if app_available? transcribe
+  install_app "transcribe" do
+    force true
+    profile transcribe
+  end
 
-uninstaller "transcribe" do
-  template "/transcribe/uninstall_transcribe-#{box[:lang]}.sh.erb"
-  variables(
-    :app     => "transcribe",
-    :website => audio_pro['profiles']['transcribe']['website']
-  )
+  launcher "transcribe" do
+    template "/transcribe/transcribe.desktop.erb"
+    variables(
+      :exec => "sh -c '~/#{box[:folders][:apps]}/transcribe/transcribe'"
+    )
+  end
+
+  uninstaller "transcribe" do
+    template "/transcribe/uninstall_transcribe-#{box[:lang]}.sh.erb"
+    variables(
+      :app     => "transcribe",
+      :website => audio_pro['profiles']['transcribe']['website']
+    )
+  end
 end
 

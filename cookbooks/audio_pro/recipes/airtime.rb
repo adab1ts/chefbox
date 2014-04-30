@@ -22,20 +22,25 @@
 audio_pro = node[:apps][:audio_pro]
 
 # Airtime broadcast server
-install_app "airtime" do
-  profile audio_pro['profiles']['airtime']
-end
+airtime = audio_pro['profiles']['airtime']
 
-codename = platform_codename
-airtime_repo_file  = "#{node[:apt][:sources_path]}/sourcefabric-#{codename}.list"
-original_repo_file = "#{node[:apt][:sources_path]}/sourcefabric.list"
+if app_available? airtime
+  install_app "airtime" do
+    force true
+    profile airtime
+  end
 
-bash "install_airtime" do
-  code <<-EOH
-    mv #{original_repo_file} #{airtime_repo_file}
-    sed -i "2s:#{node[:lsb][:codename]}:#{codename}:g" #{airtime_repo_file}
-    airtime-easy-setup
-    EOH
-  not_if { ::File.exists?(airtime_repo_file) }
+  codename = platform_codename
+  airtime_repo_file  = "#{node[:apt][:sources_path]}/sourcefabric-#{codename}.list"
+  original_repo_file = "#{node[:apt][:sources_path]}/sourcefabric.list"
+
+  bash "install_airtime" do
+    code <<-EOH
+      mv #{original_repo_file} #{airtime_repo_file}
+      sed -i "2s:#{node[:lsb][:codename]}:#{codename}:g" #{airtime_repo_file}
+      airtime-easy-setup
+      EOH
+    not_if { ::File.exists?(airtime_repo_file) }
+  end
 end
 

@@ -2,6 +2,19 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.4.1:
+
+* recipes/default    - airtime installation constrained to platforms with 1GB+ of RAM
+* recipes/airtime    - check availability before app installation
+* recipes/linuxband  - check availability before app installation
+* recipes/transcribe - check availability before app installation
+* files/default/linuxband/linuxband.desktop            - single multiplatform desktop file
+* files/linuxmint-13/linuxband/linuxband.desktop       - removed
+* files/ubuntu-12.04/linuxband/linuxband.desktop       - removed
+* templates/default/transcribe/transcribe.desktop      - single multiplatform desktop template
+* templates/ubuntu-12.04/transcribe/transcribe.desktop - removed
+* templates/linuxmint-13/transcribe/transcribe.desktop - removed
+
 ## 0.4.0:
 
 * README   - update requirements section
@@ -31,7 +44,7 @@ This file is used to list changes made in each version of audio_pro.
 * recipes/linuxband  - deploy a per-user LinuxBand launcher
 * recipes/transcribe - minor update to Transcribe! launcher params
 * files/default/linuxband/linuxband.desktop            - ubuntu launcher for LinuxBand
-* files/linuxmint-13/linuxband/linuxband.desktop       - linux mint launcher for LinuxBand
+* files/linuxmint-13/linuxband/linuxband.desktop       - linuxmint launcher for LinuxBand
 * templates/default/transcribe/transcribe.desktop      - minor update to Transcribe! launcher icon
 * templates/linuxmint-13/transcribe/transcribe.desktop - minor update to Transcribe! launcher icon
 
@@ -43,7 +56,7 @@ This file is used to list changes made in each version of audio_pro.
 * recipes/transcribe - installs Transcribe! software to work out music from recordings
 * recipes/tuxguitar  - installs TuxGuitar multitrack guitar tablature editor and player
 * templates/default/transcribe/transcribe.desktop      - ubuntu launcher for Transcribe!
-* templates/linuxmint-13/transcribe/transcribe.desktop - linux mint launcher for Transcribe!
+* templates/linuxmint-13/transcribe/transcribe.desktop - linuxmint launcher for Transcribe!
 
 ## 0.2.0:
 

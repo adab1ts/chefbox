@@ -22,11 +22,16 @@
 audio_pro = node[:apps][:audio_pro]
 
 # Graphical user-interface for MMA (Musical MIDI Accompaniment)
-install_app "linuxband" do
-  profile audio_pro['profiles']['linuxband']
-end
+linuxband = audio_pro['profiles']['linuxband']
 
-launcher "linuxband" do
-  file "/linuxband/linuxband.desktop"
+if app_available? linuxband
+  install_app "linuxband" do
+    force true
+    profile linuxband
+  end
+
+  launcher "linuxband" do
+    file "/linuxband/linuxband.desktop"
+  end
 end
 

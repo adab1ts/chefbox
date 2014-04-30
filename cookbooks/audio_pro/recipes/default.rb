@@ -44,7 +44,7 @@ if selected
   # Install selected apps
   node.default[:apps] = { :audio_pro => audio_pro }
 
-  include_recipe "audio_pro::airtime" if selected.include?("airtime")
+  include_recipe "audio_pro::airtime" if selected.include?("airtime") and memory > 1.GB
   include_recipe "audio_pro::ardour" if selected.include?("ardour")
   include_recipe "audio_pro::audacity" if selected.include?("audacity")
   include_recipe "audio_pro::guitarix" if selected.include?("guitarix")
