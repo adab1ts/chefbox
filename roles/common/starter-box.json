@@ -6,7 +6,6 @@
   "env_run_lists": {},
   "run_list": [
     "role[basic-box]",
-    "audio",
     "browsers",
     "email",
     "eyecandy",
@@ -18,19 +17,14 @@
   "default_attributes": {
     "box": {
       "apps": {
-        "audio": [
-          "rhythmbox"
-        ],
         "browsers": [
           "firefox"
         ],
         "email": [
-          "geary",
-          "thunderbird"
+          "geary"
         ],
         "eyecandy": [
-          "greeter-background",
-          "nitrux-icons"
+          "greeter-background"
         ],
         "graphics": [
           "pinta",
@@ -40,10 +34,12 @@
           "fontmanager",
           "libreoffice",
           "nitro",
-          "pdfshuffler"
+          "pdfshuffler",
+          "springseed"
         ],
         "utils": [
-          "backintime"
+          "backintime",
+          "gnome-do"
         ],
         "video": [
           "mmc",
