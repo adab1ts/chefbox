@@ -22,7 +22,14 @@
 graphics_pro = node[:apps][:graphics_pro]
 
 # The GNU Image Manipulation Program
-install_app "gimp" do
-  profile graphics_pro['profiles']['gimp']
+gimp = graphics_pro['profiles']['gimp']
+
+if app_available? gimp
+  install_app "gimp" do
+    force true
+    profile gimp
+  end
+
+  package "gimp-help-es"
 end
 

@@ -19,8 +19,14 @@
 #
 
 
+graphics_pro = node[:apps][:graphics_pro]
+
 # With DraftSight, you can easily create professional CAD drawings
-support "draftsight" do
-  section "graphics_pro"
+draftsight = graphics_pro['profiles']['draftsight']
+
+if app_available? draftsight
+  support "draftsight" do
+    section "graphics_pro"
+  end
 end
 

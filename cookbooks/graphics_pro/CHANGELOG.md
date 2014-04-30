@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.4.1:
+
+* recipes/draftsight - check availability before app installation
+* recipes/gimp       - check availability before app installation
+* recipes/qcad       - check availability before app installation
+* templates/default/qcad/qcad.desktop      - single multiplatform desktop template
+* templates/linuxmint-13/qcad/qcad.desktop - removed
+* templates/ubuntu-12.04/qcad/qcad.desktop - removed
+
 ## 0.4.0:
 
 * README   - update requirements section
@@ -36,7 +45,7 @@ This file is used to list changes made in each version of graphics_pro.
 * recipes/qcad        - installs QCAD program
 * recipes/rawtherapee - installs Rawtherapee RAW file processor
 * templates/default/qcad/qcad.desktop      - ubuntu launcher for QCAD
-* templates/linuxmint-13/qcad/qcad.desktop - linux mint launcher for QCAD
+* templates/linuxmint-13/qcad/qcad.desktop - linuxmint launcher for QCAD
 
 ## 0.2.0:
 

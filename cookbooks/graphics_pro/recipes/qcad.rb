@@ -20,25 +20,31 @@
 
 
 graphics_pro = node[:apps][:graphics_pro]
-box = node[:box]
 
 # The Open Source 2D CAD
-install_app "qcad" do
-  profile graphics_pro['profiles']['qcad']
-end
+qcad = graphics_pro['profiles']['qcad']
 
-launcher "qcad" do
-  template "/qcad/qcad.desktop.erb"
-  variables(
-    :exec => "sh -c '~/#{box[:folders][:apps]}/qcad/qcad'"
-  )
-end
+if app_available? qcad
+  install_app "qcad" do
+    force true
+    profile qcad
+  end
 
-uninstaller "qcad" do
-  template "/qcad/uninstall_qcad-#{box[:lang]}.sh.erb"
-  variables(
-    :app     => "qcad",
-    :website => graphics_pro['profiles']['qcad']['website']
-  )
+  box = node[:box]
+
+  launcher "qcad" do
+    template "/qcad/qcad.desktop.erb"
+    variables(
+      :exec => "sh -c '~/#{box[:folders][:apps]}/qcad/qcad'"
+    )
+  end
+
+  uninstaller "qcad" do
+    template "/qcad/uninstall_qcad-#{box[:lang]}.sh.erb"
+    variables(
+      :app     => "qcad",
+      :website => qcad['website']
+    )
+  end
 end
 
