@@ -22,7 +22,6 @@
     "box": {
       "apps": {
         "audio": [
-          "rhythmbox",
           "spotify",
           "tomahawk"
         ],
@@ -38,11 +37,13 @@
           "thunderbird"
         ],
         "eyecandy": [
+          "faba-icons",
           "moka-icons",
-          "nitrux-icons"
+          "nitrux-icons",
+          "numix-circle-icons",
+          "numix-shine-icons",
         ],
         "fileshare": [
-          "jdownloader",
           "transmission"
         ],
         "graphics": [
@@ -59,11 +60,13 @@
           "libreoffice",
           "masterpdf",
           "nitro",
-          "pdfshuffler"
+          "pdfshuffler",
+          "springseed"
         ],
         "utils": [
           "backintime",
           "fogger",
+          "gnome-do",
           "shutter"
         ],
         "video": [
