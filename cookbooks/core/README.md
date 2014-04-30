@@ -214,8 +214,8 @@ Provides app related functions.
 
 - `app_available`     - checks if an app is available to be installed on the target os and release.
 - `app_package_name`  - retrieves the package name of an app from its profile.
+- `app_source`        - retrieves the source data of an app from its profile.
 - `App.default`       - checks if an app is installed out-of-the-box on the target os and release.
-- `App.source`        - retrieves the source data of an app from its profile.
 
 ### module Coderebels::Chefbox::Box
 

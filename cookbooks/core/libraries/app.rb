@@ -31,6 +31,10 @@ module Coderebels
         Coderebels::Chefbox::App.package_name profile
       end
 
+      def app_source(profile)
+        Coderebels::Chefbox::App.source profile
+      end
+
       def self.available?(profile, os=nil, release=nil)
         os       = Coderebels::Chefbox::Box.lsb_id unless os
         release  = Coderebels::Chefbox::Box.lsb_release unless release
