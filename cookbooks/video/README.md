@@ -13,6 +13,7 @@ The following recipes may apply:
 - `video::ogmrip`     - installs __OGMRip DVD ripper and encoder__ and suggested packages.
 - `video::openshot`   - installs __Openshot Video Editor__ and suggested packages.
 - `video::recmydesk`  - installs __recordMyDesktop audio/video capture software__ and suggested packages.
+- `video::ssr`        - installs __Simple Screen Recorder__ and suggested packages.
 - `video::vlc`        - installs __VLC Multimedia Player__ and suggested packages.
 
 

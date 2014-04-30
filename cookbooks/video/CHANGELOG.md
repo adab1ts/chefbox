@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.7.0:
+
+* recipes/default - now includes simplescreenrecorder install management
+* recipes/ssr     - manages simplescreenrecorder app installation
+
 ## 0.6.1:
 
 * recipes/default - mvc installation on x86_64 platforms only
