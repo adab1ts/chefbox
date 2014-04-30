@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of office.
 
+## 0.4.0:
+
+* recipes/default     - now includes springseed install management indeed
+* recipes/libreoffice - check app availability before installation
+* recipes/masterpdf   - check app availability before installation
+
 ## 0.3.1:
 
 * attributes/default - ms true type fonts now stored in owncloud server

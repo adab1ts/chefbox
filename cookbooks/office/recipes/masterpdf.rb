@@ -22,11 +22,16 @@
 office = node[:apps][:office]
 
 # Complete solution for view, print and edit PDF and XPS files
-install_app "masterpdf" do
-  profile office['profiles']['masterpdf']
-end
+masterpdf = office['profiles']['masterpdf']
 
-support "masterpdf" do
-  section "office"
+if app_available? masterpdf
+  install_app "masterpdf" do
+    force true
+    profile masterpdf
+  end
+
+  support "masterpdf" do
+    section "office"
+  end
 end
 

@@ -10,6 +10,7 @@ The following recipes may apply:
 - `office::masterpdf`   - installs __Master PDF Editor__ and suggested packages.
 - `office::nitro`       - installs __Nitro tasks manager__ and suggested packages.
 - `office::pdfshuffler` - installs __PDF-Shuffler__ and suggested packages.
+- `office::springseed`  - installs __Springseed__ and suggested packages.
 - `office::taskcoach`   - installs __Task Coach todo manager__ and suggested packages.
 
 

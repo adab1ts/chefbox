@@ -22,21 +22,26 @@
 office = node[:apps][:office]
 
 # Office productivity suite
-install_app "libreoffice" do
-  profile office['profiles']['libreoffice']
-end
+libreoffice = office['profiles']['libreoffice']
 
-package "libreoffice-l10n-ca"
-package "libreoffice-help-ca"
-package "libreoffice-l10n-es"
-package "libreoffice-help-es"
+if app_available? libreoffice
+  install_app "libreoffice" do
+    force true
+    profile libreoffice
+  end
 
-if node[:box][:lang] == 'ca'
-  package "mythes-ca"
-  package "hyphen-ca"
-end
+  package "libreoffice-l10n-ca"
+  package "libreoffice-help-ca"
+  package "libreoffice-l10n-es"
+  package "libreoffice-help-es"
 
-support "libreoffice" do
-  section "office"
+  if node[:box][:lang] == 'ca'
+    package "mythes-ca"
+    package "hyphen-ca"
+  end
+
+  support "libreoffice" do
+    section "office"
+  end
 end
 
