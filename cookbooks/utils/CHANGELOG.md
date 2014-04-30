@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.10.0:
+
+* recipes/default  - now includes gnome-do install management
+* recipes/furius   - check availability before app installation
+* recipes/gnome-do - manages gnome-do app installation
+
 ## 0.9.0:
 
 * recipes/default    - now includes backintime install management
@@ -42,16 +48,16 @@ This file is used to list changes made in each version of utils.
 
 ## 0.4.0:
 
-* recipe/default - now checks for section presence in box profile's apps list before proceed
+* recipes/default - now checks for section presence in box profile's apps list before proceed
 
 ## 0.3.0:
 
-* recipe/furius - delivers first steps documentation concerning furius and ISO images management
+* recipes/furius - delivers first steps documentation concerning furius and ISO images management
 
 ## 0.2.0:
 
-* recipe/hardinfo - manages hardinfo app installation
-* recipe/p7zip    - manages p7zip-full app installation
+* recipes/hardinfo - manages hardinfo app installation
+* recipes/p7zip    - manages p7zip-full app installation
 
 ## 0.1.0:
 

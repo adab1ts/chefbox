@@ -41,6 +41,7 @@ if selected
   include_recipe "utils::backintime" if selected.include?("backintime")
   include_recipe "utils::fogger" if selected.include?("fogger")
   include_recipe "utils::furius" if selected.include?("furius")
+  include_recipe "utils::gnome-do" if selected.include?("gnome-do")
   include_recipe "utils::hardinfo" if selected.include?("hardinfo")
   include_recipe "utils::p7zip" if selected.include?("p7zip")
   include_recipe "utils::shutter" if selected.include?("shutter")

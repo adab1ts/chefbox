@@ -22,35 +22,40 @@
 utils = node[:apps][:utils]
 
 # ISO, IMG, BIN, MDF and NRG image management utility
-install_app "furius" do
-  profile utils['profiles']['furius']
-end
+furius = utils['profiles']['furius']
 
-box = node[:box]
-
-box[:users].each do |username, usr|
-  furius_dir = "#{usr[:home]}/.furiusisomount"
-
-  directory_tree furius_dir do
-    exclude usr[:home]
-    owner username
-    group usr[:group]
-    mode 00755
+if app_available? furius
+  install_app "furius" do
+    force true
+    profile furius
   end
 
-  template "#{furius_dir}/settings.cfg" do
-    source "/furius/settings.cfg.erb"
-    owner username
-    group usr[:group]
-    mode 0644
-    backup false
-    variables(
-      :mount_point => "#{usr[:home]}/#{box[:folders][:desktop]}"
-    )
-  end
-end
+  box = node[:box]
 
-support "furius" do
-  section "utils"
+  box[:users].each do |username, usr|
+    furius_dir = "#{usr[:home]}/.furiusisomount"
+
+    directory_tree furius_dir do
+      exclude usr[:home]
+      owner username
+      group usr[:group]
+      mode 00755
+    end
+
+    template "#{furius_dir}/settings.cfg" do
+      source "/furius/settings.cfg.erb"
+      owner username
+      group usr[:group]
+      mode 0644
+      backup false
+      variables(
+        :mount_point => "#{usr[:home]}/#{box[:folders][:desktop]}"
+      )
+    end
+  end
+
+  support "furius" do
+    section "utils"
+  end
 end
 
