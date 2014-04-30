@@ -26,62 +26,65 @@ package "dkms"
 
 
 ## Installation
-
-box  = node[:box]
-vms  = node[:apps][:vms]
-vbox = vms['profiles']['virtualbox']
-
-vbox_users = box[:users].select { |_, usr| not usr[:guest] }.map { |username, _| username }
+vms = node[:apps][:vms]
 
 # Oracle VM VirtualBox
-install_app "virtualbox" do
-  profile vbox
-end
+vbox = vms['profiles']['virtualbox']
 
-vbox_users.each do |username|
-  group "vboxusers" do
-    members username
-    append true
-    action :nothing
-    subscribes :modify, resources("package[virtualbox]"), :immediately
+if app_available? vbox
+  install_app "virtualbox" do
+    force true
+    profile vbox
   end
-end
 
-vms_vbox_extpack "virtualbox" do
-  package vbox['package']
-  action :nothing
-  subscribes :install, resources("package[virtualbox]"), :immediately
-end
+  box = node[:box]
+  vbox_users = box[:users].select { |_, usr| not usr[:guest] }.map { |username, _| username }
 
-# VirtualBox autostart service
-cookbook_file "vbox-defaults" do
-  path "/etc/default/virtualbox"
-  source "/virtualbox/virtualbox"
-  mode 0644
-  backup false
-end
+  vbox_users.each do |username|
+    group "vboxusers" do
+      members username
+      append true
+      action :nothing
+      subscribes :modify, resources("package[virtualbox]"), :immediately
+    end
+  end
 
-directory "/etc/vbox" do
-  group "vboxusers"
-  mode 01775
-end
+  vms_vbox_extpack "virtualbox" do
+    package vbox['package']
+    action :nothing
+    subscribes :install, resources("package[virtualbox]"), :immediately
+  end
 
-template "vbox-autostart-cfg" do
-  path "/etc/vbox/autostart.cfg"
-  source "/virtualbox/autostart.cfg.erb"
-  mode 0644
-  backup false
-  variables(
-    :users => vbox_users
-  )
-end
+  # VirtualBox autostart service
+  cookbook_file "vbox-defaults" do
+    path "/etc/default/virtualbox"
+    source "/virtualbox/virtualbox"
+    mode 0644
+    backup false
+  end
 
-bash "vbox-autostart-service" do
-  code <<-EOH
-    update-rc.d -f vboxautostart-service remove
-    update-rc.d vboxautostart-service start 25 2 3 4 5 . stop 75 0 1 6 .
-    EOH
-  action :nothing
-  subscribes :run, resources("template[vbox-autostart-cfg]"), :immediately
+  directory "/etc/vbox" do
+    group "vboxusers"
+    mode 01775
+  end
+
+  template "vbox-autostart-cfg" do
+    path "/etc/vbox/autostart.cfg"
+    source "/virtualbox/autostart.cfg.erb"
+    mode 0644
+    backup false
+    variables(
+      :users => vbox_users
+    )
+  end
+
+  bash "vbox-autostart-service" do
+    code <<-EOH
+      update-rc.d -f vboxautostart-service remove
+      update-rc.d vboxautostart-service start 25 2 3 4 5 . stop 75 0 1 6 .
+      EOH
+    action :nothing
+    subscribes :run, resources("template[vbox-autostart-cfg]"), :immediately
+  end
 end
 
