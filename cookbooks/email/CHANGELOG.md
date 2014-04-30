@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of email.
 
+## 0.4.1:
+
+* recipes/thunderbird - check app availability before installation
+
 ## 0.4.0:
 
 * README   - update requirements section and copyright note

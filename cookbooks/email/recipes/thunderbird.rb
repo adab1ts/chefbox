@@ -22,14 +22,19 @@
 email = node[:apps][:email]
 
 # Email, RSS and newsgroup client with integrated spam filter
-install_app "thunderbird" do
-  profile email['profiles']['thunderbird']
-end
+thunderbird = email['profiles']['thunderbird']
 
-package "thunderbird-locale-ca"
-package "thunderbird-locale-es"
+if app_available? thunderbird
+  install_app "thunderbird" do
+    force true
+    profile email['profiles']['thunderbird']
+  end
 
-support "thunderbird" do
-  section "email"
+  package "thunderbird-locale-ca"
+  package "thunderbird-locale-es"
+
+  support "thunderbird" do
+    section "email"
+  end
 end
 
