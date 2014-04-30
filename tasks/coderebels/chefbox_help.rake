@@ -176,11 +176,11 @@ namespace :coderebels do
           ARGS: user      => name of the default user of the target node
                 nodename  => name of the target node
                 ip        => ip address of the target node
-                platform *=> os platform (mint, [ubuntu], ...)
+                platform *=> os platform (linuxmint, [ubuntu], ...)
                 arch     *=> processor arch ([i686] or x86_64)
 
       EXAMPLES: rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195]
-                rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195,mint]
+                rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195,linuxmint]
                 rake coderebels:bootstrap[dummy,OOP-0K001-pc1,192.168.1.195,ubuntu,x86_64]
       EOH
     when "info"
@@ -217,7 +217,7 @@ namespace :coderebels do
 
       if profile
         output = <<-EOH
-             APP: #{profile["package"]}
+             APP: #{app}
             DESC: #{profile["description"]}
          WEBSITE: #{profile["website"]}
         EOH

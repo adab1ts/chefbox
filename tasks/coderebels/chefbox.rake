@@ -375,7 +375,7 @@ namespace :coderebels do
   task :bootstrap, [:user, :nodename, :ip, :platform, :arch] do |t, args|
     args.with_defaults(:platform => "ubuntu", :arch => "i686")
     raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
-    raise "Allowed values for platform are: ubuntu, mint" if (args.platform and not %w[ubuntu mint].include? args.platform)
+    raise "Allowed values for platform are: ubuntu, linuxmint" if (args.platform and not %w[ubuntu linuxmint].include? args.platform)
     raise "Allowed values for arch are: i686, x86_64" if (args.arch and not %w[i686 x86_64].include? args.arch)
 
     user     = args.user
@@ -390,7 +390,7 @@ namespace :coderebels do
 
     FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
-    if platform == "mint"
+    if platform == "linuxmint"
       url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
       cmd = "curl -L '#{url}' > '/tmp/chef_client.deb' ; sudo dpkg -i '/tmp/chef_client.deb'"
 
@@ -409,7 +409,7 @@ namespace :coderebels do
   task :converge, [:user, :nodename, :ip, :platform, :arch] do |t, args|
     args.with_defaults(:platform => "ubuntu", :arch => "i686")
     raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
-    raise "Allowed values for platform are: ubuntu, mint" if (args.platform and not %w[ubuntu mint].include? args.platform)
+    raise "Allowed values for platform are: ubuntu, linuxmint" if (args.platform and not %w[ubuntu linuxmint].include? args.platform)
     raise "Allowed values for arch are: i686, x86_64" if (args.arch and not %w[i686 x86_64].include? args.arch)
 
     user     = args.user
@@ -424,7 +424,7 @@ namespace :coderebels do
 
     FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
 
-    if platform == "mint"
+    if platform == "linuxmint"
       url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
       cmd = "curl -L '#{url}' > '/tmp/chef_client.deb' ; sudo dpkg -i '/tmp/chef_client.deb'"
 
