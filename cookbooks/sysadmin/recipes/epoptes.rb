@@ -22,19 +22,24 @@
 sysadmin = node[:apps][:sysadmin]
 
 # Computer lab management tool
-install_app "epoptes" do
-  profile sysadmin['profiles']['epoptes']
-end
+epoptes = sysadmin['profiles']['epoptes']
 
-node[:box][:users].select{ |_, usr| not usr[:guest] }.each do |username, _|
-  group "epoptes" do
-    members username
-    append true
-    action :modify
+if app_available? epoptes
+  install_app "epoptes" do
+    force true
+    profile epoptes
   end
-end
 
-support "epoptes" do
-  section "sysadmin"
+  node[:box][:users].select{ |_, usr| not usr[:guest] }.each do |username, _|
+    group "epoptes" do
+      members username
+      append true
+      action :modify
+    end
+  end
+
+  support "epoptes" do
+    section "sysadmin"
+  end
 end
 

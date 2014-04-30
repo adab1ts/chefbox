@@ -22,13 +22,18 @@
 sysadmin = node[:apps][:sysadmin]
 
 # Computer lab management tool
-install_app "epoptesclient" do
-  profile sysadmin['profiles']['epoptesclient']
-end
+epoptesclient = sysadmin['profiles']['epoptesclient']
 
-cookbook_file "/etc/default/epoptes-client" do
-  source "/epoptes/epoptes-client"
-  mode 0644
-  backup false
+if app_available? epoptesclient
+  install_app "epoptesclient" do
+    force true
+    profile epoptesclient
+  end
+
+  cookbook_file "/etc/default/epoptes-client" do
+    source "/epoptes/epoptes-client"
+    mode 0644
+    backup false
+  end
 end
 

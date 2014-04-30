@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of sysadmin.
 
+## 0.2.1:
+
+* recipes/epoptes       - check availability before app installation
+* recipes/epoptesclient - check availability before app installation
+
 ## 0.2.0:
 
 * recipes/default   - now includes speedtest-cli install management
