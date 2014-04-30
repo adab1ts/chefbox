@@ -22,25 +22,30 @@
 devel = node[:apps][:devel]
 
 # Fast, scalable, distributed revision control system
-install_app "git" do
-  profile devel['profiles']['git']
-end
+git = devel['profiles']['git']
 
-dotfiles_folder = node[:box][:dotfiles][:folder]
+if app_available? git
+  install_app "git" do
+    force true
+    profile git
+  end
 
-dev_files = [
-  "#{dotfiles_folder}/gitconfig",
-  "#{dotfiles_folder}/zsh/prompt.d/prompt_zuzust_setup"
-]
+  dotfiles_folder = node[:box][:dotfiles][:folder]
 
-dev_links = [
-  { :from => '.gitconfig', :to => "#{dotfiles_folder}/gitconfig" }
-]
+  dev_files = [
+    "#{dotfiles_folder}/gitconfig",
+    "#{dotfiles_folder}/zsh/prompt.d/prompt_zuzust_setup"
+  ]
 
-bootstrap "git" do
-  files dev_files
-  links dev_links
-  aliases true
-  functions true
+  dev_links = [
+    { :from => '.gitconfig', :to => "#{dotfiles_folder}/gitconfig" }
+  ]
+
+  bootstrap "git" do
+    files dev_files
+    links dev_links
+    aliases true
+    functions true
+  end
 end
 

@@ -2,10 +2,16 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.5.1:
+
+* recipes/git  - check availability before app installation
+* recipes/juju - check availability before app installation
+* recipes/zsh  - check availability before app installation
+
 ## 0.5.0:
 
-* recipe/default  - now includes shelr install management
-* recipe/shelr    - manage shelr installation
+* recipes/default  - now includes shelr install management
+* recipes/shelr    - manage shelr installation
 
 ## 0.4.1:
 

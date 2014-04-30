@@ -22,44 +22,49 @@
 devel = node[:apps][:devel]
 
 # shell with lots of features
-install_app "zsh" do
-  profile devel['profiles']['zsh']
-end
+zsh = devel['profiles']['zsh']
 
-dotfiles_folder = node[:box][:dotfiles][:folder]
+if app_available? zsh
+  install_app "zsh" do
+    force true
+    profile zsh
+  end
 
-dev_folders = [
-  "#{dotfiles_folder}/zsh",
-  "#{dotfiles_folder}/zsh/aliases.d",
-  "#{dotfiles_folder}/zsh/completion.d",
-  "#{dotfiles_folder}/zsh/env.d",
-  "#{dotfiles_folder}/zsh/functions.d",
-  "#{dotfiles_folder}/zsh/prompt.d",
-]
+  dotfiles_folder = node[:box][:dotfiles][:folder]
 
-dev_files = [
-  "#{dotfiles_folder}/zsh/aliases",
-  "#{dotfiles_folder}/zsh/config",
-  "#{dotfiles_folder}/zsh/env",
-  "#{dotfiles_folder}/zsh/functions",
-  "#{dotfiles_folder}/zsh/aliases.d/README.zal",
-  "#{dotfiles_folder}/zsh/env.d/README.zenv",
-  "#{dotfiles_folder}/zsh/functions.d/README.zfn",
-  "#{dotfiles_folder}/zsh/prompt.d/prompt_zuzust_setup"
-]
+  dev_folders = [
+    "#{dotfiles_folder}/zsh",
+    "#{dotfiles_folder}/zsh/aliases.d",
+    "#{dotfiles_folder}/zsh/completion.d",
+    "#{dotfiles_folder}/zsh/env.d",
+    "#{dotfiles_folder}/zsh/functions.d",
+    "#{dotfiles_folder}/zsh/prompt.d",
+  ]
 
-dev_templates = [
-  { :file => "#{dotfiles_folder}/zshrc", :vars => { :dotfiles_dir => dotfiles_folder } }
-]
+  dev_files = [
+    "#{dotfiles_folder}/zsh/aliases",
+    "#{dotfiles_folder}/zsh/config",
+    "#{dotfiles_folder}/zsh/env",
+    "#{dotfiles_folder}/zsh/functions",
+    "#{dotfiles_folder}/zsh/aliases.d/README.zal",
+    "#{dotfiles_folder}/zsh/env.d/README.zenv",
+    "#{dotfiles_folder}/zsh/functions.d/README.zfn",
+    "#{dotfiles_folder}/zsh/prompt.d/prompt_zuzust_setup"
+  ]
 
-dev_links = [
-  { :from => '.zshrc', :to => "#{dotfiles_folder}/zshrc" }
-]
+  dev_templates = [
+    { :file => "#{dotfiles_folder}/zshrc", :vars => { :dotfiles_dir => dotfiles_folder } }
+  ]
 
-bootstrap "zsh" do
-  folders dev_folders
-  files dev_files
-  templates dev_templates
-  links dev_links
+  dev_links = [
+    { :from => '.zshrc', :to => "#{dotfiles_folder}/zshrc" }
+  ]
+
+  bootstrap "zsh" do
+    folders dev_folders
+    files dev_files
+    templates dev_templates
+    links dev_links
+  end
 end
 
