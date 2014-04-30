@@ -125,11 +125,13 @@
           "thunderbird"
         ],
         "eyecandy": [
-          "faenza-icons",
-          "faience-icons",
+          "faba-icons",
           "moka-icons",
+          "moka-theme",
           "nitrux-icons",
-          "numix-icons",
+          "numix-circle-icons",
+          "numix-shine-icons",
+          "orchis-theme",
           "unsettings"
         ],
         "fileshare": [
@@ -171,6 +173,7 @@
           "masterpdf",
           "nitro",
           "pdfshuffler",
+          "springseed",
           "taskcoach"
         ],
         "security": [
@@ -192,6 +195,7 @@
           "backintime",
           "fogger",
           "furius",
+          "gnome-do",
           "hardinfo",
           "p7zip",
           "shutter"
@@ -206,11 +210,13 @@
           "ogmrip",
           "openshot",
           "recmydesk",
+          "ssr",
           "vlc"
         ],
         "video_pro": [
           "avidemux",
-          "cinelerra"
+          "cinelerra",
+          "shotcut"
         ],
         "vms": [
           "virtualbox"
