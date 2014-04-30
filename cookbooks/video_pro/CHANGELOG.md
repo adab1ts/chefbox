@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of video_pro.
 
+## 0.3.0:
+
+* recipes/default - now includes shotcut install management indeed
+* recipes/shotcut - check availability before app installation
+* templates/default/shotcut/shotcut.desktop      - single multiplatform desktop template
+* templates/linuxmint-13/shotcut/shotcut.desktop - removed
+* templates/ubuntu-12.04/shotcut/shotcut.desktop - removed
+
 ## 0.2.0:
 
 * README   - update requirements section

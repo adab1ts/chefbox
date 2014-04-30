@@ -6,6 +6,7 @@ The following recipes may apply:
 - `video_pro::default`   - purges unselected packages and includes recipes as nedeed.
 - `video_pro::avidemux`  - installs __Avidemux free video editor__ and suggested packages.
 - `video_pro::cinelerra` - installs __Cinelerra audio/video authoring tool__ and suggested packages.
+- `video_pro::shotcut`   - installs __Shotcut video editor__ and suggested packages.
 
 
 ## Requirements

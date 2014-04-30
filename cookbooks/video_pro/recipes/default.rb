@@ -40,6 +40,6 @@ if selected
 
   include_recipe "video_pro::avidemux" if selected.include?("avidemux")
   include_recipe "video_pro::cinelerra" if selected.include?("cinelerra")
-  # include_recipe "video_pro::shotcut" if selected.include?("shotcut")
+  include_recipe "video_pro::shotcut" if selected.include?("shotcut")
 end
 

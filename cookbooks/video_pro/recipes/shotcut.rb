@@ -20,25 +20,31 @@
 
 
 video_pro = node[:apps][:video_pro]
-box = node[:box]
 
 # Shotcut is a free, open source, cross-platform video editor
-install_app "shotcut" do
-  profile video_pro['profiles']['shotcut']
-end
+shotcut = video_pro['profiles']['shotcut']
 
-launcher "shotcut" do
-  template "/shotcut/shotcut.desktop.erb"
-  variables(
-    :exec => %{sh -c '~/#{box[:folders][:apps]}/shotcut/Shotcut.app/shotcut "%F"'}
-  )
-end
+if available_app? shotcut
+  install_app "shotcut" do
+    force true
+    profile shotcut
+  end
 
-uninstaller "shotcut" do
-  template "/shotcut/uninstall_shotcut-#{box[:lang]}.sh.erb"
-  variables(
-    :app     => "shotcut",
-    :website => video_pro['profiles']['shotcut']['website']
-  )
+  box = node[:box]
+
+  launcher "shotcut" do
+    template "/shotcut/shotcut.desktop.erb"
+    variables(
+      :exec => %{sh -c '~/#{box[:folders][:apps]}/shotcut/Shotcut.app/shotcut "%F"'}
+    )
+  end
+
+  uninstaller "shotcut" do
+    template "/shotcut/uninstall_shotcut-#{box[:lang]}.sh.erb"
+    variables(
+      :app     => "shotcut",
+      :website => shotcut['website']
+    )
+  end
 end
 
