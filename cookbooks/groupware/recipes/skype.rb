@@ -22,11 +22,16 @@
 groupware = node[:apps][:groupware]
 
 # Client for Skype VOIP and instant messaging service
-install_app "skype" do
-  profile groupware['profiles']['skype']
-end
+skype = groupware['profiles']['skype']
 
-support "skype" do
-  section "groupware"
+if app_available? skype
+  install_app "skype" do
+    force true
+    profile skype
+  end
+
+  support "skype" do
+    section "groupware"
+  end
 end
 

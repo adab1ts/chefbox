@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.5.1:
+
+* recipes/skype - check availability before app installation
+
 ## 0.5.0:
 
 * README   - update requirements section
