@@ -37,7 +37,7 @@
         "distro": {
           "package": "libreoffice",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy", "libreoffice-style-sifr"],
+          "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy", "libreoffice-style-sifr"]
         },
         "ppa": {
           "package": "libreoffice",
