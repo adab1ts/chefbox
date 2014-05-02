@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.23.1:
+
+* recipes/end - refactor platform support
+
 ## 0.23.0:
 
 * recipes/begin         - install ruby shadow library for the target platform

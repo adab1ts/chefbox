@@ -26,12 +26,15 @@ end
 
 
 ## First steps documentation
+platform_id = "#{platform}-#{platform_version}-#{platform_desktop}"
 
-support platform do
-  section "global"
+support platform_id do
+  section "guide"
+  only_for ["linuxmint", "ubuntu"]
 end
 
 support "sc" do
   section "base"
+  only_for ["linuxmint", "ubuntu"]
 end
 
