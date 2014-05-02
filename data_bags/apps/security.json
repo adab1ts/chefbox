@@ -52,7 +52,7 @@
         },
         "deb": {
           "package": "prey",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["traceroute"],
           "dependencies": ["mpg123", "scrot", "streamer"],
           "meta": {
