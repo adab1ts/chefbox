@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.8.1:
+
+* recipes/unsettings - deliver unsettings support to ubuntu platform only again
+
 ## 0.8.0:
 
 * recipes/default            - now includes some new icons and gtk themes install management

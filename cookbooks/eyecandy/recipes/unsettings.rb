@@ -32,6 +32,7 @@ if app_available? unsettings
 
   support "unsettings" do
     section "eyecandy"
+    only_for ["ubuntu"]
   end
 end
 
