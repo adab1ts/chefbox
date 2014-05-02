@@ -24,7 +24,7 @@
           "maintainer": "Jim Nelson <jim@yorba.org>",
           "meta": {
             "repo_name": "tombeckmann-geary",
-            "uri": "ppa:tombeckmann/geary",
+            "uri": "ppa:tombeckmann/geary"
           }
         }
       }
