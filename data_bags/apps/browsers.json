@@ -35,13 +35,22 @@
       "platforms": {
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "ubuntu-14.04": { "source": "distro-trusty" }
       },
       "sources": {
         "distro": {
           "package": "chromium-browser",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"]
+        },
+        "distro-trusty": {
+          "package": "chromium-browser",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": [
+            "chromium-browser-l10n",
+            "chromium-codecs-ffmpeg-extra",
+            "pepperflashplugin-nonfree"
+          ]
         }
       }
     },
@@ -56,7 +65,8 @@
       "sources": {
         "distro": {
           "package": "firefox",
-          "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>"
+          "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
+          "suggested": ["flashplugin-installer"]
         }
       }
     },
