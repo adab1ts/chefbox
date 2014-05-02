@@ -24,34 +24,38 @@ define :support do
   not_for  = params[:not_for]
   platform = Coderebels::Chefbox::Box.lsb_id
 
-  unless (only_for and not only_for.include?(platform)) or
-         (not_for and not_for.include?(platform))
-    box = node[:box]
-    support = data_bag_item('resources', "support-#{platform}")
+  unless (not_for and not_for.include?(platform)) or
+         (only_for and not only_for.include?(platform))
+    target  = only_for ? platform : 'common'
+    support = data_bag_item('support', target)
 
-    section  = support[params[:section]]
-    resource = section[params[:name]][box[:lang]]
+    section = support[params[:section]]
 
-    box[:support][:users].each do |username|
-      usr = box[:users][username]
+    if section[params[:name]]
+      box = node[:box]
+      resource = section[params[:name]][box[:lang]]
 
-      support_folder = "#{usr[:home]}/#{box[:support][:folder]}/#{params[:section]}"
-      support_file   = "#{support_folder}/#{resource['file']}"
+      box[:support][:users].each do |username|
+        usr = box[:users][username]
 
-      directory_tree support_folder do
-        exclude usr[:home]
-        owner username
-        group usr[:group]
-        mode 00755
-      end
+        support_folder = "#{usr[:home]}/#{box[:support][:folder]}/#{params[:section]}"
+        support_file   = "#{support_folder}/#{resource['file']}"
 
-      remote_file support_file do
-        source resource['url']
-        checksum resource['sha256']
-        owner username
-        group usr[:group]
-        mode 00644
-        backup false
+        directory_tree support_folder do
+          exclude usr[:home]
+          owner username
+          group usr[:group]
+          mode 00755
+        end
+
+        remote_file support_file do
+          source resource['url']
+          checksum resource['sha256']
+          owner username
+          group usr[:group]
+          mode 00644
+          backup false
+        end
       end
     end
   end

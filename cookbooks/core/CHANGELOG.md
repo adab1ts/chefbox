@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.2:
+
+* definitions/support - check if resource exists before downloading and minor refactoring 
+
 ## 1.0.1:
 
 * libraries/app - new public method to retrieve the source data of an app

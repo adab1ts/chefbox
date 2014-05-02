@@ -1,0 +1,83 @@
+{
+  "id": "ubuntu",
+  "base": {
+    "apt-file": {
+      "ca": {
+        "file": "apt-file-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=db14a6f4556a799e405ac08ed672c13c&download",
+        "sha256": "3af88e71c632c5e862b74611bdde63ab9d33283cca2116f54d80db58faf76070"
+      },
+      "es": {
+        "file": "apt-file-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=25893b80b69c23dd8f4cf23e152d343a&download",
+        "sha256": "856986d702625edcf326a9fce04ec1d17544320d542daac6d8c5e594618336a9"
+      }
+    },
+    "sc": {
+      "ca": {
+        "file": "sc-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=29a9f5d3e7e23a0a03e755a7b31e5ff3&download",
+        "sha256": "dfe2695d4de21d86cd3cff3e6f51fe18c42665993a692f782a6135f89849d0f3"
+      },
+      "es": {
+        "file": "sc-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=e86bb0d84e103793a56d84cb6db901fd&download",
+        "sha256": "77aa3a7395c2a143bcc2fac9ddb46b4cea6e5fe71782fe5c63c7e6af28811b89"
+      }
+    }
+  },
+  "eyecandy": {
+    "unsettings": {
+      "ca": {
+        "file": "unsettings-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=ee5f0e48ab14622ca16627494ea207b5&download",
+        "sha256": "19a6a02346ff1e834dd7dd3f0e684f099eb62021e2cceb213523bc2e51fe7c24"
+      },
+      "es": {
+        "file": "unsettings-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=c6fb85d60f26a25cfdced06803701240&download",
+        "sha256": "c33f7a8c045f7e249642548ffa91e4e38fdb1012f450131d5b3baa05937a5afc"
+      }
+    }
+  },
+  "guide": {
+    "ubuntu-12.04-unity": {
+      "ca": {
+        "file": "Ubuntu_12.04-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=a7462570740ca598e49af837fa49d716&download",
+        "sha256": "c7b20c23b3c50f12529b4c6a24905105c8b57f8cd44d5556df267db1da366992"
+      },
+      "es": {
+        "file": "Ubuntu_12.04-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=a7462570740ca598e49af837fa49d716&download",
+        "sha256": "c7b20c23b3c50f12529b4c6a24905105c8b57f8cd44d5556df267db1da366992"
+      }
+    }
+  },
+  "indicators": {
+    "screensaver": {
+      "ca": {
+        "file": "screensaver-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=ed8603938b43de5147a4a4956026b0ce&download",
+        "sha256": "b9d183bae9e4ea784e8deb77ba15fb4d1edc4899d62ca9b276ad37b6b5873de9"
+      },
+      "es": {
+        "file": "screensaver-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=ed8603938b43de5147a4a4956026b0ce&download",
+        "sha256": "b9d183bae9e4ea784e8deb77ba15fb4d1edc4899d62ca9b276ad37b6b5873de9"
+      }
+    },
+    "weather": {
+      "ca": {
+        "file": "weather-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=cbcbe9b09e46c114f98bdf64aeb5273f&download",
+        "sha256": "580e22d2b562a71c466c8ac527f151e154ac18eba6fef7c9535db8ea25c7e411"
+      },
+      "es": {
+        "file": "weather-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=cbcbe9b09e46c114f98bdf64aeb5273f&download",
+        "sha256": "580e22d2b562a71c466c8ac527f151e154ac18eba6fef7c9535db8ea25c7e411"
+      }
+    }
+  }
+}

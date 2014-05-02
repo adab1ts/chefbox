@@ -95,7 +95,7 @@ namespace :coderebels do
       FileList["data_bags/apps/*"].each { |dbi| sh %{knife data bag from file apps #{File.basename(dbi)}} }
       FileList["data_bags/backgrounds/*"].each { |dbi| sh %{knife data bag from file backgrounds #{File.basename(dbi)}} }
       FileList["data_bags/global/*"].each { |dbi| sh %{knife data bag from file global #{File.basename(dbi)}} }
-      FileList["data_bags/resources/*"].each { |dbi| sh %{knife data bag from file resources #{File.basename(dbi)}} }
+      FileList["data_bags/support/*"].each { |dbi| sh %{knife data bag from file support #{File.basename(dbi)}} }
       sh %{knife cookbook upload -a}
     end
   end

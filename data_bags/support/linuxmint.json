@@ -1,0 +1,31 @@
+{
+  "id": "linuxmint",
+  "base": {
+    "sc": {
+      "ca": {
+        "file": "sc-ca.pdf",
+        "url": "https://ocserver/public.php?service=files&t=29a9f5d3e7e23a0a03e755a7b31e5ff3&download",
+        "sha256": "dfe2695d4de21d86cd3cff3e6f51fe18c42665993a692f782a6135f89849d0f3"
+      },
+      "es": {
+        "file": "sc-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=e86bb0d84e103793a56d84cb6db901fd&download",
+        "sha256": "77aa3a7395c2a143bcc2fac9ddb46b4cea6e5fe71782fe5c63c7e6af28811b89"
+      }
+    }
+  },
+  "guide": {
+    "linuxmint-13-mate": {
+      "ca": {
+        "file": "LinuxMint_13-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=1d67c18f69e083cb64ef3f84cd76b8b4&download",
+        "sha256": "c947807be13a8b84132aabf7a847aa3115865fc2160fe42103823926f96cd39b"
+      },
+      "es": {
+        "file": "LinuxMint_13-es.pdf",
+        "url": "https://ocserver/public.php?service=files&t=1d67c18f69e083cb64ef3f84cd76b8b4&download",
+        "sha256": "c947807be13a8b84132aabf7a847aa3115865fc2160fe42103823926f96cd39b"
+      }
+    }
+  }
+}

@@ -1,29 +1,15 @@
 {
-  "id": "support-mint",
-  "base": {
-    "sc": {
-      "ca": {
-        "file": "sc-ca.pdf",
-        "url": "https://ocserver/public.php?service=files&t=767abd9ac30b53b796f08e0ec93f8c15&download",
-        "sha256": "dfe2695d4de21d86cd3cff3e6f51fe18c42665993a692f782a6135f89849d0f3"
-      },
-      "es": {
-        "file": "sc-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=93938c821416922e3048d96eaccf1737&download",
-        "sha256": "77aa3a7395c2a143bcc2fac9ddb46b4cea6e5fe71782fe5c63c7e6af28811b89"
-      }
-    }
-  },
+  "id": "common",
   "browsers": {
     "firefox": {
       "ca": {
         "file": "firefox-ca.pdf",
-        "url": "https://ocserver/public.php?service=files&t=fe7c94a34860ddbba8d5bb09d373b1e4&download",
+        "url": "https://ocserver/public.php?service=files&t=4ac28a5640875358aba4c9b7a4ec7e71&download",
         "sha256": "107397125956b45a0dec1791640b5842cf77222fc22a6ab8e9e491beac98bd42"
       },
       "es": {
         "file": "firefox-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=508a71682eddf7d9e24193a3acb01fd3&download",
+        "url": "https://ocserver/public.php?service=files&t=276a6c8d2c8c84ee8fe9af2f76ff10d9&download",
         "sha256": "4ddee35ae5af8fb20210eac74a570ba53ffc61515789cc6f7c7108126e906c6e"
       }
     }
@@ -32,27 +18,13 @@
     "thunderbird": {
       "ca": {
         "file": "thunderbird-ca.pdf",
-        "url": "https://ocserver/public.php?service=files&t=21ecc9ee6a2ea9705f138001be166242&download",
+        "url": "https://ocserver/public.php?service=files&t=0d21a1d0f6c6727b19b326dc130162b0&download",
         "sha256": "8034955ac5c89068417953fd6c552b4d39e6e87f2c2c2f3718c3a0a6f6684924"
       },
       "es": {
         "file": "thunderbird-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=394075d975b6a1b95f61b9ae1b8cfd77&download",
+        "url": "https://ocserver/public.php?service=files&t=1fa83e63d959d6cb8b10bf044a51787d&download",
         "sha256": "e08ddaf9b80325af61bf79df3220f66ec046f0de8d5b96f7a85053bd0002d3c2"
-      }
-    }
-  },
-  "global": {
-    "mint": {
-      "ca": {
-        "file": "LinuxMint_13-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=dea54469fb775859793b091eec598f9d&download",
-        "sha256": "c947807be13a8b84132aabf7a847aa3115865fc2160fe42103823926f96cd39b"
-      },
-      "es": {
-        "file": "LinuxMint_13-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=dea54469fb775859793b091eec598f9d&download",
-        "sha256": "c947807be13a8b84132aabf7a847aa3115865fc2160fe42103823926f96cd39b"
       }
     }
   },
@@ -60,12 +32,12 @@
     "draftsight": {
       "ca": {
         "file": "draftsight-ca.pdf",
-        "url": "https://ocserver/public.php?service=files&t=a8349fbbc0b75a4a0bc604a0cf585ad9&download",
+        "url": "https://ocserver/public.php?service=files&t=bc791bcf68f4b1eb62d06028ca7b18ec&download",
         "sha256": "dcd2a5e627d3e4449184aa47eb1bb288f0a793bc5466aa7ac72171cd07917032"
       },
       "es": {
         "file": "draftsight-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=717765177847ea48541f7666ac0ef739&download",
+        "url": "https://ocserver/public.php?service=files&t=6d66e74801ad3f1741e2a481b7c46025&download",
         "sha256": "acab1b2f57e7b75cc46bb4e5859611255b44556990f89ec61b4c8fbc34b1720a"
       }
     }
@@ -74,12 +46,12 @@
     "skype": {
       "ca": {
         "file": "skype-ca.pdf",
-        "url": "https://ocserver/public.php?service=files&t=ef7cd21168521174d22432784bc95366&download",
+        "url": "https://ocserver/public.php?service=files&t=3ca5f3ec29858126527c9ab59b88c436&download",
         "sha256": "170dd6a3966c4f9e164aa906b1f15a3edccd07b8e6041c077e478d2dcd5a180c"
       },
       "es": {
         "file": "skype-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=421e58564ced14e5e1b227ee7f0da492&download",
+        "url": "https://ocserver/public.php?service=files&t=767fe2bc117a74cc0e6818abc448c7fa&download",
         "sha256": "229b29f94887b2db02448b393c7364a6720a00368be9ecf1533a1d92a2329b69"
       }
     }
@@ -88,12 +60,12 @@
     "backup": {
       "ca": {
         "file": "backup-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=02b3785edca2ee5d6d6753af154a488d&download",
+        "url": "https://ocserver/public.php?service=files&t=8b8f62dfda52e58939fcf3b2d231c9f1&download",
         "sha256": "a7a9cb7abc913655009d1141a21b6c535da5101d1f4dad8292c5604b19b8a1fb"
       },
       "es": {
         "file": "backup-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=02b3785edca2ee5d6d6753af154a488d&download",
+        "url": "https://ocserver/public.php?service=files&t=8b8f62dfda52e58939fcf3b2d231c9f1&download",
         "sha256": "a7a9cb7abc913655009d1141a21b6c535da5101d1f4dad8292c5604b19b8a1fb"
       }
     }
@@ -102,24 +74,24 @@
     "libreoffice": {
       "ca": {
         "file": "libreoffice-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=13a5175daa50046b2fb784547fcf435d&download",
+        "url": "https://ocserver/public.php?service=files&t=cdcc26a389f2a8e47efe5fa2ddd9aae6&download",
         "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
       },
       "es": {
         "file": "libreoffice-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=13a5175daa50046b2fb784547fcf435d&download",
+        "url": "https://ocserver/public.php?service=files&t=cdcc26a389f2a8e47efe5fa2ddd9aae6&download",
         "sha256": "a5cdd0096549d113d44d5f71b5da6c2c461a3d32acf80a8d15a7541b1a93920d"
       }
     },
     "masterpdf": {
       "ca": {
         "file": "masterpdf-en.pdf",
-        "url": "https://ocserver/public.php?service=files&t=92c769ad3897bf133c72037b99d08070&download",
+        "url": "https://ocserver/public.php?service=files&t=e192169b20e39d161f04bb5f61ff9f60&download",
         "sha256": "a0ccdebf33179ec91d553fef67c00bde7b7330a4f1f9c82eee7641e21e3ecd3c"
       },
       "es": {
         "file": "masterpdf-en.pdf",
-        "url": "https://ocserver/public.php?service=files&t=92c769ad3897bf133c72037b99d08070&download",
+        "url": "https://ocserver/public.php?service=files&t=e192169b20e39d161f04bb5f61ff9f60&download",
         "sha256": "a0ccdebf33179ec91d553fef67c00bde7b7330a4f1f9c82eee7641e21e3ecd3c"
       }
     }
@@ -128,24 +100,24 @@
     "firewall": {
       "ca": {
         "file": "firewall-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=f9b6d37f8e48d0abdea1a62624c0abda&download",
+        "url": "https://ocserver/public.php?service=files&t=91ca783beb9a2a55dd3330f152897a80&download",
         "sha256": "9255f2fe4f17190c20d93a7e4f7f7ba8a1225277f063c50f68070cfa34b46698"
       },
       "es": {
         "file": "firewall-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=f9b6d37f8e48d0abdea1a62624c0abda&download",
+        "url": "https://ocserver/public.php?service=files&t=91ca783beb9a2a55dd3330f152897a80&download",
         "sha256": "9255f2fe4f17190c20d93a7e4f7f7ba8a1225277f063c50f68070cfa34b46698"
       }
     },
     "tracking": {
       "ca": {
         "file": "tracking-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=73ebe8c2ed8458d61c708725c9fc7d85&download",
+        "url": "https://ocserver/public.php?service=files&t=15957b70dfe99fdff9dc5d6e2347441c&download",
         "sha256": "8482e994b703527ce73b1898e5e31a635408b92d74fc14a9ce7d7a392171f030"
       },
       "es": {
         "file": "tracking-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=73ebe8c2ed8458d61c708725c9fc7d85&download",
+        "url": "https://ocserver/public.php?service=files&t=15957b70dfe99fdff9dc5d6e2347441c&download",
         "sha256": "8482e994b703527ce73b1898e5e31a635408b92d74fc14a9ce7d7a392171f030"
       }
     }
@@ -154,12 +126,12 @@
     "epoptes": {
       "ca": {
         "file": "epoptes-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=642d5a5f82e4dbcbe492cc75715a91f8&download",
+        "url": "https://ocserver/public.php?service=files&t=1d15d448bda9032c04971a6650bca8f4&download",
         "sha256": "fd46775ec717b5b94113ebc029ba0947014553d4926d22a981e2e9bb0165c82f"
       },
       "es": {
         "file": "epoptes-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=642d5a5f82e4dbcbe492cc75715a91f8&download",
+        "url": "https://ocserver/public.php?service=files&t=1d15d448bda9032c04971a6650bca8f4&download",
         "sha256": "fd46775ec717b5b94113ebc029ba0947014553d4926d22a981e2e9bb0165c82f"
       }
     }
@@ -168,12 +140,12 @@
     "furius": {
       "ca": {
         "file": "furius-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=c72b9cbdc81066b49980fa1942d6fa9b&download",
+        "url": "https://ocserver/public.php?service=files&t=b844cefce8de2277ac8a7328da1177c6&download",
         "sha256": "bda6488d5509d1b9233dedab99bbe658fac97fd3d07fc19bc6c9eee3d93ed5b1"
       },
       "es": {
         "file": "furius-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=c72b9cbdc81066b49980fa1942d6fa9b&download",
+        "url": "https://ocserver/public.php?service=files&t=b844cefce8de2277ac8a7328da1177c6&download",
         "sha256": "bda6488d5509d1b9233dedab99bbe658fac97fd3d07fc19bc6c9eee3d93ed5b1"
       }
     }
