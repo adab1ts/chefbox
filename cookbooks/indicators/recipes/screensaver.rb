@@ -37,6 +37,7 @@ if app_available? screensaver
 
   support "screensaver" do
     section "indicators"
+    only_for ["ubuntu"]
   end
 end
 

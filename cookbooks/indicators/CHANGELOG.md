@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.5.2:
+
+* recipes/screensaver - deliver screensaver indicator support to ubuntu platform only
+* recipes/weather     - deliver weather indicator support to ubuntu platform only
+
 ## 0.5.1:
 
 * recipes/plugandplay - check availability before app installation
