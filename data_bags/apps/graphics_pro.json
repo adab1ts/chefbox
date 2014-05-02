@@ -87,7 +87,7 @@
         "distro": {
           "package": "gimp",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["gimp-data-extras", "gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"],
+          "suggested": ["gimp-data-extras", "gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"]
         },
         "ppa": {
           "package": "gimp",
