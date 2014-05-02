@@ -61,14 +61,23 @@ box[:users].each do |username, usr|
 end
 
 
-# Nautilus plugins
-package "nautilus-filename-repairer"
-package "nautilus-open-terminal"
+case platform_desktop
+when "unity"
+  # Nautilus plugins
+  package "nautilus-filename-repairer"
+  package "nautilus-open-terminal"
 
-
-# Commonly used restricted packages for Ubuntu
-package "ubuntu-restricted-extras" do
-  notifies :run, "execute[install_additional_extras]", :immediately
+  # Commonly used restricted packages for Ubuntu
+  package "ubuntu-restricted-extras" do
+    notifies :run, "execute[install_additional_extras]", :immediately
+  end
+when "xfce"
+  # Commonly used restricted packages for Ubuntu
+  package "libavcodec-extra"
+  package "xubuntu-restricted-extras"
+  package "libdvdread4" do
+    notifies :run, "execute[install_additional_extras]", :immediately
+  end
 end
 
 # Simple foundation for reading DVDs

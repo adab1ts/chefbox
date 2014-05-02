@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.23.2:
+
+* recipes/main-ubuntu - restricted extras installation based on platform flavour
+
 ## 0.23.1:
 
 * recipes/end - refactor platform support
