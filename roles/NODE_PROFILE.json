@@ -155,6 +155,7 @@
           "scribus"
         ],
         "groupware": [
+          "gobby",
           "hangouts",
           "mumble",
           "smuxi",

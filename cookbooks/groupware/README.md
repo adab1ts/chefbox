@@ -4,6 +4,7 @@ This cookbook installs a selected set of groupware solutions.
 The following recipes may apply:
 
 - `groupware::default`  - purges unselected packages and includes recipes as nedeed.
+- `groupware::gobby`    - installs __Gobby collaborative text editor__ and suggested packages.
 - `groupware::hangouts` - installs __Google Hangouts plugin__ and suggested packages.
 - `groupware::mumble`   - installs __Mumble low latency VoIP client__ and suggested packages.
 - `groupware::smuxi`    - installs __Smuxi IRC client__ and suggested packages.

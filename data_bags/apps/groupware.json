@@ -1,6 +1,7 @@
 {
   "id": "groupware",
   "apps": [
+    "gobby",
     "hangouts",
     "mumble",
     "smuxi",
@@ -8,6 +9,21 @@
     "xchat"
   ],
   "profiles": {
+    "gobby": {
+      "description": "infinote-based collaborative text editor",
+      "website": "http://gobby.0x539.de/trac/",
+      "platforms": {
+        "linuxmint-13": { "source": "distro" },
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "gobby-infinote",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
+      }
+    },
     "hangouts": {
       "description": "Google Talk Plugin",
       "website": "http://www.google.com/+/learnmore/hangouts/",

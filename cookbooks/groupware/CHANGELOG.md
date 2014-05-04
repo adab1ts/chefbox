@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.6.0:
+
+* recipes/default - now includes gobby install management
+* recipes/gobby   - manages gobby app installation
+
 ## 0.5.1:
 
 * recipes/skype - check availability before app installation

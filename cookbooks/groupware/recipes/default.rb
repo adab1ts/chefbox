@@ -38,6 +38,7 @@ if selected
   # Install selected apps
   node.default[:apps] = { :groupware => groupware }
 
+  include_recipe "groupware::gobby" if selected.include?("gobby")
   include_recipe "groupware::hangouts" if selected.include?("hangouts")
   include_recipe "groupware::mumble" if selected.include?("mumble")
   include_recipe "groupware::smuxi" if selected.include?("smuxi")
