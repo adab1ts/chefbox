@@ -136,7 +136,8 @@
         ],
         "fileshare": [
           "jdownloader",
-          "transmission"
+          "transmission",
+          "uget"
         ],
         "graphics": [
           "pencil",

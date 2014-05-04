@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: fileshare
-# Recipe:: transmission
+# Recipe:: uget
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,8 +21,8 @@
 
 fileshare = node[:apps][:fileshare]
 
-# Lightweight BitTorrent client
-install_app "transmission" do
-  profile fileshare['profiles']['transmission']
+# Easy-to-use download manager
+install_app "uget" do
+  profile fileshare['profiles']['uget']
 end
 

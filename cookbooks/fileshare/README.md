@@ -3,9 +3,10 @@
 This cookbook installs a selected set of file sharing solutions.
 The following recipes may apply:
 
-- `fileshare::default` - purges unselected packages and includes recipes as nedeed.
-- `fileshare::jdownloader` - installs __JDownloader__ and suggested packages.
+- `fileshare::default`      - purges unselected packages and includes recipes as nedeed.
+- `fileshare::jdownloader`  - installs __JDownloader__ and suggested packages.
 - `fileshare::transmission` - installs __Bittorrent Transmission__ and suggested packages.
+- `fileshare::uget`         - installs __uGet download manager__ and suggested packages.
 
 
 ## Requirements

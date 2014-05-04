@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of fileshare.
 
+## 0.4.0:
+
+* recipes/default - now includes uget install management
+* recipes/uget    - manages uget app installation
+
 ## 0.3.0:
 
 * README   - update requirements section and copyright note
