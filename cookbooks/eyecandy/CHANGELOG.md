@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.9.0:
+
+* recipes/default     - now includes unity tweak tool install management
+* recipes/unity-tweak - manages unity tweak tool installation
+
 ## 0.8.1:
 
 * recipes/unsettings - deliver unsettings support to ubuntu platform only again

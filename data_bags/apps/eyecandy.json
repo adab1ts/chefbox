@@ -8,6 +8,7 @@
     "numix-circle-icons",
     "numix-shine-icons",
     "orchis-theme",
+    "unity-tweak",
     "unsettings"
   ],
   "profiles": {
@@ -143,6 +144,19 @@
             "repo_name": "moka-orchis-gtk-theme",
             "uri": "ppa:moka/orchis-gtk-theme"
           }
+        }
+      }
+    },
+    "unity-tweak": {
+      "description": "Configuration tool for the Unity desktop environment",
+      "website": "http://github.com/freyja-dev/unity-tweak-tool/",
+      "platforms": {
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "unity-tweak-tool",
+          "maintainer": "Barneedhar Vigneshwar <barneedhar@ubuntu.com>"
         }
       }
     },

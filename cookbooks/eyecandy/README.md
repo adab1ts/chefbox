@@ -12,6 +12,7 @@ The following recipes may apply:
 - `eyecandy::numix-circle-icons` - installs __Numix Circle icon theme__ and suggested packages.
 - `eyecandy::numix-shine-icons`  - installs __Numix Shine icon theme__ and suggested packages.
 - `eyecandy::orchis-theme`       - installs __Orchis GTK theme__ and suggested packages.
+- `eyecandy::unity-tweak`        - installs __Unity Tweak Tool__ and suggested packages.
 - `eyecandy::unsettings`         - installs __Unsettings__ and suggested packages.
 
 
