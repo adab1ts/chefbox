@@ -87,3 +87,21 @@ execute "install_additional_extras" do
   action :nothing
 end
 
+
+# Codec issues
+# see http://www.webupd8.org/2014/03/get-firefox-and-phonon-gstreamer-to.html
+codename = platform_codename
+
+if codename == "trusty"
+  repo_name = "mc3man-trusty-media"
+  repo_uri  = "ppa:mc3man/trusty-media"
+
+  core_ppa repo_name do
+    uri repo_uri
+    distribution codename
+    action :add
+  end
+
+  package "gstreamer0.10-ffmpeg"
+end
+

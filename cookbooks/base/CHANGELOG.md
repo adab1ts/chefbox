@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.24.0:
+
+* recipes/main-ubuntu - install ffmpeg plugin for gstreamer 0.10 on trusty release
+
 ## 0.23.2:
 
 * recipes/main-ubuntu - restricted extras installation based on platform flavour
