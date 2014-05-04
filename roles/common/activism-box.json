@@ -1,0 +1,26 @@
+{
+  "name": "activism-box",
+  "description": "Activism box profile",
+  "json_class": "Chef::Role",
+  "chef_type": "role",
+  "env_run_lists": {},
+  "run_list": [
+    "groupware",
+    "security"
+  ],
+  "default_attributes": {
+    "box": {
+      "apps": {
+        "groupware": [
+          "gobby",
+          "mumble",
+          "smuxi"
+        ],
+        "security": [
+          "torbrowser"
+        ]
+      }
+    }
+  },
+  "override_attributes": {}
+}
