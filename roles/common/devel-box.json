@@ -30,6 +30,7 @@
         ],
         "groupware": [
           "etherpad",
+          "gobby",
           "hangouts",
           "mumble",
           "smuxi"
