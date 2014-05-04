@@ -29,7 +29,6 @@
           "zsh"
         ],
         "groupware": [
-          "etherpad",
           "gobby",
           "hangouts",
           "mumble",
