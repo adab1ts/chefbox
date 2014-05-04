@@ -3,11 +3,12 @@
 This cookbook installs a selected set of security solutions.
 The following recipes may apply:
 
-- `security::default`   - purges unselected packages and includes recipes as nedeed.
-- `security::antivirus` - installs __ClamAV__ and suggested packages.
-- `security::firewall`  - installs __Uncomplicated FireWall__ and suggested packages.
-- `security::privacy`   - installs __hashing, wiping and encrypting tools__ and suggested packages.
-- `security::tracking`  - installs __Prey__ and suggested packages.
+- `security::default`    - purges unselected packages and includes recipes as nedeed.
+- `security::antivirus`  - installs __ClamAV__ and suggested packages.
+- `security::firewall`   - installs __Uncomplicated FireWall__ and suggested packages.
+- `security::privacy`    - installs __hashing, wiping and encrypting tools__ and suggested packages.
+- `security::torbrowser` - installs __Tor Browser Bundle__ and suggested packages.
+- `security::tracking`   - installs __Prey__ and suggested packages.
 
 
 ## Requirements

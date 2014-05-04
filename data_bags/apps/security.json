@@ -3,6 +3,7 @@
   "apps": [
     "antivirus",
     "firewall",
+    "torbrowser",
     "tracking"
   ],
   "profiles": {
@@ -34,6 +35,25 @@
         "distro": {
           "package": "gufw",
           "maintainer": "Devid Antonio Filoni <d.filoni@ubuntu.com>"
+        }
+      }
+    },
+    "torbrowser": {
+      "description": "Tor Browser Bundle",
+      "website": "http://www.torproject.org/projects/torbrowser.html.en",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "tor-browser",
+          "maintainer": "Alin Andrei <webupd8@gmail.com>",
+          "meta": {
+            "repo_name": "webupd8team-tor-browser",
+            "uri": "ppa:webupd8team/tor-browser"
+          }
         }
       }
     },

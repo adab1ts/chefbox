@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: security
-# Recipe:: privacy
+# Recipe:: torbrowser
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,20 +19,10 @@
 #
 
 
-case platform
-when "ubuntu"
-  case platform_desktop
-  when "unity"
-    package "nautilus-gtkhash"
-    package "nautilus-wipe"
-    package "seahorse-nautilus"
-  when "xfce"
-    package "thunar-gtkhash"
-    package "seahorse"
-  end
-when "linuxmint"
-  package "gtkhash"
-  package "secure-delete"
-  package "nemo-seahorse" if platform_desktop == "cinnamon"
+security = node[:apps][:security]
+
+# Tor Browser Bundle
+install_app "torbrowser" do
+  profile security['profiles']['torbrowser']
 end
 

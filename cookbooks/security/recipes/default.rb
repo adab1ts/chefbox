@@ -41,6 +41,7 @@ if selected
   include_recipe "security::antivirus" if selected.include?("antivirus")
   include_recipe "security::firewall" if selected.include?("firewall")
   include_recipe "security::privacy" if selected.include?("privacy")
+  include_recipe "security::torbrowser" if selected.include?("torbrowser")
   include_recipe "security::tracking" if selected.include?("tracking")
 end
 

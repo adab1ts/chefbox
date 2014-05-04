@@ -183,6 +183,7 @@
           "antivirus",
           "firewall",
           "privacy",
+          "torbrowser",
           "tracking"
         ],
         "sysadmin": [

@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of security.
 
+## 0.6.0:
+
+* recipes/default    - now includes tor browser bundle install management
+* recipe/privacy     - privacy tools installation is aware of platform desktop
+* recipes/torbrowser - manages tor browser bundle installation
+
 ## 0.5.1:
 
 * recipe/firewall - check app availability before installation
