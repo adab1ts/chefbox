@@ -5,11 +5,15 @@
   "chef_type": "role",
   "env_run_lists": {},
   "run_list": [
+    "kernel",
     "security"
   ],
   "default_attributes": {
     "box": {
       "apps": {
+        "kernel": [
+          "tlp"
+        ],
         "security": [
           "tracking"
         ]
