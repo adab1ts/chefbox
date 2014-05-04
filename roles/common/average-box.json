@@ -44,7 +44,8 @@
           "numix-shine-icons"
         ],
         "fileshare": [
-          "transmission"
+          "transmission",
+          "uget"
         ],
         "graphics": [
           "pinta",
