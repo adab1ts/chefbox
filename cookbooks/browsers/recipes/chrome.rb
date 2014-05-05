@@ -26,3 +26,10 @@ install_app "chrome" do
   profile browsers['profiles']['chrome']
 end
 
+chrome_source = "#{node[:apt][:sources_path]}/google-chrome.list"
+
+file chrome_source do
+  action :delete
+  only_if { ::File.exists? chrome_source }
+end
+

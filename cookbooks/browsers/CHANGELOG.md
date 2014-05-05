@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.5.2:
+
+* recipes/chrome - fixes repository duplication issue
+
 ## 0.5.1:
 
 * recipes/firefox - check app availability before installation
