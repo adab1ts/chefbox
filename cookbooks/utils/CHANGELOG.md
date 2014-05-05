@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.10.1:
+
+* recipes/backintime - purge packages no longer needed
+
 ## 0.10.0:
 
 * recipes/default  - now includes gnome-do install management

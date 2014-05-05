@@ -22,7 +22,18 @@
 utils = node[:apps][:utils]
 
 # Simple backup system
-install_app "backintime" do
-  profile utils['profiles']['backintime']
+backintime = utils['profiles']['backintime']
+
+if app_available? backintime
+  install_app "backintime" do
+    force true
+    profile backintime
+  end
+
+  backintime_pkg = app_package_name backintime
+  package "nautilus-actions" do
+    action :nothing
+    subscribes :purge, resources("package[#{backintime_pkg}]"), :immediately
+  end
 end
 
