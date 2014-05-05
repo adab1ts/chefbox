@@ -57,7 +57,7 @@ define :uninstall_app do
           default or
           (
           source_id =~ /ppa|repo/ and
-          not ::File.exists?("#{node[:apt][:sources_path]}/#{source_data['meta']['repo_name']}-#{codename}.list)
+          not ::File.exists?("#{node[:apt][:sources_path]}/#{source_data['meta']['repo_name']}-#{codename}.list")
           )
         end
       end
