@@ -154,7 +154,8 @@
       "sources": {
         "distro": {
           "package": "ogmrip",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "dependencies": ["mencoder"]
         },
         "repo": {
           "package": "ogmrip",
