@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.25.0:
+
+* recipes/end-ubuntu - purge packages no longer needed
+
 ## 0.24.0:
 
 * recipes/main-ubuntu - install ffmpeg plugin for gstreamer 0.10 on trusty release

@@ -21,6 +21,12 @@
 
 ## First time system upgrade
 
+if platform_desktop == "xfce"
+  package "nautilus-actions" do
+    action :purge
+  end
+end
+
 bash "first_system_upgrade" do
   code <<-EOH
     apt-get -y upgrade
