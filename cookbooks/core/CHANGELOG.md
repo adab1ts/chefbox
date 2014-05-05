@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.3:
+
+* definitions/uninstall_app - fix bug
+
 ## 1.0.2:
 
 * definitions/support - check if resource exists before downloading and minor refactoring 

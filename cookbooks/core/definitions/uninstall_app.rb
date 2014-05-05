@@ -20,9 +20,10 @@
 
 
 define :uninstall_app do
-  profile = params[:profile]
-  os      = Coderebels::Chefbox::Box.lsb_id
-  release = Coderebels::Chefbox::Box.lsb_release
+  profile  = params[:profile]
+  os       = Coderebels::Chefbox::Box.lsb_id
+  release  = Coderebels::Chefbox::Box.lsb_release
+  codename = Coderebels::Chefbox::Box.lsb_codename
 
   # Check availability
   available = Coderebels::Chefbox::App.available? profile, os, release
@@ -48,7 +49,6 @@ define :uninstall_app do
       end
     else
       default = Coderebels::Chefbox::App.default? profile, os, release
-      source_file = "#{source_data['meta']['repo_name']}-#{Coderebels::Chefbox::Box.lsb_codename}.list"
 
       package params[:name] do
         package_name source_data['package']
@@ -57,7 +57,7 @@ define :uninstall_app do
           default or
           (
           source_id =~ /ppa|repo/ and
-          not ::File.exists?("#{node[:apt][:sources_path]}/#{source_file}")
+          not ::File.exists?("#{node[:apt][:sources_path]}/#{source_data['meta']['repo_name']}-#{codename}.list)
           )
         end
       end
