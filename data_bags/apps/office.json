@@ -82,8 +82,7 @@
       "website": "http://nitrotasks.com/",
       "platforms": {
         "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "ubuntu-12.04": { "source": "ppa" }
       },
       "sources": {
         "ppa": {
