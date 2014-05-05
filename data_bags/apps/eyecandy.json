@@ -24,10 +24,10 @@
         "ppa": {
           "package": "faba-icon-theme",
           "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
-          "suggested": ["faba-icon-theme-symbolic", "faba-mono-icons", "faba-colors"],
+          "suggested": ["faba-mono-icons", "faba-colors"],
           "meta": {
-            "repo_name": "moka-faba-icon-theme",
-            "uri": "ppa:moka/faba-icon-theme"
+            "repo_name": "moka-stable",
+            "uri": "ppa:moka/stable"
           }
         }
       }
@@ -45,8 +45,8 @@
           "package": "moka-icon-theme",
           "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
           "meta": {
-            "repo_name": "moka-moka-icon-theme",
-            "uri": "ppa:moka/moka-icon-theme"
+            "repo_name": "moka-stable",
+            "uri": "ppa:moka/stable"
           }
         }
       }
@@ -64,8 +64,8 @@
           "package": "moka-gtk-theme",
           "maintainer": "Sam Hewitt <hewittsamuel@gmail.com>",
           "meta": {
-            "repo_name": "moka-moka-gtk-theme",
-            "uri": "ppa:moka/moka-gtk-theme"
+            "repo_name": "moka-stable",
+            "uri": "ppa:moka/stable"
           }
         }
       }
