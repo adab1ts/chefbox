@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video_pro.
 
+## 0.3.1:
+
+* recipes/shotcut - fix bug
+
 ## 0.3.0:
 
 * recipes/default - now includes shotcut install management indeed

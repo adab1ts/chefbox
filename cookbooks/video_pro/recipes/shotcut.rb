@@ -24,7 +24,7 @@ video_pro = node[:apps][:video_pro]
 # Shotcut is a free, open source, cross-platform video editor
 shotcut = video_pro['profiles']['shotcut']
 
-if available_app? shotcut
+if app_available? shotcut
   install_app "shotcut" do
     force true
     profile shotcut
