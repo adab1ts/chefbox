@@ -98,8 +98,7 @@
       "website": "http://www.skype.com/en/",
       "platforms": {
         "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "ubuntu-12.04": { "source": "distro" }
       },
       "sources": {
         "distro": {
