@@ -30,10 +30,9 @@ if app_available? backintime
     profile backintime
   end
 
-  backintime_pkg = app_package_name backintime
   package "nautilus-actions" do
     action :nothing
-    subscribes :purge, resources("package[#{backintime_pkg}]"), :immediately
+    subscribes :purge, resources("package[backintime]"), :immediately
   end
 end
 
