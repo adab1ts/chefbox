@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.25.1:
+
+* recipes/end-ubuntu - purge no longer needed
+
 ## 0.25.0:
 
 * recipes/end-ubuntu - purge packages no longer needed
