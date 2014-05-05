@@ -104,13 +104,30 @@
       "platforms": {
         "linuxmint-13": { "source": "deb" },
         "ubuntu-12.04": { "source": "deb" },
-        "ubuntu-14.04": { "source": "deb" }
+        "ubuntu-14.04": { "source": "deb-trusty" }
       },
       "sources": {
         "deb": {
           "package": "mmc",
           "maintainer": "miksoft <mmc@miksoft.net>",
           "dependencies": ["libavcodec-extra-53", "liblzo2-2", "mencoder", "ffmpeg"],
+          "meta": {
+            "i686": {
+              "file_name": "mmc_1.8.4_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=f8c2a2c5db0200b7a61c73fb97ab315e&download",
+              "sha256": "5322777cba6a407c2dcadbd5797f28f7132d038e5b3c009db9a705d28da97dc8"
+            },
+            "x86_64": {
+              "file_name": "mmc_1.8.4_i386_multiarch.deb",
+              "uri": "https://ocserver/public.php?service=files&t=8f04a65867d03edd9094e564937bf82a&download",
+              "sha256": "cf2f71d7a4083636573123aef486a4aa2c560f8e825c672dea2167fc0a9a20f1"
+            }
+          }
+        },
+        "deb-trusty": {
+          "package": "mmc",
+          "maintainer": "miksoft <mmc@miksoft.net>",
+          "dependencies": ["libavcodec-extra-54", "liblzo2-2", "mencoder", "ffmpeg"],
           "meta": {
             "i686": {
               "file_name": "mmc_1.8.4_i386.deb",
