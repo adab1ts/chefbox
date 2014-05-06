@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.3.3:
+
+* recipes/default - disable intel_graphics app installation
+
 ## 0.3.2:
 
 * recipes/default - install tlp on demand only
