@@ -6,7 +6,6 @@
   "env_run_lists": {},
   "run_list": [
     "role[basic-box]",
-    "audio",
     "browsers",
     "cloud",
     "email",
@@ -21,10 +20,6 @@
   "default_attributes": {
     "box": {
       "apps": {
-        "audio": [
-          "spotify",
-          "tomahawk"
-        ],
         "browsers": [
           "chrome",
           "firefox"
@@ -59,7 +54,6 @@
         "office": [
           "fontmanager",
           "libreoffice",
-          "masterpdf",
           "nitro",
           "pdfshuffler",
           "springseed"
@@ -73,7 +67,6 @@
         "video": [
           "bombonodvd",
           "handbrake",
-          "miro",
           "mmc",
           "mvc",
           "ogmrip",
