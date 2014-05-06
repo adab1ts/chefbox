@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.4.2:
+
+* templates/default/transcribe/transcribe.desktop - fix template name bug
+
 ## 0.4.1:
 
 * recipes/default    - airtime installation constrained to platforms with 1GB+ of RAM
