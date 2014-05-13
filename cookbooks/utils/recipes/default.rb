@@ -39,6 +39,7 @@ if selected
   node.default[:apps] = { :utils => utils }
 
   include_recipe "utils::backintime" if selected.include?("backintime")
+  include_recipe "utils::discs" if selected.include?("discs")
   include_recipe "utils::fogger" if selected.include?("fogger")
   include_recipe "utils::furius" if selected.include?("furius")
   include_recipe "utils::gnome-do" if selected.include?("gnome-do")

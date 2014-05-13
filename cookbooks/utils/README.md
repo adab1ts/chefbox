@@ -5,6 +5,7 @@ The following recipes may apply:
 
 - `utils::default`    - purges unselected packages and includes recipes as nedeed.
 - `utils::backintime` - installs __Back In Time simple backup system__ and suggested packages.
+- `utils::discs`      - installs __GNOME disk utility__ and suggested packages.
 - `utils::fogger`     - installs __Fogger app__ and suggested packages.
 - `utils::furius`     - installs __Furius ISO Mount__ and suggested packages.
 - `utils::gnome-do`   - installs __GNOME DO__ and suggested packages.

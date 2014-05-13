@@ -2,6 +2,7 @@
   "id": "utils",
   "apps": [
     "backintime",
+    "discs",
     "fogger",
     "furius",
     "gnome-do",
@@ -31,6 +32,19 @@
             "repo_name": "bit-team-stable",
             "uri": "ppa:bit-team/stable"
           }
+        }
+      }
+    },
+    "discs": {
+      "description": "Manage and configure disk drives and media",
+      "website": "http://git.gnome.org/cgit/gnome-disk-utility/",
+      "platforms": {
+        "ubuntu-14.04": { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "gnome-disk-utility",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },

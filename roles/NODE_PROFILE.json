@@ -197,6 +197,7 @@
         ],
         "utils": [
           "backintime",
+          "discs",
           "fogger",
           "furius",
           "gnome-do",

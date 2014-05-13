@@ -60,6 +60,7 @@
         ],
         "utils": [
           "backintime",
+          "discs",
           "fogger",
           "gnome-do",
           "shutter"

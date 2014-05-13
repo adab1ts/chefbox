@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.11.0:
+
+* recipes/default - now includes discs install management
+* recipes/discs   - manages discs app installation
+
 ## 0.10.2:
 
 * recipes/backintime - fix bug

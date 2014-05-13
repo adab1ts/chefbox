@@ -39,6 +39,7 @@
         ],
         "utils": [
           "backintime",
+          "discs",
           "gnome-do"
         ],
         "video": [
