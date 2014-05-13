@@ -26,3 +26,11 @@ install_app "springseed" do
   profile office['profiles']['springseed']
 end
 
+springseed_source = "#{node[:apt][:sources_path]}/springseed.list"
+
+# checksum doesn't match
+file springseed_source do
+  action :delete
+  only_if { ::File.exists? springseed_source }
+end
+

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of office.
 
+## 0.4.1:
+
+* recipes/springseed - fix source issue
+
 ## 0.4.0:
 
 * recipes/default     - now includes springseed install management indeed
