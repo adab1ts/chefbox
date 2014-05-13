@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.0:
+
+* recipes/default
+
+  - enable intel_graphics app installation again
+  - include swappiness configuration management
+
+* recipes/intel_graphics - check availability before app installation
+* recipes/swappiness     - manage swappiness configuration
+* recipes/tlp            - check availability before app installation
+
 ## 0.3.3:
 
 * recipes/default - disable intel_graphics app installation

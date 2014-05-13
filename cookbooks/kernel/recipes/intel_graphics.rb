@@ -19,38 +19,40 @@
 #
 
 
-## Requirements
-
-package "wget"
-
-
-## Deploy
-
 kernel = node[:apps][:kernel]
 
-cache_path = Chef::Config[:file_cache_path]
-key_file   = "RPM-GPG-KEY-ilg"
-key_file_2 = "RPM-GPG-KEY-ilg-2"
-
-bash "add_apt_keys" do
-  cwd cache_path
-  creates "#{cache_path}/#{key_file}"
-  code <<-EOH
-    wget --no-check-certificate https://download.01.org/gfx/#{key_file}
-    apt-key add "#{cache_path}/#{key_file}"
-
-    wget --no-check-certificate https://download.01.org/gfx/#{key_file_2}
-    apt-key add "#{cache_path}/#{key_file_2}"
-    EOH
-end
-
 # Intel graphics drivers update utility
-install_app "intel_graphics" do
-  profile kernel['profiles']['intel_graphics']
-end
+intel_graphics = kernel['profiles']['intel_graphics']
 
-execute "intel-linux-graphics-installer" do
-  action :nothing
-  subscribes :run, resources("package[intel_graphics]"), :immediately
+if app_available? intel_graphics
+  ## Requirements
+  package "wget"
+
+  ## Deploy
+  cache_path = Chef::Config[:file_cache_path]
+  key_file   = "RPM-GPG-KEY-ilg"
+  key_file_2 = "RPM-GPG-KEY-ilg-2"
+
+  bash "add_apt_keys" do
+    cwd cache_path
+    creates "#{cache_path}/#{key_file}"
+    code <<-EOH
+      wget --no-check-certificate https://download.01.org/gfx/#{key_file}
+      apt-key add "#{cache_path}/#{key_file}"
+
+      wget --no-check-certificate https://download.01.org/gfx/#{key_file_2}
+      apt-key add "#{cache_path}/#{key_file_2}"
+      EOH
+  end
+
+  install_app "intel_graphics" do
+    force true
+    profile intel_graphics
+  end
+
+  execute "intel-linux-graphics-installer" do
+    action :nothing
+    subscribes :run, resources("package[intel_graphics]"), :immediately
+  end
 end
 

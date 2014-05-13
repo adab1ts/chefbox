@@ -38,8 +38,9 @@ end
 node.default[:apps] = { :kernel => kernel }
 
 include_recipe "kernel::dkms"
+include_recipe "kernel::swappiness" if memory <= 1.GB
 include_recipe "kernel::preload" if memory > 1.GB
-# include_recipe "kernel::intel_graphics" if vendor(:graphics) == "intel"
+include_recipe "kernel::intel_graphics" if vendor(:graphics) == "intel"
 
 selected = node[:box][:apps][:kernel] || []
 

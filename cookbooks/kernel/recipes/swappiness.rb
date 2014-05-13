@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: kernel
-# Recipe:: tlp
+# Recipe:: swappiness
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,21 +19,18 @@
 #
 
 
-kernel = node[:apps][:kernel]
+# See https://sites.google.com/site/easylinuxtipsproject/first-xubuntu#TOC-Decrease-the-swap-use-very-important-
+sysctl_file = "/etc/sysctl.conf"
 
-# Save battery power on laptops
-tlp = kernel['profiles']['tlp']
-
-if app_available? tlp
-  install_app "tlp" do
-    force true
-    profile tlp
-  end
-
-  execute "start_tlp" do
-    command "tlp start"
-    action :nothing
-    subscribes :run, resources("package[tlp]"), :immediately
-  end
+bash "change_swappiness" do
+  code <<-EOH
+    echo >> #{sysctl_file}
+    echo >> #{sysctl_file}
+    echo ########################################### >> #{sysctl_file}
+    echo # Decrease swap usage to a reasonable level >> #{sysctl_file}
+    echo vm.swappiness = 10 >> #{sysctl_file}
+    echo # Improve cache management >> #{sysctl_file}
+    echo vm.vfs_cache_pressure = 50 >> #{sysctl_file}
+  EOH
 end
 

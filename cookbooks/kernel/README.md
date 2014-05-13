@@ -3,7 +3,7 @@
 This cookbook installs a selected set of kernel-level solutions.
 The following recipes may apply:
 
-- `kernel::default` - installs selected drivers and the following packages:
+- `kernel::default` - manages kernel params, installs selected drivers and the following packages:
   
   `dkms`           - __Dynamic Kernel Module Support Framework__  
   `intel_graphics` - __Intel Linux Graphics Installer__  
