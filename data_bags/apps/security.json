@@ -74,7 +74,7 @@
           "package": "prey",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["traceroute"],
-          "dependencies": ["mpg123", "scrot", "streamer"],
+          "dependencies": ["curl", "gksu", "mpg123", "scrot", "streamer"],
           "meta": {
             "*": {
               "file_name": "prey_0.6.2-ubuntu2_all.deb",
