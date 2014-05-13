@@ -98,12 +98,25 @@
       "website": "http://www.skype.com/en/",
       "platforms": {
         "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" }
+        "ubuntu-12.04": { "source": "distro" },
+        "ubuntu-14.04": { "source": "deb" }
       },
       "sources": {
         "distro": {
           "package": "skype",
           "maintainer": "Steve Langasek <steve.langasek@canonical.com>"
+        },
+        "deb": {
+          "package": "skype",
+          "maintainer": "Skype Technologies <info@skype.net>",
+          "dependencies": ["libqt4-dbus", "libqt4-network", "libqt4-xml", "libqtcore4", "libqtgui4", "libqtwebkit4"],
+          "meta": {
+            "*": {
+              "file_name": "skype-ubuntu-precise_4.2.0.13-1_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=9f01dacc01815605fb012460a5591d4d&download",
+              "sha256": "bbeb3d3119af8497c90b772fa61e81eb58f9a55ee5d02bb033398657eb4e7df3"
+            }
+          }
         }
       }
     },
