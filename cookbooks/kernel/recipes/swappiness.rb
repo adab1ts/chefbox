@@ -20,17 +20,10 @@
 
 
 # See https://sites.google.com/site/easylinuxtipsproject/first-xubuntu#TOC-Decrease-the-swap-use-very-important-
-sysctl_file = "/etc/sysctl.conf"
-
-bash "change_swappiness" do
-  code <<-EOH
-    echo >> #{sysctl_file}
-    echo >> #{sysctl_file}
-    echo ########################################### >> #{sysctl_file}
-    echo # Decrease swap usage to a reasonable level >> #{sysctl_file}
-    echo vm.swappiness = 10 >> #{sysctl_file}
-    echo # Improve cache management >> #{sysctl_file}
-    echo vm.vfs_cache_pressure = 50 >> #{sysctl_file}
-  EOH
+cookbook_file "swappiness.conf" do
+  path "/etc/sysctl.d/60-swappiness.conf"
+  source "/sysctl.d/swappiness.conf"
+  mode 0644
+  backup false
 end
 
