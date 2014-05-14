@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.26.0:
+
+* recipes/run-end - make some cleaning up
+
 ## 0.25.1:
 
 * recipes/end-ubuntu - purge no longer needed

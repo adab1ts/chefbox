@@ -19,8 +19,21 @@
 #
 
 
+## Clean up
+
+bash "run_end-clean_up" do
+  code <<-EOH
+    apt-get -y purge mutt
+    apt-get -y autoremove
+    EOH
+  action :run
+  not_if { node.attribute?(:first_run_completed) }
+end
+
+
+## APT Sources
+
 if platform == "linuxmint"
-  ## APT Sources
   cookbook_file "sources.list.final" do
     path "/etc/apt/sources.list"
     source "/apt/sources.list.final"
@@ -34,6 +47,9 @@ if platform == "linuxmint"
     action :nothing
   end
 end
+
+
+## Final tasks
 
 ruby_block "first_run_completed" do
   block do
