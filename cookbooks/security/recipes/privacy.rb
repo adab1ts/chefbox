@@ -28,6 +28,7 @@ when "ubuntu"
     package "seahorse-nautilus"
   when "xfce"
     package "thunar-gtkhash"
+    package "secure-delete"
     package "seahorse"
   end
 when "linuxmint"

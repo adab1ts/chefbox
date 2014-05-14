@@ -2,22 +2,27 @@
 
 This file is used to list changes made in each version of security.
 
+## 0.7.0:
+
+* recipes/antivirus - install clamtk file explorer integration
+* recipes/privacy   - install secure-delete on xubuntu platform
+
 ## 0.6.0:
 
 * recipes/default    - now includes tor browser bundle install management
-* recipe/privacy     - privacy tools installation is aware of platform desktop
+* recipes/privacy     - privacy tools installation is aware of platform desktop
 * recipes/torbrowser - manages tor browser bundle installation
 
 ## 0.5.1:
 
-* recipe/firewall - check app availability before installation
+* recipes/firewall - check app availability before installation
 
-* recipe/privacy
+* recipes/privacy
 
   - use linuxmint instead of mint when needed
   - linuxmint encrypting tool install on cinnamon flavour only
 
-* recipe/tracking - check app availability before installation
+* recipes/tracking - check app availability before installation
 
 ## 0.5.0:
 
@@ -43,18 +48,18 @@ This file is used to list changes made in each version of security.
 
 ## 0.4.0:
 
-* recipe/default - now checks for section presence in box profile's apps list before proceed
-* recipe/privacy - replaces recipe[nautilus] and extends privacy related packages to supported platforms
+* recipes/default - now checks for section presence in box profile's apps list before proceed
+* recipes/privacy - replaces recipe[nautilus] and extends privacy related packages to supported platforms
 
 ## 0.3.0:
 
-* recipe/default  - now includes recipe with nautilus security plugins
-* recipe/nautilus - installs security related plugins, ie. hash sums check, secure deletion and encrypt/decrypt of files
+* recipes/default  - now includes recipe with nautilus security plugins
+* recipes/nautilus - installs security related plugins, ie. hash sums check, secure deletion and encrypt/decrypt of files
 
 ## 0.2.0:
 
-* recipe/firewall - delivers first steps documentation concerning firewall solution
-* recipe/tracking - delivers first steps documentation concerning tracking solution
+* recipes/firewall - delivers first steps documentation concerning firewall solution
+* recipes/tracking - delivers first steps documentation concerning tracking solution
 
 ## 0.1.0:
 

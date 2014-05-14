@@ -22,7 +22,42 @@
 security = node[:apps][:security]
 
 # Anti-virus utility for Unix
-install_app "antivirus" do
-  profile security['profiles']['antivirus']
+antivirus = security['profiles']['antivirus']
+
+if app_available? antivirus
+  install_app "antivirus" do
+    force true
+    profile antivirus
+  end
+
+  deb = case platform_desktop
+        when "cinnamon" then {
+          'package'   => "nemo-sendto-clamtk",
+          'file_name' => "nemo-sendto-clamtk_0.02-1_all.deb",
+          'uri'       => "https://ocserver/public.php?service=files&t=997eddadc89f1636026a0fdf7847352e&download",
+          'sha256'    => "fd31b7299ad26932d5e75dbd9759ea7312f0f60b95eeca12074b7806d84afbb3"
+        }
+        when "xfce" then {
+          'package'   => "thunar-sendto-clamtk",
+          'file_name' => "thunar-sendto-clamtk_0.05-1_all.deb",
+          'uri'       => "https://ocserver/public.php?service=files&t=51861c8480f008665b423f62da60f91d&download",
+          'sha256'    => "b935066cbc03e5ab5d8702b233ccfa492d349fc52ab6d06aca3e486b0719982f"
+        }
+        else nil
+        end
+
+  if deb
+    deb_file = "#{Chef::Config[:file_cache_path]}/#{deb['file_name']}"
+
+    remote_file deb_file do
+      source deb['uri']
+      checksum deb['sha256']
+    end
+
+    package deb['package'] do
+      source deb_file
+      provider Chef::Provider::Package::Dpkg
+    end
+  end
 end
 
