@@ -38,6 +38,8 @@ if selected
   # Install selected apps
   node.default[:apps] = { :fileshare => fileshare }
 
+  include_recipe "fileshare::btsync" if selected.include?("btsync")
+  include_recipe "fileshare::frostwire" if selected.include?("frostwire")
   include_recipe "fileshare::jdownloader" if selected.include?("jdownloader")
   include_recipe "fileshare::transmission" if selected.include?("transmission")
   include_recipe "fileshare::uget" if selected.include?("uget")

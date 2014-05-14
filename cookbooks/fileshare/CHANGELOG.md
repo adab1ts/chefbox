@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of fileshare.
 
+## 0.5.0:
+
+* recipes/default   - now includes btsync and frostwire install management
+* recipes/btsync    - manages btsync app installation
+* recipes/frostwire - manages frostwire app installation
+
 ## 0.4.0:
 
 * recipes/default - now includes uget install management

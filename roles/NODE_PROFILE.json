@@ -136,6 +136,8 @@
           "unsettings"
         ],
         "fileshare": [
+          "btsync",
+          "frostwire",
           "jdownloader",
           "transmission",
           "uget"

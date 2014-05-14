@@ -1,11 +1,55 @@
 {
   "id": "fileshare",
   "apps": [
+    "btsync",
+    "frostwire",
     "jdownloader",
     "transmission",
     "uget"
   ],
   "profiles": {
+    "btsync": {
+      "description": "Full GTK based Linux GUI for BitTorrent Sync",
+      "website": "http://www.yeasoft.com/site/projects:btsync-deb",
+      "platforms": {
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "btsync-gui",
+          "maintainer": "Leo Moll <leo.moll@yeasoft.com>",
+          "meta": {
+            "repo_name": "tuxpoldo-btsync",
+            "uri": "ppa:tuxpoldo/btsync"
+          }
+        }
+      }
+    },
+    "frostwire": {
+      "description": "Truly Free and Open Source Peer to Peer client",
+      "website": "http://www.frostwire.com/",
+      "platforms": {
+        "linuxmint-13": { "source": "deb" },
+        "ubuntu-12.04": { "source": "deb" },
+        "ubuntu-14.04": { "source": "deb" }
+      },
+      "sources": {
+        "deb": {
+          "package": "frostwire",
+          "maintainer": "FrostWire Team <contact@frostwire.com>",
+          "dependencies": ["openjdk-7-jre", "zlib1g", "mplayer"],
+          "meta": {
+            "*": {
+              "file_name": "frostwire-5.7.2.all.deb",
+              "uri": "https://ocserver/public.php?service=files&t=7673ebb88fe6926d9a8ebf8e6345ab50&download",
+              "sha256": "4bc10b0e34f13f2c92fd9f3052df297b4f37dcfaf6a57ebe8cab9140fa30d1d8"
+            }
+          }
+        }
+      }
+    },
     "jdownloader": {
       "description": "download manager for one-click hosting sites",
       "website": "http://jdownloader.org/",
@@ -16,7 +60,7 @@
       },
       "sources": {
         "ppa": {
-          "package": "jdownloader",
+          "package": "jdownloader-installer",
           "maintainer": "Benjamin Drung <bdrung@debian.org>",
           "meta": {
             "repo_name": "jd-team-jdownloader",
