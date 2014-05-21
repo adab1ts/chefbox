@@ -7,6 +7,8 @@ bootstrap/keys/
 keys/
 host-*/
 !host-chefbox/
-roles/*/*.json
+roles/
 !roles/common/*.json
 !roles/crb/*.json
+!roles/NODE_PROFILE.json
+!roles/README.md
