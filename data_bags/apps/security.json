@@ -11,7 +11,7 @@
       "description": "graphical front-end for ClamAV",
       "website": "http://code.google.com/p/clamtk/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -22,7 +22,7 @@
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["cabextract", "libclamunrar6"]
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "clamtk",
           "maintainer": "David Paleino <dapal@debian.org>",
           "suggested": ["cabextract", "libclamunrar6"]
@@ -68,20 +68,12 @@
       "description": "utility for tracking stolen computers",
       "website": "http://preyproject.com/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "deb" },
         "ubuntu-14.04": { "source": "deb" }
       },
       "sources": {
-        "distro": {
-          "package": "prey",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "distro-debian": {
-          "package": "prey",
-          "maintainer": "Alessio Treglia <alessio@debian.org>"
-        },
         "deb": {
           "package": "prey",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
@@ -94,6 +86,14 @@
               "sha256": "463b706cdf8e49d999dc1eb0d0cbb42c81fb03fe13f4dcf653aee7e184d588f9"
             }
           }
+        },
+        "distro": {
+          "package": "prey",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "prey",
+          "maintainer": "Alessio Treglia <alessio@debian.org>"
         }
       }
     }
