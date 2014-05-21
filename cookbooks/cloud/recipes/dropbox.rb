@@ -25,6 +25,7 @@ cloud = node[:apps][:cloud]
 pkg_name = case platform_desktop
            when "cinnamon" then "nemo-dropbox"
            when "mate"     then "caja-dropbox"
+           when "openbox"  then "thunar-dropbox-plugin"
            else "nautilus-dropbox"
            end
 

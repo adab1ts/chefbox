@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.5.2:
+
+* README.md       - include CrunchBang as target platform
+* recipes/dropbox - extend dropbox client integration to openbox desktop
+
 ## 0.5.1:
 
 * recipes/dropbox - extend dropbox client integration to mate and xfce desktops
