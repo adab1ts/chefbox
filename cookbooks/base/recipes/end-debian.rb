@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: base
-# Recipe:: end
+# Recipe:: end-debian
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,23 +19,15 @@
 #
 
 
-case platform
-when "debian"    then include_recipe "base::end-debian"
-when "linuxmint" then include_recipe "base::end-linuxmint"
-when "ubuntu"    then include_recipe "base::end-ubuntu"
-end
+## First time system upgrade
 
-
-## First steps documentation
-platform_id = "#{platform}-#{platform_version}-#{platform_desktop}"
-
-support platform_id do
-  section "guide"
-  only_for ["linuxmint", "ubuntu"]
-end
-
-support "sc" do
-  section "base"
-  only_for ["linuxmint", "ubuntu"]
+bash "first_system_upgrade" do
+  code <<-EOH
+    apt-get -y upgrade
+    apt-get -y autoremove
+    apt-get clean
+    EOH
+  action :run
+  not_if { node.attribute?(:first_run_completed) }
 end
 

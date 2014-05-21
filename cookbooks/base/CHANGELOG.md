@@ -2,6 +2,21 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.27.0:
+
+* recipes/begin          - install ruby shadow library on debian platform as well
+* recipes/end            - include end-debian recipe
+* recipes/end-debian     - manage debian specific tasks from end recipe
+
+* recipes/main
+
+  - move language support to platform specific recipes
+  - include main-debian recipe
+
+* recipes/main-debian    - manage debian specific tasks from main recipe
+* recipes/main-linuxmint - manage language support
+* recipes/main-ubuntu    - manage language support
+
 ## 0.26.0:
 
 * recipes/run-end - make some cleaning up

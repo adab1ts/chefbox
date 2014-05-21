@@ -19,6 +19,18 @@
 #
 
 
+# Language support
+package "language-pack-ca"
+package "language-pack-gnome-ca"
+package "aspell-ca"
+package "myspell-ca"
+
+package "language-pack-es"
+package "language-pack-gnome-es"
+package "aspell-es"
+package "myspell-es"
+
+
 os_release = platform_version
 
 # Support for ia32-libs dependency

@@ -19,20 +19,9 @@
 #
 
 
-# Language support
-package "language-pack-ca"
-package "language-pack-gnome-ca"
-package "aspell-ca"
-package "myspell-ca"
-
-package "language-pack-es"
-package "language-pack-gnome-es"
-package "aspell-es"
-package "myspell-es"
-
-
 # Platform-based tasks
 case platform
+when "debian"    then include_recipe "base::main-debian"
 when "linuxmint" then include_recipe "base::main-linuxmint"
 when "ubuntu"    then include_recipe "base::main-ubuntu"
 end

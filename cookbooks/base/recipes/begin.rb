@@ -22,7 +22,7 @@
 ## Requirements
 
 ruby_shadow = case platform_codename
-              when "precise" then "libshadow-ruby1.8"
+              when "precise", "wheezy" then "libshadow-ruby1.8"
               when "trusty"  then "ruby-shadow"
               end
 
