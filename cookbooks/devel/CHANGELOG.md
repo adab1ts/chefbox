@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.5.2:
+
+* README.md - include CrunchBang as target platform
+
 ## 0.5.1:
 
 * recipes/git  - check availability before app installation
