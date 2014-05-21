@@ -32,14 +32,19 @@
       "description": "Computer lab management tool",
       "website": "http://www.epoptes.org/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "ubuntu-14.04": { "source": "distro-trusty" }
       },
       "sources": {
-        "distro": {
+        "distro-trusty": {
           "package": "epoptes",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "epoptes",
+          "maintainer": "Epoptes Developers <epoptes@lists.launchpad.net>"
         },
         "ppa": {
           "package": "epoptes",
@@ -55,14 +60,19 @@
       "description": "Computer lab management tool",
       "website": "http://www.epoptes.org/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "ubuntu-14.04": { "source": "distro-trusty" }
       },
       "sources": {
-        "distro": {
+        "distro-trusty": {
           "package": "epoptes-client",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "epoptes-client",
+          "maintainer": "Epoptes Developers <epoptes@lists.launchpad.net>"
         },
         "ppa": {
           "package": "epoptes-client",
@@ -97,6 +107,7 @@
       "description": "Interactive processes viewer",
       "website": "http://hisham.hm/htop/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -105,6 +116,10 @@
         "distro": {
           "package": "htop",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "htop",
+          "maintainer": "Eugene V. Lyubimkin <jackyf@debian.org>"
         }
       }
     },

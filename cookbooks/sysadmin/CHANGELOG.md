@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of sysadmin.
 
+## 0.2.2:
+
+* README.md - include CrunchBang as target platform
+
 ## 0.2.1:
 
 * recipes/epoptes       - check availability before app installation
