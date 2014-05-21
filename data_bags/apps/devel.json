@@ -11,7 +11,7 @@
       "description": "fast, scalable, distributed revision control system",
       "website": "http://git-scm.com/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -22,7 +22,7 @@
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["git-man", "giggle"]
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "git",
           "maintainer": "Gerrit Pape <pape@smarden.org>",
           "suggested": ["git-man", "giggle"]
@@ -52,7 +52,7 @@
       "description": "Utility for plain text screencasting",
       "website": "http://shelr.tv/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "distro" }
@@ -62,7 +62,7 @@
           "package": "shelr",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "shelr",
           "maintainer": "Antono Vasiljev <self@antono.info>"
         },
@@ -80,7 +80,7 @@
       "description": "shell with lots of features",
       "website": "http://zsh.sourceforge.net/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -90,7 +90,7 @@
           "package": "zsh",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "zsh",
           "maintainer": "Debian Zsh Maintainers <pkg-zsh-devel@lists.alioth.debian.org>"
         }
