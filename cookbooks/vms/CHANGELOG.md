@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.5.3:
+
+* README.md          - include CrunchBang as target platform
+* recipes/virtualbox - disable buggy extension pack installation
+
 ## 0.5.2:
 
 * recipes/virtualbox - check availability before app installation

@@ -8,15 +8,12 @@
       "description": "Oracle VM VirtualBox",
       "website": "http://www.virtualbox.org/",
       "platforms": {
+        "debian-7.5":   { "source": "repo" },
         "linuxmint-13": { "source": "repo" },
         "ubuntu-12.04": { "source": "repo" },
-        "ubuntu-14.04": { "source": "distro" }
+        "ubuntu-14.04": { "source": "repo" }
       },
       "sources": {
-        "distro": {
-          "package": "virtualbox-qt",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
         "repo": {
           "package": "virtualbox-4.3",
           "maintainer": "Oracle Corporation <info@virtualbox.org>",

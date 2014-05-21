@@ -49,11 +49,12 @@ if app_available? vbox
     end
   end
 
-  vms_vbox_extpack "virtualbox" do
-    package vbox['package']
-    action :nothing
-    subscribes :install, resources("package[virtualbox]"), :immediately
-  end
+  # TODO: needs review (sha256_url not found)
+  # vms_vbox_extpack "virtualbox" do
+  #   package vbox['package']
+  #   action :nothing
+  #   subscribes :install, resources("package[virtualbox]"), :immediately
+  # end
 
   # VirtualBox autostart service
   cookbook_file "vbox-defaults" do
