@@ -12,6 +12,7 @@
       "description": "Utility for extracting Broadcom 43xx firmware",
       "website": "http://wireless.kernel.org/en/users/Drivers/b43",
       "platforms": {
+        "debian-7.5":   { "source": "distro-debian" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -22,6 +23,11 @@
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "replaced": ["bcmwl-kernel-source"],
           "suggested": ["firmware-b43-installer"]
+        },
+        "distro-debian": {
+          "package": "b43-fwcutter",
+          "maintainer": "Fabrizio Regalli <fabreg@fabreg.it>",
+          "suggested": ["firmware-b43-installer"]
         }
       }
     },
@@ -29,6 +35,7 @@
       "description": "Dynamic Kernel Module Support Framework",
       "website": "http://linux.dell.com/dkms/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-debian" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -37,22 +44,33 @@
         "distro": {
           "package": "dkms",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-debian": {
+          "package": "dkms",
+          "maintainer": "Dynamic Kernel Modules Support Team <pkg-dkms-maint@lists.alioth.debian.org>"
         }
       }
     },
     "intel_graphics": {
       "description": "Intel graphics drivers update utility",
       "website": "http://01.org/linuxgraphics/",
-      "platforms": {},
+      "platforms": {
+        "ubuntu-14.04": { "source": "deb" }
+      },
       "sources": {
         "deb": {
           "package": "intel_graphics",
           "maintainer": "Rodrigo Vivi <rodrigo.vivi@intel.com>",
           "meta": {
-            "*": {
-              "file_name": "",
-              "uri": "",
-              "sha256": ""
+            "i686": {
+              "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_i386.deb",
+              "uri": "https://192.168.0.195/public.php?service=files&t=438dc70bd27e8417895fcca1b2e5ff6d&download",
+              "sha256": "72b7d1306afeb545e01b89de4149bb887b9b878eabe636d5150e6c4af18d4d1d"
+            },
+            "x86_64": {
+              "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_amd64.deb",
+              "uri": "https://192.168.0.195/public.php?service=files&t=217403000f502b9bb7c917ffd422c594&download",
+              "sha256": "8800620b526b30cd18696b9f0b535f755a60f100595b3c24614f67dc70baface"
             }
           }
         }
@@ -62,6 +80,7 @@
       "description": "adaptive readahead daemon",
       "website": "http://sourceforge.net/projects/preload",
       "platforms": {
+        "debian-7.5":   { "source": "distro-debian" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -70,6 +89,10 @@
         "distro": {
           "package": "preload",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-debian": {
+          "package": "preload",
+          "maintainer": "Kari Pahula <kaol@debian.org>"
         }
       }
     },
@@ -77,6 +100,7 @@
       "description": "Save battery power on laptops",
       "website": "http://linrunner.de/en/tlp/tlp.html",
       "platforms": {
+        "debian-7.5":   { "source": "repo" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
@@ -86,10 +110,24 @@
           "package": "tlp",
           "maintainer": "Thomas Koch <linrunner@gmx.net>",
           "replaced": ["laptop-mode-tools"],
-          "suggested": ["tlp-rdw", "smartmontools", "ethtool", "tp-smapi-dkms", "acpi-call-tools"],
+          "suggested": ["tlp-rdw"],
           "meta": {
             "repo_name": "linrunner-tlp",
             "uri": "ppa:linrunner/tlp"
+          }
+        },
+        "repo": {
+          "package": "tlp",
+          "maintainer": "Thomas Koch <linrunner@gmx.net>",
+          "replaced": ["laptop-mode-tools"],
+          "suggested": ["tlp-rdw"],
+          "meta": {
+            "repo_name": "linrunner-tlp",
+            "uri": "http://ppa.launchpad.net/linrunner/tlp/ubuntu",
+            "distribution": "lucid",
+            "components": ["main"],
+            "key": "02D65EFF",
+            "keyserver": "keyserver.ubuntu.com"
           }
         }
       }
