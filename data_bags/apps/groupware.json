@@ -13,6 +13,7 @@
       "description": "infinote-based collaborative text editor",
       "website": "http://gobby.0x539.de/trac/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -21,6 +22,10 @@
         "distro": {
           "package": "gobby-infinote",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "gobby-infinote",
+          "maintainer": "Philipp Kern <pkern@debian.org>"
         }
       }
     },
@@ -28,6 +33,7 @@
       "description": "Google Talk Plugin",
       "website": "http://www.google.com/+/learnmore/hangouts/",
       "platforms": {
+        "debian-7.5":   { "source": "deb" },
         "linuxmint-13": { "source": "deb" },
         "ubuntu-12.04": { "source": "deb" },
         "ubuntu-14.04": { "source": "deb" }
@@ -55,11 +61,16 @@
       "description": "Low latency VoIP client",
       "website": "http://mumble.sourceforge.net/",
       "platforms": {
+        "linuxmint-13": { "source": "distro" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
       "sources": {
+        "distro": {
+          "package": "mumble",
+          "maintainer": "Ron Lee <ron@debian.org>"
+        },
         "ppa": {
           "package": "mumble",
           "maintainer": "Mikkel Krautz <mikkel@krautz.dk>",
@@ -97,16 +108,25 @@
       "description": "client for Skype VOIP and instant messaging service",
       "website": "http://www.skype.com/en/",
       "platforms": {
+        "debian-7.5":   { "source": "deb-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "deb" }
+        "ubuntu-14.04": { "source": "deb-trusty" }
       },
       "sources": {
-        "distro": {
+        "deb-wheezy": {
           "package": "skype",
-          "maintainer": "Steve Langasek <steve.langasek@canonical.com>"
+          "maintainer": "Skype Technologies <info@skype.net>",
+          "dependencies": ["libqt4-dbus", "libqt4-network", "libqt4-xml", "libqtcore4", "libqtgui4", "libqtwebkit4"],
+          "meta": {
+            "*": {
+              "file_name": "skype-debian_4.2.0.13-1_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=768398d7096a65c5f4e8bfd4394eb116&download",
+              "sha256": "97c615a7f54c337e1ae51ae23c7eb8f464c506d1e260a90a4c2806bb6c322f3f"
+            }
+          }
         },
-        "deb": {
+        "deb-trusty": {
           "package": "skype",
           "maintainer": "Skype Technologies <info@skype.net>",
           "dependencies": ["libqt4-dbus", "libqt4-network", "libqt4-xml", "libqtcore4", "libqtgui4", "libqtwebkit4"],
@@ -117,6 +137,10 @@
               "sha256": "bbeb3d3119af8497c90b772fa61e81eb58f9a55ee5d02bb033398657eb4e7df3"
             }
           }
+        },
+        "distro": {
+          "package": "skype",
+          "maintainer": "Steve Langasek <steve.langasek@canonical.com>"
         }
       }
     },
@@ -124,6 +148,7 @@
       "description": "IRC client for X similar to AmIRC",
       "website": "http://xchat.org/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy", "default": true },
         "linuxmint-13": { "source": "distro", "default": true },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro", "default": true }
@@ -132,6 +157,10 @@
         "distro": {
           "package": "xchat",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "xchat",
+          "maintainer": "Davide Puricelli <evo@debian.org>"
         }
       }
     }

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.6.2:
+
+* README.md - include CrunchBang as target platform
+
 ## 0.6.1:
 
 * recipes/hangouts - rename hangouts plugin source file
