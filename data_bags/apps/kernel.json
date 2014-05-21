@@ -12,7 +12,7 @@
       "description": "Utility for extracting Broadcom 43xx firmware",
       "website": "http://wireless.kernel.org/en/users/Drivers/b43",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -24,7 +24,7 @@
           "replaced": ["bcmwl-kernel-source"],
           "suggested": ["firmware-b43-installer"]
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "b43-fwcutter",
           "maintainer": "Fabrizio Regalli <fabreg@fabreg.it>",
           "suggested": ["firmware-b43-installer"]
@@ -35,7 +35,7 @@
       "description": "Dynamic Kernel Module Support Framework",
       "website": "http://linux.dell.com/dkms/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -45,7 +45,7 @@
           "package": "dkms",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "dkms",
           "maintainer": "Dynamic Kernel Modules Support Team <pkg-dkms-maint@lists.alioth.debian.org>"
         }
@@ -64,12 +64,12 @@
           "meta": {
             "i686": {
               "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_i386.deb",
-              "uri": "https://192.168.0.195/public.php?service=files&t=438dc70bd27e8417895fcca1b2e5ff6d&download",
+              "uri": "https://ocserver/public.php?service=files&t=438dc70bd27e8417895fcca1b2e5ff6d&download",
               "sha256": "72b7d1306afeb545e01b89de4149bb887b9b878eabe636d5150e6c4af18d4d1d"
             },
             "x86_64": {
               "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_amd64.deb",
-              "uri": "https://192.168.0.195/public.php?service=files&t=217403000f502b9bb7c917ffd422c594&download",
+              "uri": "https://ocserver/public.php?service=files&t=217403000f502b9bb7c917ffd422c594&download",
               "sha256": "8800620b526b30cd18696b9f0b535f755a60f100595b3c24614f67dc70baface"
             }
           }
@@ -80,7 +80,7 @@
       "description": "adaptive readahead daemon",
       "website": "http://sourceforge.net/projects/preload",
       "platforms": {
-        "debian-7.5":   { "source": "distro-debian" },
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -90,7 +90,7 @@
           "package": "preload",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
-        "distro-debian": {
+        "distro-wheezy": {
           "package": "preload",
           "maintainer": "Kari Pahula <kaol@debian.org>"
         }
