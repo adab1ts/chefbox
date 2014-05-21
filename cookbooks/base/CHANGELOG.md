@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.27.1:
+
+* files/debian/apt/sources.list - rename files/debian-7.5/ folder
+
 ## 0.27.0:
 
 * recipes/begin          - install ruby shadow library on debian platform as well
