@@ -47,7 +47,7 @@ define :install_app do
     codename = Coderebels::Chefbox::Box.lsb_codename
     arch = Coderebels::Chefbox::Box.arch
 
-    if source_id =~ /bin/
+    if source_id =~ /^bin/
       bin_data = source_data
 
       # Download of package
@@ -93,7 +93,7 @@ define :install_app do
           not_if { ::File.exists?(app_home) }
         end
       end
-    elsif source_id =~ /deb/
+    elsif source_id =~ /^deb/
       deb_data = source_data
 
       # Download of deb package
@@ -115,7 +115,7 @@ define :install_app do
       end
     else
       case source_id
-      when /ppa/
+      when /^ppa/
         # PPA addition
         ppa = source_data['meta']
 
@@ -124,7 +124,7 @@ define :install_app do
           distribution codename
           action :add
         end
-      when 'repo'
+      when /^repo/
         repo_data = source_data
 
         # apt source addition
