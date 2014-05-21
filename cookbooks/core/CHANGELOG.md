@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.5:
+
+* README.md - include CrunchBang as target platform
+
 ## 1.0.4:
 
 * definitions/uninstall_app - fix typo
