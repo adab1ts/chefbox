@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.7:
+
+* libraries/box - new implementation for Box.arch method
+
 ## 1.0.6:
 
 * definitions/install_app - fix source id management bug

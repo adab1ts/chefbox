@@ -101,7 +101,7 @@ module Coderebels
       end
 
       def self.arch
-        Coderebels::Chefbox::Shell.rep "uname -p"
+        Coderebels::Chefbox::Shell.rep "uname -m"
       end
 
     end
