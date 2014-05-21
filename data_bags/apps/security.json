@@ -11,6 +11,7 @@
       "description": "graphical front-end for ClamAV",
       "website": "http://code.google.com/p/clamtk/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-debian" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -20,6 +21,11 @@
           "package": "clamtk",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["cabextract", "libclamunrar6"]
+        },
+        "distro-debian": {
+          "package": "clamtk",
+          "maintainer": "David Paleino <dapal@debian.org>",
+          "suggested": ["cabextract", "libclamunrar6"]
         }
       }
     },
@@ -27,6 +33,7 @@
       "description": "graphical user interface for ufw",
       "website": "http://gufw.org/",
       "platforms": {
+        "debian-7.5":   { "source": "distro" },
         "linuxmint-13": { "source": "distro", "default": true },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -61,6 +68,7 @@
       "description": "utility for tracking stolen computers",
       "website": "http://preyproject.com/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-debian" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "deb" },
         "ubuntu-14.04": { "source": "deb" }
@@ -69,6 +77,10 @@
         "distro": {
           "package": "prey",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-debian": {
+          "package": "prey",
+          "maintainer": "Alessio Treglia <alessio@debian.org>"
         },
         "deb": {
           "package": "prey",

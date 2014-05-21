@@ -37,7 +37,7 @@ if app_available? antivirus
           'uri'       => "https://ocserver/public.php?service=files&t=997eddadc89f1636026a0fdf7847352e&download",
           'sha256'    => "fd31b7299ad26932d5e75dbd9759ea7312f0f60b95eeca12074b7806d84afbb3"
         }
-        when "xfce" then {
+        when "openbox", "xfce" then {
           'package'   => "thunar-sendto-clamtk",
           'file_name' => "thunar-sendto-clamtk_0.05-1_all.deb",
           'uri'       => "https://ocserver/public.php?service=files&t=51861c8480f008665b423f62da60f91d&download",

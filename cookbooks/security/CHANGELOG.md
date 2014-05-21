@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of security.
 
+## 0.8.0:
+
+* recipes/antivirus - install clamtk file explorer integration on openbox
+* recipes/privacy   - include openbox desktop logic and refactor accordingly
+
 ## 0.7.0:
 
 * recipes/antivirus - install clamtk file explorer integration

@@ -19,21 +19,21 @@
 #
 
 
-case platform
-when "ubuntu"
-  case platform_desktop
-  when "unity"
-    package "nautilus-gtkhash"
-    package "nautilus-wipe"
-    package "seahorse-nautilus"
-  when "xfce"
-    package "thunar-gtkhash"
-    package "secure-delete"
-    package "seahorse"
-  end
-when "linuxmint"
+case platform_desktop
+when "cinnamon"
   package "gtkhash"
   package "secure-delete"
-  package "nemo-seahorse" if platform_desktop == "cinnamon"
+  package "nemo-seahorse"
+when "mate"
+  package "gtkhash"
+  package "secure-delete"
+when "openbox", "xfce"
+  package "thunar-gtkhash"
+  package "secure-delete"
+  package "seahorse"
+when "unity"
+  package "nautilus-gtkhash"
+  package "nautilus-wipe"
+  package "seahorse-nautilus"
 end
 
