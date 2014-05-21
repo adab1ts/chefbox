@@ -375,8 +375,10 @@ namespace :coderebels do
   task :bootstrap, [:user, :nodename, :ip, :platform, :arch] do |t, args|
     args.with_defaults(:platform => "ubuntu", :arch => "i686")
     raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
-    raise "Allowed values for platform are: ubuntu, linuxmint" if (args.platform and not %w[ubuntu linuxmint].include? args.platform)
     raise "Allowed values for arch are: i686, x86_64" if (args.arch and not %w[i686 x86_64].include? args.arch)
+    if (args.platform and not %w[crunchbang linuxmint ubuntu].include? args.platform)
+      raise "Allowed values for platform are: crunchbang, linuxmint, ubuntu"
+    end
 
     user     = args.user
     nodename = args.nodename
@@ -409,8 +411,10 @@ namespace :coderebels do
   task :converge, [:user, :nodename, :ip, :platform, :arch] do |t, args|
     args.with_defaults(:platform => "ubuntu", :arch => "i686")
     raise "Must provide a user, a nodename and an IP address" unless (args.user and args.nodename and args.ip)
-    raise "Allowed values for platform are: ubuntu, linuxmint" if (args.platform and not %w[ubuntu linuxmint].include? args.platform)
     raise "Allowed values for arch are: i686, x86_64" if (args.arch and not %w[i686 x86_64].include? args.arch)
+    if (args.platform and not %w[crunchbang linuxmint ubuntu].include? args.platform)
+      raise "Allowed values for platform are: crunchbang, linuxmint, ubuntu"
+    end
 
     user     = args.user
     nodename = args.nodename
