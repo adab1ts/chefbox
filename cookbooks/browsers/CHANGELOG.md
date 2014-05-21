@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.5.3:
+
+* README.md - include CrunchBang as target platform
+
 ## 0.5.2:
 
 * recipes/chrome - fixes repository duplication issue

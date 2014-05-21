@@ -11,6 +11,7 @@
       "description": "The web browser from Google",
       "website": "http://www.google.com/intl/en/chrome/browser/",
       "platforms": {
+        "debian-7.5":   { "source": "repo" },
         "linuxmint-13": { "source": "repo" },
         "ubuntu-12.04": { "source": "repo" },
         "ubuntu-14.04": { "source": "repo" }
@@ -33,6 +34,7 @@
       "description": "Chromium browser",
       "website": "http://www.chromium.org/Home",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro-trusty" }
@@ -51,6 +53,11 @@
             "chromium-codecs-ffmpeg-extra",
             "pepperflashplugin-nonfree"
           ]
+        },
+        "distro-wheezy": {
+          "package": "chromium-browser",
+          "maintainer": "Debian Chromium Maintainers <pkg-chromium-maint@lists.alioth.debian.org>",
+          "suggested": ["chromium-browser-l10n"]
         }
       }
     },
@@ -58,6 +65,7 @@
       "description": "Safe and easy web browser from Mozilla",
       "website": "http://www.mozilla.org/en-US/firefox/new/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy", "default": true },
         "linuxmint-13": { "source": "distro", "default": true },
         "ubuntu-12.04": { "source": "distro", "default": true },
         "ubuntu-14.04": { "source": "distro", "default": true }
@@ -67,6 +75,11 @@
           "package": "firefox",
           "maintainer": "Ubuntu Mozilla Team <ubuntu-mozillateam@lists.ubuntu.com>",
           "suggested": ["flashplugin-installer"]
+        },
+        "distro-wheezy": {
+          "package": "iceweasel",
+          "maintainer": "Maintainers of Mozilla-related packages <pkg-mozilla-maintainers@lists.alioth.debian.org>",
+          "suggested": ["flashplugin-nonfree"]
         }
       }
     },
@@ -74,6 +87,7 @@
       "description": "Fast and secure web browser and Internet suite",
       "website": "http://www.opera.com/computer/linux",
       "platforms": {
+        "debian-7.5":   { "source": "repo" },
         "linuxmint-13": { "source": "repo" },
         "ubuntu-12.04": { "source": "repo" },
         "ubuntu-14.04": { "source": "repo" }
