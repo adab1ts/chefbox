@@ -8,9 +8,10 @@ The following recipes are applied:
 
 ## Requirements
 
-This cookbook only applies to the following platforms:  
-- `Ubuntu 12.04+`
+This cookbook applies to the following platforms:  
+- `CrunchBang 11+`
 - `Linux Mint 13+`
+- `Ubuntu 12.04+`
 
 #### cookbooks
 - `core`

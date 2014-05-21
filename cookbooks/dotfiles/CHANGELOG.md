@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.5.5:
+
+* templates/debian/bash/env.erb - extend chefadmin boxes env variables to crunchbang boxes
+
 ## 0.5.4:
 
 * files/default/bash/functions.d/misc.bfn - new function to change the hostname of the box
