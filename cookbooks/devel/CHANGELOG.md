@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.6.0:
+
+* recipes/default  - now includes brackets install management
+* recipes/shelr    - manage brackets installation
+
 ## 0.5.2:
 
 * README.md - include CrunchBang as target platform

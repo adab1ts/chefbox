@@ -3,11 +3,12 @@
 This cookbook installs a selected set of development tools.
 The following recipes may apply:
 
-- `devel::default` - purges unselected packages and includes recipes as nedeed.
-- `devel::git`     - installs __Git distributed version control system__ and suggested packages.
-- `devel::juju`    - installs __Juju service orchestration tool__ and suggested packages.
-- `devel::shelr`   - installs __Shelr plain text screencasting tool__ and suggested packages.
-- `devel::zsh`     - installs __Zsh Shell__ and suggested packages.
+- `devel::default`  - purges unselected packages and includes recipes as nedeed.
+- `devel::brackets` - installs __Brackets code editor for the web__ and suggested packages.
+- `devel::git`      - installs __Git distributed version control system__ and suggested packages.
+- `devel::juju`     - installs __Juju service orchestration tool__ and suggested packages.
+- `devel::shelr`    - installs __Shelr plain text screencasting tool__ and suggested packages.
+- `devel::zsh`      - installs __Zsh Shell__ and suggested packages.
 
 
 ## Requirements

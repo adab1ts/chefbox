@@ -1,12 +1,44 @@
 {
   "id": "devel",
   "apps": [
+    "brackets",
     "git",
     "juju",
     "shelr",
     "zsh"
   ],
   "profiles": {
+    "brackets": {
+      "description": "Brackets",
+      "website": "http://brackets.io/",
+      "platforms": {
+        "debian-7.5":   { "source": "deb" },
+        "linuxmint-13": { "source": "ppa" },
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "deb": {
+          "package": "brackets",
+          "maintainer": "Brackets Team <brackets-dev@googlegroups.com>",
+          "meta": {
+            "*": {
+              "file_name": "Brackets.Sprint.40.32-bit.deb",
+              "uri": "https://ocserver/public.php?service=files&t=fb5c7fa744d6dcd0de5116fcdeb83c43&download",
+              "sha256": "7be1b778c19142031da402ed645c99013356343e307c10deb359cea827c6b4f2"
+            }
+          }
+        },
+        "ppa": {
+          "package": "brackets",
+          "maintainer": "Alin Andrei <webupd8@gmail.com>",
+          "meta": {
+            "repo_name": "webupd8team-brackets",
+            "uri": "ppa:webupd8team/brackets"
+          }
+        }
+      }
+    },
     "git": {
       "description": "fast, scalable, distributed revision control system",
       "website": "http://git-scm.com/",

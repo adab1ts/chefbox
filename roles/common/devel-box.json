@@ -24,12 +24,12 @@
           "dropbox"
         ],
         "devel": [
+          "brackets",
           "git",
           "shelr",
           "zsh"
         ],
         "groupware": [
-          "gobby",
           "hangouts",
           "mumble",
           "smuxi"

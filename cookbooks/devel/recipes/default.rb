@@ -47,6 +47,9 @@ if selected
   # VCS solutions
   include_recipe "devel::git" if selected.include?("git")
 
+  # Code editors
+  include_recipe "devel::brackets" if selected.include?("brackets")
+
   # Cloud solutions
   include_recipe "devel::juju" if selected.include?("juju")
 end
