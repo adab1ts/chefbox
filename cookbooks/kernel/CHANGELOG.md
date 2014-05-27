@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.3:
+
+* recipes/intel_graphics - remove intel linux graphics installer execution (defer to post task)
+
 ## 0.4.2:
 
 * README.md - include CrunchBang as target platform

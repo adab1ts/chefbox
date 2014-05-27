@@ -49,10 +49,5 @@ if app_available? intel_graphics
     force true
     profile intel_graphics
   end
-
-  execute "intel-linux-graphics-installer" do
-    action :nothing
-    subscribes :run, resources("package[intel_graphics]"), :immediately
-  end
 end
 

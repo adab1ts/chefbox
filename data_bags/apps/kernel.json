@@ -61,6 +61,7 @@
         "deb": {
           "package": "intel_graphics",
           "maintainer": "Rodrigo Vivi <rodrigo.vivi@intel.com>",
+          "dependencies": ["ttf-ancient-fonts"],
           "meta": {
             "i686": {
               "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_i386.deb",
