@@ -17,11 +17,16 @@
       "description": "Virtual lighttable and darkroom for photographers",
       "website": "http://www.darktable.org/",
       "platforms": {
+        "debian-7.5":   { "source": "distro" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
       "sources": {
+        "distro": {
+          "package": "darktable",
+          "maintainer": "Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>"
+        },
         "ppa": {
           "package": "darktable",
           "maintainer": "Pascal de Bruijn <pmjdebruijn@pcode.nl>",
@@ -79,6 +84,7 @@
       "description": "The GNU Image Manipulation Program",
       "website": "http://www.gimp.org/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy", "default": true },
         "linuxmint-13": { "source": "ppa", "default": true },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "distro", "default": true }
@@ -87,6 +93,11 @@
         "distro": {
           "package": "gimp",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["gimp-data-extras", "gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"]
+        },
+        "distro-wheezy": {
+          "package": "gimp",
+          "maintainer": "Ari Pollak <ari@debian.org>",
           "suggested": ["gimp-data-extras", "gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"]
         },
         "ppa": {
@@ -104,6 +115,7 @@
       "description": "vector-based drawing program",
       "website": "http://www.inkscape.org/en/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -112,6 +124,10 @@
         "distro": {
           "package": "inkscape",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "inkscape",
+          "maintainer": "Wolfram Quester <wolfi@sigxcpu.org>"
         }
       }
     },
@@ -119,11 +135,16 @@
       "description": "Computer-aided design (CAD) system",
       "website": "http://librecad.org/cms/home.html",
       "platforms": {
+        "debian-7.5":   { "source": "distro" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
       "sources": {
+        "distro": {
+          "package": "librecad",
+          "maintainer": "Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>"
+        },
         "ppa": {
           "package": "librecad",
           "maintainer": "Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>",
@@ -138,6 +159,7 @@
       "description": "paint program for use with graphics tablets",
       "website": "http://mypaint.intilinux.com/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "distro" }
@@ -147,6 +169,10 @@
           "package": "mypaint",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["mypaint-data-extras"]
+        },
+        "distro-wheezy": {
+          "package": "mypaint",
+          "maintainer": "Gürkan Sengün <gurkan@phys.ethz.ch>"
         },
         "ppa": {
           "package": "mypaint",
@@ -193,6 +219,7 @@
       "description": "RAW file processor",
       "website": "http://www.rawtherapee.com/",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "distro" }
@@ -201,6 +228,10 @@
         "distro": {
           "package": "rawtherapee",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        },
+        "distro-wheezy": {
+          "package": "rawtherapee",
+          "maintainer": "Philip Rinn <rinni@gmx.net>"
         },
         "ppa": {
           "package": "rawtherapee",
@@ -216,6 +247,7 @@
       "description": "Open Source Desktop Page Layout - stable branch",
       "website": "http://www.scribus.net/canvas/Scribus",
       "platforms": {
+        "debian-7.5":   { "source": "distro-wheezy" },
         "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
@@ -224,6 +256,11 @@
         "distro": {
           "package": "scribus",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["scribus-doc", "scribus-template", "icc-profiles", "icc-profiles-free"]
+        },
+        "distro-wheezy": {
+          "package": "scribus",
+          "maintainer": "Oleksandr Moskalenko <malex@debian.org>",
           "suggested": ["scribus-doc", "scribus-template", "icc-profiles", "icc-profiles-free"]
         }
       }
