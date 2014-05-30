@@ -386,11 +386,13 @@ namespace :coderebels do
     ip       = args.ip
     port     = 2222
 
-    ssh_dir  = File.join(ENV['HOME'], ".ssh")
     key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
     profile_file = File.join(TOPDIR, "roles", current_env, "#{nodename}.json")
+    ssh_dir = File.join(ENV['HOME'], ".ssh")
+    ssh_hosts_file = File.join(ssh_dir, "known_hosts")
 
-    FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
+    FileUtils.touch ssh_hosts_file unless File.exists? ssh_hosts_file
+    FileUtils.cp ssh_hosts_file, File.join(ssh_dir, "known_hosts.orig")
 
     if platform == "linuxmint"
       url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
@@ -403,7 +405,7 @@ namespace :coderebels do
     sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --sudo}
     sh %{knife node run_list add #{nodename} 'role[#{nodename}]'}
 
-    FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), File.join(ssh_dir, "known_hosts")
+    FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), ssh_hosts_file
   end
 
 
@@ -422,11 +424,13 @@ namespace :coderebels do
     ip       = args.ip
     port     = 2222
 
-    ssh_dir  = File.join(ENV['HOME'], ".ssh")
     key_file = File.join(TOPDIR, "keys", current_env, "#{user}@#{nodename}", "#{user}@#{nodename}")
     profile_file = File.join(TOPDIR, "roles", current_env, "#{nodename}.json")
+    ssh_dir = File.join(ENV['HOME'], ".ssh")
+    ssh_hosts_file = File.join(ssh_dir, "known_hosts")
 
-    FileUtils.cp File.join(ssh_dir, "known_hosts"), File.join(ssh_dir, "known_hosts.orig")
+    FileUtils.touch ssh_hosts_file unless File.exists? ssh_hosts_file
+    FileUtils.cp ssh_hosts_file, File.join(ssh_dir, "known_hosts.orig")
 
     if platform == "linuxmint"
       url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
@@ -438,7 +442,7 @@ namespace :coderebels do
     sh %{knife role from file #{profile_file}}
     sh %{knife bootstrap #{ip} --ssh-port #{port} --ssh-user #{user} --identity-file #{key_file} --node-name #{nodename} --run-list 'role[#{nodename}]' --sudo}
 
-    FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), File.join(ssh_dir, "known_hosts")
+    FileUtils.mv File.join(ssh_dir, "known_hosts.orig"), ssh_hosts_file
   end
 
 
