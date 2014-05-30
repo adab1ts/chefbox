@@ -117,7 +117,10 @@
         "deb-trusty": {
           "package": "skype",
           "maintainer": "Skype Technologies <info@skype.net>",
-          "dependencies": ["libqt4-dbus:i386", "libqtwebkit4:i386"],
+          "dependencies": [
+            "libqt4-dbus:i386", "libqtwebkit4:i386", "libxss1:i386",
+            "libxv1:i386", "libssl1.0.0:i386", "libasound2-plugins:i386"
+          ],
           "meta": {
             "*": {
               "file_name": "skype-ubuntu-precise_4.2.0.13-1_i386.deb",
@@ -129,7 +132,10 @@
         "deb-wheezy": {
           "package": "skype",
           "maintainer": "Skype Technologies <info@skype.net>",
-          "dependencies": ["libqt4-dbus:i386", "libqtwebkit4:i386"],
+          "dependencies": [
+            "libqt4-dbus:i386", "libqtwebkit4:i386", "libxss1:i386",
+            "libxv1:i386", "libssl1.0.0:i386", "libasound2-plugins:i386"
+          ],
           "meta": {
             "*": {
               "file_name": "skype-debian_4.2.0.13-1_i386.deb",
