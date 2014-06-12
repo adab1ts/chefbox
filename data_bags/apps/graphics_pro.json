@@ -44,14 +44,7 @@
       "sources": {
         "deb": {
           "package": "draftsight",
-          "maintainer": "Dassault Systemes <CrashReports@DraftSight.com",
-          "meta": {
-            "*": {
-              "file_name": "",
-              "uri": "",
-              "sha256": ""
-            }
-          }
+          "maintainer": "Dassault Systemes <CrashReports@DraftSight.com"
         }
       }
     },
