@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.4.2:
+
+* README.md - include CrunchBang as target platform
+
 ## 0.4.1:
 
 * recipes/draftsight - check availability before app installation
