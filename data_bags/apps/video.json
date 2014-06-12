@@ -130,7 +130,8 @@
       "website": "http://www.mirovideoconverter.com/",
       "platforms": {
         "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" }
+        "ubuntu-12.04": { "source": "ppa" },
+        "ubuntu-14.04": { "source": "repo" }
       },
       "sources": {
         "ppa": {
@@ -139,6 +140,18 @@
           "meta": {
             "repo_name": "pcf-miro-releases",
             "uri": "ppa:pcf/miro-releases"
+          }
+        },
+        "repo": {
+          "package": "mirovideoconverter",
+          "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
+          "meta": {
+            "repo_name": "pcf-miro-releases",
+            "uri": "http://ppa.launchpad.net/pcf/miro-releases/ubuntu",
+            "distribution": "precise",
+            "components": ["main"],
+            "key": "2D75E850",
+            "keyserver": "keyserver.ubuntu.com"
           }
         }
       }
