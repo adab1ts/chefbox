@@ -9,9 +9,9 @@ The following recipes are applied:
 
 ## Requirements
 
-This cookbook only applies to the following platforms:  
-- `Ubuntu 12.04+`
-- `Linux Mint 13+`
+This cookbook applies to the following platforms:  
+- `Ubuntu 14.04+`
+- `Linux Mint 17+`
 
 #### cookbooks
 - `core`

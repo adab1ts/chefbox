@@ -7,7 +7,7 @@
 # Job variables
 #
 drive="<%= @backup_drive %>"
-drive_path="/media/${drive}"
+drive_path="/media/${USR}/${drive}"
 
 # Backup variables
 export BACKUP_PATH="<%= "${drive_path}/#{@backup_task_folder}" %>"

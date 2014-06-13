@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.5.2:
+
+* README.md                                        - precise-based platforms no longer supported
+* templates/default/jobs/backup/drive/backup-drive - minor update
+
 ## 0.5.1:
 
 * templates/linuxmint/jobs/backup/backup-mgr.desktop - moved from 'templates/linuxmint-13/jobs/backup' folder
