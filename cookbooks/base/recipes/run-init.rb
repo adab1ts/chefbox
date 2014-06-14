@@ -36,8 +36,13 @@ end
 
 ## APT Sources
 
+sources_path = case platform
+               when "linuxmint" then "/etc/apt/sources.list.d/official-package-repositories.list"
+               else "/etc/apt/sources.list"
+               end
+
 cookbook_file "sources.list" do
-  path "/etc/apt/sources.list"
+  path sources_path
   source "/apt/sources.list"
   mode 0644
   backup false

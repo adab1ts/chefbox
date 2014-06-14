@@ -1,0 +1,6 @@
+deb http://mirrors.fe.up.pt/linuxmint-packages qiana main upstream import 
+deb http://extra.linuxmint.com qiana main
+deb http://archive.ubuntu.com/ubuntu trusty main restricted universe multiverse
+deb http://archive.ubuntu.com/ubuntu trusty-updates main restricted universe multiverse
+deb http://security.ubuntu.com/ubuntu/ trusty-security main restricted universe multiverse
+deb http://archive.canonical.com/ubuntu/ trusty partner

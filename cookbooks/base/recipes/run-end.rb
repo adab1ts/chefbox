@@ -31,24 +31,6 @@ bash "run_end-clean_up" do
 end
 
 
-## APT Sources
-
-if platform == "linuxmint"
-  cookbook_file "sources.list.final" do
-    path "/etc/apt/sources.list"
-    source "/apt/sources.list.final"
-    mode 0644
-    backup false
-    notifies :run, "execute[run_end-system_update]", :immediately
-  end
-
-  execute "run_end-system_update" do
-    command "apt-get update"
-    action :nothing
-  end
-end
-
-
 ## Final tasks
 
 ruby_block "first_run_completed" do

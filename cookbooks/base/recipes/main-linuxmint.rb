@@ -31,21 +31,6 @@ package "aspell-es"
 package "myspell-es"
 
 
-os_release = platform_version
-
-# Support for ia32-libs dependency
-if platform_arch == "x86_64" and os_release == 13
-  %w[
-    ia32-libs-multiarch
-    i386
-    lib32gcc1
-    libc6-i386
-  ].each do |pkg|
-    package pkg
-  end
-end
-
-
 # Virtualization support
 unless virtual_box?
   %w[
@@ -56,20 +41,6 @@ unless virtual_box?
     package pkg do
       action :purge
     end
-  end
-end
-
-
-# Commonly used restricted packages for Linux Mint
-if os_release < 15
-  repo_name = "videolan-#{platform_codename}"
-
-  apt_repository repo_name do
-    uri "http://download.videolan.org/pub/debian/stable/ /"
-    distribution ""
-    key "http://download.videolan.org/pub/debian/videolan-apt.asc"
-    action :add
-    not_if { ::File.exists? "#{node[:apt][:sources_path]}/#{repo_name}.list" }
   end
 end
 

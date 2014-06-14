@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.28.0:
+
+* README.md              - linuxmint 13 no longer supported
+* recipes/end-linuxmint  - qiana code only (maya no longer supported)
+* recipes/main-linuxmint - qiana code only (maya no longer supported)
+* recipes/run-end        - remove maya code (no longer support)
+* recipes/run-init       - include qiana sources
+
 ## 0.27.1:
 
 * files/debian/apt/sources.list - rename files/debian-7.5/ folder

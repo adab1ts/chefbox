@@ -15,10 +15,6 @@ The following recipes are applied:
       `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
       `+ubuntu-restricted-extras`   - Commonly used restricted packages for Ubuntu  
 
-  * `Linux Mint`
-
-      `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (maya x86_64 only)  
-
   * `All`
 
       `virtualbox guest packages`   - Support packages for virtual boxes
@@ -32,7 +28,7 @@ The following recipes are applied:
 
 This cookbook applies to the following platforms:  
 - `CrunchBang 11+`
-- `Linux Mint 13+`
+- `Linux Mint 17+`
 - `Ubuntu 12.04+`
 
 #### cookbooks
