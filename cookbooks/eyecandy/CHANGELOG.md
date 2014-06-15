@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.9.1:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.9.0:
 
 * recipes/default     - now includes unity tweak tool install management

@@ -16,9 +16,9 @@
       "description": "Faba Icon Theme",
       "website": "http://mokaproject.com/faba-icon-theme/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -36,9 +36,9 @@
       "description": "Moka Icon Theme",
       "website": "http://mokaproject.com/moka-icon-theme/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -55,9 +55,9 @@
       "description": "Moka GTK Theme",
       "website": "http://mokaproject.com/moka-gtk-theme/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -74,7 +74,6 @@
       "description": "NITRUX-umd",
       "website": "http://launchpad.net/~kokoto-java/+archive/omgubuntu-stuff",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" }
       },
       "sources": {
@@ -92,9 +91,9 @@
       "description": "Numix Circle Icons",
       "website": "http://numixproject.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -112,9 +111,9 @@
       "description": "Numix Shine Icons",
       "website": "http://numixproject.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -132,9 +131,9 @@
       "description": "Orchis GTK Theme",
       "website": "http://mokaproject.com/orchis-gtk-theme/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
