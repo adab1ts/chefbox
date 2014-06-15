@@ -12,7 +12,7 @@
       "website": "http://code.google.com/p/clamtk/",
       "platforms": {
         "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
+        "linuxmint-17": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
       },
@@ -34,7 +34,7 @@
       "website": "http://gufw.org/",
       "platforms": {
         "debian-7.5":   { "source": "distro" },
-        "linuxmint-13": { "source": "distro", "default": true },
+        "linuxmint-17": { "source": "distro", "default": true },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
       },
@@ -49,7 +49,7 @@
       "description": "Tor Browser Bundle",
       "website": "http://www.torproject.org/projects/torbrowser.html.en",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
+        "linuxmint-17": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
@@ -69,7 +69,7 @@
       "website": "http://preyproject.com/",
       "platforms": {
         "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
+        "linuxmint-17": { "source": "distro" },
         "ubuntu-12.04": { "source": "deb" },
         "ubuntu-14.04": { "source": "deb" }
       },

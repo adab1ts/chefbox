@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of security.
 
+## 0.8.1:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.8.0:
 
 * recipes/antivirus - install clamtk file explorer integration on openbox
