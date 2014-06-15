@@ -9,17 +9,17 @@
       "description": "Dropbox client",
       "website": "http://www.dropbox.com/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro-maya" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro-qiana" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
           "package": "nautilus-dropbox",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
-        "distro-maya": {
+        "distro-qiana": {
           "package": "nemo-dropbox",
           "maintainer": "Clement Lefebvre <root@linuxmint.com>"
         },
@@ -33,10 +33,10 @@
       "description": "ownCloud client",
       "website": "http://owncloud.org/",
       "platforms": {
-        "debian-7.5":   { "source": "repo-wheezy" },
-        "linuxmint-13": { "source": "repo-precise" },
-        "ubuntu-12.04": { "source": "repo-precise" },
-        "ubuntu-14.04": { "source": "repo" }
+        "debian-7.5":     { "source": "repo-wheezy" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-12.04":   { "source": "repo-precise" },
+        "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
         "repo": {
