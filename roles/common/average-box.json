@@ -39,6 +39,7 @@
           "numix-shine-icons"
         ],
         "fileshare": [
+          "btsync",
           "transmission",
           "uget"
         ],
