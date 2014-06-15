@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.4:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.4.3:
 
 * recipes/intel_graphics - remove intel linux graphics installer execution (defer to post task)

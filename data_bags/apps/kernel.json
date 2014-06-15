@@ -13,7 +13,7 @@
       "website": "http://wireless.kernel.org/en/users/Drivers/b43",
       "platforms": {
         "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
+        "linuxmint-17": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
       },
@@ -36,7 +36,7 @@
       "website": "http://linux.dell.com/dkms/",
       "platforms": {
         "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
+        "linuxmint-17": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
       },
@@ -82,7 +82,7 @@
       "website": "http://sourceforge.net/projects/preload",
       "platforms": {
         "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
+        "linuxmint-17": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" },
         "ubuntu-14.04": { "source": "distro" }
       },
@@ -102,7 +102,7 @@
       "website": "http://linrunner.de/en/tlp/tlp.html",
       "platforms": {
         "debian-7.5":   { "source": "repo" },
-        "linuxmint-13": { "source": "ppa" },
+        "linuxmint-17": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
