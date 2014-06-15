@@ -13,9 +13,9 @@ The following recipes may apply:
 
 ## Requirements
 
-This cookbook only applies to the following platforms:  
+This cookbook applies to the following platforms:  
+- `Linux Mint 17+`
 - `Ubuntu 12.04+`
-- `Linux Mint 13+`
 
 #### cookbooks
 - `core`

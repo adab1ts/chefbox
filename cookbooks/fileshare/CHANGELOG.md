@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of fileshare.
 
+## 0.5.1:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.5.0:
 
 * recipes/default   - now includes btsync and frostwire install management
