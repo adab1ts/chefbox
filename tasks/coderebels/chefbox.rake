@@ -395,7 +395,7 @@ namespace :coderebels do
     FileUtils.cp ssh_hosts_file, File.join(ssh_dir, "known_hosts.orig")
 
     if platform == "linuxmint"
-      url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
+      url = "https://www.opscode.com/chef/download?p=ubuntu&pv=14.04&m=#{args.arch}"
       cmd = "curl -L '#{url}' > '/tmp/chef_client.deb' ; sudo dpkg -i '/tmp/chef_client.deb'"
 
       sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
@@ -433,7 +433,7 @@ namespace :coderebels do
     FileUtils.cp ssh_hosts_file, File.join(ssh_dir, "known_hosts.orig")
 
     if platform == "linuxmint"
-      url = "https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=#{args.arch}"
+      url = "https://www.opscode.com/chef/download?p=ubuntu&pv=14.04&m=#{args.arch}"
       cmd = "curl -L '#{url}' > '/tmp/chef_client.deb' ; sudo dpkg -i '/tmp/chef_client.deb'"
 
       sh %{ssh -p #{port} -i #{key_file} #{user}@#{ip} "#{cmd}"}
