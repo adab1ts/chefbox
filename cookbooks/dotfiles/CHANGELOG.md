@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.6.0:
+
+* README.md                            - linuxmint 13 no longer supported
+* files/default/bash/env.d/README.benv - instructions about how to create bash env files
+* templates/debian/bash/env.erb        - source env.d folder contents
+* templates/default/bash/env.erb       - source env.d folder contents
+
 ## 0.5.5:
 
 * templates/debian/bash/env.erb - extend chefadmin boxes env variables to crunchbang boxes
