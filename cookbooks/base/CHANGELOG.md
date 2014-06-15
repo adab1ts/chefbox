@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.28.1:
+
+* recipes/run-init - fix sources management bug
+
 ## 0.28.0:
 
 * README.md              - linuxmint 13 no longer supported

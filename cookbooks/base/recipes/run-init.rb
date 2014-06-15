@@ -36,8 +36,8 @@ end
 
 ## APT Sources
 
-sources_path = case platform
-               when "linuxmint" then "/etc/apt/sources.list.d/official-package-repositories.list"
+sources_path = case node[:lsb][:id]
+               when /linuxmint/i then "/etc/apt/sources.list.d/official-package-repositories.list"
                else "/etc/apt/sources.list"
                end
 
