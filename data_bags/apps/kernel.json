@@ -12,10 +12,10 @@
       "description": "Utility for extracting Broadcom 43xx firmware",
       "website": "http://wireless.kernel.org/en/users/Drivers/b43",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-17": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -35,10 +35,10 @@
       "description": "Dynamic Kernel Module Support Framework",
       "website": "http://linux.dell.com/dkms/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-17": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -81,10 +81,10 @@
       "description": "adaptive readahead daemon",
       "website": "http://sourceforge.net/projects/preload",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-17": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -101,10 +101,10 @@
       "description": "Save battery power on laptops",
       "website": "http://linrunner.de/en/tlp/tlp.html",
       "platforms": {
-        "debian-7.5":   { "source": "repo" },
-        "linuxmint-17": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "debian-7.5":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
