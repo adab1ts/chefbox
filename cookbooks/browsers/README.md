@@ -3,18 +3,19 @@
 This cookbook installs a selected set of browsers.
 The following recipes may apply:
 
-- `browsers::default` - purges unselected packages and includes recipes as nedeed.
-- `browsers::chrome` - installs __Google Chrome Stable__ and suggested packages.
+- `browsers::default`  - purges unselected packages and includes recipes as nedeed.
+- `browsers::chrome`   - installs __Google Chrome Stable__ and suggested packages.
 - `browsers::chromium` - installs __Chromium__ and suggested packages.
-- `browsers::firefox` - installs __Mozilla Firefox__ and suggested packages.
-- `browsers::opera` - installs __Opera__ and suggested packages.
+- `browsers::firefox`  - installs __Mozilla Firefox__ and suggested packages.
+- `browsers::midori`   - installs __Midori__ and suggested packages.
+- `browsers::opera`    - installs __Opera__ and suggested packages.
 
 
 ## Requirements
 
 This cookbook applies to the following platforms:  
 - `CrunchBang 11+`
-- `Linux Mint 13+`
+- `Linux Mint 17+`
 - `Ubuntu 12.04+`
 
 #### cookbooks

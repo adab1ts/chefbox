@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.6.0:
+
+* README.md       - linuxmint 13 no longer supported
+* recipes/default - now includes midori browser install management
+* recipes/midori  - manage midori browser installation
+
 ## 0.5.3:
 
 * README.md - include CrunchBang as target platform

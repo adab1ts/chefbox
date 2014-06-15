@@ -4,6 +4,7 @@
     "chrome",
     "chromium",
     "firefox",
+    "midori",
     "opera"
   ],
   "profiles": {
@@ -11,10 +12,10 @@
       "description": "The web browser from Google",
       "website": "http://www.google.com/intl/en/chrome/browser/",
       "platforms": {
-        "debian-7.5":   { "source": "repo" },
-        "linuxmint-13": { "source": "repo" },
-        "ubuntu-12.04": { "source": "repo" },
-        "ubuntu-14.04": { "source": "repo" }
+        "debian-7.5":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-12.04":   { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
         "repo": {
@@ -34,18 +35,13 @@
       "description": "Chromium browser",
       "website": "http://www.chromium.org/Home",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro-trusty" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro-precise" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
-          "package": "chromium-browser",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"]
-        },
-        "distro-trusty": {
           "package": "chromium-browser",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": [
@@ -53,6 +49,11 @@
             "chromium-codecs-ffmpeg-extra",
             "pepperflashplugin-nonfree"
           ]
+        },
+        "distro-precise": {
+          "package": "chromium-browser",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"]
         },
         "distro-wheezy": {
           "package": "chromium-browser",
@@ -65,10 +66,10 @@
       "description": "Safe and easy web browser from Mozilla",
       "website": "http://www.mozilla.org/en-US/firefox/new/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy", "default": true },
-        "linuxmint-13": { "source": "distro", "default": true },
-        "ubuntu-12.04": { "source": "distro", "default": true },
-        "ubuntu-14.04": { "source": "distro", "default": true }
+        "debian-7.5":     { "source": "distro-wheezy", "default": true },
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "distro", "default": true },
+        "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {
@@ -83,14 +84,32 @@
         }
       }
     },
+    "midori": {
+      "description": "Fast, lightweight graphical web browser",
+      "website": "http://midori-browser.org/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "midori",
+          "maintainer": "Ryan Niebur <ryan@debian.org>",
+          "meta": {
+            "repo_name": "midori-ppa",
+            "uri": "ppa:midori/ppa"
+          }
+        }
+      }
+    },
     "opera": {
       "description": "Fast and secure web browser and Internet suite",
       "website": "http://www.opera.com/computer/linux",
       "platforms": {
-        "debian-7.5":   { "source": "repo" },
-        "linuxmint-13": { "source": "repo" },
-        "ubuntu-12.04": { "source": "repo" },
-        "ubuntu-14.04": { "source": "repo" }
+        "debian-7.5":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-12.04":   { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
         "repo": {

@@ -41,6 +41,7 @@ if selected
   include_recipe "browsers::chrome" if selected.include?("chrome")
   include_recipe "browsers::chromium" if selected.include?("chromium")
   include_recipe "browsers::firefox" if selected.include?("firefox")
+  include_recipe "browsers::midori" if selected.include?("midori")
   include_recipe "browsers::opera" if selected.include?("opera")
 end
 

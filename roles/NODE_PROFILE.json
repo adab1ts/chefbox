@@ -104,6 +104,7 @@
           "chrome",
           "chromium",
           "firefox",
+          "midori",
           "opera"
         ],
         "cloud": [
