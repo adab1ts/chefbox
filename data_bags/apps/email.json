@@ -9,9 +9,9 @@
       "description": "Email client",
       "website": "http://www.yorba.org/projects/geary/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -33,9 +33,9 @@
       "description": "Email, RSS and newsgroup client with integrated spam filter",
       "website": "http://www.mozilla.org/en-US/thunderbird/",
       "platforms": {
-        "linuxmint-13": { "source": "distro", "default": true },
-        "ubuntu-12.04": { "source": "distro", "default": true },
-        "ubuntu-14.04": { "source": "distro", "default": true }
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "distro", "default": true },
+        "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of email.
 
+## 0.4.2:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.4.1:
 
 * recipes/thunderbird - check app availability before installation
