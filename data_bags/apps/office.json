@@ -14,7 +14,6 @@
       "description": "Font management application for the GNOME desktop",
       "website": "https://code.google.com/p/font-manager/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
         "ubuntu-12.04": { "source": "distro" }
       },
       "sources": {
@@ -29,9 +28,9 @@
       "description": "Office productivity suite",
       "website": "http://www.libreoffice.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa", "default": true },
-        "ubuntu-12.04": { "source": "ppa", "default": true },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "ppa", "default": true },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -54,9 +53,9 @@
       "description": "Complete solution for editing PDF and XPS files",
       "website": "http://code-industry.net/pdfeditor.php",
       "platforms": {
-        "linuxmint-13": { "source": "deb" },
-        "ubuntu-12.04": { "source": "deb" },
-        "ubuntu-14.04": { "source": "deb" }
+        "linuxmint-17.0": { "source": "deb" },
+        "ubuntu-12.04":   { "source": "deb" },
+        "ubuntu-14.04":   { "source": "deb" }
       },
       "sources": {
         "deb": {
@@ -81,7 +80,6 @@
       "description": "Get stuff done with Nitro",
       "website": "http://nitrotasks.com/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" }
       },
       "sources": {
@@ -99,9 +97,9 @@
       "description": "Merge, split and re-arrange pages from PDF documents",
       "website": "http://pdfshuffler.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -114,9 +112,9 @@
       "description": "The new way to take notes",
       "website": "http://getspringseed.com/",
       "platforms": {
-        "linuxmint-13": { "source": "deb" },
-        "ubuntu-12.04": { "source": "deb" },
-        "ubuntu-14.04": { "source": "deb" }
+        "linuxmint-17.0": { "source": "deb" },
+        "ubuntu-12.04":   { "source": "deb" },
+        "ubuntu-14.04":   { "source": "deb" }
       },
       "sources": {
         "deb": {
@@ -142,9 +140,9 @@
       "description": "Your friendly task manager",
       "website": "http://www.taskcoach.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {

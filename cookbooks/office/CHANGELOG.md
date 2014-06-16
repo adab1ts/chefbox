@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of office.
 
+## 0.4.2:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.4.1:
 
 * recipes/springseed - fix source issue
