@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of graphics_pro.
 
+## 0.4.3:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.4.2:
 
 * README.md - include CrunchBang as target platform

@@ -17,10 +17,10 @@
       "description": "Virtual lighttable and darkroom for photographers",
       "website": "http://www.darktable.org/",
       "platforms": {
-        "debian-7.5":   { "source": "distro" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "debian-7.5":     { "source": "distro" },
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "distro": {
@@ -52,9 +52,9 @@
       "description": "Extensible Open Source CAx program",
       "website": "http://www.freecadweb.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -77,10 +77,10 @@
       "description": "The GNU Image Manipulation Program",
       "website": "http://www.gimp.org/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy", "default": true },
-        "linuxmint-13": { "source": "ppa", "default": true },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro", "default": true }
+        "debian-7.5":     { "source": "distro-wheezy", "default": true },
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {
@@ -108,10 +108,10 @@
       "description": "vector-based drawing program",
       "website": "http://www.inkscape.org/en/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -128,10 +128,10 @@
       "description": "Computer-aided design (CAD) system",
       "website": "http://librecad.org/cms/home.html",
       "platforms": {
-        "debian-7.5":   { "source": "distro" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "debian-7.5":     { "source": "distro" },
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "distro": {
@@ -152,10 +152,10 @@
       "description": "paint program for use with graphics tablets",
       "website": "http://mypaint.intilinux.com/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -182,9 +182,9 @@
       "description": "The Open Source 2D CAD",
       "website": "http://www.qcad.org/en/",
       "platforms": {
-        "linuxmint-13": { "source": "bin" },
-        "ubuntu-12.04": { "source": "bin" },
-        "ubuntu-14.04": { "source": "bin" }
+        "linuxmint-17.0": { "source": "bin" },
+        "ubuntu-12.04":   { "source": "bin" },
+        "ubuntu-14.04":   { "source": "bin" }
       },
       "sources": {
         "bin": {
@@ -212,10 +212,10 @@
       "description": "RAW file processor",
       "website": "http://www.rawtherapee.com/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -240,10 +240,10 @@
       "description": "Open Source Desktop Page Layout - stable branch",
       "website": "http://www.scribus.net/canvas/Scribus",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
