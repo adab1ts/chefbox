@@ -1,0 +1,4 @@
+# File: $DOTFILES_PATH/bash/env.d/midori.benv
+
+
+export MOZ_PLUGIN_PATH="/usr/lib/mozilla/plugins"

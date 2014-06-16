@@ -22,7 +22,31 @@
 browsers = node[:apps][:browsers]
 
 # Fast, lightweight graphical web browser
-install_app "midori" do
-  profile browsers['profiles']['midori']
+midori = browsers['profiles']['midori']
+
+if app_available? midori
+  install_app "midori" do
+    force true
+    profile midori
+  end
+
+  box = node[:box]
+  dotfiles = box[:dotfiles]
+
+  dotfiles[:users].each do |username|
+    usr = box[:users][username]
+
+    dotfiles_dir = "#{usr[:home]}/#{dotfiles[:folder]}"
+    bash_env_dir = "#{dotfiles_dir}/bash/env.d"
+
+    cookbook_file "#{username}-midori_env_file" do
+      path "#{bash_env_dir}/midori.benv"
+      source "/env.d/midori.benv"
+      owner username
+      group usr[:group]
+      mode 0644
+      backup false
+    end
+  end
 end
 

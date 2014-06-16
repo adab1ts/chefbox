@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of browsers.
 
+## 0.6.1:
+
+* files/default/env.d/midori.benv - midori browser env variables
+* recipes/midori                  - deploy env file into every user's dotfiles env folder
+
 ## 0.6.0:
 
 * README.md       - linuxmint 13 no longer supported
