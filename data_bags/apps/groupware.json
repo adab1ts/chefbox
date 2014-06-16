@@ -13,10 +13,10 @@
       "description": "infinote-based collaborative text editor",
       "website": "http://gobby.0x539.de/trac/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -33,10 +33,10 @@
       "description": "Google Talk Plugin",
       "website": "http://www.google.com/+/learnmore/hangouts/",
       "platforms": {
-        "debian-7.5":   { "source": "deb" },
-        "linuxmint-13": { "source": "deb" },
-        "ubuntu-12.04": { "source": "deb" },
-        "ubuntu-14.04": { "source": "deb" }
+        "debian-7.5":     { "source": "deb" },
+        "linuxmint-17.0": { "source": "deb" },
+        "ubuntu-12.04":   { "source": "deb" },
+        "ubuntu-14.04":   { "source": "deb" }
       },
       "sources": {
         "deb": {
@@ -61,10 +61,10 @@
       "description": "Low latency VoIP client",
       "website": "http://mumble.sourceforge.net/",
       "platforms": {
-        "debian-7.5":   { "source": "distro" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "debian-7.5":     { "source": "distro" },
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "distro": {
@@ -85,9 +85,9 @@
       "description": "Graphical IRC client",
       "website": "http://www.smuxi.org/main/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -108,10 +108,10 @@
       "description": "client for Skype VOIP and instant messaging service",
       "website": "http://www.skype.com/en/",
       "platforms": {
-        "debian-7.5":   { "source": "deb-wheezy" },
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "deb-trusty" }
+        "debian-7.5":     { "source": "deb-wheezy" },
+        "linuxmint-17.0": { "source": "deb-trusty" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "deb-trusty" }
       },
       "sources": {
         "deb-trusty": {
@@ -154,10 +154,10 @@
       "description": "IRC client for X similar to AmIRC",
       "website": "http://xchat.org/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy", "default": true },
-        "linuxmint-13": { "source": "distro", "default": true },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro", "default": true }
+        "debian-7.5":     { "source": "distro-wheezy", "default": true },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {
