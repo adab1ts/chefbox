@@ -18,9 +18,9 @@
       "description": "DVD authoring program with nice and clean GUI",
       "website": "http://www.bombono.org/cgi-bin/wiki/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -33,9 +33,9 @@
       "description": "Cross platform DVD Authoring System for Video DVD Production",
       "website": "http://www.dvdstyler.org/en/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -56,9 +56,9 @@
       "description": "Versatile DVD ripper and video transcoder",
       "website": "http://handbrake.fr/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -79,9 +79,9 @@
       "description": "GTK+ based media player",
       "website": "http://www.getmiro.com/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -102,7 +102,6 @@
       "description": "Tool for converting desktop and mobile devices video and audio formats",
       "website": "http://www.miksoft.net/mobileMediaConverter.php",
       "platforms": {
-        "linuxmint-13": { "source": "deb" },
         "ubuntu-12.04": { "source": "deb" }
       },
       "sources": {
@@ -129,9 +128,9 @@
       "description": "Super simple video transcoder",
       "website": "http://www.mirovideoconverter.com/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "repo" }
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
         "ppa": {
@@ -160,9 +159,9 @@
       "description": "Application for ripping and encoding DVD",
       "website": "http://ogmrip.sourceforge.net/en/index.html",
       "platforms": {
-        "linuxmint-13": { "source": "repo" },
-        "ubuntu-12.04": { "source": "repo" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "repo" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -187,9 +186,9 @@
       "description": "Create and edit videos and movies",
       "website": "http://www.openshot.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -210,9 +209,9 @@
       "description": "Captures audio-video data of a Linux desktop session",
       "website": "http://recordmydesktop.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -226,9 +225,9 @@
       "description": "A feature-rich screen recorder that supports X11 and OpenGL",
       "website": "http://www.maartenbaert.be/simplescreenrecorder/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -245,9 +244,9 @@
       "description": "multimedia player and streamer",
       "website": "http://www.videolan.org/vlc/",
       "platforms": {
-        "linuxmint-13": { "source": "distro", "default": true },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {

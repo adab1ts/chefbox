@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.7.1:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.7.0:
 
 * recipes/default - now includes simplescreenrecorder install management
