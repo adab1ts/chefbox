@@ -10,9 +10,9 @@
       "description": "Animation/drawing software",
       "website": "http://www.pencil-animation.org/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -25,9 +25,9 @@
       "description": "Simple drawing/painting program",
       "website": "http://pinta-project.com/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -44,9 +44,9 @@
       "description": "Digital photo organizer",
       "website": "http://www.yorba.org/projects/shotwell/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa", "default": true },
-        "ubuntu-14.04": { "source": "distro", "default": true }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa", "default": true },
+        "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {
