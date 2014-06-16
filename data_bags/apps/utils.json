@@ -15,9 +15,9 @@
       "description": "Simple backup system",
       "website": "http://backintime.le-web.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -52,7 +52,6 @@
       "description": "Fogger lets you create sandboxed web apps that behave like regular desktop applications",
       "website": "http://launchpad.net/fogger",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" }
       },
       "sources": {
@@ -70,9 +69,9 @@
       "description": "ISO, IMG, BIN, MDF and NRG image management utility",
       "website": "http://launchpad.net/furiusisomount",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -85,9 +84,9 @@
       "description": "Quickly perform actions on your desktop",
       "website": "http://do.cooperteam.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -101,9 +100,9 @@
       "description": "Displays system information",
       "website": "http://hardinfo.berlios.de/",
       "platforms": {
-        "linuxmint-13": { "source": "distro", "default": true },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -116,9 +115,9 @@
       "description": "7z and 7za file archivers with high compression ratio",
       "website": "http://p7zip.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -132,9 +131,9 @@
       "description": "Feature-rich screenshot application",
       "website": "http://shutter-project.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {

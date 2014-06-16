@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.11.1:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.11.0:
 
 * recipes/default - now includes discs install management
