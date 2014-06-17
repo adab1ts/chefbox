@@ -39,6 +39,7 @@
         ],
         "utils": [
           "backintime",
+          "brasero",
           "discs",
           "gnome-do"
         ],
