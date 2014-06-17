@@ -49,8 +49,8 @@
         ],
         "groupware": [
           "hangouts",
-          "skype",
-          "xchat"
+          "hexchat",
+          "skype"
         ],
         "office": [
           "fontmanager",
@@ -61,6 +61,7 @@
         ],
         "utils": [
           "backintime",
+          "brasero",
           "discs",
           "fogger",
           "gnome-do",
