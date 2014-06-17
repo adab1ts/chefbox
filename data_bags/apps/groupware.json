@@ -155,7 +155,6 @@
       "website": "http://xchat.org/",
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy", "default": true },
-        "linuxmint-17.0": { "source": "distro" },
         "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro", "default": true }
       },
