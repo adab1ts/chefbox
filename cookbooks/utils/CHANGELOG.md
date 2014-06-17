@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.12.0:
+
+* recipes/default - now includes brasero install management
+* recipes/brasero - manages brasero app installation
+
 ## 0.11.1:
 
 * README.md - linuxmint 13 no longer supported

@@ -2,6 +2,7 @@
   "id": "utils",
   "apps": [
     "backintime",
+    "brasero",
     "discs",
     "fogger",
     "furius",
@@ -32,6 +33,21 @@
             "repo_name": "bit-team-stable",
             "uri": "ppa:bit-team/stable"
           }
+        }
+      }
+    },
+    "brasero": {
+      "description": "CD/DVD burning application for GNOME",
+      "website": "http://wiki.gnome.org/Apps/Brasero",
+      "platforms": {
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-14.04":   { "source": "distro", "default": true }
+      },
+      "sources": {
+        "distro": {
+          "package": "brasero",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
+          "suggested": ["brasero-cdrkit"]
         }
       }
     },

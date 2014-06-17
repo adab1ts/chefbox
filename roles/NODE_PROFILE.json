@@ -201,6 +201,7 @@
         ],
         "utils": [
           "backintime",
+          "brasero",
           "discs",
           "fogger",
           "furius",
