@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of audio.
 
+## 0.3.1:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.3.0:
 
 * README   - update requirements section

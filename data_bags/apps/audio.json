@@ -13,7 +13,6 @@
       "description": "music player for Last.fm personalized radio",
       "website": "http://www.last.fm/",
       "platforms": {
-        "linuxmint-13": { "source": "repo" },
         "ubuntu-12.04": { "source": "repo" }
       },
       "sources": {
@@ -33,9 +32,9 @@
       "description": "cloud music integration for Linux desktop",
       "website": "http://nuvolaplayer.fenryxo.cz/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -52,7 +51,6 @@
       "description": "A simple native implementation for Rdio music services",
       "website": "http://www.rdio.com/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" }
       },
       "sources": {
@@ -70,9 +68,7 @@
       "description": "music player and organizer for GNOME",
       "website": "http://wiki.gnome.org/Apps/Rhythmbox",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro", "default": true },
-        "ubuntu-14.04": { "source": "distro" }
+        "ubuntu-12.04": { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {
@@ -85,9 +81,9 @@
       "description": "Spotify desktop client",
       "website": "http://www.spotify.com/",
       "platforms": {
-        "linuxmint-13": { "source": "repo" },
-        "ubuntu-12.04": { "source": "repo" },
-        "ubuntu-14.04": { "source": "repo" }
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-12.04":   { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
         "repo": {
@@ -108,9 +104,9 @@
       "description": "Social media player",
       "website": "http://www.tomahawk-player.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
