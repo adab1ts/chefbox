@@ -40,6 +40,7 @@ if selected
 
   include_recipe "groupware::gobby" if selected.include?("gobby")
   include_recipe "groupware::hangouts" if selected.include?("hangouts")
+  include_recipe "groupware::hexchat" if selected.include?("hexchat")
   include_recipe "groupware::mumble" if selected.include?("mumble")
   include_recipe "groupware::smuxi" if selected.include?("smuxi")
   include_recipe "groupware::skype" if selected.include?("skype")

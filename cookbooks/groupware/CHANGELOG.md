@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.7.0:
+
+* recipes/default - now includes hexchat install management
+* recipes/gobby   - manages hexchat app installation
+
 ## 0.6.3:
 
 * README.md - linuxmint 13 no longer supported

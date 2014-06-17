@@ -57,6 +57,20 @@
         }
       }
     },
+    "hexchat": {
+      "description": "IRC client for X based on X-Chat 2",
+      "website": "http://hexchat.github.io/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-14.04":   { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "hexchat",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
+        }
+      }
+    },
     "mumble": {
       "description": "Low latency VoIP client",
       "website": "http://mumble.sourceforge.net/",

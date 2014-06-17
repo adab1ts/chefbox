@@ -163,6 +163,7 @@
         "groupware": [
           "gobby",
           "hangouts",
+          "hexchat",
           "mumble",
           "smuxi",
           "skype",
