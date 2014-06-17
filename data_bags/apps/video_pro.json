@@ -10,9 +10,9 @@
       "description": "Free video editor",
       "website": "http://avidemux.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -25,9 +25,9 @@
       "description": "An audio/video authoring tool",
       "website": "http://cinelerra-cv.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -55,9 +55,9 @@
       "description": "Shotcut is a free, open source, cross-platform video editor",
       "website": "http://www.shotcut.org/",
       "platforms": {
-        "linuxmint-13": { "source": "bin" },
-        "ubuntu-12.04": { "source": "bin" },
-        "ubuntu-14.04": { "source": "bin" }
+        "linuxmint-17.0": { "source": "bin" },
+        "ubuntu-12.04":   { "source": "bin" },
+        "ubuntu-14.04":   { "source": "bin" }
       },
       "sources": {
         "bin": {

@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video_pro.
 
+## 0.3.2:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.3.1:
 
 * recipes/shotcut - fix bug
