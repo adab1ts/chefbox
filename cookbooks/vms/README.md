@@ -9,9 +9,9 @@ The following recipes may apply:
 
 ## Requirements
 
-This cookbook only applies to the following platforms:  
+This cookbook applies to the following platforms:  
 - `CrunchBang 11+`
-- `Linux Mint 13+`
+- `Linux Mint 17+`
 - `Ubuntu 12.04+`
 
 #### cookbooks

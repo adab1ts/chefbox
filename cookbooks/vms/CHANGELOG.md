@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.5.4:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.5.3:
 
 * README.md          - include CrunchBang as target platform
