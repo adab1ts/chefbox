@@ -13,9 +13,9 @@
       "description": "Utility to simplify re-installation of software packages",
       "website": "http://www.teejeetech.in/2014/01/introducing-aptik.html",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -32,13 +32,13 @@
       "description": "Computer lab management tool",
       "website": "http://www.epoptes.org/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro-trusty" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
-        "distro-trusty": {
+        "distro": {
           "package": "epoptes",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
@@ -60,13 +60,13 @@
       "description": "Computer lab management tool",
       "website": "http://www.epoptes.org/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "distro-trusty" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
-        "distro-trusty": {
+        "distro": {
           "package": "epoptes-client",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
@@ -88,9 +88,9 @@
       "description": "Visual folder comparison and synchronization",
       "website": "http://freefilesync.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -107,10 +107,10 @@
       "description": "Interactive processes viewer",
       "website": "http://hisham.hm/htop/",
       "platforms": {
-        "debian-7.5":   { "source": "distro-wheezy" },
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "debian-7.5":     { "source": "distro-wheezy" },
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -127,9 +127,9 @@
       "description": "PPA Management",
       "website": "http://launchpad.net/y-ppa-manager",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
