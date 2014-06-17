@@ -68,7 +68,9 @@
       "description": "music player and organizer for GNOME",
       "website": "http://wiki.gnome.org/Apps/Rhythmbox",
       "platforms": {
-        "ubuntu-12.04": { "source": "distro", "default": true }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro", "default": true },
+        "ubuntu-12.04":   { "source": "distro", "default": true }
       },
       "sources": {
         "distro": {

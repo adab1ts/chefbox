@@ -14,7 +14,9 @@
       "description": "Font management application for the GNOME desktop",
       "website": "https://code.google.com/p/font-manager/",
       "platforms": {
-        "ubuntu-12.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -28,17 +30,21 @@
       "description": "Office productivity suite",
       "website": "http://www.libreoffice.org/",
       "platforms": {
-        "linuxmint-17.0": { "source": "distro", "default": true },
-        "ubuntu-12.04":   { "source": "ppa", "default": true },
-        "ubuntu-14.04":   { "source": "distro" }
+        "linuxmint-17.0": { "source": "ppa", "default": true },
+        "ubuntu-12.04":   { "source": "ppa-precise", "default": true },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
-        "distro": {
+        "ppa": {
           "package": "libreoffice",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy", "libreoffice-style-sifr"]
+          "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy", "libreoffice-style-sifr"],
+          "meta": {
+            "repo_name": "libreoffice-libreoffice-4-2",
+            "uri": "ppa:libreoffice/libreoffice-4-2"
+          }
         },
-        "ppa": {
+        "ppa-precise": {
           "package": "libreoffice",
           "maintainer": "Rico Tzschichholz <>",
           "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy"],

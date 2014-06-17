@@ -16,15 +16,11 @@
       "description": "Simple backup system",
       "website": "http://backintime.le-web.org/",
       "platforms": {
-        "linuxmint-17.0": { "source": "distro" },
+        "linuxmint-17.0": { "source": "ppa" },
         "ubuntu-12.04":   { "source": "ppa" },
-        "ubuntu-14.04":   { "source": "distro" }
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
-        "distro": {
-          "package": "backintime-gnome",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
         "ppa": {
           "package": "backintime-gnome",
           "maintainer": "BIT Team <bit-team@lists.launchpad.net>",
@@ -55,7 +51,8 @@
       "description": "Manage and configure disk drives and media",
       "website": "http://git.gnome.org/cgit/gnome-disk-utility/",
       "platforms": {
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro", "default": true },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -116,7 +113,7 @@
       "description": "Displays system information",
       "website": "http://hardinfo.berlios.de/",
       "platforms": {
-        "linuxmint-17.0": { "source": "distro", "default": true },
+        "linuxmint-17.0": { "source": "distro" },
         "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -147,20 +144,15 @@
       "description": "Feature-rich screenshot application",
       "website": "http://shutter-project.org/",
       "platforms": {
-        "linuxmint-17.0": { "source": "distro" },
+        "linuxmint-17.0": { "source": "ppa" },
         "ubuntu-12.04":   { "source": "ppa" },
-        "ubuntu-14.04":   { "source": "distro" }
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
-        "distro": {
-          "package": "shutter",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["libgoo-canvas-perl", "libimage-exiftool-perl", "libnet-dbus-glib-perl"]
-        },
         "ppa": {
           "package": "shutter",
           "maintainer": "Mario Kemper <mario.kemper@googlemail.com>",
-          "suggested": ["libgoo-canvas-perl", "libnet-dropbox-api-perl", "libimage-exiftool-perl", "libnet-dbus-glib-perl"],
+          "suggested": ["libgoo-canvas-perl", "libimage-exiftool-perl", "libnet-dbus-glib-perl"],
           "meta": {
             "repo_name": "shutter-ppa",
             "uri": "ppa:shutter/ppa"

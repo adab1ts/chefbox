@@ -34,7 +34,7 @@
       "website": "http://gufw.org/",
       "platforms": {
         "debian-7.5":     { "source": "distro" },
-        "linuxmint-17.0": { "source": "distro", "default": true },
+        "linuxmint-17.0": { "source": "distro" },
         "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -69,7 +69,7 @@
       "website": "http://preyproject.com/",
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
-        "linuxmint-17.0": { "source": "distro" },
+        "linuxmint-17.0": { "source": "deb" },
         "ubuntu-12.04":   { "source": "deb" },
         "ubuntu-14.04":   { "source": "deb" }
       },
@@ -86,10 +86,6 @@
               "sha256": "463b706cdf8e49d999dc1eb0d0cbb42c81fb03fe13f4dcf653aee7e184d588f9"
             }
           }
-        },
-        "distro": {
-          "package": "prey",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         },
         "distro-wheezy": {
           "package": "prey",

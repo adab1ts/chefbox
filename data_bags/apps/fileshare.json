@@ -88,18 +88,15 @@
       "description": "Easy-to-use download manager written in GTK+",
       "website": "http://ugetdm.com/",
       "platforms": {
-        "linuxmint-17.0": { "source": "distro" },
+        "linuxmint-17.0": { "source": "ppa" },
         "ubuntu-12.04":   { "source": "ppa" },
-        "ubuntu-14.04":   { "source": "distro" }
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
-        "distro": {
-          "package": "uget",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
         "ppa": {
           "package": "uget",
-          "maintainer": "",
+          "maintainer": "C.H. Huang <plushuang.tw@gmail.com>",
+          "suggested": ["aria2"],
           "meta": {
             "repo_name": "plushuang-tw-uget-stable",
             "uri": "ppa:plushuang-tw/uget-stable"
