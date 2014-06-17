@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of desktops.
 
+## 0.2.2:
+
+* README.md - linuxmint no longer supported
+
 ## 0.2.1:
 
 * recipes/mate 
