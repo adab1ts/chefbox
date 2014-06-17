@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.4.3:
+
+* README.md - linuxmint 13 no longer supported
+
 ## 0.4.2:
 
 * templates/default/transcribe/transcribe.desktop - fix template name bug

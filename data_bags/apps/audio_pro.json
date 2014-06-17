@@ -22,7 +22,6 @@
       "description": "Metapackage for the Airtime broadcast server",
       "website": "http://www.sourcefabric.org/en/airtime/",
       "platforms": {
-        "linuxmint-13": { "source": "deb" },
         "ubuntu-12.04": { "source": "deb" }
       },
       "sources": {
@@ -50,9 +49,9 @@
       "description": "Digital audio workstation (graphical gtk2 interface)",
       "website": "http://ardour.org/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -65,9 +64,9 @@
       "description": "Fast, cross-platform audio editor",
       "website": "http://audacity.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -80,9 +79,9 @@
       "description": "GTK+ front end to GNU Lilypond",
       "website": "http://www.denemo.org/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -96,9 +95,9 @@
       "description": "Rock guitar amplifier for Jack",
       "website": "http://guitarix.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -111,9 +110,9 @@
       "description": "Advanced drum machine/step sequencer",
       "website": "http://hydrogen-music.org/hcms/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -126,9 +125,9 @@
       "description": "Graphical shoutcast/icecast client",
       "website": "http://idjc.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -141,7 +140,6 @@
       "description": "Graphical user-interface for MMA (Musical MIDI Accompaniment)",
       "website": "http://linuxband.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
         "ubuntu-12.04": { "source": "ppa" }
       },
       "sources": {
@@ -159,9 +157,9 @@
       "description": "Linux Multimedia Studio",
       "website": "http://lmms.sourceforge.net/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -175,9 +173,9 @@
       "description": "Digital DJ interface",
       "website": "http://mixxx.org/",
       "platforms": {
-        "linuxmint-13": { "source": "ppa" },
-        "ubuntu-12.04": { "source": "ppa" },
-        "ubuntu-14.04": { "source": "ppa" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-12.04":   { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
         "ppa": {
@@ -194,9 +192,9 @@
       "description": "Qt4-based audio/MIDI sequencer",
       "website": "http://muse-sequencer.org/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -209,9 +207,9 @@
       "description": "Full featured WYSIWIG score editor",
       "website": "http://musescore.org/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -224,9 +222,9 @@
       "description": "Music editor and MIDI/audio sequencer",
       "website": "http://www.rosegardenmusic.com/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -239,9 +237,9 @@
       "description": "World's leading software for helping musicians to work out music from recordings",
       "website": "http://www.seventhstring.com/xscribe/overview.html",
       "platforms": {
-        "linuxmint-13": { "source": "bin" },
-        "ubuntu-12.04": { "source": "bin" },
-        "ubuntu-14.04": { "source": "bin" }
+        "linuxmint-17.0": { "source": "bin" },
+        "ubuntu-12.04":   { "source": "bin" },
+        "ubuntu-14.04":   { "source": "bin" }
       },
       "sources": {
         "bin": {
@@ -269,9 +267,9 @@
       "description": "Multitrack audio recorder and editor",
       "website": "http://traverso-daw.org/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
@@ -284,9 +282,9 @@
       "description": "Multitrack guitar tablature editor and player",
       "website": "http://www.tuxguitar.com.ar/",
       "platforms": {
-        "linuxmint-13": { "source": "distro" },
-        "ubuntu-12.04": { "source": "distro" },
-        "ubuntu-14.04": { "source": "distro" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-12.04":   { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
