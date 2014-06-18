@@ -14,7 +14,6 @@
       "platforms": {
         "debian-7.5":     { "source": "repo" },
         "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-12.04":   { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
@@ -37,7 +36,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro-precise" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -49,11 +47,6 @@
             "chromium-codecs-ffmpeg-extra",
             "pepperflashplugin-nonfree"
           ]
-        },
-        "distro-precise": {
-          "package": "chromium-browser",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["chromium-browser-l10n", "chromium-codecs-ffmpeg-extra"]
         },
         "distro-wheezy": {
           "package": "chromium-browser",
@@ -68,7 +61,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy", "default": true },
         "linuxmint-17.0": { "source": "distro", "default": true },
-        "ubuntu-12.04":   { "source": "distro", "default": true },
         "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
@@ -108,7 +100,6 @@
       "platforms": {
         "debian-7.5":     { "source": "repo" },
         "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-12.04":   { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
