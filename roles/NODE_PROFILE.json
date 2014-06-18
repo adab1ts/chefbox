@@ -107,10 +107,6 @@
           "dropbox",
           "owncloud"
         ],
-        "desktops": [
-          "cinnamon",
-          "mate"
-        ],
         "devel": [
           "brackets",
           "git",
