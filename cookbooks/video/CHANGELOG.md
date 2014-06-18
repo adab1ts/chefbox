@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.7.2:
+
+* recipes/mvc - satisfy ffmpeg dependency
+
 ## 0.7.1:
 
 * README.md - linuxmint 13 no longer supported

@@ -22,7 +22,22 @@
 video = node[:apps][:video]
 
 # Miro Video Converter
-install_app "mvc" do
-  profile video['profiles']['mvc']
+mvc = video['profiles']['mvc']
+
+if app_available? mvc
+  codename  = platform_codename
+  repo_name = "mc3man-trusty-media"
+  repo_uri  = "ppa:mc3man/trusty-media"
+
+  core_ppa repo_name do
+    uri repo_uri
+    distribution codename
+    action :add
+  end
+
+  install_app "mvc" do
+    force true
+    profile mvc
+  end
 end
 

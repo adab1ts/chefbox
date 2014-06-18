@@ -128,6 +128,7 @@
       "description": "Super simple video transcoder",
       "website": "http://www.mirovideoconverter.com/",
       "platforms": {
+        "linuxmint-17.0": { "source": "repo" },
         "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "repo" }
       },
@@ -143,6 +144,7 @@
         "repo": {
           "package": "mirovideoconverter",
           "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
+          "suggested": ["ffmpeg", "frei0r-plugins"],
           "meta": {
             "repo_name": "pcf-miro-releases",
             "uri": "http://ppa.launchpad.net/pcf/miro-releases/ubuntu",
