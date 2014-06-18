@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of dotfiles.
 
+## 0.6.1:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 0.6.0:
 
 * README.md                            - linuxmint 13 no longer supported
