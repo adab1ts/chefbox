@@ -42,9 +42,9 @@
           "dependencies": ["openjdk-7-jre", "zlib1g", "mplayer"],
           "meta": {
             "*": {
-              "file_name": "frostwire-5.7.2.all.deb",
-              "uri": "https://ocserver/public.php?service=files&t=7673ebb88fe6926d9a8ebf8e6345ab50&download",
-              "sha256": "4bc10b0e34f13f2c92fd9f3052df297b4f37dcfaf6a57ebe8cab9140fa30d1d8"
+              "file_name": "frostwire-5.7.3.all.deb",
+              "uri": "https://ocserver/public.php?service=files&t=210f2e25a82f3ef4022f7993c11d0bcf&download",
+              "sha256": "8b64de6aa70e22bed106624ccc083a7d444b1d0a77c3af16f79b517c14281a74"
             }
           }
         }
