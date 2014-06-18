@@ -4,13 +4,11 @@ This cookbook installs a selected set of audio pro solutions.
 The following recipes may apply:
 
 - `audio_pro::default`    - purges unselected packages and includes recipes as nedeed.
-- `audio_pro::airtime`    - installs __Airtime broadcast server__ and suggested packages.
 - `audio_pro::ardour`     - installs __Ardour digital audio workstation__ and suggested packages.
 - `audio_pro::audacity`   - installs __Audacity audio editor__ and suggested packages.
 - `audio_pro::guitarix`   - installs __Guitarix rock guitar amplifier for Jack__ and suggested packages.
 - `audio_pro::hydrogen`   - installs __Hydrogen drum machine/step sequencer__ and suggested packages.
 - `audio_pro::idjc`       - installs __Internet DJ Console shoutcast/icecast client__ and suggested packages.
-- `audio_pro::linuxband`  - installs __LinuxBand user-interface for MMA__ and suggested packages.
 - `audio_pro::mixxx`      - installs __Mixxx digital DJ interface__ and suggested packages.
 - `audio_pro::muse`       - installs __Muse audio/MIDI sequencer__ and suggested packages.
 - `audio_pro::musescore`  - installs __Musescore score editor__ and suggested packages.
@@ -24,7 +22,7 @@ The following recipes may apply:
 
 This cookbook applies to the following platforms:  
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

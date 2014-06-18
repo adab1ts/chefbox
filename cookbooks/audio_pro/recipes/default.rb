@@ -44,13 +44,11 @@ if selected
   # Install selected apps
   node.default[:apps] = { :audio_pro => audio_pro }
 
-  include_recipe "audio_pro::airtime" if selected.include?("airtime") and memory > 1.GB
   include_recipe "audio_pro::ardour" if selected.include?("ardour")
   include_recipe "audio_pro::audacity" if selected.include?("audacity")
   include_recipe "audio_pro::guitarix" if selected.include?("guitarix")
   include_recipe "audio_pro::hydrogen" if selected.include?("hydrogen")
   include_recipe "audio_pro::idjc" if selected.include?("idjc")
-  include_recipe "audio_pro::linuxband" if selected.include?("linuxband")
   include_recipe "audio_pro::mixxx" if selected.include?("mixxx")
   include_recipe "audio_pro::muse" if selected.include?("muse")
   include_recipe "audio_pro::musescore" if selected.include?("musescore")

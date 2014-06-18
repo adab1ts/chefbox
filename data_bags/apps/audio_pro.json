@@ -1,14 +1,12 @@
 {
   "id": "audio_pro",
   "apps": [
-    "airtime",
     "ardour",
     "audacity",
     "denemo",
     "guitarix",
     "hydrogen",
     "idjc",
-    "linuxband",
     "mixxx",
     "muse",
     "musescore",
@@ -18,39 +16,11 @@
     "tuxguitar"
   ],
   "profiles": {
-    "airtime": {
-      "description": "Metapackage for the Airtime broadcast server",
-      "website": "http://www.sourcefabric.org/en/airtime/",
-      "platforms": {
-        "ubuntu-12.04": { "source": "deb" }
-      },
-      "sources": {
-        "deb": {
-          "package": "airtime-easy-setup",
-          "maintainer": "Daniel James <daniel@64studio.com>",
-          "dependencies": [
-            "debconf-utils", "icecast2", "postgresql", "python-virtualenv", "apache2",
-            "ecasound", "flac", "libapache2-mod-php5", "libcamomile-ocaml-data", "monit",
-            "multitail", "odbc-postgresql", "php5-cli", "php5-curl", "php-db",
-            "php5-gd", "php-pear", "php5-pgsql", "pwgen", "rabbitmq-server",
-            "vorbis-tools", "libzend-framework-php"
-          ],
-          "meta": {
-            "*": {
-              "file_name": "airtime-easy-setup.deb",
-              "uri": "https://ocserver/public.php?service=files&t=640e3571e01d8519a77e46fbf0bf140c&download",
-              "sha256": "b37e4a98cb6208eba52c468d333b8f37acaa0bfa9f4b788d418a42aeebd850e5"
-            }
-          }
-        }
-      }
-    },
     "ardour": {
       "description": "Digital audio workstation (graphical gtk2 interface)",
       "website": "http://ardour.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -65,7 +35,6 @@
       "website": "http://audacity.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -80,7 +49,6 @@
       "website": "http://www.denemo.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -96,7 +64,6 @@
       "website": "http://guitarix.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -111,7 +78,6 @@
       "website": "http://hydrogen-music.org/hcms/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -126,7 +92,6 @@
       "website": "http://idjc.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -136,29 +101,11 @@
         }
       }
     },
-    "linuxband": {
-      "description": "Graphical user-interface for MMA (Musical MIDI Accompaniment)",
-      "website": "http://linuxband.org/",
-      "platforms": {
-        "ubuntu-12.04": { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "linuxband",
-          "maintainer": "Willem van Engen <debrepo@willem.engen.nl>",
-          "meta": {
-            "repo_name": "wvengen-music",
-            "uri": "ppa:wvengen/music"
-          }
-        }
-      }
-    },
     "lmms": {
       "description": "Linux Multimedia Studio",
       "website": "http://lmms.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -174,7 +121,6 @@
       "website": "http://mixxx.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -193,7 +139,6 @@
       "website": "http://muse-sequencer.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -208,7 +153,6 @@
       "website": "http://musescore.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -223,7 +167,6 @@
       "website": "http://www.rosegardenmusic.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -238,7 +181,6 @@
       "website": "http://www.seventhstring.com/xscribe/overview.html",
       "platforms": {
         "linuxmint-17.0": { "source": "bin" },
-        "ubuntu-12.04":   { "source": "bin" },
         "ubuntu-14.04":   { "source": "bin" }
       },
       "sources": {
@@ -268,7 +210,6 @@
       "website": "http://traverso-daw.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -283,7 +224,6 @@
       "website": "http://www.tuxguitar.com.ar/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {

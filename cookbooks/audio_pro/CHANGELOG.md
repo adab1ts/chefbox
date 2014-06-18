@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of audio_pro.
 
+## 0.5.0:
+
+* README.md         - ubuntu 12.04 no longer supported
+* recipes/default   - airtime and linuxband install management no longer included
+* recipes/airtime   - removed
+* recipes/linuxband - removed
+
 ## 0.4.3:
 
 * README.md - linuxmint 13 no longer supported
