@@ -1,39 +1,17 @@
 {
   "id": "audio",
   "apps": [
-    "lastfm",
     "nuvola",
-    "rdio",
     "rhythmbox",
     "spotify",
     "tomahawk"
   ],
   "profiles": {
-    "lastfm": {
-      "description": "music player for Last.fm personalized radio",
-      "website": "http://www.last.fm/",
-      "platforms": {
-        "ubuntu-12.04": { "source": "repo" }
-      },
-      "sources": {
-        "repo": {
-          "package": "lastfm-scrobbler",
-          "maintainer": "Michael Coffey <michaelc@last.fm>",
-          "meta": {
-            "repo_name": "lastfm",
-            "uri": "http://apt.last.fm/debian",
-            "components": ["main"],
-            "key": "http://apt.last.fm/last.fm.repo.gpg"
-          }
-        }
-      }
-    },
     "nuvola": {
       "description": "cloud music integration for Linux desktop",
       "website": "http://nuvolaplayer.fenryxo.cz/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -47,29 +25,11 @@
         }
       }
     },
-    "rdio": {
-      "description": "A simple native implementation for Rdio music services",
-      "website": "http://www.rdio.com/",
-      "platforms": {
-        "ubuntu-12.04": { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "rdio",
-          "maintainer": "Scott Ringwelski <sgringwe@mtu.edu>",
-          "meta": {
-            "repo_name": "sgringwe-rdio",
-            "uri": "ppa:sgringwe/rdio"
-          }
-        }
-      }
-    },
     "rhythmbox": {
       "description": "music player and organizer for GNOME",
       "website": "http://wiki.gnome.org/Apps/Rhythmbox",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro", "default": true },
         "ubuntu-12.04":   { "source": "distro", "default": true }
       },
       "sources": {
@@ -84,7 +44,6 @@
       "website": "http://www.spotify.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-12.04":   { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
@@ -107,7 +66,6 @@
       "website": "http://www.tomahawk-player.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {

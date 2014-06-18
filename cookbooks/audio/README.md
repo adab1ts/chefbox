@@ -4,9 +4,7 @@ This cookbook installs a selected set of audio solutions.
 The following recipes may apply:
 
 - `audio::default`   - purges unselected packages and includes recipes as nedeed.
-- `audio::lastfm`    - installs __Last.fm Scrobbler__ and suggested packages.
 - `audio::nuvola`    - installs __Nuvola Music Player__ and suggested packages.
-- `audio::rdio`      - installs __Rdio Music Player__ and suggested packages.
 - `audio::rhythmbox` - installs __Rhythmbox Music Player__ and suggested packages.
 - `audio::spotify`   - installs __Spotify client__ and suggested packages.
 - `audio::tomahawk`  - installs __Tomahawk Music Player__ and suggested packages.
@@ -16,7 +14,7 @@ The following recipes may apply:
 
 This cookbook applies to the following platforms:  
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

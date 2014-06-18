@@ -38,9 +38,7 @@ if selected
   # Install selected apps
   node.default[:apps] = { :audio => audio }
 
-  include_recipe "audio::lastfm" if selected.include?("lastfm")
   include_recipe "audio::nuvola" if selected.include?("nuvola")
-  include_recipe "audio::rdio" if selected.include?("rdio")
   include_recipe "audio::rhythmbox" if selected.include?("rhythmbox")
   include_recipe "audio::spotify" if selected.include?("spotify")
   include_recipe "audio::tomahawk" if selected.include?("tomahawk")

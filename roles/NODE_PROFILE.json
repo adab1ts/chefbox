@@ -77,9 +77,7 @@
       },
       "apps": {
         "audio": [
-          "lastfm",
           "nuvola",
-          "rdio",
           "rhythmbox",
           "spotify",
           "tomahawk"
