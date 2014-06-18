@@ -12,7 +12,6 @@
       "apps": {
         "audio_pro": [
           "guitarix",
-          "linuxband",
           "transcribe",
           "tuxguitar"
         ]
