@@ -18,7 +18,7 @@ Seth Chisamore (&lt;schisamo at opscode.com&gt;)
 This cookbook applies to the following platforms:  
 - `CrunchBang 11+`
 - `Linux Mint 13+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `apt`

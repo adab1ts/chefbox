@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.8:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 1.0.7:
 
 * libraries/box - new implementation for Box.arch method
