@@ -9,7 +9,6 @@ The following recipes are applied:
   
   * `Ubuntu`
 
-      `+ia32-libs-multiarch`        - Multi-arch versions of former ia32-libraries (precise x86_64 only)  
       `-example-content`            - Ubuntu example content  
       `+nautilus-filename-repairer` - Nautilus extension for filename encoding repair  
       `+nautilus-open-terminal`     - Nautilus plugin for opening terminals in arbitrary paths  
@@ -29,7 +28,7 @@ The following recipes are applied:
 This cookbook applies to the following platforms:  
 - `CrunchBang 11+`
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

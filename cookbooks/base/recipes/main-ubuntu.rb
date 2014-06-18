@@ -33,18 +33,6 @@ package "myspell-es"
 
 os_release = platform_version
 
-# Support for ia32-libs dependency
-if platform_arch == "x86_64" and os_release == 12.04
-  %w[
-    ia32-libs-multiarch
-    i386
-    lib32gcc1
-    libc6-i386
-  ].each do |pkg|
-    package pkg
-  end
-end
-
 
 # Virtualization support
 if virtual_box? and os_release == 14.04
@@ -102,18 +90,15 @@ end
 
 # Codec issues
 # see http://www.webupd8.org/2014/03/get-firefox-and-phonon-gstreamer-to.html
-codename = platform_codename
+repo_name = "mc3man-trusty-media"
+repo_uri  = "ppa:mc3man/trusty-media"
+codename  = platform_codename
 
-if codename == "trusty"
-  repo_name = "mc3man-trusty-media"
-  repo_uri  = "ppa:mc3man/trusty-media"
-
-  core_ppa repo_name do
-    uri repo_uri
-    distribution codename
-    action :add
-  end
-
-  package "gstreamer0.10-ffmpeg"
+core_ppa repo_name do
+  uri repo_uri
+  distribution codename
+  action :add
 end
+
+package "gstreamer0.10-ffmpeg"
 

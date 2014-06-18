@@ -22,8 +22,8 @@
 ## Requirements
 
 ruby_shadow = case platform_codename
-              when "precise", "wheezy" then "libshadow-ruby1.8"
-              when "trusty"  then "ruby-shadow"
+              when "wheezy" then "libshadow-ruby1.8"
+              when "trusty" then "ruby-shadow"
               end
 
 package "openssl"

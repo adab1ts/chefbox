@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.28.2:
+
+* README.md                           - ubuntu 12.04 no longer supported
+* files/ubuntu-12.04/apt/sources.list - removed
+* files/ubuntu/apt/sources.list       - moved from files/ubuntu-14.04/apt/sources.list
+* recipes/begin                       - trusty code only (precise no longer supported)
+* recipes/main-ubuntu                 - trusty code only (precise no longer supported)
+
 ## 0.28.1:
 
 * recipes/run-init - fix sources management bug
