@@ -11,7 +11,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro-qiana" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -35,7 +34,6 @@
       "platforms": {
         "debian-7.5":     { "source": "repo-wheezy" },
         "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-12.04":   { "source": "repo-precise" },
         "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
@@ -48,17 +46,6 @@
             "distribution": "",
             "components": [],
             "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_14.04/Release.key"
-          }
-        },
-        "repo-precise": {
-          "package": "owncloud-client",
-          "maintainer": "Markus Rex <msrex@owncloud.com>",
-          "meta": {
-            "repo_name": "owncloud-client",
-            "uri": "http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_12.04/ /",
-            "distribution": "",
-            "components": [],
-            "key": "http://download.opensuse.org/repositories/isv:ownCloud:desktop/xUbuntu_12.04/Release.key"
           }
         },
         "repo-wheezy": {
