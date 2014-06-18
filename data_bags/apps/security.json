@@ -81,9 +81,9 @@
           "dependencies": ["curl", "gksu", "mpg123", "scrot", "streamer"],
           "meta": {
             "*": {
-              "file_name": "prey_0.6.2-ubuntu2_all.deb",
-              "uri": "https://ocserver/public.php?service=files&t=1221f9dde8e08fef9c8a16642f430b52&download",
-              "sha256": "463b706cdf8e49d999dc1eb0d0cbb42c81fb03fe13f4dcf653aee7e184d588f9"
+              "file_name": "prey_0.6.3-ubuntu2_all.deb",
+              "uri": "https://ocserver/public.php?service=files&t=111e804d29fb275a7b2a30f1dc7c31e1&download",
+              "sha256": "d6aa4e379c87619d07eb91348f584655d3037fbd9cdb6ca8de8ab32c71a99a72"
             }
           }
         },
