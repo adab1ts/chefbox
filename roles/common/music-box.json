@@ -12,7 +12,6 @@
       "apps": {
         "audio_pro": [
           "audacity",
-          "linuxband",
           "muse",
           "musescore",
           "transcribe",
