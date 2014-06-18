@@ -193,16 +193,16 @@
           "maintainer": "Andrew Mustun <https://github.com/qcad>",
           "meta": {
             "i686": {
-              "file_name": "qcad-3.4.7-linux-x86_32.tar.gz",
-              "uri": "https://ocserver/public.php?service=files&t=3c10396ab79c46b28485e763487912a7&download",
-              "sha256": "89480ad94c3adba2fb0f88e1eba4ed07173ff39b2d233bbd864cb0b6f831bb8f",
-              "zfolder": "qcad-3.4.7-linux-x86_32"
+              "file_name": "qcad-3.5.1-linux-x86_32.tar.gz",
+              "uri": "https://ocserver/public.php?service=files&t=573dd7c6f59bf7bbd5a9a433bb7ca3aa&download",
+              "sha256": "c4c4a5675c598a1fcc6b7b115d9c3d8a8b63feaeb7123e49fc8c3853d8e2181e",
+              "zfolder": "qcad-3.5.1-linux-x86_32"
             },
             "x86_64": {
-              "file_name": "qcad-3.4.7-linux-x86_64.tar.gz",
-              "uri": "https://ocserver/public.php?service=files&t=dfc6f95804fc3685737a7aa87e8a2755&download",
-              "sha256": "fe005f22b3c0951ab77fc655ddacd91aea7b5217c8e195304ecd8f1c3c79f51a",
-              "zfolder": "qcad-3.4.7-linux-x86_64"
+              "file_name": "qcad-3.5.1-linux-x86_64.tar.gz",
+              "uri": "https://ocserver/public.php?service=files&t=fda85dd3aac566db70dc0783ba84cb4f&download",
+              "sha256": "95be757d954f4e9e4ed0b4fea17af03993c6e58ad9f5ae356774ab3c6dcda9d1",
+              "zfolder": "qcad-3.5.1-linux-x86_64"
             }
           }
         }
