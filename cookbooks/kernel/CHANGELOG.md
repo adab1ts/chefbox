@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.5:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 0.4.4:
 
 * README.md - linuxmint 13 no longer supported

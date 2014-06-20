@@ -14,7 +14,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -37,7 +36,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -83,7 +81,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -103,7 +100,6 @@
       "platforms": {
         "debian-7.5":     { "source": "repo" },
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
