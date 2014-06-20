@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of office.
 
+## 0.5.0:
+
+* README.md       - ubuntu 12.04 no longer supported
+* recipes/default - nitro install management no longer included
+* recipes/nitro   - removed
+
 ## 0.4.2:
 
 * README.md - linuxmint 13 no longer supported
