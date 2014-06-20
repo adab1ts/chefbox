@@ -4,7 +4,6 @@
     "backintime",
     "brasero",
     "discs",
-    "fogger",
     "furius",
     "gnome-do",
     "hardinfo",
@@ -17,7 +16,6 @@
       "website": "http://backintime.le-web.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -61,29 +59,11 @@
         }
       }
     },
-    "fogger": {
-      "description": "Fogger lets you create sandboxed web apps that behave like regular desktop applications",
-      "website": "http://launchpad.net/fogger",
-      "platforms": {
-        "ubuntu-12.04": { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "fogger",
-          "maintainer": "Owais Lone <hello@owaislone.org>",
-          "meta": {
-            "repo_name": "loneowais-fogger",
-            "uri": "ppa:loneowais/fogger"
-          }
-        }
-      }
-    },
     "furius": {
       "description": "ISO, IMG, BIN, MDF and NRG image management utility",
       "website": "http://launchpad.net/furiusisomount",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -98,7 +78,6 @@
       "website": "http://do.cooperteam.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -114,7 +93,6 @@
       "website": "http://hardinfo.berlios.de/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -129,7 +107,6 @@
       "website": "http://p7zip.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -145,7 +122,6 @@
       "website": "http://shutter-project.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {

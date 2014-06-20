@@ -7,7 +7,6 @@ The following recipes may apply:
 - `utils::backintime` - installs __Back In Time simple backup system__ and suggested packages.
 - `utils::brasero`    - installs __Brasero CD/DVD Burning application__ and suggested packages.
 - `utils::discs`      - installs __GNOME disk utility__ and suggested packages.
-- `utils::fogger`     - installs __Fogger app__ and suggested packages.
 - `utils::furius`     - installs __Furius ISO Mount__ and suggested packages.
 - `utils::gnome-do`   - installs __GNOME DO__ and suggested packages.
 - `utils::hardinfo`   - installs __Hardinfo__ and suggested packages.
@@ -19,7 +18,7 @@ The following recipes may apply:
 
 This cookbook applies to the following platforms:  
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

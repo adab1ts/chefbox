@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of utils.
 
+## 0.13.0:
+
+* README.md       - ubuntu 12.04 no longer supported
+* recipes/default - fogger install management no longer included
+* recipes/fogger  - removed
+
 ## 0.12.0:
 
 * recipes/default - now includes brasero install management
