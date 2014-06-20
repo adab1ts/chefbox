@@ -13,7 +13,6 @@
       "website": "http://www.yeasoft.com/site/projects:btsync-deb",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -32,7 +31,6 @@
       "website": "http://www.frostwire.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "deb" },
-        "ubuntu-12.04":   { "source": "deb" },
         "ubuntu-14.04":   { "source": "deb" }
       },
       "sources": {
@@ -55,7 +53,6 @@
       "website": "http://jdownloader.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -74,7 +71,6 @@
       "website": "http://www.transmissionbt.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro", "default": true },
-        "ubuntu-12.04":   { "source": "distro", "default": true },
         "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
@@ -89,7 +85,6 @@
       "website": "http://ugetdm.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
