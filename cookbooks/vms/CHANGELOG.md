@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.5.5:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 0.5.4:
 
 * README.md - linuxmint 13 no longer supported

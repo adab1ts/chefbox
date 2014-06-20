@@ -10,7 +10,6 @@
       "platforms": {
         "debian-7.5":     { "source": "repo" },
         "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-12.04":   { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
