@@ -10,22 +10,12 @@
       "website": "http://www.yorba.org/projects/geary/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
           "package": "geary",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "ppa": {
-          "comment": "yorba official: ppa:yorba/ppa (12.10+)",
-          "package": "geary",
-          "maintainer": "Jim Nelson <jim@yorba.org>",
-          "meta": {
-            "repo_name": "tombeckmann-geary",
-            "uri": "ppa:tombeckmann/geary"
-          }
         }
       }
     },
@@ -34,7 +24,6 @@
       "website": "http://www.mozilla.org/en-US/thunderbird/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro", "default": true },
-        "ubuntu-12.04":   { "source": "distro", "default": true },
         "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
