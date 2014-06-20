@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.8.0:
+
+* README.md       - ubuntu 12.04 no longer supported
+* recipes/default - xchat install management no longer included
+* recipes/xchat   - removed
+
 ## 0.7.0:
 
 * recipes/default - now includes hexchat install management

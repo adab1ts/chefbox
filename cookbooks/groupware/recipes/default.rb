@@ -44,6 +44,5 @@ if selected
   include_recipe "groupware::mumble" if selected.include?("mumble")
   include_recipe "groupware::smuxi" if selected.include?("smuxi")
   include_recipe "groupware::skype" if selected.include?("skype")
-  include_recipe "groupware::xchat" if selected.include?("xchat")
 end
 

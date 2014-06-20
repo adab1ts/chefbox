@@ -10,7 +10,6 @@ The following recipes may apply:
 - `groupware::mumble`   - installs __Mumble low latency VoIP client__ and suggested packages.
 - `groupware::smuxi`    - installs __Smuxi IRC client__ and suggested packages.
 - `groupware::skype`    - installs __Skype__ and suggested packages.
-- `groupware::xchat`    - installs __XChat IRC client__ and suggested packages.
 
 
 ## Requirements
@@ -18,7 +17,7 @@ The following recipes may apply:
 This cookbook applies to the following platforms:  
 - `CrunchBang 11+`
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

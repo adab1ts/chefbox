@@ -3,10 +3,10 @@
   "apps": [
     "gobby",
     "hangouts",
+    "hexchat",
     "mumble",
     "smuxi",
-    "skype",
-    "xchat"
+    "skype"
   ],
   "profiles": {
     "gobby": {
@@ -15,7 +15,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -35,7 +34,6 @@
       "platforms": {
         "debian-7.5":     { "source": "deb" },
         "linuxmint-17.0": { "source": "deb" },
-        "ubuntu-12.04":   { "source": "deb" },
         "ubuntu-14.04":   { "source": "deb" }
       },
       "sources": {
@@ -77,7 +75,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro" },
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -100,21 +97,12 @@
       "website": "http://www.smuxi.org/main/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
           "package": "smuxi",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "ppa": {
-          "package": "smuxi",
-          "maintainer": "Mirco Bauer <meebey@debian.org>",
-          "meta": {
-            "repo_name": "meebey-ppa",
-            "uri": "ppa:meebey/ppa"
-          }
         }
       }
     },
@@ -123,12 +111,11 @@
       "website": "http://www.skype.com/en/",
       "platforms": {
         "debian-7.5":     { "source": "deb-wheezy" },
-        "linuxmint-17.0": { "source": "deb-trusty" },
-        "ubuntu-12.04":   { "source": "distro" },
-        "ubuntu-14.04":   { "source": "deb-trusty" }
+        "linuxmint-17.0": { "source": "deb" },
+        "ubuntu-14.04":   { "source": "deb" }
       },
       "sources": {
-        "deb-trusty": {
+        "deb": {
           "package": "skype",
           "maintainer": "Skype Technologies <info@skype.net>",
           "dependencies": [
@@ -157,29 +144,6 @@
               "sha256": "97c615a7f54c337e1ae51ae23c7eb8f464c506d1e260a90a4c2806bb6c322f3f"
             }
           }
-        },
-        "distro": {
-          "package": "skype",
-          "maintainer": "Steve Langasek <steve.langasek@canonical.com>"
-        }
-      }
-    },
-    "xchat": {
-      "description": "IRC client for X similar to AmIRC",
-      "website": "http://xchat.org/",
-      "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy", "default": true },
-        "ubuntu-12.04":   { "source": "distro" },
-        "ubuntu-14.04":   { "source": "distro", "default": true }
-      },
-      "sources": {
-        "distro": {
-          "package": "xchat",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "distro-wheezy": {
-          "package": "xchat",
-          "maintainer": "Davide Puricelli <evo@debian.org>"
         }
       }
     }

@@ -156,8 +156,7 @@
           "hexchat",
           "mumble",
           "smuxi",
-          "skype",
-          "xchat"
+          "skype"
         ],
         "indicators": [
           "plug&play",
