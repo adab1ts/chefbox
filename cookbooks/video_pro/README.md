@@ -13,7 +13,7 @@ The following recipes may apply:
 
 This cookbook applies to the following platforms:  
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

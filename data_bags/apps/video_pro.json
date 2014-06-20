@@ -11,7 +11,6 @@
       "website": "http://avidemux.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -26,7 +25,6 @@
       "website": "http://cinelerra-cv.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -56,7 +54,6 @@
       "website": "http://www.shotcut.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "bin" },
-        "ubuntu-12.04":   { "source": "bin" },
         "ubuntu-14.04":   { "source": "bin" }
       },
       "sources": {
