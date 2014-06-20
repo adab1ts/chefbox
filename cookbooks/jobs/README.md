@@ -10,8 +10,8 @@ The following recipes are applied:
 ## Requirements
 
 This cookbook applies to the following platforms:  
-- `Ubuntu 14.04+`
 - `Linux Mint 17+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`

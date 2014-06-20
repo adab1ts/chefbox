@@ -2,9 +2,13 @@
 
 This file is used to list changes made in each version of jobs.
 
+## 0.5.3:
+
+* README.md - minor update
+
 ## 0.5.2:
 
-* README.md                                        - precise-based platforms no longer supported
+* README.md - precise-based platforms no longer supported
 * templates/default/jobs/backup/drive/backup-drive - minor update
 
 ## 0.5.1:
