@@ -12,8 +12,7 @@
     "box": {
       "apps": {
         "eyecandy": [
-          "unity-tweak",
-          "unsettings"
+          "unity-tweak"
         ],
         "indicators": [
           "plug&play",
