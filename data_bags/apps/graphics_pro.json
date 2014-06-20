@@ -19,7 +19,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro" },
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -53,7 +52,6 @@
       "website": "http://www.freecadweb.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -61,15 +59,6 @@
           "package": "freecad",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["freecad-doc"]
-        },
-        "ppa": {
-          "package": "freecad",
-          "maintainer": "Normand Chamberland <gemnoc@gmail.ca>",
-          "suggested": ["freecad-doc", "python-matplotlib"],
-          "meta": {
-            "repo_name": "freecad-maintainers-freecad-stable",
-            "uri": "ppa:freecad-maintainers/freecad-stable"
-          }
         }
       }
     },
@@ -79,7 +68,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy", "default": true },
         "linuxmint-17.0": { "source": "distro", "default": true },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro", "default": true }
       },
       "sources": {
@@ -92,15 +80,6 @@
           "package": "gimp",
           "maintainer": "Ari Pollak <ari@debian.org>",
           "suggested": ["gimp-data-extras", "gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"]
-        },
-        "ppa": {
-          "package": "gimp",
-          "maintainer": "Otto Meier <>",
-          "suggested": ["gimp-gmic", "gimp-plugin-registry", "icc-profiles", "icc-profiles-free"],
-          "meta": {
-            "repo_name": "otto-kesselgulasch-gimp",
-            "uri": "ppa:otto-kesselgulasch/gimp"
-          }
         }
       }
     },
@@ -110,7 +89,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -130,7 +108,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro" },
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -154,7 +131,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -166,15 +142,6 @@
         "distro-wheezy": {
           "package": "mypaint",
           "maintainer": "Gürkan Sengün <gurkan@phys.ethz.ch>"
-        },
-        "ppa": {
-          "package": "mypaint",
-          "maintainer": "Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>",
-          "suggested": ["mypaint-data-extras"],
-          "meta": {
-            "repo_name": "achadwick-mypaint-testing",
-            "uri": "ppa:achadwick/mypaint-testing"
-          }
         }
       }
     },
@@ -183,7 +150,6 @@
       "website": "http://www.qcad.org/en/",
       "platforms": {
         "linuxmint-17.0": { "source": "bin" },
-        "ubuntu-12.04":   { "source": "bin" },
         "ubuntu-14.04":   { "source": "bin" }
       },
       "sources": {
@@ -214,7 +180,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro" },
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -238,7 +203,6 @@
       "platforms": {
         "debian-7.5":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
