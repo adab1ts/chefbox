@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of base.
 
+## 0.28.3:
+
+* recipes/run-end - move cleaning up code to cleanup.sh script
+
 ## 0.28.2:
 
 * README.md                           - ubuntu 12.04 no longer supported
