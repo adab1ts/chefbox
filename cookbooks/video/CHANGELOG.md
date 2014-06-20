@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.7.3:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 0.7.2:
 
 * recipes/mvc - satisfy ffmpeg dependency

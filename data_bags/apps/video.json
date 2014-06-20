@@ -19,7 +19,6 @@
       "website": "http://www.bombono.org/cgi-bin/wiki/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -34,21 +33,12 @@
       "website": "http://www.dvdstyler.org/en/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
           "package": "dvdstyler",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "ppa": {
-          "package": "dvdstyler",
-          "maintainer": "Fabrice Coutadeur <>",
-          "meta": {
-            "repo_name": "dvdstyler-maintainers-ppa",
-            "uri": "ppa:dvdstyler-maintainers/ppa"
-          }
         }
       }
     },
@@ -57,21 +47,12 @@
       "website": "http://handbrake.fr/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
           "package": "handbrake",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "ppa": {
-          "package": "handbrake-gtk",
-          "maintainer": "John Stebbins <jstebbins.hb@gmail.com>",
-          "meta": {
-            "repo_name": "stebbins-handbrake-releases",
-            "uri": "ppa:stebbins/handbrake-releases"
-          }
         }
       }
     },
@@ -80,21 +61,12 @@
       "website": "http://www.getmiro.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
         "distro": {
           "package": "miro",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "ppa": {
-          "package": "miro",
-          "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
-          "meta": {
-            "repo_name": "pcf-miro-releases",
-            "uri": "ppa:pcf/miro-releases"
-          }
         }
       }
     },
@@ -129,18 +101,9 @@
       "website": "http://www.mirovideoconverter.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
-        "ppa": {
-          "package": "mirovideoconverter",
-          "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
-          "meta": {
-            "repo_name": "pcf-miro-releases",
-            "uri": "ppa:pcf/miro-releases"
-          }
-        },
         "repo": {
           "package": "mirovideoconverter",
           "maintainer": "Ben Dean-Kawamura <ben@pculture.org>",
@@ -161,7 +124,6 @@
       "website": "http://ogmrip.sourceforge.net/en/index.html",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "repo" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -169,17 +131,6 @@
           "package": "ogmrip",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "dependencies": ["mencoder"]
-        },
-        "repo": {
-          "package": "ogmrip",
-          "maintainer": "GetDeb Package Ninjas <package.ninjas@getdeb.net>",
-          "meta": {
-            "repo_name": "getdeb",
-            "uri": "http://archive.getdeb.net/ubuntu",
-            "distribution": "precise-getdeb",
-            "components": ["apps"],
-            "key": "http://archive.getdeb.net/getdeb-archive.key"
-          }
         }
       }
     },
@@ -188,7 +139,6 @@
       "website": "http://www.openshot.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -196,14 +146,6 @@
           "package": "openshot",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["frei0r-plugins", "openshot-doc"]
-        },
-        "ppa": {
-          "package": "openshot",
-          "maintainer": "Jonathan Thomas <Jonathan.Oomph@gmail.com>",
-          "meta": {
-            "repo_name": "openshot_developers-ppa",
-            "uri": "ppa:openshot.developers/ppa"
-          }
         }
       }
     },
@@ -212,7 +154,6 @@
       "website": "http://recordmydesktop.sourceforge.net/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
@@ -228,7 +169,6 @@
       "website": "http://www.maartenbaert.be/simplescreenrecorder/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -247,7 +187,6 @@
       "website": "http://www.videolan.org/vlc/",
       "platforms": {
         "linuxmint-17.0": { "source": "distro", "default": true },
-        "ubuntu-12.04":   { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
