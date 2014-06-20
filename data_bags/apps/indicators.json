@@ -11,7 +11,6 @@
       "description": "Display notifications about newly plugged hardware",
       "website": "http://udev-notify.learnfree.eu/",
       "platforms": {
-        "ubuntu-12.04": { "source": "repo" },
         "ubuntu-14.04": { "source": "repo" }
       },
       "sources": {
@@ -32,7 +31,6 @@
       "description": "Caffeine",
       "website": "http://launchpad.net/caffeine",
       "platforms": {
-        "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
       "sources": {
@@ -50,7 +48,6 @@
       "description": "An indicator for the touchpad",
       "website": "http://launchpad.net/~atareao/+archive/atareao",
       "platforms": {
-        "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
       "sources": {
@@ -68,7 +65,6 @@
       "description": "An indicator for weather",
       "website": "http://launchpad.net/~atareao/+archive/atareao",
       "platforms": {
-        "ubuntu-12.04": { "source": "ppa" },
         "ubuntu-14.04": { "source": "ppa" }
       },
       "sources": {

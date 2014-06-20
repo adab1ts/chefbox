@@ -12,7 +12,7 @@ The following recipes may apply:
 
 ## Requirements
 
-This cookbook only applies to Ubuntu 12.04+ platform.
+This cookbook only applies to Ubuntu 14.04+ platform.
 
 #### cookbooks
 - `core`

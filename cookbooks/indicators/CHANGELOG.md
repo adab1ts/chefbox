@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.5.3:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 0.5.2:
 
 * recipes/screensaver - deliver screensaver indicator support to ubuntu platform only
