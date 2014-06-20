@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of eyecandy.
 
+## 0.10.0:
+
+* README.md - ubuntu 12.04 no longer supported
+* files/ubuntu/        - moved from files/ubuntu12.04/
+* recipes/default      - nitrux icons and unsettings install management no longer included
+* recipes/nitrux-icons - removed
+* recipes/unsettings   - removed
+
 ## 0.9.1:
 
 * README.md - linuxmint 13 no longer supported

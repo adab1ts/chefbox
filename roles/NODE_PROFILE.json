@@ -122,12 +122,10 @@
           "faba-icons",
           "moka-icons",
           "moka-theme",
-          "nitrux-icons",
           "numix-circle-icons",
           "numix-shine-icons",
           "orchis-theme",
-          "unity-tweak",
-          "unsettings"
+          "unity-tweak"
         ],
         "fileshare": [
           "btsync",

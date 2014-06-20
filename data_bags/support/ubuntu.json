@@ -26,20 +26,6 @@
       }
     }
   },
-  "eyecandy": {
-    "unsettings": {
-      "ca": {
-        "file": "unsettings-ca.pdf",
-        "url": "https://ocserver/public.php?service=files&t=ee5f0e48ab14622ca16627494ea207b5&download",
-        "sha256": "19a6a02346ff1e834dd7dd3f0e684f099eb62021e2cceb213523bc2e51fe7c24"
-      },
-      "es": {
-        "file": "unsettings-es.pdf",
-        "url": "https://ocserver/public.php?service=files&t=c6fb85d60f26a25cfdced06803701240&download",
-        "sha256": "c33f7a8c045f7e249642548ffa91e4e38fdb1012f450131d5b3baa05937a5afc"
-      }
-    }
-  },
   "guide": {
     "ubuntu-12.04-unity": {
       "ca": {

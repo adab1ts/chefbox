@@ -4,12 +4,10 @@
     "faba-icons",
     "moka-icons",
     "moka-theme",
-    "nitrux-icons",
     "numix-circle-icons",
     "numix-shine-icons",
     "orchis-theme",
-    "unity-tweak",
-    "unsettings"
+    "unity-tweak"
   ],
   "profiles": {
     "faba-icons": {
@@ -17,7 +15,6 @@
       "website": "http://mokaproject.com/faba-icon-theme/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -37,7 +34,6 @@
       "website": "http://mokaproject.com/moka-icon-theme/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -56,7 +52,6 @@
       "website": "http://mokaproject.com/moka-gtk-theme/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -70,29 +65,11 @@
         }
       }
     },
-    "nitrux-icons": {
-      "description": "NITRUX-umd",
-      "website": "http://launchpad.net/~kokoto-java/+archive/omgubuntu-stuff",
-      "platforms": {
-        "ubuntu-12.04": { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "nitrux-umd",
-          "maintainer": "Georgi Karavasilev <motorslav@gmail.com>",
-          "meta": {
-            "repo_name": "kokoto-java-omgubuntu-stuff",
-            "uri": "ppa:kokoto-java/omgubuntu-stuff"
-          }
-        }
-      }
-    },
     "numix-circle-icons": {
       "description": "Numix Circle Icons",
       "website": "http://numixproject.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -112,7 +89,6 @@
       "website": "http://numixproject.org/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -132,7 +108,6 @@
       "website": "http://mokaproject.com/orchis-gtk-theme/",
       "platforms": {
         "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-12.04":   { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
@@ -156,23 +131,6 @@
         "distro": {
           "package": "unity-tweak-tool",
           "maintainer": "Barneedhar Vigneshwar <barneedhar@ubuntu.com>"
-        }
-      }
-    },
-    "unsettings": {
-      "description": "graphical configuration program for the Unity desktop environment",
-      "website": "http://www.florian-diesch.de/software/unsettings/",
-      "platforms": {
-        "ubuntu-12.04": { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "unsettings",
-          "maintainer": "Florian Diesch <devel@florian-diesch.de>",
-          "meta": {
-            "repo_name": "diesch-testing",
-            "uri": "ppa:diesch/testing"
-          }
         }
       }
     }

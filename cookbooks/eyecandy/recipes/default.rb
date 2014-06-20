@@ -42,14 +42,12 @@ if selected
   include_recipe "eyecandy::faba-icons" if selected.include?("faba-icons")
   include_recipe "eyecandy::moka-icons" if selected.include?("moka-icons")
   include_recipe "eyecandy::moka-theme" if selected.include?("moka-theme")
-  include_recipe "eyecandy::nitrux-icons" if selected.include?("nitrux-icons")
   include_recipe "eyecandy::numix-circle-icons" if selected.include?("numix-circle-icons")
   include_recipe "eyecandy::numix-shine-icons" if selected.include?("numix-shine-icons")
   include_recipe "eyecandy::orchis-theme" if selected.include?("orchis-theme")
 
   if platform_desktop == "unity"
     include_recipe "eyecandy::unity-tweak" if selected.include?("unity-tweak")
-    include_recipe "eyecandy::unsettings" if selected.include?("unsettings")
   end
 end
 

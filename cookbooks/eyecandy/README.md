@@ -8,19 +8,17 @@ The following recipes may apply:
 - `eyecandy::faba-icons`         - installs __Faba icon theme__ and suggested packages.
 - `eyecandy::moka-icons`         - installs __Moka icon theme__ and suggested packages.
 - `eyecandy::moka-theme`         - installs __Moka GTK theme__ and suggested packages.
-- `eyecandy::nitrux-icons`       - installs __NITRUX-like icon theme__ and suggested packages.
 - `eyecandy::numix-circle-icons` - installs __Numix Circle icon theme__ and suggested packages.
 - `eyecandy::numix-shine-icons`  - installs __Numix Shine icon theme__ and suggested packages.
 - `eyecandy::orchis-theme`       - installs __Orchis GTK theme__ and suggested packages.
 - `eyecandy::unity-tweak`        - installs __Unity Tweak Tool__ and suggested packages.
-- `eyecandy::unsettings`         - installs __Unsettings__ and suggested packages.
 
 
 ## Requirements
 
 This cookbook applies to the following platforms:  
 - `Linux Mint 17+`
-- `Ubuntu 12.04+`
+- `Ubuntu 14.04+`
 
 #### cookbooks
 - `core`
