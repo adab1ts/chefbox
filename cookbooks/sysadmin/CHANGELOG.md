@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of sysadmin.
 
+## 0.2.4:
+
+* README.md - ubuntu 12.04 no longer supported
+
 ## 0.2.3:
 
 * README.md - linuxmint 13 no longer supported
