@@ -122,11 +122,12 @@
             "libqt4-dbus:i386", "libqtwebkit4:i386", "libxss1:i386",
             "libxv1:i386", "libssl1.0.0:i386", "libasound2-plugins:i386"
           ],
+          "suggested": ["sni-qt:i386"],
           "meta": {
             "*": {
-              "file_name": "skype-ubuntu-precise_4.2.0.13-1_i386.deb",
-              "uri": "https://ocserver/public.php?service=files&t=9f01dacc01815605fb012460a5591d4d&download",
-              "sha256": "bbeb3d3119af8497c90b772fa61e81eb58f9a55ee5d02bb033398657eb4e7df3"
+              "file_name": "skype-ubuntu-precise_4.3.0.37-1_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=b4fc79115e8bf835d9818c3839300354&download",
+              "sha256": "d19769135c014f7bdcb0c71410fd27698081c1aa4c6bbe53ccdd38576f17febc"
             }
           }
         },
@@ -139,9 +140,9 @@
           ],
           "meta": {
             "*": {
-              "file_name": "skype-debian_4.2.0.13-1_i386.deb",
-              "uri": "https://ocserver/public.php?service=files&t=768398d7096a65c5f4e8bfd4394eb116&download",
-              "sha256": "97c615a7f54c337e1ae51ae23c7eb8f464c506d1e260a90a4c2806bb6c322f3f"
+              "file_name": "skype-debian_4.3.0.37-1_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=32504ede7e3c814201e515e525a4cef5&download",
+              "sha256": "a820e641d1ee3fece3fdf206f384eb65e764d7b1ceff3bc5dee818beb319993c"
             }
           }
         }
