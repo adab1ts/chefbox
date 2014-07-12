@@ -84,7 +84,7 @@
       }
     },
     "springseed": {
-      "description": "The new way to take notes",
+      "description": "Simply awesome note-taking",
       "website": "http://getspringseed.com/",
       "platforms": {
         "linuxmint-17.0": { "source": "deb" },
@@ -93,18 +93,18 @@
       "sources": {
         "deb": {
           "package": "springseed",
-          "maintainer": "Micheal Harker <me@michealharker.com>",
-          "dependencies": ["cryptsetup-bin", "udisks"],
+          "maintainer": "Springseed Developers <hello@getspringseed.com>",
+          "dependencies": ["gir1.2-gnomekeyring-1.0"],
           "meta": {
             "i686": {
-              "file_name": "springseed_1.1.0_i386.deb",
-              "uri": "https://ocserver/public.php?service=files&t=08e8cd1c817dfb68f6cdcfc688c414c3&download",
-              "sha256": "0d4ed380c048eb8a5b1cad7ebeb613b17978520f318c0938dde08bb33e6a366e"
+              "file_name": "springseed_2.0_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=e4919a33691e805c71270d2546b2e66f&download",
+              "sha256": "0cb5b5822bbf1a140a3cf1f939314f2429e8732754f33db6e94a7d8b677475cc"
             },
             "x86_64": {
-              "file_name": "springseed_1.1.0_amd64.deb",
-              "uri": "https://ocserver/public.php?service=files&t=af360093b44c5b50add75ebeec3244d0&download",
-              "sha256": "7cb80e2681913f5d10506872f6d01f33c34fb0bd7d617e7d44ba8b9265449a6f"
+              "file_name": "springseed_2.0_amd64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=7eb2dc72da2ff0424e34d05277f9ddb3&download",
+              "sha256": "b7bd1bb1a05faa1906a0af85e4e5f8553a50a89efb2ad5a961f1131efc83586b"
             }
           }
         }
