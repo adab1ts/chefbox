@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of video.
 
+## 0.7.4:
+
+* recipes/default - remove arch restriction for mmc & mvc installation
+
 ## 0.7.3:
 
 * README.md - ubuntu 12.04 no longer supported
