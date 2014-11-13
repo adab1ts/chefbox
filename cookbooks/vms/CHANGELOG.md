@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of vms.
 
+## 0.5.6:
+
+* recipes/virtualbox - autostart service how to
+
 ## 0.5.5:
 
 * README.md - ubuntu 12.04 no longer supported

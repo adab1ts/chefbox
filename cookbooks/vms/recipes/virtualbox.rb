@@ -57,6 +57,12 @@ if app_available? vbox
   # end
 
   # VirtualBox autostart service
+  # https://www.virtualbox.org/manual/ch09.html#autostart
+  #
+  # Setup VMs to start during system boot as follows 
+  #   VBoxManage setproperty autostartdbpath /etc/vbox
+  #   VBoxManage modifyvm VM_Name --autostart-enabled on
+  #   VBoxManage modifyvm VM_Name --autostop-type savestate
   cookbook_file "vbox-defaults" do
     path "/etc/default/virtualbox"
     source "/virtualbox/virtualbox"
