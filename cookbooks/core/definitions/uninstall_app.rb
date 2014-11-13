@@ -31,8 +31,7 @@ define :uninstall_app do
   if available
     source_id, source_data = Coderebels::Chefbox::App.source profile, os, release
 
-    case source_id
-    when /bin/
+    if source_id =~ /^bin/
       box = node[:box]
 
       box[:users].each do |username, usr|
@@ -45,6 +44,24 @@ define :uninstall_app do
             && rm -f #{launcher}
             EOH
           only_if { ::File.exists? app_dir }
+        end
+      end
+    elsif source_id =~ /^git/
+      git_data = source_data
+      git = git_data['meta']
+      target_dir = git['destination'] || git_data['package']
+      
+      box = node[:box]
+      devel = box[:devel]
+      target_dir = "#{devel[:folder]}/#{target_dir}" if git['devel']
+
+      devel[:users].each do |username|
+        usr = box[:users][username]
+        
+        execute "#{username}_#{params[:name]}_uninstall" do
+          cwd usr[:home]
+          command "rm -rf #{target_dir}"
+          only_if { ::File.exists? target_dir }
         end
       end
     else

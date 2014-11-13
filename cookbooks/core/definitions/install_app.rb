@@ -93,6 +93,38 @@ define :install_app do
           not_if { ::File.exists?(app_home) }
         end
       end
+    elsif source_id =~ /^git/
+      git_data = source_data
+
+      # git repository installation
+      git = git_data['meta']
+
+      branch = git['branch'] || "master"
+      target_dir = git['destination'] || git_data['package']
+
+      box = node[:box]
+      devel = box[:devel]
+      target_dir = "#{devel[:folder]}/#{target_dir}" if git['devel']
+
+      devel[:users].each do |username|
+        usr = box[:users][username]
+
+        directory_tree "#{usr[:home]}/#{target_dir}" do
+          exclude usr[:home]
+          owner username
+          group usr[:group]
+          mode 00755
+        end
+
+        git "#{username}-#{params[:name]}_git_install" do
+          repository git['uri']
+          revision branch
+          destination "#{usr[:home]}/#{target_dir}"
+          user username
+          group usr[:group]
+          action :sync
+        end
+      end
     elsif source_id =~ /^deb/
       deb_data = source_data
 
