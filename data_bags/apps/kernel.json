@@ -98,7 +98,6 @@
       "description": "Save battery power on laptops",
       "website": "http://linrunner.de/en/tlp/tlp.html",
       "platforms": {
-        "debian-7.7":     { "source": "repo" },
         "linuxmint-17.0": { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
@@ -111,20 +110,6 @@
           "meta": {
             "repo_name": "linrunner-tlp",
             "uri": "ppa:linrunner/tlp"
-          }
-        },
-        "repo": {
-          "package": "tlp",
-          "maintainer": "Thomas Koch <linrunner@gmx.net>",
-          "replaced": ["laptop-mode-tools"],
-          "suggested": ["tlp-rdw"],
-          "meta": {
-            "repo_name": "linrunner-tlp",
-            "uri": "http://ppa.launchpad.net/linrunner/tlp/ubuntu",
-            "distribution": "lucid",
-            "components": ["main"],
-            "key": "02D65EFF",
-            "keyserver": "keyserver.ubuntu.com"
           }
         }
       }
