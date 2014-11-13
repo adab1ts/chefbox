@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: brackets
+# Recipe:: atom
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -20,13 +20,15 @@
 
 
 # refs:
-#   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
-#   https://github.com/adobe/brackets/wiki/Linux-Version
+#   http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
+#   https://github.com/atom/atom
+#   https://github.com/atom/atom/issues/2020
+#   https://discuss.atom.io/t/compilation-on-debian-wheezy-stable-glibc-2-13/8978/4
 
 devel = node[:apps][:devel]
 
-# Brackets code editor for the web
-install_app "brackets" do
-  profile devel['profiles']['brackets']
+# Atom text editor from GitHub
+install_app "atom" do
+  profile devel['profiles']['atom']
 end
 

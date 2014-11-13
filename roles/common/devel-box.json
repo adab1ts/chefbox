@@ -9,8 +9,7 @@
     "browsers",
     "cloud",
     "groupware",
-    "sysadmin",
-    "vms"
+    "sysadmin"
   ],
   "default_attributes": {
     "box": {
@@ -24,9 +23,20 @@
           "dropbox"
         ],
         "devel": [
+          "ansible",
+          "atom",
+          "bower",
           "brackets",
           "git",
+          "grunt",
+          "gulp",
+          "nodejs",
+          "ruby",
           "shelr",
+          "vagrant",
+          "virtualbox",
+          "wsk",
+          "yeoman",
           "zsh"
         ],
         "groupware": [
@@ -37,9 +47,6 @@
         "sysadmin": [
           "htop",
           "speedtest"
-        ],
-        "vms": [
-          "virtualbox"
         ]
       }
     }

@@ -38,8 +38,29 @@ if selected
   # Install selected apps
   node.default[:apps] = { :devel => devel }
 
-  # Shells
-  include_recipe "devel::zsh" if selected.include?("zsh")
+  # Prepare development environment
+  include_recipe "devel::zsh"
+
+  devel_folder = node[:box][:devel][:folder]
+  bin_folder   = node[:box][:devel][:bin_folder]
+
+  bootstrap "devel" do
+    folders [devel_folder, bin_folder]
+    env :priority => "00", :vars => { :bin_folder => bin_folder }
+  end
+
+  if platform == "debian"
+    bash "libc6-upgrade" do
+      code <<-EOH
+        echo 'deb http://ftp.us.debian.org/debian/ testing main contrib non-free' > "#{node[:apt][:sources_path]}/libc6-sid.list"
+        apt-get update
+        apt-get -y install -t testing libc6
+        echo '#deb http://ftp.us.debian.org/debian/ testing main contrib non-free' > "#{node[:apt][:sources_path]}/libc6-sid.list"
+        EOH
+      action :run
+      not_if { ::File.exists? "#{node[:apt][:sources_path]}/libc6-sid.list" }
+    end
+  end
 
   # Utils
   include_recipe "devel::shelr" if selected.include?("shelr")
@@ -47,8 +68,29 @@ if selected
   # VCS solutions
   include_recipe "devel::git" if selected.include?("git")
 
+  # Programming languages
+  include_recipe "devel::nodejs" if selected.include?("nodejs")
+  include_recipe "devel::processing" if selected.include?("processing")
+  include_recipe "devel::ruby" if selected.include?("ruby")
+
+  # Development toolkit
+  include_recipe "devel::ansible" if selected.include?("ansible")
+  include_recipe "devel::bower" if selected.include?("bower")
+  include_recipe "devel::grunt" if selected.include?("grunt")
+  include_recipe "devel::gulp" if selected.include?("gulp")
+  include_recipe "devel::wsk" if selected.include?("wsk")
+  include_recipe "devel::yeoman" if selected.include?("yeoman")
+
   # Code editors
+  include_recipe "devel::atom" if selected.include?("atom")
   include_recipe "devel::brackets" if selected.include?("brackets")
+
+  # Virtualization solutions
+  include_recipe "devel::virtualbox" if selected.include?("virtualbox")
+
+  # Development stacks
+  include_recipe "devel::vagrant" if selected.include?("vagrant")
+  include_recipe "devel::wp-devel" if selected.include?("wp-devel")
 
   # Cloud solutions
   include_recipe "devel::juju" if selected.include?("juju")

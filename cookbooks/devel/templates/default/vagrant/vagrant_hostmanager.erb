@@ -1,0 +1,2 @@
+Cmnd_Alias <%= @user.upcase %>_VAGRANT_HOSTMANAGER_UPDATE = /bin/cp /home/<%= @user %>/.vagrant.d/tmp/hosts.local /etc/hosts
+%sudo ALL=(root) NOPASSWD: <%= @user.upcase %>_VAGRANT_HOSTMANAGER_UPDATE

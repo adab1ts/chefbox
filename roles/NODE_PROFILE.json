@@ -108,10 +108,23 @@
           "owncloud"
         ],
         "devel": [
+          "ansible",
+          "atom",
+          "bower",
           "brackets",
           "git",
+          "grunt",
+          "gulp",
           "juju",
+          "nodejs",
+          "processing",
+          "ruby",
           "shelr",
+          "vagrant",
+          "virtualbox",
+          "wp-devel",
+          "wsk",
+          "yeoman",
           "zsh"
         ],
         "email": [

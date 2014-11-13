@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: brackets
+# Recipe:: bower
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,14 +19,9 @@
 #
 
 
-# refs:
-#   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
-#   https://github.com/adobe/brackets/wiki/Linux-Version
-
-devel = node[:apps][:devel]
-
-# Brackets code editor for the web
-install_app "brackets" do
-  profile devel['profiles']['brackets']
+# A package manager for the web
+execute "bower-installation" do
+  command "npm install -g bower"
+  not_if { ::File.exists? "/usr/bin/bower" }
 end
 

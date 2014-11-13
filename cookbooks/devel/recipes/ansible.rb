@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: brackets
+# Recipe:: ansible
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -20,13 +20,15 @@
 
 
 # refs:
-#   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
-#   https://github.com/adobe/brackets/wiki/Linux-Version
+#   https://github.com/genesis/wordpress
 
-devel = node[:apps][:devel]
-
-# Brackets code editor for the web
-install_app "brackets" do
-  profile devel['profiles']['brackets']
+# Simple IT Automation
+bash "ansible-installation" do
+  code <<-EOH
+    easy_install pip
+    pip install ansible
+    EOH
+  action :run
+  not_if { ::File.exists? "/usr/local/bin/ansible" }
 end
 

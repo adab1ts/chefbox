@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: brackets
+# Recipe:: virtualbox
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,14 +19,33 @@
 #
 
 
-# refs:
-#   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
-#   https://github.com/adobe/brackets/wiki/Linux-Version
+## Requirements
 
+# Dynamic Kernel Module Support Framework
+package "dkms"
+
+
+## Installation
 devel = node[:apps][:devel]
 
-# Brackets code editor for the web
-install_app "brackets" do
-  profile devel['profiles']['brackets']
+# Oracle VM VirtualBox 4.2.*
+# refs:
+#   https://github.com/genesis/wordpress
+vbox = devel['profiles']['virtualbox']
+
+if app_available? vbox
+  install_app "virtualbox" do
+    force true
+    profile vbox
+  end
+
+  node[:box][:devel][:users].each do |username|
+    group "vboxusers" do
+      members username
+      append true
+      action :nothing
+      subscribes :modify, resources("package[virtualbox]"), :immediately
+    end
+  end
 end
 

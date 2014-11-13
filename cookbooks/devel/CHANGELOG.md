@@ -2,6 +2,28 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.7.0:
+
+* definitions/bootstrap - now includes package-specific env variables management
+* definitions/env       - manage package-specific env variables
+* recipes/default       - now includes ansible, atom, bower, grunt, gulp, node.js, processing, ruby,
+                          vagrant, virtualbox, web starter kit, genesis wordpress and yeoman install management
+* recipes/ansible       - manage ansible installation
+* recipes/atom          - manage atom installation
+* recipes/bower         - manage bower installation
+* recipes/grunt         - manage grunt installation
+* recipes/gulp          - manage gulp installation
+* recipes/nodejs        - manage node.js installation
+* recipes/ruby          - manage ruby installation
+* recipes/processing    - manage processing installation
+* recipes/vagrant       - manage vagrant installation
+* recipes/virtualbox    - manage virtualbox installation
+* recipes/wp-devel      - manage genesis wordpress installation
+* recipes/wsk           - manage web starter kit installation
+* recipes/yeoman        - manage yeoman installation
+* files/default/ruby/ruby.zenv           - env variables for ruby programming language
+* templates/default/devel/devel.zenv.erb - development shared env variables
+
 ## 0.6.2:
 
 * README.md - ubuntu 12.04 no longer supported
@@ -13,7 +35,7 @@ This file is used to list changes made in each version of devel.
 ## 0.6.0:
 
 * recipes/default  - now includes brackets install management
-* recipes/shelr    - manage brackets installation
+* recipes/brackets - manage brackets installation
 
 ## 0.5.2:
 

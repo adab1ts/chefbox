@@ -1,0 +1,9 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/10_ruby.zenv
+# Contents: Ruby Env Variables
+
+
+export PATH="${HOME}/.rbenv/bin:${PATH}"
+
+eval "$(rbenv init - zsh --no-rehash)"
+

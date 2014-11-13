@@ -3,12 +3,25 @@
 This cookbook installs a selected set of development tools.
 The following recipes may apply:
 
-- `devel::default`  - purges unselected packages and includes recipes as nedeed.
-- `devel::brackets` - installs __Brackets code editor for the web__ and suggested packages.
-- `devel::git`      - installs __Git distributed version control system__ and suggested packages.
-- `devel::juju`     - installs __Juju service orchestration tool__ and suggested packages.
-- `devel::shelr`    - installs __Shelr plain text screencasting tool__ and suggested packages.
-- `devel::zsh`      - installs __Zsh Shell__ and suggested packages.
+- `devel::default`    - purges unselected packages and includes recipes as nedeed.
+- `devel::atom`       - installs __Ansible simple IT automation__ and suggested packages.
+- `devel::atom`       - installs __Atom text editor from GitHub__ and suggested packages.
+- `devel::bower`      - installs __Bower package manager for the web__ and suggested packages.
+- `devel::brackets`   - installs __Brackets code editor for the web__ and suggested packages.
+- `devel::git`        - installs __Git distributed version control system__ and suggested packages.
+- `devel::grunt`      - installs __Grunt JavaScript task runner__ and suggested packages.
+- `devel::gulp`       - installs __Gulp streaming build system__ and suggested packages.
+- `devel::juju`       - installs __Juju service orchestration tool__ and suggested packages.
+- `devel::nodejs`     - installs __Node.js event-based server-side javascript engine__ and suggested packages.
+- `devel::processing` - installs __Processing open source creative programming language__ and suggested packages.
+- `devel::ruby`       - installs __Ruby dynamic and open source programming language__ and suggested packages.
+- `devel::shelr`      - installs __Shelr plain text screencasting tool__ and suggested packages.
+- `devel::vagrant`    - installs __Vagrant tool for virtualizing development environments__ and suggested packages.
+- `devel::virtualbox` - installs __VirtualBox__ and manages post-installation tasks.
+- `devel::wp-devel`   - installs __Genesis WordPress to create, develop and deploy WP__ and suggested packages.
+- `devel::wsk`        - installs __Google Web Starter Kit__ and suggested packages.
+- `devel::yeoman`     - installs __Yeoman web scaffolding tool__ and suggested packages.
+- `devel::zsh`        - installs __Zsh Shell__ and suggested packages.
 
 
 ## Requirements
@@ -23,6 +36,9 @@ This cookbook applies to the following platforms:
 
 #### recipes
 - `core::default`
+
+#### packages
+- `dkms` - Dynamic Kernel Module Support Framework [virtualbox]
 
 
 ## Usage

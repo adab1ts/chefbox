@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: brackets
+# Recipe:: yeoman
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,14 +19,9 @@
 #
 
 
-# refs:
-#   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
-#   https://github.com/adobe/brackets/wiki/Linux-Version
-
-devel = node[:apps][:devel]
-
-# Brackets code editor for the web
-install_app "brackets" do
-  profile devel['profiles']['brackets']
+# The web's scaffolding tool for modern webapps
+execute "yeoman-installation" do
+  command "npm install -g yo"
+  not_if { ::File.exists? "/usr/bin/yo" }
 end
 

@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: brackets
+# Recipe:: nodejs
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -20,13 +20,12 @@
 
 
 # refs:
-#   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
-#   https://github.com/adobe/brackets/wiki/Linux-Version
+#   https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
 
 devel = node[:apps][:devel]
 
-# Brackets code editor for the web
-install_app "brackets" do
-  profile devel['profiles']['brackets']
+# Node.js event-based server-side javascript engine
+install_app "nodejs" do
+  profile devel['profiles']['nodejs']
 end
 

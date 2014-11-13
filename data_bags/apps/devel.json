@@ -1,33 +1,46 @@
 {
   "id": "devel",
   "apps": [
+    "atom",
     "brackets",
     "git",
     "juju",
+    "nodejs",
+    "processing",
+    "ruby",
     "shelr",
+    "vagrant",
+    "virtualbox",
+    "wsk",
     "zsh"
   ],
   "profiles": {
-    "brackets": {
-      "description": "Brackets",
-      "website": "http://brackets.io/",
+    "atom": {
+      "description": "Atom text editor from GitHub",
+      "website": "http://atom.io/",
       "platforms": {
-        "debian-7.5":     { "source": "deb" },
         "linuxmint-17.0": { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
-        "deb": {
-          "package": "brackets",
-          "maintainer": "Brackets Team <brackets-dev@googlegroups.com>",
+        "ppa": {
+          "package": "atom",
+          "maintainer": "Alin Andrei <webupd8@gmail.com>",
           "meta": {
-            "*": {
-              "file_name": "Brackets.Sprint.40.32-bit.deb",
-              "uri": "https://ocserver/public.php?service=files&t=fb5c7fa744d6dcd0de5116fcdeb83c43&download",
-              "sha256": "7be1b778c19142031da402ed645c99013356343e307c10deb359cea827c6b4f2"
-            }
+            "repo_name": "webupd8team-atom",
+            "uri": "ppa:webupd8team/atom"
           }
-        },
+        }
+      }
+    },
+    "brackets": {
+      "description": "Brackets",
+      "website": "http://brackets.io/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
+      },
+      "sources": {
         "ppa": {
           "package": "brackets",
           "maintainer": "Alin Andrei <webupd8@gmail.com>",
@@ -42,7 +55,7 @@
       "description": "fast, scalable, distributed revision control system",
       "website": "http://git-scm.com/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -77,11 +90,90 @@
         }
       }
     },
+    "nodejs": {
+      "description": "Event-based server-side javascript engine",
+      "website": "http://nodejs.org/",
+      "platforms": {
+        "debian-7.7":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "nodejs",
+          "maintainer": "Chris Lea <chl@nodesource.com>",
+          "dependencies": ["apt-transport-https"],
+          "meta": {
+            "repo_name": "nodesource",
+            "uri": "https://deb.nodesource.com/node",
+            "components": ["main"],
+            "key": "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+          }
+        }
+      }
+    },
+    "processing": {
+      "description": "Processing is a programming language, development environment, and online community",
+      "website": "http://processing.org/",
+      "platforms": {
+        "debian-7.7":     { "source": "bin" },
+        "linuxmint-17.0": { "source": "bin" },
+        "ubuntu-14.04":   { "source": "bin" }
+      },
+      "sources": {
+        "bin": {
+          "ztype": "tgz",
+          "package": "processing",
+          "maintainer": "Processing Community <http://processing.org>",
+          "meta": {
+            "i686": {
+              "file_name": "processing-2.2.1-linux32.tgz",
+              "uri": "https://ocserver/public.php?service=files&t=3f2f764ed476c585aec8d8fb1686b21f&download",
+              "sha256": "922db76c15682c5454226dd0cdd4fd680e1549d33ad4c7c27efbc345285fab42",
+              "zfolder": "processing-2.2.1"
+            },
+            "x86_64": {
+              "file_name": "processing-2.2.1-linux64.tgz",
+              "uri": "https://ocserver/public.php?service=files&t=fe17b94a33c02b46ba5ca2f0240605bb&download",
+              "sha256": "bbb8831f251ed87dd1faefde43159494859452a2aaf7c75bca467e5afb7b9ec3",
+              "zfolder": "processing-2.2.1"
+            }
+          }
+        }
+      }
+    },
+    "ruby": {
+      "description": "Dynamic and open source programming language",
+      "website": "http://www.ruby-lang.org/en/",
+      "platforms": {
+        "debian-7.7":     { "source": "git" },
+        "linuxmint-17.0": { "source": "git" },
+        "ubuntu-14.04":   { "source": "git" }
+      },
+      "sources": {
+        "git": {
+          "package": "rbenv",
+          "maintainer": "Sam Stephenson <sstephenson@gmail.com>",
+          "dependencies": [
+            "libxslt1-dev",
+            "libcurl4-openssl-dev",
+            "libksba8",
+            "libksba-dev",
+            "libqtwebkit-dev",
+            "libreadline-dev"
+          ],
+          "meta": {
+            "uri": "https://github.com/sstephenson/rbenv.git",
+            "destination": ".rbenv"
+          }
+        }
+      }
+    },
     "shelr": {
       "description": "Utility for plain text screencasting",
       "website": "http://shelr.tv/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -96,11 +188,78 @@
         }
       }
     },
+    "vagrant": {
+      "description": "Tool for building and distributing virtualized development environments",
+      "website": "http://www.vagrantup.com/",
+      "platforms": {
+        "debian-7.7":     { "source": "deb" },
+        "linuxmint-17.0": { "source": "deb" },
+        "ubuntu-14.04":   { "source": "deb" }
+      },
+      "sources": {
+        "deb": {
+          "package": "vagrant",
+          "maintainer": "HashiCorp <hello@hashicorp.com>",
+          "meta": {
+            "i686": {
+              "file_name": "vagrant_1.6.5_i686.deb",
+              "uri": "https://ocserver/public.php?service=files&t=cd4a9d3987d602943305894faee7f658&download",
+              "sha256": "78cd956742c3e4e9f5e7f31e8a318a1b0dee100aebb46c363a63cd6aa2059cb4"
+            },
+            "x86_64": {
+              "file_name": "vagrant_1.6.5_x86_64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=e1699eafca518ea63b9238b9a8a4478a&download",
+              "sha256": "e2c7af6d032ac551ebd6399265cb9cb64402c9fb96a12289161b7f67afada28a"
+            }
+          }
+        }
+      }
+    },
+    "virtualbox": {
+      "description": "Oracle VM VirtualBox",
+      "website": "http://www.virtualbox.org/",
+      "platforms": {
+        "debian-7.7":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "virtualbox-4.2",
+          "maintainer": "Oracle Corporation <info@virtualbox.org>",
+          "meta": {
+            "repo_name": "virtualbox",
+            "uri": "http://download.virtualbox.org/virtualbox/debian",
+            "components": ["contrib"],
+            "key": "http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"
+          }
+        }
+      }
+    },
+    "wsk": {
+      "description": "Boilerplate & tooling for multi-device development",
+      "website": "http://developers.google.com/web/starter-kit/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "git" },
+        "ubuntu-14.04":   { "source": "git" }
+      },
+      "sources": {
+        "git": {
+          "package": "wsk",
+          "maintainer": "Addy Osmani <addyosmani@gmail.com>",
+          "dependencies": ["libpng12-dev"],
+          "meta": {
+            "uri": "https://github.com/google/web-starter-kit.git",
+            "devel": true
+          }
+        }
+      }
+    },
     "zsh": {
       "description": "shell with lots of features",
       "website": "http://zsh.sourceforge.net/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },

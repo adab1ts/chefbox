@@ -79,6 +79,19 @@ define :bootstrap, :shell => "zsh", :folders => [], :files => [], :templates => 
       end
     end
 
+    if params[:env]
+      opts = params[:env]
+
+      env params[:name] do
+        dotfiles_dir "#{usr[:home]}/#{box[:dotfiles][:folder]}"
+        shell "zsh"
+        priority opts[:priority]
+        vars opts[:vars]
+        user username
+        group usr[:group]
+      end
+    end
+
     if params[:aliases]
       aliases params[:name] do
         dotfiles_dir "#{usr[:home]}/#{box[:dotfiles][:folder]}"

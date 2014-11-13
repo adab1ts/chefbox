@@ -8,7 +8,7 @@
 # Here you are an example of env file content:
 #
 # # vim:ft=zsh
-# # File: $DOTFILES_PATH/zsh/env.d/chefbox.zenv
+# # File: $DOTFILES_PATH/zsh/env.d/10_chefbox.zenv
 # # Contents: Chefbox Env Variables
 #
 # export PATH="/opt/chef/embedded/bin:${PATH}"
