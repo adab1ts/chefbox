@@ -13,7 +13,7 @@
       "description": "infinote-based collaborative text editor",
       "website": "http://gobby.0x539.de/trac/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -32,7 +32,7 @@
       "description": "Google Talk Plugin",
       "website": "http://www.google.com/+/learnmore/hangouts/",
       "platforms": {
-        "debian-7.5":     { "source": "deb" },
+        "debian-7.7":     { "source": "deb" },
         "linuxmint-17.0": { "source": "deb" },
         "ubuntu-14.04":   { "source": "deb" }
       },
@@ -73,7 +73,7 @@
       "description": "Low latency VoIP client",
       "website": "http://mumble.sourceforge.net/",
       "platforms": {
-        "debian-7.5":     { "source": "distro" },
+        "debian-7.7":     { "source": "distro" },
         "linuxmint-17.0": { "source": "ppa" },
         "ubuntu-14.04":   { "source": "ppa" }
       },
@@ -110,7 +110,7 @@
       "description": "client for Skype VOIP and instant messaging service",
       "website": "http://www.skype.com/en/",
       "platforms": {
-        "debian-7.5":     { "source": "deb-wheezy" },
+        "debian-7.7":     { "source": "deb-wheezy" },
         "linuxmint-17.0": { "source": "deb" },
         "ubuntu-14.04":   { "source": "deb" }
       },

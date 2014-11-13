@@ -9,7 +9,7 @@
       "description": "Dropbox client",
       "website": "http://www.dropbox.com/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro-qiana" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -32,7 +32,7 @@
       "description": "ownCloud client",
       "website": "http://owncloud.org/",
       "platforms": {
-        "debian-7.5":     { "source": "repo-wheezy" },
+        "debian-7.7":     { "source": "repo-wheezy" },
         "linuxmint-17.0": { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },

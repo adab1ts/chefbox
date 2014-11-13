@@ -11,7 +11,7 @@
       "description": "graphical front-end for ClamAV",
       "website": "http://code.google.com/p/clamtk/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -32,7 +32,7 @@
       "description": "graphical user interface for ufw",
       "website": "http://gufw.org/",
       "platforms": {
-        "debian-7.5":     { "source": "distro" },
+        "debian-7.7":     { "source": "distro" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -65,7 +65,7 @@
       "description": "utility for tracking stolen computers",
       "website": "http://preyproject.com/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "deb" },
         "ubuntu-14.04":   { "source": "deb" }
       },

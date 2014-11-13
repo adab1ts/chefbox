@@ -12,7 +12,7 @@
       "description": "The web browser from Google",
       "website": "http://www.google.com/intl/en/chrome/browser/",
       "platforms": {
-        "debian-7.5":     { "source": "repo" },
+        "debian-7.7":     { "source": "repo" },
         "linuxmint-17.0": { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },
@@ -34,7 +34,7 @@
       "description": "Chromium browser",
       "website": "http://www.chromium.org/Home",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -59,7 +59,7 @@
       "description": "Safe and easy web browser from Mozilla",
       "website": "http://www.mozilla.org/en-US/firefox/new/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy", "default": true },
+        "debian-7.7":     { "source": "distro-wheezy", "default": true },
         "linuxmint-17.0": { "source": "distro", "default": true },
         "ubuntu-14.04":   { "source": "distro", "default": true }
       },
@@ -98,7 +98,7 @@
       "description": "Fast and secure web browser and Internet suite",
       "website": "http://www.opera.com/computer/linux",
       "platforms": {
-        "debian-7.5":     { "source": "repo" },
+        "debian-7.7":     { "source": "repo" },
         "linuxmint-17.0": { "source": "repo" },
         "ubuntu-14.04":   { "source": "repo" }
       },
@@ -111,7 +111,7 @@
             "uri": "http://deb.opera.com/opera/",
             "distribution": "",
             "components": ["stable", "non-free"],
-            "key": "30C18A2B",
+            "key": "A8492E35",
             "keyserver": "keyserver.ubuntu.com"
           }
         }

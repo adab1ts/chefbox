@@ -31,7 +31,7 @@
       "description": "Computer lab management tool",
       "website": "http://www.epoptes.org/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -50,7 +50,7 @@
       "description": "Computer lab management tool",
       "website": "http://www.epoptes.org/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
@@ -87,7 +87,7 @@
       "description": "Interactive processes viewer",
       "website": "http://hisham.hm/htop/",
       "platforms": {
-        "debian-7.5":     { "source": "distro-wheezy" },
+        "debian-7.7":     { "source": "distro-wheezy" },
         "linuxmint-17.0": { "source": "distro" },
         "ubuntu-14.04":   { "source": "distro" }
       },
