@@ -73,7 +73,8 @@
       },
       "devel": {
         "users": ["USER"],
-        "folder": "DEVEL_FOLDER"
+        "folder": "DEVEL_FOLDER",
+        "bin_folder": "BIN_FOLDER"
       },
       "apps": {
         "audio": [
