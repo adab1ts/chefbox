@@ -49,19 +49,6 @@ if selected
     env :priority => "00", :vars => { :bin_folder => bin_folder }
   end
 
-  if platform == "debian"
-    bash "libc6-upgrade" do
-      code <<-EOH
-        echo 'deb http://ftp.us.debian.org/debian/ testing main contrib non-free' > "#{node[:apt][:sources_path]}/libc6-sid.list"
-        apt-get update
-        apt-get -y install -t testing libc6
-        echo '#deb http://ftp.us.debian.org/debian/ testing main contrib non-free' > "#{node[:apt][:sources_path]}/libc6-sid.list"
-        EOH
-      action :run
-      not_if { ::File.exists? "#{node[:apt][:sources_path]}/libc6-sid.list" }
-    end
-  end
-
   # Utils
   include_recipe "devel::shelr" if selected.include?("shelr")
 

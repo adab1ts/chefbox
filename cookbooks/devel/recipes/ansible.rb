@@ -23,6 +23,8 @@
 #   https://github.com/genesis/wordpress
 
 # Simple IT Automation
+package "python-pip"
+
 bash "ansible-installation" do
   code <<-EOH
     easy_install pip

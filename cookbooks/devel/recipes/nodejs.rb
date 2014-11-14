@@ -29,3 +29,9 @@ install_app "nodejs" do
   profile devel['profiles']['nodejs']
 end
 
+execute "npm-python-config" do
+  command "npm config set python /usr/bin/python2 -g"
+  action :nothing
+  subscribes :run, resources("package[nodejs]"), :immediately
+end
+

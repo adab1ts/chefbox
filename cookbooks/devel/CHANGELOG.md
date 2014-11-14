@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.7.1:
+
+* recipes/default - remove libc6 upgrade from debian sid
+* recipes/ansible - fix ansible dependency
+* recipes/nodejs  - ensure that gyp uses python2
+
 ## 0.7.0:
 
 * definitions/bootstrap - now includes package-specific env variables management
