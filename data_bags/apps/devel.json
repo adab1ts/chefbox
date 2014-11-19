@@ -53,7 +53,7 @@
       }
     },
     "firefox-de": {
-      "description": "",
+      "description": "Firefox Developer Edition",
       "website": "http://www.mozilla.org/en-US/firefox/developer/",
       "platforms": {
         "debian-7.7":     { "source": "bin" },

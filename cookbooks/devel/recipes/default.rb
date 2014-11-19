@@ -72,6 +72,9 @@ if selected
   include_recipe "devel::atom" if selected.include?("atom")
   include_recipe "devel::brackets" if selected.include?("brackets")
 
+  # Browsers
+  include_recipe "devel::firefox-de" if selected.include?("firefox-de")
+
   # Virtualization solutions
   include_recipe "devel::virtualbox" if selected.include?("virtualbox")
 

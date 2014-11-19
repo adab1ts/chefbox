@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.8.1:
+
+* recipes/firefox-de - include launcher and uninstaller
+
 ## 0.8.0:
 
 * recipes/default    - now includes firefox developer edition install management
