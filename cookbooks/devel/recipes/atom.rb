@@ -23,6 +23,7 @@
 #   http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
 #   https://github.com/atom/atom
 #   https://github.com/atom/atom/issues/2020
+#   https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md
 #   https://discuss.atom.io/t/compilation-on-debian-wheezy-stable-glibc-2-13/8978/4
 
 devel = node[:apps][:devel]

@@ -33,12 +33,26 @@ if app_available? vagrant
     profile vagrant
   end
 
+  cookbook_file "/etc/sudoers.d/10_vagrant_nfs" do
+    source "/vagrant/vagrant_nfs"
+    mode 00440
+    backup false
+  end
+
+  cache_path = Chef::Config[:file_cache_path]
+
+  cookbook_file "#{cache_path}/vagrant.pub" do
+    source "/vagrant/vagrant.pub"
+    mode 00644
+    backup false
+  end
+
   box = node[:box]
 
   box[:devel][:users].each do |username|
     usr = box[:users][username]
 
-    bash "#{username}-vagrant-hostmanager" do
+    bash "#{username}-vagrant-setup" do
       user username
       group usr[:group]
       cwd usr[:home]
@@ -47,12 +61,15 @@ if app_available? vagrant
         # Loading user environment ...
         . ${HOME}/.bashrc
 
+        [[ -f ${HOME}/.vagrant.d/insecure_private_key ]] && ssh-add ${HOME}/.vagrant.d/insecure_private_key
+        cat #{cache_path}/vagrant.pub >> ${HOME}/.ssh/authorized_keys
+
         vagrant plugin install vagrant-hostmanager
         EOH
       action :run
     end
 
-    template "/etc/sudoers.d/10_#{username}_vagrant_hostmanager" do
+    template "/etc/sudoers.d/10_vagrant_hostmanager_#{username}" do
       source "/vagrant/vagrant_hostmanager.erb"
       mode 00440
       backup false

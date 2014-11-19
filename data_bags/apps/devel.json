@@ -3,6 +3,7 @@
   "apps": [
     "atom",
     "brackets",
+    "firefox-de",
     "git",
     "juju",
     "nodejs",
@@ -51,24 +52,58 @@
         }
       }
     },
+    "firefox-de": {
+      "description": "",
+      "website": "http://www.mozilla.org/en-US/firefox/developer/",
+      "platforms": {
+        "debian-7.7":     { "source": "bin" },
+        "linuxmint-17.0": { "source": "bin" },
+        "ubuntu-14.04":   { "source": "bin" }
+      },
+      "sources": {
+        "bin": {
+          "ztype": "tbz",
+          "package": "firefox",
+          "maintainer": "Mozilla <http://www.mozilla.org>",
+          "meta": {
+            "i686": {
+              "file_name": "firefox-35.0a2.es-ES.linux-i686.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=6b2bdc15f9460a94dfa8bb3381a889fe&download",
+              "sha256": "1699700d097c5bd51b4cc2ac74272c2a16efd4c4997f83ec22c9a92b3e010b1a",
+              "zfolder": "firefox"
+            },
+            "x86_64": {
+              "file_name": "firefox-35.0a2.es-ES.linux-x86_64.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=58b30d04c38781d7350d8170c310e1b2&download",
+              "sha256": "26413ad1130f3dfb5fb4d93d11e3297a0962afa5d536cf5e3afa075c3a1ae1d5",
+              "zfolder": "firefox"
+            }
+          }
+        }
+      }
+    },
     "git": {
       "description": "fast, scalable, distributed revision control system",
       "website": "http://git-scm.com/",
       "platforms": {
         "debian-7.7":     { "source": "distro-wheezy" },
-        "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-14.04":   { "source": "distro" }
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
       },
       "sources": {
-        "distro": {
-          "package": "git",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
-          "suggested": ["git-man", "giggle"]
-        },
         "distro-wheezy": {
           "package": "git",
           "maintainer": "Gerrit Pape <pape@smarden.org>",
           "suggested": ["git-man", "giggle"]
+        },
+        "ppa": {
+          "package": "git",
+          "maintainer": "Gerrit Pape <pape@smarden.org>",
+          "suggested": ["git-man", "giggle"]
+          "meta": {
+            "repo_name": "git-core-ppa",
+            "uri": "ppa:git-core/ppa"
+          }
         }
       }
     },

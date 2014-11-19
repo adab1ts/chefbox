@@ -22,8 +22,12 @@
 # refs:
 #   https://github.com/genesis/wordpress
 
+# Genesis WordPress
+execute "generator-genesis-wordpress-install" do
+  command "npm install -g generator-genesis-wordpress"
+end
 
-# Requirements
+# NFS support
 %w[
   libgssglue1
   libnfsidmap2
@@ -33,36 +37,6 @@
   rpcbind
 ].each do |pkg|
   package pkg
-end
-
-# Genesis WordPress
-execute "generator-genesis-wordpress-install" do
-  command "npm install -g generator-genesis-wordpress"
-end
-
-box = node[:box]
-devel = box[:devel]
-
-devel[:users].each do |username|
-  usr = box[:users][username]
-
-  bash "#{username}-capistrano-install" do
-    user username
-    group usr[:group]
-    cwd usr[:home]
-    environment 'HOME' => usr[:home]
-    code <<-EOH
-      # Loading user environment ...
-      . ${HOME}/.bashrc
-
-      export PATH="${HOME}/.rbenv/bin:${PATH}"
-      eval "$(rbenv init -)"
-
-      # Installing capistrano ...
-      gem install capistrano --no-document
-      EOH
-    action :run
-  end
 end
 
 # Additional packages

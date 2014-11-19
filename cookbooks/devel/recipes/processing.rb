@@ -51,14 +51,13 @@ if app_available? processing
     )
   end
 
-  # TODO Fix encoding issue
-  # uninstaller "processing" do
-  #   template "/processing/uninstall_processing-#{box[:lang]}.sh.erb"
-  #   variables(
-  #     :app     => "processing",
-  #     :website => processing['website'],
-  #     :bin_folder => bin_folder
-  #   )
-  # end
+  uninstaller "processing" do
+    template "/processing/uninstall_processing-#{box[:lang]}.sh.erb"
+    variables(
+      :app     => "processing",
+      :website => processing['website'],
+      :bin_folder => bin_folder
+    )
+  end
 end
 

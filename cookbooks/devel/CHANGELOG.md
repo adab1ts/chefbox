@@ -2,6 +2,16 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.8.0:
+
+* recipes/default    - now includes firefox developer edition install management
+* recipes/firefox-de - manage firefox developer edition installation
+* recipes/processing - enable uninstaller
+* recipes/vagrant    - fix public key authentication issue with vagrant boxes
+* recipes/wp-devel   - delegate capistrano installation to Bundle
+* files/default/vagrant/vagrant_nfs                 - sudoers.d rules for vagrant nfs management
+* templates/default/vagrant/vagrant_hostmanager.erb - sudoers.d rules for vagrant-hostmanager plugin
+
 ## 0.7.1:
 
 * recipes/default - remove libc6 upgrade from debian sid

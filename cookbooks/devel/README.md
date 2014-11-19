@@ -4,10 +4,11 @@ This cookbook installs a selected set of development tools.
 The following recipes may apply:
 
 - `devel::default`    - purges unselected packages and includes recipes as nedeed.
-- `devel::atom`       - installs __Ansible simple IT automation__ and suggested packages.
+- `devel::ansible`    - installs __Ansible simple IT automation__ and suggested packages.
 - `devel::atom`       - installs __Atom text editor from GitHub__ and suggested packages.
 - `devel::bower`      - installs __Bower package manager for the web__ and suggested packages.
 - `devel::brackets`   - installs __Brackets code editor for the web__ and suggested packages.
+- `devel::firefox-de` - installs __Firefox Developer Edition__ and suggested packages.
 - `devel::git`        - installs __Git distributed version control system__ and suggested packages.
 - `devel::grunt`      - installs __Grunt JavaScript task runner__ and suggested packages.
 - `devel::gulp`       - installs __Gulp streaming build system__ and suggested packages.
