@@ -9,7 +9,8 @@
     "browsers",
     "cloud",
     "groupware",
-    "sysadmin"
+    "sysadmin",
+    "vms"
   ],
   "default_attributes": {
     "box": {
@@ -47,6 +48,9 @@
         "sysadmin": [
           "htop",
           "speedtest"
+        ]
+        "vms": [
+          "virtualbox"
         ]
       }
     }
