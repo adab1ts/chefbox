@@ -76,10 +76,15 @@
           "suggested": ["traceroute"],
           "dependencies": ["curl", "gksu", "mpg123", "scrot", "streamer"],
           "meta": {
-            "*": {
-              "file_name": "prey_0.6.3-ubuntu2_all.deb",
-              "uri": "https://ocserver/public.php?service=files&t=111e804d29fb275a7b2a30f1dc7c31e1&download",
-              "sha256": "d6aa4e379c87619d07eb91348f584655d3037fbd9cdb6ca8de8ab32c71a99a72"
+            "i686": {
+              "file_name": "prey_1.3.3_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=88fcb718984d929fab83bf3cccb194ed&download",
+              "sha256": "d238c2818dcc3f3209b9686460c556136689c27256bd4c7d67b32b59151414a1"
+            },
+            "x86_64": {
+              "file_name": "prey_1.3.3_amd64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=87be99c129f6945310c5b51269085f91&download",
+              "sha256": "6f452c8ba08e310153ce2f510112f4e396962776680982a3f986b901be101217"
             }
           }
         },
