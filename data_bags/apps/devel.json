@@ -99,7 +99,7 @@
         "ppa": {
           "package": "git",
           "maintainer": "Gerrit Pape <pape@smarden.org>",
-          "suggested": ["git-man", "giggle"]
+          "suggested": ["git-man", "giggle"],
           "meta": {
             "repo_name": "git-core-ppa",
             "uri": "ppa:git-core/ppa"
