@@ -67,15 +67,15 @@
           "maintainer": "Mozilla <http://www.mozilla.org>",
           "meta": {
             "i686": {
-              "file_name": "firefox-35.0a2.es-ES.linux-i686.tar.bz2",
-              "uri": "https://ocserver/public.php?service=files&t=6b2bdc15f9460a94dfa8bb3381a889fe&download",
-              "sha256": "1699700d097c5bd51b4cc2ac74272c2a16efd4c4997f83ec22c9a92b3e010b1a",
+              "file_name": "firefox-36.0a2.en-US.linux-i686.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=1f44b02be1e486456c8b89ded7401968&download",
+              "sha256": "da0fa46398fbbfa74236e8dfb761f86e5dd9ebe2caf8c16a3d25bcf117a4305e",
               "zfolder": "firefox"
             },
             "x86_64": {
-              "file_name": "firefox-35.0a2.es-ES.linux-x86_64.tar.bz2",
-              "uri": "https://ocserver/public.php?service=files&t=58b30d04c38781d7350d8170c310e1b2&download",
-              "sha256": "26413ad1130f3dfb5fb4d93d11e3297a0962afa5d536cf5e3afa075c3a1ae1d5",
+              "file_name": "firefox-36.0a2.en-US.linux-x86_64.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=cd0075f23ddf217427fdc0300137b541&download",
+              "sha256": "d2f95fcb49f4c29ca3c819336ad983034d8dd09bb1d8aa91eb2d3ac413d3550a",
               "zfolder": "firefox"
             }
           }
