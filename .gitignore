@@ -1,6 +1,6 @@
 *.sw[a-z]
-.vagrant
 .environment
+.bundle/
 .chef*/
 !.chef-skel/
 bootstrap/keys/
