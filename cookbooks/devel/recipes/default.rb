@@ -46,7 +46,7 @@ if selected
 
   bootstrap "devel" do
     folders [devel_folder, bin_folder]
-    env :priority => "00", :vars => { :bin_folder => bin_folder }
+    env :priority => "00", :vars => { :devel_folder => devel_folder, :bin_folder => bin_folder }
   end
 
   # Utils
@@ -85,4 +85,3 @@ if selected
   # Cloud solutions
   include_recipe "devel::juju" if selected.include?("juju")
 end
-

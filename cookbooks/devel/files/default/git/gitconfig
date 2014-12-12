@@ -6,9 +6,12 @@
 	email = foo@example.com
 
 [alias]
-	co = checkout
-	ci = commit
 	br = branch
+	ci = commit
+	co = checkout
+	di = diff
+	lo = log
+	me = merge
 	st = status
 
 [core]
@@ -22,3 +25,6 @@
 
 [format]
 	pretty = format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+
+[push]
+	default = simple

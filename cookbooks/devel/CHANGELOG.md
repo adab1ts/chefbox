@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.8.2:
+
+* recipes/default                        - update development shared env variables
+* templates/default/devel/devel.zenv.erb - include CDPATH env variable
+* files/default/git/gitconfig            - update git aliases
+
 ## 0.8.1:
 
 * recipes/firefox-de - include launcher and uninstaller
@@ -133,4 +139,3 @@ This file is used to list changes made in each version of devel.
 ## 0.1.0:
 
 * Initial release of devel
-
