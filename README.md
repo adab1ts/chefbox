@@ -20,27 +20,7 @@ This repository contains several directories, and each directory contains a READ
 
 ## Rake Tasks
 
-The repository contains a `Rakefile` that includes tasks that are installed with the Chef libraries. To view the tasks available with in the repository with a brief description, run `rake -T`.
-
-The default task (`default`) is run when executing `rake` with no arguments. It will call the task `test_cookbooks`.
-
-The following tasks are not directly replaced by knife sub-commands.
-
-* `bundle_cookbook[cookbook]` - Creates cookbook tarballs in the `pkgs/` dir.
-* `install`                   - Calls `update`, `roles` and `upload_cookbooks` Rake tasks.
-* `ssl_cert`                  - Create self-signed SSL certificates in `certificates/` dir.
-* `update`                    - Update the repository from source control server, understands git and svn.
-
-The following tasks duplicate functionality from knife and may be removed in a future version of Chef.
-
-* `metadata`                  - replaced by `knife cookbook metadata -a`.
-* `new_cookbook`              - replaced by `knife cookbook create`.
-* `role[role_name]`           - replaced by `knife role from file`.
-* `roles`                     - iterates over the roles and uploads with `knife role from file`.
-* `test_cookbooks`            - replaced by `knife cookbook test -a`.
-* `test_cookbook[cookbook]`   - replaced by `knife cookbook test COOKBOOK`.
-* `upload_cookbooks`          - replaced by `knife cookbook upload -a`.
-* `upload_cookbook[cookbook]` - replaced by `knife cookbook upload COOKBOOK`.
+The repository contains a `Rakefile`. To view the tasks available with in the repository with a brief description, run `rake -T`.
 
 The following tasks ease converging new nodes
 
