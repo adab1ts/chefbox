@@ -10,6 +10,7 @@
     "ogmrip",
     "openshot",
     "recmydesk",
+    "selene",
     "ssr",
     "vlc"
   ],
@@ -161,6 +162,25 @@
           "package": "gtk-recordmydesktop",
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["python-appindicator"]
+        }
+      }
+    },
+    "selene": {
+      "description": "Audio-video converter for Linux",
+      "website": "http://www.teejeetech.in/p/selene-media-encoder.html",
+      "platforms": {
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "selene",
+          "maintainer": "Tony George <tony.george.kol@gmail.com>",
+          "suggested": ["frei0r-plugins"],
+          "meta": {
+            "repo_name": "teejee2008-ppa",
+            "uri": "ppa:teejee2008/ppa"
+          }
         }
       }
     },
