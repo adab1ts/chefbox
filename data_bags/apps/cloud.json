@@ -1,10 +1,29 @@
 {
   "id": "cloud",
   "apps": [
+    "drive",
     "dropbox",
     "owncloud"
   ],
   "profiles": {
+    "drive": {
+      "description": "Ubuntu Google Drive Client with Grive and Grive Tools",
+      "website": "https://www.thefanclub.co.za/how-to/ubuntu-google-drive-client-grive-and-grive-tools",
+      "platforms": {
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "grive-tools",
+          "maintainer": "The Fan Club <info@thefanclub.co.za>",
+          "meta": {
+            "repo_name": "thefanclub-grive-tools",
+            "uri": "ppa:thefanclub/grive-tools"
+          }
+        }
+      }
+    },
     "dropbox": {
       "description": "Dropbox client",
       "website": "http://www.dropbox.com/",

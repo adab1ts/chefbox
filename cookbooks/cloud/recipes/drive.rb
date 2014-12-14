@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: cloud
-# Recipe:: default
+# Recipe:: drive
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -19,26 +19,9 @@
 #
 
 
-## Deploy
+cloud = node[:apps][:cloud]
 
-selected = node[:box][:apps][:cloud]
-
-if selected
-  cloud = data_bag_item('apps', 'cloud')
-  apps  = cloud['apps']
-
-  # Uninstall apps not needed
-  unselected = apps - selected
-
-  uninstall_apps "cloud" do
-    apps unselected
-    profiles cloud['profiles']
-  end
-
-  # Install selected apps
-  node.default[:apps] = { :cloud => cloud }
-
-  include_recipe "cloud::drive" if selected.include?("drive")
-  include_recipe "cloud::dropbox" if selected.include?("dropbox")
-  include_recipe "cloud::owncloud" if selected.include?("owncloud")
+# drive client
+install_app "drive" do
+  profile cloud['profiles']['drive']
 end

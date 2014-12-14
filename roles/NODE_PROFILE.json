@@ -105,6 +105,7 @@
           "opera"
         ],
         "cloud": [
+          "drive",
           "dropbox",
           "owncloud"
         ],

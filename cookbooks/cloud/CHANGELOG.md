@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.6.0:
+
+* recipes/default  - now includes google drive client install management
+* recipes/owncloud - manage google drive client installation
+
 ## 0.5.4:
 
 * README.md - ubuntu 12.04 no longer supported
@@ -56,4 +61,3 @@ This file is used to list changes made in each version of cloud.
 ## 0.1.0:
 
 * Initial release of cloud
-
