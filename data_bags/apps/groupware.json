@@ -111,26 +111,10 @@
       "website": "http://www.skype.com/en/",
       "platforms": {
         "debian-7.7":     { "source": "deb-wheezy" },
-        "linuxmint-17.0": { "source": "deb" },
-        "ubuntu-14.04":   { "source": "deb" }
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
       },
       "sources": {
-        "deb": {
-          "package": "skype",
-          "maintainer": "Skype Technologies <info@skype.net>",
-          "dependencies": [
-            "libqt4-dbus:i386", "libqtwebkit4:i386", "libxss1:i386",
-            "libxv1:i386", "libssl1.0.0:i386", "libasound2-plugins:i386"
-          ],
-          "suggested": ["sni-qt:i386"],
-          "meta": {
-            "*": {
-              "file_name": "skype-ubuntu-precise_4.3.0.37-1_i386.deb",
-              "uri": "https://ocserver/public.php?service=files&t=b4fc79115e8bf835d9818c3839300354&download",
-              "sha256": "d19769135c014f7bdcb0c71410fd27698081c1aa4c6bbe53ccdd38576f17febc"
-            }
-          }
-        },
         "deb-wheezy": {
           "package": "skype",
           "maintainer": "Skype Technologies <info@skype.net>",
@@ -145,6 +129,10 @@
               "sha256": "a820e641d1ee3fece3fdf206f384eb65e764d7b1ceff3bc5dee818beb319993c"
             }
           }
+        },
+        "distro": {
+          "package": "skype",
+          "maintainer": "Steve Langasek <steve.langasek@canonical.com>"
         }
       }
     }
