@@ -8,7 +8,6 @@
     "role[basic-box]",
     "browsers",
     "email",
-    "eyecandy",
     "graphics",
     "office",
     "utils",
@@ -22,9 +21,6 @@
         ],
         "email": [
           "geary"
-        ],
-        "eyecandy": [
-          "greeter-background"
         ],
         "graphics": [
           "pinta",
