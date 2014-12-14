@@ -6,6 +6,7 @@
   "env_run_lists": {},
   "run_list": [
     "browsers",
+    "cloud",
     "groupware",
     "office",
     "utils"
@@ -16,13 +17,16 @@
         "browsers": [
           "chrome"
         ],
+        "cloud": [
+          "drive",
+          "dropbox"
+        ],
         "groupware": [
           "hangouts",
           "skype"
         ],
         "office": [
           "libreoffice",
-          "masterpdf",
           "pdfshuffler",
           "springseed",
           "taskcoach"
