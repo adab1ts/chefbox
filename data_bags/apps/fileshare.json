@@ -2,6 +2,7 @@
   "id": "fileshare",
   "apps": [
     "btsync",
+    "filezilla",
     "frostwire",
     "jdownloader",
     "transmission",
@@ -23,6 +24,20 @@
             "repo_name": "tuxpoldo-btsync",
             "uri": "ppa:tuxpoldo/btsync"
           }
+        }
+      }
+    },
+    "filezilla": {
+      "description": "Full-featured graphical FTP/FTPS/SFTP client",
+      "website": "http://filezilla-project.org/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "distro" },
+        "ubuntu-14.04":   { "source": "distro" }
+      },
+      "sources": {
+        "distro": {
+          "package": "filezilla",
+          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
         }
       }
     },

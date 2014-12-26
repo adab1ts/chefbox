@@ -5,6 +5,7 @@ The following recipes may apply:
 
 - `fileshare::default`      - purges unselected packages and includes recipes as nedeed.
 - `fileshare::btsync`       - installs __BitTorrent Sync client__ and suggested packages.
+- `fileshare::filezilla`    - installs __FileZilla graphical FTP/FTPS/SFTP client__ and suggested packages.
 - `fileshare::frostwire`    - installs __FrostWire P2P client__ and suggested packages.
 - `fileshare::jdownloader`  - installs __JDownloader__ and suggested packages.
 - `fileshare::transmission` - installs __Bittorrent Transmission__ and suggested packages.
@@ -61,4 +62,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-

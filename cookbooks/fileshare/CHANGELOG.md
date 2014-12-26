@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version of fileshare.
 
+## 0.6.0:
+
+* recipes/default  - now includes filezilla install management
+* recipesfilezilla - manages filezilla app installation
+
 ## 0.5.2:
 
 * README.md - ubuntu 12.04 no longer supported
@@ -43,4 +48,3 @@ This file is used to list changes made in each version of fileshare.
 ## 0.1.0:
 
 * Initial release of fileshare
-
