@@ -27,10 +27,8 @@ install_app "hangouts" do
 end
 
 hangouts_source = "#{node[:apt][:sources_path]}/google-talkplugin.list"
-hangouts_source_final = "#{node[:apt][:sources_path]}/google-talkplugin-#{platform_codename}.list"
 
-execute "rename-hangouts_source" do
-  command "mv #{hangouts_source} #{hangouts_source_final}"
+file hangouts_source do
+  action :delete
   only_if { ::File.exists? hangouts_source }
 end
-

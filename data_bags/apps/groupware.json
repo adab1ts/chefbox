@@ -32,25 +32,20 @@
       "description": "Google Talk Plugin",
       "website": "http://www.google.com/+/learnmore/hangouts/",
       "platforms": {
-        "debian-7.7":     { "source": "deb" },
-        "linuxmint-17.0": { "source": "deb" },
-        "ubuntu-14.04":   { "source": "deb" }
+        "debian-7.7":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
       },
       "sources": {
-        "deb": {
+        "repo": {
           "package": "google-talkplugin",
           "maintainer": "Voice and Video Chat Linux Team <voice-and-video-linux-packager@google.com>",
           "meta": {
-            "i686": {
-              "file_name": "google-talkplugin_current_i386.deb",
-              "uri": "https://ocserver/public.php?service=files&t=bb3ba86c93e98bed27cf29ea1615fada&download",
-              "sha256": "5ea418a29a426c9df92c6876cac8b52fd9cbde9bf56541ed9079af48b16ad7d0"
-            },
-            "x86_64": {
-              "file_name": "google-talkplugin_current_amd64.deb",
-              "uri": "https://ocserver/public.php?service=files&t=1220fbd8691de2084dbb3e0797da59a5&download",
-              "sha256": "b4f35588663cb11edcf9b7d273668693244d774977f08df39277b0d1507f7fb1"
-            }
+            "repo_name": "google-talkplugin",
+            "uri": "http://dl.google.com/linux/talkplugin/deb/",
+            "distribution": "",
+            "components": ["stable", "main"],
+            "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
           }
         }
       }

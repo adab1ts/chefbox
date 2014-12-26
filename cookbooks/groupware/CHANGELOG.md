@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of groupware.
 
+## 0.8.1:
+
+* recipes/hangouts - install hangouts plugin from repo and remove original source file
+
 ## 0.8.0:
 
 * README.md       - ubuntu 12.04 no longer supported
@@ -66,4 +70,3 @@ This file is used to list changes made in each version of groupware.
 ## 0.1.0:
 
 * Initial release of groupware
-
