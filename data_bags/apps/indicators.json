@@ -3,8 +3,8 @@
   "apps": [
     "plug&play",
     "screensaver",
-    "touchpad",
-    "weather"
+    "sound",
+    "touchpad"
   ],
   "profiles": {
     "plug&play": {
@@ -44,6 +44,23 @@
         }
       }
     },
+    "sound": {
+      "description": "Sound input/output selector indicator",
+      "website": "http://yktoo.com/en/software/indicatorSoundSwitcher",
+      "platforms": {
+        "ubuntu-14.04": { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "indicator-sound-switcher",
+          "maintainer": "Dmitry Kann <yktooo@gmail.com>",
+          "meta": {
+            "repo_name": "yktooo-ppa",
+            "uri": "ppa:yktooo/ppa"
+          }
+        }
+      }
+    },
     "touchpad": {
       "description": "An indicator for the touchpad",
       "website": "http://launchpad.net/~atareao/+archive/atareao",
@@ -53,23 +70,6 @@
       "sources": {
         "ppa": {
           "package": "touchpad-indicator",
-          "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
-          "meta": {
-            "repo_name": "atareao-atareao",
-            "uri": "ppa:atareao/atareao"
-          }
-        }
-      }
-    },
-    "weather": {
-      "description": "An indicator for weather",
-      "website": "http://launchpad.net/~atareao/+archive/atareao",
-      "platforms": {
-        "ubuntu-14.04": { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "my-weather-indicator",
           "maintainer": "Lorenzo Carbonell Cerezo <lorenzo.carbonell.cerezo@gmail.com>",
           "meta": {
             "repo_name": "atareao-atareao",

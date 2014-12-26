@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: indicators
-# Recipe:: weather
+# Recipe:: sound
 #
 # Copyright 2013,2014 Carles Muiños
 #
@@ -21,25 +21,7 @@
 
 indicators = node[:apps][:indicators]
 
-# An indicator for weather
-weather = indicators['profiles']['weather']
-
-if app_available? weather
-  install_app "weather" do
-    force true
-    profile weather
-  end
-
-  weather_package = app_package_name weather
-
-  autostart_app "weather" do
-    profile weather
-    desktop_file "#{weather_package}-autostart.desktop"
-  end
-
-  support "weather" do
-    section "indicators"
-    only_for ["ubuntu"]
-  end
+# Sound input/output selector indicator
+install_app "sound" do
+  profile indicators['profiles']['sound']
 end
-

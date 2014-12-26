@@ -6,8 +6,8 @@ The following recipes may apply:
 - `indicators::default`     - purges unselected packages and includes recipes as nedeed.
 - `indicators::plugandplay` - installs __udev-notify__ and suggested packages.
 - `indicators::screensaver` - installs __caffeine__ and suggested packages.
+- `indicators::sound`       - installs __indicator-sound-switcher__ and suggested packages.
 - `indicators::touchpad`    - installs __touchpad-indicator__ and suggested packages.
-- `indicators::weather`     - installs __my-weather-indicator__ and suggested packages.
 
 
 ## Requirements
@@ -58,4 +58,3 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-

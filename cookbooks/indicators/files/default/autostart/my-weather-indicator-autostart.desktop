@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=my-weather-indicator-autostart
-Comment=My-Weather-Indicator official shortcut
-Exec=/opt/extras.ubuntu.com/my-weather-indicator/bin/my-weather-indicator
-Type=Application
-Hidden=false
-NoDisplay=false
-X-GNOME-Autostart-enabled=true

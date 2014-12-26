@@ -178,8 +178,8 @@
         "indicators": [
           "plug&play",
           "screensaver",
-          "touchpad",
-          "weather"
+          "sound",
+          "touchpad"
         ],
         "office": [
           "fontmanager",

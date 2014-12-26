@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.6.0:
+
+* recipe/default
+
+  - now includes sound switcher indicator install management
+  - do not install weather indicator anymore
+
+* recipes/sound  - manages sound switcher indicator installation
+* recipe/weather - removed
+* files/default/autostart/my-weather-indicator-autostart.desktop - removed
+
 ## 0.5.3:
 
 * README.md - ubuntu 12.04 no longer supported
@@ -67,4 +78,3 @@ This file is used to list changes made in each version of indicators.
 ## 0.1.0:
 
 * Initial release of indicators
-

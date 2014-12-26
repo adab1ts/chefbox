@@ -40,7 +40,6 @@ if selected
 
   include_recipe "indicators::plugandplay" if selected.include?("plug&play")
   include_recipe "indicators::screensaver" if selected.include?("screensaver")
+  include_recipe "indicators::sound" if selected.include?("sound")
   include_recipe "indicators::touchpad" if selected.include?("touchpad")
-  include_recipe "indicators::weather" if selected.include?("weather")
 end
-

@@ -5,7 +5,7 @@ This file is used to list changes made in each version of fileshare.
 ## 0.6.0:
 
 * recipes/default  - now includes filezilla install management
-* recipesfilezilla - manages filezilla app installation
+* recipes/filezilla - manages filezilla app installation
 
 ## 0.5.2:
 

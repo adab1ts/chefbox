@@ -15,8 +15,8 @@
           "unity-tweak"
         ],
         "indicators": [
-          "plug&play",
-          "screensaver"
+          "screensaver",
+          "sound"
         ]
       }
     }
