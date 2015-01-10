@@ -62,14 +62,14 @@
           "dependencies": ["ttf-ancient-fonts"],
           "meta": {
             "i686": {
-              "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_i386.deb",
-              "uri": "https://ocserver/public.php?service=files&t=438dc70bd27e8417895fcca1b2e5ff6d&download",
-              "sha256": "72b7d1306afeb545e01b89de4149bb887b9b878eabe636d5150e6c4af18d4d1d"
+              "file_name": "intel-linux-graphics-installer_1.0.7-0intel1_i386.deb",
+              "uri": "https://ocserver/public.php?service=files&t=084c583352d0fab66b68cfdd502c10c9&download",
+              "sha256": "02634e7294071e0989786c5cafb4cdf0cfd40f82a5694bdbae87f2891af1fff6"
             },
             "x86_64": {
-              "file_name": "intel-linux-graphics-installer_1.0.5-0intel1_amd64.deb",
-              "uri": "https://ocserver/public.php?service=files&t=217403000f502b9bb7c917ffd422c594&download",
-              "sha256": "8800620b526b30cd18696b9f0b535f755a60f100595b3c24614f67dc70baface"
+              "file_name": "intel-linux-graphics-installer_1.0.7-0intel1_amd64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=4821221cf39fe810db73d71dde2142b3&download",
+              "sha256": "291d8c9e444a38b9473f08e03a08961545f85ab3c830dbfb810e2bd1a0570ca7"
             }
           }
         }

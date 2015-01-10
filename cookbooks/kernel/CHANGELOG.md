@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.6:
+
+* recipes/intel_graphics - fix intel linux server certificate verification issue
+
 ## 0.4.5:
 
 * README.md - ubuntu 12.04 no longer supported
@@ -87,4 +91,3 @@ This file is used to list changes made in each version of kernel.
 ## 0.1.0:
 
 * Initial release of kernel
-
