@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Definitions:: functions
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,15 +18,14 @@
 # limitations under the License.
 #
 
-
-define :functions, :shell => "zsh" do
+define :functions, shell: 'zsh' do
   user = params[:user]
   grp  = params[:group]
   functions_d = "#{params[:dotfiles_dir]}/#{params[:shell]}/functions.d"
   functions = case params[:shell]
-            when "zsh"  then "#{params[:name]}.zfn"
-            when "bash" then "#{params[:name]}.bfn"
-            end
+              when 'zsh'  then "#{params[:name]}.zfn"
+              when 'bash' then "#{params[:name]}.bfn"
+              end
 
   cookbook_file "#{functions_d}/#{functions}" do
     source "/#{params[:name]}/#{functions}"
@@ -37,4 +36,3 @@ define :functions, :shell => "zsh" do
     cookbook params[:cookbook]
   end
 end
-

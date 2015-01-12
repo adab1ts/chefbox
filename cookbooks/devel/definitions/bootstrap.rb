@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Definitions:: bootstrap
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,8 +18,7 @@
 # limitations under the License.
 #
 
-
-define :bootstrap, :shell => "zsh", :folders => [], :files => [], :templates => [], :links => [] do
+define :bootstrap, shell: 'zsh', folders: [], files: [], templates: [], links: [] do
   required = params[:requires] || "package[#{params[:name]}]"
 
   box = node[:box]
@@ -61,7 +60,7 @@ define :bootstrap, :shell => "zsh", :folders => [], :files => [], :templates => 
 
     params[:templates].each do |h|
       file = "#{usr[:home]}/#{h[:file]}"
-      vars = h[:vars].merge(:devel_dir => "#{usr[:home]}/#{devel[:folder]}")
+      vars = h[:vars].merge(devel_dir: "#{usr[:home]}/#{devel[:folder]}")
 
       devfile params[:name] do
         template file
@@ -84,7 +83,7 @@ define :bootstrap, :shell => "zsh", :folders => [], :files => [], :templates => 
 
       env params[:name] do
         dotfiles_dir "#{usr[:home]}/#{box[:dotfiles][:folder]}"
-        shell "zsh"
+        shell 'zsh'
         priority opts[:priority]
         vars opts[:vars]
         user username
@@ -95,7 +94,7 @@ define :bootstrap, :shell => "zsh", :folders => [], :files => [], :templates => 
     if params[:aliases]
       aliases params[:name] do
         dotfiles_dir "#{usr[:home]}/#{box[:dotfiles][:folder]}"
-        shell "zsh"
+        shell 'zsh'
         user username
         group usr[:group]
       end
@@ -104,11 +103,10 @@ define :bootstrap, :shell => "zsh", :folders => [], :files => [], :templates => 
     if params[:functions]
       functions params[:name] do
         dotfiles_dir "#{usr[:home]}/#{box[:dotfiles][:folder]}"
-        shell "zsh"
+        shell 'zsh'
         user username
         group usr[:group]
       end
     end
   end
 end
-

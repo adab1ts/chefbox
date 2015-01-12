@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: nodejs
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,20 +18,18 @@
 # limitations under the License.
 #
 
-
 # refs:
 #   https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
 
 devel = node[:apps][:devel]
 
 # Node.js event-based server-side javascript engine
-install_app "nodejs" do
+install_app 'nodejs' do
   profile devel['profiles']['nodejs']
 end
 
-execute "npm-python-config" do
-  command "npm config set python /usr/bin/python2 -g"
+execute 'npm-python-config' do
+  command 'npm config set python /usr/bin/python2 -g'
   action :nothing
-  subscribes :run, resources("package[nodejs]"), :immediately
+  subscribes :run, resources('package[nodejs]'), :immediately
 end
-

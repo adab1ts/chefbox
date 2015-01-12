@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: firefox-de
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 # refs:
 #   https://www.mozilla.org/en-US/firefox/developer/
 
@@ -28,7 +27,7 @@ devel = node[:apps][:devel]
 firefox = devel['profiles']['firefox-de']
 
 if app_available? firefox
-  install_app "firefox" do
+  install_app 'firefox' do
     force true
     profile firefox
   end
@@ -38,24 +37,23 @@ if app_available? firefox
   bin_folder = box[:devel][:bin_folder]
   firefox_folder = "#{box[:folders][:apps]}/firefox"
 
-  bootstrap "firefox" do
-    links [{ :from => "#{bin_folder}/firefox", :to => "#{firefox_folder}/firefox" }]
+  bootstrap 'firefox' do
+    links [{ from: "#{bin_folder}/firefox", to: "#{firefox_folder}/firefox" }]
   end
 
-  launcher "firefox" do
-    template "/firefox/firefox.desktop.erb"
+  launcher 'firefox' do
+    template '/firefox/firefox.desktop.erb'
     variables(
-      :exec => "firefox %u"
+      exec: 'firefox %u'
     )
   end
 
-  uninstaller "firefox" do
+  uninstaller 'firefox' do
     template "/firefox/uninstall_firefox-#{box[:lang]}.sh.erb"
     variables(
-      :app     => "firefox",
-      :website => firefox['website'],
-      :bin_folder => bin_folder
+      app: 'firefox',
+      website: firefox['website'],
+      bin_folder: bin_folder
     )
   end
 end
-

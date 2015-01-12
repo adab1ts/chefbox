@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: wp-devel
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,29 +18,28 @@
 # limitations under the License.
 #
 
-
 # refs:
 #   https://github.com/genesis/wordpress
 
 # Genesis WordPress
-execute "generator-genesis-wordpress-install" do
-  command "npm install -g generator-genesis-wordpress"
+execute 'generator-genesis-wordpress-install' do
+  command 'npm install -g generator-genesis-wordpress'
 end
 
 # NFS support
-%w[
+%w(
   libgssglue1
   libnfsidmap2
   libtirpc1
   nfs-common
   nfs-kernel-server
   rpcbind
-].each do |pkg|
+).each do |pkg|
   package pkg
 end
 
 # Additional packages
-bash "grunt-packages" do
+bash 'grunt-packages' do
   code <<-EOH
     npm install -g grunt-wordpress-deploy
     npm install -g grunt-sftp-deploy
@@ -49,7 +48,7 @@ bash "grunt-packages" do
   action :run
 end
 
-bash "gulp-packages" do
+bash 'gulp-packages' do
   code <<-EOH
     npm install -g gulp-sftp
     npm install -g gulp-ftp
@@ -57,3 +56,6 @@ bash "gulp-packages" do
   action :run
 end
 
+bootstrap 'wp-devel' do
+  aliases true
+end

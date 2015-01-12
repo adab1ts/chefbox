@@ -2,6 +2,17 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.9.0:
+
+* definitions/*       - update copyright note
+* recipes/*           - update copyright note
+
+* recipes/default     - now includes chef development kit and google web designer install management
+* recipes/atom        - manage atom packages installation
+* recipes/chefdk      - manage chef development kit installation
+* recipes/webdesigner - manage google web designer installation
+* recipes/wp-devel    - include aliases for wp instances management
+
 ## 0.8.2:
 
 * recipes/default                        - update development shared env variables

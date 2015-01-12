@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: grunt
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,18 +18,17 @@
 # limitations under the License.
 #
 
-
 # The JavaScript task runner
-execute "grunt-installation" do
-  command "npm install -g grunt-cli"
-  not_if { ::File.exists? "/usr/bin/grunt" }
+execute 'grunt-installation' do
+  command 'npm install -g grunt-cli'
+  not_if { ::File.exist? '/usr/bin/grunt' }
 end
 
 # Additional packages
-execute "grunt-init-installation" do
-  command "npm install -g grunt-init"
+execute 'grunt-init-installation' do
+  command 'npm install -g grunt-init'
   action :nothing
-  subscribes :run, resources("execute[grunt-installation]"), :immediately
+  subscribes :run, resources('execute[grunt-installation]'), :immediately
 end
 
 box = node[:box]
@@ -48,12 +47,11 @@ box[:devel][:users].each do |username|
 
   # Installing grunt-init-gruntfile to create a basic Gruntfile ...
   git "#{username}-grunt-init-gruntfile" do
-    repository "https://github.com/gruntjs/grunt-init-gruntfile.git"
-    revision "master"
+    repository 'https://github.com/gruntjs/grunt-init-gruntfile.git'
+    revision 'master'
     destination "#{templates_dir}/gruntfile"
     user username
     group usr[:group]
     action :sync
   end
 end
-

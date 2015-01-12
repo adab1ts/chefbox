@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Definitions:: aliases
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,13 @@
 # limitations under the License.
 #
 
-
-define :aliases, :shell => "zsh" do
+define :aliases, shell: 'zsh' do
   user = params[:user]
   grp  = params[:group]
   aliases_d = "#{params[:dotfiles_dir]}/#{params[:shell]}/aliases.d"
   aliases = case params[:shell]
-            when "zsh"  then "#{params[:name]}.zal"
-            when "bash" then "#{params[:name]}.bal"
+            when 'zsh'  then "#{params[:name]}.zal"
+            when 'bash' then "#{params[:name]}.bal"
             end
 
   cookbook_file "#{aliases_d}/#{aliases}" do
@@ -37,4 +36,3 @@ define :aliases, :shell => "zsh" do
     cookbook params[:cookbook]
   end
 end
-

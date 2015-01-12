@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: processing
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 # refs:
 #   https://github.com/processing/processing/wiki/Supported-Platforms
 
@@ -28,7 +27,7 @@ devel = node[:apps][:devel]
 processing = devel['profiles']['processing']
 
 if app_available? processing
-  install_app "processing" do
+  install_app 'processing' do
     force true
     profile processing
   end
@@ -39,25 +38,24 @@ if app_available? processing
   projects_folder = box[:devel][:folder]
   processing_folder = "#{box[:folders][:apps]}/processing"
 
-  bootstrap "processing" do
+  bootstrap 'processing' do
     folders ["#{projects_folder}/processing"]
-    links [{ :from => "#{bin_folder}/processing", :to => "#{processing_folder}/processing" }]
+    links [{ from: "#{bin_folder}/processing", to: "#{processing_folder}/processing" }]
   end
 
-  launcher "processing" do
-    template "/processing/processing.desktop.erb"
+  launcher 'processing' do
+    template '/processing/processing.desktop.erb'
     variables(
-      :exec => "sh -c '~/#{processing_folder}/processing'"
+      exec: "sh -c '~/#{processing_folder}/processing'"
     )
   end
 
-  uninstaller "processing" do
+  uninstaller 'processing' do
     template "/processing/uninstall_processing-#{box[:lang]}.sh.erb"
     variables(
-      :app     => "processing",
-      :website => processing['website'],
-      :bin_folder => bin_folder
+      app: 'processing',
+      website: processing['website'],
+      bin_folder: bin_folder
     )
   end
 end
-

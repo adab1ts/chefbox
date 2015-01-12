@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Definitions:: dotfile
+# Recipe:: webdesigner
 #
 # Copyright 2013-2015 Carles Muiños
 #
@@ -18,31 +18,16 @@
 # limitations under the License.
 #
 
-define :devfile, variables: {} do
-  user = params[:user]
-  grp  = params[:group]
+devel = node[:apps][:devel]
 
-  if params[:template]
-    filename = ::File.basename params[:template]
+# Google Web Designer
+install_app 'webdesigner' do
+  profile devel['profiles']['webdesigner']
+end
 
-    template params[:template] do
-      source "/#{params[:name]}/#{filename}.erb"
-      owner user
-      group grp
-      mode 00664
-      backup false
-      variables params[:variables]
-    end
-  else
-    filename = ::File.basename params[:file]
+webdesigner_source = "#{node[:apt][:sources_path]}/google-webdesigner.list"
 
-    cookbook_file params[:file] do
-      source "/#{params[:name]}/#{filename}"
-      owner user
-      group grp
-      mode 00664
-      backup false
-      cookbook params[:cookbook]
-    end
-  end
+file webdesigner_source do
+  action :delete
+  only_if { ::File.exist? webdesigner_source }
 end

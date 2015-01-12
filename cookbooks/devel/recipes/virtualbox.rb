@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: virtualbox
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,12 +18,10 @@
 # limitations under the License.
 #
 
-
 ## Requirements
 
 # Dynamic Kernel Module Support Framework
-package "dkms"
-
+package 'dkms'
 
 ## Installation
 devel = node[:apps][:devel]
@@ -34,18 +32,17 @@ devel = node[:apps][:devel]
 vbox = devel['profiles']['virtualbox']
 
 if app_available? vbox
-  install_app "virtualbox" do
+  install_app 'virtualbox' do
     force true
     profile vbox
   end
 
   node[:box][:devel][:users].each do |username|
-    group "vboxusers" do
+    group 'vboxusers' do
       members username
       append true
       action :nothing
-      subscribes :modify, resources("package[virtualbox]"), :immediately
+      subscribes :modify, resources('package[virtualbox]'), :immediately
     end
   end
 end
-

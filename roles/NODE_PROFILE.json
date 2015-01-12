@@ -114,6 +114,7 @@
           "atom",
           "bower",
           "brackets",
+          "chefdk",
           "firefox-de"
           "git",
           "grunt",
@@ -125,6 +126,7 @@
           "shelr",
           "vagrant",
           "virtualbox",
+          "webdesigner",
           "wp-devel",
           "wsk",
           "yeoman",

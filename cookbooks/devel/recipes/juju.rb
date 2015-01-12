@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: juju
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,13 @@
 # limitations under the License.
 #
 
-
 devel = node[:apps][:devel]
 
 # next generation service orchestration system
 juju = devel['profiles']['juju']
 
 if app_available? juju
-  install_app "juju" do
+  install_app 'juju' do
     force true
     profile devel['profiles']['juju']
   end
@@ -39,19 +38,18 @@ if app_available? juju
     EOH
 
   dev_folders = [
-    ".juju",
+    '.juju',
     "#{devel_folder}/juju"
   ]
 
   dev_templates = [
-    { :file => '.juju/environments.yaml', :vars => { :data_dir => 'juju' } }
+    { file: '.juju/environments.yaml', vars: { data_dir: 'juju' } }
   ]
 
-  bootstrap "juju" do
+  bootstrap 'juju' do
     before script
     folders dev_folders
     templates dev_templates
     aliases true
   end
 end
-

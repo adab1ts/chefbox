@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: devel
-# Recipe:: atom
+# Recipe:: chefdk
 #
 # Copyright 2013-2015 Carles Muiños
 #
@@ -19,21 +19,25 @@
 #
 
 # refs:
-#   http://www.webupd8.org/2014/05/install-atom-text-editor-in-ubuntu-via-ppa.html
-#   https://github.com/atom/atom
-#   https://github.com/atom/atom/issues/2020
-#   https://github.com/atom/atom/blob/master/docs/build-instructions/linux.md
-#   https://discuss.atom.io/t/compilation-on-debian-wheezy-stable-glibc-2-13/8978/4
+#   https://www.chef.io/blog/2014/04/15/chef-development-kit/
+#   https://downloads.chef.io/chef-dk/
+#   https://docs.chef.io/devkit/
+#   https://docs.chef.io/devkit/chef_overview.html
+#   https://docs.chef.io/devkit/install_dk.html
+#   https://docs.chef.io/devkit/getting_started.html
+#
+#   https://github.com/opscode/chef-dk#using-chefdk-as-your-primary-development-environment
+#   https://dwradcliffe.com/2014/09/19/chefdk-with-rbenv.html
 
 devel = node[:apps][:devel]
 
-# Atom text editor from GitHub
-atom = devel['profiles']['atom']
+# Chef Development Kit
+chefdk = devel['profiles']['chefdk']
 
-if app_available? atom
-  install_app 'atom' do
+if app_available? chefdk
+  install_app 'chefdk' do
     force true
-    profile atom
+    profile chefdk
   end
 
   box = node[:box]
@@ -41,7 +45,7 @@ if app_available? atom
   box[:devel][:users].each do |username|
     usr = box[:users][username]
 
-    bash "#{username}-atom_packages_install" do
+    bash "#{username}-chefdk_setup" do
       user username
       group usr[:group]
       cwd usr[:home]
@@ -50,21 +54,14 @@ if app_available? atom
         # Loading user environment ...
         . ${HOME}/.bashrc
 
-        # Installing atom packages ...
-        # Themes
-        apm install seti-ui
-        apm install seti-syntax
-
-        # Common
-        apm install autocomplete-plus
-        apm install autocomplete-snippets
-        apm install autocomplete-paths
-
-        apm install color-picker
-        apm install firepad
-        apm install minimap
+        if [[ -d "${HOME}/.rbenv/versions" ]]; then
+          ln -s /opt/chefdk/embedded ${HOME}/.rbenv/versions/chefdk
+        else
+          echo 'eval "$(chef shell-init zsh)"' >> "${HOME}/#{box[:dotfiles][:folder]}/zsh/env.d/20_chefdk.zenv"
+        fi
         EOH
-      action :run
+      action :nothing
+      subscribes :run, resources('package[chefdk]'), :immediately
     end
   end
 end

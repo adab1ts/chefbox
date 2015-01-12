@@ -3,6 +3,7 @@
   "apps": [
     "atom",
     "brackets",
+    "chefdk",
     "firefox-de",
     "git",
     "juju",
@@ -12,6 +13,7 @@
     "shelr",
     "vagrant",
     "virtualbox",
+    "webdesigner",
     "wsk",
     "zsh"
   ],
@@ -48,6 +50,39 @@
           "meta": {
             "repo_name": "webupd8team-brackets",
             "uri": "ppa:webupd8team/brackets"
+          }
+        }
+      }
+    },
+    "chefdk": {
+      "description": "The full stack of chefdk",
+      "website": "https://downloads.chef.io/chef-dk/",
+      "platforms": {
+        "debian-7.7":     { "source": "deb-wheezy" },
+        "linuxmint-17.0": { "source": "deb" },
+        "ubuntu-14.04":   { "source": "deb" }
+      },
+      "sources": {
+        "deb-wheezy": {
+          "package": "chefdk",
+          "maintainer": "Chef Software, Inc. <omnibus@getchef.com>",
+          "meta": {
+            "*": {
+              "file_name": "chefdk_0.3.5-1_amd64_debian.deb",
+              "uri": "https://ocserver/public.php?service=files&t=dacffa59d9a6a8931ae4dcfdf3fb0e1f&download",
+              "sha256": "65dc81d0a0a5585267457504c079f5cd5acc6114fcaad905d288ae0c454fc222"
+            }
+          }
+        },
+        "deb": {
+          "package": "chefdk",
+          "maintainer": "Chef Software, Inc. <omnibus@getchef.com>",
+          "meta": {
+            "*": {
+              "file_name": "chefdk_0.3.5-1_amd64_ubuntu.deb",
+              "uri": "https://ocserver/public.php?service=files&t=8134fa7d0865770d9155ffbb53e78d11&download",
+              "sha256": "a81c3dfad698fbb19a6c8e3dd65f04a15fd58a811d99db9c47e5a93e368f341d"
+            }
           }
         }
       }
@@ -237,14 +272,14 @@
           "maintainer": "HashiCorp <hello@hashicorp.com>",
           "meta": {
             "i686": {
-              "file_name": "vagrant_1.6.5_i686.deb",
-              "uri": "https://ocserver/public.php?service=files&t=cd4a9d3987d602943305894faee7f658&download",
-              "sha256": "78cd956742c3e4e9f5e7f31e8a318a1b0dee100aebb46c363a63cd6aa2059cb4"
+              "file_name": "vagrant_1.7.2_i686.deb",
+              "uri": "https://ocserver/public.php?service=files&t=8e406d8ba3c1d454dc86977a3ebf1055&download",
+              "sha256": "bff3a0dd9a857c2deed250661416ee761b19c0d7f5de714f1ed2c8a7a18f48fa"
             },
             "x86_64": {
-              "file_name": "vagrant_1.6.5_x86_64.deb",
-              "uri": "https://ocserver/public.php?service=files&t=e1699eafca518ea63b9238b9a8a4478a&download",
-              "sha256": "e2c7af6d032ac551ebd6399265cb9cb64402c9fb96a12289161b7f67afada28a"
+              "file_name": "vagrant_1.7.2_x86_64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=de4755b7b70fb71014e875b0ad6b120a&download",
+              "sha256": "9d7f1c587134011e2d5429eb21b6c0e95487f52e6d6d47c03ecc82cbeee73968"
             }
           }
         }
@@ -267,6 +302,27 @@
             "uri": "http://download.virtualbox.org/virtualbox/debian",
             "components": ["contrib"],
             "key": "http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc"
+          }
+        }
+      }
+    },
+    "webdesigner": {
+      "description": "Google Web Designer",
+      "website": "http://www.google.com/webdesigner/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "google-webdesigner",
+          "maintainer": "Google Web Designer Team <gwd-support@google.com>",
+          "meta": {
+            "repo_name": "google-webdesigner",
+            "uri": "http://dl.google.com/linux/webdesigner/deb/",
+            "distribution": "",
+            "components": ["stable", "main"],
+            "key": "https://dl-ssl.google.com/linux/linux_signing_key.pub"
           }
         }
       }

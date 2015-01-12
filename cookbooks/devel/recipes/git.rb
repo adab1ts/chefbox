@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: git
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,13 @@
 # limitations under the License.
 #
 
-
 devel = node[:apps][:devel]
 
 # Fast, scalable, distributed revision control system
 git = devel['profiles']['git']
 
 if app_available? git
-  install_app "git" do
+  install_app 'git' do
     force true
     profile git
   end
@@ -38,14 +37,13 @@ if app_available? git
   ]
 
   dev_links = [
-    { :from => '.gitconfig', :to => "#{dotfiles_folder}/gitconfig" }
+    { from: '.gitconfig', to: "#{dotfiles_folder}/gitconfig" }
   ]
 
-  bootstrap "git" do
+  bootstrap 'git' do
     files dev_files
     links dev_links
     aliases true
     functions true
   end
 end
-

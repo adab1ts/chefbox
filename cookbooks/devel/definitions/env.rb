@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Definitions:: env
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,12 +18,11 @@
 # limitations under the License.
 #
 
-
-define :env, :shell => "zsh", :priority => "10", :vars => nil do
+define :env, shell: 'zsh', priority: '10', vars: nil do
   env = case params[:shell]
-          when "zsh"  then "#{params[:name]}.zenv"
-          when "bash" then "#{params[:name]}.benv"
-          end
+        when 'zsh'  then "#{params[:name]}.zenv"
+        when 'bash' then "#{params[:name]}.benv"
+        end
 
   env_d = "#{params[:dotfiles_dir]}/#{params[:shell]}/env.d"
   env_path = "#{env_d}/#{params[:priority]}_#{env}"
@@ -49,4 +48,3 @@ define :env, :shell => "zsh", :priority => "10", :vars => nil do
     end
   end
 end
-

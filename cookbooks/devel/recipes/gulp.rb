@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: gulp
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,8 @@
 # limitations under the License.
 #
 
-
 # The streaming build system
-execute "gulp-installation" do
-  command "npm install -g gulp"
-  not_if { ::File.exists? "/usr/bin/gulp" }
+execute 'gulp-installation' do
+  command 'npm install -g gulp'
+  not_if { ::File.exist? '/usr/bin/gulp' }
 end
-

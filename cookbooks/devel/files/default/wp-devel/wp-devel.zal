@@ -1,0 +1,14 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/aliases.d/wp-devel.zal
+
+
+## Yeoman aliases
+alias wpnew='yo genesis-wordpress'
+
+## Vagrant aliases
+alias wpup='vagrant up'
+alias wpdown='vagrant halt'
+alias wpstart='vagrant resume'
+alias wpstop='vagrant suspend'
+alias wpstatus='vagrant status'
+alias wpdel='vagrant destroy'

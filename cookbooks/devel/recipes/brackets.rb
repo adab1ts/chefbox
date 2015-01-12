@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: brackets
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 # refs:
 #   https://github.com/adobe/brackets/wiki/How-to-Use-Brackets
 #   https://github.com/adobe/brackets/wiki/Linux-Version
@@ -26,7 +25,6 @@
 devel = node[:apps][:devel]
 
 # Brackets code editor for the web
-install_app "brackets" do
+install_app 'brackets' do
   profile devel['profiles']['brackets']
 end
-

@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: default
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 ## Deploy
 
 selected = node[:box][:apps][:devel]
@@ -30,58 +29,60 @@ if selected
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "devel" do
+  uninstall_apps 'devel' do
     apps unselected
     profiles devel['profiles']
   end
 
   # Install selected apps
-  node.default[:apps] = { :devel => devel }
+  node.default[:apps] = { devel: devel }
 
   # Prepare development environment
-  include_recipe "devel::zsh"
+  include_recipe 'devel::zsh'
 
   devel_folder = node[:box][:devel][:folder]
   bin_folder   = node[:box][:devel][:bin_folder]
 
-  bootstrap "devel" do
+  bootstrap 'devel' do
     folders [devel_folder, bin_folder]
-    env :priority => "00", :vars => { :devel_folder => devel_folder, :bin_folder => bin_folder }
+    env priority: '00', vars: { devel_folder: devel_folder, bin_folder: bin_folder }
   end
 
   # Utils
-  include_recipe "devel::shelr" if selected.include?("shelr")
+  include_recipe 'devel::shelr' if selected.include?('shelr')
 
   # VCS solutions
-  include_recipe "devel::git" if selected.include?("git")
+  include_recipe 'devel::git' if selected.include?('git')
 
   # Programming languages
-  include_recipe "devel::nodejs" if selected.include?("nodejs")
-  include_recipe "devel::processing" if selected.include?("processing")
-  include_recipe "devel::ruby" if selected.include?("ruby")
+  include_recipe 'devel::nodejs' if selected.include?('nodejs')
+  include_recipe 'devel::processing' if selected.include?('processing')
+  include_recipe 'devel::ruby' if selected.include?('ruby')
 
   # Development toolkit
-  include_recipe "devel::ansible" if selected.include?("ansible")
-  include_recipe "devel::bower" if selected.include?("bower")
-  include_recipe "devel::grunt" if selected.include?("grunt")
-  include_recipe "devel::gulp" if selected.include?("gulp")
-  include_recipe "devel::wsk" if selected.include?("wsk")
-  include_recipe "devel::yeoman" if selected.include?("yeoman")
+  include_recipe 'devel::ansible' if selected.include?('ansible')
+  include_recipe 'devel::bower' if selected.include?('bower')
+  include_recipe 'devel::chefdk' if selected.include?('chefdk')
+  include_recipe 'devel::grunt' if selected.include?('grunt')
+  include_recipe 'devel::gulp' if selected.include?('gulp')
+  include_recipe 'devel::wsk' if selected.include?('wsk')
+  include_recipe 'devel::yeoman' if selected.include?('yeoman')
 
   # Code editors
-  include_recipe "devel::atom" if selected.include?("atom")
-  include_recipe "devel::brackets" if selected.include?("brackets")
+  include_recipe 'devel::atom' if selected.include?('atom')
+  include_recipe 'devel::brackets' if selected.include?('brackets')
+  include_recipe 'devel::webdesigner' if selected.include?('webdesigner')
 
   # Browsers
-  include_recipe "devel::firefox-de" if selected.include?("firefox-de")
+  include_recipe 'devel::firefox-de' if selected.include?('firefox-de')
 
   # Virtualization solutions
-  include_recipe "devel::virtualbox" if selected.include?("virtualbox")
+  include_recipe 'devel::virtualbox' if selected.include?('virtualbox')
 
   # Development stacks
-  include_recipe "devel::vagrant" if selected.include?("vagrant")
-  include_recipe "devel::wp-devel" if selected.include?("wp-devel")
+  include_recipe 'devel::vagrant' if selected.include?('vagrant')
+  include_recipe 'devel::wp-devel' if selected.include?('wp-devel')
 
   # Cloud solutions
-  include_recipe "devel::juju" if selected.include?("juju")
+  include_recipe 'devel::juju' if selected.include?('juju')
 end

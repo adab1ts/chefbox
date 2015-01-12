@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: vagrant
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 # refs:
 #   https://github.com/smdahlen/vagrant-hostmanager
 
@@ -28,13 +27,13 @@ devel = node[:apps][:devel]
 vagrant = devel['profiles']['vagrant']
 
 if app_available? vagrant
-  install_app "vagrant" do
+  install_app 'vagrant' do
     force true
     profile vagrant
   end
 
-  cookbook_file "/etc/sudoers.d/10_vagrant_nfs" do
-    source "/vagrant/vagrant_nfs"
+  cookbook_file '/etc/sudoers.d/10_vagrant_nfs' do
+    source '/vagrant/vagrant_nfs'
     mode 00440
     backup false
   end
@@ -42,7 +41,7 @@ if app_available? vagrant
   cache_path = Chef::Config[:file_cache_path]
 
   cookbook_file "#{cache_path}/vagrant.pub" do
-    source "/vagrant/vagrant.pub"
+    source '/vagrant/vagrant.pub'
     mode 00644
     backup false
   end
@@ -70,13 +69,12 @@ if app_available? vagrant
     end
 
     template "/etc/sudoers.d/10_vagrant_hostmanager_#{username}" do
-      source "/vagrant/vagrant_hostmanager.erb"
+      source '/vagrant/vagrant_hostmanager.erb'
       mode 00440
       backup false
       variables(
-        :user => username
+        user: username
       )
     end
   end
 end
-

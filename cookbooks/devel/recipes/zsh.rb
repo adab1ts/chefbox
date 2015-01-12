@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: zsh
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,14 +18,13 @@
 # limitations under the License.
 #
 
-
 devel = node[:apps][:devel]
 
 # shell with lots of features
 zsh = devel['profiles']['zsh']
 
 if app_available? zsh
-  install_app "zsh" do
+  install_app 'zsh' do
     force true
     profile zsh
   end
@@ -38,7 +37,7 @@ if app_available? zsh
     "#{dotfiles_folder}/zsh/completion.d",
     "#{dotfiles_folder}/zsh/env.d",
     "#{dotfiles_folder}/zsh/functions.d",
-    "#{dotfiles_folder}/zsh/prompt.d",
+    "#{dotfiles_folder}/zsh/prompt.d"
   ]
 
   dev_files = [
@@ -53,18 +52,17 @@ if app_available? zsh
   ]
 
   dev_templates = [
-    { :file => "#{dotfiles_folder}/zshrc", :vars => { :dotfiles_dir => dotfiles_folder } }
+    { file: "#{dotfiles_folder}/zshrc", vars: { dotfiles_dir: dotfiles_folder } }
   ]
 
   dev_links = [
-    { :from => '.zshrc', :to => "#{dotfiles_folder}/zshrc" }
+    { from: '.zshrc', to: "#{dotfiles_folder}/zshrc" }
   ]
 
-  bootstrap "zsh" do
+  bootstrap 'zsh' do
     folders dev_folders
     files dev_files
     templates dev_templates
     links dev_links
   end
 end
-
