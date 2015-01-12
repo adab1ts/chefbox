@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: default
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
 
 ## Deploy
 
@@ -35,14 +34,13 @@ end
 
 # Install apps
 
-node.default[:apps] = { :kernel => kernel }
+node.default[:apps] = { kernel: kernel }
 
-include_recipe "kernel::dkms"
-include_recipe "kernel::swappiness" if memory <= 1.GB
-include_recipe "kernel::preload" if memory > 1.GB
-include_recipe "kernel::intel_graphics" if vendor(:graphics) == "intel"
+include_recipe 'kernel::dkms'
+include_recipe 'kernel::swappiness' if memory <= 1.GB
+include_recipe 'kernel::preload' if memory > 1.GB
+include_recipe 'kernel::intel_graphics' if vendor(:graphics) == 'intel'
 
 selected = node[:box][:apps][:kernel] || []
 
-include_recipe "kernel::tlp" if selected.include?("tlp")
-
+include_recipe 'kernel::tlp' if selected.include?('tlp')

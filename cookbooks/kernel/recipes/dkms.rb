@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: dkms
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,11 +18,9 @@
 # limitations under the License.
 #
 
-
 kernel = node[:apps][:kernel]
 
 # Dynamic Kernel Module Support Framework
-install_app "dkms" do
+install_app 'dkms' do
   profile kernel['profiles']['dkms']
 end
-

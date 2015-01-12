@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: intel_graphics
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -44,11 +44,6 @@ if app_available? intel_graphics
 
       wget --no-check-certificate https://download.01.org/gfx/#{key_file_2}
       apt-key add "#{cache_path}/#{key_file_2}"
-
-      echo -n | openssl s_client -connect download.01.org:443 | \
-        sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | \
-        tee '/usr/local/share/ca-certificates/download_01_org.crt'
-      update-ca-certificates
       EOH
   end
 

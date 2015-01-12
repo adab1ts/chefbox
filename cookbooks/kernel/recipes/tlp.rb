@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: tlp
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,22 +18,20 @@
 # limitations under the License.
 #
 
-
 kernel = node[:apps][:kernel]
 
 # Save battery power on laptops
 tlp = kernel['profiles']['tlp']
 
 if app_available? tlp
-  install_app "tlp" do
+  install_app 'tlp' do
     force true
     profile tlp
   end
 
-  execute "start_tlp" do
-    command "tlp start"
+  execute 'start_tlp' do
+    command 'tlp start'
     action :nothing
-    subscribes :run, resources("package[tlp]"), :immediately
+    subscribes :run, resources('package[tlp]'), :immediately
   end
 end
-

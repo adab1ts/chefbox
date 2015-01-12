@@ -3,7 +3,7 @@
 # Cookbook Name:: kernel
 # Recipe:: swappiness
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,12 +18,12 @@
 # limitations under the License.
 #
 
+# refs
+#   https://sites.google.com/site/easylinuxtipsproject/first-xubuntu#TOC-Decrease-the-swap-use-very-important-
 
-# See https://sites.google.com/site/easylinuxtipsproject/first-xubuntu#TOC-Decrease-the-swap-use-very-important-
-cookbook_file "swappiness.conf" do
-  path "/etc/sysctl.d/60-swappiness.conf"
-  source "/sysctl.d/swappiness.conf"
+cookbook_file 'swappiness.conf' do
+  path '/etc/sysctl.d/60-swappiness.conf'
+  source '/sysctl.d/swappiness.conf'
   mode 0644
   backup false
 end
-

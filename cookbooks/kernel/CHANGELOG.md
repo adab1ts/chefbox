@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.7:
+
+* README.md - update copyright note
+* recipes/* - update copyright note
+
+* recipes/intel_graphics - intel server certificate no longer needed
+
 ## 0.4.6:
 
 * recipes/intel_graphics - fix intel linux server certificate verification issue
