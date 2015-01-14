@@ -3,7 +3,7 @@
 # Cookbook Name:: core
 # Definitions:: launcher
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,8 +18,7 @@
 # limitations under the License.
 #
 
-
-define :launcher, :variables => {} do
+define :launcher, variables: {} do
   box = node[:box]
 
   box[:users].each do |username, usr|
@@ -38,20 +37,19 @@ define :launcher, :variables => {} do
         source params[:template]
         owner username
         group usr[:group]
-        mode 00664
+        mode 00755
         backup false
-        variables params[:variables]
+        variables params[:variables].merge(usr_home: usr[:home])
       end
     else
       cookbook_file launcher do
         source params[:file]
         owner username
         group usr[:group]
-        mode 00664
+        mode 00755
         backup false
         cookbook params[:cookbook]
       end
     end
   end
 end
-

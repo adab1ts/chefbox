@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.10:
+
+* definitions/launcher - add usr_home to template variables
+
 ## 1.0.9:
 
 * definitions/install_app   - now manages git repositories installation as well
@@ -33,7 +37,7 @@ This file is used to list changes made in each version of core.
 
 ## 1.0.2:
 
-* definitions/support - check if resource exists before downloading and minor refactoring 
+* definitions/support - check if resource exists before downloading and minor refactoring
 
 ## 1.0.1:
 
@@ -153,7 +157,7 @@ This file is used to list changes made in each version of core.
 
 ## 0.17.1:
 
-* definitions/install_app - extend dependencies management to all kind of package sources 
+* definitions/install_app - extend dependencies management to all kind of package sources
 
 ## 0.17.0:
 
@@ -287,4 +291,3 @@ This file is used to list changes made in each version of core.
 ## 0.1.0:
 
 * Initial release of core - new core_ppa resource & provider for ppa management
-
