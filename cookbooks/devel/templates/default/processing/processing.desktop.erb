@@ -1,13 +1,13 @@
 # File: ~/.local/share/applications/processing.desktop
-# Perms: 0644
+# Perms: 0755
 
 [Desktop Entry]
+Version=1.0
 Name=PDE
 Comment=Processing Development Environment
 Keywords=PDE;pde;
-Exec=<%= @exec %>
+Exec=<%= @usr_home %>/<%= @exec %>
+Icon=<%= @usr_home %>/<%= @icon %>
 Terminal=false
 Type=Application
-Icon=applications-development
-Encoding=UTF-8
 Categories=GNOME;GTK;Development;

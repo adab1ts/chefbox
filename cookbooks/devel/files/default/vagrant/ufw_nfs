@@ -1,0 +1,4 @@
+[NFS]
+title=Network File System
+description=NFS was developed to allow file sharing between systems residing on a local area network.
+ports=111,2049,18713/udp|111,2049,18713/tcp

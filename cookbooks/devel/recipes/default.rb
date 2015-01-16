@@ -76,9 +76,6 @@ if selected
   # Browsers
   include_recipe 'devel::firefox-de' if selected.include?('firefox-de')
 
-  # Virtualization solutions
-  include_recipe 'devel::virtualbox' if selected.include?('virtualbox')
-
   # Development stacks
   include_recipe 'devel::vagrant' if selected.include?('vagrant')
   include_recipe 'devel::wp-devel' if selected.include?('wp-devel')

@@ -25,6 +25,7 @@
 #   https://docs.chef.io/devkit/chef_overview.html
 #   https://docs.chef.io/devkit/install_dk.html
 #   https://docs.chef.io/devkit/getting_started.html
+#   http://tcotav.github.io/chefdk_getting_started.html
 #
 #   https://github.com/opscode/chef-dk#using-chefdk-as-your-primary-development-environment
 #   https://dwradcliffe.com/2014/09/19/chefdk-with-rbenv.html

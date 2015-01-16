@@ -46,7 +46,8 @@ if app_available? processing
   launcher 'processing' do
     template '/processing/processing.desktop.erb'
     variables(
-      exec: "sh -c '~/#{processing_folder}/processing'"
+      exec: "#{processing_folder}/processing",
+      icon: "#{processing_folder}/lib/icons/pde-48.png"
     )
   end
 

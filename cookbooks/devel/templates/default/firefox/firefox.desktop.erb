@@ -1,13 +1,13 @@
-# File: ~/.local/share/applications/firefox.desktop
-# Perms: 0644
+# File: ~/.local/share/applications/firefox-de.desktop
+# Perms: 0755
 
 [Desktop Entry]
+Version=1.0
 Name=Firefox Developer Edition
 Comment=Built for those who build the Web
 Keywords=Internet;WWW;Browser;Web;Explorer;
-Exec=<%= @exec %>
+Exec=<%= @usr_home %>/<%= @exec %>
+Icon=<%= @usr_home %>/<%= @icon %>
 Terminal=false
 Type=Application
-Icon=firefox
-Encoding=UTF-8
 Categories=GNOME;GTK;Development;

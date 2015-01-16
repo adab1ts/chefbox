@@ -26,18 +26,6 @@ execute 'generator-genesis-wordpress-install' do
   command 'npm install -g generator-genesis-wordpress'
 end
 
-# NFS support
-%w(
-  libgssglue1
-  libnfsidmap2
-  libtirpc1
-  nfs-common
-  nfs-kernel-server
-  rpcbind
-).each do |pkg|
-  package pkg
-end
-
 # Additional packages
 bash 'grunt-packages' do
   code <<-EOH

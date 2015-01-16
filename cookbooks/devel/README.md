@@ -19,7 +19,6 @@ The following recipes may apply:
 - `devel::ruby`        - installs __Ruby dynamic and open source programming language__ and suggested packages.
 - `devel::shelr`       - installs __Shelr plain text screencasting tool__ and suggested packages.
 - `devel::vagrant`     - installs __Vagrant tool for virtualizing development environments__ and suggested packages.
-- `devel::virtualbox`  - installs __VirtualBox__ and manages post-installation tasks.
 - `devel::webdesigner` - installs __Google Web Designer__ and suggested packages.
 - `devel::wp-devel`    - installs __Genesis WordPress to create, develop and deploy WP__ and suggested packages.
 - `devel::wsk`         - installs __Google Web Starter Kit__ and suggested packages.

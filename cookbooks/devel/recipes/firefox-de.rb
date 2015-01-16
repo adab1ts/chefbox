@@ -44,7 +44,8 @@ if app_available? firefox
   launcher 'firefox' do
     template '/firefox/firefox.desktop.erb'
     variables(
-      exec: 'firefox %u'
+      exec: "#{firefox_folder}/firefox",
+      icon: "#{firefox_folder}/browser/chrome/icons/default/default48.png"
     )
   end
 

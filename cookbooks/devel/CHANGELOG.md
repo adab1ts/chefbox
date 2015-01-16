@@ -2,6 +2,19 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.10.0:
+
+* recipes/default    - remove virtualbox install management
+* recipes/firefox-de - fix launcher exec & icon vars
+* recipes/processing - fix launcher exec & icon vars
+* recipes/vagrant    - add NFS support and setup
+* recipes/virtualbox - removed
+* recipes/wp-devel   - move required NFS support to vagrant recipe
+* files/default/vagrant/nfs-kernel-server - bind rpc.mountd to one static port
+* files/default/vagrant/ufw_nfs           - firewall rules to unblock nfs ports
+* templates/default/firefox/firefox.desktop.erb       - fix launcher exec & icon params
+* templates/default/processing/processing.desktop.erb - fix launcher exec & icon params
+
 ## 0.9.0:
 
 * definitions/*       - update copyright note
