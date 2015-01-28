@@ -1,11 +1,36 @@
 {
   "id": "cloud",
   "apps": [
+    "copy",
     "drive",
     "dropbox",
     "owncloud"
   ],
   "profiles": {
+    "copy": {
+      "description": "Sync, protect and share",
+      "website": "http://www.copy.com/",
+      "platforms": {
+        "debian-7.7":     { "source": "bin" },
+        "linuxmint-17.0": { "source": "bin" },
+        "ubuntu-14.04":   { "source": "bin" }
+      },
+      "sources": {
+        "bin": {
+          "ztype": "tgz",
+          "package": "copy",
+          "maintainer": "Barracuda Networks <http://www.copy.com>",
+          "meta": {
+            "*": {
+              "file_name": "copy_agent-1.48.0451.tgz",
+              "uri": "https://ocserver/public.php?service=files&t=e5758b04f77d2c7b739b8a64331430cd&download",
+              "sha256": "f474099d86baadd05758fa33164dae44b0127933f73c6a6a6e2f243bbf62bc42",
+              "zfolder": "copy"
+            }
+          }
+        }
+      }
+    },
     "drive": {
       "description": "Ubuntu Google Drive Client with Grive and Grive Tools",
       "website": "https://www.thefanclub.co.za/how-to/ubuntu-google-drive-client-grive-and-grive-tools",

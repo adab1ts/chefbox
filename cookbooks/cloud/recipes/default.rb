@@ -3,7 +3,7 @@
 # Cookbook Name:: cloud
 # Recipe:: default
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 ## Deploy
 
 selected = node[:box][:apps][:cloud]
@@ -30,15 +29,16 @@ if selected
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "cloud" do
+  uninstall_apps 'cloud' do
     apps unselected
     profiles cloud['profiles']
   end
 
   # Install selected apps
-  node.default[:apps] = { :cloud => cloud }
+  node.default[:apps] = { cloud: cloud }
 
-  include_recipe "cloud::drive" if selected.include?("drive")
-  include_recipe "cloud::dropbox" if selected.include?("dropbox")
-  include_recipe "cloud::owncloud" if selected.include?("owncloud")
+  include_recipe 'cloud::copy' if selected.include?('copy')
+  include_recipe 'cloud::drive' if selected.include?('drive')
+  include_recipe 'cloud::dropbox' if selected.include?('dropbox')
+  include_recipe 'cloud::owncloud' if selected.include?('owncloud')
 end

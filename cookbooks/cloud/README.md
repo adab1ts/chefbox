@@ -4,6 +4,7 @@ This cookbook installs a selected set of cloud services clients.
 The following recipes may apply:
 
 - `cloud::default`  - purges unselected packages and includes recipes as nedeed.
+- `cloud::copy`     - installs __Copy sync client__ and suggested packages.
 - `cloud::drive`    - installs __Google Drive integration__ and suggested packages.
 - `cloud::dropbox`  - installs __Dropbox integration__ and suggested packages.
 - `cloud::owncloud` - installs __ownCloud client__ and suggested packages.
@@ -47,7 +48,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (c) 2013,2014 Carles Muiños
+Copyright (c) 2013-2015 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

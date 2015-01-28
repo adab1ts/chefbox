@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of cloud.
 
+## 0.7.0:
+
+* README.md - update copyright note
+* recipes/* - update copyright note
+
+* recipes/default - now includes copy client install management
+* recipes/copy    - manage copy client installation
+* templates/default/copy/uninstall_copy-[ca,es].sh - custom uninstaller scripts for Copy
+
 ## 0.6.0:
 
 * recipes/default  - now includes google drive client install management

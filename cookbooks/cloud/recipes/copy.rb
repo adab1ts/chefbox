@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: cloud
-# Recipe:: dropbox
+# Recipe:: copy
 #
 # Copyright 2013-2015 Carles Muiños
 #
@@ -20,15 +20,20 @@
 
 cloud = node[:apps][:cloud]
 
-# Dropbox integration
-pkg_name = case platform_desktop
-           when 'cinnamon' then 'nemo-dropbox'
-           when 'mate'     then 'caja-dropbox'
-           when 'openbox'  then 'thunar-dropbox-plugin'
-           else 'nautilus-dropbox'
-           end
+# Copy sync client
+copy = cloud['profiles']['copy']
 
-install_app 'dropbox' do
-  profile cloud['profiles']['dropbox']
-  package pkg_name
+if app_available? copy
+  install_app 'copy' do
+    force true
+    profile copy
+  end
+
+  uninstaller 'copy' do
+    template "/copy/uninstall_copy-#{box[:lang]}.sh.erb"
+    variables(
+      app: 'copy',
+      website: copy['website']
+    )
+  end
 end

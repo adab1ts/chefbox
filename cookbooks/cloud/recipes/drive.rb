@@ -3,7 +3,7 @@
 # Cookbook Name:: cloud
 # Recipe:: drive
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,9 @@
 # limitations under the License.
 #
 
-
 cloud = node[:apps][:cloud]
 
 # drive client
-install_app "drive" do
+install_app 'drive' do
   profile cloud['profiles']['drive']
 end
