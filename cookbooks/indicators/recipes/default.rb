@@ -3,7 +3,7 @@
 # Cookbook Name:: indicators
 # Recipe:: default
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 ## Deploy
 
 selected = node[:box][:apps][:indicators]
@@ -30,16 +29,16 @@ if selected
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "indicators" do
+  uninstall_apps 'indicators' do
     apps unselected
     profiles indicators['profiles']
   end
 
   # Install selected apps
-  node.default[:apps] = { :indicators => indicators }
+  node.default[:apps] = { indicators: indicators }
 
-  include_recipe "indicators::plugandplay" if selected.include?("plug&play")
-  include_recipe "indicators::screensaver" if selected.include?("screensaver")
-  include_recipe "indicators::sound" if selected.include?("sound")
-  include_recipe "indicators::touchpad" if selected.include?("touchpad")
+  include_recipe 'indicators::plugandplay' if selected.include?('plug&play')
+  include_recipe 'indicators::screensaver' if selected.include?('screensaver')
+  include_recipe 'indicators::sound' if selected.include?('sound')
+  include_recipe 'indicators::touchpad' if selected.include?('touchpad')
 end

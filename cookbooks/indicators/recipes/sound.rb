@@ -3,7 +3,7 @@
 # Cookbook Name:: indicators
 # Recipe:: sound
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,10 +18,9 @@
 # limitations under the License.
 #
 
-
 indicators = node[:apps][:indicators]
 
 # Sound input/output selector indicator
-install_app "sound" do
+install_app 'sound' do
   profile indicators['profiles']['sound']
 end

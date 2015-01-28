@@ -36,7 +36,7 @@
       "sources": {
         "ppa": {
           "package": "caffeine",
-          "maintainer": "Isaiah Heyer <freshapplepy@gmail.com>",
+          "maintainer": "Reuben Thomas <rrt@sc3d.org>",
           "meta": {
             "repo_name": "caffeine-developers-ppa",
             "uri": "ppa:caffeine-developers/ppa"

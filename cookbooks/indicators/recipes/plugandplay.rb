@@ -3,7 +3,7 @@
 # Cookbook Name:: indicators
 # Recipe:: plugandplay
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,20 +18,18 @@
 # limitations under the License.
 #
 
-
 indicators = node[:apps][:indicators]
 
 # Display notifications about newly plugged hardware
 plugandplay = indicators['profiles']['plug&play']
 
 if app_available? plugandplay
-  install_app "plug&play" do
+  install_app 'plug&play' do
     force true
     profile plugandplay
   end
 
-  autostart_app "plug&play" do
+  autostart_app 'plug&play' do
     profile plugandplay
   end
 end
-

@@ -3,7 +3,7 @@
 # Cookbook Name:: indicators
 # Recipe:: screensaver
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 indicators = node[:apps][:indicators]
 
 # A status bar application able to temporarily prevent the activation
@@ -26,18 +25,12 @@ indicators = node[:apps][:indicators]
 screensaver = indicators['profiles']['screensaver']
 
 if app_available? screensaver
-  install_app "screensaver" do
+  install_app 'screensaver' do
     force true
     profile screensaver
   end
 
-  autostart_app "screensaver" do
+  autostart_app 'screensaver' do
     profile screensaver
   end
-
-  support "screensaver" do
-    section "indicators"
-    only_for ["ubuntu"]
-  end
 end
-

@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of indicators.
 
+## 0.6.1:
+
+* README.md - update copyright note
+* recipes/* - update copyright note
+
+* recipes/screensaver                      - remove screensaver indicator support
+* files/default/autostart/caffeine.desktop - exec param value has changed to caffeine-indicator
+
 ## 0.6.0:
 
 * recipe/default

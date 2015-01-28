@@ -3,7 +3,7 @@
 # Cookbook Name:: indicators
 # Recipe:: touchpad
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,23 +18,21 @@
 # limitations under the License.
 #
 
-
 indicators = node[:apps][:indicators]
 
 # An indicator for the touchpad
 touchpad = indicators['profiles']['touchpad']
 
 if app_available? touchpad
-  install_app "touchpad" do
+  install_app 'touchpad' do
     force true
     profile touchpad
   end
 
   touchpad_package = app_package_name touchpad
 
-  autostart_app "touchpad" do
+  autostart_app 'touchpad' do
     profile touchpad
     desktop_file "#{touchpad_package}-autostart.desktop"
   end
 end
-
