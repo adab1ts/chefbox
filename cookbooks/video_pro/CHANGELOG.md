@@ -2,6 +2,15 @@
 
 This file is used to list changes made in each version of video_pro.
 
+## 0.4.0:
+
+* README.md - update copyright note
+* recipes/* - update copyright note
+
+* recipes/default    - now includes obs studio install management
+* recipes/obs-studio - manage obs studio installation
+* templates/default/shotcut/* - minor updates
+
 ## 0.3.3:
 
 * README.md - ubuntu 12.04 no longer supported
@@ -44,4 +53,3 @@ This file is used to list changes made in each version of video_pro.
 ## 0.1.0:
 
 * Initial release of video_pro
-

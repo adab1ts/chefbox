@@ -1,7 +1,7 @@
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
 # Cookbook Name:: video_pro
-# Recipe:: cinelerra
+# Recipe:: obs-studio
 #
 # Copyright 2013-2015 Carles Muiños
 #
@@ -18,9 +18,28 @@
 # limitations under the License.
 #
 
+# refs:
+#   https://obsproject.com/
+#   https://github.com/jp9000/obs-studio/blob/master/INSTALL
+
 video_pro = node[:apps][:video_pro]
 
-# An audio/video authoring tool
-install_app 'cinelerra' do
-  profile video_pro['profiles']['cinelerra']
+# OBS Studio streaming software
+obs_studio = video_pro['profiles']['obs-studio']
+
+if app_available? obs_studio
+  codename  = platform_codename
+  repo_name = 'jon-severinsson-ffmpeg'
+  repo_uri  = 'ppa:jon-severinsson/ffmpeg'
+
+  core_ppa repo_name do
+    uri repo_uri
+    distribution codename
+    action :add
+  end
+
+  install_app 'obs-studio' do
+    force true
+    profile obs_studio
+  end
 end

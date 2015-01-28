@@ -24,8 +24,8 @@ else
   if [[ "$must_continue" != "n" ]]; then
     launcher="${HOME}/.local/share/applications/<%= @app %>.desktop"
 
-    [[ -d "${app_home}" ]] && rm -rf "${app_home}"
-    [[ -f "${launcher}" ]] && rm -f "${launcher}"
+    rm -f "${launcher}"
+    rm -rf "${app_home}"
 
     echo
     echo "<%= %{La desinstal·lació ha finalitzat amb èxit.}.force_encoding("utf-8") %>"

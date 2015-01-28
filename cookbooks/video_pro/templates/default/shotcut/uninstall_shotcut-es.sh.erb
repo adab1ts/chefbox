@@ -24,8 +24,8 @@ else
   if [[ "$must_continue" != "n" ]]; then
     launcher="${HOME}/.local/share/applications/<%= @app %>.desktop"
 
-    [[ -d "${app_home}" ]] && rm -rf "${app_home}"
-    [[ -f "${launcher}" ]] && rm -f "${launcher}"
+    rm -f "${launcher}"
+    rm -rf "${app_home}"
 
     echo
     echo "<%= %{La desinstalación ha finalizado con éxito.}.force_encoding("utf-8") %>"

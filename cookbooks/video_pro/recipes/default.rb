@@ -3,7 +3,7 @@
 # Cookbook Name:: video_pro_pro
 # Recipe:: default
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,7 +18,6 @@
 # limitations under the License.
 #
 
-
 ## Deploy
 
 selected = node[:box][:apps][:video_pro]
@@ -30,16 +29,16 @@ if selected
   # Uninstall apps not needed
   unselected = apps - selected
 
-  uninstall_apps "video_pro" do
+  uninstall_apps 'video_pro' do
     apps unselected
     profiles video_pro['profiles']
   end
 
   # Install selected apps
-  node.default[:apps] = { :video_pro => video_pro }
+  node.default[:apps] = { video_pro: video_pro }
 
-  include_recipe "video_pro::avidemux" if selected.include?("avidemux")
-  include_recipe "video_pro::cinelerra" if selected.include?("cinelerra")
-  include_recipe "video_pro::shotcut" if selected.include?("shotcut")
+  include_recipe 'video_pro::avidemux' if selected.include?('avidemux')
+  include_recipe 'video_pro::cinelerra' if selected.include?('cinelerra')
+  include_recipe 'video_pro::obs-studio' if selected.include?('obs-studio')
+  include_recipe 'video_pro::shotcut' if selected.include?('shotcut')
 end
-

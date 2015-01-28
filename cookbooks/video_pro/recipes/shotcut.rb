@@ -3,7 +3,7 @@
 # Cookbook Name:: video_pro
 # Recipe:: shotcut
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,33 +18,32 @@
 # limitations under the License.
 #
 
-
 video_pro = node[:apps][:video_pro]
 
 # Shotcut is a free, open source, cross-platform video editor
 shotcut = video_pro['profiles']['shotcut']
 
 if app_available? shotcut
-  install_app "shotcut" do
+  install_app 'shotcut' do
     force true
     profile shotcut
   end
 
   box = node[:box]
+  shotcut_folder = "#{box[:folders][:apps]}/shotcut/Shotcut.app"
 
-  launcher "shotcut" do
-    template "/shotcut/shotcut.desktop.erb"
+  launcher 'shotcut' do
+    template '/shotcut/shotcut.desktop.erb'
     variables(
-      :exec => %{sh -c '~/#{box[:folders][:apps]}/shotcut/Shotcut.app/shotcut "%F"'}
+      exec: "#{shotcut_folder}/shotcut"
     )
   end
 
-  uninstaller "shotcut" do
+  uninstaller 'shotcut' do
     template "/shotcut/uninstall_shotcut-#{box[:lang]}.sh.erb"
     variables(
-      :app     => "shotcut",
-      :website => shotcut['website']
+      app: 'shotcut',
+      website: shotcut['website']
     )
   end
 end
-

@@ -3,6 +3,7 @@
   "apps": [
     "avidemux",
     "cinelerra",
+    "obs-studio",
     "shotcut"
   ],
   "profiles": {
@@ -49,6 +50,25 @@
         }
       }
     },
+    "obs-studio": {
+      "description": "OBS Studio",
+      "website": "https://obsproject.com/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "obs-studio",
+          "maintainer": "John Bradley <jrb@turrettech.com>",
+          "dependencies": ["ffmpeg"],
+          "meta": {
+            "repo_name": "obsproject-obs-studio",
+            "uri": "ppa:obsproject/obs-studio"
+          }
+        }
+      }
+    },
     "shotcut": {
       "description": "Shotcut is a free, open source, cross-platform video editor",
       "website": "http://www.shotcut.org/",
@@ -61,18 +81,19 @@
           "ztype": "tbz",
           "package": "shotcut",
           "maintainer": "Dan Dennedy <http://www.dennedy.org>",
+          "dependencies": ["libsox2", "libsdl1.2debian", "libjack0", "libfftw3-3"],
           "meta": {
             "i686": {
-              "file_name": "shotcut-debian7-x86-140420.tar.bz2",
-              "uri": "https://ocserver/public.php?service=files&t=f57bfb432807b2a22554b53e67f7c579&download",
-              "sha256": "7d9d4c3d8a1d0d8212940f5f7996f4b6f4be8810be53ad3ecf7674ab4839b488",
-              "zfolder": "Shotcut" 
+              "file_name": "shotcut-debian7-x86-150105.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=146dfd5e0845f36b3be331633a208841&download",
+              "sha256": "b014979375a924273b0d44578ab62c153ba306c475bd66c2242bca0f6f181892",
+              "zfolder": "Shotcut"
             },
             "x86_64": {
-              "file_name": "shotcut-debian7-x86_64-140420.tar.bz2",
-              "uri": "https://ocserver/public.php?service=files&t=017a633b3e1e2801423fad6b7249d0f9&download",
-              "sha256": "aec8f5a19e25064030dbd8680608423c752eba9a6a528c6d0b76960a770c109a",
-              "zfolder": "Shotcut" 
+              "file_name": "shotcut-debian7-x86_64-150105.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=803fd437f3f313992a9ddc48e064d5c9&download",
+              "sha256": "d5daaa7adfdcc56871b140a8a9887dde1b76a717abf057d666164562fff98204",
+              "zfolder": "Shotcut"
             }
           }
         }

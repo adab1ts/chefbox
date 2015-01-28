@@ -3,7 +3,7 @@
 # Cookbook Name:: video_pro
 # Recipe:: avidemux
 #
-# Copyright 2013,2014 Carles Muiños
+# Copyright 2013-2015 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,11 +18,9 @@
 # limitations under the License.
 #
 
-
 video_pro = node[:apps][:video_pro]
 
 # Free video editor
-install_app "avidemux" do
+install_app 'avidemux' do
   profile video_pro['profiles']['avidemux']
 end
-

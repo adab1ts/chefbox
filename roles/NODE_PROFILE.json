@@ -233,6 +233,7 @@
         "video_pro": [
           "avidemux",
           "cinelerra",
+          "obs-studio",
           "shotcut"
         ],
         "vms": [

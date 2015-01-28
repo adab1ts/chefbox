@@ -1,13 +1,13 @@
 # File: ~/.local/share/applications/shotcut.desktop
-# Perms: 0644
+# Perms: 0755
 
 [Desktop Entry]
+Version=1.0
 Name=Shotcut
 Comment=Shotcut is a free, open source, cross-platform video editor
 Keywords=Shotcut;
-Exec=<%= @exec %>
+Exec=<%= @usr_home %>/<%= @exec %>
+Icon=applications/multimedia
 Terminal=false
 Type=Application
-Icon=applications-multimedia
-Encoding=UTF-8
 Categories=GNOME;GTK;AudioVideo;Video;
