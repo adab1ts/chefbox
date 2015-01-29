@@ -65,6 +65,7 @@ if selected
   include_recipe 'devel::chefdk' if selected.include?('chefdk')
   include_recipe 'devel::grunt' if selected.include?('grunt')
   include_recipe 'devel::gulp' if selected.include?('gulp')
+  include_recipe 'devel::heroku' if selected.include?('heroku')
   include_recipe 'devel::wsk' if selected.include?('wsk')
   include_recipe 'devel::yeoman' if selected.include?('yeoman')
 

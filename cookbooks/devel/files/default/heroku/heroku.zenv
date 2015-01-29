@@ -1,0 +1,6 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/10_heroku.zenv
+# Contents: Heroku Toolbelt Env Variables
+
+
+export PATH="/usr/local/heroku/bin:${PATH}"

@@ -13,6 +13,7 @@ The following recipes may apply:
 - `devel::git`         - installs __Git distributed version control system__ and suggested packages.
 - `devel::grunt`       - installs __Grunt JavaScript task runner__ and suggested packages.
 - `devel::gulp`        - installs __Gulp streaming build system__ and suggested packages.
+- `devel::heroku`      - installs __Heroku Toolbelt for creating and managing Heroku apps__ and suggested packages.
 - `devel::juju`        - installs __Juju service orchestration tool__ and suggested packages.
 - `devel::nodejs`      - installs __Node.js event-based server-side javascript engine__ and suggested packages.
 - `devel::processing`  - installs __Processing open source creative programming language__ and suggested packages.

@@ -6,6 +6,7 @@
     "chefdk",
     "firefox-de",
     "git",
+    "heroku",
     "juju",
     "nodejs",
     "processing",
@@ -138,6 +139,28 @@
           "meta": {
             "repo_name": "git-core-ppa",
             "uri": "ppa:git-core/ppa"
+          }
+        }
+      }
+    },
+    "heroku": {
+      "description": "A metapackage for working with the Heroku platform",
+      "website": "http://toolbelt.heroku.com/",
+      "platforms": {
+        "debian-7.7":     { "source": "repo" },
+        "linuxmint-17.0": { "source": "repo" },
+        "ubuntu-14.04":   { "source": "repo" }
+      },
+      "sources": {
+        "repo": {
+          "package": "heroku-toolbelt",
+          "maintainer": "Heroku <http://toolbelt.heroku.com>",
+          "meta": {
+            "repo_name": "heroku",
+            "uri": "http://toolbelt.heroku.com/ubuntu",
+            "distribution": "",
+            "components": ["./"],
+            "key": "https://toolbelt.heroku.com/apt/release.key"
           }
         }
       }

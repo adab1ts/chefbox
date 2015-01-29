@@ -120,6 +120,7 @@
           "git",
           "grunt",
           "gulp",
+          "heroku",
           "juju",
           "nodejs",
           "processing",

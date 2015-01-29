@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.11.0:
+
+* recipes/default - now includes keroku toolbelt install management
+* recipes/heroku  - manage heroku toolbelt installation
+* files/default/heroku/heroku.zenv - env variables for heroku toolbelt
+
 ## 0.10.0:
 
 * recipes/default    - remove virtualbox install management

@@ -32,6 +32,7 @@
           "git",
           "grunt",
           "gulp",
+          "heroku",
           "nodejs",
           "ruby",
           "vagrant",
