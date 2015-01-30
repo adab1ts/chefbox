@@ -2,7 +2,7 @@
 # Rakefile for Chefbox Repository
 #
 # Author:: Carles Muiños (<carles.ml.dev@gmail.com>)
-# Copyright:: Copyright (c) 2013, Carles Muiños
+# Copyright:: Copyright (c) 2013-2015 Carles Muiños
 # License:: Apache License, Version 2.0
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,3 +24,9 @@ require File.join(File.dirname(__FILE__), 'config', 'rake')
 load 'tasks/coderebels/chefbox.rake'
 load 'tasks/coderebels/chefbox_help.rake'
 
+begin
+  require 'kitchen/rake_tasks'
+  Kitchen::RakeTasks.new
+rescue LoadError
+  puts '>>>>> Kitchen gem not loaded, omitting tasks' unless ENV['CI']
+end
