@@ -1,4 +1,27 @@
-*.sw[a-z]
+# Vagrant
+.vagrant
+
+# Berkshelf
+Berksfile.lock
+
+# Kitchen
+.kitchen/
+.kitchen.local.yml
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# Editors
+*~
+*#
+.#*
+\#*#
+.*.sw[a-z]
+*.un~
+
+# Chefbox
 .environment
 .bundle/
 .chef*/
