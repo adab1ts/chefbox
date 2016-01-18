@@ -3,7 +3,7 @@
 
 
 ## Yeoman aliases
-alias wpnew='yo genesis-wordpress'
+alias wpnew='yo evolve wordpress'
 
 ## Vagrant aliases
 alias wpup='vagrant up'
@@ -12,3 +12,5 @@ alias wpstart='vagrant resume'
 alias wpstop='vagrant suspend'
 alias wpstatus='vagrant status'
 alias wpdel='vagrant destroy'
+alias wplogin='vagrant login'
+alias wpshare='vagrant share'

@@ -21,7 +21,7 @@ The following recipes may apply:
 - `devel::shelr`       - installs __Shelr plain text screencasting tool__ and suggested packages.
 - `devel::vagrant`     - installs __Vagrant tool for virtualizing development environments__ and suggested packages.
 - `devel::webdesigner` - installs __Google Web Designer__ and suggested packages.
-- `devel::wp-devel`    - installs __Genesis WordPress to create, develop and deploy WP__ and suggested packages.
+- `devel::wp-devel`    - installs __Evolution WordPress to create, develop and deploy WP__ and suggested packages.
 - `devel::wsk`         - installs __Google Web Starter Kit__ and suggested packages.
 - `devel::yeoman`      - installs __Yeoman web scaffolding tool__ and suggested packages.
 - `devel::zsh`         - installs __Zsh Shell__ and suggested packages.

@@ -2,6 +2,12 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.11.1:
+
+* recipes/wp-devel - new wp generator: evolve-wordpress
+* files/default/wp-devel/wp-devel.zal - update wp development aliases
+* README.md - Evolution WordPress as new wordpress generator
+
 ## 0.11.0:
 
 * recipes/default - now includes keroku toolbelt install management

@@ -19,29 +19,11 @@
 #
 
 # refs:
-#   https://github.com/genesis/wordpress
+#   https://github.com/evolution/wordpress
 
-# Genesis WordPress
-execute 'generator-genesis-wordpress-install' do
-  command 'npm install -g generator-genesis-wordpress'
-end
-
-# Additional packages
-bash 'grunt-packages' do
-  code <<-EOH
-    npm install -g grunt-wordpress-deploy
-    npm install -g grunt-sftp-deploy
-    npm install -g grunt-ftp-deploy
-    EOH
-  action :run
-end
-
-bash 'gulp-packages' do
-  code <<-EOH
-    npm install -g gulp-sftp
-    npm install -g gulp-ftp
-    EOH
-  action :run
+# Evolution WordPress
+execute 'generator-evolve-install' do
+  command 'npm install -g generator-evolve'
 end
 
 bootstrap 'wp-devel' do
