@@ -198,7 +198,7 @@
           "dependencies": ["apt-transport-https"],
           "meta": {
             "repo_name": "nodesource",
-            "uri": "https://deb.nodesource.com/node",
+            "uri": "https://deb.nodesource.com/node_4.x",
             "components": ["main"],
             "key": "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
           }
