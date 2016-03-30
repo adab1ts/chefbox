@@ -4,7 +4,6 @@
     "bcm43",
     "dkms",
     "intel_graphics",
-    "preload",
     "tlp"
   ],
   "profiles": {
@@ -72,25 +71,6 @@
               "sha256": "291d8c9e444a38b9473f08e03a08961545f85ab3c830dbfb810e2bd1a0570ca7"
             }
           }
-        }
-      }
-    },
-    "preload": {
-      "description": "adaptive readahead daemon",
-      "website": "http://sourceforge.net/projects/preload",
-      "platforms": {
-        "debian-7.7":     { "source": "distro-wheezy" },
-        "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-14.04":   { "source": "distro" }
-      },
-      "sources": {
-        "distro": {
-          "package": "preload",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "distro-wheezy": {
-          "package": "preload",
-          "maintainer": "Kari Pahula <kaol@debian.org>"
         }
       }
     },

@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of kernel.
 
+## 0.4.8:
+
+* README.md - update copyright note
+* recipes/* - update copyright note
+
+* recipes/default - do not include recipe[kernel::preload] any more
+* recipes/preload - removed
+
 ## 0.4.7:
 
 * README.md - update copyright note
