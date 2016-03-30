@@ -2,6 +2,28 @@
 
 This file is used to list changes made in each version of devel.
 
+## 0.12.0:
+
+* README.md     - update copyright note and description
+* definitions/* - update copyright note
+* recipes/*     - update copyright note
+
+* recipes/default  - remove grunt, juju and shelr install management
+* recipes/ansible  - update ansible install management
+* recipes/atom     - update atom packages installation
+* recipes/grunt    - removed
+* recipes/juju     - removed
+* recipes/nodejs   - nvm now manages node.js installation
+* recipes/shelr    - removed
+* recipes/vagrant  - add vagrant-bindfs plugin
+* recipes/wp-devel - install evolution wordpress dependency
+* files/default/git/gitconfig      - update pretty format
+* files/default/juju/juju.zal      - removed
+* files/default/nodejs/nodejs.zenv - automatically activate nvm upon login
+* files/default/nodejs/nodejs.zfn  - automatically call `nvm use` in a directory with a `.nvmrc` file
+* files/default/ruby/ruby.zal      - noglob rake
+* templates/default/juju/environments.yaml.erb - removed
+
 ## 0.11.1:
 
 * recipes/wp-devel - new wp generator: evolve-wordpress

@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: atom
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -61,7 +61,6 @@ if app_available? atom
         apm install autocomplete-paths
 
         apm install color-picker
-        apm install firepad
         apm install minimap
         EOH
       action :run

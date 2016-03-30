@@ -1,0 +1,7 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/env.d/10_nodejs.zenv
+# Contents: NVM Env Variables
+
+
+export NVM_DIR="${HOME}/.nvm"
+[ -s "${NVM_DIR}/nvm.sh" ] && . "${NVM_DIR}/nvm.sh"

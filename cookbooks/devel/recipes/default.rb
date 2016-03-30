@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: default
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -48,9 +48,6 @@ if selected
     env priority: '00', vars: { devel_folder: devel_folder, bin_folder: bin_folder }
   end
 
-  # Utils
-  include_recipe 'devel::shelr' if selected.include?('shelr')
-
   # VCS solutions
   include_recipe 'devel::git' if selected.include?('git')
 
@@ -63,7 +60,6 @@ if selected
   include_recipe 'devel::ansible' if selected.include?('ansible')
   include_recipe 'devel::bower' if selected.include?('bower')
   include_recipe 'devel::chefdk' if selected.include?('chefdk')
-  include_recipe 'devel::grunt' if selected.include?('grunt')
   include_recipe 'devel::gulp' if selected.include?('gulp')
   include_recipe 'devel::heroku' if selected.include?('heroku')
   include_recipe 'devel::wsk' if selected.include?('wsk')
@@ -80,7 +76,4 @@ if selected
   # Development stacks
   include_recipe 'devel::vagrant' if selected.include?('vagrant')
   include_recipe 'devel::wp-devel' if selected.include?('wp-devel')
-
-  # Cloud solutions
-  include_recipe 'devel::juju' if selected.include?('juju')
 end

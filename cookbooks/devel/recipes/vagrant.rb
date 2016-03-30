@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: vagrant
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -99,6 +99,7 @@ if app_available? vagrant
 
         cat #{cache_path}/vagrant.pub >> ${HOME}/.ssh/authorized_keys
         vagrant plugin install vagrant-hostmanager
+        vagrant plugin install vagrant-bindfs
         EOH
       action :run
     end

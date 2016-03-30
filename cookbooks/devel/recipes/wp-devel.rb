@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: wp-devel
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,6 +22,8 @@
 #   https://github.com/evolution/wordpress
 
 # Evolution WordPress
+package 'sshpass'
+
 execute 'generator-evolve-install' do
   command 'npm install -g generator-evolve'
 end
