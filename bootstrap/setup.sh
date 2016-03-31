@@ -29,6 +29,9 @@ pub_key='key.pub'
 chef_path='/etc/chef'
 edb_key='edb'
 
+chef_certs_path='/opt/chef/embedded/ssl/certs'
+oc_cert='ocserver.pem'
+
 
 echo
 echo "Adding Chef server to static table lookup for hostnames..."
@@ -118,6 +121,15 @@ sudo cp "${keys}/${edb_key}" "${chef_path}/${edb_key}" \
 
 
 echo
+echo "Adding OwnCloud self-signed certificate to CA certs list..."
+echo
+
+[[ ! -d "${chef_certs_path}" ]] && sudo mkdir "${chef_certs_path}"
+sudo cp "${keys}/${oc_cert}" "${chef_certs_path}/${oc_cert}" \
+  && sudo chmod 644 "${chef_certs_path}/${oc_cert}"
+
+
+echo
 echo "Sending report..."
 echo
 
@@ -138,4 +150,3 @@ echo "Installation complete"
 echo
 
 sleep 3
-
