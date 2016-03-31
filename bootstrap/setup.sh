@@ -44,11 +44,11 @@ echo
 echo "Installing a simple MTA to get mail off the system to Gmail hub..."
 echo
 
-echo -n "Enter your gmail address (username@gmail.com): "
-read gmail_address
+echo -n "Enter your email address: "
+read email_address
 
-echo -n "Enter your gmail password: "
-read -s gmail_passwd
+echo -n "Enter your email password: "
+read -s email_passwd
 echo
 
 echo
@@ -62,8 +62,8 @@ echo "Configuring SSMTP Mail Transfer Agent..."
 echo
 
 cat "${config}/${ssmtp_file}" \
-  | sed "s/@@EMAIL@@/${gmail_address}/g" \
-  | sed "s/@@PASSWORD@@/${gmail_passwd}/g" \
+  | sed "s/@@EMAIL@@/${email_address}/g" \
+  | sed "s/@@PASSWORD@@/${email_passwd}/g" \
   | sed "s/@@HOSTNAME@@/${box}/g" \
   | sudo tee "${ssmtp_path}/${ssmtp_file}" &>/dev/null
 
