@@ -70,7 +70,7 @@ cat "${config}/${ssmtp_file}" \
 sudo chmod 600 "${ssmtp_path}/${ssmtp_file}" &>/dev/null
 
 cat "${config}/${ssmtp_aliases}" \
-  | sed "s/@@HOSTNAME@@/${box}/g" \
+  | sed "s/@@EMAIL@@/${email_address}/g" \
   | sed "s/@@USER@@/${usr}/g" \
   | sudo tee "${ssmtp_path}/${ssmtp_aliases}" &>/dev/null
 
@@ -124,7 +124,7 @@ echo
 echo "Adding OwnCloud self-signed certificate to CA certs list..."
 echo
 
-[[ ! -d "${chef_certs_path}" ]] && sudo mkdir "${chef_certs_path}"
+[[ ! -d "${chef_certs_path}" ]] && sudo mkdir -p "${chef_certs_path}"
 sudo cp "${keys}/${oc_cert}" "${chef_certs_path}/${oc_cert}" \
   && sudo chmod 644 "${chef_certs_path}/${oc_cert}"
 
