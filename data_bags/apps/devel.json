@@ -192,7 +192,7 @@
         "ubuntu-14.04":   { "source": "git" }
       },
       "sources": {
-        "repo": {
+        "git": {
           "package": "nvm",
           "maintainer": "Tim Caswell <tim@creationix.com>",
           "dependencies": ["build-essential", "libssl-dev"],
