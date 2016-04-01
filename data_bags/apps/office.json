@@ -37,8 +37,8 @@
           "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>",
           "suggested": ["browser-plugin-libreoffice", "libreoffice-style-galaxy", "libreoffice-style-sifr"],
           "meta": {
-            "repo_name": "libreoffice-libreoffice-4-2",
-            "uri": "ppa:libreoffice/libreoffice-4-2"
+            "repo_name": "libreoffice-libreoffice-5-0",
+            "uri": "ppa:libreoffice/libreoffice-5-0"
           }
         }
       }

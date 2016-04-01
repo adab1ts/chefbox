@@ -24,7 +24,7 @@
 	ui = auto
 
 [format]
-	pretty = format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset
+	pretty = format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ai) %C(bold blue)<%an>%Creset
 
 [push]
 	default = simple

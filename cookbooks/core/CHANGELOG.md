@@ -2,6 +2,10 @@
 
 This file is used to list changes made in each version of core.
 
+## 1.0.11:
+
+* libraries/box - update Box.lsb_codename method definition
+
 ## 1.0.10:
 
 * definitions/launcher - add usr_home to template variables

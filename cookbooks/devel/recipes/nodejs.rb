@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: nodejs
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,16 +20,51 @@
 
 # refs:
 #   https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager
+#   https://github.com/creationix/nvm
 
 devel = node[:apps][:devel]
 
 # Node.js event-based server-side javascript engine
-install_app 'nodejs' do
-  profile devel['profiles']['nodejs']
-end
+nodejs = devel['profiles']['nodejs']
 
-execute 'npm-python-config' do
-  command 'npm config set python /usr/bin/python2 -g'
-  action :nothing
-  subscribes :run, resources('package[nodejs]'), :immediately
+if app_available? nodejs
+  # Installing nvm, to change Node versions ...
+  install_app 'nodejs' do
+    force true
+    profile nodejs
+  end
+
+  # Setting nvm environment up ...
+  bootstrap 'nodejs' do
+    env priority: '10'
+    functions true
+  end
+
+  box = node[:box]
+
+  box[:devel][:users].each do |username|
+    usr = box[:users][username]
+
+    bash "#{username}-nvm_install" do
+      user username
+      group usr[:group]
+      cwd usr[:home]
+      environment 'HOME' => usr[:home]
+      code <<-EOH
+        # Loading user environment ...
+        . ${HOME}/.bashrc
+
+        # Activating nvm ...
+        cd ${HOME}/.nvm && git checkout `git describe --abbrev=0 --tags`
+        . ${HOME}/.nvm/nvm.sh
+
+        # Installing latest Node.js ...
+        nvm install node
+
+        # Setting latest Node.js version as global default Node.js ...
+        nvm alias default node
+        EOH
+      action :run
+    end
+  end
 end

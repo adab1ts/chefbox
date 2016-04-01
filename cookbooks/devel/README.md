@@ -11,17 +11,14 @@ The following recipes may apply:
 - `devel::chefdk`      - installs __Chef Development Kit__ and suggested packages.
 - `devel::firefox-de`  - installs __Firefox Developer Edition__ and suggested packages.
 - `devel::git`         - installs __Git distributed version control system__ and suggested packages.
-- `devel::grunt`       - installs __Grunt JavaScript task runner__ and suggested packages.
 - `devel::gulp`        - installs __Gulp streaming build system__ and suggested packages.
 - `devel::heroku`      - installs __Heroku Toolbelt for creating and managing Heroku apps__ and suggested packages.
-- `devel::juju`        - installs __Juju service orchestration tool__ and suggested packages.
 - `devel::nodejs`      - installs __Node.js event-based server-side javascript engine__ and suggested packages.
 - `devel::processing`  - installs __Processing open source creative programming language__ and suggested packages.
 - `devel::ruby`        - installs __Ruby dynamic and open source programming language__ and suggested packages.
-- `devel::shelr`       - installs __Shelr plain text screencasting tool__ and suggested packages.
 - `devel::vagrant`     - installs __Vagrant tool for virtualizing development environments__ and suggested packages.
 - `devel::webdesigner` - installs __Google Web Designer__ and suggested packages.
-- `devel::wp-devel`    - installs __Genesis WordPress to create, develop and deploy WP__ and suggested packages.
+- `devel::wp-devel`    - installs __Evolution WordPress to create, develop and deploy WP__ and suggested packages.
 - `devel::wsk`         - installs __Google Web Starter Kit__ and suggested packages.
 - `devel::yeoman`      - installs __Yeoman web scaffolding tool__ and suggested packages.
 - `devel::zsh`         - installs __Zsh Shell__ and suggested packages.
@@ -68,7 +65,7 @@ On Google+: [Carles Muiños](https://plus.google.com/109480759201585988691)
 
 ## License
 
-Copyright (c) 2013-2015 Carles Muiños
+Copyright (c) 2013-2016 Carles Muiños
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: ansible
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,16 +19,11 @@
 #
 
 # refs:
-#   https://github.com/genesis/wordpress
+#   http://docs.ansible.com/ansible/intro_installation.html
+
+devel = node[:apps][:devel]
 
 # Simple IT Automation
-package 'python-pip'
-
-bash 'ansible-installation' do
-  code <<-EOH
-    easy_install pip
-    pip install ansible
-    EOH
-  action :run
-  not_if { ::File.exist? '/usr/local/bin/ansible' }
+install_app 'ansible' do
+  profile devel['profiles']['ansible']
 end

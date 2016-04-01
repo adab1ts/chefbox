@@ -1,17 +1,16 @@
 {
   "id": "devel",
   "apps": [
+    "ansible",
     "atom",
     "brackets",
     "chefdk",
     "firefox-de",
     "git",
     "heroku",
-    "juju",
     "nodejs",
     "processing",
     "ruby",
-    "shelr",
     "vagrant",
     "virtualbox",
     "webdesigner",
@@ -19,6 +18,25 @@
     "zsh"
   ],
   "profiles": {
+    "ansible": {
+      "description": "A radically simple IT automation platform",
+      "website": "http://www.ansible.com/",
+      "platforms": {
+        "linuxmint-17.0": { "source": "ppa" },
+        "ubuntu-14.04":   { "source": "ppa" }
+      },
+      "sources": {
+        "ppa": {
+          "package": "ansible",
+          "maintainer": "Ansible, Inc. <>",
+          "dependencies": ["software-properties-common"],
+          "meta": {
+            "repo_name": "ansible-ansible",
+            "uri": "ppa:ansible/ansible"
+          }
+        }
+      }
+    },
     "atom": {
       "description": "Atom text editor from GitHub",
       "website": "http://atom.io/",
@@ -69,9 +87,9 @@
           "maintainer": "Chef Software, Inc. <omnibus@getchef.com>",
           "meta": {
             "*": {
-              "file_name": "chefdk_0.3.5-1_amd64_debian.deb",
-              "uri": "https://ocserver/public.php?service=files&t=dacffa59d9a6a8931ae4dcfdf3fb0e1f&download",
-              "sha256": "65dc81d0a0a5585267457504c079f5cd5acc6114fcaad905d288ae0c454fc222"
+              "file_name": "chefdk_0.12.0-1_amd64_debian.deb",
+              "uri": "https://ocserver/public.php?service=files&t=2171a1dd03ef418a4897799c1d7687b5&download",
+              "sha256": "1d0afb5b99ecc3d5eefe1020cc9a9b50738f4d62a1aa1332e4f319b9ef5cc5d9"
             }
           }
         },
@@ -80,9 +98,9 @@
           "maintainer": "Chef Software, Inc. <omnibus@getchef.com>",
           "meta": {
             "*": {
-              "file_name": "chefdk_0.3.5-1_amd64_ubuntu.deb",
-              "uri": "https://ocserver/public.php?service=files&t=8134fa7d0865770d9155ffbb53e78d11&download",
-              "sha256": "a81c3dfad698fbb19a6c8e3dd65f04a15fd58a811d99db9c47e5a93e368f341d"
+              "file_name": "chefdk_0.12.0-1_amd64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=4ac4067be43585396c73f6ac90a9d731&download",
+              "sha256": "6fcb4529f99c212241c45a3e1d024cc1519f5b63e53fc1194b5276f1d8695aaa"
             }
           }
         }
@@ -103,15 +121,15 @@
           "maintainer": "Mozilla <http://www.mozilla.org>",
           "meta": {
             "i686": {
-              "file_name": "firefox-36.0a2.en-US.linux-i686.tar.bz2",
-              "uri": "https://ocserver/public.php?service=files&t=1f44b02be1e486456c8b89ded7401968&download",
-              "sha256": "da0fa46398fbbfa74236e8dfb761f86e5dd9ebe2caf8c16a3d25bcf117a4305e",
+              "file_name": "firefox-47.0a2.ca.linux-i686.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=59b060ffdc886f9297e4513cff742d91&download",
+              "sha256": "4a1b8b1eb1bb47fd0857441309b7b91f1c96e49d092373a43ddbfc15479c79b9",
               "zfolder": "firefox"
             },
             "x86_64": {
-              "file_name": "firefox-36.0a2.en-US.linux-x86_64.tar.bz2",
-              "uri": "https://ocserver/public.php?service=files&t=cd0075f23ddf217427fdc0300137b541&download",
-              "sha256": "d2f95fcb49f4c29ca3c819336ad983034d8dd09bb1d8aa91eb2d3ac413d3550a",
+              "file_name": "firefox-47.0a2.ca.linux-x86_64.tar.bz2",
+              "uri": "https://ocserver/public.php?service=files&t=3afb5c7dc190a03b4f49ab7bc284ab2a&download",
+              "sha256": "eee8da2e9d3dd8cf26435e7f1e329584ef98b0cab64ddd796cadd16cd585471f",
               "zfolder": "firefox"
             }
           }
@@ -165,42 +183,22 @@
         }
       }
     },
-    "juju": {
-      "description": "next generation service orchestration system",
-      "website": "http://juju.ubuntu.com/",
-      "platforms": {
-        "linuxmint-17.0": { "source": "ppa" },
-        "ubuntu-14.04":   { "source": "ppa" }
-      },
-      "sources": {
-        "ppa": {
-          "package": "juju-core",
-          "maintainer": "Curtis Hovey <curtis.hovey@canonical.com>",
-          "meta": {
-            "repo_name": "juju-stable",
-            "uri": "ppa:juju/stable"
-          }
-        }
-      }
-    },
     "nodejs": {
       "description": "Event-based server-side javascript engine",
       "website": "http://nodejs.org/",
       "platforms": {
-        "debian-7.7":     { "source": "repo" },
-        "linuxmint-17.0": { "source": "repo" },
-        "ubuntu-14.04":   { "source": "repo" }
+        "debian-7.7":     { "source": "git" },
+        "linuxmint-17.0": { "source": "git" },
+        "ubuntu-14.04":   { "source": "git" }
       },
       "sources": {
-        "repo": {
-          "package": "nodejs",
-          "maintainer": "Chris Lea <chl@nodesource.com>",
-          "dependencies": ["apt-transport-https"],
+        "git": {
+          "package": "nvm",
+          "maintainer": "Tim Caswell <tim@creationix.com>",
+          "dependencies": ["build-essential", "libssl-dev"],
           "meta": {
-            "repo_name": "nodesource",
-            "uri": "https://deb.nodesource.com/node",
-            "components": ["main"],
-            "key": "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+            "uri": "https://github.com/creationix/nvm.git",
+            "destination": ".nvm"
           }
         }
       }
@@ -220,16 +218,16 @@
           "maintainer": "Processing Community <http://processing.org>",
           "meta": {
             "i686": {
-              "file_name": "processing-2.2.1-linux32.tgz",
-              "uri": "https://ocserver/public.php?service=files&t=3f2f764ed476c585aec8d8fb1686b21f&download",
-              "sha256": "922db76c15682c5454226dd0cdd4fd680e1549d33ad4c7c27efbc345285fab42",
-              "zfolder": "processing-2.2.1"
+              "file_name": "processing-3.0.2-linux32.tgz",
+              "uri": "https://ocserver/public.php?service=files&t=11fa62ea1f3e011e86c103aa89016d9c&download",
+              "sha256": "180a4dec59d12bffc1c494f9981697f7bb06be3404ecd7c15f9aaaa9c3b735f5",
+              "zfolder": "processing-3.0.2"
             },
             "x86_64": {
-              "file_name": "processing-2.2.1-linux64.tgz",
-              "uri": "https://ocserver/public.php?service=files&t=fe17b94a33c02b46ba5ca2f0240605bb&download",
-              "sha256": "bbb8831f251ed87dd1faefde43159494859452a2aaf7c75bca467e5afb7b9ec3",
-              "zfolder": "processing-2.2.1"
+              "file_name": "processing-3.0.2-linux64.tgz",
+              "uri": "https://ocserver/public.php?service=files&t=545653662044da299596fba426323193&download",
+              "sha256": "b079c372949902e1ba1e14c6df8ef9f0227d5bc2be314a8451b6be275729b826",
+              "zfolder": "processing-3.0.2"
             }
           }
         }
@@ -262,25 +260,6 @@
         }
       }
     },
-    "shelr": {
-      "description": "Utility for plain text screencasting",
-      "website": "http://shelr.tv/",
-      "platforms": {
-        "debian-7.7":     { "source": "distro-wheezy" },
-        "linuxmint-17.0": { "source": "distro" },
-        "ubuntu-14.04":   { "source": "distro" }
-      },
-      "sources": {
-        "distro": {
-          "package": "shelr",
-          "maintainer": "Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>"
-        },
-        "distro-wheezy": {
-          "package": "shelr",
-          "maintainer": "Antono Vasiljev <self@antono.info>"
-        }
-      }
-    },
     "vagrant": {
       "description": "Tool for building and distributing virtualized development environments",
       "website": "http://www.vagrantup.com/",
@@ -295,14 +274,14 @@
           "maintainer": "HashiCorp <hello@hashicorp.com>",
           "meta": {
             "i686": {
-              "file_name": "vagrant_1.7.2_i686.deb",
-              "uri": "https://ocserver/public.php?service=files&t=8e406d8ba3c1d454dc86977a3ebf1055&download",
-              "sha256": "bff3a0dd9a857c2deed250661416ee761b19c0d7f5de714f1ed2c8a7a18f48fa"
+              "file_name": "vagrant_1.8.1_i686.deb",
+              "uri": "https://ocserver/public.php?service=files&t=053b7354a5f9f256f48d8bdda4034d43&download",
+              "sha256": "ae93af8cacf20f2f8c4c6a111767e77988454d0238a001a37a1d1c115334efdb"
             },
             "x86_64": {
-              "file_name": "vagrant_1.7.2_x86_64.deb",
-              "uri": "https://ocserver/public.php?service=files&t=de4755b7b70fb71014e875b0ad6b120a&download",
-              "sha256": "9d7f1c587134011e2d5429eb21b6c0e95487f52e6d6d47c03ecc82cbeee73968"
+              "file_name": "vagrant_1.8.1_x86_64.deb",
+              "uri": "https://ocserver/public.php?service=files&t=d0ee2930d01b67cfe3a3c2a2eeb386e3&download",
+              "sha256": "ed0e1ae0f35aecd47e0b3dfb486a230984a08ceda3b371486add4d42714a693d"
             }
           }
         }
@@ -318,7 +297,7 @@
       },
       "sources": {
         "repo": {
-          "package": "virtualbox-4.2",
+          "package": "virtualbox-4.3",
           "maintainer": "Oracle Corporation <info@virtualbox.org>",
           "meta": {
             "repo_name": "virtualbox",

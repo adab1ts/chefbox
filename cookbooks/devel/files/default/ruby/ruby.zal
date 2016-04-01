@@ -1,0 +1,6 @@
+# vim:ft=zsh
+# File: $DOTFILES_PATH/zsh/aliases.d/ruby.zal
+
+
+# Rake aliases
+alias rake='noglob rake'

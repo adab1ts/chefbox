@@ -95,7 +95,7 @@ module Coderebels
           when 14 then "quantal"
           when 15 then "raring"
           when 16 then "saucy"
-          when 17 then "trusty"
+          when 17, 17.1, 17.2, 17.3 then "trusty"
           end
         end
       end
@@ -107,4 +107,3 @@ module Coderebels
     end
   end
 end
-

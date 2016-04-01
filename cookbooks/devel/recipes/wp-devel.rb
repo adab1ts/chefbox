@@ -3,7 +3,7 @@
 # Cookbook Name:: devel
 # Recipe:: wp-devel
 #
-# Copyright 2013-2015 Carles Muiños
+# Copyright 2013-2016 Carles Muiños
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,29 +19,13 @@
 #
 
 # refs:
-#   https://github.com/genesis/wordpress
+#   https://github.com/evolution/wordpress
 
-# Genesis WordPress
-execute 'generator-genesis-wordpress-install' do
-  command 'npm install -g generator-genesis-wordpress'
-end
+# Evolution WordPress
+package 'sshpass'
 
-# Additional packages
-bash 'grunt-packages' do
-  code <<-EOH
-    npm install -g grunt-wordpress-deploy
-    npm install -g grunt-sftp-deploy
-    npm install -g grunt-ftp-deploy
-    EOH
-  action :run
-end
-
-bash 'gulp-packages' do
-  code <<-EOH
-    npm install -g gulp-sftp
-    npm install -g gulp-ftp
-    EOH
-  action :run
+execute 'generator-evolve-install' do
+  command 'npm install -g generator-evolve'
 end
 
 bootstrap 'wp-devel' do
